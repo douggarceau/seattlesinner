@@ -93,6 +93,10 @@ button{font:inherit;color:inherit}
 .gate b{font:800 18px var(--body);color:#fff}.gate span{color:#c9d1d9;font:400 15px/1.45 var(--body)}
 .gate button{all:unset;cursor:pointer;background:var(--red);color:#fff;border-radius:4px;padding:10px 16px;font:800 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
 .subbox.pulse{animation:sbp 1.2s ease-out 2}@keyframes sbp{0%{box-shadow:0 0 0 0 #d9a400}100%{box-shadow:0 0 0 14px transparent}}
+.moremenu{position:fixed;z-index:60;min-width:200px;display:grid;background:#05070a;border:1px solid var(--line2);border-radius:8px;padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.7)}
+.moremenu[hidden]{display:none}
+.moremenu a{color:#fff;text-decoration:none;padding:9px 12px;border-radius:5px;font:800 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.moremenu a:hover{background:#121a22;color:var(--gold)}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -589,17 +593,20 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb" data-go="bars">News</button>
     <button class="nb" data-go="cal">Music calendar</button>
     <button class="nb" data-go="scene">Scene</button>
+    <button class="nb" data-go="ink">Ink &amp; Steel</button>
+    <button class="nb" data-go="screen">Screen</button>
     <button class="nb" data-go="venues">Venues</button>
     <button class="nb" data-go="bands">Bands</button>
-    <button class="nb" data-go="ink">Ink &amp; Steel</button>
-    <a class="nb" data-lock="tech" href="/tech/">Tech &amp; AI</a>
-    <a class="nb" data-lock="terminal" href="/terminal/">Crypto &amp; Investing</a>
-    <a class="nb" href="https://newspacesocialmedia.com" target="_blank" rel="noopener">Newspace</a>
-    <button class="nb" data-go="screen">Screen</button>
+    <button class="nb" id="moreBtn" aria-haspopup="true" aria-expanded="false">More ▾</button>
     <button class="nb sub" data-go="submit" data-lock="submit">Submit</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
   </nav>
+<div class="moremenu" id="moreMenu" hidden>
+  <a data-lock="tech" href="/tech/">Tech &amp; AI</a>
+  <a data-lock="terminal" href="/terminal/">Crypto &amp; Investing</a>
+  <a href="https://newspacesocialmedia.com" target="_blank" rel="noopener">Newspace ↗</a>
+</div>
 
   <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
 
@@ -696,26 +703,26 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 function vFront(){
   const [lead,...rest]=STORIES;
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  return `${vCover(CUR)}${vGuide()}<div class="front">
+  return `${vCover(CUR)}<div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span></button>`:''}
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · bars, clubs, music, scene</b><span>${BARS.length} items</span></div>
-        <div class="bwl">${BARS.slice(0,8).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
-        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
       <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
       <div class="sgrid">${rest.slice(0,6).map(storyCard).join('')}</div>
+      <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
+        <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
+        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
     </div>
     <div class="stack">
       <section class="box" style="--c:#1e90ff"><div class="bh"><b>Shows this week</b><span>tap for tickets</span></div><div class="rows">${wk.map(showRow).join('')||'<div class="empty">No shows listed this week.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="cal">Full calendar →</button></div></section>
-      ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,5).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
-      <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,4).map(bnRow).join('')}${upEv(BEV).slice(0,4).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
+      <section class="box" style="--c:#39ff14"><div class="bh"><b>Scene picks</b><span>not concerts</span></div><div style="display:grid;gap:10px;padding:12px">${upScene.slice(0,3).map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div></section>
+      <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,2).map(bnRow).join('')}${upEv(BEV).slice(0,2).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
+      ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
       <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI wire</b><span class="techsrc">via AI Signals</span></div><div class="bwl">${((TECH&&TECH.news)||[]).slice(0,6).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="tech">Tech &amp; AI room →</button></div></section>
-      <section class="box" style="--c:#39ff14"><div class="bh"><b>Scene picks</b><span>not concerts</span></div><div style="display:grid;gap:10px;padding:12px">${upScene.slice(0,3).map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div></section>
       <section class="box" style="--c:#d9a400"><div class="bh"><b>Got dirt? Got photos?</b></div><div style="padding:14px;display:grid;gap:10px"><p style="margin:0;color:#c9d1d9">Send a story idea or your best shot of the city. Picks may run in print.</p><button class="go" data-go="submit">Submit to the Sinner</button></div></section>
-    </div></div>`;
+    </div></div>${vGuide()}`;
 }
 function vGuide(){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
   return `<section class="box" style="--c:#ff6a00"><div class="vguide"><div class="gh"><h3>The Sinner Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
@@ -1235,4 +1242,12 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
   $('sbOut').onclick=()=>sb&&sb.auth.signOut();
   init();
 })();
+</script>
+<script>
+(()=>{const b=document.getElementById('moreBtn'),m=document.getElementById('moreMenu');if(!b||!m)return;
+  const close=()=>{m.hidden=true;b.setAttribute('aria-expanded','false')};
+  b.addEventListener('click',e=>{e.stopPropagation();if(!m.hidden)return close();const r=b.getBoundingClientRect();m.hidden=false;
+    m.style.top=(r.bottom+6)+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-m.offsetWidth-8))+'px';b.setAttribute('aria-expanded','true')});
+  m.addEventListener('click',close);document.addEventListener('click',e=>{if(!m.contains(e.target))close()});
+  addEventListener('scroll',close,{passive:true});addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();
 </script>
