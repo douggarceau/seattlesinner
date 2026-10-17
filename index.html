@@ -624,7 +624,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
 
   <main id="view"></main>
 
-  <div class="foot"><span>Seattle Sinner</span><span>Sources linked on every story · <a href="#" data-ad="">Advertise with the Sinner</a></span></div>
+  <div class="foot"><span>Seattle Sinner · <b id="visits" title="Visitors since the relaunch"></b></span><span>Sources linked on every story · <a href="#" data-ad="">Advertise with the Sinner</a></span></div>
 </div>
 
 <script>
@@ -1262,6 +1262,12 @@ const SFX=(function(){const SRC={"pad": "SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE
     m.style.top=(r.bottom+6)+'px';m.style.left=Math.max(8,Math.min(r.left,innerWidth-m.offsetWidth-8))+'px';b.setAttribute('aria-expanded','true')});
   m.addEventListener('click',close);document.addEventListener('click',e=>{if(!m.contains(e.target))close()});
   addEventListener('scroll',close,{passive:true});addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();
+</script>
+<script>
+(async()=>{try{const k='ss.visited',seen=sessionStorage.getItem(k);
+  const r=await fetch('https://zldqymhtmhqyypzolxwq.supabase.co/rest/v1/rpc/hit',{method:'POST',headers:{apikey:'sb_publishable_rve_mz40jFF8Af0DJQZL3g_2u994LyG','Content-Type':'application/json'},body:JSON.stringify({bump:!seen})});
+  const n=await r.json();if(!seen)try{sessionStorage.setItem(k,'1')}catch(e){}
+  if(typeof n==='number')document.getElementById('visits').textContent=n.toLocaleString()+' visitors';}catch(e){}})();
 </script>
 
 </body>
