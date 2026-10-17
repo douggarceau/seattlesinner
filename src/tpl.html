@@ -978,7 +978,7 @@ function vInbox(){
   ${INBOX.ideas.some(x=>x.kind==='ad')?`<section class="box" style="--c:#ff6a00"><div class="bh"><b>Ad requests</b><span>${INBOX.ideas.filter(x=>x.kind==='ad').length}</span></div><div class="ibx">${INBOX.ideas.filter(x=>x.kind==='ad').map(x=>`<div class="it"><div class="h"><span>${new Date(x.t).toLocaleString()}</span><span>${esc(x.pkg||'')}</span></div><p><b>${esc(x.venue||'')}</b>${x.cat?' · '+esc(x.cat):''}</p><p>${esc((x.text||'').split('\n').slice(1).join('\n'))}</p><div class="h"><span>${esc(x.name||'')}</span><span>${esc(x.email||'')}</span></div></div>`).join('')}</div></section>`:''}
   <div class="two">
     <section class="box" style="--c:#e3170a"><div class="bh"><b>Tips</b><span id="tipsN">${INBOX.ideas.length}</span></div><div class="ibx">${INBOX.ideas.map(x=>`<div class="it"><div class="h"><span>${new Date(x.t).toLocaleString()}</span><span>${esc(x.hood||'')}</span></div><p>${esc(x.text)}</p><div class="h"><span>${esc(x.name||'Anonymous')}</span><span>${esc(x.email||'')}</span></div></div>`).join('')||'<div class="empty">No tips yet.</div>'}</div></section>
-    <section class="box" style="--c:#d9a400"><div class="bh"><b>Photos</b><span>${INBOX.photos.length}</span></div><div class="ibx">${INBOX.photos.map(x=>`<div class="it"><img src="/_blob/${esc(x.asset)}" alt="${esc(x.caption||'Submitted photo')}"><p>${esc(x.caption||'')}</p><div class="h"><span>${esc(x.credit||'No credit given')}</span><span>${new Date(x.t).toLocaleString()}</span></div></div>`).join('')||'<div class="empty">No photos yet.</div>'}</div></section>
+    <section class="box" style="--c:#d9a400"><div class="bh"><b>Photos</b><span>${INBOX.photos.length}</span></div><div class="ibx">${INBOX.photos.map(x=>`<div class="it"><img src="${esc(x.url||'')}" alt="${esc(x.caption||'Submitted photo')}"><p>${esc(x.caption||'')}</p><div class="h"><span>${esc(x.credit||'No credit given')}</span><span>${new Date(x.t).toLocaleString()}</span></div></div>`).join('')||'<div class="empty">No photos yet.</div>'}</div></section>
   </div>`;
 }
 function vSearch(q){
@@ -1091,7 +1091,7 @@ document.addEventListener('change',e=>{if(e.target.id==='hood'){STATE.hood=e.tar
 
 // submissions
 function say(id,cls,txt){try{cls==='ok'?SFX.play('answer',.9):cls==='err'&&SFX.play('malfunction',.8)}catch(e){}$(id).innerHTML=`<div class="msg ${cls}">${esc(txt)}</div>`}
-const NOT_OPEN='Submissions open to the public when the Sinner launches at seattlesinner.com. Your text is still here, so nothing is lost.';
+const NOT_OPEN='Could not send that right now. Your text is still here, so try again in a minute.';
 let PHOTO=null;
 function wireSubmit(){
   $('#ideaF').onsubmit=async ev=>{ev.preventDefault();
@@ -1123,24 +1123,6 @@ function wireSubmit(){
 
 render();
 (()=>{const c=['#e3170a','#ffb300','#1e90ff','#39ff14','#ff7a1a','#2fd3c8'];let h='';for(let i=0;i<34;i++){h+=`<i style="--k:${c[i%c.length]};--x:${Math.random()*100}%;--d:${9+Math.random()*14}s;--dl:${-Math.random()*20}s"></i>`}document.getElementById('sparks').innerHTML=h})();
-
-// runtime: db + assets for submissions, owner inbox
-(async()=>{
-  if(!window.claude||typeof window.claude.use!=='function')return;
-  try{
-    const [db,user,assets]=await Promise.all([window.claude.use('db'),window.claude.use('user'),window.claude.use('assets')]);
-    DB=db;ASSETS=assets;
-    OWNER=user?await user.isOwner():false;
-    USER=user; try{CM.me=user?await user.id():null}catch(e){CM.me=null}
-    if(STATE.view==='read'){CM.unsub=null;CM.slug=null;watchCmts(STATE.story);paintCmts()}
-    if(OWNER&&DB){
-      $('#inboxBtn').hidden=false;
-      const upd=()=>{$('#inboxN').textContent=INBOX.ideas.length+INBOX.photos.length;if(STATE.view==='inbox')render();};
-      DB.collection('ideas').orderBy('t','desc').limit(200).onSnapshot(s=>{INBOX.ideas=s.docs.map(d=>d.data());upd()},()=>{});
-      DB.collection('photos').orderBy('t','desc').limit(200).onSnapshot(s=>{INBOX.photos=s.docs.map(d=>d.data());upd()},()=>{});
-    }
-  }catch(e){}
-})();
 
 /* ===== SOUND (ported from the AI Signals Tech & AI Power Map) ===== */
 const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BUF={};try{on=localStorage.getItem("ss_sound")!=="off"}catch(e){}
@@ -1190,10 +1172,51 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
   document.addEventListener('click',e=>{const j=e.target.closest('[data-join]');if(j){e.preventDefault();join(j.dataset.join);return}
     const l=e.target.closest('[data-lock]');if(l&&!window.SS_USER){e.preventDefault();e.stopImmediatePropagation();join(l.dataset.lock)}},true);
   const q=new URLSearchParams(location.search).get('join');if(q)setTimeout(()=>join(q),600);
-  const show=u=>{const was=!!window.SS_USER;window.SS_USER=u||null;if(was!==!!u&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render();const inn=!!u;$('sbIn').hidden=!inn;$('sbF').hidden=inn;document.querySelector('.sb-tabs').hidden=inn;if(u)$('sbWho').textContent=(u.user_metadata&&u.user_metadata.username)||u.email};
+  const show=u=>{const was=!!window.SS_USER;window.SS_USER=u||null;if(sb)onUser(u||null);if(was!==!!u&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render();const inn=!!u;$('sbIn').hidden=!inn;$('sbF').hidden=inn;document.querySelector('.sb-tabs').hidden=inn;if(u)$('sbWho').textContent=(u.user_metadata&&u.user_metadata.username)||u.email};
+
+  /* Comments, tips, photos and the editor inbox, stored in the Sinner's Supabase project.
+     Exposes a small Firestore-style DB object so the page code above stays the same. */
+  const T=()=>Date.now();
+  function snap(rows){return {docs:rows.map(r=>({id:r.id,data:()=>r}))}}
+  function wireData(sb){
+    const commentsOf=slug=>{
+      const q={orderBy(){return q},limit(){return q},
+        onSnapshot(cb,err){let alive=true;
+          const load=async()=>{if(!alive)return;const {data,error}=await sb.from('comments').select('id,slug,parent,uid,handle,text,editor,t,comment_votes(uid,val)').eq('slug',slug).order('t').limit(500);
+            if(error){err&&err(error);return}
+            cb(snap(data.map(c=>({...c,votes:Object.fromEntries((c.comment_votes||[]).map(v=>[v.uid,v.val]))}))))};
+          CM.reload=load;load();const iv=setInterval(load,20000);
+          return ()=>{alive=false;clearInterval(iv)}},
+        async add(o){const {error}=await sb.from('comments').insert({slug,parent:o.parent||null,handle:o.handle,text:o.text,editor:!!o.editor});if(error)throw error;CM.reload&&CM.reload()}};
+      return q};
+    const table=name=>{const q={orderBy(){return q},limit(){return q},
+        onSnapshot(cb){let alive=true;const load=async()=>{if(!alive)return;const {data}=await sb.from(name).select('*').order('t',{ascending:false}).limit(200);if(!data)return;
+            if(name==='photos'&&data.length){const {data:u}=await sb.storage.from('photos').createSignedUrls(data.map(r=>r.path),3600);(u||[]).forEach((x,i)=>{data[i].url=x.signedUrl})}
+            cb(snap(data))};load();const iv=setInterval(load,60000);return ()=>{alive=false;clearInterval(iv)}},
+        async add(o){const row=name==='photos'?{path:o.asset,caption:o.caption,credit:o.credit}:{kind:o.kind||null,text:o.text,hood:o.hood||null,name:o.name||null,email:o.email||null,venue:o.venue||null,pkg:o.pkg||null,cat:o.cat||null};
+          const {error}=await sb.from(name).insert(row);if(error)throw error}};return q};
+    DB={collection(path){const m=path.match(/^stories\/([^/]+)\/comments$/);return m?commentsOf(m[1]):table(path)},
+      doc(path){const id=path.split('/').pop();return {
+        async update(o){const v=(o.votes||{})[CM.me];const r=v?await sb.from('comment_votes').upsert({comment_id:id,uid:CM.me,val:v}):await sb.from('comment_votes').delete().eq('comment_id',id).eq('uid',CM.me);if(r.error)throw r.error;CM.reload&&CM.reload()},
+        async delete(){const {error}=await sb.from('comments').delete().eq('id',id);if(error)throw error;CM.reload&&CM.reload()}}}};
+    ASSETS={async upload(file){const ext=(file.type.split('/')[1]||'jpg').replace('jpeg','jpg');const path=(crypto.randomUUID?crypto.randomUUID():String(T()))+'.'+ext;
+      const {error}=await sb.storage.from('photos').upload(path,file,{contentType:file.type});if(error)throw error;return {id:path}}};
+  }
+  let inboxOn=false;
+  async function onUser(u){
+    CM.me=u?u.id:null;USER=u||null;
+    if(u&&!hk()&&u.user_metadata&&u.user_metadata.username)setHk(u.user_metadata.username);
+    OWNER=false;if(u&&sb){try{const {data}=await sb.rpc('is_editor');OWNER=!!data}catch(e){}}
+    if(OWNER&&DB&&!inboxOn){inboxOn=true;$('inboxBtn').hidden=false;
+      const upd=()=>{$('inboxN').textContent=INBOX.ideas.length+INBOX.photos.length;if(STATE.view==='inbox')render()};
+      DB.collection('ideas').onSnapshot(s=>{INBOX.ideas=s.docs.map(d=>d.data());upd()});
+      DB.collection('photos').onSnapshot(s=>{INBOX.photos=s.docs.map(d=>d.data());upd()})}
+    if(!OWNER)$('inboxBtn').hidden=true;
+    if(STATE.view==='read'){if(CM.unsub){try{CM.unsub()}catch(e){}}CM.unsub=null;CM.slug=null;watchCmts(STATE.story);render()}
+  }
   async function init(){
     if(!SB_URL||!SB_KEY){msg('Sign-ups open soon.','');$('sbGo').disabled=true;return}
-    try{const m=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');sb=m.createClient(SB_URL,SB_KEY);
+    try{const m=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');sb=m.createClient(SB_URL,SB_KEY);wireData(sb);
       const {data}=await sb.auth.getSession();show(data.session&&data.session.user);
       sb.auth.onAuthStateChange((_e,s)=>show(s&&s.user));}catch(e){msg('Sign-up is down for a minute. Try again soon.','err')}
   }
