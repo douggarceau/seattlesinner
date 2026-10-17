@@ -1171,7 +1171,7 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
 <script>
 /* Subscribe / log in box. Accounts and the email list live in Supabase Auth. */
 (()=>{
-  const SB_URL='', SB_KEY='';
+  const SB_URL='https://zldqymhtmhqyypzolxwq.supabase.co', SB_KEY='sb_publishable_rve_mz40jFF8Af0DJQZL3g_2u994LyG';
   const $=s=>document.getElementById(s), msg=(t,c)=>{const m=$('sbMsg');m.textContent=t;m.className='sb-msg'+(c?' '+c:'')};
   let mode='up', sb=null;
   document.querySelectorAll('.sb-tabs button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.sb-tabs button').forEach(x=>x.classList.toggle('on',x===b));
