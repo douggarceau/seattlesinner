@@ -1,0 +1,43 @@
+name: Markets data refresh
+
+on:
+  schedule:
+    - cron: '17 * * * *'   # news, markets, crypto every hour
+    - cron: '41 9 * * *'   # country pages once a day
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: core, countries or all
+        default: all
+
+permissions:
+  contents: write
+
+concurrency:
+  group: markets-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Pick mode
+        id: m
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "41 9 * * *" ]; then echo "mode=countries" >> $GITHUB_OUTPUT
+          else echo "mode=core" >> $GITHUB_OUTPUT; fi
+      - run: node tools/ghost/snapshot.cjs ${{ steps.m.outputs.mode }}
+      - name: Commit data
+        run: |
+          git config user.name "markets-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add markets/data
+          git diff --cached --quiet && exit 0
+          git commit -m "Refresh markets data (${{ steps.m.outputs.mode }})"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
