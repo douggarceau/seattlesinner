@@ -599,7 +599,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb" data-go="venues">Venues</button>
     <button class="nb" data-go="bands">Bands</button>
     <button class="nb" id="moreBtn" aria-haspopup="true" aria-expanded="false">More ▾</button>
-    <button class="nb sub" data-go="submit" data-lock="submit">Submit</button>
+    <button class="nb sub" data-go="submit" data-lock="submit">Send a Tip</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
   </nav>
@@ -627,7 +627,7 @@ const ISSUES=[{no:1,month:'Fall 2026',src:/*ISSUE1*/"",lines:[
  ['the-swarm','The Swarm That Hacked Hugging Face','AI gone rogue.'],
  ['macklemore-vs-the-owners-box','Macklemore vs. the Owners\u2019 Box','Two words. One billionaire. $1 million.'],
  ['case-against-clavicular','The Case Against Clavicular',''],
- ['candace-anomalies','Candace vs. Kirk','Her \u201cevidence,\u201d checked.'],
+ ['candace-anomalies','Candace Owens vs. Kirk','Her \u201cevidence,\u201d checked.'],
  ['you-can-see-everything','You Can See Everything','Movie review.']]}];
 const CUR=ISSUES[ISSUES.length-1];
 const VENUES=/*VENUES*/[];
@@ -644,7 +644,7 @@ const VUP=/*VUP_START*//*VUPDATA*/[]/*VUP_END*/;
 const TECH=/*TECH_START*//*TECHDATA*/{}/*TECH_END*/;
 const BARS=/*BARS*/[];
 
-const TOPIC={music:['#1e90ff','Music'],nightlife:['#d9a400','Nightlife'],politics:['#e3170a','City hall'],surveillance:['#e3170a','Surveillance'],tech:['#8fb3d9','Tech'],housing:['#d9a400','Rent & Real Estate'],weird:['#39ff14','Weird Seattle'],culture:['#39ff14','Culture'],transit:['#8fb3d9','Transit'],streets:['#e3170a','The Streets'],ink:['#d9a400','Ink & Steel'],screen:['#ff7a1a','The Screen']};
+const TOPIC={music:['#1e90ff','Music'],nightlife:['#d9a400','Nightlife'],politics:['#e3170a','City hall'],national:['#e3170a','Politics'],surveillance:['#e3170a','Surveillance'],tech:['#8fb3d9','Tech'],housing:['#d9a400','Rent & Real Estate'],weird:['#39ff14','Weird Seattle'],culture:['#39ff14','Culture'],transit:['#8fb3d9','Transit'],streets:['#e3170a','The Streets'],ink:['#d9a400','Ink & Steel'],screen:['#ff7a1a','The Screen']};
 const GENRE={'live':'#ff7a1a','hip-hop':'#d9a400','r&b':'#c08a3e','jazz':'#3f6db3','electronic':'#1e90ff','latin':'#e3170a','country':'#a8742f','folk':'#7fa38a','metal':'#9aa4ad','punk':'#ff3a2a','indie':'#8fb3d9','rock':'#e0e6ec','experimental':'#39ff14','world':'#2fa39a','pop':'#4a9eff','classical':'#c9d1d9','goth':'#6f8aa8','other':'#6f8aa8'};
 const BK={news:['#ff2a14','Hard news'],opening:['#39ff14','Now open'],closing:['#e3170a','Last call'],club:['#1e90ff','Club & DJ'],lgbtq:['#d9a400','Queer nightlife'],policy:['#8fb3d9','City hall'],trend:['#c9d1d9','Trend'],award:['#d9a400','Best of'],safety:['#ff3a2a','Safety'],music:['#4a9eff','Local music'],scene:['#39ff14','Alt scene'],other:['#8b949c','Wire']};
 const KIND={halloween:'#e3170a',drag:'#1e90ff',burlesque:'#d9a400',goth:'#6f8aa8',market:'#39ff14',art:'#8fb3d9',film:'#3f6db3',comedy:'#d9a400',tattoo:'#e3170a',other:'#8b949c'};
@@ -1171,7 +1171,7 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
   const box=$('subBox');$('sbEmail').addEventListener('focus',()=>box.classList.add('open'));
   document.querySelectorAll('.sb-tabs button').forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll('.sb-tabs button').forEach(x=>x.classList.toggle('on',x===b));
     $('sbUser').hidden=mode==='in';box.classList.add('open');$('sbGo').textContent=mode==='up'?'Subscribe':'Log in';$('sbPass').autocomplete=mode==='up'?'new-password':'current-password';msg('')});
-  const LOCKS={tech:'the Tech & AI Power Map',terminal:'the Crypto & Investing terminal',submit:'Submit',story:'the full story'};
+  const LOCKS={tech:'the Tech & AI Power Map',terminal:'the Crypto & Investing terminal',submit:'Send a Tip',story:'the full story'};
   window.SS_USER=null;
   const join=k=>{scrollTo({top:0,behavior:'smooth'});box.classList.add('open');box.classList.remove('pulse');void box.offsetWidth;box.classList.add('pulse');msg('Subscribe free (or log in) to unlock '+(LOCKS[k]||'that')+'.','ok');setTimeout(()=>$('sbEmail').focus({preventScroll:true}),400)};
   document.addEventListener('click',e=>{const j=e.target.closest('[data-join]');if(j){e.preventDefault();join(j.dataset.join);return}
