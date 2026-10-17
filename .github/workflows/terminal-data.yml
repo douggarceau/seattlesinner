@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p .gwt-out
           cp terminal/data.json .gwt-out/ && cp -r terminal/hist .gwt-out/
+          find .gwt-out -type f -exec touch -d '3 days ago' {} +
           python3 tools/gwt/fetch_data.py .gwt-out 2>&1 | tee tools/gwt/last-run.log
           python3 -c "import json;d=json.load(open('.gwt-out/data.json'));assert d"
           cp .gwt-out/data.json terminal/data.json
