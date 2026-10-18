@@ -719,7 +719,7 @@ setTimeout(()=>{const r=document.getElementById('tick');if(r){const half=r.scrol
 // per-story look: [font, color, size scale]
 const SFONTS=[["'Playfair Display'",1,900],["'Bodoni Moda'",.98,800],["'DM Serif Display'",1.02,400],["'Libre Caslon Display'",1.06,400],["'Old Standard TT'",1,700],["'Abril Fatface'",1,400]];
 const SCOLORS=['#e3170a','#1e90ff','#d9a400','#39ff14','#2fd3c8','#ff7a1a','#8fb3d9','#a6d13a','#ff3a2a','#4a9eff','#f2c94c','#20c997'];
-const STYLE_FIX={'who-said-martial-law':[3,0],'homeless-by-choice':[4,2],'we-turned-our-lights-off':[0,1],'the-swarm':[6,4],'the-mushroom-map':[7,7],'candace-anomalies':[2,10],'satanic-cabal':[5,8],'case-against-clavicular':[1,6],
+const STYLE_FIX={'who-said-martial-law':[3,0],'downfall-of-andrew-tate':[5,0],'homeless-by-choice':[4,2],'we-turned-our-lights-off':[0,1],'the-swarm':[6,4],'the-mushroom-map':[7,7],'candace-anomalies':[2,10],'satanic-cabal':[5,8],'case-against-clavicular':[1,6],
  'shop-guide':[8,5],'skin-deep-lazonga':[19,0],'law-of-the-needle':[11,6],'regret-economy':[9,2],'piercing-now':[10,4],'whats-in-the-ink':[18,3],'ink-at-work':[12,1],'convention-season':[13,5],'beyond-ink':[14,8],'ai-flash':[17,9],'dressed-to-sin':[16,10],'stick-and-poke':[9,11],
  'thirteen-hundred-eyes':[13,0],'ice-reads-your-license':[15,1],'the-unfund-budget':[12,2],'art-not-cops':[7,11],'carrot-and-cage':[11,5],'robot-price-tag':[6,9],'pink-slip-city':[0,6],'the-robes-in-the-window':[16,8],'kexp-goes-haight':[10,3],'fifteenth-goes-dark':[8,10]};
 function sty(slug){let f,c;if(STYLE_FIX[slug]){[f,c]=STYLE_FIX[slug];f%=SFONTS.length}else{let h=0;for(const ch of slug)h=(h*31+ch.charCodeAt(0))>>>0;f=h%SFONTS.length;c=(h>>5)%SCOLORS.length}
