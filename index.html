@@ -181,7 +181,7 @@ button{font:inherit;color:inherit}
 .lspot::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,color-mix(in srgb,var(--k) 26%,transparent),transparent 62%),linear-gradient(180deg,transparent 55%,#000 100%);pointer-events:none}
 .lspot a{transition:opacity .45s ease,transform .45s ease}.lspot.flip a{opacity:0;transform:translateY(6px)}
 .lspot.l{left:calc(max(10px,(100vw - 1760px)/2 - var(--ls) - 20px) - max(0px,(100vw - 1760px)/2))}.lspot.r{right:calc(max(10px,(100vw - 1760px)/2 - var(--ls) - 20px) - max(0px,(100vw - 1760px)/2))}
-.lspot.t2{top:calc(150px + var(--lsh) + 24px)}.lspot.t3{top:calc(150px + 2*var(--lsh) + 48px)}
+.lspot.t2{top:calc(150px + var(--lsh) + 24px)}.lspot.t3{top:calc(150px + 2*var(--lsh) + 48px)}.lspot.t4{top:calc(150px + 3*var(--lsh) + 72px)}
 .lspot a>*{max-width:100%;min-width:0}
 .lspot a{position:relative;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;align-items:center;gap:10px;width:100%;height:100%;box-sizing:border-box;padding:16px 18px 18px;color:#fff;text-decoration:none;text-align:left}
 .lspot a:hover .ls-go{background:var(--k);color:#000}
@@ -223,7 +223,7 @@ button{font:inherit;color:inherit}
 @media (min-width:1280px){:root{--ls:250px}}
 @media (min-width:1600px){:root{--ls:300px}}
 @media (min-width:1280px){.wrap{padding-left:max(0px,min(calc(var(--ls) + 35px),calc(var(--ls) + 35px - (100vw - 1760px)/2)));padding-right:max(0px,min(calc(var(--ls) + 35px),calc(var(--ls) + 35px - (100vw - 1760px)/2)))}}
-@media (max-width:1279px){:root{--ls:min(46vw,300px)}.lsrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;justify-items:center;margin:12px 0}.lspot,.lspot.t2,.lspot.t3{position:relative;top:auto;left:auto!important;right:auto!important;--lsh:calc(var(--ls)*1.3)}.lspot a{padding:12px 12px 14px;gap:6px}.lspot .ls-go{margin-top:8px}}
+@media (max-width:1279px){:root{--ls:min(46vw,300px)}.lsrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;justify-items:center;margin:12px 0}.lspot,.lspot.t2,.lspot.t3,.lspot.t4{position:relative;top:auto;left:auto!important;right:auto!important;--lsh:calc(var(--ls)*1.3)}.lspot a{padding:12px 12px 14px;gap:6px}.lspot .ls-go{margin-top:8px}}
 @media (prefers-reduced-motion:reduce){.lspot,.lspot .ls-tag::before,.lspot.t-cw .ls-big{animation:none}.lspot{transition:none}}
 @keyframes nsadGlow{0%,100%{box-shadow:0 0 6px #e3170a66;border-color:#e3170a}50%{box-shadow:0 0 28px #ff2b1aee,0 0 60px #ffb30055;border-color:#ffd21a}}
 @keyframes nsadBlink{0%{opacity:1}50%{opacity:.25}100%{opacity:1}}
@@ -801,6 +801,17 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 @media (prefers-reduced-motion:reduce){.intro,.sc,.sgrid .sc.styled,.lcd,.crstat div,.scu{animation:none}}
 </style>
 <style id="noir">
+.lspot.t-spd{--k:#ff2a14;background:radial-gradient(ellipse at 50% 0%,#2a0505,#070708 60%)!important;border-top-color:#ff2a14}
+.lspot.t-spd .ls-tag{color:#ff2a14}.lspot.t-spd .ls-tag::before{animation:lsDot .7s steps(2,jump-none) infinite}
+.lspot.t-spd .ls-big{font:800 clamp(20px,calc(var(--ls)*.085),30px)/1.05 var(--body);text-transform:uppercase;letter-spacing:.01em;color:#fff;text-shadow:0 0 18px color-mix(in srgb,var(--k) 55%,transparent)}
+.lspot.t-spd .ls-big em{font:700 .5em/1.3 var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--k);margin-top:8px;font-style:normal}
+.lspot.t-spd i{display:block;margin-top:4px;font:700 13px/1.3 var(--mono);color:#fff;font-style:normal}
+.lspot.t-spd .spd-bar{display:flex;gap:3px;margin-top:10px}.lspot.t-spd .spd-bar b{flex:1;height:4px;background:#1c1012;border-radius:2px}.lspot.t-spd .spd-bar b.on{background:var(--k);box-shadow:0 0 8px var(--k)}
+.lspot.t-ai{--k:#2fd3c8;background:radial-gradient(ellipse at 50% 0%,#04201e,#060809 60%)!important}
+.lspot.t-ai .ls-big{font-size:clamp(19px,calc(var(--ls)*.08),28px);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.lspot.t-ai small{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lspot.t-ai i{display:block;margin-top:4px;font:700 11px/1.3 var(--mono);color:var(--mute,#8b949c);letter-spacing:.1em;text-transform:uppercase;font-style:normal}
+
 .spr{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;margin:10px 0;padding:14px 18px;border:1px solid #6b1220;border-left:4px solid #e3170a;border-radius:6px;background:linear-gradient(90deg,#1a0306,#08090b 60%);color:#fff;text-decoration:none;cursor:pointer;box-shadow:0 12px 30px #000c;font:inherit;text-align:left;width:100%;box-sizing:border-box}
 .spr-tag{font:900 12px/1 var(--mono);letter-spacing:.2em;background:#e3170a;color:#fff;padding:8px 10px;border-radius:3px;box-shadow:0 0 16px #e3170a88;white-space:nowrap}
 .spr-tag::before{content:"● ";animation:lsDot 1.2s steps(2,jump-none) infinite}
@@ -976,7 +987,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
   <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
   <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="Seattle Sinner is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>Seattle Sinner is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
   <button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace Gets Inked</b><small>The outgoing GOP congresswoman bares full tattoo sleeves and launches her own YouTube show.</small></span><span class="spr-go">Read it →</span></button>
-  <div class="lsrow" aria-label="Seattle Sinner features"><div class="lspot l t1"><a id="lsA"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsC"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div></div>
+  <div class="lsrow" aria-label="Seattle Sinner features"><div class="lspot l t1"><a id="lsA"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsC"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div><div class="lspot l t4"><a id="lsG"></a></div><div class="lspot r t4"><a id="lsH"></a></div></div>
 
   <main id="view"></main>
 
@@ -1727,7 +1738,7 @@ const PM=[
 const NW=[
  {tag:"EXCLUSIVE",big:"newspace",name:"The network for Seattle and beyond",sub:"Profiles the way they were in 2006: your Top 8, a profile song and a comment wall",go:"Join to interact",theme:"ns",href:NS,ext:1},
  {tag:"NEWSPACE",big:"Top 8",name:"Pick your people",sub:"Blogs, bulletins, groups, events and private messages. Seattle Sinner is there exclusively.",go:"Make your profile",theme:"ns2",href:NS,ext:1}];
-let CW=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
+let CWX=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
 let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
   const lines=(typeof ISSUES!=='undefined'&&ISSUES[0]&&ISSUES[0].lines)||[];
   ST=['nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off'].map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
@@ -1738,6 +1749,7 @@ let MU=[];try{const BIG=/climate pledge|lumen|t-mobile|paramount|moore|showbox|n
  const gs=Object.keys(by).sort(()=>Math.random()-.5);gs.forEach(g=>by[g].sort(()=>Math.random()-.5));
  for(let k=0;MU.length<src.length;k++){let any=false;gs.forEach(g=>{if(by[g][k]){MU.push(by[g][k]);any=true}});if(!any)break}}catch(e){}
 const MUF=MU.slice(0,60).map(e=>({tag:"MUSIC CALENDAR · "+e.genre,bigText:e.artists,name:e.venue+(e.hood?' · '+e.hood:''),when:(typeof longDay==='function'?longDay(e.date):e.date)+(e.time?' · '+e.time:''),sub:[e.price,e.ages].filter(Boolean).join(' · '),go:"Tickets",theme:"mu",href:e.url,ext:1,k:(typeof GENRE!=='undefined'&&GENRE[e.genre])||'#4a9eff'}));
+const AIF=(()=>{try{const t=(typeof TECH!=='undefined'&&TECH)||{};return [].concat((t.rogue||[]).map(x=>({...x,_g:'AI GONE ROGUE'})),(t.machines||[]).map(x=>({...x,_g:'THE MACHINES'}))).sort(()=>Math.random()-.5).map(x=>({tag:x._g+' · '+(x.kind||''),bigText:x.title,name:x.org||'',when:x.date||'',sub:x.detail,go:'Tech & AI room',theme:'ai',href:'#tech',view:'tech'}))}catch(e){return []}})();
 const STF=ST.map(x=>({tag:"FEATURED STORY",bigText:x.title,name:"The Seattle Sinner",sub:x.dek,go:"Read it",theme:"st",href:"#",story:x.slug}));
 const $=id=>document.getElementById(id),esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 function fill(a,s){if(!a||!s)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').replace(/\bcwi\b/g,'').trim()+' t-'+s.theme+(s.cwi?' cwi':'');
@@ -1766,11 +1778,17 @@ function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.class
   setInterval(()=>{if(live())showC(false)},4200)}).catch(()=>{})}
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function flipTo(a,s){if(!a)return;if(still){fill(a,s);return}const b=a.parentNode;b.classList.add('flip');setTimeout(()=>{fill(a,s);b.classList.remove('flip')},460)}
-let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CW[0]);fill($('lsD'),STF[0]);let q=0;fill($('lsE'),SCF[0]);let u=0;fill($('lsF'),MUF[0]);
+let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);fill($('lsD'),STF[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;fill($('lsH'),AIF[0]);
+const spdIntro={tag:'SPD LIVE · Seattle police reports',big:'Live<em>from the SPD report stream</em>',name:'Updated every few minutes',sub:'Assaults, robberies and shootings as Seattle police log them, straight from the city\'s open data.',go:'Watch the stream',theme:'spd',href:'#crime',view:'crime'};
+let sp=0,SPF=[spdIntro];fill($('lsG'),spdIntro);
+const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))).slice(0,20);if(!V.length)return;
+ SPF=V.map(r=>{const k=CRK[cwSpdKind(r)]||CRK.other;const cap=t=>(t||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());return {tag:'SPD LIVE · '+k[1],big:esc(r.nibrs_offense_code_description||k[1])+'<em>'+esc(cap(r.neighborhood||r.precinct||'Seattle'))+'</em>',name:cap(r.block_address||''),when:(typeof cwLocal==='function'?cwLocal(r.offense_date):''),go:'Live stream',theme:'spd',href:'#crime',view:'crime',k:k[0]}})}catch(e){}};
+setInterval(spdPull,15000);setTimeout(spdPull,4000);
+let u=0;fill($('lsF'),MUF[0]);
 let c=0;fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
  const it=d.items.slice(0,40).map(x=>({tag:'CRIME WATCH · '+(x.kind||'police'),bigText:x.headline,name:(x.hood||'Seattle'),when:(typeof shortDay==='function'?shortDay(x.date):x.date)+(x.outlet?' · '+x.outlet:''),sub:x.blurb,go:'Read it',theme:'cw',cwi:1,href:x.url,ext:1}));
- CW=CW.concat(it)}).catch(()=>{});
-setInterval(()=>{i++;setTimeout(()=>{if(CW.length>1){c=(c+1)%CW.length;flipTo($('lsC'),CW[c])}},900);setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800)},5600);
+ CWX=CWX.concat(it)}).catch(()=>{});
+setInterval(()=>{i++;setTimeout(()=>{if(CWX.length>1){c=(c+1)%CWX.length;flipTo($('lsC'),CWX[c])}},900);setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(AIF.length>1){a2=(a2+1)%AIF.length;flipTo($('lsH'),AIF[a2])}},2700)},5600);
 if(STF.length>1)setInterval(()=>{j=(j+1)%STF.length;flipTo($('lsD'),STF[j])},6000);
 })();
 </script>
