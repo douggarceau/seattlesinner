@@ -1311,6 +1311,9 @@ const SFX=(function(){const SRC={"pad": "SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE
 <script>
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
+<script>
+(()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
+</script>
 
 </body>
 </html>
