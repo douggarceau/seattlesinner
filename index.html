@@ -801,6 +801,8 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 @media (prefers-reduced-motion:reduce){.intro,.sc,.sgrid .sc.styled,.lcd,.crstat div,.scu{animation:none}}
 </style>
 <style id="noir">
+a.crrow{color:inherit;text-decoration:none;cursor:pointer}a.crrow:hover{background:#140a0c}
+.crrow.spot{outline:2px solid #ff2a14;outline-offset:-2px;background:#2a0508!important;box-shadow:0 0 24px #ff2a1466;transition:background 1s}
 .lspot.t-spd{--k:#ff2a14;background:radial-gradient(ellipse at 50% 0%,#2a0505,#070708 60%)!important;border-top-color:#ff2a14}
 .lspot.t-spd .ls-tag{color:#ff2a14}.lspot.t-spd .ls-tag::before{animation:lsDot .7s steps(2,jump-none) infinite}
 .lspot.t-spd .ls-big{font:800 clamp(20px,calc(var(--ls)*.085),30px)/1.05 var(--body);text-transform:uppercase;letter-spacing:.01em;color:#fff;text-shadow:0 0 18px color-mix(in srgb,var(--k) 55%,transparent)}
@@ -1274,8 +1276,10 @@ const cwAgo=s=>{if(!s)return'';const d=new Date(s.length<20?s+(s.length>10?'':'T
 const cwLocal=s=>{try{const d=new Date(s);return d.toLocaleString('en-US',{weekday:'short',hour:'numeric',minute:'2-digit'})}catch(e){return s}};
 function cwSpdKind(r){const s=(r.nibrs_offense_code_description||'')+' '+(r.offense_sub_category||'');if(r.shooting_type_group&&r.shooting_type_group!=='-')return'shooting';if(/homicide|murder/i.test(s))return'homicide';if(/robbery/i.test(s))return'robbery';if(/aggravated|assault|intimidation/i.test(s))return'assault';if(/burglary|breaking/i.test(s))return'burglary';if(/theft|larceny|stolen|shoplift/i.test(s))return'theft';return'other'}
 function cwNewsRow(n){const k=CRK[n.kind]||CRK.other;return `<a class="crrow" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(n.headline)}</b><span class="m">${esc(n.hood||'Seattle')} · ${shortDay(n.date)} · ${esc(n.outlet||'')}</span>${n.blurb?`<p>${esc(n.blurb)}</p>`:''}</span></a>`}
-function cwSpdRow(r){const k=CRK[cwSpdKind(r)];const id=r.report_number;const isNew=CW.t&&!CW.seen.has(id);return `<div class="crrow${isNew?' new':''}"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(r.nibrs_offense_code_description||'Report')}</b><span class="m">${esc((r.neighborhood||r.precinct||'Seattle').replace(/\b\w+/g,w=>w[0]+w.slice(1).toLowerCase()))} · ${esc((r.block_address||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()))} · ${cwLocal(r.offense_date)}</span></span></div>`}
-function cwFireRow(r){const t=r.type||'';const k=/fire|explosion|smoke/i.test(t)?CRK.fire:/shot|stab|assault|violence|weapon/i.test(t)?CRK.shooting:/mvi|motor|vehicle|collision/i.test(t)?CRK.crash:['#ff7a1a','Rescue'];return `<div class="crrow"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(t)}</b><span class="m">${esc(r.address||'')} · ${cwAgo(r.datetime)}</span></span></div>`}
+function cwMap(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q+', Seattle, WA')}
+function cwBlk(b){return (b||'').replace(/^(\d+)XX\s+BLOCK\s+OF\s+/i,(m,n)=>n+'00 ').replace(/\s+\/\s+/,' & ')}
+function cwSpdRow(r){const k=CRK[cwSpdKind(r)];const id=r.report_number;const isNew=CW.t&&!CW.seen.has(id);return `<a class="crrow${isNew?' new':''}" data-rn="${esc(id||'')}" href="${esc(cwMap(cwBlk(r.block_address)||((r.neighborhood||'')+' neighborhood')))}" target="_blank" rel="noopener" title="Show this block on a map"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(r.nibrs_offense_code_description||'Report')}</b><span class="m">${esc((r.neighborhood||r.precinct||'Seattle').replace(/\b\w+/g,w=>w[0]+w.slice(1).toLowerCase()))} · ${esc((r.block_address||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()))} · ${cwLocal(r.offense_date)} · map ↗</span></span></a>`}
+function cwFireRow(r){const t=r.type||'';const k=/fire|explosion|smoke/i.test(t)?CRK.fire:/shot|stab|assault|violence|weapon/i.test(t)?CRK.shooting:/mvi|motor|vehicle|collision/i.test(t)?CRK.crash:['#ff7a1a','Rescue'];return `<a class="crrow" href="${esc(cwMap(r.address||''))}" target="_blank" rel="noopener" title="Show this address on a map"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(t)}</b><span class="m">${esc(r.address||'')} · ${cwAgo(r.datetime)} · map ↗</span></span></a>`}
 async function cwLoad(force){if(!force&&Date.now()-CW.t<240000)return;const ago=h=>new Date(Date.now()-h*36e5).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).replace(' ','T');
   const j=u=>fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const [n,s,f]=await Promise.all([j('/data/crime.json?'+Math.floor(Date.now()/6e5)),
@@ -1753,7 +1757,7 @@ const AIF=(()=>{try{const t=(typeof TECH!=='undefined'&&TECH)||{};return [].conc
 const STF=ST.map(x=>({tag:"FEATURED STORY",bigText:x.title,name:"The Seattle Sinner",sub:x.dek,go:"Read it",theme:"st",href:"#",story:x.slug}));
 const $=id=>document.getElementById(id),esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 function fill(a,s){if(!a||!s)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').replace(/\bcwi\b/g,'').trim()+' t-'+s.theme+(s.cwi?' cwi':'');
- a.href=s.href;if(s.view)a.dataset.go=s.view;else delete a.dataset.go;if(s.story)a.dataset.story=s.story;else delete a.dataset.story;
+ a.href=s.href;if(s.view)a.dataset.go=s.view;else delete a.dataset.go;if(s.story)a.dataset.story=s.story;else delete a.dataset.story;if(s.rep){a.dataset.rep=s.rep;a.dataset.hood=s.hood}else{delete a.dataset.rep;delete a.dataset.hood}
  if(s.ext){a.target='_blank';a.rel='noopener'}else{a.removeAttribute('target');a.removeAttribute('rel')}
  a.setAttribute('aria-label',s.bigText||s.name);box.style.setProperty('--k',s.k||'');if(!s.k)box.style.removeProperty('--k');
  const mid=s.img?'<img src="'+s.img+'" alt=""'+(s.round?' class="round'+(s.round>1?' dark':'')+'"':'')+'>':'<span class="ls-big">'+(s.bigText?esc(s.bigText):s.big)+'</span>';
@@ -1781,8 +1785,8 @@ function flipTo(a,s){if(!a)return;if(still){fill(a,s);return}const b=a.parentNod
 let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);fill($('lsD'),STF[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;fill($('lsH'),AIF[0]);
 const spdIntro={tag:'SPD LIVE · Seattle police reports',big:'Live<em>from the SPD report stream</em>',name:'Updated every few minutes',sub:'Assaults, robberies and shootings as Seattle police log them, straight from the city\'s open data.',go:'Watch the stream',theme:'spd',href:'#crime',view:'crime'};
 let sp=0,SPF=[spdIntro];fill($('lsG'),spdIntro);
-const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))).slice(0,20);if(!V.length)return;
- SPF=V.map(r=>{const k=CRK[cwSpdKind(r)]||CRK.other;const cap=t=>(t||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());return {tag:'SPD LIVE · '+k[1],big:esc(r.nibrs_offense_code_description||k[1])+'<em>'+esc(cap(r.neighborhood||r.precinct||'Seattle'))+'</em>',name:cap(r.block_address||''),when:(typeof cwLocal==='function'?cwLocal(r.offense_date):''),go:'Live stream',theme:'spd',href:'#crime',view:'crime',k:k[0]}})}catch(e){}};
+const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))&&!/simple assault|intimidation/i.test(r.nibrs_offense_code_description||'')).slice(0,20);if(!V.length)return;
+ SPF=V.map(r=>{const k=CRK[cwSpdKind(r)]||CRK.other;const cap=t=>(t||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());return {tag:'SPD LIVE · '+k[1],big:esc(r.nibrs_offense_code_description||k[1])+'<em>'+esc(cap(r.neighborhood||r.precinct||'Seattle'))+'</em>',name:cap(r.block_address||''),when:(typeof cwLocal==='function'?cwLocal(r.offense_date):''),go:'See it on the map of reports',theme:'spd',href:'#crime',rep:r.report_number,hood:r.neighborhood||'',k:k[0]}})}catch(e){}};
 setInterval(spdPull,15000);setTimeout(spdPull,4000);
 let u=0;fill($('lsF'),MUF[0]);
 let c=0;fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
@@ -1796,6 +1800,12 @@ if(STF.length>1)setInterval(()=>{j=(j+1)%STF.length;flipTo($('lsD'),STF[j])},600
 /* Story trailers: show the official thumbnail, load YouTube only when the reader hits play */
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.trl-p[data-yt]');if(!b)return;e.preventDefault();e.stopPropagation();
  const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(b.dataset.yt)+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label')||'Trailer';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.style.cursor='auto';b.replaceWith(f)},true);
+</script>
+<script>
+/* SPD Live box: open Crime Watch filtered to that neighborhood and spotlight the report */
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[data-rep]');if(!a)return;e.preventDefault();e.stopPropagation();
+ const rn=a.dataset.rep,h=a.dataset.hood;try{if(h){CW.hood=h;CW.t=0;CW.spd=[];CW.seen=new Set()}}catch(_){}
+ go('crime');let n=0;const iv=setInterval(()=>{const el=document.querySelector('.crrow[data-rn="'+CSS.escape(rn)+'"]');if(el){clearInterval(iv);el.classList.add('spot');el.scrollIntoView({behavior:'smooth',block:'center'})}else if(++n>40){clearInterval(iv);const b=document.querySelector('.crrow');if(b)b.scrollIntoView({behavior:'smooth',block:'center'})}},250)},true);
 </script>
 </body>
 </html>
