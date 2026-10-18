@@ -123,6 +123,10 @@ button{font:inherit;color:inherit}
 @keyframes pmGlow{0%,100%{box-shadow:0 0 6px #1e90ff66;border-color:#1e90ff}50%{box-shadow:0 0 30px #1e90ffee,0 0 60px #6fc3ff55;border-color:#6fc3ff}}
 @media (prefers-reduced-motion:reduce){.pmlink,.pmlink .pm-tag{animation:none}}
 .nb.pmnb{background:#06224a;border-color:#1e90ff;color:#fff;animation:pmGlow 1.6s ease-in-out infinite}
+/* uniform nav */
+.navbar .nb:not(.nsl):not(.pmnb):not(.sub):not(.snd){background:#0b0d10;border:1px solid #2a3340;color:#e9edf1;box-shadow:none;animation:none}
+.navbar .nb:not(.nsl):not(.pmnb):not(.sub):not(.snd):hover{border-color:#8fb3d9;color:#fff}
+.navbar .nb[aria-current="page"]:not(.nsl):not(.pmnb):not(.sub):not(.snd){background:#1e90ff;border-color:#9fd0ff;color:#fff;box-shadow:0 0 12px rgba(30,144,255,.7)}
 .subbox{animation:sbBreathe 5s ease-in-out infinite}
 @keyframes sbBreathe{0%,100%{box-shadow:0 0 6px #d9a40033}50%{box-shadow:0 0 20px #d9a40088}}
 .lbl b{background:linear-gradient(90deg,#fff 0%,#fff 40%,#ffd21a 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:lblShine 6s linear infinite}
@@ -635,8 +639,6 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
   <nav class="navbar" id="nav" aria-label="Sections">
     <button class="nb" data-go="front">Front page</button>
     <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
-    <button class="nb" data-go="tech">Tech &amp; AI</button>
-    <a class="nb pmnb" href="/tech/">Power Map</a>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
     <button class="nb" data-go="cal">Music calendar</button>
@@ -645,6 +647,8 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb" data-go="bands">Bands</button>
     <button class="nb" data-go="screen">Screen</button>
     <button class="nb" data-go="ink">Ink &amp; Steel</button>
+    <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
+    <a class="nb pmnb" href="/tech/">Power Map</a>
     <button class="nb sub" data-go="submit" data-lock="submit">Send a Tip</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
