@@ -405,6 +405,7 @@ textarea{min-height:130px;resize:vertical;line-height:1.5}
 
 /* reader */
 .reader{max-width:760px;margin:0 auto;display:grid;gap:16px}
+.reader{grid-template-columns:minmax(0,1fr)}.reader .body p,.reader .body h3{overflow-wrap:anywhere}
 .back{all:unset;cursor:pointer;justify-self:start;font:800 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--blue);border:1px solid #9fd0ff;border-radius:7px;padding:9px 13px;box-shadow:0 0 12px rgba(30,144,255,.7)}
 .reader h1{margin:0;font:700 clamp(30px,5.6vw,52px)/1.04 var(--display);color:#fff;text-wrap:balance}
 .dek{margin:0;font:italic 400 20px/1.45 var(--read);color:#dfe5ea}
