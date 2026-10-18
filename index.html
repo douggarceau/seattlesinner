@@ -801,6 +801,8 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 @media (prefers-reduced-motion:reduce){.intro,.sc,.sgrid .sc.styled,.lcd,.crstat div,.scu{animation:none}}
 </style>
 <style id="noir">
+@media (max-width:1279px){.wrap>.lsrow{order:2}.wrap>.nsad{order:3}.wrap>.foot{order:4}}
+.wrap>.nsad{margin-top:18px}
 a.crrow{color:inherit;text-decoration:none;cursor:pointer}a.crrow:hover{background:#140a0c}
 .crrow.spot{outline:2px solid #ff2a14;outline-offset:-2px;background:#2a0508!important;box-shadow:0 0 24px #ff2a1466;transition:background 1s}
 .lspot.t-spd{--k:#ff2a14;background:radial-gradient(ellipse at 50% 0%,#2a0505,#070708 60%)!important;border-top-color:#ff2a14}
@@ -987,11 +989,10 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 <div class="shrpop" id="shrPop" hidden><b>Share the Seattle Sinner</b><a data-sh="fb" href="#">Facebook</a><a data-sh="x" href="#">X / Twitter</a><a data-sh="sms" href="#">Text message</a><a data-sh="mail" href="#">Email</a><a data-sh="copy" href="#">Copy link</a></div>
 
   <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
-  <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="Seattle Sinner is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>Seattle Sinner is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
-  <button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace Gets Inked</b><small>The outgoing GOP congresswoman bares full tattoo sleeves and launches her own YouTube show.</small></span><span class="spr-go">Read it →</span></button>
   <div class="lsrow" aria-label="Seattle Sinner features"><div class="lspot l t1"><a id="lsA"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsC"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div><div class="lspot l t4"><a id="lsG"></a></div><div class="lspot r t4"><a id="lsH"></a></div></div>
 
   <main id="view"></main>
+  <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="Seattle Sinner is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>Seattle Sinner is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
 
   <div class="foot"><span>Seattle Sinner · <b id="visits" title="Visitors since the relaunch"></b></span><span>Sources linked on every story · <a href="#" data-ad="">Advertise with the Sinner</a></span></div>
 </div>
@@ -1095,7 +1096,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES;
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  return `${vCover(CUR)}<div class="front">
+  return `${vCover(CUR)}<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace Gets Inked</b><small>The outgoing GOP congresswoman bares full tattoo sleeves and launches her own YouTube show.</small></span><span class="spr-go">Read it →</span></button><div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span></button>`:''}
