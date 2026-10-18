@@ -1,6 +1,18 @@
 {
-"asof": "2026-10-17T20:11:19-07:00",
+"asof": "2026-10-17T21:20:32-07:00",
 "items": [
+{
+"kind": "other",
+"headline": "Dangerous CO2 levels force evacuations on Ballard Ave",
+"blurb": "Seattle Fire hazmat crews found dangerous carbon dioxide levels at a commercial building near the 5400 block of Ballard Ave. Nearby businesses were evacuated as a precaution until the leak was secured. No injuries were reported.",
+"hood": "Ballard",
+"spd": [
+"BALLARD SOUTH"
+],
+"date": "2026-10-17",
+"url": "https://www.fox13seattle.com/news/carbon-dioxide-evacuations-ballard",
+"outlet": "FOX 13"
+},
 {
 "kind": "police",
 "headline": "Suspicious package forces hazmat sweep at Jayapal's downtown office",
@@ -198,7 +210,7 @@
 {
 "kind": "courts",
 "headline": "Machete attack at Hing Hay Park: man charged with assault",
-"blurb": "Prosecutors charged a 44-year-old man with first- and second-degree assault over an Oct. 6 machete attack on two people in the Chinatown-International District park. Bail was set at $500,000.",
+"blurb": "Prosecutors charged a 44-year-old man with first- and second-degree assault over an Oct. 9 machete attack on two people in the Chinatown-International District park. On Oct. 14 a judge denied his release request, calling him an extreme danger, and kept bail at $500,000.",
 "hood": "Chinatown / International District",
 "spd": [
 "CHINATOWN/INTERNATIONAL DISTRICT"
@@ -366,6 +378,18 @@
 "outlet": "SPD Blotter"
 },
 {
+"kind": "police",
+"headline": "Police probe report of woman luring kids at Alki Elementary fence",
+"blurb": "Three first-graders told staff a woman at the playground fence offered to show them a crown in her car. The children ran to an adult, and the woman drove off in a silver vehicle. Seattle police are investigating, and the school has stepped up recess supervision.",
+"hood": "Alki",
+"spd": [
+"ALKI"
+],
+"date": "2026-10-01",
+"url": "https://hoodline.com/2026/10/woman-offers-kids-a-crown-from-her-car-at-alki-elementary-police-investigate/",
+"outlet": "Hoodline"
+},
+{
 "kind": "robbery",
 "headline": "Woman cut, beaten and robbed after getting into car in North Seattle",
 "blurb": "Police say two men forced a 27-year-old woman out of a car near N 130th St and Greenwood Ave N early Sept. 30 after cutting and punching her and taking her cash. Robbery detectives are investigating.",
@@ -400,6 +424,18 @@
 "date": "2026-09-30",
 "url": "https://komonews.com/newsletter-daily/seattle-police-department-spd-law-enforcement-greenwood-avenue-north-arrest-man-after-two-reported-hatchet-attacks-on-roommate-swat",
 "outlet": "KOMO"
+},
+{
+"kind": "robbery",
+"headline": "Shoplifter swings sharp pole at security near the Junction, police say",
+"blurb": "Police responded to a robbery call in the 4700 block of 42nd Ave SW after a suspected shoplifter swung a long, sharp pole at security staff who confronted him. A K9 team tracked down a possible suspect.",
+"hood": "Alaska Junction",
+"spd": [
+"ALASKA JUNCTION"
+],
+"date": "2026-09-28",
+"url": "https://spdblotter.seattle.gov/2026/10/04/monday-september-28-2026/",
+"outlet": "SPD Blotter"
 },
 {
 "kind": "shooting",
@@ -458,6 +494,18 @@
 "date": "2026-09-24",
 "url": "https://komonews.com/news/local/seattle-woman-attacked-west-seattle-crime-police-suspects-attack-and-robbery-white-honda-video-urgent-care",
 "outlet": "KOMO"
+},
+{
+"kind": "crash",
+"headline": "Woman critically hurt after Sound Transit train strikes her in SoDo",
+"blurb": "A 38-year-old woman was struck by a Sound Transit train while crossing the tracks near 2nd Avenue in SoDo, police said. She was hospitalized in critical condition.",
+"hood": "SoDo",
+"spd": [
+"SODO"
+],
+"date": "2026-09-24",
+"url": "https://spdblotter.seattle.gov/2026/09/24/pedestrian-struck-by-sound-transit-train/",
+"outlet": "SPD Blotter"
 },
 {
 "kind": "stabbing",
