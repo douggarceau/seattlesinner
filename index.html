@@ -181,14 +181,20 @@ button{font:inherit;color:inherit}
 .lspot::before{content:"";position:absolute;inset:5px;border-radius:12px;border:7px dotted var(--acc);opacity:.95;animation:lsBulb .6s steps(2,jump-none) infinite;pointer-events:none}
 .lspot.flip{transform:perspective(900px) rotateY(90deg);opacity:.2}
 .lspot.l{left:max(10px,calc((100vw - 1760px)/2 - var(--ls) - 20px))}.lspot.r{right:max(10px,calc((100vw - 1760px)/2 - var(--ls) - 20px))}
-.lspot a{position:relative;display:grid;grid-template-rows:auto 1fr auto;align-items:center;justify-items:center;gap:8px;width:100%;height:100%;box-sizing:border-box;padding:24px 18px 22px;color:var(--fg);text-decoration:none;text-align:center}
+.lspot a>*{max-width:100%;min-width:0}.lspot a{position:relative;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr auto;align-items:center;justify-items:center;gap:8px;width:100%;height:100%;box-sizing:border-box;padding:24px 18px 22px;color:var(--fg);text-decoration:none;text-align:center}
 .lspot .ls-tag{font:800 11px/1 var(--mono);letter-spacing:.22em;background:var(--acc);color:var(--bg2,#000);padding:5px 9px;border-radius:3px}
 .lspot img{width:100%;height:100%;max-height:calc(var(--ls)*.62);object-fit:contain;min-height:0}
 .lspot img.round{background:#fff;border-radius:50%;padding:6px;box-sizing:border-box;width:auto;aspect-ratio:1;box-shadow:0 0 0 4px var(--frame)}
 .lspot b{display:block;font:900 clamp(15px,calc(var(--ls)*.075),24px)/1.05 var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--acc);text-shadow:0 0 14px color-mix(in srgb,var(--acc) 60%,transparent)}
 .lspot small{display:block;margin-top:5px;font:700 clamp(10px,calc(var(--ls)*.045),14px)/1.25 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg)}
-.lspot.t-comet{--bg:#000;--fg:#fff;--acc:#ffd21a;--frame:#ffd21a}
-.lspot.t-slims{--bg:linear-gradient(160deg,#2a63d4,#0b2a6b);--fg:#e8eefc;--acc:#fff;--frame:#b9c0cb;--bg2:#0b2a6b}
+.lspot .ls-big{display:block;max-width:100%;font:900 calc(var(--ls)*.125)/.95 var(--body);letter-spacing:.02em;text-transform:uppercase;color:var(--acc);text-shadow:0 0 22px color-mix(in srgb,var(--acc) 70%,transparent)}
+.lspot .ls-big em{display:block;font-style:normal;font-size:.42em;letter-spacing:.12em;color:var(--fg);text-shadow:none;margin-top:4px}
+.lspot .ls-go{display:inline-block;margin-top:8px;font:800 clamp(10px,calc(var(--ls)*.042),13px)/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;background:var(--acc);color:var(--bg2,#000);padding:7px 10px;border-radius:4px}
+.lspot.t-pm{--bg:radial-gradient(circle at 50% 30%,#2a0505,#050505 70%);--fg:#e9edf1;--acc:#ff2b1a;--frame:#e3170a;--bg2:#fff}
+.lspot.t-pm2{--bg:linear-gradient(160deg,#0d1b33,#04070d);--fg:#cfd9e6;--acc:#ffc21a;--frame:#3d6fc4;--bg2:#000}
+.lspot.t-ns{--bg:linear-gradient(160deg,#3a0500,#120000);--fg:#fff;--acc:#ffd21a;--frame:#ffd21a;--bg2:#000}
+.lspot.t-ns2{--bg:linear-gradient(160deg,#0b3b36,#03100e);--fg:#e6fffb;--acc:#3dffd0;--frame:#20c9a0;--bg2:#000}
+.lspot img.round.dark{background:#000}
 @keyframes lsBulb{0%{opacity:.95}50%{opacity:.35}100%{opacity:.95}}
 @media (min-width:1280px){:root{--ls:250px}}
 @media (min-width:1600px){:root{--ls:300px}}
@@ -823,7 +829,7 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 
   <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
   <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="Seattle Sinner is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>Seattle Sinner is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
-  <div class="lsrow" aria-label="Local spots"><div class="lspot l"><a id="lsL" target="_blank" rel="noopener"></a></div><div class="lspot r"><a id="lsR" target="_blank" rel="noopener"></a></div></div>
+  <div class="lsrow" aria-label="Seattle Sinner features"><div class="lspot l"><a id="lsL" target="_blank" rel="noopener"></a></div><div class="lspot r"><a id="lsR" target="_blank" rel="noopener"></a></div></div>
 
   <main id="view"></main>
 
@@ -1563,19 +1569,24 @@ p.addEventListener('click',e=>{const a=e.target.closest('[data-sh]');if(!a)retur
  else if(k==='copy'){navigator.clipboard&&navigator.clipboard.writeText(U).then(()=>{a.textContent='Link copied ✓';setTimeout(()=>a.textContent='Copy link',1800)})}
  if(k!=='copy')p.hidden=true})})();</script>
 <script>
-/* Local Spots: add a spot here and it joins the 4-second rotation */
+/* Promo boxes: house ads for the Power Map and Newspace. Add a face here and it joins the 4-second rotation. */
 (function(){
+const NS='https://newspace.douggarceau.workers.dev/signup';
 const SPOTS=[
- {name:"Comet Tavern",addr:"922 E Pike · Capitol Hill",img:"img/ad-comet.png",theme:"comet",q:"Comet Tavern 922 E Pike St Seattle"},
- {name:"Slim's Last Chance",addr:"5606 1st Ave S · Georgetown",img:"img/ad-slims.jpg",round:1,theme:"slims",q:"Slim's Last Chance 5606 1st Ave S Seattle"}
+ {tag:"EXCLUSIVE",img:"img/promo-powermap.jpg",round:2,name:"Tech & AI Power Map",sub:"Who controls AI and Big Tech",go:"Open the map",theme:"pm",href:"/tech/"},
+ {tag:"EXCLUSIVE",big:"Newspace",name:"Seattle Sinner on Newspace",go:"Join to interact",theme:"ns",href:NS,ext:1},
+ {tag:"ON NEWSPACE",big:"Join in<em>the conversation</em>",name:"Comment, react and interact",go:"Join Newspace",theme:"ns2",href:NS,ext:1},
+ {tag:"POWER MAP",big:"140<em>companies</em>",name:"Investors, contracts, chips and money flows",go:"Open the map",theme:"pm2",href:"/tech/"}
 ];
 const els=[document.getElementById('lsL'),document.getElementById('lsR')];if(!els[0]||!SPOTS.length)return;
-let n=0;
-function fill(a,s){const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-'+s.theme;a.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.q);a.setAttribute('aria-label','Local spot: '+s.name+', '+s.addr);a.innerHTML='<span class="ls-tag">LOCAL SPOT</span><img src="'+s.img+'" alt="'+s.name+'"'+(s.round?' class="round"':'')+'><span><b>'+s.name+'</b><small>'+s.addr+'</small></span>'}
+let n=0;const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function fill(a,s){const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-'+s.theme;a.href=s.href;if(s.ext){a.target='_blank';a.rel='noopener'}else{a.removeAttribute('target');a.removeAttribute('rel')}a.setAttribute('aria-label',s.name);
+ const mid=s.img?'<img src="'+s.img+'" alt=""'+(s.round?' class="round'+(s.round>1?' dark':'')+'"':'')+'>':'<span class="ls-big">'+s.big+'</span>';
+ a.innerHTML='<span class="ls-tag">'+esc(s.tag)+'</span>'+mid+'<span><b>'+esc(s.name)+'</b>'+(s.sub?'<small>'+esc(s.sub)+'</small>':'')+'<span class="ls-go">'+esc(s.go)+' →</span></span>'}
 function show(){els.forEach((a,k)=>fill(a,SPOTS[(n+k)%SPOTS.length]))}
 show();
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-setInterval(()=>{n=(n+1)%SPOTS.length;if(still){show();return}const bx=els.map(a=>a.parentNode);bx.forEach(b=>b.classList.add('flip'));setTimeout(()=>{show();bx.forEach(b=>b.classList.remove('flip'))},360)},4000);
+setInterval(()=>{n=(n+2)%SPOTS.length;if(still){show();return}const bx=els.map(a=>a.parentNode);bx.forEach(b=>b.classList.add('flip'));setTimeout(()=>{show();bx.forEach(b=>b.classList.remove('flip'))},360)},4000);
 })();
 </script>
 </body>
