@@ -1005,7 +1005,8 @@ function cwFill(){const q=id=>document.getElementById(id);
   if(q('cwFront'))q('cwFront').innerHTML=CW.news.slice(0,3).map(n=>{const k=CRK[n.kind]||CRK.other;return `<a class="crrow" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(n.headline)}</b><span class="m">${esc(n.hood||'Seattle')} · ${shortDay(n.date)}</span></span></a>`}).join('')+CW.spd.slice(0,3).map(cwSpdRow).join('')||'<div class="empty">Loading…</div>';
   if(q('cwUp'))q('cwUp').textContent='Updated '+new Date(CW.t).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
 setInterval(()=>{if(document.getElementById('cwSpd')||document.getElementById('cwFront'))cwLoad(true)},300000);
-function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);
+function cwSiren(){try{if(typeof SFX!=='undefined'&&!SFX.on)return;if(Date.now()-(window.__siren||0)<20000)return;window.__siren=Date.now();const a=window.__sirenA||(window.__sirenA=new Audio('/snd/siren.mp3'));a.currentTime=0;a.volume=.7;a.play().catch(()=>{})}catch(e){}}
+function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);cwSiren();
   return `<div class="crw"><h2 class="room">Crime Watch</h2>
   <div class="intro"><b><span class="live">● LIVE</span> Seattle only</b><p>Real crime news from Seattle police, courts and local reporters, plus the live SPD report stream and Seattle Fire 911 dispatches straight from the city's open data. Accused means accused: everyone is presumed innocent until a court says otherwise.</p></div>
   <div class="crstat" id="cwStat"></div>
@@ -1286,7 +1287,7 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
     if(t.closest('[data-zoom]')){SFX.play('classified',1);return}
     if(t.closest('.zoom')){SFX.play('drop',.7,SFX.jit());return}
     if(t.closest('[data-story]')){SFX.play('activate',.85);setTimeout(()=>SFX.play('read',.6),500);return}
-    const g=t.closest('[data-go]');if(g){const v=g.dataset.go;v==='tech'?SFX.play('classified',.9):v==='submit'?SFX.play('alarm',.8):SFX.play('tab',1);return}
+    const g=t.closest('[data-go]');if(g){const v=g.dataset.go;v==='tech'?SFX.play('classified',.9):v==='crime'?0:v==='submit'?SFX.play('alarm',.8):SFX.play('tab',1);return}
     const vt=t.closest('[data-vote]');if(vt){vt.dataset.vote==='1'?SFX.play('answer',.9):SFX.play('malfunction',.8);return}
     if(t.closest('.pad,[data-genre]')){SFX.play(Math.random()<.5?'pad':'pad2',1,SFX.jit());return}
     if(t.closest('[data-topic],.sortc button')){SFX.play('select',1);return}
