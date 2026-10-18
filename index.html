@@ -798,6 +798,16 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 @media (prefers-reduced-motion:reduce){.intro,.sc,.sgrid .sc.styled,.lcd,.crstat div,.scu{animation:none}}
 </style>
 <style id="noir">
+/* Crime Watch prowler: background of the margin box + logo mark */
+.lspot.t-cw{background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.85) 72%,#000 100%),url(img/prowler.jpg) center 30%/cover no-repeat!important}
+.lspot.t-cw.cwi{background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.82) 45%,#000 100%),url(img/prowler.jpg) center 30%/cover no-repeat!important}
+.lspot.t-cw:not(.cwi) .ls-big{text-shadow:0 2px 14px #000,0 0 22px #ff000055}
+.cwmark{display:inline-block;vertical-align:middle;border-radius:50%;object-fit:cover;filter:grayscale(1) contrast(1.15);box-shadow:0 0 0 1px #3a0a10,0 0 18px #8b000055}
+h2.room.cwh{display:flex;align-items:center;gap:.35em}
+h2.room.cwh .cwmark{width:1.05em;height:1.05em;flex:none}
+.cwmark.sm{width:22px;height:22px;margin-right:8px}
+.cwmark.xs{width:18px;height:18px;margin:-3px 6px -3px -4px;box-shadow:0 0 0 1px #3a0a10}
+
 .nowp video{display:block;width:100%;aspect-ratio:4/3;background:#000;border-top:1px solid var(--line,#1e2227)}
 .trl{margin:18px 0 22px;display:grid;gap:8px}
 .trl video{display:block;width:100%;aspect-ratio:4/3;max-height:70vh;border-radius:6px;border:1px solid var(--line,#1e2227);background:#000;box-shadow:0 14px 34px #000c}
@@ -810,7 +820,7 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 /* ===== NOIR PASS: dark, cool, threatening instead of slot machine. Delete this block to undo. ===== */
 :root{--red:#b3121f;--gold:#b08d2e;--glow:#5fd4c4;--blue:#1d3f6e}
 /* cold vignette + film grain over everything */
-html::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,transparent 45%,rgba(2,6,14,.55) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .6 0 0 0 0 .7 0 0 0 0 .8 0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:normal}
+html::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,transparent 62%,rgba(2,6,14,.32) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .6 0 0 0 0 .7 0 0 0 0 .8 0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:normal}
 .aurora{opacity:.35!important;filter:saturate(.5) hue-rotate(-12deg)}
 /* no hard blinking anywhere */
 .nsad-tag,.pmlink .pm-tag,.nb.nsl,.shrbig,.tlab,.troom .rg .kick .dot,.troom .bwl .bwr .gtag,.troom .rg::before,.pmlink.pmred,.scu .bars b,.vtile.lit,.crrow.new,.troom .snap>div,.rec i,.pad.on{animation:none!important}
@@ -896,7 +906,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
     <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
-    <button class="nb" data-go="crime">Crime Watch</button>
+    <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Crime Watch</button>
     <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
     <button class="nb" data-go="cal">Music calendar</button>
     <button class="nb" data-go="scene">Scene</button>
@@ -1032,7 +1042,7 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="cal">Full calendar →</button></div></section>
       <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI wire</b><span class="techsrc">via AI Signals</span></div><div class="bwl">${((TECH&&TECH.news)||[]).slice(0,6).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="tech">Tech &amp; AI room →</button></div></section>
-      <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
+      <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><img class="cwmark sm" src="img/prowler-mark.jpg" alt=""><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
       <section class="box" style="--c:#39ff14"><div class="bh"><b>Scene picks</b><span>not concerts</span></div><div style="display:grid;gap:10px;padding:12px">${upScene.slice(0,3).map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div></section>
       <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,2).map(bnRow).join('')}${upEv(BEV).slice(0,2).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
       ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
@@ -1226,7 +1236,7 @@ const SCAN=[['45933','Seattle PD','North · South · East · West precincts','#1
 const scanBox=()=>`<div class="lbl"><b>Live scanner</b><span>real Seattle police and fire radio</span></div><div class="scn">${SCAN.map(c=>`<div class="scu" style="--k:${c[3]}"><div class="lcd"><small>CH ${c[0]} · LIVE</small>${esc(c[1])}<br><span style="color:#4fbf4c;font-size:12px">${esc(c[2])}</span></div><div class="row"><span class="rx"><i></i>RX</span><span class="bars"><b></b><b></b><b></b><b></b><b></b></span><a class="scbtn" href="https://www.broadcastify.com/webPlayer/${c[0]}" target="_blank" rel="noopener">▶ Listen live</a></div><div class="scfine">Create a free Broadcastify account to listen, then hit play.</div></div>`).join('')}</div>`;
 function cwSiren(){}
 function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);cwSiren();
-  return `<div class="crw"><h2 class="room">Crime Watch</h2>
+  return `<div class="crw"><h2 class="room cwh"><img class="cwmark" src="img/prowler-mark.jpg" alt="">Crime Watch</h2>
   <div class="intro"><b><span class="live">● LIVE</span> Seattle only</b><p>Real crime news from Seattle police, courts and local reporters, plus the live SPD report stream and Seattle Fire 911 dispatches straight from the city's open data. Accused means accused: everyone is presumed innocent until a court says otherwise.</p></div>
   <div class="crhood"><label for="cwHood">Neighborhood</label><select id="cwHood"><option value="">All Seattle neighborhoods</option>${cwHoods().map(([v,l])=>`<option value="${esc(v)}"${CW.hood===v?' selected':''}>${esc(l)}</option>`).join('')}</select></div><div class="crstat" id="cwStat"></div>
   ${scanBox()}
