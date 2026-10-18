@@ -1123,7 +1123,7 @@ function vReader(slug){
     <span class="kick" style="--tc:${tc(s.topic)}"><span class="dot"></span>${esc(tl(s.topic))}<time>${longDay(s.date)}</time></span>
     <h1>${esc(s.title)}</h1><p class="dek">${esc(s.dek)}</p>
     <div class="byl"><span>By <b>Seattle Sinner</b></span><span>${s.minutes} min read</span></div>
-    <div class="body">${(window.SS_USER?s.body:s.body.slice(0,3)).map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>${window.SS_USER?'':`<div class="gate"><b>Keep reading free.</b><span>Subscribe to read the rest of this story and everything else in the Sinner.</span><button type="button" data-join="story">Subscribe free</button></div>`}
+    <div class="body">${s.body.map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>
     <div class="srcs"><b>Reported from</b>${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)} · ${esc(x.title)}${x.date?' · '+esc(x.date):''}</a>`).join('')}</div>
     <section class="cmts" id="cmts" data-slug="${s.slug}">${cmtsHTML(s.slug)}</section>
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
@@ -1392,8 +1392,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   const LOCKS={tech:'the Tech & AI Power Map',terminal:'the Crypto & Investing terminal',submit:'Send a Tip',story:'the full story'};
   window.SS_USER=null;
   const join=k=>{scrollTo({top:0,behavior:'smooth'});box.classList.add('open');box.classList.remove('pulse');void box.offsetWidth;box.classList.add('pulse');msg('Subscribe free (or log in) to unlock '+(LOCKS[k]||'that')+'.','ok');setTimeout(()=>$('sbEmail').focus({preventScroll:true}),400)};
-  document.addEventListener('click',e=>{const j=e.target.closest('[data-join]');if(j){e.preventDefault();join(j.dataset.join);return}
-    const l=e.target.closest('[data-lock]');if(l&&!window.SS_USER){e.preventDefault();e.stopImmediatePropagation();join(l.dataset.lock)}},true);
+  document.addEventListener('click',e=>{const j=e.target.closest('[data-join]');if(j){e.preventDefault();join(j.dataset.join);return}},true);
   const q=new URLSearchParams(location.search).get('join');if(q)setTimeout(()=>join(q),600);
   const show=u=>{const was=!!window.SS_USER;window.SS_USER=u||null;if(sb)onUser(u||null);if(was!==!!u&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render();const inn=!!u;$('sbIn').hidden=!inn;$('sbF').hidden=inn;document.querySelector('.sb-tabs').hidden=inn;if(u)$('sbWho').textContent=(u.user_metadata&&u.user_metadata.username)||u.email};
 
