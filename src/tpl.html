@@ -148,6 +148,15 @@ button{font:inherit;color:inherit}
 .troom .lbl b{background:linear-gradient(90deg,#6fc3ff 0%,#6fc3ff 40%,#fff 50%,#6fc3ff 60%,#6fc3ff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:lblShine 3s linear infinite}
 .troom .sc.styled{animation:trCard 3.8s ease-in-out infinite;--k:#2fd3c8}
 @media (prefers-reduced-motion:reduce){.troom *{animation:none!important}}
+/* Push-pad blink on Tech & AI story boxes */
+.troom .rg,.troom .sc.styled{transition:background .12s,box-shadow .12s,filter .12s}
+.troom .rg.pad-on,.troom .sc.styled.pad-on{background:color-mix(in srgb,var(--k) 42%,#050505)!important;box-shadow:0 0 0 2px var(--k),0 0 30px var(--k),0 0 60px color-mix(in srgb,var(--k) 50%,transparent)!important;animation:padBlink .32s steps(2,jump-none) 4!important}
+.troom .rg.pad-on h4,.troom .rg.pad-on p,.troom .sc.styled.pad-on h3,.troom .sc.styled.pad-on p{color:#fff!important}
+@keyframes padBlink{0%{filter:brightness(1.5)}50%{filter:brightness(.75)}100%{filter:brightness(1.5)}}
+.troom .rg::before{content:"";position:absolute;top:10px;right:10px;width:9px;height:9px;border-radius:2px;background:var(--k);box-shadow:0 0 8px var(--k);animation:trTag 1.2s steps(2,jump-none) infinite}
+.troom .rg{position:relative}
+.troom .rg:nth-child(2n)::before{animation-delay:-.5s}.troom .rg:nth-child(3n)::before{animation-delay:-.9s}
+@media (prefers-reduced-motion:reduce){.troom .rg.pad-on,.troom .sc.styled.pad-on{animation:none!important}}
 .subbox{animation:sbBreathe 5s ease-in-out infinite}
 @keyframes sbBreathe{0%,100%{box-shadow:0 0 6px #d9a40033}50%{box-shadow:0 0 20px #d9a40088}}
 .lbl b{background:linear-gradient(90deg,#fff 0%,#fff 40%,#ffd21a 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:lblShine 6s linear infinite}
@@ -1333,4 +1342,8 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
 <script>
 setInterval(()=>{if(document.hidden)return;const r=document.querySelectorAll('.troom .bwl .bwr');if(r.length){const n=r[Math.floor(Math.random()*r.length)];n.classList.add('flash');setTimeout(()=>n.classList.remove('flash'),900)}
  const s=document.querySelectorAll('.troom .snap>div');if(s.length){const m=s[Math.floor(Math.random()*s.length)];m.classList.add('lit');setTimeout(()=>m.classList.remove('lit'),700)}},800);
+</script>
+<script>
+setInterval(()=>{if(document.hidden)return;const c=[...document.querySelectorAll('.troom .rg,.troom .sc.styled')].filter(e=>!e.matches(':hover'));if(!c.length)return;
+ const n=1+Math.floor(Math.random()*2);for(let i=0;i<n;i++){const el=c[Math.floor(Math.random()*c.length)];el.classList.add('pad-on');setTimeout(()=>el.classList.remove('pad-on'),1300)}},1100);
 </script>
