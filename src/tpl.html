@@ -962,10 +962,7 @@ function vBars(){
   const ks=[...new Set(BARS.map(b=>b.kind))];
   const L=BARS.filter(b=>STATE.bk==='all'||b.kind===STATE.bk);
   const feat=STORIES.filter(s=>s.topic==='nightlife'||s.topic==='music');
-  return `<h2 class="room">The Wire</h2>
-  <div class="intro"><b>Bars · clubs · local music · the scene</b><p>Who opened, who closed, who got signed, who got bought, and what City Hall is doing to your night out. Updated every morning. Every item links to the source.</p></div>
-  ${feat.length?`<div class="lbl"><b>Nightlife features</b><span>${feat.length}</span></div><div class="sgrid">${feat.map(storyCard).join('')}</div>`:''}
-  <div class="pads">${['all',...ks].map(k=>`<button class="pad${STATE.bk===k?' on':''}" data-bk="${k}" style="--gc:${k==='all'?'#8fb3d9':(BK[k]||BK.other)[0]}"><span>${k==='all'?'All':(BK[k]||BK.other)[1]}</span><small>${k==='all'?BARS.length:BARS.filter(b=>b.kind===k).length}</small></button>`).join('')}</div>
+  return `  <div class="pads">${['all',...ks].map(k=>`<button class="pad${STATE.bk===k?' on':''}" data-bk="${k}" style="--gc:${k==='all'?'#8fb3d9':(BK[k]||BK.other)[0]}"><span>${k==='all'?'All':(BK[k]||BK.other)[1]}</span><small>${k==='all'?BARS.length:BARS.filter(b=>b.kind===k).length}</small></button>`).join('')}</div>
   <div class="bwg">${L.map(brief).join('')||'<div class="empty">Nothing on the wire yet.</div>'}</div>`;
 }
 
