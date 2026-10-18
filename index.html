@@ -22,6 +22,7 @@
 .scu .bars b:nth-child(2){animation-delay:-.3s}.scu .bars b:nth-child(3){animation-delay:-.6s}.scu .bars b:nth-child(4){animation-delay:-.15s}.scu .bars b:nth-child(5){animation-delay:-.45s}
 @keyframes scB{0%,100%{height:3px}50%{height:18px}}
 /* Crime Watch */
+.crsub{padding:9px 14px;border-top:1px solid var(--line);background:#16080a;font:800 11px/1.2 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#ff4a3a}
 .scfine{margin-top:8px;font:500 11px/1.3 system-ui,sans-serif;color:#7d8790}
 .crhood{display:flex;align-items:center;gap:10px;margin:12px 0 0;flex-wrap:wrap}.crhood label{font:800 12px/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ff4a3a}.crhood select{width:auto!important;max-width:300px;flex:0 0 auto;background:#120709;color:#f3f5f7;border:1px solid #ff2a14;border-radius:6px;padding:9px 12px;font:600 15px system-ui,sans-serif;min-width:220px;box-shadow:0 0 12px #ff2a1433}
 .crw h2.room{color:#ff4a3a;text-shadow:0 0 10px #ff2a14,0 0 30px #ff2a1488;animation:crT 1.8s ease-in-out infinite}
@@ -1020,7 +1021,7 @@ const CWH=["EASTLAKE - WEST", "NEW HOLLY", "NORTH DELRIDGE", "WALLINGFORD", "PIG
 const cwHL=h=>({WS:'West Seattle',SODO:'SoDo','SLU/CASCADE':'South Lake Union / Cascade',LAKECITY:'Lake City',SANDPOINT:'Sand Point',BITTERLAKE:'Bitter Lake','FAUNTLEROY SW':'Fauntleroy','UNIVERSITY':'University District'})[h]||h.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()).replace(/ \/ ?|\//g,' / ');
 const CWWS=['ALKI','NORTH ADMIRAL','ALASKA JUNCTION','MORGAN','FAUNTLEROY SW','HIGH POINT','NORTH DELRIDGE','SOUTH DELRIDGE','HIGHLAND PARK','ROXHILL/WESTWOOD/ARBOR HEIGHTS','PIGEON POINT'];
 const cwHoods=()=>[['WS','West Seattle (all)'],...CWH.map(h=>[h,cwHL(h)])].sort((a,b)=>a[1].localeCompare(b[1]));
-const cwMatch=(n)=>{if(!CW.hood)return true;const a=(n.hood||'').toLowerCase();if(!a)return false;const parts=CW.hood==='WS'?['west seattle',...CWWS.map(h=>cwHL(h).toLowerCase())].flatMap(x=>x.split(' / ')):cwHL(CW.hood).toLowerCase().split(' / ');return parts.some(p=>p.includes(a)||a.includes(p.replace(/ (north|south|east|west)$/,'').replace(/^(north|south|mid) /,'')))};
+const cwMatch=(n)=>{if(!CW.hood)return true;if(Array.isArray(n.spd)&&n.spd.length)return CW.hood==='WS'?n.spd.some(h=>CWWS.includes(h)):n.spd.includes(CW.hood);const a=(n.hood||'').toLowerCase();if(!a)return false;const parts=CW.hood==='WS'?['west seattle',...CWWS.map(h=>cwHL(h).toLowerCase())].flatMap(x=>x.split(' / ')):cwHL(CW.hood).toLowerCase().split(' / ');return parts.some(p=>p.includes(a)||a.includes(p.replace(/ (north|south|east|west)$/,'').replace(/^(north|south|mid) /,'')))};
 document.addEventListener('change',e=>{if(e.target.id==='nwHood'){STATE.nh=e.target.value;render();return}if(e.target.id!=='cwHood')return;CW.hood=e.target.value;CW.t=0;CW.spd=[];CW.seen=new Set();cwFill();cwLoad(true)});
 
 const cwAgo=s=>{if(!s)return'';const d=new Date(s.length<20?s+(s.length>10?'':'T12:00'):s);const m=(Date.now()-d)/6e4;return m<60?Math.max(1,Math.round(m))+'m ago':m<1440?Math.round(m/60)+'h ago':Math.round(m/1440)+'d ago'};
@@ -1038,7 +1039,10 @@ async function cwLoad(force){if(!force&&Date.now()-CW.t<240000)return;const ago=
   if(Array.isArray(s)){const u=[],seen=new Set();for(const r of s){if(seen.has(r.report_number))continue;seen.add(r.report_number);u.push(r)}if(CW.t)CW.spd.forEach(r=>CW.seen.add(r.report_number));else u.forEach(r=>CW.seen.add(r.report_number));CW.spd=u.slice(0,60)}
   if(Array.isArray(f))CW.fire=f;CW.t=Date.now();cwFill()}
 function cwFill(){const q=id=>document.getElementById(id);
-  if(q('cwNews')){const L=CW.news.filter(cwMatch);q('cwNews').innerHTML=L.map(cwNewsRow).join('')||(CW.hood?'<div class="empty">No headlines from '+esc(cwHL(CW.hood))+' lately. The live SPD stream has every report.</div>':'<div class="empty">Loading crime headlines…</div>')}
+  if(q('cwNews')){const L=CW.news.filter(cwMatch);let h=L.map(cwNewsRow).join('');
+    if(CW.hood){const sv=CW.spd.filter(r=>['homicide','shooting','robbery','assault','burglary'].includes(cwSpdKind(r))).slice(0,20);
+      h+=`<div class="crsub">Serious police reports · ${esc(cwHL(CW.hood))} · last 30 days</div>`+(sv.map(cwSpdRow).join('')||(CW.t?'<div class="empty">No serious reports in the last 30 days.</div>':'<div class="empty">Loading police reports…</div>'))}
+    q('cwNews').innerHTML=h||'<div class="empty">Loading crime headlines…</div>'}
   if(q('cwSpd'))q('cwSpd').innerHTML=CW.spd.slice(0,60).map(cwSpdRow).join('')||'<div class="empty">'+(CW.t?'No reports found.':'Loading SPD reports…')+'</div>';
   if(q('cwFire'))q('cwFire').innerHTML=CW.fire.map(cwFireRow).join('')||'<div class="empty">No major 911 dispatches in the last 12 hours.</div>';
   if(q('cwStat')&&CW.t){const c=k=>CW.spd.filter(r=>cwSpdKind(r)===k).length;q('cwStat').innerHTML=`<div><b>${CW.spd.length}</b>SPD reports, ${CW.hood?esc(cwHL(CW.hood))+', last 30 days':'last 4 days'}</div><div><b>${c('shooting')}</b>shooting reports</div><div><b>${c('assault')}</b>assaults</div><div><b>${c('robbery')}</b>robberies</div><div><b>${CW.fire.length}</b>fire &amp; rescue calls, 12h</div>`}
