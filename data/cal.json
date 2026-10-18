@@ -1,10 +1,11 @@
 {
-"asof": "2026-10-17T22:04:45-07:00",
+"asof": "2026-10-18T01:49:41-07:00",
 "sources_last_run": [
 "Bandsintown",
-"Hypebot Concerts",
-"Jazz Near You",
-"Songkick"
+"EventWorld",
+"Songkick",
+"The Triple Door",
+"ma.to"
 ],
 "events": [
 {
@@ -30,6 +31,18 @@
 "ages": "",
 "url": "https://www.bandsintown.com/e/1040430813-david-johnson-at-conor-byrne-pub",
 "src": "Bandsintown"
+},
+{
+"date": "2026-10-18",
+"time": "5:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513954?feature_id=923529&occurrence_id=757669518&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-18",
@@ -356,6 +369,18 @@
 "src": "Songkick"
 },
 {
+"date": "2026-10-18",
+"time": "",
+"artists": "Two Dykes and a Mic",
+"venue": "Neptune Theatre",
+"hood": "University District",
+"genre": "other",
+"price": "",
+"ages": "",
+"url": "https://labs.songkick.com/concerts/43279745-two-dykes-and-a-mic-at-neptune-theatre",
+"src": "Songkick"
+},
+{
 "date": "2026-10-19",
 "time": "6:00 PM",
 "artists": "206 Zulu",
@@ -573,6 +598,30 @@
 },
 {
 "date": "2026-10-20",
+"time": "7:30 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513964?feature_id=923529&occurrence_id=757669559&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-20",
+"time": "7:30 PM",
+"artists": "Alexandr Misko",
+"venue": "The Rabbit Box",
+"hood": "Downtown",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6698247?feature_id=923529&occurrence_id=776071541&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-20",
 "time": "7:45 PM",
 "artists": "Sara Bareilles w/ Celisse",
 "venue": "Paramount Theatre",
@@ -716,6 +765,18 @@
 "src": "Songkick"
 },
 {
+"date": "2026-10-20",
+"time": "",
+"artists": "Nice As Fuck",
+"venue": "Nectar Lounge",
+"hood": "Fremont",
+"genre": "indie",
+"price": "",
+"ages": "",
+"url": "https://www.eventworld.com/nice-as-fuck-seattle-tickets-10-20-2026/event/567770",
+"src": "EventWorld"
+},
+{
 "date": "2026-10-21",
 "time": "6:00 PM",
 "artists": "Jay Webb w/ Lil Man J",
@@ -777,6 +838,18 @@
 },
 {
 "date": "2026-10-21",
+"time": "7:00 PM",
+"artists": "The War and Treaty",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039433887-the-war-and-treaty-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-10-21",
 "time": "7:30 PM",
 "artists": "Super Krewe",
 "venue": "Sea Monster Lounge",
@@ -810,6 +883,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43378951-india-ramey-at-tractor-tavern",
 "src": "Songkick"
+},
+{
+"date": "2026-10-21",
+"time": "7:30 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513964?feature_id=923529&occurrence_id=757669560&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-21",
@@ -966,6 +1051,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43397110-miscomings-at-sunset-tavern",
 "src": "Songkick"
+},
+{
+"date": "2026-10-22",
+"time": "6:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513946?feature_id=923529&occurrence_id=757669552&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-22",
@@ -1197,6 +1294,18 @@
 },
 {
 "date": "2026-10-22",
+"time": "8:00 PM",
+"artists": "Heirloom Monsters",
+"venue": "Clock-Out Lounge",
+"hood": "Beacon Hill",
+"genre": "rock",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1040510088-heirloom-monsters-at-clock-out-lounge",
+"src": "Bandsintown"
+},
+{
+"date": "2026-10-22",
 "time": "8:30 PM",
 "artists": "Jacob Zimmerman",
 "venue": "Il Bistro",
@@ -1326,6 +1435,18 @@
 "ages": "",
 "url": "https://www.eventworld.com/notd-seattle-tickets-10-23-2026/event/513062",
 "src": "EventWorld"
+},
+{
+"date": "2026-10-23",
+"time": "6:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513946?feature_id=923529&occurrence_id=757669553&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-23",
@@ -1629,6 +1750,30 @@
 },
 {
 "date": "2026-10-24",
+"time": "5:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513951?feature_id=923529&occurrence_id=757669458&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-24",
+"time": "7:30 PM",
+"artists": "Griffin House",
+"venue": "The Rabbit Box",
+"hood": "Pike Place",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43437641-griffin-house-at-rabbit-box",
+"src": "Songkick"
+},
+{
+"date": "2026-10-24",
 "time": "8:00 PM",
 "artists": "The Warped Band",
 "venue": "El Corazon",
@@ -1649,6 +1794,18 @@
 "price": "",
 "ages": "",
 "url": "https://songkick.com/concerts/43398193-kostnateni-at-funhouse",
+"src": "Songkick"
+},
+{
+"date": "2026-10-24",
+"time": "8:00 PM",
+"artists": "God Module w/ Normoria, Sophixi, DJ Keypr",
+"venue": "Clock-Out Lounge",
+"hood": "Beacon Hill",
+"genre": "goth",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43416486-god-module-at-clockout-lounge",
 "src": "Songkick"
 },
 {
@@ -1738,18 +1895,6 @@
 {
 "date": "2026-10-24",
 "time": "",
-"artists": "God Module w/ Normoria, Sophixi, DJ Keypr",
-"venue": "Clock-Out Lounge",
-"hood": "Beacon Hill",
-"genre": "goth",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43416486-god-module-at-clockout-lounge",
-"src": "Songkick"
-},
-{
-"date": "2026-10-24",
-"time": "",
 "artists": "Poor Man's Whiskey w/ The High Seagrass",
 "venue": "Hidden Hall",
 "hood": "Fremont",
@@ -1822,18 +1967,6 @@
 {
 "date": "2026-10-24",
 "time": "",
-"artists": "Griffin House",
-"venue": "The Rabbit Box",
-"hood": "Pike Place",
-"genre": "folk",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43437641-griffin-house-at-rabbit-box",
-"src": "Songkick"
-},
-{
-"date": "2026-10-24",
-"time": "",
 "artists": "Tyler Ballgame",
 "venue": "Tractor Tavern",
 "hood": "Ballard",
@@ -1854,6 +1987,18 @@
 "ages": "",
 "url": "https://www.jambase.com/show/monsta-x-wamu-theater-20261024",
 "src": "JamBase"
+},
+{
+"date": "2026-10-25",
+"time": "5:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513954?feature_id=923529&occurrence_id=757669519&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-25",
@@ -2085,6 +2230,18 @@
 },
 {
 "date": "2026-10-26",
+"time": "8:00 PM",
+"artists": "Frankie Cosmos",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "indie",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039018564-frankie-cosmos-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-10-26",
 "time": "",
 "artists": "Francis of Delirium",
 "venue": "Barboza",
@@ -2142,6 +2299,30 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43127086-dermot-kennedy-at-paramount-theatre",
 "src": "Songkick"
+},
+{
+"date": "2026-10-27",
+"time": "7:00 PM",
+"artists": "Pouya",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "hip-hop",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039652989-pouya-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-10-27",
+"time": "7:30 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513964?feature_id=923529&occurrence_id=757669561&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-27",
@@ -2265,6 +2446,18 @@
 },
 {
 "date": "2026-10-28",
+"time": "7:30 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513964?feature_id=923529&occurrence_id=757669562&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-28",
 "time": "8:00 PM",
 "artists": "Ascended Reality",
 "venue": "Vermillion",
@@ -2274,6 +2467,18 @@
 "ages": "",
 "url": "https://www.bandsintown.com/e/109016320-ascended-reality-at-vermillion",
 "src": "Bandsintown"
+},
+{
+"date": "2026-10-28",
+"time": "8:00 PM",
+"artists": "bunii",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "other",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43375361-bunii-at-crocodile",
+"src": "Songkick"
 },
 {
 "date": "2026-10-28",
@@ -2374,18 +2579,6 @@
 {
 "date": "2026-10-28",
 "time": "",
-"artists": "bunii",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "other",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43375361-bunii-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-10-28",
-"time": "",
 "artists": "Leif Totusek",
 "venue": "The Triple Door",
 "hood": "Downtown",
@@ -2418,6 +2611,30 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43324407-juana-molina-at-tractor-tavern",
 "src": "Songkick"
+},
+{
+"date": "2026-10-29",
+"time": "6:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513946?feature_id=923529&occurrence_id=757669554&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-29",
+"time": "7:30 PM",
+"artists": "Taylor Rae w/ Lemongrass",
+"venue": "The Rabbit Box",
+"hood": "Downtown",
+"genre": "indie",
+"price": "",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6702169?feature_id=923529&occurrence_id=776457106&popup=1",
+"src": "The Triple Door"
 },
 {
 "date": "2026-10-29",
@@ -2589,6 +2806,18 @@
 },
 {
 "date": "2026-10-30",
+"time": "6:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513946?feature_id=923529&occurrence_id=757669555&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-30",
 "time": "",
 "artists": "Mon Laferte",
 "venue": "5th Avenue Theatre",
@@ -2754,6 +2983,66 @@
 "ages": "",
 "url": "https://songkick.com/festivals/3383391-boo-seattle/id/43270801-boo-seattle-2026",
 "src": "Songkick"
+},
+{
+"date": "2026-10-30",
+"time": "",
+"artists": "BOO! Seattle 2026: Gramatik, KAYZO, Sara Landry, Walker & Royce, A Little Sound, Azyr, Samplifire, Junkie Kid",
+"venue": "WAMU Theater",
+"hood": "SoDo",
+"genre": "electronic",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/festivals/3383391-boo-seattle/id/43270801-boo-seattle-2026",
+"src": "Songkick"
+},
+{
+"date": "2026-10-30",
+"time": "",
+"artists": "Satan's Factory Halloween Eve: PATRIARCHY, God Tongue, Velvet Heartbreak, XEK, Pavor Nocturnus, Sin w/ DJ Jasyn Bangert",
+"venue": "Kremwerk",
+"hood": "Downtown",
+"genre": "goth",
+"price": "",
+"ages": "21+",
+"url": "https://ma.to/event/satans-factory-halloween-eve-2026-10-30",
+"src": "ma.to"
+},
+{
+"date": "2026-10-31",
+"time": "5:00 PM",
+"artists": "This Is Halloween",
+"venue": "The Triple Door",
+"hood": "Downtown",
+"genre": "other",
+"price": "$35 - $89",
+"ages": "",
+"url": "https://thetripledoor.net/go/events/6513951?feature_id=923529&occurrence_id=757669459&popup=1",
+"src": "The Triple Door"
+},
+{
+"date": "2026-10-31",
+"time": "8:00 PM",
+"artists": "Ax and the Hatchetmen",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "rock",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039059317-ax-and-the-hatchetmen-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-10-31",
+"time": "10:00 PM",
+"artists": "Daft Disko: A French House & Disco Party",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "electronic",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039654616-daft-disko:-a-french-house-and-disco-party-at-the-crocodile",
+"src": "Bandsintown"
 },
 {
 "date": "2026-10-31",
@@ -3021,6 +3310,18 @@
 },
 {
 "date": "2026-11-02",
+"time": "8:00 PM",
+"artists": "Mystery Skulls",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "electronic",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1040081758-mystery-skulls-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-02",
 "time": "",
 "artists": "Lime Garden",
 "venue": "Barboza",
@@ -3093,6 +3394,18 @@
 },
 {
 "date": "2026-11-03",
+"time": "8:00 PM",
+"artists": "Bahamas",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43091491-bahamas-at-crocodile",
+"src": "Songkick"
+},
+{
+"date": "2026-11-03",
 "time": "",
 "artists": "IAN SWEET",
 "venue": "Baba Yaga",
@@ -3154,18 +3467,6 @@
 {
 "date": "2026-11-03",
 "time": "",
-"artists": "Bahamas",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "folk",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43091491-bahamas-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-11-03",
-"time": "",
 "artists": "Pinhead Gunpowder",
 "venue": "The Showbox",
 "hood": "Downtown",
@@ -3210,6 +3511,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43381758-jessie-reyez-at-wamu-theater",
 "src": "Songkick"
+},
+{
+"date": "2026-11-04",
+"time": "7:00 PM",
+"artists": "Plini",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "metal",
+"price": "",
+"ages": "",
+"url": "https://www.eventworld.com/plini-seattle-tickets-11-04-2026/event/404900",
+"src": "EventWorld"
 },
 {
 "date": "2026-11-04",
@@ -3282,18 +3595,6 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43348409-tagua-tagua-at-sunset-tavern",
 "src": "Songkick"
-},
-{
-"date": "2026-11-04",
-"time": "",
-"artists": "Plini",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "metal",
-"price": "",
-"ages": "",
-"url": "https://www.eventworld.com/plini-seattle-tickets-11-04-2026/event/404900",
-"src": "EventWorld"
 },
 {
 "date": "2026-11-04",
@@ -3537,6 +3838,18 @@
 },
 {
 "date": "2026-11-06",
+"time": "6:00 PM",
+"artists": "Joseph",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1040293247-joseph-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-06",
 "time": "7:00 PM",
 "artists": "JoethePoet",
 "venue": "Hidden Hall",
@@ -3705,6 +4018,30 @@
 },
 {
 "date": "2026-11-07",
+"time": "6:00 PM",
+"artists": "Railroad Earth",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "folk",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039562872-railroad-earth-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-07",
+"time": "7:00 PM",
+"artists": "Sparta w/ Public Opinion",
+"venue": "Clock-Out Lounge",
+"hood": "Beacon Hill",
+"genre": "rock",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43373321-sparta-at-clockout-lounge",
+"src": "Songkick"
+},
+{
+"date": "2026-11-07",
 "time": "",
 "artists": "Mary In The Junkyard",
 "venue": "Barboza",
@@ -3713,18 +4050,6 @@
 "price": "",
 "ages": "",
 "url": "https://songkick.com/concerts/43224023-mary-in-the-junkyard-at-barboza",
-"src": "Songkick"
-},
-{
-"date": "2026-11-07",
-"time": "",
-"artists": "Sparta w/ Public Opinion",
-"venue": "Clock-Out Lounge",
-"hood": "Beacon Hill",
-"genre": "rock",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43373321-sparta-at-clockout-lounge",
 "src": "Songkick"
 },
 {
@@ -3870,6 +4195,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43324224-sammy-virji-at-wamu-theater",
 "src": "Songkick"
+},
+{
+"date": "2026-11-08",
+"time": "7:30 PM",
+"artists": "INOHA",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "other",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039455696-inoha-at-the-crocodile",
+"src": "Bandsintown"
 },
 {
 "date": "2026-11-08",
@@ -4029,6 +4366,18 @@
 },
 {
 "date": "2026-11-10",
+"time": "7:00 PM",
+"artists": "Tank and the Bangas",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "r&b",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43116531-tank-and-the-bangas-at-crocodile",
+"src": "Songkick"
+},
+{
+"date": "2026-11-10",
 "time": "",
 "artists": "The Hails",
 "venue": "Barboza",
@@ -4090,18 +4439,6 @@
 {
 "date": "2026-11-10",
 "time": "",
-"artists": "Tank and the Bangas",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "r&b",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43116531-tank-and-the-bangas-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-11-10",
-"time": "",
 "artists": "L7",
 "venue": "The Showbox",
 "hood": "Downtown",
@@ -4149,6 +4486,18 @@
 },
 {
 "date": "2026-11-11",
+"time": "8:00 PM",
+"artists": "Armand Hammer",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "hip-hop",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/42976721-armand-hammer-at-crocodile",
+"src": "Songkick"
+},
+{
+"date": "2026-11-11",
 "time": "",
 "artists": "Not For Radio",
 "venue": "Paramount Theatre",
@@ -4186,18 +4535,6 @@
 {
 "date": "2026-11-11",
 "time": "",
-"artists": "Armand Hammer",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "hip-hop",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/42976721-armand-hammer-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-11-11",
-"time": "",
 "artists": "Allison Russell w/ Autumn Nicholas",
 "venue": "The Showbox",
 "hood": "Downtown",
@@ -4218,6 +4555,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43280175-craig-finn-at-tractor-tavern",
 "src": "Songkick"
+},
+{
+"date": "2026-11-12",
+"time": "7:00 PM",
+"artists": "Nekrogoblikon",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "metal",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039328823-nekrogoblikon-at-the-crocodile",
+"src": "Bandsintown"
 },
 {
 "date": "2026-11-12",
@@ -4337,6 +4686,18 @@
 "price": "",
 "ages": "",
 "url": "https://songkick.com/concerts/43255324-margaret-glaspy-at-tractor-tavern",
+"src": "Songkick"
+},
+{
+"date": "2026-11-13",
+"time": "6:00 PM",
+"artists": "Son Volt w/ Kelly Willis",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "country",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43255784-son-volt-at-crocodile",
 "src": "Songkick"
 },
 {
@@ -4462,18 +4823,6 @@
 {
 "date": "2026-11-13",
 "time": "",
-"artists": "Son Volt w/ Kelly Willis",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "country",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43255784-son-volt-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-11-13",
-"time": "",
 "artists": "Inna",
 "venue": "The Showbox",
 "hood": "Downtown",
@@ -4518,6 +4867,18 @@
 "ages": "",
 "url": "https://songkick.com/concerts/43440935-hvdes-at-vice-seattle",
 "src": "Songkick"
+},
+{
+"date": "2026-11-14",
+"time": "6:00 PM",
+"artists": "Stephen Day",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "pop",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039282811-stephen-day-at-the-crocodile",
+"src": "Bandsintown"
 },
 {
 "date": "2026-11-14",
@@ -4689,6 +5050,18 @@
 },
 {
 "date": "2026-11-15",
+"time": "8:00 PM",
+"artists": "passengerprincess",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "indie",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1040515947-passengerprincess-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-15",
 "time": "",
 "artists": "Flammable",
 "venue": "Chop Suey",
@@ -4857,6 +5230,18 @@
 },
 {
 "date": "2026-11-17",
+"time": "8:30 PM",
+"artists": "Devil Master",
+"venue": "Clock-Out Lounge",
+"hood": "Beacon Hill",
+"genre": "metal",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43411050-devil-master-at-clockout-lounge",
+"src": "Songkick"
+},
+{
+"date": "2026-11-17",
 "time": "",
 "artists": "KATSEYE",
 "venue": "Climate Pledge Arena",
@@ -4866,18 +5251,6 @@
 "ages": "",
 "url": "https://www.jambase.com/show/katseye-climate-pledge-arena-20261117",
 "src": "JamBase"
-},
-{
-"date": "2026-11-17",
-"time": "",
-"artists": "Devil Master",
-"venue": "Clock-Out Lounge",
-"hood": "Beacon Hill",
-"genre": "metal",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43411050-devil-master-at-clockout-lounge",
-"src": "Songkick"
 },
 {
 "date": "2026-11-17",
@@ -5193,6 +5566,18 @@
 },
 {
 "date": "2026-11-20",
+"time": "6:00 PM",
+"artists": "Jamila Woods",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "r&b",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43364788-jamila-woods-at-crocodile",
+"src": "Songkick"
+},
+{
+"date": "2026-11-20",
 "time": "",
 "artists": "Fear Factory w/ Darkest Hour, Brotality",
 "venue": "El Corazon",
@@ -5290,18 +5675,6 @@
 {
 "date": "2026-11-20",
 "time": "",
-"artists": "Jamila Woods",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "r&b",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43364788-jamila-woods-at-crocodile",
-"src": "Songkick"
-},
-{
-"date": "2026-11-20",
-"time": "",
 "artists": "The Cactus Blossoms w/ Devin Champlin",
 "venue": "Tractor Tavern",
 "hood": "Ballard",
@@ -5313,7 +5686,19 @@
 },
 {
 "date": "2026-11-21",
-"time": "",
+"time": "6:00 PM",
+"artists": "2 Dead Boyz",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "other",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1040305113-2-dead-boyz-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-21",
+"time": "8:00 PM",
 "artists": "Mobiius w/ Sophixi",
 "venue": "Clock-Out Lounge",
 "hood": "Beacon Hill",
@@ -5697,6 +6082,18 @@
 },
 {
 "date": "2026-11-27",
+"time": "8:00 PM",
+"artists": "Nite Wave",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "electronic",
+"price": "",
+"ages": "",
+"url": "https://www.bandsintown.com/e/1039148276-nite-wave-at-the-crocodile",
+"src": "Bandsintown"
+},
+{
+"date": "2026-11-27",
 "time": "",
 "artists": "Haley Heynderickx",
 "venue": "Neptune Theatre",
@@ -5757,6 +6154,18 @@
 },
 {
 "date": "2026-11-28",
+"time": "6:00 PM",
+"artists": "Jalen Ngonda",
+"venue": "The Crocodile",
+"hood": "Belltown",
+"genre": "r&b",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43284521-jalen-ngonda-at-crocodile",
+"src": "Songkick"
+},
+{
+"date": "2026-11-28",
 "time": "7:00 PM",
 "artists": "Bodysnatcher w/ Gideon, Psycho-Frame, Volatile Ways",
 "venue": "El Corazon",
@@ -5801,18 +6210,6 @@
 "price": "",
 "ages": "",
 "url": "https://songkick.com/concerts/43346141-tvboo-at-showbox-sodo",
-"src": "Songkick"
-},
-{
-"date": "2026-11-28",
-"time": "",
-"artists": "Jalen Ngonda",
-"venue": "The Crocodile",
-"hood": "Belltown",
-"genre": "r&b",
-"price": "",
-"ages": "",
-"url": "https://songkick.com/concerts/43284521-jalen-ngonda-at-crocodile",
 "src": "Songkick"
 },
 {
@@ -5878,7 +6275,7 @@
 {
 "date": "2026-11-29",
 "time": "",
-"artists": "Neurosis",
+"artists": "Neurosis w/ blackwater holylight",
 "venue": "Showbox SoDo",
 "hood": "SoDo",
 "genre": "metal",
@@ -5945,6 +6342,30 @@
 "price": "",
 "ages": "",
 "url": "https://songkick.com/concerts/43382266-yung-gravy-at-showbox-sodo",
+"src": "Songkick"
+},
+{
+"date": "2026-12-02",
+"time": "",
+"artists": "Insomnium w/ Amorphis",
+"venue": "The Showbox",
+"hood": "Downtown",
+"genre": "metal",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43394715-insomnium-at-showbox-at-the-market",
+"src": "Songkick"
+},
+{
+"date": "2026-12-02",
+"time": "",
+"artists": "Mel Bryant & the Mercy Makers w/ Torch",
+"venue": "Belltown Yacht Club",
+"hood": "Belltown",
+"genre": "rock",
+"price": "",
+"ages": "",
+"url": "https://songkick.com/concerts/43439809-mel-bryant-and-the-mercy-makers-at-belltown-yacht-club",
 "src": "Songkick"
 }
 ]

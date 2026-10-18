@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-17T19:45:00-07:00",
+"asof": "2026-10-18T01:55:00-07:00",
 "events": [
 {
 "date": "2026-10-20",
@@ -39,6 +39,18 @@
 },
 {
 "date": "2026-10-25",
+"time": "1:00 PM",
+"artists": "UW Huskies Men's Basketball vs. Washington State (exhibition)",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
+},
+{
+"date": "2026-10-25",
 "time": "5:20 PM",
 "artists": "Seahawks vs. Kansas City Chiefs (Sunday Night Football)",
 "venue": "Lumen Field",
@@ -72,6 +84,18 @@
 "ages": "All ages",
 "url": "https://www.lumenfield.com/events",
 "src": "league schedules"
+},
+{
+"date": "2026-11-02",
+"time": "",
+"artists": "UW Huskies Men's Basketball vs. Colgate",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
 },
 {
 "date": "2026-11-02",
@@ -146,16 +170,28 @@
 "src": "league schedules"
 },
 {
-"date": "2026-11-12",
-"time": "9:00 AM",
-"artists": "Kraken vs. Carolina Hurricanes",
-"venue": "Climate Pledge Arena",
-"hood": "Seattle Center",
+"date": "2026-11-09",
+"time": "7:00 PM",
+"artists": "UW Huskies Men's Basketball vs. Mississippi Valley State",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
 "genre": "sports",
 "price": "",
 "ages": "All ages",
-"url": "https://climatepledgearena.com/events/",
-"src": "league schedules"
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
+},
+{
+"date": "2026-11-19",
+"time": "",
+"artists": "UW Huskies Men's Basketball vs. Utah Tech",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
 },
 {
 "date": "2026-11-19",
@@ -218,6 +254,54 @@
 "src": "league schedules"
 },
 {
+"date": "2026-11-29",
+"time": "4:30 PM",
+"artists": "UW Huskies Men's Basketball vs. Norfolk State",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
+},
+{
+"date": "2026-12-01",
+"time": "6:40 PM",
+"artists": "Kraken vs. Dallas Stars",
+"venue": "Climate Pledge Arena",
+"hood": "Seattle Center",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://www.smartcalendars.ai/en/feeds/seattle-kraken-fixtures",
+"src": "NHL schedule"
+},
+{
+"date": "2026-12-03",
+"time": "7:00 PM",
+"artists": "Kraken vs. Dallas Stars",
+"venue": "Climate Pledge Arena",
+"hood": "Seattle Center",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://www.smartcalendars.ai/en/feeds/seattle-kraken-fixtures",
+"src": "NHL schedule"
+},
+{
+"date": "2026-12-06",
+"time": "5:00 PM",
+"artists": "Kraken vs. Buffalo Sabres",
+"venue": "Climate Pledge Arena",
+"hood": "Seattle Center",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://www.smartcalendars.ai/en/feeds/seattle-kraken-fixtures",
+"src": "NHL schedule"
+},
+{
 "date": "2026-12-07",
 "time": "5:15 PM",
 "artists": "Seahawks vs. Dallas Cowboys (Monday Night Football)",
@@ -230,6 +314,42 @@
 "src": "league schedules"
 },
 {
+"date": "2026-12-08",
+"time": "7:00 PM",
+"artists": "UW Huskies Men's Basketball vs. Southern Utah",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
+},
+{
+"date": "2026-12-10",
+"time": "6:30 PM",
+"artists": "Kraken vs. Washington Capitals",
+"venue": "Climate Pledge Arena",
+"hood": "Seattle Center",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://www.smartcalendars.ai/en/feeds/seattle-kraken-fixtures",
+"src": "NHL schedule"
+},
+{
+"date": "2026-12-12",
+"time": "7:00 PM",
+"artists": "Kraken vs. Nashville Predators",
+"venue": "Climate Pledge Arena",
+"hood": "Seattle Center",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://www.smartcalendars.ai/en/feeds/seattle-kraken-fixtures",
+"src": "NHL schedule"
+},
+{
 "date": "2026-12-13",
 "time": "1:25 PM",
 "artists": "Seahawks vs. New York Giants",
@@ -240,6 +360,18 @@
 "ages": "All ages",
 "url": "https://www.lumenfield.com/events",
 "src": "league schedules"
+},
+{
+"date": "2026-12-13",
+"time": "5:00 PM",
+"artists": "UW Huskies Men's Basketball vs. UCLA",
+"venue": "Alaska Airlines Arena",
+"hood": "University District",
+"genre": "sports",
+"price": "",
+"ages": "All ages",
+"url": "https://roundtable.io/sports/ncaa/washington/news/washington-huskies-mens-basketball-reveals-tip-off-times-for-2026-27-season",
+"src": "UW Athletics"
 },
 {
 "date": "2026-12-25",
