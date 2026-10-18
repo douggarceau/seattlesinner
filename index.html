@@ -791,6 +791,61 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
 .crrow{transition:background .15s,box-shadow .15s}.crrow:hover{background:#e3170a14;box-shadow:inset 3px 0 0 #e3170a}
 @media (prefers-reduced-motion:reduce){.intro,.sc,.sgrid .sc.styled,.lcd,.crstat div,.scu{animation:none}}
 </style>
+<style id="noir">
+/* ===== NOIR PASS: dark, cool, threatening instead of slot machine. Delete this block to undo. ===== */
+:root{--red:#b3121f;--gold:#b08d2e;--glow:#5fd4c4;--blue:#1d3f6e}
+/* cold vignette + film grain over everything */
+html::after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;background:radial-gradient(ellipse at 50% 35%,transparent 45%,rgba(2,6,14,.55) 100%),url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .6 0 0 0 0 .7 0 0 0 0 .8 0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");mix-blend-mode:normal}
+.aurora{opacity:.35!important;filter:saturate(.5) hue-rotate(-12deg)}
+/* no hard blinking anywhere */
+.nsad-tag,.pmlink .pm-tag,.nb.nsl,.shrbig,.tlab,.troom .rg .kick .dot,.troom .bwl .bwr .gtag,.troom .rg::before,.pmlink.pmred,.scu .bars b,.vtile.lit,.crrow.new,.troom .snap>div,.rec i,.pad.on{animation:none!important}
+.crw .live,.scu .rx i{animation-duration:2.6s!important}
+/* sweeps, spins, sparks and floating off */
+.sc.styled::after,.bw::after,.ev::after,.lead.styled::after{animation:none!important;opacity:0!important}
+.sparks{display:none!important}
+.sgrid .sc.styled,.sc,.lead.styled .readm{animation:none!important}
+/* whatever still breathes does it slowly and dimly */
+.nsad,.pmlink,.nb.pmnb,.nb[aria-current="page"],.nb.sub,.box,.ms,.ms b,.dt,.gtag,.intro,.lcd,.crstat div,.scu,.vtile,.adslot,.subbox,.troom .box,.troom .rg,.troom .sc.styled,.troom h2.room,.logo.lgimg img,.cvr .cimg,.lead.styled,.bw,.ev{animation-duration:10s!important}
+.logo .lt,.lbl::after,h2.room,.lbl b{animation-duration:24s!important}
+/* masthead */
+.shrbig{background:#0b1220!important;border:1px solid #24406b!important;color:#c9d6e8!important;box-shadow:0 0 0 1px #000,0 10px 26px #000a!important;text-shadow:none!important}
+.shrbig:hover{border-color:#5a7fb5!important;color:#fff!important}
+.subbox{border-color:#3a3220!important;box-shadow:0 10px 26px #000a!important}
+#sbGo{background:#7d0d16!important}
+/* nav: dark pills, colored only by a thin edge */
+.nb{background:#0a0c10!important;border-color:#1c222b!important;color:#b9c3cf!important;box-shadow:none!important;text-shadow:none!important}
+.nb:hover{color:#fff!important;border-color:#3a4553!important}
+.nb[aria-current="page"]{background:#0d1726!important;border-color:#3d6aa8!important;color:#fff!important;box-shadow:inset 0 -2px 0 #3d6aa8!important}
+.nb.nsl{background:#13060a!important;border-color:#6b1220!important;color:#e7b7bd!important}
+.nb.pmnb{background:#070d18!important;border-color:#24406b!important;color:#b9cde8!important}
+/* wire ticker */
+.ticker{border-color:#2a1418!important;box-shadow:none!important;background:#060709!important}
+.tlab{background:#3d0710!important;border-right-color:#6b1220!important}
+/* Newspace + Power Map banners */
+.nsad{background:linear-gradient(90deg,#050608,#12060a 50%,#050608)!important;border:1px solid #4a0d16!important;box-shadow:0 12px 30px #000c,0 0 22px #6b122022!important}
+.nsad i{color:#c9a227!important;text-shadow:none!important}
+.nsad-tag{background:transparent!important;color:#c9a227!important;border:1px solid #6b5a1e}
+.nsad-go{background:#7d0d16!important;box-shadow:none!important}
+.pmlink{box-shadow:0 12px 30px #000c!important;filter:saturate(.75) brightness(.9)}
+/* story boxes and panels: less neon, more shadow */
+.sc.styled,.lead.styled,.bw,.ev,.box,.ms{box-shadow:0 12px 28px #000b!important}
+.sc.styled,.lead.styled{filter:saturate(.8)}
+/* room headers: lit from below, not neon */
+h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:saturate(.8)}
+/* Power Map banners: dark steel */
+.pmlink,.pmlink.pmred{background:linear-gradient(90deg,#04060a,#0a1322 50%,#04060a)!important;border:1px solid #24406b!important;box-shadow:0 12px 30px #000c!important;filter:none!important;color:#dfe7f2!important}
+.pmlink .pm-tag{background:transparent!important;color:#c9a227!important;border:1px solid #6b5a1e!important;animation:none!important}
+.pmlink .pm-go{background:#0d1a2e!important;color:#b9cde8!important;border:1px solid #3d6aa8!important;box-shadow:none!important}
+.pmlink b,.pmlink i{text-shadow:none!important}
+/* Tech room cards: no flashing pads */
+.troom .rg,.troom .sc.styled{animation:none!important}
+.troom .rg.pad-on,.troom .sc.styled.pad-on{background:inherit!important;box-shadow:0 0 0 1px color-mix(in srgb,var(--k) 55%,transparent),0 12px 28px #000b!important;animation:none!important}
+.troom .rg.pad-on h4,.troom .rg.pad-on p,.troom .sc.styled.pad-on h3,.troom .sc.styled.pad-on p{color:inherit!important}
+/* scanner and live widgets: desaturated */
+.scu,.crstat div{filter:saturate(.55) brightness(.9)}
+.crw h2.room{animation:none!important}
+</style>
+
 
 <div class="aurora" aria-hidden="true"></div><div class="sparks" id="sparks" aria-hidden="true"></div><div class="ovl-scan" aria-hidden="true"></div><div class="ovl-vig" aria-hidden="true"></div>
 <div class="clsbar top"><a class="twb" id="tw" href="https://forecast.weather.gov/MapClick.php?lat=47.6062&amp;lon=-122.3321" target="_blank" rel="noopener" title="Seattle forecast from the National Weather Service"><b id="twTime">--:--</b><span class="twd" id="twDate"></span><span id="twIcon">☁</span><b id="twTemp">--°</b><span class="twc" id="twCond"></span></a><span class="cb-m nhm" aria-hidden="true"><span class="nhm-r"><span>Alki</span><span>Ballard</span><span>Beacon Hill</span><span>Belltown</span><span>Bitter Lake</span><span>Capitol Hill</span><span>Central District</span><span>Chinatown-ID</span><span>Columbia City</span><span>Delridge</span><span>Denny Triangle</span><span>Eastlake</span><span>First Hill</span><span>Fremont</span><span>Georgetown</span><span>Green Lake</span><span>Greenwood</span><span>Hillman City</span><span>Interbay</span><span>Lake City</span><span>Laurelhurst</span><span>Leschi</span><span>Madison Park</span><span>Madrona</span><span>Magnolia</span><span>Maple Leaf</span><span>Montlake</span><span>Mount Baker</span><span>Northgate</span><span>Phinney Ridge</span><span>Pike Place</span><span>Pioneer Square</span><span>Queen Anne</span><span>Rainier Beach</span><span>Rainier Valley</span><span>Ravenna</span><span>Roosevelt</span><span>Sand Point</span><span>SoDo</span><span>South Lake Union</span><span>South Park</span><span>University District</span><span>Wallingford</span><span>Wedgwood</span><span>West Seattle</span><span>Alki</span><span>Ballard</span><span>Beacon Hill</span><span>Belltown</span><span>Bitter Lake</span><span>Capitol Hill</span><span>Central District</span><span>Chinatown-ID</span><span>Columbia City</span><span>Delridge</span><span>Denny Triangle</span><span>Eastlake</span><span>First Hill</span><span>Fremont</span><span>Georgetown</span><span>Green Lake</span><span>Greenwood</span><span>Hillman City</span><span>Interbay</span><span>Lake City</span><span>Laurelhurst</span><span>Leschi</span><span>Madison Park</span><span>Madrona</span><span>Magnolia</span><span>Maple Leaf</span><span>Montlake</span><span>Mount Baker</span><span>Northgate</span><span>Phinney Ridge</span><span>Pike Place</span><span>Pioneer Square</span><span>Queen Anne</span><span>Rainier Beach</span><span>Rainier Valley</span><span>Ravenna</span><span>Roosevelt</span><span>Sand Point</span><span>SoDo</span><span>South Lake Union</span><span>South Park</span><span>University District</span><span>Wallingford</span><span>Wedgwood</span><span>West Seattle</span></span></span><span class="rec"><i></i>LIVE FROM SEATTLE</span></div>
@@ -1591,7 +1646,7 @@ const PM=[
  {tag:"EXCLUSIVE",img:"img/promo-powermap.jpg",round:2,name:"Tech & AI Power Map",sub:"Who controls AI and Big Tech",go:"Open the map",theme:"pm",href:"/tech/"},
  {tag:"POWER MAP",big:"140<em>companies</em>",name:"Investors, contracts, chips and money flows",go:"Open the map",theme:"pm2",href:"/tech/"}];
 const NW=[
- {tag:"EXCLUSIVE",big:"newspace",name:"The Sinner's social network",sub:"Profiles the way they were in 2006: your Top 8, a profile song and a comment wall",go:"Join to interact",theme:"ns",href:NS,ext:1},
+ {tag:"EXCLUSIVE",big:"newspace",name:"The network for Seattle and beyond",sub:"Profiles the way they were in 2006: your Top 8, a profile song and a comment wall",go:"Join to interact",theme:"ns",href:NS,ext:1},
  {tag:"NEWSPACE",big:"Top 8",name:"Pick your people",sub:"Blogs, bulletins, groups, events and private messages. Seattle Sinner is there exclusively.",go:"Make your profile",theme:"ns2",href:NS,ext:1}];
 const CW=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
 let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
