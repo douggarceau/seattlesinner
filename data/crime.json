@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T05:22:31-07:00",
+"asof": "2026-10-18T09:33:25-07:00",
 "items": [
 {
 "kind": "other",
@@ -14,9 +14,21 @@
 "outlet": "FOX 13"
 },
 {
+"kind": "other",
+"headline": "Car found half-sunk in Union Bay off East Montlake Park",
+"blurb": "Before dawn Saturday a vehicle was found partly submerged a few feet from shore near E Shelby St and E Park Dr E. Seattle Fire rescue swimmers searched the water; how it got there was not yet known.",
+"hood": "Montlake",
+"spd": [
+"MONTLAKE/PORTAGE BAY"
+],
+"date": "2026-10-17",
+"url": "https://hoodline.com/2026/10/vehicle-found-partly-submerged-near-montlake-park-rescue-swimmers-search-union-bay/",
+"outlet": "Hoodline"
+},
+{
 "kind": "police",
 "headline": "Suspicious package forces hazmat sweep at Jayapal's downtown office",
-"blurb": "Hazmat crews checked a suspicious package sent to Rep. Pramila Jayapal's office building in the 2000 block of 6th Ave on Friday. No one was hurt and the building was cleared to reoccupy.",
+"blurb": "Hazmat crews checked a suspicious package sent to Rep. Pramila Jayapal's office building in the 2000 block of 6th Ave on Friday. No one was hurt; the FBI is investigating a wave of suspicious mailings to congressional and election offices.",
 "hood": "Downtown",
 "spd": [
 "DOWNTOWN COMMERCIAL"
@@ -60,6 +72,18 @@
 "date": "2026-10-15",
 "url": "https://hoodline.com/2026/10/police-search-for-man-who-may-have-a-firearm-and-may-be-in-crisis-prompts-mount-baker-school-shelter-in-place/",
 "outlet": "Hoodline"
+},
+{
+"kind": "police",
+"headline": "White-powder letter forces partial evacuation of downtown federal building",
+"blurb": "A suspicious letter with white powder was found Oct. 15 on the 32nd floor of the Henry M. Jackson Federal Building, which houses Sen. Maria Cantwell's offices. Fire crews removed it, no one was hurt, and the FBI is investigating it as part of a nationwide probe of suspicious mailings.",
+"hood": "Downtown",
+"spd": [
+"DOWNTOWN COMMERCIAL"
+],
+"date": "2026-10-15",
+"url": "https://komonews.com/news/local/suspicious-letters-found-seattle-olympia-amid-nationwide-investigation-election-officials-white-powder-usps-postal-service-mail-maria-cantwell",
+"outlet": "KOMO"
 },
 {
 "kind": "burglary",
@@ -462,6 +486,18 @@
 "outlet": "SPD Blotter"
 },
 {
+"kind": "robbery",
+"headline": "Street robbery and beating on SW Roxbury near Delridge",
+"blurb": "Police took a report of a street robbery and assault in the 1600 block of SW Roxbury St on the evening of Sept. 28. No arrest was reported.",
+"hood": "South Delridge",
+"spd": [
+"SOUTH DELRIDGE"
+],
+"date": "2026-09-28",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "shooting",
 "headline": "Gunfire, then a crash outside Pioneer Square club",
 "blurb": "Officers heard shots near the 300 block of 2nd Ave S around 2 a.m., followed by a collision outside a nearby club; occupants reportedly moved items into another vehicle.",
@@ -651,6 +687,18 @@
 "date": "2026-09-18",
 "url": "https://komonews.com/news/local/seattle-police-seek-help-finding-suspect-in-maple-leaf-child-assault-case-burglary-man-broke-into-seattle-home-attacked-a-child-seattle-crime-fbi",
 "outlet": "KOMO"
+},
+{
+"kind": "shooting",
+"headline": "Late-night gunfire reported on SW Roxbury St",
+"blurb": "Shots were reported in the 2400 block of SW Roxbury St around 10:50 p.m. Sept. 18. No injuries or arrests were reported.",
+"hood": "South Delridge",
+"spd": [
+"SOUTH DELRIDGE"
+],
+"date": "2026-09-18",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 }
 ]
 }
