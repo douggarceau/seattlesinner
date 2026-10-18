@@ -823,13 +823,10 @@ function rogueCard(r){const k=TK[r.kind]||'#2fd3c8';return `<a class="rg" style=
 function vTech(){const T=TECH||{},B=T.bell||{};const ts=STORIES.filter(s=>['the-swarm','ai-flash','robot-price-tag','pink-slip-city'].includes(s.slug));
   return `<div class="troom"><h2 class="room">Tech &amp; AI</h2>
   <a class="pmlink" href="/tech/"><span class="pm-tag">INTERACTIVE</span><b>The Tech &amp; AI <i>Power Map</i></b><span class="pm-go">Who controls AI and Big Tech →</span></a>
-  <div class="intro"><b>Wired in from AI Signals</b><p>Machines, money and the people building both. Headlines and market moves come from the AI Signals Tech &amp; AI Power Map and refresh every morning.</p></div>
+  <div class="intro"><b>Wired in from AI Signals</b><p>Machines, money and the people building both. Headlines come from the AI Signals Tech &amp; AI Power Map and refresh every morning.</p></div>
+  <div class="lbl"><b>AI gone rogue</b><span>when the models misbehave</span></div><div class="tgrid">${(T.rogue||[]).map(rogueCard).join('')}</div>
   <div class="tsplit"><section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI headlines</b><span>${(T.news||[]).length} items</span></div><div class="bwl">${(T.news||[]).slice(0,24).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div></section>
   <div class="stack"><div class="lbl"><b>Sinner tech stories</b><span>${ts.length}</span></div>${ts.map(storyCard).join('')}</div></div>
-  ${B.setup?`<section class="box" style="--c:#2fd3c8"><div class="bh"><b>The opening bell · ${esc(B.day||'')}</b><span>${esc(B.asof||'')}</span></div><div class="tbell"><p class="setup">${esc(B.setup)}</p>
-    <div class="snap">${(B.snap||[]).map(([k,v])=>`<div style="--k:${pcol(v)}"><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div></div>
-    ${(B.watch||[]).length?`<div class="dayh">Watch today</div><ul class="watch">${B.watch.map(w=>`<li>${esc(w)}</li>`).join('')}</ul>`:''}</section>`:''}
-  <div class="lbl"><b>AI gone rogue</b><span>when the models misbehave</span></div><div class="tgrid">${(T.rogue||[]).map(rogueCard).join('')}</div>
   <div class="lbl"><b>Rise of the machines</b><span>robots and drones in the real world</span></div><div class="tgrid">${(T.machines||[]).map(rogueCard).join('')}</div></div>`}
 
 const VCAT={"Live music & concert rooms":"#1e90ff","Nightclubs, drag & cabaret":"#ff3a2a","Pubs, bars & restaurants":"#d9a400","Dedicated karaoke venues":"#ff7a1a","Comedy & improv":"#f2c94c","Breweries, wineries & taprooms":"#a6d13a","Theater, dance & performing arts":"#8fb3d9","Cinemas & film centers":"#2fd3c8","Games, bowling & active fun":"#39ff14","Casinos & resort entertainment":"#ffb300","Arenas, stadiums & motorsports":"#4a9eff","Outdoor stages, fairs & festivals":"#20c997","Museums, exhibits & wildlife":"#c9d1d9"};
