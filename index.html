@@ -563,6 +563,18 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
 .vguide .gh h3{margin:0;font:900 clamp(32px,5vw,54px)/1 var(--flag);color:#fff;text-shadow:0 0 20px rgba(255,90,0,.45)}
 .vguide .gh p{margin:0;font:italic 400 17px/1.4 var(--read);color:#dfe5ea;max-width:52ch}
 .vtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.vtile{animation:vtBreathe 3.2s ease-in-out infinite}
+.vtile:nth-child(3n+1){animation-delay:-.4s}.vtile:nth-child(3n+2){animation-delay:-1.3s}.vtile:nth-child(4n){animation-delay:-2.1s}.vtile:nth-child(5n){animation-delay:-2.7s}
+@keyframes vtBreathe{0%,100%{box-shadow:0 0 0 transparent;filter:brightness(.9)}50%{box-shadow:0 0 16px color-mix(in srgb,var(--gc) 70%,transparent),inset 0 0 18px color-mix(in srgb,var(--gc) 35%,transparent);filter:brightness(1.25)}}
+.vtile.lit{animation:vtBlink .5s steps(2,jump-none) 3;background:color-mix(in srgb,var(--gc) 70%,#000)!important;box-shadow:0 0 24px var(--gc),0 0 4px var(--gc)}
+.vtile.lit b,.vtile.lit span,.vtile.lit small{color:#000!important;text-shadow:none!important}
+@keyframes vtBlink{0%{opacity:1}50%{opacity:.4}100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.vtile,.vtile.lit{animation:none}}
+.vg-compact .vtiles{grid-template-columns:1fr 1fr}
+.vg-compact .gh{display:grid;gap:6px}
+.vg-compact .gh h3{font-size:clamp(26px,3vw,34px)}
+.vg-compact .gh p{font-size:15px}
+.vg-compact .two{grid-template-columns:1fr}
 .vtile{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:4px;padding:12px;border-radius:6px;background:color-mix(in srgb,var(--gc) 12%,#07080a);border:1px solid color-mix(in srgb,var(--gc) 45%,#000);border-top:4px solid var(--gc);transition:transform .15s,box-shadow .15s}
 .vtile:hover{transform:translateY(-3px);box-shadow:0 0 20px color-mix(in srgb,var(--gc) 50%,transparent)}
 .vtile b{font:900 30px/1 var(--display);color:#fff;text-shadow:0 0 12px var(--gc)}
@@ -734,6 +746,8 @@ function vFront(){
       <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
         <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
+      ${vGuide(true)}
+      <section class="box" style="--c:#d9a400"><div class="bh"><b>Got dirt? Got photos?</b></div><div style="padding:14px;display:grid;gap:10px"><p style="margin:0;color:#c9d1d9">Send a story idea or your best shot of the city. Picks may run in print.</p><button class="go" data-go="submit">Submit to the Sinner</button></div></section>
     </div>
     <div class="stack">
       <section class="box" style="--c:#1e90ff"><div class="bh"><b>Shows this week</b><span>tap for tickets</span></div><div class="rows">${wk.map(showRow).join('')||'<div class="empty">No shows listed this week.</div>'}</div>
@@ -743,11 +757,10 @@ function vFront(){
       ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
       <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI wire</b><span class="techsrc">via AI Signals</span></div><div class="bwl">${((TECH&&TECH.news)||[]).slice(0,6).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="tech">Tech &amp; AI room →</button></div></section>
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>Got dirt? Got photos?</b></div><div style="padding:14px;display:grid;gap:10px"><p style="margin:0;color:#c9d1d9">Send a story idea or your best shot of the city. Picks may run in print.</p><button class="go" data-go="submit">Submit to the Sinner</button></div></section>
-    </div></div>${vGuide()}`;
+    </div></div>`;
 }
-function vGuide(){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
-  return `<section class="box" style="--c:#ff6a00"><div class="vguide"><div class="gh"><h3>The Sinner Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
+function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
+  return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Sinner Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
   <div class="vtiles">${cats.map(c=>`<button class="vtile" data-vguide="${esc(c)}" style="--gc:${VCAT[c]}"><b>${VENUES.filter(v=>v.cat===c).length}</b><span>${esc(VSHORT[c])}</span><small>${esc(ex(c))}</small></button>`).join('')}</div>
   <div class="two" style="gap:10px"><button class="go" data-vguide="all">Browse all ${VENUES.length} venues →</button><button class="go adgo" data-ad="">Advertise your venue →</button></div></div></section>`}
 function vCover(I){if(!I||!I.src)return '';return `<section class="box" style="--c:#ff6a00"><div class="bh"><b>The ${esc(I.month)} issue</b><span>tap a headline to read it</span></div>
@@ -1278,6 +1291,9 @@ const SFX=(function(){const SRC={"pad": "SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE
   const r=await fetch('https://zldqymhtmhqyypzolxwq.supabase.co/rest/v1/rpc/hit',{method:'POST',headers:{apikey:'sb_publishable_rve_mz40jFF8Af0DJQZL3g_2u994LyG','Content-Type':'application/json'},body:JSON.stringify({bump:!seen})});
   const n=await r.json();if(!seen)try{sessionStorage.setItem(k,'1')}catch(e){}
   if(typeof n==='number')document.getElementById('visits').textContent=n.toLocaleString()+' visitors';}catch(e){}})();
+</script>
+<script>
+(()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 
 </body>
