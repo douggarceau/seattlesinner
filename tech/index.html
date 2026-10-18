@@ -1807,7 +1807,12 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   const S={tap:()=>tone(1600,0,.03,.22),nav:()=>tone(1100,0,.05,.22),toggle:()=>tone(720,0,.06,.22,"triangle"),open:()=>{tone(620,0,.05,.18);tone(930,.04,.06,.18)},ok:()=>{tone(880,0,.09,.2);tone(1320,.08,.14,.18)},err:()=>{tone(330,0,.1,.22,"triangle");tone(247,.09,.16,.22,"triangle")}};
   const MAP={click:"tap",pad:"tap",pad2:"tap",activate:"tap",drop:"open",tab:"nav",select:"toggle",boot:"toggle",answer:"ok",send:"ok",copy:"ok",malfunction:"err"};
   function play(k){if(!on)return;const n=MAP[k];if(!n||!init())return;if(ctx.state==="suspended")ctx.resume();const now=Date.now();if(now-last<45)return;last=now;try{S[n]()}catch(e){}}
-  const loop=()=>()=>{};const jit=()=>1;
+  const BUF={},LOAD={},LOOPS={drone:1,think:1};
+  function get(k){if(BUF[k])return Promise.resolve(BUF[k]);return LOAD[k]||(LOAD[k]=fetch("/snd/"+k+".mp3").then(r=>{if(!r.ok)throw 0;return r.arrayBuffer()}).then(a=>new Promise((res,rej)=>ctx.decodeAudioData(a,res,rej))).then(b=>BUF[k]=b).catch(()=>{delete LOAD[k];return null}))}
+  function loop(k,vol,fade){if(!on||!LOOPS[k]||!init())return ()=>{};if(ctx.state==="suspended")ctx.resume();let src=null,g=null,stopped=false;
+    get(k).then(b=>{if(!b||stopped)return;src=ctx.createBufferSource();g=ctx.createGain();src.buffer=b;src.loop=true;const t=ctx.currentTime;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol==null?.5:vol,t+(fade||2.5));src.connect(g);g.connect(out);src.start()});
+    return f=>{stopped=true;if(!src)return;const t=ctx.currentTime,d=f||1.5;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(g.gain.value,t);g.gain.linearRampToValueAtTime(0,t+d);src.stop(t+d+.05)}}
+  const jit=()=>1;
   const silent=()=>{};
   return {get on(){return on},toggle(){on=!on;try{localStorage.setItem("tpm_sound",on?"on":"off")}catch(e){}if(on){init();setTimeout(()=>play("select"),40)}},warm(){init()},
     pad(){play("pad")},tick:silent,tab(){play("tab")},click(){play("click")},chime(){play("copy")},send(){play("send")},answer(){play("answer")},alarm:silent,boot:silent,scare:silent,read:silent,classified:silent,malfunction(){play("malfunction")},activate(){play("click")},drop(){play("drop")},select(){play("select")},loop}})();
@@ -2488,13 +2493,13 @@ mkRack("target","Linked now · tap to jump",[],()=>{const s=new Set();E.forEach(
 
 
 /* ===== AMBIENT DRONE ===== */
-const AMB=(function(){let stop=null,tmr=null,on=true;try{on=localStorage.getItem("tpm_hum")!=="off"}catch(e){}
+const AMB=(function(){let stop=null,tmr=null,on=false;try{on=localStorage.getItem("tpm_hum")==="on"}catch(e){}
   const b=document.getElementById("amb");const paint=()=>{b.classList.toggle("on",!!stop);b.setAttribute("aria-pressed",stop?"true":"false")};
   const end=(f)=>{clearTimeout(tmr);if(stop){stop(f||1.2);stop=null}paint()};
-  const start=(secs)=>{if(stop||!SFX.on)return;stop=SFX.loop("drone",.28);paint();clearTimeout(tmr);if(secs)tmr=setTimeout(()=>end(1.8),secs*1000)};
-  b.addEventListener("click",e=>{e.stopPropagation();if(stop){on=false;end()}else{on=true;start(0)}try{localStorage.setItem("tpm_hum",on?"on":"off")}catch(_){}});
+  const start=(secs)=>{if(stop||!SFX.on)return;stop=SFX.loop("drone",.6,3);paint();clearTimeout(tmr);if(secs)tmr=setTimeout(()=>end(1.8),secs*1000)};
+  b.addEventListener("click",e=>{e.stopPropagation();if(stop){on=false;end()}else{on=true;if(!SFX.on){SFX.toggle();window.__paintSnd&&window.__paintSnd()}start(0)}try{localStorage.setItem("tpm_hum",on?"on":"off")}catch(_){}});
   document.addEventListener("visibilitychange",()=>{if(document.hidden)end()});
-  return {boot(){if(on)setTimeout(()=>start(4),1200)},mute(){end()},unmute(){}}})();
+  return {boot(){if(on)setTimeout(()=>start(0),1200)},mute(){end()},unmute(){if(on)start(0)}}})();
 
 /* ===== BOOT EYE CANDY ===== */
 (function(){const boot=document.getElementById("boot");if(!boot)return;const alive=()=>document.body.contains(boot)&&!boot.classList.contains("gone");

@@ -745,6 +745,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb sub" data-go="submit" data-lock="submit">Send a Tip</button>
     <button class="nb shr" id="shrBtn" aria-haspopup="true">↗ Share</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
+    <button class="nb snd off" id="ambBtn" aria-pressed="false" title="Low background drone. Off by default.">🎧 Ambience off</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
   </nav>
 <div class="shrpop" id="shrPop" hidden><b>Share the Seattle Sinner</b><a data-sh="fb" href="#">Facebook</a><a data-sh="x" href="#">X / Twitter</a><a data-sh="sms" href="#">Text message</a><a data-sh="mail" href="#">Email</a><a data-sh="copy" href="#">Copy link</a></div>
@@ -1330,13 +1331,21 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   const S={tap:()=>tone(1600,0,.03,.22),nav:()=>tone(1100,0,.05,.22),toggle:()=>tone(720,0,.06,.22,"triangle"),open:()=>{tone(620,0,.05,.18);tone(930,.04,.06,.18)},ok:()=>{tone(880,0,.09,.2);tone(1320,.08,.14,.18)},err:()=>{tone(330,0,.1,.22,"triangle");tone(247,.09,.16,.22,"triangle")}};
   const MAP={click:"tap",pad:"tap",pad2:"tap",activate:"tap",drop:"open",tab:"nav",select:"toggle",boot:"toggle",answer:"ok",send:"ok",copy:"ok",malfunction:"err"};
   function play(k){if(!on)return;const n=MAP[k];if(!n||!init())return;if(ctx.state==="suspended")ctx.resume();const now=Date.now();if(now-last<45)return;last=now;try{S[n]()}catch(e){}}
-  const loop=()=>()=>{};const jit=()=>1;
+  const BUF={},LOAD={},LOOPS={drone:1};
+  function get(k){if(BUF[k])return Promise.resolve(BUF[k]);return LOAD[k]||(LOAD[k]=fetch("/snd/"+k+".mp3").then(r=>{if(!r.ok)throw 0;return r.arrayBuffer()}).then(a=>new Promise((res,rej)=>ctx.decodeAudioData(a,res,rej))).then(b=>BUF[k]=b).catch(()=>{delete LOAD[k];return null}))}
+  function loop(k,vol,fade){if(!on||!LOOPS[k]||!init())return ()=>{};if(ctx.state==="suspended")ctx.resume();let src=null,g=null,stopped=false;
+    get(k).then(b=>{if(!b||stopped)return;src=ctx.createBufferSource();g=ctx.createGain();src.buffer=b;src.loop=true;const t=ctx.currentTime;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol==null?.5:vol,t+(fade||2.5));src.connect(g);g.connect(out);src.start()});
+    return f=>{stopped=true;if(!src)return;const t=ctx.currentTime,d=f||1.5;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(g.gain.value,t);g.gain.linearRampToValueAtTime(0,t+d);src.stop(t+d+.05)}}
+  const jit=()=>1;
   return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_sound",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
-(function(){const b=document.getElementById('sndBtn');
-  const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false')};paint();
-  b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);paint();if(SFX.on){SFX.warm();SFX.play('select')}});
-  ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>SFX.warm(),{once:true,capture:true,passive:true}));
-  document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn'))return;
+(function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=false;try{want=localStorage.getItem('ss_amb')==='on'}catch(e){}
+  const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false');if(ab){ab.textContent=hum?'🎧 Ambience on':'🎧 Ambience off';ab.classList.toggle('off',!hum);ab.setAttribute('aria-pressed',hum?'true':'false')}};
+  const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('drone',.6,3);paint()},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
+  b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);if(SFX.on){SFX.warm();SFX.play('select');if(want)humOn()}else humOff(.4);paint()});
+  if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!hum;try{localStorage.setItem('ss_amb',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
+  ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm();if(want)setTimeout(humOn,50)},{once:true,capture:true,passive:true}));
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)humOff(.6);else if(want&&SFX.on&&navigator.userActivation&&navigator.userActivation.hasBeenActive)humOn()});
+  document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn,#ambBtn'))return;
     if(t.closest('[data-go],.tabs button')){SFX.play('tab');return}
     if(t.closest('[data-vote],.pad,[data-genre],[data-topic],.sortc button')){SFX.play('select');return}
     if(t.closest('summary')){SFX.play('drop');return}
