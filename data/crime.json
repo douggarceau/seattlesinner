@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T09:33:25-07:00",
+"asof": "2026-10-18T13:23:54-07:00",
 "items": [
 {
 "kind": "other",
@@ -48,6 +48,18 @@
 "date": "2026-10-16",
 "url": "https://www.capitolhillseattle.com/2026/10/no-injuries-reported-after-shootout-sends-bullet-into-7th-floor-of-23rd-ave-apartment/",
 "outlet": "Capitol Hill Seattle Blog"
+},
+{
+"kind": "police",
+"headline": "SPD lieutenant reprimanded over Cal Anderson rally conduct",
+"blurb": "After an Office of Police Accountability investigation, Interim Chief Sayles issued a written reprimand to a lieutenant over his conduct during a May 24, 2025 rally and counterdemonstration at Cal Anderson Park.",
+"hood": "Capitol Hill",
+"spd": [
+"CAPITOL HILL"
+],
+"date": "2026-10-16",
+"url": "https://spdblotter.seattle.gov/2026/10/16/interim-chief-sayles-statement-on-office-of-police-accountability-findings/",
+"outlet": "SPD Blotter"
 },
 {
 "kind": "courts",
@@ -566,6 +578,18 @@
 "date": "2026-09-24",
 "url": "https://spdblotter.seattle.gov/2026/09/24/pedestrian-struck-by-sound-transit-train/",
 "outlet": "SPD Blotter"
+},
+{
+"kind": "fire",
+"headline": "Meadowbrook house fire injures resident, eight firefighters",
+"blurb": "A pre-dawn fire that started outside a home in the 12000 block of Sand Point Way NE spread into the house on Sept. 24. A 57-year-old man was taken to Harborview in stable condition; eight firefighters had minor injuries after a carport collapsed on them.",
+"hood": "Meadowbrook",
+"spd": [
+"LAKECITY"
+],
+"date": "2026-09-24",
+"url": "https://komonews.com/news/local/fire-breaks-out-matthews-beach-seattle-structure-home-or-apartments-sand-point-way-ne-flames-firefighters-respond-residential-no-injuries",
+"outlet": "KOMO"
 },
 {
 "kind": "stabbing",
