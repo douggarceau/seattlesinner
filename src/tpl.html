@@ -1059,7 +1059,7 @@ function cwFill(){const q=id=>document.getElementById(id);
 setInterval(()=>{if(document.getElementById('cwSpd')||document.getElementById('cwFront'))cwLoad(true)},300000);
 const SCAN=[['45933','Seattle PD','North · South · East · West precincts','#1e90ff'],['40168','Seattle PD Downtown','Downtown law enforcement','#6fc3ff'],['20365','Seattle Fire & Rescue','Fire, rescue and medic dispatch','#ff2a14']];
 const scanBox=()=>`<div class="lbl"><b>Live scanner</b><span>real Seattle police and fire radio</span></div><div class="scn">${SCAN.map(c=>`<div class="scu" style="--k:${c[3]}"><div class="lcd"><small>CH ${c[0]} · LIVE</small>${esc(c[1])}<br><span style="color:#4fbf4c;font-size:12px">${esc(c[2])}</span></div><div class="row"><span class="rx"><i></i>RX</span><span class="bars"><b></b><b></b><b></b><b></b><b></b></span><a class="scbtn" href="https://www.broadcastify.com/webPlayer/${c[0]}" target="_blank" rel="noopener">▶ Listen live</a></div><div class="scfine">Create a free Broadcastify account to listen, then hit play.</div></div>`).join('')}</div>`;
-function cwSiren(){try{if(typeof SFX!=='undefined'&&!SFX.on)return;if(Date.now()-(window.__siren||0)<20000)return;window.__siren=Date.now();const a=window.__sirenA||(window.__sirenA=new Audio('/snd/siren.mp3'));a.currentTime=0;a.volume=.7;a.play().catch(()=>{})}catch(e){}}
+function cwSiren(){}
 function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);cwSiren();
   return `<div class="crw"><h2 class="room">Crime Watch</h2>
   <div class="intro"><b><span class="live">● LIVE</span> Seattle only</b><p>Real crime news from Seattle police, courts and local reporters, plus the live SPD report stream and Seattle Fire 911 dispatches straight from the city's open data. Accused means accused: everyone is presumed innocent until a court says otherwise.</p></div>
@@ -1323,37 +1323,26 @@ function wireSubmit(){
 render();
 (()=>{const c=['#e3170a','#ffb300','#1e90ff','#39ff14','#ff7a1a','#2fd3c8'];let h='';for(let i=0;i<34;i++){h+=`<i style="--k:${c[i%c.length]};--x:${Math.random()*100}%;--d:${9+Math.random()*14}s;--dl:${-Math.random()*20}s"></i>`}document.getElementById('sparks').innerHTML=h})();
 
-/* ===== SOUND (ported from the AI Signals Tech & AI Power Map) ===== */
-const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BUF={};try{on=localStorage.getItem("ss_sound")!=="off"}catch(e){}
-  function init(){if(ctx)return ctx;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();out=ctx.createGain();out.gain.value=.9;const lim=ctx.createDynamicsCompressor();lim.threshold.value=-3;lim.ratio.value=12;lim.attack.value=.002;lim.release.value=.08;out.connect(lim);lim.connect(ctx.destination);
-    Object.entries(SRC).forEach(([k,u])=>{try{const bin=atob(u),arr=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);ctx.decodeAudioData(arr.buffer,b=>{BUF[k]=b},()=>{})}catch(e){}});return ctx}
-  function play(k,vol,rate){if(!on||!init())return;if(ctx.state==="suspended")ctx.resume();const go=()=>{const b=BUF[k];if(!b)return false;const s=ctx.createBufferSource(),g=ctx.createGain();s.buffer=b;s.playbackRate.value=rate||1;g.gain.value=vol==null?1:vol;s.connect(g);g.connect(out);s.start();return true};if(!go()){let n=0;const r=setInterval(()=>{if(go()||++n>25)clearInterval(r)},60)}}
-  function loop(k,vol){if(!on||!init())return ()=>{};if(ctx.state==="suspended")ctx.resume();let src=null,g=null,stopped=false;
-    const start=()=>{const b=BUF[k];if(!b){if(!stopped)setTimeout(start,80);return}src=ctx.createBufferSource();g=ctx.createGain();src.buffer=b;src.loop=true;g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(vol==null?.7:vol,ctx.currentTime+.6);src.connect(g);g.connect(out);src.start(0)};start();
-    return f=>{stopped=true;if(!src)return;const t=ctx.currentTime;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(g.gain.value,t);g.gain.linearRampToValueAtTime(0,t+(f||.6));src.stop(t+(f||.6)+.05)}}
-  const jit=()=>.97+Math.random()*.06;
+/* ===== SOUND: standard UI sounds (synthesized, user-initiated only) ===== */
+const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.getItem("ss_sound")!=="off"}catch(e){}
+  function init(){if(ctx)return ctx;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();out=ctx.createGain();out.gain.value=.35;out.connect(ctx.destination);return ctx}
+  function tone(f,at,d,v,type){const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+at;o.type=type||"sine";o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.004);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(out);o.start(t);o.stop(t+d+.02)}
+  const S={tap:()=>tone(1600,0,.03,.22),nav:()=>tone(1100,0,.05,.22),toggle:()=>tone(720,0,.06,.22,"triangle"),open:()=>{tone(620,0,.05,.18);tone(930,.04,.06,.18)},ok:()=>{tone(880,0,.09,.2);tone(1320,.08,.14,.18)},err:()=>{tone(330,0,.1,.22,"triangle");tone(247,.09,.16,.22,"triangle")}};
+  const MAP={click:"tap",pad:"tap",pad2:"tap",activate:"tap",drop:"open",tab:"nav",select:"toggle",boot:"toggle",answer:"ok",send:"ok",copy:"ok",malfunction:"err"};
+  function play(k){if(!on)return;const n=MAP[k];if(!n||!init())return;if(ctx.state==="suspended")ctx.resume();const now=Date.now();if(now-last<45)return;last=now;try{S[n]()}catch(e){}}
+  const loop=()=>()=>{};const jit=()=>1;
   return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_sound",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
-(function(){const b=document.getElementById('sndBtn');let hum=null,intro=false;const SC={n:0,at:8+Math.floor(Math.random()*18)};
+(function(){const b=document.getElementById('sndBtn');
   const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false')};paint();
-  const grand=()=>{if(intro||!SFX.on)return;intro=true;SFX.play('login',1);setTimeout(()=>{if(SFX.on){hum=SFX.loop('drone',.26);setTimeout(()=>{hum&&hum(2);hum=null},6000)}},1400)};
-  b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);paint();if(SFX.on){SFX.warm();SFX.play('boot',.9);if(!intro)setTimeout(grand,250)}else if(hum){hum(.4);hum=null}});
+  b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);paint();if(SFX.on){SFX.warm();SFX.play('select')}});
   ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>SFX.warm(),{once:true,capture:true,passive:true}));
-  document.addEventListener('visibilitychange',()=>{if(document.hidden&&hum){hum(.4);hum=null}});
   document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn'))return;
-    if(!intro){grand();if(!t.closest('button,a,[data-story],[data-go],[data-zoom]'))return}
-    if(!window.__scared&&t.closest('[data-story],.pad,[data-topic]')&&++SC.n===SC.at){window.__scared=1;SFX.play('scare',1);document.body.classList.add('jolt');setTimeout(()=>document.body.classList.remove('jolt'),900);return}
-    if(t.closest('[data-zoom]')){SFX.play('classified',1);return}
-    if(t.closest('.zoom')){SFX.play('drop',.7,SFX.jit());return}
-    if(t.closest('[data-story]')){SFX.play('activate',.85);setTimeout(()=>SFX.play('read',.6),500);return}
-    const g=t.closest('[data-go]');if(g){const v=g.dataset.go;v==='tech'?SFX.play('classified',.9):v==='crime'?0:v==='submit'?SFX.play('alarm',.8):SFX.play('tab',1);return}
-    const vt=t.closest('[data-vote]');if(vt){vt.dataset.vote==='1'?SFX.play('answer',.9):SFX.play('malfunction',.8);return}
-    if(t.closest('.pad,[data-genre]')){SFX.play(Math.random()<.5?'pad':'pad2',1,SFX.jit());return}
-    if(t.closest('[data-topic],.sortc button')){SFX.play('select',1);return}
-    if(t.closest('.bwr,.sh,.ev,.bw,.mv,.rg,.srcs a')){SFX.play('drop',.6,SFX.jit());return}
-    if(t.closest('button,a,label,summary'))SFX.play('click',1,SFX.jit())},true);
-  document.addEventListener('submit',()=>SFX.play('send',1),true);
-  document.addEventListener('change',e=>{if(e.target.matches&&e.target.matches('select,input[type=checkbox]'))SFX.play('select',1)},true);
-  let kt=0;document.addEventListener('input',e=>{if(e.target.id==='q'){const n=Date.now();if(n-kt>70){kt=n;SFX.play('knob',.5,.98+Math.random()*.04)}}},true);
+    if(t.closest('[data-go],.tabs button')){SFX.play('tab');return}
+    if(t.closest('[data-vote],.pad,[data-genre],[data-topic],.sortc button')){SFX.play('select');return}
+    if(t.closest('summary')){SFX.play('drop');return}
+    if(t.closest('button,a,label,[data-story],[data-zoom],.zoom,.bwr,.sh,.ev,.bw,.mv,.rg'))SFX.play('click')},true);
+  document.addEventListener('submit',()=>SFX.play('send'),true);
+  document.addEventListener('change',e=>{if(e.target.matches&&e.target.matches('select,input[type=checkbox]'))SFX.play('select')},true);
 })();
 </script>
 <script>
