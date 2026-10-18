@@ -175,20 +175,26 @@ button{font:inherit;color:inherit}
 .nsad-tag{font:800 11px/1 var(--mono);letter-spacing:.18em;background:#ffd21a;color:#000;padding:5px 8px;border-radius:3px;animation:nsadBlink 1.1s steps(2,jump-none) infinite}
 .nsad-go{font:800 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;background:#e3170a;color:#fff;padding:9px 14px;border-radius:4px;box-shadow:0 0 14px #e3170a}
 .nsad:hover .nsad-go{background:#ff2b1a}
-/* Local Spots: Price-is-Right flip boxes in the side margins */
-.lspot{position:fixed;top:170px;z-index:40;width:190px;height:212px;padding:11px;border-radius:14px;background-color:#c8102e;background-image:radial-gradient(circle,#fff6c2 0 3px,#ffd21a 4px,transparent 5px);background-size:19px 19px;background-position:0 0;box-shadow:0 0 0 3px #ffd21a,0 0 26px #ffb300aa;animation:lsChase .5s steps(2,jump-none) infinite;perspective:700px}
-.lspot.l{left:max(8px,calc((100vw - 1760px)/2 - 210px))}.lspot.r{right:max(8px,calc((100vw - 1760px)/2 - 210px))}
-.lspot a{display:grid;grid-template-rows:auto 1fr auto;align-items:center;justify-items:center;gap:4px;width:100%;height:100%;box-sizing:border-box;padding:7px;border-radius:8px;background:#06070a;color:#fff;text-decoration:none;text-align:center;transform-style:preserve-3d;transition:transform .32s ease-in}
-.lspot a.flip{transform:rotateY(90deg)}
-.lspot .ls-tag{font:800 9px/1 var(--mono);letter-spacing:.2em;background:#ffd21a;color:#000;padding:4px 6px;border-radius:3px}
-.lspot img{max-width:100%;max-height:84px;min-height:0;object-fit:contain;border-radius:6px}
-.lspot img.round{background:#fff;border-radius:50%;padding:4px;max-height:84px}
-.lspot b{font:800 12px/1.15 var(--body);letter-spacing:.05em;text-transform:uppercase;color:#ffd21a}
-.lspot small{display:block;font:700 10px/1.2 var(--mono);letter-spacing:.08em;color:#dfe5ea;text-transform:uppercase}
-@keyframes lsChase{to{background-position:9.5px 0}}
-@media (max-width:1279px){.lsrow{display:flex;justify-content:center;gap:14px;margin:10px 0}.lspot{position:relative;top:auto;left:auto!important;right:auto!important;width:min(45vw,190px);height:min(56vw,212px)}.lspot img,.lspot img.round{max-height:min(18vw,84px)}.lspot b{font-size:11px}.lspot small{font-size:9px}}
-@media (min-width:1280px){.wrap{padding-left:max(0px,min(225px,calc(225px - (100vw - 1760px)/2)));padding-right:max(0px,min(225px,calc(225px - (100vw - 1760px)/2)))}}
-@media (prefers-reduced-motion:reduce){.lspot{animation:none}.lspot a{transition:none}}
+/* Local Spots: big game-show flip boxes in the side margins, one look per spot */
+:root{--ls:0px}
+.lspot{--bg:#000;--fg:#fff;--acc:#ffd21a;--frame:#ffd21a;position:fixed;top:150px;z-index:40;width:var(--ls);height:calc(var(--ls)*1.22);box-sizing:border-box;border-radius:18px;border:5px solid var(--frame);background:var(--bg);box-shadow:0 0 0 2px #000,0 0 34px color-mix(in srgb,var(--frame) 70%,transparent);transition:transform .35s ease-in,opacity .35s;transform-style:preserve-3d}
+.lspot::before{content:"";position:absolute;inset:5px;border-radius:12px;border:7px dotted var(--acc);opacity:.95;animation:lsBulb .6s steps(2,jump-none) infinite;pointer-events:none}
+.lspot.flip{transform:perspective(900px) rotateY(90deg);opacity:.2}
+.lspot.l{left:max(10px,calc((100vw - 1760px)/2 - var(--ls) - 20px))}.lspot.r{right:max(10px,calc((100vw - 1760px)/2 - var(--ls) - 20px))}
+.lspot a{position:relative;display:grid;grid-template-rows:auto 1fr auto;align-items:center;justify-items:center;gap:8px;width:100%;height:100%;box-sizing:border-box;padding:24px 18px 22px;color:var(--fg);text-decoration:none;text-align:center}
+.lspot .ls-tag{font:800 11px/1 var(--mono);letter-spacing:.22em;background:var(--acc);color:var(--bg2,#000);padding:5px 9px;border-radius:3px}
+.lspot img{width:100%;height:100%;max-height:calc(var(--ls)*.62);object-fit:contain;min-height:0}
+.lspot img.round{background:#fff;border-radius:50%;padding:6px;box-sizing:border-box;width:auto;aspect-ratio:1;box-shadow:0 0 0 4px var(--frame)}
+.lspot b{display:block;font:900 clamp(15px,calc(var(--ls)*.075),24px)/1.05 var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--acc);text-shadow:0 0 14px color-mix(in srgb,var(--acc) 60%,transparent)}
+.lspot small{display:block;margin-top:5px;font:700 clamp(10px,calc(var(--ls)*.045),14px)/1.25 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg)}
+.lspot.t-comet{--bg:#000;--fg:#fff;--acc:#ffd21a;--frame:#ffd21a}
+.lspot.t-slims{--bg:linear-gradient(160deg,#2a63d4,#0b2a6b);--fg:#e8eefc;--acc:#fff;--frame:#b9c0cb;--bg2:#0b2a6b}
+@keyframes lsBulb{0%{opacity:.95}50%{opacity:.35}100%{opacity:.95}}
+@media (min-width:1280px){:root{--ls:250px}}
+@media (min-width:1600px){:root{--ls:300px}}
+@media (min-width:1280px){.wrap{padding-left:max(0px,min(calc(var(--ls) + 35px),calc(var(--ls) + 35px - (100vw - 1760px)/2)));padding-right:max(0px,min(calc(var(--ls) + 35px),calc(var(--ls) + 35px - (100vw - 1760px)/2)))}}
+@media (max-width:1279px){:root{--ls:min(46vw,300px)}.lsrow{display:flex;justify-content:center;gap:12px;margin:12px 0}.lspot{position:relative;top:auto;left:auto!important;right:auto!important}.lspot a{padding:18px 10px 16px}}
+@media (prefers-reduced-motion:reduce){.lspot,.lspot::before{animation:none;transition:none}}
 @keyframes nsadGlow{0%,100%{box-shadow:0 0 6px #e3170a66;border-color:#e3170a}50%{box-shadow:0 0 28px #ff2b1aee,0 0 60px #ffb30055;border-color:#ffd21a}}
 @keyframes nsadBlink{0%{opacity:1}50%{opacity:.25}100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.nsad,.nsad-tag{animation:none}}
@@ -1560,16 +1566,16 @@ p.addEventListener('click',e=>{const a=e.target.closest('[data-sh]');if(!a)retur
 /* Local Spots: add a spot here and it joins the 4-second rotation */
 (function(){
 const SPOTS=[
- {name:"Comet Tavern",addr:"922 E Pike · Capitol Hill",img:"img/ad-comet.png",q:"Comet Tavern 922 E Pike St Seattle"},
- {name:"Slim's Last Chance",addr:"5606 1st Ave S · Georgetown",img:"img/ad-slims.jpg",round:1,q:"Slim's Last Chance 5606 1st Ave S Seattle"}
+ {name:"Comet Tavern",addr:"922 E Pike · Capitol Hill",img:"img/ad-comet.png",theme:"comet",q:"Comet Tavern 922 E Pike St Seattle"},
+ {name:"Slim's Last Chance",addr:"5606 1st Ave S · Georgetown",img:"img/ad-slims.jpg",round:1,theme:"slims",q:"Slim's Last Chance 5606 1st Ave S Seattle"}
 ];
 const els=[document.getElementById('lsL'),document.getElementById('lsR')];if(!els[0]||!SPOTS.length)return;
 let n=0;
-function fill(a,s){a.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.q);a.setAttribute('aria-label','Local spot: '+s.name+', '+s.addr);a.innerHTML='<span class="ls-tag">LOCAL SPOT</span><img src="'+s.img+'" alt="'+s.name+'"'+(s.round?' class="round"':'')+'><span><b>'+s.name+'</b><small>'+s.addr+'</small></span>'}
+function fill(a,s){const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-'+s.theme;a.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.q);a.setAttribute('aria-label','Local spot: '+s.name+', '+s.addr);a.innerHTML='<span class="ls-tag">LOCAL SPOT</span><img src="'+s.img+'" alt="'+s.name+'"'+(s.round?' class="round"':'')+'><span><b>'+s.name+'</b><small>'+s.addr+'</small></span>'}
 function show(){els.forEach((a,k)=>fill(a,SPOTS[(n+k)%SPOTS.length]))}
 show();
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-setInterval(()=>{n=(n+1)%SPOTS.length;if(still){show();return}els.forEach(a=>a.classList.add('flip'));setTimeout(()=>{show();els.forEach(a=>a.classList.remove('flip'))},330)},4000);
+setInterval(()=>{n=(n+1)%SPOTS.length;if(still){show();return}const bx=els.map(a=>a.parentNode);bx.forEach(b=>b.classList.add('flip'));setTimeout(()=>{show();bx.forEach(b=>b.classList.remove('flip'))},360)},4000);
 })();
 </script>
 </body>
