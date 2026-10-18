@@ -119,6 +119,9 @@ button{font:inherit;color:inherit}
 @keyframes nsadGlow{0%,100%{box-shadow:0 0 6px #e3170a66;border-color:#e3170a}50%{box-shadow:0 0 28px #ff2b1aee,0 0 60px #ffb30055;border-color:#ffd21a}}
 @keyframes nsadBlink{0%{opacity:1}50%{opacity:.25}100%{opacity:1}}
 @media (prefers-reduced-motion:reduce){.nsad,.nsad-tag{animation:none}}
+.nb.nsl{background:#e3170a;border-color:#ff3a2a;color:#fff;animation:nslBlink 1s steps(2,jump-none) infinite;box-shadow:0 0 14px #e3170a}
+@keyframes nslBlink{0%{background:#e3170a;box-shadow:0 0 16px #ff2b1a}50%{background:#5a0500;box-shadow:0 0 2px #e3170a}100%{background:#e3170a;box-shadow:0 0 16px #ff2b1a}}
+@media (prefers-reduced-motion:reduce){.nb.nsl{animation:none}}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -623,7 +626,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
 
   <nav class="navbar" id="nav" aria-label="Sections">
     <button class="nb" data-go="front">Front page</button>
-    <a class="nb" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace ↗</a>
+    <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
     <button class="nb" data-go="cal">Music calendar</button>
