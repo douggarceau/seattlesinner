@@ -171,6 +171,10 @@ button{font:inherit;color:inherit}
 .bwr,.vnr,.vrow{transition:transform .18s ease,background .18s ease}.bwr:hover,.vnr:hover,.vrow:hover{transform:translateX(4px)}
 .bwl .bwr:nth-child(odd) .gtag{animation:tagPulse 3.6s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.sgrid .sc.styled,.cimg img,.subbox,.lbl b,.bwl .bwr .gtag{animation:none}.lbl b{-webkit-text-fill-color:currentColor}}
+.tw{justify-self:end;width:min(100%,340px);margin:0 0 8px auto;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:#070a0e;border:1px solid #1e90ff;border-radius:6px;padding:8px 12px;box-shadow:0 0 12px #1e90ff33;font-family:system-ui,sans-serif}
+.tw b{display:block;color:#f3f5f7;font-weight:800}.tw span{display:block;color:#8fb3d9;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.tw-t b{font-size:24px;letter-spacing:.02em;text-shadow:0 0 8px #1e90ff88}.tw-w{display:flex;align-items:center;gap:8px;text-align:right}.tw-w b{font-size:20px}.tw-i{font-size:26px!important;animation:twI 4s ease-in-out infinite}
+@keyframes twI{50%{transform:translateY(-2px)}}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -692,6 +696,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <div>
       <div class="mstat" id="mstat" hidden></div>
       <input class="hsearch" id="q" type="search" hidden>
+      <div class="tw" id="tw"><div class="tw-t"><b id="twTime">--:--</b><span id="twDate">Seattle</span></div><div class="tw-w"><span class="tw-i" id="twIcon">☁</span><div><b id="twTemp">--°</b><span id="twCond">Seattle weather</span></div></div></div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
         <div class="sb-in" id="sbIn" hidden><b>Signed in as <span id="sbWho"></span></b><button type="button" id="sbOut">Log out</button></div>
@@ -1428,3 +1433,7 @@ setInterval(()=>{if(document.hidden)return;const r=document.querySelectorAll('.t
 setInterval(()=>{if(document.hidden)return;const c=[...document.querySelectorAll('.troom .rg,.troom .sc.styled')].filter(e=>!e.matches(':hover'));if(!c.length)return;
  const n=1+Math.floor(Math.random()*2);for(let i=0;i<n;i++){const el=c[Math.floor(Math.random()*c.length)];el.classList.add('pad-on');setTimeout(()=>el.classList.remove('pad-on'),1300)}},1100);
 </script>
+<script>(()=>{const Z='America/Los_Angeles',$=i=>document.getElementById(i);
+const tick=()=>{const d=new Date();$('twTime').textContent=d.toLocaleTimeString('en-US',{timeZone:Z,hour:'numeric',minute:'2-digit'});$('twDate').textContent=d.toLocaleDateString('en-US',{timeZone:Z,weekday:'short',month:'short',day:'numeric'})+' · Seattle'};tick();setInterval(tick,15000);
+const W={0:['☀','Clear'],1:['🌤','Mostly clear'],2:['⛅','Partly cloudy'],3:['☁','Overcast'],45:['🌫','Fog'],48:['🌫','Fog'],51:['🌦','Drizzle'],53:['🌦','Drizzle'],55:['🌧','Drizzle'],56:['🌧','Freezing drizzle'],57:['🌧','Freezing drizzle'],61:['🌧','Light rain'],63:['🌧','Rain'],65:['🌧','Heavy rain'],66:['🌧','Freezing rain'],67:['🌧','Freezing rain'],71:['🌨','Light snow'],73:['🌨','Snow'],75:['❄','Heavy snow'],77:['🌨','Snow'],80:['🌦','Showers'],81:['🌧','Showers'],82:['⛈','Downpours'],85:['🌨','Snow showers'],86:['🌨','Snow showers'],95:['⛈','Thunderstorms'],96:['⛈','Thunderstorms'],99:['⛈','Thunderstorms']};
+const wx=()=>fetch('https://api.open-meteo.com/v1/forecast?latitude=47.6062&longitude=-122.3321&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&forecast_days=1').then(r=>r.json()).then(j=>{const c=j.current||{},k=W[c.weather_code]||['☁','Seattle'];let i=k[0];if(!c.is_day&&c.weather_code<=1)i='🌙';$('twIcon').textContent=i;$('twTemp').textContent=Math.round(c.temperature_2m)+'°F';const dd=j.daily||{};$('twCond').textContent=k[1]+(dd.temperature_2m_max?` · ${Math.round(dd.temperature_2m_max[0])}°/${Math.round(dd.temperature_2m_min[0])}°`:'')}).catch(()=>{});wx();setInterval(wx,900000)})();</script>
