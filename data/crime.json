@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-17T20:06:44-07:00",
+"asof": "2026-10-17T20:11:19-07:00",
 "items": [
 {
 "kind": "police",
@@ -414,6 +414,18 @@
 "outlet": "SPD Blotter"
 },
 {
+"kind": "burglary",
+"headline": "Burglars haul registers out of Alki ice cream and boba shop",
+"blurb": "Burglars tried a side door at one Alki Ave SW business, then broke into an ice cream and boba shop in the 2600 block and took two registers and a lockbox.",
+"hood": "Alki",
+"spd": [
+"ALKI"
+],
+"date": "2026-09-26",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/02/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "fire",
 "headline": "Fuel thieves blamed for SoDo box-truck blaze",
 "blurb": "Police say two people trying to siphon fuel at a 1st Ave S rental lot sparked the Sept. 25 fire that burned three trucks, causing more than $150,000 in damage. A man first arrested was released; the suspects are still sought.",
@@ -472,6 +484,42 @@
 "outlet": "Hoodline"
 },
 {
+"kind": "robbery",
+"headline": "Masked man implies gun, robs Westwood Village cash counter",
+"blurb": "A masked man implied he had a gun and demanded cash at a financial-service counter in the 2600 block of SW Barton St, then fled toward 26th Ave SW.",
+"hood": "Westwood",
+"spd": [
+"ROXHILL/WESTWOOD/ARBOR HEIGHTS"
+],
+"date": "2026-09-22",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/02/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "other",
+"headline": "Admiral storefronts etched with acid, window cracked by brick",
+"blurb": "Vandals etched storefront windows with acid and cracked a display window with a thrown brick in the 2300 block of California Ave SW; no one got inside.",
+"hood": "North Admiral",
+"spd": [
+"NORTH ADMIRAL"
+],
+"date": "2026-09-21",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/02/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "burglary",
+"headline": "E-bikes stolen from Morgan Junction garage",
+"blurb": "A burglar got into a garage through a window in the 6500 block of 44th Ave SW and took two e-bikes and battery packs.",
+"hood": "Morgan Junction",
+"spd": [
+"MORGAN"
+],
+"date": "2026-09-21",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/02/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "shooting",
 "headline": "Two wounded in Yesler Terrace shooting; teen faces gun charge",
 "blurb": "A teen shot in the leg on 10th Ave S was found with a loaded handgun and was to be booked on a firearm charge; a second wounded person showed up at Harborview. Both were stable.",
@@ -496,6 +544,18 @@
 "outlet": "KOMO"
 },
 {
+"kind": "crash",
+"headline": "Hit-and-run driver leaves pedestrian badly hurt on Delridge Way",
+"blurb": "A northbound dark sedan hit a pedestrian in the crosswalk at Delridge Way SW and SW Brandon St and kept going; the victim went to Harborview with severe fractures.",
+"hood": "Delridge",
+"spd": [
+"NORTH DELRIDGE"
+],
+"date": "2026-09-19",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/02/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "police",
 "headline": "Officer shoots assault suspect in Beacon Hill apartment standoff",
 "blurb": "After a man was found with a head wound at the Beacon Pacific Village apartments on Golf Dr S, officers entered with a warrant; one fired, wounding the woman suspect, and was hurt. She is in custody; IFIT-KC is investigating.",
@@ -505,6 +565,19 @@
 ],
 "date": "2026-09-18",
 "url": "https://komonews.com/news/local/seattle-police-officer-involved-shooting-in-south-seattle-jose-rizal-park-crime-officers-respond-to-head-injury-standoff-with-suspect-inside-house-domestic-violence",
+"outlet": "KOMO"
+},
+{
+"kind": "police",
+"headline": "Police hunt man who broke into Maple Leaf home and assaulted a child",
+"blurb": "Police say a man entered a Maple Leaf home around 5 a.m. Sept. 13 and sexually assaulted a child before leaving. He is described as a white man, 20 to 50, about 200 pounds, last seen in a black hoodie; tips go to 206-233-5000.",
+"hood": "Maple Leaf",
+"spd": [
+"ROOSEVELT/RAVENNA",
+"NORTHGATE"
+],
+"date": "2026-09-18",
+"url": "https://komonews.com/news/local/seattle-police-seek-help-finding-suspect-in-maple-leaf-child-assault-case-burglary-man-broke-into-seattle-home-attacked-a-child-seattle-crime-fbi",
 "outlet": "KOMO"
 }
 ]
