@@ -1,12 +1,10 @@
 {
- "asof": "2026-10-18T10:04:25-07:00",
+ "asof": "2026-10-18T13:44:40-07:00",
  "sources_last_run": [
-  "Songkick",
-  "Hypebot Concerts",
-  "Bandsintown",
-  "ma.to",
-  "The Royal Room",
-  "Discotech"
+  "Songkick genre pages (electronic/hip-hop/metal)",
+  "Songkick Showbox calendar",
+  "ma.to (Clock-Out, Tractor, Conor Byrne, Sunset)",
+  "Hypebot Concerts jazz"
  ],
  "events": [
   {
@@ -1199,18 +1197,6 @@
   },
   {
    "date": "2026-10-21",
-   "time": "7:30 PM",
-   "artists": "India Ramey",
-   "venue": "Tractor Tavern",
-   "hood": "Ballard",
-   "genre": "country",
-   "price": "",
-   "ages": "",
-   "url": "https://www.bandsintown.com/es/e/1040033089-india-ramey-at-tractor-tavern",
-   "src": "Bandsintown"
-  },
-  {
-   "date": "2026-10-21",
    "time": "8:00 PM",
    "artists": "Emerald City Jazz Orchestra",
    "venue": "Aurora Borealis",
@@ -1376,6 +1362,18 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43397110-miscomings-at-sunset-tavern",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-10-21",
+   "time": "",
+   "artists": "Golden Compton w/ The Coffin Club",
+   "venue": "Tractor Tavern",
+   "hood": "Ballard",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://ma.to/event/golden-compton-2026-10-21",
+   "src": "ma.to"
   },
   {
    "date": "2026-10-22",
@@ -1882,6 +1880,18 @@
    "src": "Hypebot Concerts"
   },
   {
+   "date": "2026-10-22",
+   "time": "",
+   "artists": "Amy Hall w/ Clean Fight, Bitch Fits",
+   "venue": "Conor Byrne Pub",
+   "hood": "Ballard",
+   "genre": "indie",
+   "price": "$10",
+   "ages": "",
+   "url": "https://ma.to/event/amy-hall-album-release-conor-byrne-pub-22-oct-2026",
+   "src": "ma.to"
+  },
+  {
    "date": "2026-10-23",
    "time": "5:30 PM",
    "artists": "Jazz Fridays: Phil Sparks & Friends",
@@ -2111,18 +2121,6 @@
   },
   {
    "date": "2026-10-23",
-   "time": "7:30 PM & 9:30 PM",
-   "artists": "Brian Culbertson",
-   "venue": "Dimitriou's Jazz Alley",
-   "hood": "Belltown",
-   "genre": "jazz",
-   "price": "$95",
-   "ages": "",
-   "url": "https://www.earshot.org/event/brian-culbertson/2026-10-23/1/",
-   "src": "Earshot Jazz"
-  },
-  {
-   "date": "2026-10-23",
    "time": "7:30 PM",
    "artists": "Rivkah Ross",
    "venue": "Seattle Jazz Fellowship",
@@ -2267,6 +2265,18 @@
   },
   {
    "date": "2026-10-23",
+   "time": "7:30 PM & 9:30 PM",
+   "artists": "Brian Culbertson",
+   "venue": "Dimitriou's Jazz Alley",
+   "hood": "Belltown",
+   "genre": "jazz",
+   "price": "$95",
+   "ages": "",
+   "url": "https://www.earshot.org/event/brian-culbertson/2026-10-23/1/",
+   "src": "Earshot Jazz"
+  },
+  {
+   "date": "2026-10-23",
    "time": "",
    "artists": "Meernaa w/ Paul Spring, Steven van Betten, Rob Shelton, Meat Hair",
    "venue": "Conor Byrne Pub",
@@ -2323,6 +2333,18 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43248200-toth-at-sunset-tavern",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-23",
+   "time": "",
+   "artists": "Sqwerv",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43304239-sqwerv-at-showbox",
    "src": "Songkick"
   },
   {
@@ -2700,7 +2722,7 @@
   {
    "date": "2026-10-24",
    "time": "",
-   "artists": "Slow Pulp",
+   "artists": "Slow Pulp w/ Snuggle",
    "venue": "The Showbox",
    "hood": "Downtown",
    "genre": "indie",
@@ -3118,6 +3140,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-10-26",
+   "time": "",
+   "artists": "Amble",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43195290-amble-at-showbox",
+   "src": "Songkick"
+  },
+  {
    "date": "2026-10-27",
    "time": "7:00 PM",
    "artists": "Pouya",
@@ -3478,6 +3512,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-10-28",
+   "time": "",
+   "artists": "Medium Build w/ Merle Law",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43296923-medium-build-at-showbox",
+   "src": "Songkick"
+  },
+  {
    "date": "2026-10-29",
    "time": "6:00 PM",
    "artists": "This Is Halloween",
@@ -3706,6 +3752,18 @@
    "src": "EventWorld"
   },
   {
+   "date": "2026-10-29",
+   "time": "",
+   "artists": "Velvet Armada, Bigfoot Curious",
+   "venue": "Conor Byrne Pub",
+   "hood": "Ballard",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://ma.to/event/halloween-in-ballard-29-oct-2026",
+   "src": "ma.to"
+  },
+  {
    "date": "2026-10-30",
    "time": "6:00 PM",
    "artists": "This Is Halloween",
@@ -3931,6 +3989,18 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/festivals/3383391-boo-seattle/id/43270801-boo-seattle-2026",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-30",
+   "time": "",
+   "artists": "Rebecca Black w/ bayli",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43330194-rebecca-black-at-showbox",
    "src": "Songkick"
   },
   {
@@ -5724,7 +5794,7 @@
   {
    "date": "2026-11-09",
    "time": "8:00 PM",
-   "artists": "Lucy Bedroque",
+   "artists": "Lucy Bedroque w/ pinponpanpon",
    "venue": "The Showbox",
    "hood": "Downtown",
    "genre": "hip-hop",
@@ -6226,6 +6296,18 @@
    "src": "Bandsintown"
   },
   {
+   "date": "2026-11-12",
+   "time": "",
+   "artists": "porch kiss w/ Heavy Bloom, Brian Noyes",
+   "venue": "Chop Suey",
+   "hood": "Capitol Hill",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43465969-porch-kiss-at-chop-suey",
+   "src": "Songkick"
+  },
+  {
    "date": "2026-11-13",
    "time": "6:00 PM",
    "artists": "Hit the Lights",
@@ -6502,6 +6584,18 @@
    "src": "Bandsintown"
   },
   {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "Sorry For Party Rocking",
+   "venue": "Chop Suey",
+   "hood": "Capitol Hill",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43447057-sorry-for-party-rocking-at-chop-suey",
+   "src": "Songkick"
+  },
+  {
    "date": "2026-11-14",
    "time": "2:00 PM",
    "artists": "Fred Eaglesmith",
@@ -6728,6 +6822,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/f/230682",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "",
+   "artists": "GorillaT",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43334822-gorillat-at-showbox",
+   "src": "Songkick"
   },
   {
    "date": "2026-11-15",
