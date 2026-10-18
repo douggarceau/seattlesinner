@@ -124,7 +124,7 @@ button{font:inherit;color:inherit}
 @media (prefers-reduced-motion:reduce){.pmlink,.pmlink .pm-tag{animation:none}}
 .nb.pmnb{background:#06224a;border-color:#1e90ff;color:#fff;animation:pmGlow 1.6s ease-in-out infinite}
 /* uniform nav */
-.navbar .nb:not(.nsl):not(.pmnb):not(.sub):not(.snd){background:#0b0d10;border:1px solid #2a3340;color:#e9edf1;box-shadow:none;animation:none}
+.navbar .nb:not(.nsl):not(.pmnb):not(.sub):not(.snd):not(.shr){background:#0b0d10;border:1px solid #2a3340;color:#e9edf1;box-shadow:none;animation:none}
 .navbar .nb:not(.nsl):not(.pmnb):not(.sub):not(.snd):hover{border-color:#8fb3d9;color:#fff}
 .navbar .nb[aria-current="page"]:not(.nsl):not(.pmnb):not(.sub):not(.snd){background:#1e90ff;border-color:#9fd0ff;color:#fff;box-shadow:0 0 12px rgba(30,144,255,.7)}
 /* Tech & AI room: lit up */
@@ -185,6 +185,9 @@ button{font:inherit;color:inherit}
 .cam:hover{border-color:#6fc3ff}
 @media(min-width:861px){.mast>div:last-child{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between}}
 .sb-head{display:grid;gap:2px;padding:2px 2px 4px;border-bottom:1px solid #d9a40044;margin-bottom:2px}.sb-head b{font:900 15px/1.1 system-ui,sans-serif;color:#ffd24a;letter-spacing:.02em;text-transform:uppercase}.sb-head span{font:500 11.5px/1.3 system-ui,sans-serif;color:#c9b27a}
+.navbar .nb.shr{background:#1877f2;border:1px solid #4a9bff;color:#fff;box-shadow:0 0 12px #1877f266}
+.shrpop{position:fixed;z-index:9999;top:96px;right:16px;width:230px;background:#0b0d10;border:1px solid #1877f2;border-radius:8px;padding:10px;display:grid;gap:4px;box-shadow:0 10px 30px #000c,0 0 20px #1877f244;font-family:system-ui,sans-serif}
+.shrpop[hidden]{display:none}.shrpop b{color:#fff;font-size:13px;padding:2px 4px 6px}.shrpop a{color:#e9edf1;text-decoration:none;padding:8px 10px;border-radius:5px;font-size:14px;background:#141920}.shrpop a:hover{background:#1877f2}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -740,9 +743,11 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb" data-go="screen">Screen</button>
     <a class="nb pmnb" href="/tech/">Power Map</a>
     <button class="nb sub" data-go="submit" data-lock="submit">Send a Tip</button>
+    <button class="nb shr" id="shrBtn" aria-haspopup="true">↗ Share</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
   </nav>
+<div class="shrpop" id="shrPop" hidden><b>Share the Seattle Sinner</b><a data-sh="fb" href="#">Facebook</a><a data-sh="x" href="#">X / Twitter</a><a data-sh="sms" href="#">Text message</a><a data-sh="mail" href="#">Email</a><a data-sh="copy" href="#">Copy link</a></div>
 
   <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
   <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="Seattle Sinner is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>Seattle Sinner is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
@@ -1464,3 +1469,13 @@ const tick=()=>{const d=new Date();$('twTime').textContent=d.toLocaleTimeString(
 const W={0:['☀','Clear'],1:['🌤','Mostly clear'],2:['⛅','Partly cloudy'],3:['☁','Overcast'],45:['🌫','Fog'],48:['🌫','Fog'],51:['🌦','Drizzle'],53:['🌦','Drizzle'],55:['🌧','Drizzle'],56:['🌧','Freezing drizzle'],57:['🌧','Freezing drizzle'],61:['🌧','Light rain'],63:['🌧','Rain'],65:['🌧','Heavy rain'],66:['🌧','Freezing rain'],67:['🌧','Freezing rain'],71:['🌨','Light snow'],73:['🌨','Snow'],75:['❄','Heavy snow'],77:['🌨','Snow'],80:['🌦','Showers'],81:['🌧','Showers'],82:['⛈','Downpours'],85:['🌨','Snow showers'],86:['🌨','Snow showers'],95:['⛈','Thunderstorms'],96:['⛈','Thunderstorms'],99:['⛈','Thunderstorms']};
 const wx=()=>fetch('https://api.open-meteo.com/v1/forecast?latitude=47.6062&longitude=-122.3321&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&forecast_days=1').then(r=>r.json()).then(j=>{const c=j.current||{},k=W[c.weather_code]||['☁','Seattle'];let i=k[0];if(!c.is_day&&c.weather_code<=1)i='🌙';$('twIcon').textContent=i;$('twTemp').textContent=Math.round(c.temperature_2m)+'°F';const dd=j.daily||{};$('twCond').textContent=k[1]+(dd.temperature_2m_max?` · ${Math.round(dd.temperature_2m_max[0])}°/${Math.round(dd.temperature_2m_min[0])}°`:'')}).catch(()=>{});wx();setInterval(wx,900000)})();</script>
 <script>(()=>{const go=()=>document.querySelectorAll('img[data-cam]').forEach(i=>{i.src=i.dataset.cam+'?t='+Math.floor(Date.now()/60000)});go();setInterval(go,60000)})();</script>
+<script>(()=>{const U='https://seattlesinner.com/',T='Seattle Sinner: bars, clubs, local music and the stories nobody else will run',b=document.getElementById('shrBtn'),p=document.getElementById('shrPop');if(!b||!p)return;
+b.addEventListener('click',async e=>{e.stopPropagation();if(navigator.share&&matchMedia('(pointer:coarse)').matches){try{await navigator.share({title:'Seattle Sinner',text:T,url:U});return}catch(_){}}const r=b.getBoundingClientRect();p.style.top=(r.bottom+8)+'px';p.style.right=Math.max(16,innerWidth-r.right)+'px';p.hidden=!p.hidden});
+document.addEventListener('click',e=>{if(!p.hidden&&!p.contains(e.target)&&e.target!==b)p.hidden=true});
+p.addEventListener('click',e=>{const a=e.target.closest('[data-sh]');if(!a)return;e.preventDefault();const k=a.dataset.sh,u=encodeURIComponent(U),t=encodeURIComponent(T);
+ if(k==='fb')window.open('https://www.facebook.com/sharer/sharer.php?u='+u,'fbshare','width=640,height=560');
+ else if(k==='x')window.open('https://twitter.com/intent/tweet?url='+u+'&text='+t,'xshare','width=640,height=520');
+ else if(k==='sms')location.href='sms:?&body='+t+'%20'+u;
+ else if(k==='mail')location.href='mailto:?subject='+encodeURIComponent('Check out the Seattle Sinner')+'&body='+t+'%0A'+u;
+ else if(k==='copy'){navigator.clipboard&&navigator.clipboard.writeText(U).then(()=>{a.textContent='Link copied ✓';setTimeout(()=>a.textContent='Copy link',1800)})}
+ if(k!=='copy')p.hidden=true})})();</script>
