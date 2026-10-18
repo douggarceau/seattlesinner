@@ -122,6 +122,19 @@ button{font:inherit;color:inherit}
 .nb.nsl{background:#e3170a;border-color:#ff3a2a;color:#fff;animation:nslBlink 1s steps(2,jump-none) infinite;box-shadow:0 0 14px #e3170a}
 @keyframes nslBlink{0%{background:#e3170a;box-shadow:0 0 16px #ff2b1a}50%{background:#5a0500;box-shadow:0 0 2px #e3170a}100%{background:#e3170a;box-shadow:0 0 16px #ff2b1a}}
 @media (prefers-reduced-motion:reduce){.nb.nsl{animation:none}}
+/* subtle motion pack */
+.sgrid .sc.styled{animation:scFloat 7s ease-in-out infinite}
+.sgrid .sc.styled:nth-child(2n){animation-delay:-2.3s}.sgrid .sc.styled:nth-child(3n){animation-delay:-4.6s}
+@keyframes scFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.cimg{overflow:hidden}.cimg img{animation:kenburns 18s ease-in-out infinite alternate;transform-origin:50% 30%}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.045)}}
+.subbox{animation:sbBreathe 5s ease-in-out infinite}
+@keyframes sbBreathe{0%,100%{box-shadow:0 0 6px #d9a40033}50%{box-shadow:0 0 20px #d9a40088}}
+.lbl b{background:linear-gradient(90deg,#fff 0%,#fff 40%,#ffd21a 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:lblShine 6s linear infinite}
+@keyframes lblShine{from{background-position:100% 0}to{background-position:-150% 0}}
+.bwr,.vnr,.vrow{transition:transform .18s ease,background .18s ease}.bwr:hover,.vnr:hover,.vrow:hover{transform:translateX(4px)}
+.bwl .bwr:nth-child(odd) .gtag{animation:tagPulse 3.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.sgrid .sc.styled,.cimg img,.subbox,.lbl b,.bwl .bwr .gtag{animation:none}.lbl b{-webkit-text-fill-color:currentColor}}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
