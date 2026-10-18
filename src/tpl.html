@@ -177,13 +177,14 @@ button{font:inherit;color:inherit}
 .tw b{display:block;color:#f3f5f7;font-weight:800}.tw span{display:block;color:#8fb3d9;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .tw-t b{font-size:24px;letter-spacing:.02em;text-shadow:0 0 8px #1e90ff88}.tw-w{display:flex;align-items:center;gap:8px;text-align:right}.tw-w b{font-size:20px}.tw-i{font-size:26px!important;animation:twI 4s ease-in-out infinite}
 @keyframes twI{50%{transform:translateY(-2px)}}
-.cams{justify-self:end;width:min(100%,340px);margin:0 0 8px auto;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cams{justify-self:end;width:min(100%,340px);margin:0 0 14px auto;display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .cam{position:relative;display:block;border:1px solid #2a3340;border-radius:5px;overflow:hidden;background:#000;aspect-ratio:4/3}
 .cam img{color:transparent;font-size:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.1) contrast(1.05)}
 .cam span{position:absolute;left:0;right:0;bottom:0;padding:3px 6px;font:800 10px/1.2 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,#000c);display:flex;align-items:center;gap:5px}
 .cam span i{width:7px;height:7px;border-radius:50%;background:#ff2a14;box-shadow:0 0 6px #ff2a14;animation:crLive 1s steps(2,jump-none) infinite}
 .cam:hover{border-color:#6fc3ff}
 @media(min-width:861px){.mast>div:last-child{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between}}
+.sb-head{display:grid;gap:2px;padding:2px 2px 4px;border-bottom:1px solid #d9a40044;margin-bottom:2px}.sb-head b{font:900 15px/1.1 system-ui,sans-serif;color:#ffd24a;letter-spacing:.02em;text-transform:uppercase}.sb-head span{font:500 11.5px/1.3 system-ui,sans-serif;color:#c9b27a}
 .subbox{justify-self:end;width:min(100%,340px);margin-left:auto;background:#070a0e;border:1px solid var(--gold);border-radius:6px;padding:8px;display:grid;gap:6px;box-shadow:0 0 10px #d9a40033}
 .sb-tabs{display:flex;gap:10px;justify-content:flex-end}
 .sb-tabs button{all:unset;cursor:pointer;font:800 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
@@ -710,6 +711,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
       <input class="hsearch" id="q" type="search" hidden>
       <div class="cams"><a class="cam" href="https://wsdot.com/travel/real-time/map/" target="_blank" rel="noopener" title="Live WSDOT camera: I-5 at NE 45th St"><img data-cam="https://images.wsdot.wa.gov/nw/005vc16939.jpg" alt="Live traffic camera, I-5 at NE 45th Street" loading="lazy"><span><i></i>I-5 · NE 45th</span></a><a class="cam" href="https://wsdot.com/travel/real-time/map/" target="_blank" rel="noopener" title="Live WSDOT camera: SR 520 bridge"><img data-cam="https://images.wsdot.wa.gov/nw/520vc00197.jpg" alt="Live traffic camera, SR 520 bridge" loading="lazy"><span><i></i>520 Bridge</span></a></div>
       <form class="subbox" id="subBox" novalidate>
+        <div class="sb-head"><b>Join the Seattle Sinner</b><span>Free account · full stories, comments &amp; tips</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
         <div class="sb-in" id="sbIn" hidden><b>Signed in as <span id="sbWho"></span></b><button type="button" id="sbOut">Log out</button></div>
         <div class="sb-f" id="sbF">
