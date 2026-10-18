@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T01:25:00-07:00",
+"asof": "2026-10-18T05:22:31-07:00",
 "items": [
 {
 "kind": "other",
@@ -218,6 +218,18 @@
 "date": "2026-10-10",
 "url": "https://spdblotter.seattle.gov/2026/10/10/man-killed-in-early-morning-ballard-collision/",
 "outlet": "SPD Blotter"
+},
+{
+"kind": "shooting",
+"headline": "Nightlife dispute ends in gunfire on 10th Ave in Pike/Pine",
+"blurb": "A dispute amid Saturday-night crowds led to shots on 10th Ave between Pike and Union, damaging a window. No injuries were reported.",
+"hood": "Capitol Hill",
+"spd": [
+"CAPITOL HILL"
+],
+"date": "2026-10-10",
+"url": "https://www.capitolhillseattle.com/2026/10/no-injuries-in-saturday-night-pike-pine-nightlife-gunfire/",
+"outlet": "Capitol Hill Seattle Blog"
 },
 {
 "kind": "courts",
