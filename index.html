@@ -1046,6 +1046,12 @@ const CAL2=(()=>{const vb=Object.fromEntries(VENUES.map(v=>[v.id,v])),bb=Object.
   VUP.forEach(u=>{if(u.kind!=='music'||!u.start_local)return;const v=vb[u.venue_id]||{};add({date:u.start_local.slice(0,10),time:fmtT(u.start_local),venue:v.name||'',hood:v.hood||v.city||'',artists:u.title,genre:gGuess(u.title+' '+(v.desc||'')),price:'',ages:'',url:u.url})});
   BEV.forEach(e=>{const d=(e.date||'').slice(0,10);if(!d||e.status==='cancelled')return;const v=vb[(e.venue_ids||[])[0]]||{};const bs=(e.band_ids||[]).map(i=>bb[i]).filter(Boolean);add({date:d,time:'',venue:v.name||e.venue_name||'',hood:v.hood||v.city||'',artists:bs.map(b=>b.name).join(', ')||e.headline,genre:gGuess(bs.map(b=>(b.genre||'')+' '+(b.genre2||[]).join(' ')).join(' ')),price:'',ages:'',url:e.url})});
   return out.sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')))})();
+/* Link quality: when a listing points at a generic roundup/aggregator page, send readers to the venue's own site instead */
+const GENERIC_URL=/songkick\.com\/metro-areas|bandsintown\.com\/c\/|jambase\.com\/concerts\/us|eventworld\.com\/seattle-wa|seattle-wa\.events|do206\.com\/[^/]+\/print|yakimaherald\.com\/news\/nation_and_world\/entertainment\/movies-to-watch|respectmyregion\.com\/best-|darkseattle\.net\/?$/i;
+const VURL=(()=>{const m={};const n=x=>(x||'').toLowerCase().replace(/^the\s+/,'').replace(/\s+(theatre|theater|ballroom|nightclub)\b/g,'').replace(/[^a-z0-9]/g,'');try{VENUES.forEach(v=>{let u=v.url;try{const z=VST[v.id];if(z&&(z.cal||z.url))u=z.cal||z.url}catch(_){}if(u)m[n(v.name)]=u})}catch(_){}const ks=Object.keys(m);
+ return x=>{const k=n(x);if(!k)return '';if(m[k])return m[k];const f=ks.find(q=>q.length>=5&&k.length>=5&&(q.startsWith(k)||k.startsWith(q)));return f?m[f]:''}})();
+function bestUrl(e){const u=e.url||'';if(u&&!GENERIC_URL.test(u))return u;const v=VURL(e.venue);return v||u}
+CAL2.forEach(e=>{e.url=bestUrl(e)});SCENE.forEach(e=>{e.url=bestUrl(e)});
 const up=CAL2.filter(e=>e.date>=todayKey);
 ['/data/cal.json','/data/sports.json'].forEach(u=>fetch(u+'?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!Array.isArray(j.events))return;
   const key=e=>e.date+'|'+(e.venue||'').toLowerCase().replace(/[^a-z0-9]/g,'').replace(/^the/,'').slice(0,10)+'|'+(e.artists||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,12);
@@ -1786,7 +1792,7 @@ let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);fill($
 const spdIntro={tag:'SPD LIVE · Seattle police reports',big:'Live<em>from the SPD report stream</em>',name:'Updated every few minutes',sub:'Assaults, robberies and shootings as Seattle police log them, straight from the city\'s open data.',go:'Watch the stream',theme:'spd',href:'#crime',view:'crime'};
 let sp=0,SPF=[spdIntro];fill($('lsG'),spdIntro);
 const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))&&!/simple assault|intimidation/i.test(r.nibrs_offense_code_description||'')).slice(0,20);if(!V.length)return;
- SPF=V.map(r=>{const k=CRK[cwSpdKind(r)]||CRK.other;const cap=t=>(t||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());return {tag:'SPD LIVE · '+k[1],big:esc(r.nibrs_offense_code_description||k[1])+'<em>'+esc(cap(r.neighborhood||r.precinct||'Seattle'))+'</em>',name:cap(r.block_address||''),when:(typeof cwLocal==='function'?cwLocal(r.offense_date):''),go:'See it on the map of reports',theme:'spd',href:'#crime',rep:r.report_number,hood:r.neighborhood||'',k:k[0]}})}catch(e){}};
+ SPF=V.map(r=>{const k=CRK[cwSpdKind(r)]||CRK.other;const cap=t=>(t||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());return {tag:'SPD LIVE · '+k[1],big:esc(r.nibrs_offense_code_description||k[1])+'<em>'+esc(cap(r.neighborhood||r.precinct||'Seattle'))+'</em>',name:cap(r.block_address||''),when:(typeof cwLocal==='function'?cwLocal(r.offense_date):''),go:'See it on Crime Watch',theme:'spd',href:'#crime',rep:r.report_number,hood:r.neighborhood||'',k:k[0]}})}catch(e){}};
 setInterval(spdPull,15000);setTimeout(spdPull,4000);
 let u=0;fill($('lsF'),MUF[0]);
 let c=0;fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
