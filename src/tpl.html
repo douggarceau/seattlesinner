@@ -644,6 +644,26 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
 .foot a{color:#ffb300}
 
 .motto{margin:0;font:italic 700 clamp(18px,2.4vw,26px)/1.2 var(--display);letter-spacing:.02em;color:#ffb300;text-shadow:0 0 14px rgba(255,120,0,.55)}
+
+/* Crime Watch */
+.crw h2.room{color:#ff4a3a;text-shadow:0 0 10px #ff2a14,0 0 30px #ff2a1488;animation:crT 1.8s ease-in-out infinite}
+@keyframes crT{50%{text-shadow:0 0 4px #ff2a14,0 0 12px #ff2a1444}}
+.crw .live{display:inline-flex;align-items:center;gap:6px;font:800 11px/1 system-ui,sans-serif;letter-spacing:.12em;color:#fff;background:#c1121f;padding:4px 8px;border-radius:3px;animation:crLive 1s steps(2,jump-none) infinite}
+@keyframes crLive{50%{background:#5a0a10}}
+.crgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px}
+@media(max-width:900px){.crgrid{grid-template-columns:minmax(0,1fr)}}
+.crrow{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;padding:10px 14px;border-top:1px solid var(--line);color:inherit;text-decoration:none}
+.crrow:first-child{border-top:0}.crrow:hover{background:#1a0b0d}
+.crrow b{display:block;color:#f3f5f7}.crrow span.m{display:block;color:#9aa4ae;font-size:13px;margin-top:2px}
+.crrow p{margin:4px 0 0;color:#c9d1d9;font-size:14px}
+.crtag{font:800 10px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 6px;border-radius:3px;background:color-mix(in srgb,var(--k) 25%,#000);color:var(--k);border:1px solid var(--k);height:fit-content;white-space:nowrap}
+.crrow.new{animation:crNew 1.2s ease-out 3}
+@keyframes crNew{0%{background:#4a0b10}100%{background:transparent}}
+.crw .box{border-top-color:#ff2a14}
+.crstat{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.crstat div{background:#120709;border:1px solid #3a1418;border-radius:6px;padding:8px 12px;font-size:13px;color:#c9d1d9}
+.crstat div b{display:block;font-size:22px;color:#ff4a3a}
+.crnote{color:#7d8790;font-size:12px;padding:10px 14px;border-top:1px solid var(--line)}
 </style>
 
 <div class="aurora" aria-hidden="true"></div><div class="sparks" id="sparks" aria-hidden="true"></div><div class="ovl-scan" aria-hidden="true"></div><div class="ovl-vig" aria-hidden="true"></div>
@@ -678,6 +698,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
+    <button class="nb" data-go="crime">Crime Watch</button>
     <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
     <button class="nb" data-go="cal">Music calendar</button>
     <button class="nb" data-go="scene">Scene</button>
@@ -784,7 +805,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
   <h4>${esc(e.title)}</h4><span class="when">${longDay(e.date)}${e.end&&e.end!==e.date?' – '+shortDay(e.end):''}${e.time?' · '+esc(e.time):''}</span>
   <span class="where">${esc(e.venue)}${e.hood?' · '+esc(e.hood):''}${e.price?' · '+esc(e.price):''}</span><p>${esc(e.blurb)}</p></a>`}
 
-function vFront(){
+function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES;
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
   return `${vCover(CUR)}<div class="front">
@@ -804,6 +825,7 @@ function vFront(){
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="cal">Full calendar →</button></div></section>
       <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI wire</b><span class="techsrc">via AI Signals</span></div><div class="bwl">${((TECH&&TECH.news)||[]).slice(0,6).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="tech">Tech &amp; AI room →</button></div></section>
+      <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
       <section class="box" style="--c:#39ff14"><div class="bh"><b>Scene picks</b><span>not concerts</span></div><div style="display:grid;gap:10px;padding:12px">${upScene.slice(0,3).map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div></section>
       <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,2).map(bnRow).join('')}${upEv(BEV).slice(0,2).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
       ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
@@ -958,6 +980,38 @@ function addDays(k,n){const d=pd(k);d.setDate(d.getDate()+n);return d.getFullYea
 function brief(b){const k=BK[b.kind]||BK.other;return `<a class="bw" href="${esc(b.url)}" target="_blank" rel="noopener" style="--gc:${k[0]}">
   <span class="kick" style="--tc:${k[0]}"><span class="dot"></span>${k[1]}<time>${shortDay(b.date)}</time></span>
   <b>${esc(b.headline)}</b><span class="bwv">${esc(b.venue)}${b.hood?' · '+esc(b.hood):''}</span><p>${esc(b.blurb)}</p><span class="bws">${esc(b.outlet)} →</span></a>`}
+
+const CRK={homicide:['#ff1f3d','Homicide'],shooting:['#ff2a14','Shooting'],stabbing:['#ff5a1f','Stabbing'],assault:['#ff7a1a','Assault'],robbery:['#ffb300','Robbery'],burglary:['#d9a400','Burglary'],theft:['#c9a227','Theft'],arrest:['#1e90ff','Arrest'],courts:['#8fb3d9','Courts'],police:['#6fc3ff','Police'],crash:['#c9d1d9','Crash'],fire:['#ff6a00','Fire'],other:['#9aa4ae','Crime']};
+const CW={news:[],asof:'',spd:[],fire:[],t:0,seen:new Set()};
+const cwAgo=s=>{if(!s)return'';const d=new Date(s.length<20?s+(s.length>10?'':'T12:00'):s);const m=(Date.now()-d)/6e4;return m<60?Math.max(1,Math.round(m))+'m ago':m<1440?Math.round(m/60)+'h ago':Math.round(m/1440)+'d ago'};
+const cwLocal=s=>{try{const d=new Date(s);return d.toLocaleString('en-US',{weekday:'short',hour:'numeric',minute:'2-digit'})}catch(e){return s}};
+function cwSpdKind(r){const s=(r.nibrs_offense_code_description||'')+' '+(r.offense_sub_category||'');if(r.shooting_type_group&&r.shooting_type_group!=='-')return'shooting';if(/homicide|murder/i.test(s))return'homicide';if(/robbery/i.test(s))return'robbery';if(/aggravated|assault|intimidation/i.test(s))return'assault';if(/burglary|breaking/i.test(s))return'burglary';if(/theft|larceny|stolen|shoplift/i.test(s))return'theft';return'other'}
+function cwNewsRow(n){const k=CRK[n.kind]||CRK.other;return `<a class="crrow" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(n.headline)}</b><span class="m">${esc(n.hood||'Seattle')} · ${shortDay(n.date)} · ${esc(n.outlet||'')}</span>${n.blurb?`<p>${esc(n.blurb)}</p>`:''}</span></a>`}
+function cwSpdRow(r){const k=CRK[cwSpdKind(r)];const id=r.report_number;const isNew=CW.t&&!CW.seen.has(id);return `<div class="crrow${isNew?' new':''}"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(r.nibrs_offense_code_description||'Report')}</b><span class="m">${esc((r.neighborhood||r.precinct||'Seattle').replace(/\b\w+/g,w=>w[0]+w.slice(1).toLowerCase()))} · ${esc((r.block_address||'').toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()))} · ${cwLocal(r.offense_date)}</span></span></div>`}
+function cwFireRow(r){const t=r.type||'';const k=/fire|explosion|smoke/i.test(t)?CRK.fire:/shot|stab|assault|violence|weapon/i.test(t)?CRK.shooting:/mvi|motor|vehicle|collision/i.test(t)?CRK.crash:['#ff7a1a','Rescue'];return `<div class="crrow"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(t)}</b><span class="m">${esc(r.address||'')} · ${cwAgo(r.datetime)}</span></span></div>`}
+async function cwLoad(force){if(!force&&Date.now()-CW.t<240000)return;const ago=h=>new Date(Date.now()-h*36e5).toLocaleString('sv-SE',{timeZone:'America/Los_Angeles'}).replace(' ','T');
+  const j=u=>fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const [n,s,f]=await Promise.all([j('/data/crime.json?'+Math.floor(Date.now()/6e5)),
+    j(`https://data.seattle.gov/resource/tazs-3rd5.json?$select=report_number,offense_date,nibrs_offense_code_description,offense_sub_category,shooting_type_group,block_address,neighborhood,precinct&$where=${encodeURIComponent(`offense_date > '${ago(96)}' AND nibrs_group_a_b='A' AND nibrs_crime_against_category in('PERSON','PROPERTY')`)}&$order=offense_date DESC&$limit=200`),
+    j(`https://data.seattle.gov/resource/kzjm-xkqj.json?$select=address,type,datetime&$where=${encodeURIComponent(`datetime > '${ago(12)}' AND type not like '%Aid Response%' AND type not like '%Medic Response%' AND type not like '%EVENT%' AND type not like '%Alarm%'`)}&$order=datetime DESC&$limit=25`)]);
+  if(n&&n.items){CW.news=n.items.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));CW.asof=n.asof||''}
+  if(Array.isArray(s)){const u=[],seen=new Set();for(const r of s){if(seen.has(r.report_number))continue;seen.add(r.report_number);u.push(r)}if(CW.t)CW.spd.forEach(r=>CW.seen.add(r.report_number));else u.forEach(r=>CW.seen.add(r.report_number));CW.spd=u.slice(0,60)}
+  if(Array.isArray(f))CW.fire=f;CW.t=Date.now();cwFill()}
+function cwFill(){const q=id=>document.getElementById(id);
+  if(q('cwNews'))q('cwNews').innerHTML=CW.news.map(cwNewsRow).join('')||'<div class="empty">Loading crime headlines…</div>';
+  if(q('cwSpd'))q('cwSpd').innerHTML=CW.spd.slice(0,40).map(cwSpdRow).join('')||'<div class="empty">Loading SPD reports…</div>';
+  if(q('cwFire'))q('cwFire').innerHTML=CW.fire.map(cwFireRow).join('')||'<div class="empty">No major 911 dispatches in the last 12 hours.</div>';
+  if(q('cwStat')&&CW.spd.length){const c=k=>CW.spd.filter(r=>cwSpdKind(r)===k).length;q('cwStat').innerHTML=`<div><b>${CW.spd.length}</b>SPD reports, last 4 days</div><div><b>${c('shooting')}</b>shooting reports</div><div><b>${c('assault')}</b>assaults</div><div><b>${c('robbery')}</b>robberies</div><div><b>${CW.fire.length}</b>fire &amp; rescue calls, 12h</div>`}
+  if(q('cwFront'))q('cwFront').innerHTML=CW.news.slice(0,3).map(n=>{const k=CRK[n.kind]||CRK.other;return `<a class="crrow" href="${esc(n.url)}" target="_blank" rel="noopener"><span class="crtag" style="--k:${k[0]}">${k[1]}</span><span><b>${esc(n.headline)}</b><span class="m">${esc(n.hood||'Seattle')} · ${shortDay(n.date)}</span></span></a>`}).join('')+CW.spd.slice(0,3).map(cwSpdRow).join('')||'<div class="empty">Loading…</div>';
+  if(q('cwUp'))q('cwUp').textContent='Updated '+new Date(CW.t).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}
+setInterval(()=>{if(document.getElementById('cwSpd')||document.getElementById('cwFront'))cwLoad(true)},300000);
+function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);
+  return `<div class="crw"><h2 class="room">Crime Watch</h2>
+  <div class="intro"><b><span class="live">● LIVE</span> Seattle only</b><p>Real crime news from Seattle police, courts and local reporters, plus the live SPD report stream and Seattle Fire 911 dispatches straight from the city's open data. Accused means accused: everyone is presumed innocent until a court says otherwise.</p></div>
+  <div class="crstat" id="cwStat"></div>
+  <div class="crgrid"><section class="box" style="--c:#ff2a14"><div class="bh"><b>Crime headlines</b><span>refreshed every 4 hours</span></div><div id="cwNews"></div></section>
+  <div class="stack"><section class="box" style="--c:#ff2a14"><div class="bh"><b><span class="live">● LIVE</span> SPD report stream</b><span id="cwUp"></span></div><div id="cwSpd" style="max-height:900px;overflow:auto"></div><div class="crnote">Seattle Police Department crime reports via data.seattle.gov, block-level, refreshed every 5 minutes. Reports post with a delay of several hours to a day.</div></section>
+  <section class="box" style="--c:#ff2a14"><div class="bh"><b><span class="live">● LIVE</span> Fire &amp; rescue 911</b><span>last 12 hours</span></div><div id="cwFire"></div><div class="crnote">Seattle Fire Department real-time 911 dispatch, medical calls left out.</div></section></div></div></div>`}
 function vBars(){
   const ks=[...new Set(BARS.map(b=>b.kind))];
   const L=BARS.filter(b=>STATE.bk==='all'||b.kind===STATE.bk);
@@ -1148,7 +1202,7 @@ document.addEventListener('click',async e=>{
 
 function render(){
   const v=STATE.view;
-  $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='ink'?vInk():v==='tech'?vTech():v==='screen'?vScreen():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
+  $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='ink'?vInk():v==='tech'?vTech():v==='crime'?vCrime():v==='screen'?vScreen():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
   document.querySelectorAll('#nav .nb').forEach(b=>b.toggleAttribute('aria-current',b.dataset.go===(v==='read'?STATE.prev:v))||b.setAttribute('aria-current','page'));
   document.querySelectorAll('#nav .nb').forEach(b=>{if(b.dataset.go===(v==='read'?STATE.prev:v))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
   if(v==='submit') wireSubmit();
@@ -1340,7 +1394,7 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
-(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','stories','bars','cal','scene','ink','screen','venues','bands'].includes(g)){go(g)}})();
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 </script>
 <script>
