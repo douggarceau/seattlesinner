@@ -1,14 +1,203 @@
-{"asof":"2026-10-17T22:00:00-07:00","items":[
-{"kind":"homicide","headline":"Gas station clerk shot dead near Belltown","blurb":"Officers responding to a report of an unresponsive man found a store clerk with gunshot wounds at a gas station in the 300 block of Broad Street. Homicide detectives are investigating.","hood":"Belltown","date":"2026-10-13","url":"https://spdblotter.seattle.gov/2026/10/13/police-investigate-fatal-shooting-near-belltown/","outlet":"SPD Blotter"},
-{"kind":"stabbing","headline":"Man stabbed in the head in botched robbery at Woodland Park","blurb":"A man was stabbed near a picnic shelter around 12:30 a.m. Monday and taken to Harborview with injuries police called not life-threatening. Police believe he knew the suspect; no arrest yet.","hood":"Phinney Ridge","date":"2026-10-13","url":"https://mynorthwest.com/crime-blotter/seattle-woodland-park-stab/4286058","outlet":"MyNorthwest"},
-{"kind":"homicide","headline":"Drive-by on 4th Ave S kills one man, wounds a woman","blurb":"Detectives are investigating an early-Sunday drive-by in the 5800 block of 4th Avenue South that killed a man and injured a woman.","hood":"Georgetown","date":"2026-10-11","url":"https://spdblotter.seattle.gov/2026/10/11/one-man-killed-one-woman-injured-in-south-seattle-shooting/","outlet":"SPD Blotter"},
-{"kind":"shooting","headline":"50 shell casings: teen arrested after Kerry Park party shooting","blurb":"Two men were wounded when gunfire broke out at a late-night street party at Kerry Park. Police arrested a juvenile on assault charges after finding a rifle in a vehicle, and collected 50 casings.","hood":"Queen Anne","date":"2026-10-10","url":"https://komonews.com/news/local/queen-anne-crime-kerry-park-shooting-leaves-2-injured-early-saturday-harborview-medical-center-treating-gunfire-injury-shell-casings-rifle-crime-in-seattle","outlet":"KOMO"},
-{"kind":"crash","headline":"Pedestrian killed on 15th Ave NW in pre-dawn Ballard crash","blurb":"A driver called 911 to say he had hit a pedestrian; medics found the person dead in the northbound lanes of 15th Avenue Northwest.","hood":"Ballard","date":"2026-10-10","url":"https://spdblotter.seattle.gov/2026/10/10/man-killed-in-early-morning-ballard-collision/","outlet":"SPD Blotter"},
-{"kind":"arrest","headline":"Trafficking unit sweeps Aurora, makes arrests","blurb":"More than 20 SPD personnel from the Human Trafficking Unit and Community Response Group targeted prostitution solicitation along Aurora Avenue North on Oct. 6.","hood":"Aurora","date":"2026-10-08","url":"https://spdblotter.seattle.gov/2026/10/08/seattle-police-human-trafficking-unit-make-arrests-along-aurora-corridor/","outlet":"SPD Blotter"},
-{"kind":"shooting","headline":"Shots fired in Aurora gas station lot, man hurt","blurb":"Detectives are investigating a shooting in a gas station parking lot in the 10500 block of Aurora Avenue North; a 44-year-old man had head injuries possibly from broken glass.","hood":"Aurora","date":"2026-10-06","url":"https://spdblotter.seattle.gov/2026/10/06/detective-investigate-shooting-in-north-seattle/","outlet":"SPD Blotter"},
-{"kind":"crash","headline":"Hit-and-run leaves cyclist critical; police hunt silver Camry","blurb":"Detectives say the suspect vehicle is a silver 2012–2014 Toyota Camry sedan. The cyclist remains in critical condition.","hood":"Seattle","date":"2026-10-05","url":"https://spdblotter.seattle.gov/2026/10/05/hit-and-run-collision-leaves-cyclist-seriously-injured/","outlet":"SPD Blotter"},
-{"kind":"robbery","headline":"Woman cut, beaten and robbed after getting into car in North Seattle","blurb":"Police say two men forced a 27-year-old woman out of a car in a parking lot, cut and struck her, took her cash and drove off. The robbery unit is investigating.","hood":"North Seattle","date":"2026-09-30","url":"https://www.kiro7.com/news/local/woman-stabbed-robbed-north-seattle-overnight/KS3RHZQBE5D5BFY34CG4BAUG54/","outlet":"KIRO 7"},
-{"kind":"fire","headline":"Box trucks torched at SoDo rental lot","blurb":"Detectives are investigating an early-morning fire that burned several rental box trucks near the 3400 block of 1st Avenue South.","hood":"SoDo","date":"2026-09-25","url":"https://spdblotter.seattle.gov/2026/09/25/detectives-investigating-sodo-truck-fire/","outlet":"SPD Blotter"},
-{"kind":"police","headline":"Independent team takes over probe of police-involved death","blurb":"At SPD's request, the Independent Force Investigative Team – King County is investigating an officer-involved death in South Seattle on Sept. 12.","hood":"South Seattle","date":"2026-09-25","url":"https://spdblotter.seattle.gov/2026/09/25/independent-force-investigative-team-king-county-ifit-kc-officer-involved-death-september-12th-2026/","outlet":"SPD Blotter"},
-{"kind":"assault","headline":"Stranger attack downtown investigated as hate crime","blurb":"A 36-year-old woman was attacked by a stranger downtown on Sept. 18 and left with permanent injuries that need surgery, police say.","hood":"Downtown","date":"2026-09-24","url":"https://spdblotter.seattle.gov/2026/09/24/violent-downtown-hate-crime-attack-leaves-woman-with-permanent-injuries/","outlet":"SPD Blotter"}
-]}
+{
+"asof": "2026-10-17T19:10:00-07:00",
+"items": [
+{
+"kind": "courts",
+"headline": "Man charged in 2024 South Park kidnapping and rape",
+"blurb": "A 58-year-old man arrested Oct. 8 was charged Oct. 13 with first-degree kidnapping with sexual motivation and second-degree rape over an alleged November 2024 attack in South Park. The case is pending.",
+"hood": "South Park",
+"date": "2026-10-15",
+"url": "https://hoodline.com/2026/10/seattle-man-charged-in-south-park-kidnapping-and-rape-case/",
+"outlet": "Hoodline"
+},
+{
+"kind": "burglary",
+"headline": "Junction smash-and-grab spree: storefronts and a bakery hit",
+"blurb": "A suspect breached a California Ave SW storefront with a masonry projectile, and a burglar shattered a bakery's front door and tried to pry open its drop-safe, the same day.",
+"hood": "Alaska Junction",
+"date": "2026-10-14",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "arrest",
+"headline": "Two held after package-theft run in North Delridge",
+"blurb": "Police detained two suspects near SW Barton St and 24th Ave SW who had taken eight packages from five addresses.",
+"hood": "North Delridge",
+"date": "2026-10-14",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "homicide",
+"headline": "Gas station clerk shot dead near Belltown",
+"blurb": "Officers responding to a report of an unresponsive man found a store clerk with gunshot wounds at a gas station in the 300 block of Broad Street. Homicide detectives are investigating.",
+"hood": "Belltown",
+"date": "2026-10-13",
+"url": "https://spdblotter.seattle.gov/2026/10/13/police-investigate-fatal-shooting-near-belltown/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "stabbing",
+"headline": "Man stabbed in the head in botched robbery at Woodland Park",
+"blurb": "A man was stabbed near a picnic shelter around 12:30 a.m. Monday and taken to Harborview with injuries police called not life-threatening. Police believe he knew the suspect; no arrest yet.",
+"hood": "Phinney Ridge",
+"date": "2026-10-13",
+"url": "https://mynorthwest.com/crime-blotter/seattle-woodland-park-stab/4286058",
+"outlet": "MyNorthwest"
+},
+{
+"kind": "burglary",
+"headline": "Alki burglar forces patio door, grabs laptops and jewelry",
+"blurb": "A residential burglar forced a patio door in the 2800 block of 48th Ave SW and stole laptops, jewelry and camera gear.",
+"hood": "Alki",
+"date": "2026-10-13",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "theft",
+"headline": "Catalytic converters sawed off three hybrids in Morgan Junction",
+"blurb": "Thieves cut converters from three parked hybrids in the 6400 block of California Ave SW.",
+"hood": "Morgan Junction",
+"date": "2026-10-13",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "robbery",
+"headline": "Masked gunman robs Roxbury convenience store",
+"blurb": "A masked man with a gun robbed a convenience store in the 1500 block of SW Roxbury St and ran off on foot.",
+"hood": "Roxhill / Westwood",
+"date": "2026-10-12",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "homicide",
+"headline": "Drive-by at 4th Ave S nightclub kills security guard, wounds woman",
+"blurb": "Shortly before 1 a.m. Sunday a driver fired into a nightclub parking lot, killing a 36-year-old security guard and wounding a 27-year-old woman. Police found the suspect's car burned less than an hour later; no arrests yet.",
+"hood": "Georgetown",
+"date": "2026-10-11",
+"url": "https://spdblotter.seattle.gov/2026/10/11/one-man-killed-one-woman-injured-in-south-seattle-shooting/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "shooting",
+"headline": "50 shell casings: teen arrested after Kerry Park party shooting",
+"blurb": "Two men were wounded when gunfire broke out at a late-night street party at Kerry Park. Police arrested a juvenile on assault charges after finding a rifle in a vehicle, and collected 50 casings.",
+"hood": "Queen Anne",
+"date": "2026-10-10",
+"url": "https://komonews.com/news/local/queen-anne-crime-kerry-park-shooting-leaves-2-injured-early-saturday-harborview-medical-center-treating-gunfire-injury-shell-casings-rifle-crime-in-seattle",
+"outlet": "KOMO"
+},
+{
+"kind": "crash",
+"headline": "Pedestrian killed on 15th Ave NW in pre-dawn Ballard crash",
+"blurb": "A driver called 911 to say he had hit a pedestrian; medics found the person dead in the northbound lanes of 15th Avenue Northwest.",
+"hood": "Ballard",
+"date": "2026-10-10",
+"url": "https://spdblotter.seattle.gov/2026/10/10/man-killed-in-early-morning-ballard-collision/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "courts",
+"headline": "Machete attack at Hing Hay Park: man charged with assault",
+"blurb": "Prosecutors charged a 44-year-old man with first- and second-degree assault over an Oct. 6 machete attack on two people in the Chinatown-International District park. Bail was set at $500,000.",
+"hood": "Chinatown / International District",
+"date": "2026-10-09",
+"url": "https://www.fox13seattle.com/news/man-charged-hing-hay-park-machete-attack",
+"outlet": "FOX 13"
+},
+{
+"kind": "arrest",
+"headline": "Trafficking unit sweeps Aurora, makes arrests",
+"blurb": "More than 20 SPD personnel from the Human Trafficking Unit and Community Response Group targeted prostitution solicitation along Aurora Avenue North on Oct. 6.",
+"hood": "Aurora",
+"date": "2026-10-08",
+"url": "https://spdblotter.seattle.gov/2026/10/08/seattle-police-human-trafficking-unit-make-arrests-along-aurora-corridor/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "robbery",
+"headline": "Cyclist robbed at knifepoint on the Delridge trail",
+"blurb": "Three people robbed a cyclist at knifepoint near the 3800 block of Delridge Way SW.",
+"hood": "North Delridge",
+"date": "2026-10-08",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "arrest",
+"headline": "State Patrol 'Most Wanted' fugitive caught in Seattle",
+"blurb": "A 39-year-old man wanted for vehicular homicide in a February head-on crash on U.S. 101 was arrested in Seattle on Oct. 5.",
+"hood": "Seattle",
+"date": "2026-10-08",
+"url": "https://www.fox13seattle.com/news/most-wanted-suspect-arrested-seattle",
+"outlet": "FOX 13"
+},
+{
+"kind": "shooting",
+"headline": "Shots fired in Aurora gas station lot, man hurt",
+"blurb": "Detectives are investigating a shooting in a gas station parking lot in the 10500 block of Aurora Avenue North; a 44-year-old man had head injuries possibly from broken glass.",
+"hood": "Aurora",
+"date": "2026-10-06",
+"url": "https://spdblotter.seattle.gov/2026/10/06/detective-investigate-shooting-in-north-seattle/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "shooting",
+"headline": "Shots fired in High Point, parked car hit",
+"blurb": "Casings were recovered and a parked sedan was damaged after gunfire in the 6500 block of 35th Ave SW. No one was reported hurt.",
+"hood": "High Point",
+"date": "2026-10-06",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "crash",
+"headline": "Hit-and-run leaves cyclist critical; police hunt silver Camry",
+"blurb": "Detectives say the suspect vehicle is a silver 2012–2014 Toyota Camry sedan. The cyclist remains in critical condition.",
+"hood": "Seattle",
+"date": "2026-10-05",
+"url": "https://spdblotter.seattle.gov/2026/10/05/hit-and-run-collision-leaves-cyclist-seriously-injured/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "robbery",
+"headline": "Woman cut, beaten and robbed after getting into car in North Seattle",
+"blurb": "Police say two men forced a 27-year-old woman out of a car in a parking lot, cut and struck her, took her cash and drove off. The robbery unit is investigating.",
+"hood": "North Seattle",
+"date": "2026-09-30",
+"url": "https://www.kiro7.com/news/local/woman-stabbed-robbed-north-seattle-overnight/KS3RHZQBE5D5BFY34CG4BAUG54/",
+"outlet": "KIRO 7"
+},
+{
+"kind": "fire",
+"headline": "Box trucks torched at SoDo rental lot",
+"blurb": "Detectives are investigating an early-morning fire that burned several rental box trucks near the 3400 block of 1st Avenue South.",
+"hood": "SoDo",
+"date": "2026-09-25",
+"url": "https://spdblotter.seattle.gov/2026/09/25/detectives-investigating-sodo-truck-fire/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "police",
+"headline": "Independent team takes over probe of police-involved death",
+"blurb": "At SPD's request, the Independent Force Investigative Team – King County is investigating an officer-involved death in South Seattle on Sept. 12.",
+"hood": "South Seattle",
+"date": "2026-09-25",
+"url": "https://spdblotter.seattle.gov/2026/09/25/independent-force-investigative-team-king-county-ifit-kc-officer-involved-death-september-12th-2026/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "assault",
+"headline": "Stranger attack downtown investigated as hate crime",
+"blurb": "A 36-year-old woman was attacked by a stranger downtown on Sept. 18 and left with permanent injuries that need surgery, police say.",
+"hood": "Downtown",
+"date": "2026-09-24",
+"url": "https://spdblotter.seattle.gov/2026/09/24/violent-downtown-hate-crime-attack-leaves-woman-with-permanent-injuries/",
+"outlet": "SPD Blotter"
+}
+]
+}
