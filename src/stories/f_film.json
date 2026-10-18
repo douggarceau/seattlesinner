@@ -166,8 +166,9 @@
   }
  ],
  "trailer": {
-  "yt": "HvW_N5p1q44",
-  "label": "Official trailer",
+  "src": "vid/you-can-see-everything-teaser.mp4",
+  "poster": "img/you-can-see-everything.jpg",
+  "label": "Official teaser",
   "credit": "A24"
  }
 }
