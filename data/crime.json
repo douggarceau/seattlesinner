@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-17T21:20:32-07:00",
+"asof": "2026-10-18T01:25:00-07:00",
 "items": [
 {
 "kind": "other",
@@ -26,9 +26,21 @@
 "outlet": "MyNorthwest"
 },
 {
+"kind": "shooting",
+"headline": "Shootout near Garfield sends bullet into 7th-floor apartment hallway",
+"blurb": "Gunfire broke out Friday night near 23rd Ave and E Jefferson, across from the Garfield Teen Life Center, and a bullet was later found in a seventh-floor hallway of a nearby apartment building. No injuries were reported; police closed the intersection to investigate.",
+"hood": "Central District",
+"spd": [
+"CENTRAL AREA/SQUIRE PARK"
+],
+"date": "2026-10-16",
+"url": "https://www.capitolhillseattle.com/2026/10/no-injuries-reported-after-shootout-sends-bullet-into-7th-floor-of-23rd-ave-apartment/",
+"outlet": "Capitol Hill Seattle Blog"
+},
+{
 "kind": "courts",
 "headline": "Man charged in 2024 South Park kidnapping and rape",
-"blurb": "A 58-year-old man arrested Oct. 8 was charged Oct. 13 with first-degree kidnapping with sexual motivation and second-degree rape over an alleged November 2024 attack in South Park. The case is pending.",
+"blurb": "A 58-year-old man arrested Oct. 8 was charged Oct. 13 with first-degree kidnapping with sexual motivation and second-degree rape over an alleged November 2024 attack in South Park. Previously convicted in Capitol Hill fake-taxi assaults, he could face life without parole if convicted, CHS reports.",
 "hood": "South Park",
 "spd": [
 "SOUTH PARK"
