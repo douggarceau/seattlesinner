@@ -782,7 +782,7 @@ const TECH=/*TECH_START*//*TECHDATA*/{}/*TECH_END*/;
 const BARS=/*BARS*/[];
 
 const TOPIC={music:['#1e90ff','Music'],nightlife:['#d9a400','Nightlife'],politics:['#e3170a','City hall'],national:['#e3170a','Politics'],surveillance:['#e3170a','Surveillance'],tech:['#8fb3d9','Tech'],housing:['#d9a400','Rent & Real Estate'],weird:['#39ff14','Weird Seattle'],culture:['#39ff14','Culture'],transit:['#8fb3d9','Transit'],streets:['#e3170a','The Streets'],ink:['#d9a400','Ink & Steel'],screen:['#ff7a1a','The Screen']};
-const GENRE={'live':'#ff7a1a','hip-hop':'#d9a400','r&b':'#c08a3e','jazz':'#3f6db3','electronic':'#1e90ff','latin':'#e3170a','country':'#a8742f','folk':'#7fa38a','metal':'#9aa4ad','punk':'#ff3a2a','indie':'#8fb3d9','rock':'#e0e6ec','experimental':'#39ff14','world':'#2fa39a','pop':'#4a9eff','classical':'#c9d1d9','goth':'#6f8aa8','other':'#6f8aa8'};
+const GENRE={'sports':'#00e0a0','live':'#ff7a1a','hip-hop':'#d9a400','r&b':'#c08a3e','jazz':'#3f6db3','electronic':'#1e90ff','latin':'#e3170a','country':'#a8742f','folk':'#7fa38a','metal':'#9aa4ad','punk':'#ff3a2a','indie':'#8fb3d9','rock':'#e0e6ec','experimental':'#39ff14','world':'#2fa39a','pop':'#4a9eff','classical':'#c9d1d9','goth':'#6f8aa8','other':'#6f8aa8'};
 const BK={news:['#ff2a14','Hard news'],opening:['#39ff14','Now open'],closing:['#e3170a','Last call'],club:['#1e90ff','Club & DJ'],lgbtq:['#d9a400','Queer nightlife'],policy:['#8fb3d9','City hall'],trend:['#c9d1d9','Trend'],award:['#d9a400','Best of'],safety:['#ff3a2a','Safety'],music:['#4a9eff','Local music'],scene:['#39ff14','Alt scene'],other:['#8b949c','Wire']};
 const KIND={halloween:'#e3170a',drag:'#1e90ff',burlesque:'#d9a400',goth:'#6f8aa8',market:'#39ff14',art:'#8fb3d9',film:'#3f6db3',comedy:'#d9a400',tattoo:'#e3170a',other:'#8b949c'};
 const $=s=>document.querySelector(s);
@@ -801,10 +801,10 @@ const CAL2=(()=>{const vb=Object.fromEntries(VENUES.map(v=>[v.id,v])),bb=Object.
   BEV.forEach(e=>{const d=(e.date||'').slice(0,10);if(!d||e.status==='cancelled')return;const v=vb[(e.venue_ids||[])[0]]||{};const bs=(e.band_ids||[]).map(i=>bb[i]).filter(Boolean);add({date:d,time:'',venue:v.name||e.venue_name||'',hood:v.hood||v.city||'',artists:bs.map(b=>b.name).join(', ')||e.headline,genre:gGuess(bs.map(b=>(b.genre||'')+' '+(b.genre2||[]).join(' ')).join(' ')),price:'',ages:'',url:e.url})});
   return out.sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')))})();
 const up=CAL2.filter(e=>e.date>=todayKey);
-fetch('/data/cal.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!Array.isArray(j.events))return;
+['/data/cal.json','/data/sports.json'].forEach(u=>fetch(u+'?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!Array.isArray(j.events))return;
   const key=e=>e.date+'|'+(e.venue||'').toLowerCase().replace(/[^a-z0-9]/g,'').replace(/^the/,'').slice(0,10)+'|'+(e.artists||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,12);
   const seen=new Set(CAL2.map(key));let n=0;for(const e of j.events){if(!e.date||!e.artists||e.date<todayKey)continue;const k=key(e);if(seen.has(k))continue;seen.add(k);const x={date:e.date,time:e.time||'',venue:e.venue||'',hood:e.hood||'',artists:e.artists,genre:GENRE[e.genre]?e.genre:'other',price:e.price||'',ages:e.ages||'',url:e.url||''};CAL2.push(x);up.push(x);n++}
-  if(!n)return;const so=(a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||''));CAL2.sort(so);up.sort(so);if(['cal','front'].includes(STATE.view)&&!document.activeElement.matches('input,select,textarea'))render()}).catch(()=>{});
+  if(!n)return;const so=(a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||''));CAL2.sort(so);up.sort(so);if(['cal','front'].includes(STATE.view)&&!document.activeElement.matches('input,select,textarea'))render()}).catch(()=>{}));
 const upScene=SCENE.filter(e=>(e.end||e.date)>=todayKey);
 const tc=t=>(TOPIC[t]||['#8fb3d9',t])[0], tl=t=>(TOPIC[t]||['',t])[1];
 
