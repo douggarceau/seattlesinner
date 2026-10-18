@@ -56,6 +56,10 @@
 .crstat div{background:#120709;border:1px solid #3a1418;border-radius:6px;padding:8px 12px;font-size:13px;color:#c9d1d9}
 .crstat div b{display:block;font-size:22px;color:#ff4a3a}
 .crnote{color:#7d8790;font-size:12px;padding:10px 14px;border-top:1px solid var(--line)}
+
+/* tablet/phone masthead: cams + join box share the row instead of hugging the right edge */
+@media (max-width:900px){.mast{gap:14px}.mast>div:last-child{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start}.mast .cams,.mast .subbox{width:100%;max-width:none;margin:0;justify-self:stretch}}
+@media (max-width:600px){.mast>div:last-child{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -1439,21 +1443,30 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   }
   async function init(){
     if(!SB_URL||!SB_KEY){msg('Sign-ups open soon.','');$('sbGo').disabled=true;return}
-    try{const m=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');sb=m.createClient(SB_URL,SB_KEY);wireData(sb);
+    try{let m=null;for(const u of ['https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm','https://esm.sh/@supabase/supabase-js@2']){try{m=await import(u);break}catch(_){}}
+      if(!m)throw new Error('lib');sb=m.createClient(SB_URL,SB_KEY);wireData(sb);
       const {data}=await sb.auth.getSession();show(data.session&&data.session.user);
-      sb.auth.onAuthStateChange((_e,s)=>show(s&&s.user));}catch(e){msg('Sign-up is down for a minute. Try again soon.','err')}
+      sb.auth.onAuthStateChange((_e,s)=>show(s&&s.user));}catch(e){sb=null}
   }
-  $('subBox').onsubmit=async e=>{e.preventDefault();if(!sb)return;
+  /* Never lose a sign-up: if Supabase Auth is busy (email rate limit) or the library can't load, keep the email on the list. */
+  const H={apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json'};
+  const keep=(email,username,why)=>fetch(SB_URL+'/rest/v1/ideas',{method:'POST',headers:{...H,Prefer:'return=minimal'},body:JSON.stringify({kind:'signup',text:'Sign-up waiting: '+why,email,name:username||null})}).then(r=>r.ok).catch(()=>false);
+  const busy=m=>/rate limit|too many|not authori[sz]ed|sending|smtp|confirmation email|over_email|429|5\d\d|fetch|network/i.test(m||'');
+  async function restUp(email,password,username){const r=await fetch(SB_URL+'/auth/v1/signup',{method:'POST',headers:H,body:JSON.stringify({email,password,data:{username}})});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.msg||j.error_description||j.message||('HTTP '+r.status));return j}
+  $('subBox').onsubmit=async e=>{e.preventDefault();
     const email=$('sbEmail').value.trim(),password=$('sbPass').value,username=$('sbUser').value.trim();
     if(!/^\S+@\S+\.\S+$/.test(email))return msg('Enter a real email.','err');
     if(password.length<8)return msg('Password needs 8+ characters.','err');
     if(mode==='up'&&!/^[A-Za-z0-9_.-]{3,32}$/.test(username))return msg('Username: 3–32 letters, numbers, _ . -','err');
     $('sbGo').disabled=true;msg('Working…');
     try{
-      if(mode==='up'){const {data,error}=await sb.auth.signUp({email,password,options:{data:{username},emailRedirectTo:location.origin+'/'}});if(error)throw error;
-        msg(data.session?'You\'re in. Welcome to the Sinner.':'Check your email to confirm, then log in.','ok')}
-      else{const {error}=await sb.auth.signInWithPassword({email,password});if(error)throw error;msg('')}
-    }catch(err){msg(err.message||'Something went wrong.','err')}finally{$('sbGo').disabled=false}
+      if(mode==='up'){let data;if(sb){const r=await sb.auth.signUp({email,password,options:{data:{username},emailRedirectTo:location.origin+'/'}});if(r.error)throw r.error;data=r.data}else data=await restUp(email,password,username);
+        msg(data.session||data.access_token?'You\'re in. Welcome to the Sinner.':'Check your email to confirm, then log in.','ok')}
+      else{if(!sb)throw new Error('Log-in is reconnecting. Refresh the page in a moment.');const {error}=await sb.auth.signInWithPassword({email,password});if(error)throw error;msg('')}
+    }catch(err){const m=err&&err.message||'';
+      if(mode==='up'&&busy(m)&&await keep(email,username,m.slice(0,140)))msg('You\'re on the list. Sign-ups are busy right now; we\'ll email you to finish your account.','ok');
+      else msg(/already registered|already exists/i.test(m)?'That email already has an account. Tap Log in.':(m||'Something went wrong.'),'err')}
+    finally{$('sbGo').disabled=false}
   };
   $('sbOut').onclick=()=>sb&&sb.auth.signOut();
   init();
