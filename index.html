@@ -1019,7 +1019,7 @@ const CWH=["EASTLAKE - WEST", "NEW HOLLY", "NORTH DELRIDGE", "WALLINGFORD", "PIG
 const cwHL=h=>({SODO:'SoDo','SLU/CASCADE':'South Lake Union / Cascade',LAKECITY:'Lake City',SANDPOINT:'Sand Point',BITTERLAKE:'Bitter Lake','FAUNTLEROY SW':'Fauntleroy','UNIVERSITY':'University District'})[h]||h.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()).replace(/ \/ ?|\//g,' / ');
 const cwHoods=()=>CWH.map(h=>[h,cwHL(h)]).sort((a,b)=>a[1].localeCompare(b[1]));
 const cwMatch=(n)=>{if(!CW.hood)return true;const a=(n.hood||'').toLowerCase();if(!a)return false;const parts=cwHL(CW.hood).toLowerCase().split(' / ');return parts.some(p=>p.includes(a)||a.includes(p.replace(/ (north|south|east|west)$/,'').replace(/^(north|south|mid) /,'')))};
-document.addEventListener('change',e=>{if(e.target.id!=='cwHood')return;CW.hood=e.target.value;CW.t=0;CW.spd=[];CW.seen=new Set();cwFill();cwLoad(true)});
+document.addEventListener('change',e=>{if(e.target.id==='nwHood'){STATE.nh=e.target.value;render();return}if(e.target.id!=='cwHood')return;CW.hood=e.target.value;CW.t=0;CW.spd=[];CW.seen=new Set();cwFill();cwLoad(true)});
 
 const cwAgo=s=>{if(!s)return'';const d=new Date(s.length<20?s+(s.length>10?'':'T12:00'):s);const m=(Date.now()-d)/6e4;return m<60?Math.max(1,Math.round(m))+'m ago':m<1440?Math.round(m/60)+'h ago':Math.round(m/1440)+'d ago'};
 const cwLocal=s=>{try{const d=new Date(s);return d.toLocaleString('en-US',{weekday:'short',hour:'numeric',minute:'2-digit'})}catch(e){return s}};
@@ -1056,9 +1056,12 @@ function vCrime(){setTimeout(()=>{cwFill();cwLoad()},0);cwSiren();
   <section class="box" style="--c:#ff2a14"><div class="bh"><b><span class="live">● LIVE</span> Fire &amp; rescue 911</b><span>last 12 hours</span></div><div id="cwFire"></div><div class="crnote">Seattle Fire Department real-time 911 dispatch, medical calls left out.</div></section></div></div></div>`}
 function vBars(){
   const ks=[...new Set(BARS.map(b=>b.kind))];
-  const L=BARS.filter(b=>STATE.bk==='all'||b.kind===STATE.bk);
+  const hn=h=>{h=(h||'').replace(/\(.*?\)/g,'').split(/,| and | & |\//)[0].trim();if(!h||/citywide|statewide|regional|various|multiple|king county|puget sound|western washington|washington state|pacific northwest/i.test(h))return'';if(/^seattle$/i.test(h))return'';if(/^u[ -]?district$|^university district$/i.test(h))return'University District';if(/^pike place/i.test(h))return'Pike Place Market';if(/^(chinatown|international district)/i.test(h))return'Chinatown-International District';if(/^downtown (bellevue|edmonds|renton)$/i.test(h))return h.split(' ')[1];return h};
+  const hc={};BARS.forEach(b=>{const h=hn(b.hood);if(h)hc[h]=(hc[h]||0)+1});const hs=Object.keys(hc).sort((a,b)=>a.localeCompare(b));
+  const L=BARS.filter(b=>(STATE.bk==='all'||b.kind===STATE.bk)&&(!STATE.nh||hn(b.hood)===STATE.nh));
   const feat=STORIES.filter(s=>s.topic==='nightlife'||s.topic==='music');
-  return `  <div class="pads">${['all',...ks].map(k=>`<button class="pad${STATE.bk===k?' on':''}" data-bk="${k}" style="--gc:${k==='all'?'#8fb3d9':(BK[k]||BK.other)[0]}"><span>${k==='all'?'All':(BK[k]||BK.other)[1]}</span><small>${k==='all'?BARS.length:BARS.filter(b=>b.kind===k).length}</small></button>`).join('')}</div>
+  return `  <div class="crhood" style="margin:0 0 12px"><label for="nwHood">Neighborhood</label><select id="nwHood"><option value="">All neighborhoods</option>${hs.map(h=>`<option value="${esc(h)}"${STATE.nh===h?' selected':''}>${esc(h)} (${hc[h]})</option>`).join('')}</select></div>
+  <div class="pads">${['all',...ks].map(k=>`<button class="pad${STATE.bk===k?' on':''}" data-bk="${k}" style="--gc:${k==='all'?'#8fb3d9':(BK[k]||BK.other)[0]}"><span>${k==='all'?'All':(BK[k]||BK.other)[1]}</span><small>${k==='all'?BARS.length:BARS.filter(b=>b.kind===k).length}</small></button>`).join('')}</div>
   <div class="bwg">${L.map(brief).join('')||'<div class="empty">Nothing on the wire yet.</div>'}</div>`;
 }
 
