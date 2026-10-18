@@ -171,7 +171,7 @@ button{font:inherit;color:inherit}
 .bwr,.vnr,.vrow{transition:transform .18s ease,background .18s ease}.bwr:hover,.vnr:hover,.vrow:hover{transform:translateX(4px)}
 .bwl .bwr:nth-child(odd) .gtag{animation:tagPulse 3.6s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.sgrid .sc.styled,.cimg img,.subbox,.lbl b,.bwl .bwr .gtag{animation:none}.lbl b{-webkit-text-fill-color:currentColor}}
-.tw{justify-self:end;width:min(100%,340px);margin:0 0 8px auto;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:#070a0e;border:1px solid #1e90ff;border-radius:6px;padding:8px 12px;box-shadow:0 0 12px #1e90ff33;font-family:system-ui,sans-serif}
+.tw{text-decoration:none;color:inherit;cursor:pointer;transition:box-shadow .2s,border-color .2s}.tw:hover{border-color:#6fc3ff;box-shadow:0 0 20px #1e90ff88}.tw{justify-self:end;width:min(100%,340px);margin:0 0 8px auto;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:#070a0e;border:1px solid #1e90ff;border-radius:6px;padding:8px 12px;box-shadow:0 0 12px #1e90ff33;font-family:system-ui,sans-serif}
 .tw b{display:block;color:#f3f5f7;font-weight:800}.tw span{display:block;color:#8fb3d9;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .tw-t b{font-size:24px;letter-spacing:.02em;text-shadow:0 0 8px #1e90ff88}.tw-w{display:flex;align-items:center;gap:8px;text-align:right}.tw-w b{font-size:20px}.tw-i{font-size:26px!important;animation:twI 4s ease-in-out infinite}
 @keyframes twI{50%{transform:translateY(-2px)}}
@@ -697,7 +697,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <div>
       <div class="mstat" id="mstat" hidden></div>
       <input class="hsearch" id="q" type="search" hidden>
-      <div class="tw" id="tw"><div class="tw-t"><b id="twTime">--:--</b><span id="twDate">Seattle</span></div><div class="tw-w"><span class="tw-i" id="twIcon">☁</span><div><b id="twTemp">--°</b><span id="twCond">Seattle weather</span></div></div></div>
+      <a class="tw" id="tw" href="https://forecast.weather.gov/MapClick.php?lat=47.6062&amp;lon=-122.3321" target="_blank" rel="noopener" title="Seattle forecast from the National Weather Service"><div class="tw-t"><b id="twTime">--:--</b><span id="twDate">Seattle</span></div><div class="tw-w"><span class="tw-i" id="twIcon">☁</span><div><b id="twTemp">--°</b><span id="twCond">Seattle weather</span></div></div></a>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
         <div class="sb-in" id="sbIn" hidden><b>Signed in as <span id="sbWho"></span></b><button type="button" id="sbOut">Log out</button></div>
