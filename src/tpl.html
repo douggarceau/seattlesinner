@@ -627,7 +627,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
   <nav class="navbar" id="nav" aria-label="Sections">
     <button class="nb" data-go="front">Front page</button>
     <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
-    <a class="nb" href="/tech/">Tech &amp; AI</a>
+    <button class="nb" data-go="tech">Tech &amp; AI</button>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
     <button class="nb" data-go="cal">Music calendar</button>
@@ -776,6 +776,7 @@ function rogueCard(r){const k=TK[r.kind]||'#2fd3c8';return `<a class="rg" style=
 function vTech(){const T=TECH||{},B=T.bell||{};const ts=STORIES.filter(s=>['the-swarm','ai-flash','robot-price-tag','pink-slip-city'].includes(s.slug));
   return `<h2 class="room">Tech &amp; AI</h2>
   <div class="intro"><b>Wired in from AI Signals</b><p>Machines, money and the people building both. Headlines and market moves come from the AI Signals Tech &amp; AI Power Map and refresh every morning.</p></div>
+  <a class="go" href="/tech/" style="justify-self:start;text-decoration:none">Open the Tech &amp; AI Power Map →</a>
   ${B.setup?`<section class="box" style="--c:#2fd3c8"><div class="bh"><b>The opening bell · ${esc(B.day||'')}</b><span>${esc(B.asof||'')}</span></div><div class="tbell"><p class="setup">${esc(B.setup)}</p>
     <div class="snap">${(B.snap||[]).map(([k,v])=>`<div style="--k:${pcol(v)}"><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div></div>
     ${(B.movers||[]).length?`<div class="dayh">Who's moving</div>${B.movers.map(m=>`<a class="mv" style="--k:${pcol(m.move)}" href="${esc(m.url||'#')}" target="_blank" rel="noopener"><span class="pc">${esc(m.move)}</span><b>${esc(m.name)}</b><span>${esc(m.why)}</span></a>`).join('')}`:''}
@@ -1296,5 +1297,6 @@ const SFX=(function(){const SRC=/*SND*/{};let ctx=null,out=null,on=true;const BU
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','stories','bars','cal','scene','ink','screen','venues','bands'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 </script>
