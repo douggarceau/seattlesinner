@@ -122,6 +122,7 @@ button{font:inherit;color:inherit}
 .pmlink .pm-go{font:800 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;background:#1e90ff;color:#fff;padding:10px 14px;border-radius:4px;box-shadow:0 0 16px #1e90ff}
 @keyframes pmGlow{0%,100%{box-shadow:0 0 6px #1e90ff66;border-color:#1e90ff}50%{box-shadow:0 0 30px #1e90ffee,0 0 60px #6fc3ff55;border-color:#6fc3ff}}
 @media (prefers-reduced-motion:reduce){.pmlink,.pmlink .pm-tag{animation:none}}
+.nb.pmnb{background:#06224a;border-color:#1e90ff;color:#fff;animation:pmGlow 1.6s ease-in-out infinite}
 .subbox{animation:sbBreathe 5s ease-in-out infinite}
 @keyframes sbBreathe{0%,100%{box-shadow:0 0 6px #d9a40033}50%{box-shadow:0 0 20px #d9a40088}}
 .lbl b{background:linear-gradient(90deg,#fff 0%,#fff 40%,#ffd21a 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:lblShine 6s linear infinite}
@@ -635,6 +636,7 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
     <button class="nb" data-go="front">Front page</button>
     <a class="nb nsl" href="https://newspace.douggarceau.workers.dev" target="_blank" rel="noopener">Newspace</a>
     <button class="nb" data-go="tech">Tech &amp; AI</button>
+    <a class="nb pmnb" href="/tech/">Power Map</a>
     <button class="nb" data-go="stories">Stories</button>
     <button class="nb" data-go="bars">News</button>
     <button class="nb" data-go="cal">Music calendar</button>
