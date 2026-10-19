@@ -1868,6 +1868,7 @@ let MU=[];try{const BIG=/climate pledge|lumen|t-mobile|paramount|moore|showbox|n
  for(let k=0;MU.length<src.length;k++){let any=false;gs.forEach(g=>{if(by[g][k]){MU.push(by[g][k]);any=true}});if(!any)break}}catch(e){}
 const MUF=MU.slice(0,60).map(e=>({tag:"MUSIC CALENDAR · "+e.genre,bigText:e.artists,name:e.venue+(e.hood?' · '+e.hood:''),when:(typeof longDay==='function'?longDay(e.date):e.date)+(e.time?' · '+e.time:''),sub:[e.price,e.ages].filter(Boolean).join(' · '),go:"Tickets",theme:"mu",href:e.url,ext:1,k:(typeof GENRE!=='undefined'&&GENRE[e.genre])||'#4a9eff'}));
 const AIF=(()=>{try{const t=(typeof TECH!=='undefined'&&TECH)||{};return [].concat((t.rogue||[]).map(x=>({...x,_g:'AI GONE ROGUE'})),(t.machines||[]).map(x=>({...x,_g:'THE MACHINES'}))).sort(()=>Math.random()-.5).map(x=>({tag:x._g+' · '+(x.kind||''),bigText:x.title,name:x.org||'',when:x.date||'',sub:x.detail,go:'Tech & AI room',theme:'ai',href:'#tech',view:'tech'}))}catch(e){return []}})();
+const WRF=(typeof BARS!=='undefined'?BARS:[]).filter(x=>x&&x.headline&&x.url).slice(0,40).map(x=>({tag:'SEATTLE WIRE · '+(x.kind||'news'),bigText:x.headline,name:(x.venue||x.hood||'Seattle'),when:(typeof shortDay==='function'&&x.date?shortDay(x.date):(x.date||''))+(x.outlet?' · '+x.outlet:''),sub:x.blurb||'',go:'Read it',theme:'st',href:x.url,ext:1}));
 const STF=ST.map(x=>({tag:x.audio?"FEATURED STORY · 🎧 LISTEN":"FEATURED STORY",bigText:x.title,name:"The Guitar Doug Report",sub:x.dek,go:"Read it",theme:"st",href:"#",story:x.slug}));
 const $=id=>document.getElementById(id),esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');
 function fill(a,s){if(!a||!s)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').replace(/\bcwi\b/g,'').trim()+' t-'+s.theme+(s.cwi?' cwi':'');
@@ -1896,7 +1897,7 @@ function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.class
   setInterval(()=>{if(live())showC(false)},4200)}).catch(()=>{})}
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function flipTo(a,s){if(!a)return;if(still){fill(a,s);return}const b=a.parentNode;b.classList.add('flip');setTimeout(()=>{fill(a,s);b.classList.remove('flip')},460)}
-let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);fill($('lsD'),STF[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;fill($('lsH'),AIF[0]);
+let i=0,j=0;pmTeaser($('lsA'));fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);fill($('lsD'),WRF[0]||STF[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;fill($('lsH'),AIF[0]);
 const spdIntro={tag:'SPD LIVE · Seattle police reports',big:'Live<em>from the SPD report stream</em>',name:'Updated every few minutes',sub:'Assaults, robberies and shootings as Seattle police log them, straight from the city\'s open data.',go:'Watch the stream',theme:'spd',href:'#crime',view:'crime'};
 let sp=0,SPF=[spdIntro];fill($('lsG'),spdIntro);
 const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))&&!/simple assault|intimidation/i.test(r.nibrs_offense_code_description||'')).slice(0,20);if(!V.length)return;
@@ -1907,7 +1908,7 @@ let c=0;fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).
  const it=d.items.slice(0,40).map(x=>({tag:'CRIME WATCH · '+(x.kind||'police'),bigText:x.headline,name:(x.hood||'Seattle'),when:(typeof shortDay==='function'?shortDay(x.date):x.date)+(x.outlet?' · '+x.outlet:''),sub:x.blurb,go:'Read it',theme:'cw',cwi:1,href:x.url,ext:1}));
  CWX=CWX.concat(it)}).catch(()=>{});
 setInterval(()=>{i++;setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(AIF.length>1){a2=(a2+1)%AIF.length;flipTo($('lsH'),AIF[a2])}},2700)},5600);
-if(STF.length>1)setInterval(()=>{j=(j+1)%STF.length;flipTo($('lsD'),STF[j])},6000);
+if(WRF.length>1)setInterval(()=>{j=(j+1)%WRF.length;flipTo($('lsD'),WRF[j])},6000);
 })();
 </script>
 <script>
