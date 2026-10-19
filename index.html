@@ -100,6 +100,7 @@
 @media (max-width:700px){.hdrtools{grid-template-columns:minmax(0,1fr)}.hdrtools .subbox{grid-column:1;grid-row:auto}}
 .edition{font:700 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.42em;text-transform:uppercase;color:#c9a227;margin:-4px 0 12px;text-align:center}
 .mbox{margin:22px 0;padding:22px;border:1px solid #c9a227;border-radius:8px;background:linear-gradient(180deg,#1a1408,#0b0b0c);text-align:center}.mbox b{display:block;font:800 20px/1.2 var(--mono,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#c9a227;margin-bottom:8px}.mbox p{color:#d0d4d8;margin:0 0 14px}.mb-go{all:unset;cursor:pointer;display:inline-block;padding:12px 18px;border-radius:6px;background:#c9a227;color:#0b0b0c;font:800 13px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase}.mbox small{display:block;margin-top:10px;color:#8b949c}
+.xrow{margin:12px 0}.xbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:6px;background:#000;border:1px solid #444;color:#fff;text-decoration:none;font:700 12px/1 var(--mono,system-ui);letter-spacing:.08em;text-transform:uppercase}.xbtn svg{width:15px;height:15px;fill:#fff}.xbtn:hover{border-color:#fff}.approw .xhd{background:#000;border-color:#555;color:#fff}.hdrtools .approw{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.hdrtools .approw .appbtn{min-width:0;white-space:nowrap;font-size:10px;letter-spacing:.04em;padding-left:2px;padding-right:2px;justify-content:center;text-align:center;overflow:hidden}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1038,7 +1039,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       <button type="button" class="shrbig" id="shrBtn" aria-haspopup="true"><span aria-hidden="true">↗</span> Share the Report</button>
       <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:flex;align-items:center;justify-content:center;flex:1;margin:0;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
       </div>
-      <div class="approw"><button type="button" class="appbtn" id="appBtn" title="Put The Guitar Doug Report on your phone's home screen">📲 Get the App</button><a class="appbtn nsapp" href="https://newspacesocialmedia.com" target="_blank" rel="noopener" title="Get the Newspace app">📲 Newspace App</a></div>
+      <div class="approw"><a class="appbtn xhd" href="https://twitter.com/intent/tweet?text=The%20Guitar%20Doug%20Report&url=https%3A%2F%2Fseattlesinner.com%2F" target="_blank" rel="noopener">𝕏 Share on X</a><button type="button" class="appbtn" id="appBtn" title="Put The Guitar Doug Report on your phone's home screen">📲 Get the App</button><a class="appbtn nsapp" href="https://newspacesocialmedia.com" target="_blank" rel="noopener" title="Get the Newspace app">📲 Newspace App</a></div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories &amp; comments</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
@@ -1413,6 +1414,8 @@ function vStories(){
 const PAY_LINK='';
 function memberBox(){const u=window.SS_USER;const go=u?`<a class="mb-go" href="${PAY_LINK}?prefilled_email=${encodeURIComponent(u.email)}" target="_blank" rel="noopener">Become a member · $4.99/month</a>`:`<button type="button" class="mb-go" data-join="story">Sign up free, then become a member</button>`;
  return `<div class="mbox"><b>Keep reading</b><p>The national cover stories are for members of The Guitar Doug Report: $4.99 a month, cancel anytime. Seattle news stays free.</p>${go}${u?'':'<small>Already a member? Log in with the email you used.</small>'}</div>`}
+function xShare(s){const u='https://seattlesinner.com/'+(s?'?story='+s.slug:'');const t=s?s.title+' | The Guitar Doug Report':'The Guitar Doug Report';return 'https://twitter.com/intent/tweet?text='+encodeURIComponent(t)+'&url='+encodeURIComponent(u)}
+function xBtn(s){return `<a class="xbtn" href="${xShare(s)}" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>Share on X</a>`}
 function vReader(slug){
   const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
   const LOCK=!!(PAY_LINK&&typeof FEATURES!=='undefined'&&FEATURES.has(s.slug)&&!window.SS_MEMBER);
@@ -1422,11 +1425,13 @@ function vReader(slug){
     ${s.special?'<span class="spr-tag" style="display:inline-block;width:max-content;justify-self:start;margin-bottom:10px">SPECIAL REPORT</span>':''}<span class="kick" style="--tc:${tc(s.topic)}"><span class="dot"></span>${esc(tl(s.topic))}<time>${longDay(s.date)}</time></span>
     <h1>${esc(s.title)}</h1><p class="dek">${esc(s.dek)}</p>
     <div class="byl"><span>By <b>The Guitar Doug Report</b></span><span>${s.minutes} min read</span></div>
+    <div class="xrow">${xBtn(s)}</div>
     ${s.audio?`<div class="aud"><span class="aud-l">🎧 ${esc(s.audio.label||'Listen')}${s.audio.len?' · '+esc(s.audio.len):''}</span><audio controls preload="none" src="${esc(s.audio.src)}"></audio></div>`:''}
     ${s.trailer?`<figure class="trl">${s.trailer.src?`<video controls playsinline preload="none" poster="${esc(s.trailer.poster||'')}"><source src="${esc(s.trailer.src)}" type="video/mp4"></video>`:`<button type="button" class="trl-p" data-yt="${esc(s.trailer.yt)}" aria-label="Play the ${esc(s.trailer.label||'trailer')}" style="background-image:url(https://i.ytimg.com/vi/${esc(s.trailer.yt)}/hqdefault.jpg)"><span class="trl-b">▶</span></button>`}<figcaption>${esc(s.trailer.label||'Trailer')} · ${esc(s.trailer.credit||'')}</figcaption></figure>`:''}
     <div class="body">${B.map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('#T ')?(()=>{const t=JSON.parse(p.slice(3));return `<figure class="stbl">${t.title?`<figcaption>${esc(t.title)}</figcaption>`:''}<div class="stbl-s"><table><thead><tr>${t.head.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr${/total/i.test(r[0])?' class="tot"':''}>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${t.note?`<p class="stbl-n">${esc(t.note)}</p>`:''}</figure>`})():p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>
     ${LOCK?memberBox():''}
     <div class="srcs"><b>Reported from</b>${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)} · ${esc(x.title)}${x.date?' · '+esc(x.date):''}</a>`).join('')}</div>
+    <div class="xrow">${xBtn(s)}</div>
     <section class="cmts" id="cmts" data-slug="${s.slug}">${cmtsHTML(s.slug)}</section>
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
   </article>`;
