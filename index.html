@@ -1069,7 +1069,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
         </div>
       </form>
     </div>
-  <div class="lsrow" aria-label="The Guitar Doug Report features"><div class="lspot l t1"><a id="lsA"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsC"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div><div class="lspot l t4"><a id="lsG"></a></div><div class="lspot r t4"><a id="lsH"></a></div></div>
+  <div class="lsrow" aria-label="The Guitar Doug Report features"><div class="lspot l t1"><a id="lsC"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsA"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div><div class="lspot l t4"><a id="lsG"></a></div><div class="lspot r t4"><a id="lsH"></a></div></div>
 
   <main id="view"></main>
   <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="The Guitar Doug Report is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>The Guitar Doug Report is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
@@ -1906,7 +1906,7 @@ let u=0;fill($('lsF'),MUF[0]);
 let c=0;fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
  const it=d.items.slice(0,40).map(x=>({tag:'CRIME WATCH · '+(x.kind||'police'),bigText:x.headline,name:(x.hood||'Seattle'),when:(typeof shortDay==='function'?shortDay(x.date):x.date)+(x.outlet?' · '+x.outlet:''),sub:x.blurb,go:'Read it',theme:'cw',cwi:1,href:x.url,ext:1}));
  CWX=CWX.concat(it)}).catch(()=>{});
-setInterval(()=>{i++;setTimeout(()=>{if(CWX.length>1){c=(c+1)%CWX.length;flipTo($('lsC'),CWX[c])}},900);setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(AIF.length>1){a2=(a2+1)%AIF.length;flipTo($('lsH'),AIF[a2])}},2700)},5600);
+setInterval(()=>{i++;setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(AIF.length>1){a2=(a2+1)%AIF.length;flipTo($('lsH'),AIF[a2])}},2700)},5600);
 if(STF.length>1)setInterval(()=>{j=(j+1)%STF.length;flipTo($('lsD'),STF[j])},6000);
 })();
 </script>
