@@ -52,8 +52,11 @@ nav.sec a.on{font-weight:700}
 .front{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1.25fr) minmax(0,1fr);gap:0}
 .front>.col{padding:0 18px}
 .front>.col:first-child{padding-left:0}
-.front>.col:last-child{padding-right:0}
+
 .front>.col+.col{border-left:1px solid var(--rule)}
+.front>.col.rail{order:3;padding-right:0;padding-left:18px}
+.front>.col.mid{order:2}
+.front>.col:first-child{order:1}
 .story{display:block;padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--rule)}
 .story:last-child{border-bottom:0;margin-bottom:0}
 .lead h2.hl{font-size:clamp(28px,3.2vw,38px);line-height:1.08;font-weight:700}
@@ -89,7 +92,9 @@ nav.sec a.on{font-weight:700}
 .band>h2{font-family:var(--sans);font-size:14px;font-weight:800;margin:0 0 14px;display:flex;align-items:center;gap:6px}
 .band>h2 a:hover{text-decoration:underline}
 .band>h2:after{content:"›";font-weight:400;font-size:18px;line-height:1}
-.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.four{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));row-gap:22px}
+.four>a:nth-child(4n+1){padding-left:0;border-left:0}
+.four>a:nth-child(4n){padding-right:0}
 .four>a{padding:0 16px}
 .four>a:first-child{padding-left:0}
 .four>a:last-child{padding-right:0}
@@ -121,6 +126,7 @@ nav.sec a.on{font-weight:700}
 .body p{margin:0 0 22px}
 .body h2{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.25;margin:36px 0 12px;color:var(--ink)}
 .body blockquote{margin:30px 0;padding:0 0 0 18px;border-left:3px solid var(--ink);font-size:24px;line-height:1.35;font-style:italic;color:var(--ink)}
+.tb{margin:28px 0}.tb figcaption{font-family:var(--sans);font-size:13px;font-weight:800;margin-bottom:8px}.tbs{overflow-x:auto}.tb table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:13px;line-height:1.4}.tb th{text-align:left;border-bottom:2px solid var(--ink);padding:6px 8px;font-weight:700}.tb td{border-bottom:1px solid var(--rule);padding:6px 8px;vertical-align:top}
 .srcs{margin-top:34px;padding-top:12px;border-top:1px solid var(--rule-dk)}
 .srcs h4{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;margin:0 0 10px}
 .srcs ol{font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--ink2);padding-left:20px;margin:0}
@@ -136,7 +142,8 @@ footer a:hover{text-decoration:underline}
 
 @media (max-width:980px){
   .front{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
-  .front>.col.rail{grid-column:1/-1;border-left:0;padding:22px 0 0;margin-top:18px;border-top:1px solid var(--rule-dk);display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .front>.col.rail{order:2;grid-column:1/-1;border-left:0;padding:22px 0 0;margin:18px 0 22px;border-top:1px solid var(--rule-dk);border-bottom:1px solid var(--rule-dk);display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .front>.col.mid{order:3;grid-column:1/-1;padding:0;border-left:0}
   .front>.col.mid{padding-right:0}
   .four{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}
   .four>a:nth-child(3){padding-left:0;border-left:0}
@@ -178,7 +185,7 @@ footer a:hover{text-decoration:underline}
 </div>
 <div class="toast" id="toast"></div>
 <script>
-const STORIES=/*STORIES*/[];
+let STORIES=/*STORIES*/[];
 const SECTIONS=[["streets","Streets"],["politics","Politics"],["national","National"],["surveillance","Surveillance"],["tech","Tech"],["culture","Culture"],["music","Music"],["screen","Screen"],["nightlife","Nightlife"],["ink","Ink"]];
 const SNAME=Object.fromEntries(SECTIONS);
 const POSTER={"you-can-see-everything":["../img/you-can-see-everything.jpg","A24"]};
@@ -188,7 +195,14 @@ const fmtDate=(d,o)=>new Date(d+"T12:00:00").toLocaleDateString("en-US",o||{mont
 const url=(k,v)=>"?"+k+"="+encodeURIComponent(v);
 const BY="The Guitar Doug Report";
 
-const sorted=STORIES.map((s,i)=>({...s,_i:i})).sort((a,b)=>b.date.localeCompare(a.date)||a._i-b._i);
+let sorted=[];let LEAD=null;
+const prep=()=>{sorted=STORIES.map((s,i)=>({...s,_i:i})).sort((a,b)=>b.date.localeCompare(a.date)||a._i-b._i)};
+/* Seattle-first: a story is local if it is about Seattle, judged by how often Seattle places come up */
+const LOCALRX=/Seattle|King County|Capitol Hill|Ballard|Fremont|Belltown|SoDo|Pioneer Square|Rainier|Beacon Hill|Queen Anne|Magnolia|Wallingford|Green Lake|Lake City|Northgate|Georgetown|South Park|Delridge|Aurora Ave|Pike Place|KEXP|Sound Transit|Central District|Chinatown|International District|Emerald City|City Council|Lumen Field|Climate Pledge|Macklemore|Dexter Horton|Puget Sound|Montlake|Ravenna|Columbia City|Interbay|Duwamish|U District|Greenwood|Phinney|Alki|Admiral|SPD\b/g;
+const isLocal=s=>{if(s.topic==="nightlife")return true;if(s.topic==="national")return false;
+  const head=s.title+" "+s.dek;if((head.match(LOCALRX)||[]).length)return true;
+  const b=(s.body||[]).filter(p=>!p.startsWith("#T ")).join(" ");const w=b.split(/\s+/).length||1;
+  return 1000*(b.match(LOCALRX)||[]).length/w>=3.5};
 const P=new URLSearchParams(location.search);
 
 /* chrome */
@@ -219,37 +233,45 @@ const card=(s,cls,opts={})=>{
 };
 
 function front(){
-  document.title="The Guitar Doug Report";
-  const news=sorted.filter(s=>s.topic!=="ink");
+  document.title="The Guitar Doug Report · Seattle Edition";
+  const pool=sorted.filter(s=>s.topic!=="ink");
+  const local=pool.filter(isLocal), natl=pool.filter(s=>!isLocal(s));
   const used=new Set();
-  const take=(f,n)=>{const out=[];for(const s of news){if(out.length>=n)break;if(!used.has(s.slug)&&(!f||f(s))){used.add(s.slug);out.push(s)}}return out};
-  const lead=take(null,1)[0];
-  const related=sorted.filter(s=>s.slug!==lead.slug&&s.topic===lead.topic).slice(0,3);
-  related.forEach(s=>used.add(s.slug));
-  const featured=take(s=>POSTER[s.slug],1);
-  const colA=take(null,3), colB=take(null,4);
+  const take=(list,n)=>{const out=[];for(const s of list){if(out.length>=n)break;if(!used.has(s.slug)){used.add(s.slug);out.push(s)}}return out};
+  const today=new Date().toLocaleDateString("en-CA",{timeZone:"America/Los_Angeles"});
+  const yest=new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"America/Los_Angeles"});
+  let lead=LEAD&&LEAD.date>=yest&&sorted.find(s=>s.slug===LEAD.slug);
+  if(lead)used.add(lead.slug);else lead=take(local.length?local:pool,1)[0];
+  const leadKick=LEAD&&lead&&lead.slug===LEAD.slug?"Today's Main Story":"Seattle · "+(SNAME[lead.topic]||lead.topic);
+  const related=take(local.filter(s=>s.topic===lead.topic),3);
+  const colA=take(local,3), colB=take(local,5);
   let h='<div class="front"><div class="col">';
-  h+='<div class="story lead"><a href="'+url("story",lead.slug)+'"><div class="kick red">'+esc(SNAME[lead.topic]||lead.topic)+'</div><h2 class="hl">'+esc(lead.title)+'</h2><p class="dek">'+esc(lead.dek)+'</p>'+meta(lead)+'</a>'+
+  h+='<div class="story lead"><a href="'+url("story",lead.slug)+'"><div class="kick red">'+esc(leadKick)+'</div><h2 class="hl">'+esc(lead.title)+'</h2><p class="dek">'+esc(lead.dek)+'</p>'+meta(lead)+'</a>'+
      (related.length?'<ul>'+related.map(s=>'<li><a class="hl" href="'+url("story",s.slug)+'">'+esc(s.title)+'</a></li>').join("")+'</ul>':'')+'</div>';
   h+=colA.map(s=>card(s,"mid",{kick:1})).join("");
-  h+='</div><div class="col mid">';
-  h+=featured.map(s=>card(s,"mid",{pic:1,kick:1})).join("");
-  h+=colB.map((s,i)=>card(s,i<2?"sm":"xs",{kick:1,dek:i<2})).join("");
   h+='</div><aside class="col rail">'+
      '<div class="box" id="crime"><h3>Crime Watch <small id="cwas"></small></h3><div id="cwl"><div class="empty">Loading the overnight log…</div></div></div>'+
      '<div class="box" id="tonight"><h3>Tonight in Seattle <small id="tnd"></small></h3><div id="tnl"><div class="empty">Loading listings…</div></div></div>'+
-     '</aside></div>';
-  // section bands with whatever hasn't run up top
-  const bands=[["streets"],["politics","national"],["surveillance"],["tech"],["culture"],["music","nightlife","screen"],["ink"]];
+     '</aside><div class="col mid">';
+  h+=colB.map((s,i)=>card(s,i<3?"sm":"xs",{kick:1,dek:i<3})).join("");
+  h+='</div></div>';
+  // more Seattle, by section
+  const bands=[["streets"],["politics"],["surveillance"],["tech"],["culture"],["music","nightlife","screen"]];
   for(const ks of bands){
-    const list=sorted.filter(s=>ks.includes(s.topic)&&!used.has(s.slug)).slice(0,4);
+    const list=take(local.filter(s=>ks.includes(s.topic)),4);
     if(!list.length)continue;
-    list.forEach(s=>used.add(s.slug));
-    const name=ks.map(k=>SNAME[k]).join(" & ");
-    h+='<section class="band"><h2><a href="'+url("section",ks[0])+'">'+esc(name)+'</a></h2><div class="four">'+list.map(s=>'<a href="'+url("story",s.slug)+'"><h3 class="hl">'+esc(s.title)+'</h3><p class="dek">'+esc(s.dek)+'</p>'+meta(s)+'</a>').join("")+'</div></section>';
+    h+=band("Seattle "+ks.map(k=>SNAME[k]).join(" & "),ks[0],list);
   }
+  const ink=take(sorted.filter(s=>s.topic==="ink"),4);
+  if(ink.length)h+=band("Ink","ink",ink);
+  const nat=take(natl,8);
+  if(nat.length)h+=band("National & Beyond",null,nat);
   $("#main").innerHTML=h;
   loadRail();
+}
+function band(name,sec,list){
+  return '<section class="band"><h2>'+(sec?'<a href="'+url("section",sec)+'">'+esc(name)+'</a>':esc(name))+'</h2><div class="four">'+
+    list.map(s=>'<a href="'+url("story",s.slug)+'"><h3 class="hl">'+esc(s.title)+'</h3><p class="dek">'+esc(s.dek)+'</p>'+meta(s)+'</a>').join("")+'</div></section>';
 }
 
 function loadRail(){
@@ -281,7 +303,8 @@ function article(slug){
   const s=STORIES.find(x=>x.slug===slug);
   if(!s){front();return}
   document.title=s.title+" — The Guitar Doug Report";
-  const body=s.body.map(p=>p.startsWith("## ")?'<h2>'+esc(p.slice(3))+'</h2>':p.startsWith("> ")?'<blockquote>'+esc(p.slice(2))+'</blockquote>':'<p>'+esc(p)+'</p>').join("");
+  const tbl=p=>{try{const t=JSON.parse(p.slice(3));return '<figure class="tb">'+(t.title?'<figcaption>'+esc(t.title)+'</figcaption>':'')+'<div class="tbs"><table><thead><tr>'+t.head.map(x=>'<th>'+esc(x)+'</th>').join("")+'</tr></thead><tbody>'+t.rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join("")+'</tr>').join("")+'</tbody></table></div></figure>'}catch(e){return ""}};
+  const body=s.body.map(p=>p.startsWith("#T ")?tbl(p):p.startsWith("## ")?'<h2>'+esc(p.slice(3))+'</h2>':p.startsWith("> ")?'<blockquote>'+esc(p.slice(2))+'</blockquote>':'<p>'+esc(p)+'</p>').join("");
   const vid=(s.trailer||[]).map(t=>'<video controls preload="none" playsinline poster="../'+esc(t.poster)+'" src="../'+esc(t.src)+'"></video><div class="cap">'+esc(t.label)+(t.credit?" · "+esc(t.credit):"")+'</div>').join("");
   const src=(s.sources||[]).length?'<div class="srcs"><h4>Sources</h4><ol>'+s.sources.map(x=>'<li>'+esc(x.outlet)+(x.title?', “'+esc(x.title)+'”':"")+(x.date?" ("+esc(x.date)+")":"")+(x.url?' — <a href="'+esc(x.url)+'" target="_blank" rel="noopener">link</a>':"")+'</li>').join("")+'</ol></div>':"";
   const more=sorted.filter(x=>x.slug!==s.slug&&x.topic===s.topic).concat(sorted.filter(x=>x.topic!==s.topic&&x.topic!=="ink")).slice(0,4);
@@ -296,9 +319,15 @@ function article(slug){
 }
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(()=>e.classList.remove("on"),1600)}
 
-if(P.get("story"))article(P.get("story"));
-else if(P.get("section"))section(P.get("section"));
-else front();
+function route(){prep();
+  if(P.get("story"))article(P.get("story"));
+  else if(P.get("section"))section(P.get("section"));
+  else front();}
+const ctl=window.AbortController?new AbortController():null;const tmo=setTimeout(()=>ctl&&ctl.abort(),5000);
+Promise.all([
+  fetch("../data/stories.json",{cache:"no-cache",signal:ctl&&ctl.signal}).then(r=>r.json()).then(d=>{const a=Array.isArray(d)?d:d.stories;if(Array.isArray(a)&&a.length)STORIES=a}).catch(()=>{}),
+  fetch("../data/lead.json",{cache:"no-cache",signal:ctl&&ctl.signal}).then(r=>r.json()).then(d=>{if(d&&d.slug)LEAD=d}).catch(()=>{})
+]).finally(()=>{clearTimeout(tmo);route()});
 </script>
 </body>
 </html>
