@@ -1,8 +1,8 @@
-"""Export the stories and Wire from classic.html to small JSON files the front page reads.
+"""Export the stories and Wire from index.html to small JSON files the front page reads.
 usage: python3 src/export_data.py   (run from the repo root after any edit to classic.html)"""
 import json,os
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-h=open(os.path.join(R,'classic.html'),encoding='utf-8').read()
+h=open(os.path.join(R,'index.html'),encoding='utf-8').read()
 d=json.JSONDecoder()
 def grab(marker):
     i=h.find(marker)
