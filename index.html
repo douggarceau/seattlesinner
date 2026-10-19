@@ -1189,10 +1189,11 @@ function sxAlert(){const el=document.getElementById('sxAlert');if(!el||!SXALL.le
   const x=P.slice().sort((a,b)=>sxWorst(b)-sxWorst(a)||b.date.localeCompare(a.date))[0];if(!x)return;
   const inner=`<span class="lightbar" aria-hidden="true"><i class="lr"></i><i class="lb"></i></span><span class="sxa-k"><span class="sxa-dot"></span>Red alert · worst crime of the day</span><h2>${esc(x.title)}</h2>${x.dek?`<p>${esc(x.dek)}</p>`:''}<span class="sxa-m">${esc([x.hood,sxDay(x.date),x.src].filter(Boolean).join(' · '))} · Read it →</span>`;
   el.innerHTML=x.slug?`<button type="button" class="sxa" data-story="${esc(x.slug)}">${inner}</button>`:`<a class="sxa" href="${esc(x.url)}" target="_blank" rel="noopener">${inner}</a>`}
+let CSTORY={},CSURL={};const CSP=fetch('/data/crimestories.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(L=>{(L||[]).forEach(x=>{if(x&&!x.skip&&x.slug&&x.body){CSTORY[x.slug]=x;((x.sources||[])[0]||{}).url&&(CSURL[x.sources[0].url]=x.slug)}});return CSTORY}).catch(()=>CSTORY);
 async function sxFill(){const el=document.getElementById('sxFeed');if(!el)return;
-  const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const [j]=await Promise.all([fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),CSP]);
   const A=LOCAL().map(s=>({sev:sxSev(s),tag:sxTag(s),title:s.title,dek:s.dek,date:s.date,hood:'',src:'The Guitar Doug Report',slug:s.slug})).filter(x=>x.sev>0);
-  const C=((j&&j.items)||[]).filter(i=>SXK[i.kind]).map(i=>({sev:SXK[i.kind][0],tag:SXK[i.kind][1],title:i.headline,dek:i.blurb||'',date:i.date||'',hood:i.hood||'Seattle',src:i.outlet||'',url:i.url}));
+  const C=((j&&j.items)||[]).filter(i=>SXK[i.kind]).map(i=>({sev:SXK[i.kind][0],tag:SXK[i.kind][1],title:i.headline,dek:i.blurb||'',date:i.date||'',hood:i.hood||'Seattle',src:i.outlet||'',url:i.url,slug:CSURL[i.url]||'',title2:(CSTORY[CSURL[i.url]]||{}).title}));C.forEach(x=>{if(x.slug){const t=CSTORY[x.slug];x.title=t.title||x.title;x.dek=t.dek||x.dek;x.src='The Guitar Doug Report'}else delete x.slug});
   SXALL=A.concat(C).sort((a,b)=>b.date.localeCompare(a.date)||(b.sev-a.sev));SXALL.forEach(x=>{x.places=sxPlaces(x);if(!x.hood)x.hood=x.places[0]||'Seattle'});
   sxAlert();
   const cnt={};SXALL.forEach(x=>x.places.forEach(p=>cnt[p]=(cnt[p]||0)+1));
@@ -1429,7 +1430,7 @@ function vStories(){
   <div class="sgrid">${STORIES.filter(s=>STATE.topic==='all'||s.topic===STATE.topic).map(storyCard).join('')}</div>`;
 }
 function vReader(slug){
-  const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
+  const s=STORIES.find(x=>x.slug===slug)||CSTORY[slug]; if(!s) return vFront();
   return `<article class="reader styled" style="${sty(s.slug)}">
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
     ${s.special?'<span class="spr-tag" style="display:inline-block;width:max-content;justify-self:start;margin-bottom:10px">SPECIAL REPORT</span>':''}<span class="kick" style="--tc:${tc(s.topic)}"><span class="dot"></span>${esc(tl(s.topic))}<time>${longDay(s.date)}</time></span>
@@ -1803,6 +1804,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
 </script>
 <script>
 (()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','venues','bands','submit','front'].includes(g)){go(g)}})();
+CSP.then(()=>{const q=new URLSearchParams(location.search).get('story');if(q&&CSTORY[q]&&!STORIES.some(s=>s.slug===q)){STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)}});
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 </script>
 <script>
