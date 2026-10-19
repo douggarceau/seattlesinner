@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T17:23:43-07:00",
+"asof": "2026-10-18T21:25:58-07:00",
 "items": [
 {
 "kind": "other",
@@ -104,6 +104,30 @@
 "hood": "Delridge",
 "spd": [
 "NORTH DELRIDGE"
+],
+"date": "2026-10-16",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "homicide",
+"headline": "25 years on, feds say Tom Wales murder is 'not a cold case'",
+"blurb": "Crime Stoppers says the 2001 shooting of the federal prosecutor in his Queen Anne home remains an active FBI-SPD investigation, with up to $2.5 million offered for information leading to an arrest.",
+"hood": "Queen Anne",
+"spd": [
+"QUEEN ANNE"
+],
+"date": "2026-10-16",
+"url": "https://mynorthwest.com/crime-blotter/prosecutor-tom-wales-killing/4286427",
+"outlet": "MyNorthwest"
+},
+{
+"kind": "burglary",
+"headline": "Porch pirates strike again on Admiral's 42nd Ave SW",
+"blurb": "Package thefts were reported from several homes in the 2300 block of 42nd Ave SW; police are tracking a suspect vehicle.",
+"hood": "Admiral",
+"spd": [
+"NORTH ADMIRAL"
 ],
 "date": "2026-10-16",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
@@ -243,6 +267,18 @@
 "outlet": "Westside Seattle"
 },
 {
+"kind": "police",
+"headline": "Open-air drug market takes root on 2nd Ave in Belltown, owners say",
+"blurb": "Business owners describe a daytime drug market and sidewalk encampment near 2nd Ave between Bell and Blanchard as the mayor faces questions after a violent weekend.",
+"hood": "Belltown",
+"spd": [
+"BELLTOWN"
+],
+"date": "2026-10-13",
+"url": "https://komonews.com/news/local/seattle-mayor-faces-questions-over-public-safety-after-weekend-crime-spree-index-survey-voters-homelessness-mexican-kitchen-open-air-drug-market-encampment",
+"outlet": "KOMO"
+},
+{
 "kind": "robbery",
 "headline": "Masked gunman robs Roxbury convenience store",
 "blurb": "A masked man with a gun robbed a convenience store in the 1500 block of SW Roxbury St and ran off on foot.",
@@ -301,6 +337,18 @@
 "date": "2026-10-11",
 "url": "https://spdblotter.seattle.gov/2026/10/11/one-man-killed-one-woman-injured-in-south-seattle-shooting/",
 "outlet": "SPD Blotter"
+},
+{
+"kind": "burglary",
+"headline": "Burglars pry jewelry store's back door, try for floor safe in Junction",
+"blurb": "Suspects pried the rear door of a jewelry retailer in the 4500 block of California Ave SW and tried to open a floor safe before fleeing.",
+"hood": "Alaska Junction",
+"spd": [
+"ALASKA JUNCTION"
+],
+"date": "2026-10-11",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 },
 {
 "kind": "shooting",
@@ -412,6 +460,18 @@
 "outlet": "Capitol Hill Seattle Blog"
 },
 {
+"kind": "fire",
+"headline": "Overheated ceiling fan blamed for Loyal Heights house fire",
+"blurb": "Firefighters knocked down an attic fire at a home in the 8000 block of 24th Ave NW within 30 minutes Wednesday evening; no one was hurt and investigators ruled it accidental.",
+"hood": "Loyal Heights",
+"spd": [
+"BALLARD NORTH"
+],
+"date": "2026-10-07",
+"url": "https://www.myballard.com/2026/10/08/fire-damages-single-family-home-in-loyal-heights/",
+"outlet": "My Ballard"
+},
+{
 "kind": "shooting",
 "headline": "Shots fired in Aurora gas station lot, man hurt",
 "blurb": "Detectives are investigating a shooting in a gas station parking lot in the 10500 block of Aurora Avenue North; a 44-year-old man had head injuries possibly from broken glass.",
@@ -510,6 +570,18 @@
 "outlet": "SPD Blotter"
 },
 {
+"kind": "theft",
+"headline": "Four commuter cars' rear windows smashed at Westwood Village garage",
+"blurb": "Four vehicles had rear windows broken in a parking structure in the 2600 block of SW Barton St.",
+"hood": "Westwood",
+"spd": [
+"ROXHILL/WESTWOOD/ARBOR HEIGHTS"
+],
+"date": "2026-10-03",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "police",
 "headline": "Police probe report of woman luring kids at Alki Elementary fence",
 "blurb": "Three first-graders told staff a woman at the playground fence offered to show them a crown in her car. The children ran to an adult, and the woman drove off in a silver vehicle. Seattle police are investigating, and the school has stepped up recess supervision.",
@@ -558,6 +630,18 @@
 "outlet": "KOMO"
 },
 {
+"kind": "burglary",
+"headline": "Highland Park pet shop break-in foiled by owner's alarm",
+"blurb": "An intruder picked a lock and bashed the door of a pet shop in the 800 block of SW Holden St but fled after the owner's alert went off.",
+"hood": "Highland Park",
+"spd": [
+"HIGHLAND PARK"
+],
+"date": "2026-09-30",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "robbery",
 "headline": "Shoplifter swings sharp pole at security near the Junction, police say",
 "blurb": "Police responded to a robbery call in the 4700 block of 42nd Ave SW after a suspected shoplifter swung a long, sharp pole at security staff who confronted him. A K9 team tracked down a possible suspect.",
@@ -579,6 +663,18 @@
 ],
 "date": "2026-09-28",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "burglary",
+"headline": "Arbor Heights homeowner yells, would-be burglar flees",
+"blurb": "An intruder broke a sliding window at a home in the 10400 block of 42nd Ave SW but ran when the homeowner shouted.",
+"hood": "Arbor Heights",
+"spd": [
+"ROXHILL/WESTWOOD/ARBOR HEIGHTS"
+],
+"date": "2026-09-27",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
 "outlet": "Westside Seattle"
 },
 {
@@ -686,6 +782,19 @@
 "date": "2026-09-23",
 "url": "https://hoodline.com/2026/09/man-shot-in-chest-at-rainier-beach-encampment-gunman-flees-in-car/",
 "outlet": "Hoodline"
+},
+{
+"kind": "arrest",
+"headline": "Deputies' PIT maneuver flips stolen car at 1st Ave S and Dawson",
+"blurb": "King County deputies say a suspected DUI driver in a stolen car with outstanding warrants rolled over after a PIT maneuver near S Dawson St and 1st Ave S; he tried to run and was booked for felony eluding.",
+"hood": "SoDo / Duwamish",
+"spd": [
+"SODO",
+"COMMERCIAL DUWAMISH"
+],
+"date": "2026-09-23",
+"url": "https://www.kiro7.com/news/local/wanted-felon-arrested-after-sheriffs-office-pursuit-ends-rollover-crash-south-seattle/NUGSWOZXUFF7NIBHRVM74QVCTI/",
+"outlet": "KIRO 7"
 },
 {
 "kind": "robbery",
