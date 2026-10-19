@@ -141,6 +141,22 @@ html.np .box,html.np section,html.np article,html.np .lead,html.np .sc,html.np .
 html.np .mast{border-bottom:3px double #c8c8c8}
 
 </style><!--NEWSPRINT_END-->
+<style id="typescale">
+/* One type scale for the whole front page:
+   banner 26 · feature 22 · margin 18 · headline 15 · text 14 · meta 12 · label 10 */
+:root{--hd:"Playfair Display",Georgia,serif;--tx:"PT Serif",Georgia,serif;--lb:"Libre Franklin",system-ui,sans-serif}
+html body .spr b{font:700 26px/1.12 var(--hd)!important}
+html body .sc h4,html body .sc.styled h4,html body .ev h4,html body .vguide .gh h3{font:700 22px/1.15 var(--hd)!important;letter-spacing:0!important;text-transform:none!important}
+html body .lspot:not(.t-ns):not(.t-ns2):not(.t-pm2) .ls-big{font:700 18px/1.15 var(--hd)!important;letter-spacing:0!important}
+html body .lspot .ls-big em{font:400 italic 13px/1.2 var(--hd)!important}
+html body .sea-g b,html body .bwt b,html body .who b,html body .vnr b,html body .crw b,html body .crrow b,html body .box a>b,html body .box button>b,html body .box a span>b,html body .nat-l button,html body .techrow b{font:700 15px/1.25 var(--hd)!important;letter-spacing:0!important}
+html body .vtile b{font:900 26px/1 var(--hd)!important}html body .vtile span{font:700 15px/1.2 var(--hd)!important}
+html body .sc p,html body .ev p,html body .vnr p,html body .spr small,html body .vguide .gh p,html body .box p{font:400 14px/1.45 var(--tx)!important}
+html body .meta,html body .when,html body .where,html body .src,html body .bwt>span>span,html body .who>span>span,html body .bwt span:not(.gtag),html body .who span:not(.gtag),html body .lspot i,html body .vtile small,html body .dt i,html body .box .m,html body .bh>span{font:500 12px/1.35 var(--lb)!important;font-style:normal!important;letter-spacing:.02em!important}
+html body .kick,html body .kick time,html body .gtag,html body .ls-tag,html body .sea-g small,html body .box small,html body .spr-tag,html body .crtag,html body .lspot b,html body .edition{font:800 10px/1.2 var(--lb)!important;letter-spacing:.14em!important;text-transform:uppercase!important}
+html body .sea-h b,html body .bh b,html body .lbl b{font:800 13px/1.2 var(--lb)!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+html body .sea-h button,html body .spr-go,html body .tlab{font:700 11px/1 var(--lb)!important;letter-spacing:.12em!important;text-transform:uppercase!important}
+</style>
 </head>
 <body>
 <title>The Guitar Doug Report</title>
@@ -1097,7 +1113,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .lspot.t-pm2 .ls-big{font-size:clamp(30px,calc(var(--ls)*.16),52px)!important}
 .lspot b{font-size:10px!important;letter-spacing:.12em!important}
 .lspot i{font-size:12px!important;margin-top:2px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lspot .ls-tag{font-size:9px!important;letter-spacing:.16em!important}
+.lspot .ls-tag{font-size:10px!important;letter-spacing:.14em!important}
 .lspot.t-cw::after{height:4px}
 @media (min-width:1700px){:root{--ls:max(300px,calc((100vw - 1760px)/2 - 30px))}}
 </style>
