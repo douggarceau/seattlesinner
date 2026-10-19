@@ -80,14 +80,16 @@
 /* Guitar Doug Report app button + install sheet */
 .appbtn{flex:0 0 auto;margin:0;padding:9px 12px;border:1px solid #ff2a14;border-radius:6px;background:transparent;color:#ff6a55;font:800 12px/1 var(--mono,system-ui);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
 .appbtn:hover{background:#ff2a1422}
-.appsheet{position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-end;justify-content:center;background:#000a;padding:16px}
+.appsheet{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:#000c;padding:16px;backdrop-filter:blur(3px)}
 .appsheet[hidden]{display:none!important}
-.appsheet .box{max-width:420px;width:100%;background:#111418;border:1px solid #3a3f46;border-radius:12px;padding:18px 18px 14px;color:#e8ecef;font:400 15px/1.5 system-ui,sans-serif;box-shadow:0 20px 50px #000}
-.appsheet .hd{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.appsheet .hd img{width:52px;height:52px;border-radius:12px}
-.appsheet .hd b{font-size:17px}
-.appsheet ol{margin:6px 0 12px;padding-left:20px}.appsheet li{margin:4px 0}
-.appsheet .x{width:100%;padding:11px;border:0;border-radius:8px;background:#ff2a14;color:#fff;font:800 13px/1 system-ui;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.appsheet .apbox{max-width:380px;width:100%;background:linear-gradient(#15181c,#0b0d10);border:1px solid #3a3f46;border-top:3px solid #ff2a14;border-radius:12px;padding:26px 22px 18px;color:#d9dee2;text-align:center;font:400 15px/1.5 Georgia,'Times New Roman',serif;box-shadow:0 24px 60px #000!important;outline:0!important;animation:none!important}
+.appsheet .apbox>img{width:96px;height:96px;border-radius:22px;box-shadow:0 6px 20px #000a;display:block;margin:0 auto 14px}
+.appsheet .ttl{font:700 22px/1.2 Georgia,'Times New Roman',serif;color:#fff;margin:0 0 4px}
+.appsheet .sub{font:700 10.5px/1.4 var(--mono,ui-monospace,monospace);letter-spacing:.14em;text-transform:uppercase;color:#c9a227;margin:0 0 16px}
+.appsheet ol{text-align:left;margin:0 0 16px;padding:12px 14px 12px 34px;background:#0006;border:1px solid #2a2f35;border-radius:8px;font-size:14.5px}
+.appsheet li{margin:4px 0}.appsheet p{margin:0 0 14px;font-size:14.5px}
+.appsheet .go{width:100%;padding:13px;border:0;border-radius:8px;background:#ff2a14;color:#fff;font:800 13px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.appsheet .x{margin-top:10px;background:none;border:0;color:#8a939b;font:600 12px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:8px}
 @media (display-mode: standalone){.appbtn{display:none!important}}
 .approw{display:flex;gap:10px;margin:0 0 12px}.approw>.appbtn{flex:1 1 0;min-width:0;padding:8px 10px;font-size:11px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;box-sizing:border-box}.approw>.nsapp{border-color:#3d6aa8;color:#b9cde8}.approw>.nsapp:hover{background:#3d6aa822}
 </style>
@@ -1872,11 +1874,13 @@ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest
  const rn=a.dataset.rep,h=a.dataset.hood;try{if(h){CW.hood=h;CW.t=0;CW.spd=[];CW.seen=new Set()}}catch(_){}
  go('crime');let n=0;const iv=setInterval(()=>{const el=document.querySelector('.crrow[data-rn="'+CSS.escape(rn)+'"]');if(el){clearInterval(iv);el.classList.add('spot');el.scrollIntoView({behavior:'smooth',block:'center'})}else if(++n>40){clearInterval(iv);const b=document.querySelector('.crrow');if(b)b.scrollIntoView({behavior:'smooth',block:'center'})}},250)},true);
 </script>
-<div class="appsheet" id="appSheet" hidden role="dialog" aria-modal="true" aria-label="Get The Guitar Doug Report app">
-  <div class="box">
-    <div class="hd"><img src="/app/icon-192.png" alt=""><b>The Guitar Doug Report app</b></div>
+<div class="appsheet" id="appSheet" hidden role="dialog" aria-modal="true" aria-label="The Guitar Doug Report app">
+  <div class="apbox">
+    <img src="/app/icon-192.png" alt="">
+    <div class="ttl">The Guitar Doug Report</div>
+    <div class="sub">Free · No App Store needed</div>
     <div id="appSteps"></div>
-    <button type="button" class="x" id="appClose">Got it</button>
+    <button type="button" class="x" id="appClose">Not now</button>
   </div>
 </div>
 <script>
@@ -1889,18 +1893,24 @@ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest
   let ev=null;
   addEventListener('beforeinstallprompt',e=>{e.preventDefault();ev=e;});
   addEventListener('appinstalled',()=>{btn.hidden=true;sh.hidden=true;});
-  const ua=navigator.userAgent, ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
-  btn.addEventListener('click',async()=>{
-    if(ev){ev.prompt();const r=await ev.userChoice.catch(()=>null);ev=null;if(r&&r.outcome==='accepted')btn.hidden=true;return;}
-    st.innerHTML=ios
-      ?'<p>Free, and it opens full screen like a regular app.</p><ol><li>Tap the <b>Share</b> button (the square with the arrow) at the bottom of Safari.</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>.</li></ol>'
-      :/Android/.test(ua)
-      ?'<p>Free, and it opens full screen like a regular app.</p><ol><li>Tap the <b>⋮</b> menu at the top right of Chrome.</li><li>Tap <b>Add to Home screen</b> or <b>Install app</b>.</li><li>Tap <b>Install</b>.</li></ol>'
-      :'<p>Open <b>seattlesinner.com</b> on your phone and tap <b>Get the App</b> there.</p><p>On a computer in Chrome or Edge, click the install icon at the right end of the address bar.</p>';
+  const ua=navigator.userAgent, ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1), android=/Android/.test(ua);
+  const open=()=>{
+    if(ev){
+      st.innerHTML='<p>Put the Report on your home screen. It opens full screen, like any other app.</p><button type="button" class="go" id="appGo">Add to Home Screen</button>';
+      document.getElementById('appGo').onclick=async()=>{const e=ev;ev=null;sh.hidden=true;e.prompt();const r=await e.userChoice.catch(()=>null);if(r&&r.outcome==='accepted')btn.hidden=true;};
+    }else if(ios){
+      st.innerHTML='<ol><li>Tap the <b>Share</b> button at the bottom of Safari (the square with the arrow).</li><li>Tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>.</li></ol>';
+    }else if(android){
+      st.innerHTML='<ol><li>Tap the <b>⋮</b> menu at the top right of Chrome.</li><li>Tap <b>Add to Home screen</b>.</li><li>Tap <b>Add</b>.</li></ol>';
+    }else{
+      st.innerHTML='<p>Open <b>seattlesinner.com</b> on your phone and tap <b>Get the App</b>.</p>';
+    }
     sh.hidden=false;
-  });
+  };
+  btn.addEventListener('click',open);
   document.getElementById('appClose').onclick=()=>sh.hidden=true;
   sh.addEventListener('click',e=>{if(e.target===sh)sh.hidden=true;});
+  if(/[?&]app=1\b/.test(location.search)) addEventListener('load',()=>setTimeout(open,600));
 })();
 </script>
 </body>
