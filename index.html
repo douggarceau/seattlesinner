@@ -1010,6 +1010,19 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .sxmain .sxg{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 @media(max-width:800px){.sxmain .sxg{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:520px){.sxmain .sxg{grid-template-columns:1fr!important}}
+.sxwrap{grid-template-columns:1fr!important}
+.sxmain .sxg{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+@media(max-width:1100px){.sxmain .sxg{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:800px){.sxmain .sxg{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:520px){.sxmain .sxg{grid-template-columns:1fr!important}}
+.sxtop{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.sxtop .sxbox{padding:12px 14px;gap:6px;min-height:118px}
+.sxtop .sxbox h3{font-size:16px;line-height:1.22}
+@media(max-width:1100px){.sxtop{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.sxtop{grid-template-columns:repeat(2,minmax(0,1fr))}.sxtop .sxbox{min-height:0}.sxtop .sxbox h3{font-size:15px}}
+.sxtop .sxbox{background:linear-gradient(160deg,color-mix(in srgb,var(--bc) 34%,#0b0b0b),color-mix(in srgb,var(--bc) 12%,#0b0b0b));border:1px solid color-mix(in srgb,var(--bc) 60%,#000);border-top:4px solid var(--bc);box-shadow:0 0 18px color-mix(in srgb,var(--bc) 25%,transparent)}
+.sxtop .sxbox:hover{background:linear-gradient(160deg,color-mix(in srgb,var(--bc) 48%,#0b0b0b),color-mix(in srgb,var(--bc) 18%,#0b0b0b))}
+.sxtop .sxbk{color:var(--bc);filter:brightness(1.25)}
 </style>
 
 
@@ -1211,8 +1224,8 @@ function sxRender(){const el=document.getElementById('sxFeed');if(!el)return;con
   if(!all.length){el.innerHTML='<div class="empty">No reports for this area in the last 30 days.</div>';return}
   el.innerHTML=G.map(([h,sub,f])=>{const L=all.filter(f);return L.length?`<div class="sxs"><div class="sxsh"><h3>${h}</h3><span>${sub}</span><em>${L.length}</em></div><div class="sxg">${L.map(x=>sxCard(x)).join('')}</div></div>`:''}).join('')}
 function vFront(){setTimeout(sxFill,0);
-  return `<div id="sxAlert"></div><div class="sxbar"><label for="sxWhere">Crime &amp; safety news near you</label><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxwrap"><div class="sxmain"><div class="sxh"><h2 id="sxTitle">Seattle Crime &amp; Safety News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
-  <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></div><aside class="sxside">${[['satanic-cabal','The Investigation'],['macklemore-vs-the-owners-box','Music &amp; Power'],['case-against-clavicular','The Charges'],['candace-anomalies','The Kirk Case'],['downfall-of-andrew-tate','Locked Up'],['the-swarm','AI Gone Rogue']].map(([sl,k])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" data-story="${sl}"><span class="sxbk">${k}</span><h3>${esc(t.title)}</h3><p>${esc(t.dek)}</p><span class="sxbg">Read it →</span></button>`:''}).join('')}</aside></div></section>`;
+  return `<div class="sxtop">${[['satanic-cabal','The Investigation','#e3170a'],['macklemore-vs-the-owners-box','Music &amp; Power','#1e90ff'],['case-against-clavicular','The Charges','#ff7a1a'],['candace-anomalies','The Kirk Case','#a55cff'],['downfall-of-andrew-tate','Locked Up','#f2c94c'],['the-swarm','AI Gone Rogue','#2fd3c8']].map(([sl,k,c])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" style="--bc:${c}" data-story="${sl}"><span class="sxbk">${k}</span><h3>${esc(t.title)}</h3></button>`:''}).join('')}</div><div id="sxAlert"></div><div class="sxbar"><label for="sxWhere">Crime &amp; safety news near you</label><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxwrap"><div class="sxmain"><div class="sxh"><h2 id="sxTitle">Seattle Crime &amp; Safety News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
+  <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></div></div></section>`;
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
   return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Report Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
