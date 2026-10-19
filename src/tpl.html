@@ -1122,7 +1122,7 @@ function vReader(slug){
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
     <span class="kick" style="--tc:${tc(s.topic)}"><span class="dot"></span>${esc(tl(s.topic))}<time>${longDay(s.date)}</time></span>
     <h1>${esc(s.title)}</h1><p class="dek">${esc(s.dek)}</p>
-    <div class="byl"><span>By <b>Guitar Doug</b></span><span>${s.minutes} min read</span></div>
+    <div class="byl"><span>By <b>The Guitar Doug Report</b></span><span>${s.minutes} min read</span></div>
     <div class="body">${s.body.map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>
     <div class="srcs"><b>Reported from</b>${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)} · ${esc(x.title)}${x.date?' · '+esc(x.date):''}</a>`).join('')}</div>
     <section class="cmts" id="cmts" data-slug="${s.slug}">${cmtsHTML(s.slug)}</section>
