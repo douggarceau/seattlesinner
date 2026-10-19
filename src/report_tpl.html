@@ -133,6 +133,27 @@ nav.sec a.on{font-weight:700}
 .srcs a{color:var(--link)}
 .srcs a{text-decoration:underline}
 .more{margin-top:46px}
+.cmts{margin-top:40px;padding-top:12px;border-top:2px solid var(--ink);font-family:var(--sans)}
+.cmts h4{font-size:15px;font-weight:800;margin:0 0 14px}
+.cmts h4 span{font-weight:400;color:var(--mute)}
+.cmf textarea,.cmauth input{width:100%;font:15px/1.45 var(--serif);color:var(--ink);background:rgba(255,255,255,.55);border:1px solid var(--rule);border-radius:3px;padding:10px 12px;margin:0 0 8px}
+.cmf textarea{min-height:96px;resize:vertical}
+.cmf textarea:focus,.cmauth input:focus{outline:2px solid var(--ink);outline-offset:-1px}
+.cmf button,.cmauth form button{font:700 13px var(--sans);background:var(--ink);color:#fff;border:0;border-radius:3px;padding:9px 16px;cursor:pointer}
+.cmf button:disabled{opacity:.5}
+.cmwho,#cmRe{font-size:12px;color:var(--mute);margin-bottom:8px}
+.cmwho a,#cmRe a,.cmr{text-decoration:underline;color:var(--ink2)}
+.cmtabs{display:flex;gap:18px;margin-bottom:10px}
+.cmtabs button{font:600 13px var(--sans);background:none;border:0;padding:0 0 4px;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent}
+.cmtabs button.on{color:var(--ink);border-color:var(--ink)}
+.cmmsg{font-size:12px;color:var(--ink2);margin-top:8px}
+#cmList{margin-top:22px}
+.cm{padding:14px 0;border-top:1px solid var(--rule)}
+.cm.re{margin-left:26px;padding-left:14px;border-left:2px solid var(--rule);border-top:0;padding-top:4px}
+.cmh{font-size:13px}.cmh span{color:var(--faint);font-size:12px;margin-left:4px}
+.cmh .ed{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:1px 4px;margin-left:4px}
+.cm p{font:16px/1.5 var(--serif);margin:6px 0;color:var(--ink);overflow-wrap:anywhere}
+.cmr{font-size:12px}
 
 footer{margin-top:50px;border-top:1px solid var(--rule-dk);padding:18px 0 40px;font-family:var(--sans);font-size:12px;color:var(--mute);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 footer img{height:22px;width:auto}
@@ -308,12 +329,53 @@ function article(slug){
   const more=sorted.filter(x=>x.slug!==s.slug&&x.topic===s.topic).concat(sorted.filter(x=>x.topic!==s.topic&&x.topic!=="ink")).slice(0,4);
   $("#main").innerHTML='<article class="art"><div class="kick red"><a href="'+url("section",s.topic)+'">'+esc(SNAME[s.topic]||s.topic)+'</a></div><h1>'+esc(s.title)+'</h1><p class="sumry">'+esc(s.dek)+'</p>'+
     '<div class="byline"><div>By '+BY+'<time>'+fmtDate(s.date,{month:"long",day:"numeric",year:"numeric"})+' · '+s.minutes+' min read</time></div><div class="share"><button id="cp">Copy link</button><button id="xs">Share on X</button></div></div>'+
-    vid+'<div class="body">'+body+'</div>'+src+'</article>'+
+    vid+'<div class="body">'+body+'</div>'+src+'<section class="cmts" id="cmts"><h4>Comments <span id="cmN"></span></h4><div id="cmForm"></div><div id="cmList"><div class="empty">Loading comments…</div></div></section></article>'+
     '<section class="band more"><h2>More from The Guitar Doug Report</h2><div class="four">'+more.map(x=>'<a href="'+url("story",x.slug)+'"><div class="kick">'+esc(SNAME[x.topic]||x.topic)+'</div><h3 class="hl">'+esc(x.title)+'</h3>'+meta(x)+'</a>').join("")+'</div></section>';
   const link=location.origin+location.pathname+url("story",s.slug);
   $("#cp").onclick=()=>{(navigator.clipboard?navigator.clipboard.writeText(link):Promise.reject()).then(()=>toast("Link copied")).catch(()=>prompt("Copy this link:",link))};
   $("#xs").onclick=()=>window.open("https://x.com/intent/post?text="+encodeURIComponent(s.title)+"&url="+encodeURIComponent(link),"_blank","noopener");
   window.scrollTo(0,0);
+  comments(s.slug);
+}
+/* ---- comments (shared with the main site: same accounts, same threads) ---- */
+const SB_URL='https://zldqymhtmhqyypzolxwq.supabase.co',SB_KEY='sb_publishable_rve_mz40jFF8Af0DJQZL3g_2u994LyG';
+let SBP=null;
+function sbc(){if(!SBP)SBP=(async()=>{for(const u of['https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm','https://esm.sh/@supabase/supabase-js@2']){try{const m=await import(u);return m.createClient(SB_URL,SB_KEY)}catch(_){}}throw new Error("offline")})();return SBP}
+const ago=t=>{const m=Math.round((Date.now()-t)/6e4);return m<1?"just now":m<60?m+"m ago":m<1440?Math.round(m/60)+"h ago":new Date(t).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})};
+async function comments(slug){
+  const L=$("#cmList"),F=$("#cmForm");if(!L)return;
+  let sb,user=null;
+  try{sb=await sbc();const {data}=await sb.auth.getSession();user=data.session&&data.session.user}catch(e){L.innerHTML='<div class="empty">Comments are unavailable right now.</div>';return}
+  const handle=()=>user&&(user.user_metadata&&user.user_metadata.username||String(user.email||"reader").split("@")[0]).slice(0,40);
+  let replyTo=null;
+  const form=()=>{
+    if(user){F.innerHTML='<form class="cmf" id="cmf"><div class="cmwho">Commenting as <b>'+esc(handle())+'</b> · <a href="#" id="cmOut">Log out</a></div><div id="cmRe"></div><textarea id="cmT" maxlength="3000" placeholder="Say your piece…" required></textarea><button type="submit">Post comment</button></form>';
+      $("#cmOut").onclick=async e=>{e.preventDefault();await sb.auth.signOut();user=null;form()};
+      $("#cmf").onsubmit=async e=>{e.preventDefault();const t=$("#cmT").value.trim();if(t.length<2)return;const b=e.target.querySelector("button");b.disabled=true;
+        const {error}=await sb.from("comments").insert({slug,parent:replyTo,handle:handle(),text:t,editor:false});b.disabled=false;
+        if(error){toast("Couldn't post: "+error.message);return}$("#cmT").value="";replyTo=null;$("#cmRe").innerHTML="";load()};
+    }else{
+      F.innerHTML='<div class="cmauth"><div class="cmtabs"><button class="on" data-m="in">Log in</button><button data-m="up">Sign up free</button></div><form id="cma"><input id="cmU" placeholder="Username" maxlength="40" style="display:none"><input id="cmE" type="email" placeholder="Email" required><input id="cmP" type="password" placeholder="Password" minlength="6" required><button type="submit">Log in to comment</button><div class="cmmsg" id="cmMsg"></div></form></div>';
+      let mode="in";
+      F.querySelectorAll(".cmtabs button").forEach(b=>b.onclick=()=>{mode=b.dataset.m;F.querySelectorAll(".cmtabs button").forEach(x=>x.classList.toggle("on",x===b));$("#cmU").style.display=mode==="up"?"":"none";$("#cmU").required=mode==="up";$("#cma button").textContent=mode==="up"?"Sign up and comment":"Log in to comment"});
+      $("#cma").onsubmit=async e=>{e.preventDefault();const m=$("#cmMsg");m.textContent="";const email=$("#cmE").value.trim(),password=$("#cmP").value;
+        const r=mode==="up"?await sb.auth.signUp({email,password,options:{data:{username:$("#cmU").value.trim()}}}):await sb.auth.signInWithPassword({email,password});
+        if(r.error){m.textContent=r.error.message;return}
+        if(!r.data.session){m.textContent="Check your email to confirm, then log in.";return}
+        user=r.data.session.user;form()};
+    }
+  };
+  const load=async()=>{
+    const {data,error}=await sb.from("comments").select("id,parent,handle,text,editor,t").eq("slug",slug).order("t").limit(500);
+    if(error){L.innerHTML='<div class="empty">Comments are unavailable right now.</div>';return}
+    $("#cmN").textContent=data.length?"("+data.length+")":"";
+    const kids={};data.forEach(c=>{if(c.parent)(kids[c.parent]=kids[c.parent]||[]).push(c)});
+    const one=(c,d)=>'<div class="cm'+(d?" re":"")+'"><div class="cmh"><b>'+esc(c.handle)+'</b>'+(c.editor?' <span class="ed">Editor</span>':'')+' <span>'+ago(c.t)+'</span></div><p>'+esc(c.text).replace(/\n/g,"<br>")+'</p>'+(d?'':'<a href="#" class="cmr" data-id="'+c.id+'" data-h="'+esc(c.handle)+'">Reply</a>')+'</div>'+(kids[c.id]||[]).map(k=>one(k,1)).join("");
+    const top=data.filter(c=>!c.parent).reverse();
+    L.innerHTML=top.length?top.map(c=>one(c,0)).join(""):'<div class="empty">No comments yet. Start the argument.</div>';
+    L.querySelectorAll(".cmr").forEach(a=>a.onclick=e=>{e.preventDefault();if(!user){toast("Log in to reply");$("#cmE")&&$("#cmE").focus();return}replyTo=a.dataset.id;$("#cmRe").innerHTML='Replying to <b>'+esc(a.dataset.h)+'</b> · <a href="#" id="cmX">cancel</a>';$("#cmX").onclick=ev=>{ev.preventDefault();replyTo=null;$("#cmRe").innerHTML=""};$("#cmT").focus()});
+  };
+  form();load();
 }
 function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(()=>e.classList.remove("on"),1600)}
 

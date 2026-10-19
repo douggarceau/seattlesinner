@@ -6,7 +6,7 @@ Everything needed to launch the Report in a new city: the newspaper-style front 
 
 | File | What it is |
 |---|---|
-| `edition_tpl.html` | The newspaper front page (masthead, city-first layout, Crime Watch and Tonight rail, sections, story pages, daily main-story slot). Change the city name and the `LOCALRX` place list. |
+| `edition_tpl.html` | The newspaper front page (masthead, city-first layout, Crime Watch and Tonight rail, sections, story pages with a comment section, daily main-story slot). Point SB_URL/SB_KEY at the city's own Supabase project (same comments table as tools/supabase/sinner.sql). Change the city name and the `LOCALRX` place list. |
 | `mk_edition.py` | Builds the page from the stories in the site's `index.html`. |
 | `masthead.png` | The Guitar Doug Report masthead. |
 | `stories_seattle.json` | Doug's stories as of Oct 19, 2026. National stories can run in every city; Seattle ones stay Seattle-only unless rewritten. |
