@@ -120,6 +120,7 @@
 .hdrtools{display:block!important;margin:0!important}.hdrtools .subbox{display:none}.hdrtools .subbox.open{display:block;max-width:520px;margin:12px auto}
 #seaBanner:empty{display:none}#seaBanner{margin:14px 0 -6px}#seaBanner .spr{margin:0}.sea-spr{width:100%;box-sizing:border-box;border-left-color:#ff6a00!important}.sea-spr .spr-tag{background:#ff6a00;box-shadow:0 0 16px #ff6a0088}
 .crime-spr{text-decoration:none;color:inherit}.crime-spr .spr-tag{background:#b00000;box-shadow:0 0 18px #ff000099;animation:crimePulse 1.6s ease-in-out infinite}@keyframes crimePulse{50%{box-shadow:0 0 4px #ff000044}}
+.sea-h.crm{margin-top:8px}.sea-h.crm b{color:#ff2a14}.crm-g a{all:unset;cursor:pointer;display:grid;gap:3px;align-content:start;padding:8px 9px;border-left:3px solid #e3170a;border-radius:4px;background:color-mix(in srgb,#e3170a 12%,#101114);min-height:48px}.crm-g a:hover{background:color-mix(in srgb,#e3170a 22%,#101114)}.crm-g small{font:700 9px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase;color:#ff5a3a}.crm-g b{font:700 13px/1.25 var(--read,Georgia,serif);color:#f2f4f6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1222,7 +1223,8 @@ function vCover(I){if(!I||!I.src)return '';
   <div class="cvside"><div class="sea-h"><b>Seattle News</b><button data-go="stories">All Seattle stories →</button></div>
   <div class="sea-g">${loc.map(x=>`<button data-story="${x.slug}" style="--sc:${tc(x.topic)}"><small>${esc(tl(x.topic))}</small><b>${esc(x.title)}</b></button>`).join('')}</div>
   <div class="sea-h nat"><b>In the ${esc(I.month)} issue</b></div>
-  <div class="nat-l">${I.lines.map(([slug,h])=>`<button data-story="${slug}">${esc(h)}</button>`).join('')}</div></div></div></section>`}
+  <div class="nat-l">${I.lines.map(([slug,h])=>`<button data-story="${slug}">${esc(h)}</button>`).join('')}</div>
+  ${(window.CRIMEITEMS||[]).length?`<div class="sea-h crm"><b>Seattle Crime</b><button data-go="crime">Crime Watch →</button></div><div class="sea-g crm-g">${window.CRIMEITEMS.filter(x=>!window.TOPCRIME||x.url!==window.TOPCRIME.url).slice(0,14).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener"><small>${esc((x.kind||'crime')+(x.hood?' · '+x.hood:''))}</small><b>${esc(x.headline)}</b></a>`).join('')}</div>`:''}</div></div></section>`}
 
 const TK={'safety test':'#ff3a2a','real-world incident':'#e3170a','research finding':'#ff7a1a','warning':'#d9a400','doctrine':'#8fb3d9','treaty/debate':'#8fb3d9','battlefield':'#e3170a','drone swarm':'#2fd3c8','loitering munition':'#ff7a1a','autonomous weapon':'#ff3a2a','armed robot':'#39ff14'};
 const pcol=v=>/^\s*-/.test(v||'')?'#ff3a2a':/^\s*\+/.test(v||'')?'#39ff14':'#2fd3c8';
@@ -1449,7 +1451,7 @@ fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>
  const W=/killed|dead|death|fatal|murder|homicide|gunned|shot and|stabbed|kidnap|abduct|rape|sexual assault|child|teen|missing|body|carjack|hostage|machete|knife/i;
  const ds=d.items.map(x=>Date.parse(x.date)||0),top=Math.max(...ds);
  const X=/kidnap|abduct|rape|hostage|child|killed|murdered|gunned down|stabbed to death/i,OLD=/years (on|later|ago)|cold case|anniversar/i;let best=null,bs=-1e9;d.items.forEach((x,i)=>{const age=(top-ds[i])/864e5;if(age>4)return;const t=x.headline+' '+(x.blurb||'');let sc=(SEV[x.kind]||1)+(W.test(x.headline)?5:0)+(X.test(x.headline)?3:0)+(W.test(x.blurb||'')?1:0)-age*0.7-(/no injur/i.test(x.blurb||'')?3:0)-(OLD.test(t)?8:0);if(sc>bs){bs=sc;best=x}});
- window.TOPCRIME=best||d.items[0];if(typeof STATE!=='undefined'&&STATE.view==='front'&&typeof render==='function')render()}).catch(()=>{});
+ window.CRIMEITEMS=d.items.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));window.TOPCRIME=best||d.items[0];if(typeof STATE!=='undefined'&&STATE.view==='front'&&typeof render==='function')render()}).catch(()=>{});
 function vReader(slug){
   const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
   const LOCK=!!(PAY_LINK&&typeof FEATURES!=='undefined'&&FEATURES.has(s.slug)&&!window.SS_MEMBER);
