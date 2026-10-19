@@ -72,13 +72,14 @@
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
 addEventListener('DOMContentLoaded',function(){mark();new MutationObserver(function(){if(!t)t=setTimeout(mark,250)}).observe(document.body,{childList:true,subtree:true})})}catch(e){}})();</script>
 <style>
-html.np{filter:invert(1) hue-rotate(180deg) sepia(.28) saturate(1.05) contrast(1.1);background:#0d1220}
-html.np body{background-color:#0d1220!important}
+html.np{filter:invert(1) hue-rotate(180deg) grayscale(1) contrast(1.12);background:#080808}
+html.np body{background-color:#080808!important}
 html.np img,html.np video,html.np iframe,html.np canvas,html.np picture,html.np .npbg{filter:invert(1) hue-rotate(180deg)}
 html.np .npbg img{filter:none}
 html.np .lgimg img{filter:none!important;animation:none!important}
-html.np *{text-shadow:none!important}
-html.np body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.16;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html.np *{text-shadow:none!important;box-shadow:none!important;animation-name:none!important}
+html.np .box,html.np section,html.np article,html.np .lead,html.np .sc,html.np .bw,html.np .ev,html.np .ms,html.np .nb,html.np .navbar a,html.np .navbar button{background-image:none!important}
+html.np .mast{border-bottom:3px double #c8c8c8}
 </style><!--NEWSPRINT_END-->
 </head>
 <body>
