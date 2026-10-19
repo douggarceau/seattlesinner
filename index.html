@@ -1047,6 +1047,8 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .gdxc h3{margin:0;font:700 18px/1.25 var(--display,Georgia,serif);color:#fff}
 @media(max-width:1000px){.gdxg{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.gdxg{grid-template-columns:1fr}}
+body.isfront .mast{display:none!important}
+.cvbox .sxbox{justify-content:center}
 </style>
 
 
@@ -1116,7 +1118,7 @@ const SCENE=[{"date": "2026-10-15", "end": "2026-10-31", "time": "", "title": "T
 const UPDATED="Oct 17, 2026";
 const COVERS=[];
 const ISSUES=[{no:1,month:'Fall 2026',src:"img/cover-gdr-fall2026.jpg",lines:[
- ['go:crime','Crime Watch',''],
+ ['go:crime','Latest Seattle Crime News',''],
  ['go:tech','AI and Tech','']
  ]}];
 const CUR=ISSUES[ISSUES.length-1];
@@ -1222,7 +1224,7 @@ function sxAlert(){const el=document.getElementById('sxAlert');if(!el||!SXALL.le
   const inner=`<span class="lightbar" aria-hidden="true"><i class="lr"></i><i class="lb"></i></span><span class="sxa-k"><span class="sxa-dot"></span>${esc(kk)}</span><h2>${esc(x.title)}</h2>${x.dek?`<p>${esc(x.dek)}</p>`:''}<span class="sxa-m">${esc([x.hood,sxDay(x.date),x.src].filter(Boolean).join(' · '))} · Read it →</span>`;
   el.innerHTML=x.slug?`<button type="button" class="sxa" data-story="${esc(x.slug)}">${inner}</button>`:`<a class="sxa" href="${esc(x.url)}" target="_blank" rel="noopener">${inner}</a>`}
 let CSTORY={},CSURL={};const CSP=fetch('/data/crimestories.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():[]).then(L=>{(L||[]).forEach(x=>{if(x&&!x.skip&&x.slug&&x.body){CSTORY[x.slug]=x;x.item_headline&&(CSURL['h:'+x.item_headline]=x.slug);((x.sources||[])[0]||{}).url&&(CSURL['u:'+x.sources[0].url]=CSURL['u:'+x.sources[0].url]===undefined?x.slug:null)}});return CSTORY}).catch(()=>CSTORY);
-async function sxFill(){const el=document.getElementById('sxFeed');if(!el)return;
+async function sxFill(){const el=document.getElementById('sxFeed');if(!el&&!document.getElementById('sxAlert'))return;
   const [j]=await Promise.all([fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),CSP]);
   const A=LOCAL().map(s=>({sev:sxSev(s),tag:sxTag(s),title:s.title,dek:s.dek,date:s.date,hood:'',src:'The Guitar Doug Report',slug:s.slug})).filter(x=>x.sev>0);
   const C=((j&&j.items)||[]).filter(i=>SXK[i.kind]).map(i=>({sev:SXK[i.kind][0],tag:SXK[i.kind][1],title:i.headline,dek:i.blurb||'',date:i.date||'',hood:i.hood||'Seattle',src:i.outlet||'',url:i.url,slug:CSURL['h:'+i.headline]||CSURL['u:'+i.url]||''}));C.forEach(x=>{if(x.slug){const t=CSTORY[x.slug];x.title=t.title||x.title;x.dek=t.dek||x.dek;x.src='The Guitar Doug Report'}else delete x.slug});
@@ -1234,7 +1236,7 @@ async function sxFill(){const el=document.getElementById('sxFeed');if(!el)return
   const sel=document.getElementById('sxWhere');if(sel){const T=opt(SXTOWNS);sel.innerHTML=`<option value="">All of Seattle &amp; area (${SXALL.length})</option><optgroup label="Seattle neighborhoods">${opt(SXHOODS.concat(extra))}</optgroup>`+(T?`<optgroup label="Outlying towns">${T}</optgroup>`:'');
     
     sel.onchange=()=>{try{localStorage.setItem('sxWhere',sel.value)}catch(e){}sxRender();document.querySelector('.sx').scrollIntoView({behavior:'smooth',block:'start'})}}
-  sxRender()}
+  if(el)sxRender()}
 function sxRender(){const el=document.getElementById('sxFeed');if(!el)return;const w=(document.getElementById('sxWhere')||{}).value||'';
   const all=w?SXALL.filter(x=>x.places.includes(w)):SXALL;
   const G=[['Violence','Shootings, killings, stabbings, assaults, armed robberies',x=>x.sev>=3],['Police, Courts &amp; City Hall','Arrests, charges, misconduct, drugs, scandal',x=>x.sev==2&&!/crash|fire/i.test(x.tag)],['Crashes &amp; Fires','Deadly wrecks, hit-and-runs, fires',x=>/crash|fire/i.test(x.tag)],['Break-ins &amp; Theft','Burglaries, smash-and-grabs, theft',x=>x.sev==1]];
@@ -1251,8 +1253,7 @@ const EXCL=['satanic-cabal','candace-anomalies','the-mushroom-map','nancy-mace-g
 function vExcl(){const L=EXCL.map(k=>STORIES.find(x=>x.slug===k)).filter(Boolean);if(!L.length)return '';
   return `<section class="gdx"><div class="gdxh"><h2>The Guitar Doug Report Exclusives</h2></div><div class="gdxg">${L.map((t,i)=>`<button type="button" class="gdxc" data-story="${t.slug}"><span class="gdxn">${i+1}</span><h3>${esc(EXHL[t.slug]||t.title)}</h3></button>`).join('')}</div></section>`}
 function vFront(){setTimeout(sxFill,0);
-  const BX=`${[['satanic-cabal','The Investigation','#e3170a'],['macklemore-vs-the-owners-box','Music &amp; Power','#1e90ff'],['case-against-clavicular','The Charges','#ff7a1a'],['candace-anomalies','The Kirk Case','#a55cff'],['downfall-of-andrew-tate','Locked Up','#f2c94c'],['the-swarm','AI Gone Rogue','#2fd3c8']].map(([sl,k,c])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" style="--bc:${c}" data-story="${sl}"><span class="sxbk">${k}</span><h3>${esc(t.title)}</h3></button>`:''}).join('')}`;return `${vCover(CUR,BX)}${vExcl()}<div id="sxAlert"></div><section class="sx"><div class="sxwrap"><div class="sxmain"><div class="sxh"><h2><button type="button" class="sxgo" data-go="crime" id="sxTitle">Seattle Crime &amp; Safety News</button></h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
-  <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></div></div></section>${sxTech()}`;
+  const BX=`${[['satanic-cabal','','#e3170a'],['macklemore-vs-the-owners-box','','#1e90ff'],['case-against-clavicular','','#ff7a1a'],['candace-anomalies','','#a55cff'],['downfall-of-andrew-tate','','#f2c94c'],['the-swarm','AI Gone Rogue','#2fd3c8']].map(([sl,k,c])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" style="--bc:${c}" data-story="${sl}">${k?`<span class="sxbk">${k}</span>`:''}<h3>${esc(t.title)}</h3></button>`:''}).join('')}`;return `${vCover(CUR,BX)}${vExcl()}<div id="sxAlert"></div>`;
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
   return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Report Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
@@ -1642,6 +1643,7 @@ document.addEventListener('click',async e=>{
 
 function render(){
   const v=STATE.view;
+  document.body.classList.toggle('isfront',v==='front');
   $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='tech'?vTech():v==='crime'?vCrime():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
   document.querySelectorAll('#nav .nb').forEach(b=>b.toggleAttribute('aria-current',b.dataset.go===(v==='read'?STATE.prev:v))||b.setAttribute('aria-current','page'));
   document.querySelectorAll('#nav .nb').forEach(b=>{if(b.dataset.go===(v==='read'?STATE.prev:v))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
