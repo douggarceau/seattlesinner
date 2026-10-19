@@ -1625,7 +1625,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_sound",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
 (function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=false;try{want=localStorage.getItem('ss_amb')==='on'}catch(e){}
   const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false');if(ab){ab.textContent=hum?'🎧 Ambience on':'🎧 Ambience off';ab.classList.toggle('off',!hum);ab.setAttribute('aria-pressed',hum?'true':'false')}};
-  const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('drone',.6,3);paint()},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
+  let humT=null;const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('drone',.6,1.5);paint();clearTimeout(humT);humT=setTimeout(()=>{want=false;try{localStorage.setItem('ss_amb','off')}catch(_){}humOff(2)},6000)},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
   b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);if(SFX.on){SFX.warm();SFX.play('select');if(want)humOn()}else humOff(.4);paint()});
   if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!hum;try{localStorage.setItem('ss_amb',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
   ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm();if(want)setTimeout(humOn,50)},{once:true,capture:true,passive:true}));
