@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T21:25:58-07:00",
+"asof": "2026-10-19T01:25:25-07:00",
 "items": [
 {
 "kind": "other",
@@ -132,6 +132,18 @@
 "date": "2026-10-16",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
 "outlet": "Westside Seattle"
+},
+{
+"kind": "other",
+"headline": "Hazmat scare empties a floor of Amazon's Doppler tower",
+"blurb": "Seattle firefighters evacuated the second floor of the 2000-block 6th Ave high-rise as a precaution after reports of a potentially hazardous substance. No injuries were reported.",
+"hood": "Denny Triangle",
+"spd": [
+"DOWNTOWN COMMERCIAL"
+],
+"date": "2026-10-16",
+"url": "https://hoodline.com/2026/10/hazmat-crews-rush-to-amazon-s-doppler-tower-after-second-floor-scare/",
+"outlet": "Hoodline"
 },
 {
 "kind": "courts",
@@ -591,6 +603,18 @@
 ],
 "date": "2026-10-01",
 "url": "https://hoodline.com/2026/10/woman-offers-kids-a-crown-from-her-car-at-alki-elementary-police-investigate/",
+"outlet": "Hoodline"
+},
+{
+"kind": "police",
+"headline": "Family seeks $30M over fatal police shooting behind SW Precinct",
+"blurb": "Relatives of a man shot by an officer in March 2025 in a lot behind SPD's Southwest Precinct filed a $30 million claim alleging excessive force and negligence. Prosecutors had declined criminal charges.",
+"hood": "Delridge",
+"spd": [
+"SOUTH DELRIDGE"
+],
+"date": "2026-10-01",
+"url": "https://hoodline.com/2026/10/seay-family-seeks-30m-from-seattle-police-over-fatal-precinct-shooting/",
 "outlet": "Hoodline"
 },
 {
