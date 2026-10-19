@@ -1219,13 +1219,12 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
   return `${crimeBanner()}<div class="front">
     <div class="stack">
-      ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
-        <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
-      <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
-      <div class="sgrid">${rest.slice(0,6).map(storyCard).join('')}</div>
       <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
-        <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
+        <div class="bwl">${BARS.slice(0,7).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
+      <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
+      <div class="sgrid">${[lead,...rest].filter(Boolean).slice(1,7).map(storyCard).join('')}</div>
+
       ${vGuide(true)}
       
     </div>
