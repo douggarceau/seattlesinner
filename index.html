@@ -96,7 +96,7 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
 .quote .t{font:400 22px/1.3 var(--body);margin:12px 0 6px}
 /* reports */
 .reports{border:2px solid #111;padding:24px;display:grid;grid-template-columns:200px repeat(4,1fr);gap:0;position:relative}
-.reports .lab{color:var(--red);font-size:44px;padding-right:20px;overflow-wrap:anywhere;line-height:.95}
+.reports .lab{color:var(--red);font-size:40px;padding-right:20px;line-height:.95;hyphens:none;word-break:normal}
 .reports .lab:after{content:"";display:block;width:24px;border-top:2px solid #111;margin-top:14px}
 .reports a{padding:0 16px;border-left:2px solid #111}
 .reports .pic{aspect-ratio:3/2;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;padding:8px;text-align:center;margin-bottom:10px;font-size:22px}
@@ -222,7 +222,7 @@ function grab(src,marker){const i=src.indexOf(marker);if(i<0)return null;let j=i
 const url=s=>'/?story='+encodeURIComponent(s.slug);
 let PH={},COVERS=[];
 const photo=s=>{if(IMG[s.slug])return{src:IMG[s.slug],own:1};return PH[s.slug]||PH[s.topic]||PH[{nightlife:'nightlife',weird:'culture',transit:'streets'}[s.topic]]||null};
-const pimg=(p,w)=>p?`<img src="${esc(p.own?p.src:p.src+'?auto=format&fit=crop&w='+(w||900)+'&q=72')}" alt="" loading="lazy">`:'';
+const pimg=(p,w)=>p?`<img onerror="this.remove()" src="${esc(p.own?p.src:p.src+'?auto=format&fit=crop&w='+(w||900)+'&q=72')}" alt="" loading="lazy">`:'';
 const kick=s=>TOPIC[s.topic]||s.topic;
 const fmtD=d=>{try{return new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}catch(_){return d}};
 const short=(t,n)=>{t=String(t||'');return t.length>n?t.slice(0,n).replace(/\s+\S*$/,'')+'…':t};
@@ -305,7 +305,7 @@ function front(S,W,EV,CR){
  </section>
  ${qsrc?`<section class="quote"><a href="${url(qsrc)}"><div class="q cond">“${esc(short(firstQuote(qsrc),140))}”</div><div class="t">${esc(qsrc.title)}</div><div class="by">By <b>${BY}</b></div></a></section>`:''}
  <section class="reports" id="reports">
-  <div class="lab cond">Guitar Doug Reports</div>
+  <div class="lab cond">The<br>Reports</div>
   ${reports.map(s=>`<a href="${url(s)}"><div class="pic cond">${photo(s)?pimg(photo(s),600):esc(kick(s))}</div><h3 class="hl">${esc(s.title)}</h3></a>`).join('')}
   <a class="btn more" href="#more">Read More</a>
  </section>
