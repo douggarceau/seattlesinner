@@ -68,7 +68,7 @@
 @keyframes shrBlink{0%{background:#1877f2;box-shadow:0 0 22px #4a9bff,0 0 4px #fff inset}50%{background:#0b2a55;box-shadow:0 0 4px #1877f244}100%{background:#1877f2}}
 @media (prefers-reduced-motion:reduce){.shrbig{animation:none}}
 </style>
-<!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search);if(q.has('paper')){q.get('paper')==='0'?sessionStorage.removeItem('gdrPaper'):sessionStorage.setItem('gdrPaper','1')}if(!(sessionStorage.getItem('gdrPaper')==='1'||/^\/newsprint/.test(location.pathname)))return;var d=document.documentElement;d.classList.add('np');
+<!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper',v==='usa'?'usa':'1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(/^\/usa/.test(location.pathname))m='usa';if(!m)return;var d=document.documentElement;d.classList.add('np');if(m==='usa')d.classList.add('usa');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
 addEventListener('DOMContentLoaded',function(){mark();new MutationObserver(function(){if(!t)t=setTimeout(mark,250)}).observe(document.body,{childList:true,subtree:true})})}catch(e){}})();</script>
 <style>
@@ -80,6 +80,13 @@ html.np .lgimg img{filter:none!important;animation:none!important}
 html.np *{text-shadow:none!important;box-shadow:none!important;animation-name:none!important}
 html.np .box,html.np section,html.np article,html.np .lead,html.np .sc,html.np .bw,html.np .ev,html.np .ms,html.np .nb,html.np .navbar a,html.np .navbar button{background-image:none!important}
 html.np .mast{border-bottom:3px double #c8c8c8}
+
+html.np.usa{filter:invert(1) hue-rotate(180deg) saturate(1.7) contrast(1.06)}
+html.np.usa *{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif!important}
+html.np.usa h1,html.np.usa h2,html.np.usa h3{font-weight:800!important;letter-spacing:-.01em}
+html.np.usa .box,html.np.usa section,html.np.usa article,html.np.usa .lead,html.np.usa .sc,html.np.usa .bw,html.np.usa .ev,html.np.usa .ms,html.np.usa .nb{background-image:none!important}
+html.np.usa .mast{border-bottom:6px solid #0b3a8c}
+html.np.usa .navbar{border-top:1px solid #333;border-bottom:1px solid #333}
 </style><!--NEWSPRINT_END-->
 </head>
 <body>
