@@ -167,6 +167,10 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
 .mag .wash.soft{background:linear-gradient(90deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.25) 30%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.25) 72%,rgba(0,0,0,.55) 100%)}
 .mag .wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0,rgba(0,0,0,.85) 33%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.85) 68%,rgba(0,0,0,.92) 100%)}
 @media (max-width:900px){.coverband{grid-template-columns:1fr}.coverband .side-t{text-align:center}}
+.rec .circ.lt{position:relative;z-index:0;background:#0b0b0b;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+.rec .circ.lt::before{content:"";position:absolute;inset:0;border-radius:50%;z-index:-1;background:radial-gradient(circle at 50% 45%,var(--lc) 0,color-mix(in srgb,var(--lc) 55%,#000) 60%,#0b0b0b 100%);animation:lightpulse 4.5s ease-in-out infinite;animation-delay:var(--ld)}
+@keyframes lightpulse{0%,100%{opacity:.18;box-shadow:0 0 0 rgba(0,0,0,0)}50%{opacity:1;box-shadow:0 0 28px 8px color-mix(in srgb,var(--lc) 60%,transparent)}}
+@media (prefers-reduced-motion:reduce){.rec .circ.lt::before{animation:none;opacity:.8}}
 .loading{padding:80px 0;text-align:center;font:400 28px var(--cond);text-transform:uppercase}
 /* mobile */
 @media (max-width:900px){
@@ -300,7 +304,7 @@ function front(S,W,EV,CR){
  </section>
  <section class="recwrap" id="crime">
   <div class="rechead"><span class="seal">GD</span><span class="cond">Crime Watch</span></div>
-  <div class="rec">${CR.slice(0,5).map(c=>`<a href="${esc(c.url)}" target="_blank" rel="noopener"><div class="circ"${PH.crime?` style="background:#111 url('${esc(PH.crime.src)}?auto=format&fit=crop&w=300&q=60') center/cover;text-shadow:0 1px 6px #000"`:''}>${esc(c.hood||'Seattle')}</div><span class="kick">${esc(c.kind||'news')}</span><h3 class="hl">${esc(c.headline)}</h3></a>`).join('')}</div>
+  <div class="rec">${CR.slice(0,5).map(c=>`<a href="${esc(c.url)}" target="_blank" rel="noopener"><div class="circ lt" style="--lc:${['#ff2a2a','#2a7bff','#ffb000','#ff2a2a','#2a7bff'][CR.indexOf(c)%5]};--ld:${(CR.indexOf(c)*1.3).toFixed(1)}s">${esc(c.hood||'Seattle')}</div><span class="kick">${esc(c.kind||'news')}</span><h3 class="hl">${esc(c.headline)}</h3></a>`).join('')}</div>
   <a class="btn recmore" href="/classic.html?go=crime">More Crime Watch</a>
  </section>
  ${qsrc?`<section class="quote"><a href="${url(qsrc)}"><div class="q cond">“${esc(short(firstQuote(qsrc),140))}”</div><div class="t">${esc(qsrc.title)}</div><div class="by">By <b>${BY}</b></div></a></section>`:''}
