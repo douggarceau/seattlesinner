@@ -67,6 +67,18 @@
 .shrbig:hover,.shrbig:focus-visible{filter:brightness(1.15);animation-play-state:paused}
 @keyframes shrBlink{0%{background:#1877f2;box-shadow:0 0 22px #4a9bff,0 0 4px #fff inset}50%{background:#0b2a55;box-shadow:0 0 4px #1877f244}100%{background:#1877f2}}
 @media (prefers-reduced-motion:reduce){.shrbig{animation:none}}
+.locnews .locl{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;padding:12px}
+.locb{all:unset;cursor:pointer;display:block;padding:12px 14px;border:1px solid #3a2520;border-left:4px solid #e3170a;border-radius:6px;background:rgba(227,23,10,.06)}
+.locb:hover{background:rgba(227,23,10,.14)}
+.locb .lk{display:block;font:800 10px/1 var(--mono,monospace);letter-spacing:.14em;text-transform:uppercase;color:#ff6a5a;margin-bottom:6px}
+.locb b{display:block;font:700 18px/1.2 var(--display,Georgia,serif);color:#fff;margin-bottom:5px}
+.locb small{display:block;font-size:13.5px;line-height:1.35;color:#c9d1d9;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vio .viol{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;padding:12px}
+.vrow{display:block;padding:10px 12px;border-left:4px solid #e3170a;background:rgba(227,23,10,.1);border-radius:4px;text-decoration:none}
+.vrow:hover{background:rgba(227,23,10,.2)}
+.vrow .vk{display:inline-block;background:#e3170a;color:#fff;font:800 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;padding:3px 6px;margin-bottom:6px}
+.vrow b{display:block;color:#fff;font:700 16px/1.25 var(--display,Georgia,serif)}
+.vrow small{display:block;color:#aab;font-size:12.5px;margin-top:4px}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1122,10 +1134,20 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
   <h4>${esc(e.title)}</h4><span class="when">${longDay(e.date)}${e.end&&e.end!==e.date?' – '+shortDay(e.end):''}${e.time?' · '+esc(e.time):''}</span>
   <span class="where">${esc(e.venue)}${e.hood?' · '+esc(e.hood):''}${e.price?' · '+esc(e.price):''}</span><p>${esc(e.blurb)}</p></a>`}
 
+const NATIONAL=new Set(['who-said-martial-law','downfall-of-andrew-tate','candace-anomalies','satanic-cabal','clavicular-business-of-contempt','case-against-clavicular','nancy-mace-gets-inked','we-turned-our-lights-off','the-swarm','you-can-see-everything']);
+const VIOL=/\b(shoot|shot|shooting|gunfire|gunman|stab|stabbing|stabbed|homicide|murder|killed|killing|assault|attack|attacked|violence|violent|carjack|robbery|robbed|slain|dead|death)\w*/i;
+const DRUG=/\b(drug|fentanyl|overdose|meth|heroin|cocaine|narcotic|dealer|trafficking|cartel|bust)\w*/i,SCAND=/\b(officer|lieutenant|sheriff|charged|arrest|accused|lawsuit|sued|scandal|misconduct|indicted|fraud|bribe|harass)\w*/i;
+const LOCAL=()=>{const L=STORIES.filter(s=>!NATIONAL.has(s.slug)&&!['national','ink','screen'].includes(s.topic));const v=s=>{const t=s.title+' '+s.dek;return s.beat==='violence'||VIOL.test(t)?3:(DRUG.test(t)||SCAND.test(s.title)?2:0)};return L.map((s,i)=>[s,i]).sort((a,b)=>(v(b[0])-v(a[0]))||((b[0].date||'').localeCompare(a[0].date||''))||(a[1]-b[1])).map(x=>x[0])};
+async function vioFill(){const el=document.querySelector('#vio .viol');if(!el)return;
+ const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
+ const K=['homicide','shooting','stabbing','assault','robbery'];
+ const it=((j&&j.items)||[]).filter(x=>K.includes(x.kind)).sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,6);
+ if(!it.length){document.getElementById('vio').remove();return}
+ el.innerHTML=it.map(x=>`<a class="vrow" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="vk">${esc(x.kind)}</span><b>${esc(x.headline)}</b><small>${esc(x.hood||'Seattle')} · ${esc((x.date||'').slice(5).replace('-','/'))} · ${esc(x.outlet||'')}</small></a>`).join('')}
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
-  const [lead,...rest]=STORIES;
+  const [lead,...rest]=LOCAL().concat(STORIES.filter(s=>!LOCAL().includes(s)));
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  return `${vCover(CUR)}<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace, Beneath the Ink</b><small>She says the tattoos helped her take her body back. Behind the viral photos: decades of silence, disputed allegations and a new chapter in court.</small></span><span class="spr-go">Read it →</span></button><div class="front">
+  setTimeout(vioFill,0);return `<section class="box vio" id="vio" style="--c:#e3170a"><div class="bh"><b>● Seattle Crime Watch</b><span>violence in the city · latest reports</span></div><div class="viol">Loading…</div></section>${vCover(CUR)}<section class="box locnews" style="--c:#e3170a"><div class="bh"><b>Seattle News</b><span>local, newest first</span></div><div class="locl">${LOCAL().slice(0,8).map(s=>`<button type="button" class="locb" data-story="${esc(s.slug)}"><span class="lk">${esc((TOPIC[s.topic]||[,''])[1])} · ${esc(s.date.slice(5).replace('-','/'))}</span><b>${esc(s.title)}</b><small>${esc(s.dek)}</small></button>`).join('')}</div></section><div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
@@ -1782,7 +1804,7 @@ const NW=[
 let CWX=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
 let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
   const lines=(typeof ISSUES!=='undefined'&&ISSUES[0]&&ISSUES[0].lines)||[];
-  const _fr=new Date(Date.now()-2*864e5).toISOString().slice(0,10);ST=STORIES.filter(x=>x.date&&x.date>=_fr).map(x=>x.slug).concat(['clavicular-business-of-contempt','nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off']).map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
+  const _fr=new Date(Date.now()-2*864e5).toISOString().slice(0,10);ST=STORIES.filter(x=>x.date&&x.date>=_fr).map(x=>x.slug).concat(STORIES.filter(x=>!['who-said-martial-law','downfall-of-andrew-tate','candace-anomalies','satanic-cabal','clavicular-business-of-contempt','case-against-clavicular','nancy-mace-gets-inked','we-turned-our-lights-off','the-swarm','you-can-see-everything'].includes(x.slug)&&!['national','ink','screen'].includes(x.topic)).map(x=>x.slug)).concat(['clavicular-business-of-contempt','nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off']).map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
 ST=ST.filter(x=>x.slug!=='skin-deep-lazonga');
 let SC=[];try{SC=(typeof upScene!=='undefined'&&upScene.length?upScene:SCENE).slice(0,40)}catch(e){}
 const SCF=SC.map(e=>({tag:"THE SCENE · "+e.kind,bigText:e.title,name:e.venue+(e.hood?' · '+e.hood:''),when:(typeof shortDay==='function'?shortDay(e.date):e.date)+(e.end&&e.end!==e.date&&typeof shortDay==='function'?' – '+shortDay(e.end):'')+(e.price?' · '+e.price:''),sub:e.blurb,go:"Details",theme:"sc",href:e.url,ext:1,k:(typeof KIND!=='undefined'&&KIND[e.kind])||'#b45cff'}));
