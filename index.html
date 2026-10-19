@@ -98,6 +98,7 @@
 .hdrtools{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start;margin:12px 0 4px}
 .hdrtools .hbtns{margin:0}.hdrtools .approw{grid-column:1}.hdrtools .subbox{grid-column:2;grid-row:1 / span 2;margin:0}
 @media (max-width:700px){.hdrtools{grid-template-columns:minmax(0,1fr)}.hdrtools .subbox{grid-column:1;grid-row:auto}}
+.edition{font:700 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.42em;text-transform:uppercase;color:#c9a227;margin:-4px 0 12px;text-align:center}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1007,6 +1008,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
   <header class="mast">
     <div>
       <h1 class="logo lgimg"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"></h1>
+      <div class="edition">Seattle Edition</div>
       
     </div>
   </header>
