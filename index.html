@@ -99,6 +99,7 @@
 .hdrtools .hbtns{margin:0}.hdrtools .approw{grid-column:1}.hdrtools .subbox{grid-column:2;grid-row:1 / span 2;margin:0}
 @media (max-width:700px){.hdrtools{grid-template-columns:minmax(0,1fr)}.hdrtools .subbox{grid-column:1;grid-row:auto}}
 .edition{font:700 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.42em;text-transform:uppercase;color:#c9a227;margin:-4px 0 12px;text-align:center}
+.mbox{margin:22px 0;padding:22px;border:1px solid #c9a227;border-radius:8px;background:linear-gradient(180deg,#1a1408,#0b0b0c);text-align:center}.mbox b{display:block;font:800 20px/1.2 var(--mono,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#c9a227;margin-bottom:8px}.mbox p{color:#d0d4d8;margin:0 0 14px}.mb-go{all:unset;cursor:pointer;display:inline-block;padding:12px 18px;border-radius:6px;background:#c9a227;color:#0b0b0c;font:800 13px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase}.mbox small{display:block;margin-top:10px;color:#8b949c}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1406,8 +1407,14 @@ function vStories(){
   return `<h2 class="room">Stories</h2>
   <div class="sgrid">${LS.map(storyCard).join('')}</div>`;
 }
+/* Members: national cover stories are for $4.99/month members; everything else stays free. */
+const PAY_LINK='';
+function memberBox(){const u=window.SS_USER;const go=u?`<a class="mb-go" href="${PAY_LINK}?prefilled_email=${encodeURIComponent(u.email)}" target="_blank" rel="noopener">Become a member · $4.99/month</a>`:`<button type="button" class="mb-go" data-join="story">Sign up free, then become a member</button>`;
+ return `<div class="mbox"><b>Keep reading</b><p>The national cover stories are for members of The Guitar Doug Report: $4.99 a month, cancel anytime. Seattle news stays free.</p>${go}${u?'':'<small>Already a member? Log in with the email you used.</small>'}</div>`}
 function vReader(slug){
   const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
+  const LOCK=!!(PAY_LINK&&typeof FEATURES!=='undefined'&&FEATURES.has(s.slug)&&!window.SS_MEMBER);
+  let B=s.body;if(LOCK){let n=0;B=[];for(const p of s.body){if(p.startsWith('#T ')||p.startsWith('= '))continue;B.push(p);if(!/^(## |> )/.test(p)&&++n>=3&&!/:\s*$/.test(p))break}}
   return `<article class="reader styled" style="${sty(s.slug)}">
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
     ${s.special?'<span class="spr-tag" style="display:inline-block;width:max-content;justify-self:start;margin-bottom:10px">SPECIAL REPORT</span>':''}<span class="kick" style="--tc:${tc(s.topic)}"><span class="dot"></span>${esc(tl(s.topic))}<time>${longDay(s.date)}</time></span>
@@ -1415,7 +1422,8 @@ function vReader(slug){
     <div class="byl"><span>By <b>The Guitar Doug Report</b></span><span>${s.minutes} min read</span></div>
     ${s.audio?`<div class="aud"><span class="aud-l">🎧 ${esc(s.audio.label||'Listen')}${s.audio.len?' · '+esc(s.audio.len):''}</span><audio controls preload="none" src="${esc(s.audio.src)}"></audio></div>`:''}
     ${s.trailer?`<figure class="trl">${s.trailer.src?`<video controls playsinline preload="none" poster="${esc(s.trailer.poster||'')}"><source src="${esc(s.trailer.src)}" type="video/mp4"></video>`:`<button type="button" class="trl-p" data-yt="${esc(s.trailer.yt)}" aria-label="Play the ${esc(s.trailer.label||'trailer')}" style="background-image:url(https://i.ytimg.com/vi/${esc(s.trailer.yt)}/hqdefault.jpg)"><span class="trl-b">▶</span></button>`}<figcaption>${esc(s.trailer.label||'Trailer')} · ${esc(s.trailer.credit||'')}</figcaption></figure>`:''}
-    <div class="body">${s.body.map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('#T ')?(()=>{const t=JSON.parse(p.slice(3));return `<figure class="stbl">${t.title?`<figcaption>${esc(t.title)}</figcaption>`:''}<div class="stbl-s"><table><thead><tr>${t.head.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr${/total/i.test(r[0])?' class="tot"':''}>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${t.note?`<p class="stbl-n">${esc(t.note)}</p>`:''}</figure>`})():p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>
+    <div class="body">${B.map(p=>p.startsWith('> ')?`<blockquote>${esc(p.slice(2))}</blockquote>`:p.startsWith('#T ')?(()=>{const t=JSON.parse(p.slice(3));return `<figure class="stbl">${t.title?`<figcaption>${esc(t.title)}</figcaption>`:''}<div class="stbl-s"><table><thead><tr>${t.head.map(c=>`<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr${/total/i.test(r[0])?' class="tot"':''}>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>${t.note?`<p class="stbl-n">${esc(t.note)}</p>`:''}</figure>`})():p.startsWith('## ')?`<h3>${esc(p.slice(3))}</h3>`:p.startsWith('= ')?(()=>{const [l,v,c]=p.slice(2).split(' | ');return `<div class="lg${c?' '+c:''}"><span>${esc(l)}</span><b>${esc(v)}</b></div>`})():`<p>${esc(p)}</p>`).join('')}</div>
+    ${LOCK?memberBox():''}
     <div class="srcs"><b>Reported from</b>${s.sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)} · ${esc(x.title)}${x.date?' · '+esc(x.date):''}</a>`).join('')}</div>
     <section class="cmts" id="cmts" data-slug="${s.slug}">${cmtsHTML(s.slug)}</section>
     <button class="back" data-go="${STATE.prev||'front'}">← Back</button>
@@ -1686,8 +1694,12 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   const join=k=>{scrollTo({top:0,behavior:'smooth'});box.classList.add('open');box.classList.remove('pulse');void box.offsetWidth;box.classList.add('pulse');msg('Subscribe free (or log in) to unlock '+(LOCKS[k]||'that')+'.','ok');setTimeout(()=>$('sbEmail').focus({preventScroll:true}),400)};
   document.addEventListener('click',e=>{const j=e.target.closest('[data-join]');if(j){e.preventDefault();join(j.dataset.join);return}},true);
   const q=new URLSearchParams(location.search).get('join');if(q)setTimeout(()=>join(q),600);
-  const show=u=>{const was=!!window.SS_USER;window.SS_USER=u||null;if(sb)onUser(u||null);if(was!==!!u&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render();const inn=!!u;$('sbIn').hidden=!inn;$('sbF').hidden=inn;document.querySelector('.sb-tabs').hidden=inn;if(u)$('sbWho').textContent=(u.user_metadata&&u.user_metadata.username)||u.email};
+  const show=u=>{const was=!!window.SS_USER;window.SS_USER=u||null;checkMember(u);if(sb)onUser(u||null);if(was!==!!u&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render();const inn=!!u;$('sbIn').hidden=!inn;$('sbF').hidden=inn;document.querySelector('.sb-tabs').hidden=inn;if(u)$('sbWho').textContent=(u.user_metadata&&u.user_metadata.username)||u.email};
 
+  const checkMember=async u=>{const prev=!!window.SS_MEMBER;let m=false;
+    if(u&&sb){try{const [ed,mb]=await Promise.all([sb.rpc('is_editor'),sb.from('members').select('active').eq('email',(u.email||'').toLowerCase()).maybeSingle()]);m=!!ed.data||!!(mb.data&&mb.data.active)}catch(_){}}
+    window.SS_MEMBER=m;if(prev!==m&&typeof render==='function'&&typeof STATE!=='undefined'&&STATE.view==='read')render()};
+  if(new URLSearchParams(location.search).get('member')==='welcome')setTimeout(()=>{scrollTo({top:0,behavior:'smooth'});box.classList.add('open');msg('Welcome, member! Log in with the email you paid with. Your membership switches on shortly.','ok')},600);
   /* Comments, tips, photos and the editor inbox, stored in the site's Supabase project.
      Exposes a small Firestore-style DB object so the page code above stays the same. */
   const T=()=>Date.now();
