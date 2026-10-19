@@ -1,30 +1,16 @@
 {
- "asof": "2026-10-19T02:04:08-07:00",
+ "asof": "2026-10-19T05:57:58-07:00",
  "sources_last_run": [
+  "AXS",
+  "AllEvents",
+  "Bandsintown",
+  "ConcertFix",
+  "Discotech",
+  "EventWorld",
   "Royal Room",
-  "Songkick Barboza",
-  "Songkick Benaroya",
-  "Songkick Chop Suey",
-  "Songkick Climate Pledge",
-  "Songkick Clock-Out",
-  "Songkick Conor Byrne",
-  "Songkick Crocodile",
-  "Songkick Fremont Abbey",
-  "Songkick Hidden Hall",
-  "Songkick Jazz Alley",
-  "Songkick Moore",
-  "Songkick Nectar",
-  "Songkick Neptune",
-  "Songkick Neumos",
-  "Songkick Paramount",
-  "Songkick Seattle",
-  "Songkick Showbox",
-  "Songkick Showbox SoDo",
-  "Songkick Substation",
-  "Songkick Sunset Tavern",
-  "Songkick Tractor",
-  "Songkick Vera Project",
-  "Songkick WAMU"
+  "Songkick",
+  "TicketSmarter",
+  "ma.to"
  ],
  "events": [
   {
@@ -50,6 +36,18 @@
    "ages": "",
    "url": "https://ma.to/event/daniel-sloss-moore-theatre-19-oct-2026-1900",
    "src": "ma.to (STG)"
+  },
+  {
+   "date": "2026-10-19",
+   "time": "7:00 PM",
+   "artists": "Wesley Joseph",
+   "venue": "Barboza",
+   "genre": "r&b",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/wesley-joseph-seattle-tickets-10-19-2026/event/486215",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
   },
   {
    "date": "2026-10-19",
@@ -170,6 +168,18 @@
    "ages": "",
    "url": "https://app.discotech.me/events/38276505-nice-as-fk-ft-jenny-lewis-erika-forster-tennesse-thomas-early-show-at-nectar-lounge",
    "src": "Discotech Nectar"
+  },
+  {
+   "date": "2026-10-20",
+   "time": "5:00 PM",
+   "artists": "Nice as Fuck w/ Alix Brown DJ Set",
+   "venue": "Nectar Lounge",
+   "hood": "Fremont",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/nice-as-fuck-seattle-tickets-10-20-2026/event/567770",
+   "src": "EventWorld"
   },
   {
    "date": "2026-10-20",
@@ -497,6 +507,18 @@
   },
   {
    "date": "2026-10-20",
+   "time": "8:00 PM",
+   "artists": "Blasting Company",
+   "venue": "Showbox SoDo",
+   "hood": "SoDo",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43290496-blasting-company-at-showbox-sodo",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-20",
    "time": "8:30 PM",
    "artists": "Pink Fuzz w/ The Well",
    "venue": "Funhouse",
@@ -553,30 +575,6 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43412156-jenny-lewis-at-nectar-lounge",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-20",
-   "time": "",
-   "artists": "Nice as Fuck w/ Alix Brown DJ Set",
-   "venue": "Nectar Lounge",
-   "hood": "Fremont",
-   "genre": "indie",
-   "price": "",
-   "ages": "",
-   "url": "https://www.eventworld.com/nice-as-fuck-seattle-tickets-10-20-2026/event/567770",
-   "src": "EventWorld"
-  },
-  {
-   "date": "2026-10-20",
-   "time": "",
-   "artists": "Blasting Company",
-   "venue": "Showbox SoDo",
-   "hood": "SoDo",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43290496-blasting-company-at-showbox-sodo",
    "src": "Songkick"
   },
   {
@@ -678,7 +676,7 @@
   {
    "date": "2026-10-21",
    "time": "7:00 PM",
-   "artists": "The War and Treaty",
+   "artists": "The War and Treaty w/ Blank Page, Jordan Babbs",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "folk",
@@ -1170,7 +1168,7 @@
   {
    "date": "2026-10-22",
    "time": "7:30 PM",
-   "artists": "Lyle Lovett",
+   "artists": "Lyle Lovett and His Small Large Band",
    "venue": "5th Avenue Theatre",
    "hood": "Downtown",
    "genre": "country",
@@ -1337,6 +1335,18 @@
   },
   {
    "date": "2026-10-22",
+   "time": "7:30 PM",
+   "artists": "Sasha Berliner",
+   "venue": "Town Hall Seattle",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108883436-sasha-berliner-at-town-hall-seattle",
+   "src": "Bandsintown",
+   "hood": "First Hill"
+  },
+  {
+   "date": "2026-10-22",
    "time": "8:00 PM",
    "artists": "Gregory Uhlmann",
    "venue": "Barboza",
@@ -1493,6 +1503,18 @@
   },
   {
    "date": "2026-10-22",
+   "time": "8:00 PM",
+   "artists": "Deepest Darkest w/ Daughters of Venus, DOSSEY",
+   "venue": "Chop Suey",
+   "genre": "goth",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108988852-deepest-darkest-at-chop-suey",
+   "src": "Bandsintown",
+   "hood": "Capitol Hill"
+  },
+  {
+   "date": "2026-10-22",
    "time": "8:30 PM",
    "artists": "Jacob Zimmerman",
    "venue": "Il Bistro",
@@ -1598,6 +1620,18 @@
    "ages": "",
    "url": "https://www.jazznearyou.com/seattle/events/one-ton-mayhem-patient-millions-east-of-friday-at-slims-last-chance-on-october-22",
    "src": "Jazz Near You"
+  },
+  {
+   "date": "2026-10-22",
+   "time": "",
+   "artists": "Grace Enger",
+   "venue": "Neumos",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/grace-enger-seattle-tickets-10-22-2026/event/492203",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
   },
   {
    "date": "2026-10-23",
@@ -1721,6 +1755,18 @@
   },
   {
    "date": "2026-10-23",
+   "time": "6:30 PM",
+   "artists": "Carmen Staaf / Elsa Nilsson",
+   "venue": "The Royal Room",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/earshot-jazz-festival-presents-staaf-nilsson/",
+   "src": "Royal Room",
+   "hood": "Columbia City"
+  },
+  {
+   "date": "2026-10-23",
    "time": "7:00 PM",
    "artists": "The Stacy Jones Band",
    "venue": "Aurora Borealis",
@@ -1830,7 +1876,7 @@
   {
    "date": "2026-10-23",
    "time": "7:00 PM",
-   "artists": "Dummy w/ Golomb",
+   "artists": "Dummy w/ Golomb, Spiral XP",
    "venue": "Tractor Tavern",
    "hood": "Ballard",
    "genre": "indie",
@@ -1909,6 +1955,18 @@
    "price": "",
    "ages": "",
    "url": "https://www.earshot.org/event/rivkah-ross/",
+   "src": "Earshot Jazz"
+  },
+  {
+   "date": "2026-10-23",
+   "time": "7:30 PM & 9:30 PM",
+   "artists": "Brian Culbertson",
+   "venue": "Dimitriou's Jazz Alley",
+   "hood": "Belltown",
+   "genre": "jazz",
+   "price": "$95",
+   "ages": "",
+   "url": "https://www.earshot.org/event/brian-culbertson/2026-10-23/1/",
    "src": "Earshot Jazz"
   },
   {
@@ -2054,18 +2112,6 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43422834-meernaa-at-conor-byrne-pub",
    "src": "Songkick"
-  },
-  {
-   "date": "2026-10-23",
-   "time": "7:30 PM & 9:30 PM",
-   "artists": "Brian Culbertson",
-   "venue": "Dimitriou's Jazz Alley",
-   "hood": "Belltown",
-   "genre": "jazz",
-   "price": "$95",
-   "ages": "",
-   "url": "https://www.earshot.org/event/brian-culbertson/2026-10-23/1/",
-   "src": "Earshot Jazz"
   },
   {
    "date": "2026-10-23",
@@ -2297,6 +2343,66 @@
   },
   {
    "date": "2026-10-24",
+   "time": "8:00 PM",
+   "artists": "Dinosaur Jr. w/ Stef Chura",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "rock",
+   "price": "from $72",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43299176-dinosaur-jr-at-neptune-theatre",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:00 PM",
+   "artists": "Freak Slug",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "indie",
+   "price": "from $43",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43313053-freak-slug-at-neumos",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:00 PM",
+   "artists": "Slow Pulp w/ Snuggle",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "indie",
+   "price": "from $83",
+   "ages": "",
+   "url": "https://www.eventworld.com/slow-pulp-seattle-tickets-10-24-2026/event/441110",
+   "src": "EventWorld"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:00 PM",
+   "artists": "Nite Wave 80's Halloween Party",
+   "venue": "Nectar Lounge",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/nite-wave-80s-halloween-party/2300030648676203",
+   "src": "AllEvents",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:00 PM",
+   "artists": "Sergey Shakhov Superdisco",
+   "venue": "Club Sur",
+   "genre": "pop",
+   "price": "$50",
+   "ages": "",
+   "url": "https://allevents.in/seattle/СИЭТЛ-ЗОЛОТЫЕ-ХИТЫ-СУПЕРДИСКОТЕКА-СЕРГЕЯ-ШАХОВА/100001995037739584",
+   "src": "AllEvents",
+   "hood": "SoDo"
+  },
+  {
+   "date": "2026-10-24",
    "time": "8:30 PM",
    "artists": "Ritual of the Gods - Part 2",
    "venue": "Clock-Out Lounge",
@@ -2346,7 +2452,7 @@
   {
    "date": "2026-10-24",
    "time": "8:30 PM",
-   "artists": "Tyler Ballgame",
+   "artists": "Tyler Ballgame w/ Sharon Silva",
    "venue": "Tractor Tavern",
    "hood": "Ballard",
    "genre": "indie",
@@ -2354,6 +2460,18 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43144128-tyler-ballgame-at-tractor-tavern",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:30 PM",
+   "artists": "Half Giraffe",
+   "venue": "The Royal Room",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/half-giraffe/",
+   "src": "Royal Room",
+   "hood": "Columbia City"
   },
   {
    "date": "2026-10-24",
@@ -2402,6 +2520,30 @@
    "ages": "",
    "url": "https://app.discotech.me/events/38289722-heavy-sounds-at-the-black-lodge",
    "src": "Discotech"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "9:00 PM",
+   "artists": "Paul Cauthen",
+   "venue": "Showbox SoDo",
+   "hood": "SoDo",
+   "genre": "country",
+   "price": "from $47",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43294478-paul-cauthen-at-showbox-sodo",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "9:00 PM",
+   "artists": "Emo vs. Pop-Punk - Myspace Music Video Party",
+   "venue": "Chop Suey",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.ticketsmarter.com/e/emo-vs-pop-punk-myspace-music-video-party-tickets-seattle-10-24-2026-chop-suey/3479402",
+   "src": "TicketSmarter",
+   "hood": "Capitol Hill"
   },
   {
    "date": "2026-10-24",
@@ -2465,6 +2607,18 @@
   },
   {
    "date": "2026-10-24",
+   "time": "10:00 PM",
+   "artists": "Blade Rave - A Vampire Themed Rave",
+   "venue": "The Crocodile",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.axs.com/uk/events/1631517",
+   "src": "AXS",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-10-24",
    "time": "",
    "artists": "Bedouine",
    "venue": "Ballard Homestead",
@@ -2502,30 +2656,6 @@
   {
    "date": "2026-10-24",
    "time": "",
-   "artists": "Dinosaur Jr. w/ Stef Chura",
-   "venue": "Neptune Theatre",
-   "hood": "University District",
-   "genre": "rock",
-   "price": "from $72",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43299176-dinosaur-jr-at-neptune-theatre",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-24",
-   "time": "",
-   "artists": "Freak Slug",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "indie",
-   "price": "from $43",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43313053-freak-slug-at-neumos",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-24",
-   "time": "",
    "artists": "Lenny Pearce",
    "venue": "Paramount Theatre",
    "hood": "Downtown",
@@ -2534,18 +2664,6 @@
    "ages": "",
    "url": "https://app.songkick.com/concerts/43270983-lenny-pearce-at-paramount-theatre",
    "src": "Songkick Paramount"
-  },
-  {
-   "date": "2026-10-24",
-   "time": "",
-   "artists": "Paul Cauthen",
-   "venue": "Showbox SoDo",
-   "hood": "SoDo",
-   "genre": "country",
-   "price": "from $47",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43294478-paul-cauthen-at-showbox-sodo",
-   "src": "Songkick"
   },
   {
    "date": "2026-10-24",
@@ -2562,14 +2680,14 @@
   {
    "date": "2026-10-24",
    "time": "",
-   "artists": "Slow Pulp w/ Snuggle",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "indie",
-   "price": "from $83",
+   "artists": "Seattle Symphony: Symphonically Spielberg - The Music of John Williams",
+   "venue": "Benaroya Hall",
+   "genre": "classical",
+   "price": "",
    "ages": "",
-   "url": "https://www.eventworld.com/slow-pulp-seattle-tickets-10-24-2026/event/441110",
-   "src": "EventWorld"
+   "url": "https://allevents.in/seattle/seattle-symphony-symphonically-spielberg-the-music-of-john-williams-at-benaroya-hall-s-mark-ta/200030761918215",
+   "src": "AllEvents",
+   "hood": "Downtown"
   },
   {
    "date": "2026-10-25",
@@ -2702,6 +2820,30 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/108897013-prettyugly-at-the-vera-project",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-25",
+   "time": "7:00 PM",
+   "artists": "Knox",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "pop",
+   "price": "from $18",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43321366-knox-at-neumos",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-25",
+   "time": "7:00 PM",
+   "artists": "ARTMS",
+   "venue": "Showbox SoDo",
+   "hood": "SoDo",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43328897-artms-at-showbox-sodo",
+   "src": "Songkick"
   },
   {
    "date": "2026-10-25",
@@ -2850,30 +2992,6 @@
   {
    "date": "2026-10-25",
    "time": "",
-   "artists": "Knox",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "pop",
-   "price": "from $18",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43321366-knox-at-neumos",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-25",
-   "time": "",
-   "artists": "ARTMS",
-   "venue": "Showbox SoDo",
-   "hood": "SoDo",
-   "genre": "pop",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43328897-artms-at-showbox-sodo",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-25",
-   "time": "",
    "artists": "Whitney Ballen",
    "venue": "Sunset Tavern",
    "hood": "Ballard",
@@ -2957,6 +3075,18 @@
   },
   {
    "date": "2026-10-26",
+   "time": "8:00 PM",
+   "artists": "Amble",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43195290-amble-at-showbox",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-26",
    "time": "8:30 PM",
    "artists": "Staticghost",
    "venue": "Funhouse",
@@ -3004,18 +3134,6 @@
    "src": "Songkick"
   },
   {
-   "date": "2026-10-26",
-   "time": "",
-   "artists": "Amble",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "folk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43195290-amble-at-showbox",
-   "src": "Songkick"
-  },
-  {
    "date": "2026-10-27",
    "time": "7:00 PM",
    "artists": "Katherine Van Bebber",
@@ -3042,12 +3160,12 @@
   {
    "date": "2026-10-27",
    "time": "7:00 PM",
-   "artists": "Ho99o9 w/ Slay Squad",
+   "artists": "Ho99o9 & N8NOFACE w/ Slay Squad",
    "venue": "Substation",
    "hood": "Ballard",
    "genre": "punk",
    "price": "from $37",
-   "ages": "",
+   "ages": "21+",
    "url": "https://songkick.com/concerts/43314816-ho99o9-at-substation",
    "src": "Songkick"
   },
@@ -3077,6 +3195,30 @@
   },
   {
    "date": "2026-10-27",
+   "time": "7:00 PM",
+   "artists": "Skillet w/ Escape the Fate, Bad Wolves, Autumn Kings",
+   "venue": "Moore Theatre",
+   "hood": "Belltown",
+   "genre": "rock",
+   "price": "from $81",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43287717-skillet-at-moore-theatre",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "7:00 PM",
+   "artists": "Protomartyr w/ Accessory",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43315349-protomartyr-at-neumos",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-27",
    "time": "7:30 PM",
    "artists": "This Is Halloween",
    "venue": "The Triple Door",
@@ -3086,6 +3228,54 @@
    "ages": "",
    "url": "https://thetripledoor.net/go/events/6513964?feature_id=923529&occurrence_id=757669561&popup=1",
    "src": "The Triple Door"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "7:30 PM",
+   "artists": "The Lao Tizer Band w/ Eric Marienthal, Elliott Yamin, Anthony Crawford, Gene Coye",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/the-lao-tizer-band-feat-eric-marienthal-elliott-yamin-anthony-crawford-and-gene-coye/200030287200613",
+   "src": "AllEvents",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "7:30 PM",
+   "artists": "Febuary",
+   "venue": "El Corazon",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/febuary-band-at-el-corazon/2400030696705501",
+   "src": "AllEvents",
+   "hood": "Eastlake"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "7:30 PM",
+   "artists": "Seattle Symphony: Paul Lewis Plays Mozart Sonatas",
+   "venue": "Benaroya Hall",
+   "genre": "classical",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/seattle-symphony-paul-lewis-plays-mozart-sonatas/2300030373754636",
+   "src": "AllEvents",
+   "hood": "Downtown"
+  },
+  {
+   "date": "2026-10-27",
+   "time": "7:30 PM",
+   "artists": "Critical Mass Big Band w/ Dr. Dave Camwell, Kim Maguire",
+   "venue": "The Royal Room",
+   "genre": "jazz",
+   "price": "$20",
+   "ages": "",
+   "url": "https://allevents.in/seattle/critical-mass-big-band-with-dr-dave-camwell-and-kim-maguire/200030746542552",
+   "src": "AllEvents",
+   "hood": "Columbia City"
   },
   {
    "date": "2026-10-27",
@@ -3133,30 +3323,6 @@
    "price": "from $44",
    "ages": "",
    "url": "https://songkick.com/concerts/43185991-kacey-musgraves-at-climate-pledge-arena",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-27",
-   "time": "",
-   "artists": "Skillet w/ Escape the Fate, Bad Wolves, Autumn Kings",
-   "venue": "Moore Theatre",
-   "hood": "Belltown",
-   "genre": "rock",
-   "price": "from $81",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43287717-skillet-at-moore-theatre",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-27",
-   "time": "",
-   "artists": "Protomartyr w/ Accessory",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43315349-protomartyr-at-neumos",
    "src": "Songkick"
   },
   {
@@ -3221,6 +3387,18 @@
   },
   {
    "date": "2026-10-28",
+   "time": "7:00 PM",
+   "artists": "Catch Your Breath w/ TX2, Colorblind, Arankai",
+   "venue": "Showbox SoDo",
+   "hood": "SoDo",
+   "genre": "rock",
+   "price": "from $55",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43241263-catch-your-breath-at-showbox-sodo",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-28",
    "time": "7:30 PM",
    "artists": "Fenix Flexin",
    "venue": "El Corazon",
@@ -3257,6 +3435,18 @@
   },
   {
    "date": "2026-10-28",
+   "time": "7:30 PM",
+   "artists": "Mothica",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://www.jambase.com/show/mothica-neumos-20261028",
+   "src": "JamBase"
+  },
+  {
+   "date": "2026-10-28",
    "time": "8:00 PM",
    "artists": "bunii",
    "venue": "The Crocodile",
@@ -3290,6 +3480,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/109016320-ascended-reality-at-vermillion",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-28",
+   "time": "8:00 PM",
+   "artists": "Medium Build w/ Merle Law",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43296923-medium-build-at-showbox",
+   "src": "Songkick"
   },
   {
    "date": "2026-10-28",
@@ -3342,30 +3544,6 @@
   {
    "date": "2026-10-28",
    "time": "",
-   "artists": "Mothica",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "pop",
-   "price": "",
-   "ages": "",
-   "url": "https://www.jambase.com/show/mothica-neumos-20261028",
-   "src": "JamBase"
-  },
-  {
-   "date": "2026-10-28",
-   "time": "",
-   "artists": "Catch Your Breath w/ TX2, Colorblind, Arankai",
-   "venue": "Showbox SoDo",
-   "hood": "SoDo",
-   "genre": "rock",
-   "price": "from $55",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43241263-catch-your-breath-at-showbox-sodo",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-28",
-   "time": "",
    "artists": "Blitzkid",
    "venue": "Sunset Tavern",
    "hood": "Ballard",
@@ -3373,18 +3551,6 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43328084-blitzkid-at-sunset-tavern",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-28",
-   "time": "",
-   "artists": "Medium Build w/ Merle Law",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "indie",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43296923-medium-build-at-showbox",
    "src": "Songkick"
   },
   {
@@ -3458,6 +3624,18 @@
    "ages": "",
    "url": "https://www.eventworld.com/smush-seattle-tickets-10-29-2026/event/572306",
    "src": "EventWorld"
+  },
+  {
+   "date": "2026-10-29",
+   "time": "7:00 PM",
+   "artists": "THE WLDLFE",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43287633-wldlfe-at-neumos",
+   "src": "Songkick"
   },
   {
    "date": "2026-10-29",
@@ -3618,18 +3796,6 @@
   {
    "date": "2026-10-29",
    "time": "",
-   "artists": "THE WLDLFE",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "pop",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43287633-wldlfe-at-neumos",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-29",
-   "time": "",
    "artists": "Joseph Capriati",
    "venue": "Q Nightclub",
    "hood": "Capitol Hill",
@@ -3677,6 +3843,18 @@
   },
   {
    "date": "2026-10-30",
+   "time": "6:00 PM",
+   "artists": "Death From Above 1979",
+   "venue": "The Crocodile",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://www.axs.com/uk/events/1458363",
+   "src": "AXS",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-10-30",
    "time": "7:00 PM",
    "artists": "Kurt Travis",
    "venue": "El Corazon",
@@ -3701,6 +3879,18 @@
   },
   {
    "date": "2026-10-30",
+   "time": "7:00 PM",
+   "artists": "Cumbia de Muertos 2026: Tropa Magica w/ Terror/Cactus, Qiensave, Lobo Lara, Rizoma",
+   "venue": "Tractor Tavern",
+   "hood": "Ballard",
+   "genre": "latin",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/festivals/3804910-cumbia-de-muertos/id/43409768-cumbia-de-muertos-2026",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-10-30",
    "time": "8:00 PM",
    "artists": "Taste Nate",
    "venue": "Blue Moon Tavern",
@@ -3710,6 +3900,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/1040259330-taste-nate-at-blue-moon-tavern",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-30",
+   "time": "8:00 PM",
+   "artists": "Rebecca Black w/ bayli",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43330194-rebecca-black-at-showbox",
+   "src": "Songkick"
   },
   {
    "date": "2026-10-30",
@@ -3870,30 +4072,6 @@
   {
    "date": "2026-10-30",
    "time": "",
-   "artists": "Rebecca Black w/ bayli",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "pop",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43330194-rebecca-black-at-showbox",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-30",
-   "time": "",
-   "artists": "Cumbia de Muertos 2026: Tropa Magica w/ Terror/Cactus, Qiensave, Lobo Lara, Rizoma",
-   "venue": "Tractor Tavern",
-   "hood": "Ballard",
-   "genre": "latin",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/festivals/3804910-cumbia-de-muertos/id/43409768-cumbia-de-muertos-2026",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-30",
-   "time": "",
    "artists": "Cumbia de Muertos: Tropa Magica w/ Terror/Cactus, Qiensave, Lobo Lara, Rizoma",
    "venue": "Tractor Tavern",
    "hood": "Ballard",
@@ -4038,7 +4216,7 @@
   {
    "date": "2026-10-31",
    "time": "8:00 PM",
-   "artists": "Ax and the Hatchetmen",
+   "artists": "Ax and the Hatchetmen w/ The Rare Occasions",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "rock",
@@ -4046,6 +4224,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/1039059317-ax-and-the-hatchetmen-at-the-crocodile",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-31",
+   "time": "8:00 PM",
+   "artists": "Rival Sons w/ The Blue Stones, The Velveteers",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43292810-rival-sons-at-showbox-at-the-market",
+   "src": "Songkick"
   },
   {
    "date": "2026-10-31",
@@ -4082,6 +4272,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/1039654616-daft-disko:-a-french-house-and-disco-party-at-the-crocodile",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-31",
+   "time": "10:00 PM",
+   "artists": "Daft Disko Halloween",
+   "venue": "The Crocodile",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.axs.com/uk/events/1591114",
+   "src": "AXS",
+   "hood": "Belltown"
   },
   {
    "date": "2026-10-31",
@@ -4194,18 +4396,6 @@
   {
    "date": "2026-10-31",
    "time": "",
-   "artists": "Rival Sons w/ The Blue Stones, The Velveteers",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43292810-rival-sons-at-showbox-at-the-market",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-10-31",
-   "time": "",
    "artists": "BOO! Seattle 2026: Gramatik, KAYZO, Sara Landry, Walker & Royce, A Little Sound, Azyr, Samplifire, Junkie Kid",
    "venue": "WAMU Theater",
    "hood": "SoDo",
@@ -4265,6 +4455,18 @@
   },
   {
    "date": "2026-11-01",
+   "time": "6:00 PM",
+   "artists": "Kim Maguire Quintet",
+   "venue": "Seattle First Baptist Church",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/kim-maguire-quintet/200030675941047",
+   "src": "AllEvents",
+   "hood": "First Hill"
+  },
+  {
+   "date": "2026-11-01",
    "time": "7:00 PM",
    "artists": "Dice",
    "venue": "Barboza",
@@ -4306,10 +4508,82 @@
    "venue": "Tractor Tavern",
    "hood": "Ballard",
    "genre": "indie",
-   "price": "",
-   "ages": "",
+   "price": "$25",
+   "ages": "21+",
    "url": "https://songkick.com/concerts/43309163-patrick-wolf-at-tractor-tavern",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "7:00 PM",
+   "artists": "Gilla Band",
+   "venue": "Neumos",
+   "hood": "Capitol Hill",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43239045-gilla-band-at-neumos",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "7:30 PM",
+   "artists": "Daley",
+   "venue": "Nectar Lounge",
+   "hood": "Fremont",
+   "genre": "r&b",
+   "price": "",
+   "ages": "21+",
+   "url": "https://songkick.com/concerts/43276845-daley-at-nectar-lounge",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "8:00 PM",
+   "artists": "Great Lake Swimmers",
+   "venue": "Sunset Tavern",
+   "hood": "Ballard",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43279203-great-lake-swimmers-at-sunset-tavern",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "8:00 PM",
+   "artists": "Slothrust w/ Um, Jennifer?",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43281634-slothrust-at-showbox-at-the-market",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "8:00 PM",
+   "artists": "Danbert Nobacon w/ Lizzie Franks, Josh Gross, Michelle Pannell",
+   "venue": "Kraken Bar & Lounge",
+   "genre": "folk",
+   "price": "$10",
+   "ages": "21+",
+   "url": "https://allevents.in/seattle/danbert-nobacon-lizzie-franks-josh-gross-michelle-pannell-kraken/200030638867413",
+   "src": "AllEvents",
+   "hood": "University District"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "8:30 PM",
+   "artists": "Candlelight: Tribute to Juan Gabriel on Strings",
+   "venue": "National Nordic Museum",
+   "genre": "classical",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/candlelight-tribute-to-juan-gabriel-on-strings/2300029799340727",
+   "src": "AllEvents",
+   "hood": "Ballard"
   },
   {
    "date": "2026-11-01",
@@ -4334,54 +4608,6 @@
    "ages": "",
    "url": "https://www.eventworld.com/jon-cleary-seattle-tickets-11-01-2026/event/578983",
    "src": "EventWorld"
-  },
-  {
-   "date": "2026-11-01",
-   "time": "",
-   "artists": "Daley",
-   "venue": "Nectar Lounge",
-   "hood": "Fremont",
-   "genre": "r&b",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43276845-daley-at-nectar-lounge",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-01",
-   "time": "",
-   "artists": "Gilla Band",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43239045-gilla-band-at-neumos",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-01",
-   "time": "",
-   "artists": "Great Lake Swimmers",
-   "venue": "Sunset Tavern",
-   "hood": "Ballard",
-   "genre": "folk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43279203-great-lake-swimmers-at-sunset-tavern",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-01",
-   "time": "",
-   "artists": "Slothrust",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43281634-slothrust-at-showbox-at-the-market",
-   "src": "Songkick"
   },
   {
    "date": "2026-11-02",
@@ -4506,7 +4732,7 @@
   {
    "date": "2026-11-03",
    "time": "8:00 PM",
-   "artists": "Bahamas",
+   "artists": "Bahamas w/ Sister Ray",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "folk",
@@ -4525,6 +4751,18 @@
    "price": "from $66",
    "ages": "",
    "url": "https://songkick.com/concerts/43381758-jessie-reyez-at-wamu-theater",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "8:00 PM",
+   "artists": "Pinhead Gunpowder",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43229298-pinhead-gunpowder-at-showbox-at-the-market",
    "src": "Songkick"
   },
   {
@@ -4590,18 +4828,6 @@
   {
    "date": "2026-11-03",
    "time": "",
-   "artists": "Pinhead Gunpowder",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43229298-pinhead-gunpowder-at-showbox-at-the-market",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-03",
-   "time": "",
    "artists": "Ivy",
    "venue": "The Triple Door",
    "hood": "Downtown",
@@ -4626,7 +4852,7 @@
   {
    "date": "2026-11-04",
    "time": "7:00 PM",
-   "artists": "Plini",
+   "artists": "Plini w/ Night Verses, Portraits",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "metal",
@@ -4794,7 +5020,7 @@
   {
    "date": "2026-11-05",
    "time": "7:00 PM",
-   "artists": "The Tallest Man on Earth",
+   "artists": "The Tallest Man On Earth w/ Andrea Von Kampen",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "folk",
@@ -4838,6 +5064,18 @@
    "ages": "21+",
    "url": "https://www.bandsintown.com/e/1040199988-222-at-conor-byrne-pub",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-11-05",
+   "time": "8:00 PM",
+   "artists": "ARIA LIVE",
+   "venue": "Showbox SoDo",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://www.axs.com/events/1504711",
+   "src": "AXS",
+   "hood": "SoDo"
   },
   {
    "date": "2026-11-05",
@@ -5082,12 +5320,12 @@
   {
    "date": "2026-11-06",
    "time": "7:30 PM",
-   "artists": "MaRLo w/ Johnny Monsoon, Oxymoron, Madlon, Bella Rose",
+   "artists": "MaRLo w/ Johnny Monsoon, Oxymoron, Madlon, Bella Rose, Cancel the Couch, J-Note, Just J, Dr Casa",
    "venue": "Nectar Lounge",
    "hood": "Fremont",
    "genre": "electronic",
    "price": "",
-   "ages": "",
+   "ages": "21+",
    "url": "https://allevents.in/seattle/marlo-plus-johnny-monsoon-oxymoron-madlon-bella-rose-cancel-the-couch-j-note-just-j-dr-casa/200030711178739",
    "src": "AllEvents"
   },
@@ -5123,7 +5361,7 @@
    "hood": "Eastlake",
    "genre": "goth",
    "price": "$20 adv / $25 dos",
-   "ages": "",
+   "ages": "21+",
    "url": "https://allevents.in/seattle/soft-vein-modele-and-chalice-sect/200030529447826",
    "src": "AllEvents"
   },
@@ -5154,7 +5392,7 @@
   {
    "date": "2026-11-06",
    "time": "8:00 PM",
-   "artists": "Quadeca",
+   "artists": "Quadeca w/ DERBY, Oleka",
    "venue": "The Showbox",
    "hood": "Downtown",
    "genre": "hip-hop",
@@ -5207,7 +5445,7 @@
    "hood": "SoDo",
    "genre": "electronic",
    "price": "from $136",
-   "ages": "",
+   "ages": "21+",
    "url": "https://www.eventworld.com/i-hate-models-seattle-tickets-11-06-2026/event/559025",
    "src": "EventWorld"
   },
@@ -5225,15 +5463,27 @@
   },
   {
    "date": "2026-11-06",
-   "time": "10:30 PM",
-   "artists": "Cry w/ Wizard Moded, Eve Defy, nohup",
-   "venue": "ANTiPODE Art Gallery",
-   "hood": "",
+   "time": "10:00 PM",
+   "artists": "Gabriel & Dresden",
+   "venue": "Q Nightclub",
+   "hood": "Capitol Hill",
    "genre": "electronic",
-   "price": "$29",
+   "price": "from $48",
+   "ages": "21+",
+   "url": "https://songkick.com/concerts/43450440-gabriel-and-dresden-at-q-nightclub",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "10:00 PM",
+   "artists": "RIOT TEN w/ yvm3, TYNAN, Ruvlo, Hexxa",
+   "venue": "Substation",
+   "hood": "Ballard",
+   "genre": "electronic",
+   "price": "from $48",
    "ages": "",
-   "url": "https://allevents.in/seattle/ground-hum-×-antipode-present-cry/100002002317874664",
-   "src": "AllEvents"
+   "url": "https://songkick.com/concerts/42796410-riot-ten-at-substation",
+   "src": "Songkick"
   },
   {
    "date": "2026-11-06",
@@ -5274,30 +5524,6 @@
   {
    "date": "2026-11-06",
    "time": "",
-   "artists": "Gabriel & Dresden",
-   "venue": "Q Nightclub",
-   "hood": "Capitol Hill",
-   "genre": "electronic",
-   "price": "from $48",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43450440-gabriel-and-dresden-at-q-nightclub",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-06",
-   "time": "",
-   "artists": "RIOT TEN w/ yvm3, TYNAN, Ruvlo, Hexxa",
-   "venue": "Substation",
-   "hood": "Ballard",
-   "genre": "electronic",
-   "price": "from $48",
-   "ages": "",
-   "url": "https://songkick.com/concerts/42796410-riot-ten-at-substation",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-06",
-   "time": "",
    "artists": "Billy and the Dreamboats",
    "venue": "Sunset Tavern",
    "hood": "Ballard",
@@ -5306,6 +5532,54 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43412057-billy-and-the-dreamboats-at-sunset-tavern",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "",
+   "artists": "Kimya Dawson & Blvck Hippie",
+   "venue": "Black & Tan Hall",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/kimya-dawson-and-blvck-hippie-seattle-tickets-11-06-2026/event/586330",
+   "src": "EventWorld",
+   "hood": "Hillman City"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "",
+   "artists": "Arturo Sandoval",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/arturo-sandoval-seattle-tickets-11-06-2026/event/578698",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "",
+   "artists": "Sex Mex",
+   "venue": "The Black Lodge",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/sex-mex-seattle-tickets-11-06-2026/event/578845",
+   "src": "EventWorld",
+   "hood": "Wallingford"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "",
+   "artists": "Nobuo Uematsu",
+   "venue": "Benaroya Hall",
+   "genre": "classical",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/nobuo-uematsu-seattle-tickets-11-06-2026/event/572415",
+   "src": "EventWorld",
+   "hood": "Downtown"
   },
   {
    "date": "2026-11-07",
@@ -5620,6 +5894,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-07",
+   "time": "",
+   "artists": "Claudio Simonetti's Goblin",
+   "venue": "El Corazon",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/claudio-simonettis-goblin-seattle-tickets-11-07-2026/event/578015",
+   "src": "EventWorld",
+   "hood": "Eastlake"
+  },
+  {
    "date": "2026-11-08",
    "time": "7:00 PM",
    "artists": "Habak",
@@ -5665,6 +5951,18 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43201178-jake-xerxes-fussell-at-tractor-tavern",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-08",
+   "time": "8:00 PM",
+   "artists": "The Black Angels w/ Ghostwoman",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43159794-black-angels-at-showbox-at-the-market",
    "src": "Songkick"
   },
   {
@@ -5754,18 +6052,6 @@
   {
    "date": "2026-11-08",
    "time": "",
-   "artists": "The Black Angels w/ Ghostwoman",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43159794-black-angels-at-showbox-at-the-market",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-08",
-   "time": "",
    "artists": "Emily Scott Robinson & Alice Wallace",
    "venue": "The Triple Door",
    "hood": "Downtown",
@@ -5786,6 +6072,18 @@
    "ages": "All ages",
    "url": "https://app.songkick.com/concerts/43461089-roman-candle-at-vera-project",
    "src": "Songkick Vera Project"
+  },
+  {
+   "date": "2026-11-08",
+   "time": "",
+   "artists": "Arturo Sandoval",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/arturo-sandoval-seattle-tickets-11-08-2026/event/578696",
+   "src": "EventWorld",
+   "hood": "Belltown"
   },
   {
    "date": "2026-11-09",
@@ -5860,6 +6158,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-09",
+   "time": "",
+   "artists": "Emma Nissen",
+   "venue": "The Triple Door",
+   "genre": "pop",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/emma-nissen-seattle-tickets-11-09-2026/event/553055",
+   "src": "EventWorld",
+   "hood": "Downtown"
+  },
+  {
    "date": "2026-11-10",
    "time": "7:00 PM",
    "artists": "The Hails",
@@ -5886,7 +6196,7 @@
   {
    "date": "2026-11-10",
    "time": "7:00 PM",
-   "artists": "Tank and the Bangas",
+   "artists": "Tank and The Bangas w/ Ariel J., Zeus",
    "venue": "The Crocodile",
    "hood": "Belltown",
    "genre": "r&b",
@@ -5945,6 +6255,18 @@
   },
   {
    "date": "2026-11-10",
+   "time": "8:00 PM",
+   "artists": "L7",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43203625-l7-at-showbox-at-the-market",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-10",
    "time": "",
    "artists": "James Ivy",
    "venue": "Baba Yaga",
@@ -5989,18 +6311,6 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43342074-vansire-at-neumos",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-10",
-   "time": "",
-   "artists": "L7",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43203625-l7-at-showbox-at-the-market",
    "src": "Songkick"
   },
   {
@@ -6376,6 +6686,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-12",
+   "time": "",
+   "artists": "The Four Tops",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "r&b",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/the-four-tops-seattle-tickets-11-12-2026/event/578644",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
    "date": "2026-11-13",
    "time": "6:00 PM",
    "artists": "Hit the Lights",
@@ -6688,6 +7010,42 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "The Four Tops",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "r&b",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/the-four-tops-seattle-tickets-11-13-2026/event/578645",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "DØMINA",
+   "venue": "Q Nightclub",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/domina-seattle-tickets-11-13-2026/event/572359",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "HALIENE",
+   "venue": "Ora Nightclub",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/haliene-seattle-tickets-11-13-2026/event/571298",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
    "date": "2026-11-14",
    "time": "2:00 PM",
    "artists": "Fred Eaglesmith",
@@ -6940,6 +7298,30 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-14",
+   "time": "",
+   "artists": "Major League Djz",
+   "venue": "The Shop",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/major-league-djz-seattle-tickets-11-14-2026/event/582369",
+   "src": "EventWorld",
+   "hood": "SoDo"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "",
+   "artists": "The Four Tops",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "r&b",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/the-four-tops-seattle-tickets-11-14-2026/event/578646",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
    "date": "2026-11-15",
    "time": "8:00 PM",
    "artists": "2Slimey",
@@ -7096,6 +7478,42 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-15",
+   "time": "",
+   "artists": "The Four Tops",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "r&b",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/the-four-tops-seattle-tickets-11-15-2026/event/578643",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
+   "date": "2026-11-16",
+   "time": "6:00 PM",
+   "artists": "Arch Enemy w/ The Black Dahlia Murder, Septicflesh, Crypta, Thrown Into Exile",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "metal",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43226534-arch-enemy-at-showbox-at-the-market",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-16",
+   "time": "6:30 PM",
+   "artists": "Underoath w/ As Cities Burn, August Burns Red, Atreyu",
+   "venue": "Paramount Theatre",
+   "hood": "Downtown",
+   "genre": "metal",
+   "price": "",
+   "ages": "",
+   "url": "https://www.jambase.com/show/underoath-paramount-theatre-20261116",
+   "src": "JamBase"
+  },
+  {
    "date": "2026-11-16",
    "time": "7:00 PM",
    "artists": "Bayonne",
@@ -7121,6 +7539,18 @@
   },
   {
    "date": "2026-11-16",
+   "time": "7:00 PM",
+   "artists": "Silverstein w/ Story Of The Year",
+   "venue": "Showbox SoDo",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/silverstein-and-story-of-the-year/2300030501452603",
+   "src": "AllEvents",
+   "hood": "SoDo"
+  },
+  {
+   "date": "2026-11-16",
    "time": "8:00 PM",
    "artists": "The Kareem Kandi World Orchestra",
    "venue": "Zig Zag Cafe",
@@ -7133,19 +7563,19 @@
   },
   {
    "date": "2026-11-16",
-   "time": "",
-   "artists": "DAMAG3",
+   "time": "8:00 PM",
+   "artists": "DAMAG3 w/ The Neighborhood Kids, Connor Cristi",
    "venue": "Nectar Lounge",
    "hood": "Fremont",
    "genre": "electronic",
    "price": "",
-   "ages": "",
+   "ages": "21+",
    "url": "https://www.songkick.com/concerts/43434474-damag3-at-nectar-lounge",
    "src": "Songkick"
   },
   {
    "date": "2026-11-16",
-   "time": "",
+   "time": "8:00 PM",
    "artists": "Olivia O'Brien",
    "venue": "Neumos",
    "hood": "Capitol Hill",
@@ -7157,27 +7587,15 @@
   },
   {
    "date": "2026-11-16",
-   "time": "",
-   "artists": "Underoath w/ As Cities Burn, August Burns Red, Atreyu",
-   "venue": "Paramount Theatre",
-   "hood": "Downtown",
+   "time": "8:00 PM",
+   "artists": "Killer Dwarfs",
+   "venue": "El Corazon",
    "genre": "metal",
    "price": "",
    "ages": "",
-   "url": "https://www.jambase.com/show/underoath-paramount-theatre-20261116",
-   "src": "JamBase"
-  },
-  {
-   "date": "2026-11-16",
-   "time": "",
-   "artists": "Arch Enemy w/ The Black Dahlia Murder, Septicflesh, Crypta, Thrown Into Exile",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "metal",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43226534-arch-enemy-at-showbox-at-the-market",
-   "src": "Songkick"
+   "url": "https://allevents.in/seattle/killer-dwarfs/200030744528147",
+   "src": "AllEvents",
+   "hood": "Eastlake"
   },
   {
    "date": "2026-11-17",
@@ -7218,7 +7636,7 @@
   {
    "date": "2026-11-17",
    "time": "8:00 PM",
-   "artists": "Natural Child",
+   "artists": "Natural Child w/ Babehoven",
    "venue": "Tractor Tavern",
    "hood": "Ballard",
    "genre": "rock",
@@ -7384,6 +7802,90 @@
    "src": "JamBase"
   },
   {
+   "date": "2026-11-17",
+   "time": "",
+   "artists": "Dead Butterflies",
+   "venue": "Chop Suey",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/dead-butterflies-seattle-tickets-11-17-2026/event/581049",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:00 PM",
+   "artists": "State Champs w/ Cartel, Taylor Acorn, Like Roses",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.jambase.com/show/state-champs-showbox-at-the-market-20261118",
+   "src": "JamBase"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:00 PM",
+   "artists": "Jervis Campbell",
+   "venue": "Barboza",
+   "genre": "country",
+   "price": "",
+   "ages": "21+",
+   "url": "https://allevents.in/seattle/jervis-campbell-21/3200030600620816",
+   "src": "AllEvents",
+   "hood": "Capitol Hill"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:00 PM",
+   "artists": "Louie TheSinger",
+   "venue": "Nectar Lounge",
+   "genre": "country",
+   "price": "",
+   "ages": "21+",
+   "url": "https://allevents.in/seattle/louie-thesinger-with-special-guests/200030789148637",
+   "src": "AllEvents",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:00 PM",
+   "artists": "Kamran Shafii w/ CAEN, BLSPHM",
+   "venue": "Chapel Performance Space",
+   "genre": "experimental",
+   "price": "$15",
+   "ages": "",
+   "url": "https://allevents.in/seattle/kamran-shafii-caen-blsphm/200030825036047",
+   "src": "AllEvents",
+   "hood": "Wallingford"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:00 PM",
+   "artists": "AAA Fest: Veracity Showcase w/ Jackie Tulsa, Aurora Ave, Silvertooth, Sarya",
+   "venue": "The Vera Project",
+   "genre": "indie",
+   "price": "Free",
+   "ages": "",
+   "url": "https://allevents.in/seattle/aaa-fest-veracity-showcase/200030844801639",
+   "src": "AllEvents",
+   "hood": "Lower Queen Anne"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "7:30 PM",
+   "artists": "Oz Noy Trio w/ Dave Weckl, Brian Charette",
+   "venue": "The Triple Door",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/oz-noy-trio-seattle-tickets-11-18-2026/event/498922",
+   "src": "EventWorld",
+   "hood": "Downtown"
+  },
+  {
    "date": "2026-11-18",
    "time": "8:00 PM",
    "artists": "Brites",
@@ -7409,6 +7911,42 @@
   },
   {
    "date": "2026-11-18",
+   "time": "8:00 PM",
+   "artists": "Todd Rundgren",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43314111-todd-rundgren-at-neptune-theatre",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "8:00 PM",
+   "artists": "Kino",
+   "venue": "The Showbox",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/Группа-КИНО-СИЭТЛ/200030374567137",
+   "src": "AllEvents",
+   "hood": "Downtown"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "8:00 PM",
+   "artists": "Kalos w/ Hayden Stern Band",
+   "venue": "Fremont Abbey Arts Center",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://allevents.in/seattle/kalos-hayden-stern-band-fremont-abbey/200030638475422",
+   "src": "AllEvents",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-11-18",
    "time": "",
    "artists": "Good Grief! Tour (Jervis Campbell)",
    "venue": "Barboza",
@@ -7430,18 +7968,6 @@
    "ages": "",
    "url": "https://concerts.hypebot.com/artist/c/12043-cherry-poppin-daddies",
    "src": "Hypebot Concerts"
-  },
-  {
-   "date": "2026-11-18",
-   "time": "",
-   "artists": "Todd Rundgren",
-   "venue": "Neptune Theatre",
-   "hood": "University District",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43314111-todd-rundgren-at-neptune-theatre",
-   "src": "Songkick"
   },
   {
    "date": "2026-11-18",
@@ -7478,18 +8004,6 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43422294-gallaghers-at-sunset-tavern",
    "src": "Songkick"
-  },
-  {
-   "date": "2026-11-18",
-   "time": "",
-   "artists": "State Champs w/ Cartel, Taylor Acorn, Like Roses",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://www.jambase.com/show/state-champs-showbox-at-the-market-20261118",
-   "src": "JamBase"
   },
   {
    "date": "2026-11-19",
@@ -7610,6 +8124,18 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43366976-todd-day-wait-at-sunset-tavern",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-11-19",
+   "time": "",
+   "artists": "Oz Noy Trio",
+   "venue": "The Triple Door",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/oz-noy-trio-seattle-tickets-11-19-2026/event/498917",
+   "src": "EventWorld",
+   "hood": "Downtown"
   },
   {
    "date": "2026-11-20",
@@ -8008,6 +8534,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-21",
+   "time": "",
+   "artists": "1 Umbrella",
+   "venue": "Barboza",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/1-umbrella-seattle-tickets-11-21-2026/event/588830",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
+  },
+  {
    "date": "2026-11-22",
    "time": "6:00 PM",
    "artists": "Jim Lauderdale",
@@ -8320,6 +8858,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-25",
+   "time": "",
+   "artists": "Taj Mahal",
+   "venue": "Dimitriou's Jazz Alley",
+   "genre": "live",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/taj-mahal-seattle-tickets-11-25-2026/event/583136",
+   "src": "EventWorld",
+   "hood": "Belltown"
+  },
+  {
    "date": "2026-11-27",
    "time": "7:00 PM",
    "artists": "Riio",
@@ -8525,8 +9075,32 @@
   },
   {
    "date": "2026-11-29",
+   "time": "5:00 PM",
+   "artists": "The Sun Kings w/ The Love Grubs, Ariel Petrie, Electra, Sally Salvia",
+   "venue": "Orient Express",
+   "genre": "rock",
+   "price": "$10",
+   "ages": "21+",
+   "url": "https://allevents.in/seattle/the-sun-kings-the-love-grubs-and-more-tba/200030833894618",
+   "src": "AllEvents",
+   "hood": "SoDo"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "5:00 PM",
+   "artists": "Lunar Pilots w/ All This For That, Happy Feather",
+   "venue": "Chop Suey",
+   "genre": "indie",
+   "price": "$15",
+   "ages": "",
+   "url": "https://allevents.in/seattle/lunar-pilots-album-release/210005965170891",
+   "src": "AllEvents",
+   "hood": "Capitol Hill"
+  },
+  {
+   "date": "2026-11-29",
    "time": "7:00 PM",
-   "artists": "Ladrones",
+   "artists": "Ladrones w/ Empty Shell Casing",
    "venue": "Substation",
    "hood": "Ballard",
    "genre": "rock",
@@ -8537,7 +9111,7 @@
   },
   {
    "date": "2026-11-29",
-   "time": "",
+   "time": "7:00 PM",
    "artists": "The Kilans",
    "venue": "Barboza",
    "hood": "Capitol Hill",
@@ -8545,6 +9119,54 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/43368488-kilans-at-barboza",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "7:30 PM",
+   "artists": "Trans-Siberian Orchestra",
+   "venue": "Climate Pledge Arena",
+   "hood": "Lower Queen Anne",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43407513-transsiberian-orchestra-at-climate-pledge-arena",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "7:30 PM",
+   "artists": "Head Hurt w/ Red Reaction, Side Hustle",
+   "venue": "Nectar Lounge",
+   "genre": "rock",
+   "price": "",
+   "ages": "21+",
+   "url": "https://allevents.in/seattle/head-hurt-with-red-reaction-side-hustle/200030793886835",
+   "src": "AllEvents",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "8:00 PM",
+   "artists": "Neurosis w/ blackwater holylight",
+   "venue": "Showbox SoDo",
+   "hood": "SoDo",
+   "genre": "metal",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43408355-neurosis-at-showbox-sodo",
+   "src": "Songkick"
+  },
+  {
+   "date": "2026-11-29",
+   "time": "8:00 PM",
+   "artists": "Wolf Parade",
+   "venue": "The Showbox",
+   "hood": "Downtown",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43185431-wolf-parade-at-showbox-at-the-market",
    "src": "Songkick"
   },
   {
@@ -8557,42 +9179,6 @@
    "price": "",
    "ages": "",
    "url": "https://songkick.com/concerts/42949580-flammable-at-chop-suey",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-29",
-   "time": "",
-   "artists": "Trans-Siberian Orchestra",
-   "venue": "Climate Pledge Arena",
-   "hood": "Lower Queen Anne",
-   "genre": "rock",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43407513-transsiberian-orchestra-at-climate-pledge-arena",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-29",
-   "time": "",
-   "artists": "Neurosis w/ blackwater holylight",
-   "venue": "Showbox SoDo",
-   "hood": "SoDo",
-   "genre": "metal",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43408355-neurosis-at-showbox-sodo",
-   "src": "Songkick"
-  },
-  {
-   "date": "2026-11-29",
-   "time": "",
-   "artists": "Wolf Parade",
-   "venue": "The Showbox",
-   "hood": "Downtown",
-   "genre": "indie",
-   "price": "",
-   "ages": "",
-   "url": "https://songkick.com/concerts/43185431-wolf-parade-at-showbox-at-the-market",
    "src": "Songkick"
   },
   {
@@ -8656,6 +9242,30 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-12-01",
+   "time": "",
+   "artists": "Isaiah Sharkey w/ Midpak",
+   "venue": "Hidden Hall",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/isaiah-sharkey-with-midpak-seattle-tickets-12-01-2026/event/514716",
+   "src": "EventWorld",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-12-01",
+   "time": "",
+   "artists": "Elijah Fox",
+   "venue": "The Triple Door",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/elijah-fox-seattle-tickets-12-01-2026/event/567346",
+   "src": "EventWorld",
+   "hood": "Downtown"
+  },
+  {
    "date": "2026-12-02",
    "time": "",
    "artists": "Mel Bryant & the Mercy Makers w/ Torch",
@@ -8702,6 +9312,54 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43394715-insomnium-at-showbox-at-the-market",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "",
+   "artists": "mor ve ötesi",
+   "venue": "Nectar Lounge",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/mor-ve-otesi-seattle-tickets-12-02-2026/event/517579",
+   "src": "EventWorld",
+   "hood": "Fremont"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "",
+   "artists": "The Meteors",
+   "venue": "Funhouse",
+   "genre": "punk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/the-meteors-seattle-tickets-12-02-2026/event/558094",
+   "src": "EventWorld",
+   "hood": "Eastlake"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "",
+   "artists": "A John Waters Christmas",
+   "venue": "Neptune Theatre",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/a-john-waters-christmas-seattle-tickets-12-02-2026/event/461034",
+   "src": "EventWorld",
+   "hood": "University District"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "8:00 PM",
+   "artists": "A John Prine Christmas w/ Jenner Fox Band",
+   "venue": "Tractor Tavern",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/1039966326-jenner-fox-at-tractor-tavern",
+   "src": "Bandsintown",
+   "hood": "Ballard"
   },
   {
    "date": "2026-12-03",
@@ -8762,6 +9420,18 @@
    "ages": "",
    "url": "https://app.songkick.com/concerts/43398775-kamasi-washington-at-showbox",
    "src": "Songkick Showbox"
+  },
+  {
+   "date": "2026-12-03",
+   "time": "",
+   "artists": "Gabss",
+   "venue": "Q Nightclub",
+   "genre": "electronic",
+   "price": "",
+   "ages": "",
+   "url": "https://www.eventworld.com/gabss-seattle-tickets-12-03-2026/event/582971",
+   "src": "EventWorld",
+   "hood": "Capitol Hill"
   }
  ]
 }
