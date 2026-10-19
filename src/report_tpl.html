@@ -186,7 +186,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmtDate=(d,o)=>new Date(d+"T12:00:00").toLocaleDateString("en-US",o||{month:"short",day:"numeric",year:"numeric"});
 const url=(k,v)=>"?"+k+"="+encodeURIComponent(v);
-const BY="Guitar Doug";
+const BY="The Guitar Doug Report";
 
 const sorted=STORIES.map((s,i)=>({...s,_i:i})).sort((a,b)=>b.date.localeCompare(a.date)||a._i-b._i);
 const P=new URLSearchParams(location.search);
