@@ -92,6 +92,12 @@
 .appsheet .x{margin-top:10px;background:none;border:0;color:#8a939b;font:600 12px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:8px}
 @media (display-mode: standalone){.appbtn{display:none!important}}
 .approw{display:flex;gap:10px;margin:0 0 12px}.approw>.appbtn{flex:1 1 0;min-width:0;padding:8px 10px;font-size:11px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;box-sizing:border-box}.approw>.nsapp{border-color:#3d6aa8;color:#b9cde8}.approw>.nsapp:hover{background:#3d6aa822}
+/* header: masthead only; tools sit below the wire */
+.mast{display:block!important;text-align:center;border-bottom:1px solid #2a2f36}
+.mast .lgimg{margin:6px auto 10px!important;max-width:720px}
+.hdrtools{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start;margin:12px 0 4px}
+.hdrtools .hbtns{margin:0}.hdrtools .approw{grid-column:1}.hdrtools .subbox{grid-column:2;grid-row:1 / span 2;margin:0}
+@media (max-width:700px){.hdrtools{grid-template-columns:minmax(0,1fr)}.hdrtools .subbox{grid-column:1;grid-row:auto}}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1003,7 +1009,26 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       <h1 class="logo lgimg"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"></h1>
       
     </div>
-    <div>
+  </header>
+
+  <nav class="navbar" id="nav" aria-label="Sections">
+    <button class="nb" data-go="front">Front page</button>
+    <button class="nb" data-go="stories">Stories</button>
+    <button class="nb" data-go="bars">News</button>
+    <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Crime Watch</button>
+    <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
+    <button class="nb" data-go="cal">Music calendar</button>
+    <button class="nb" data-go="scene">Scene</button>
+    <button class="nb" data-go="venues">Venues</button>
+    <button class="nb" data-go="bands">Bands</button>
+    
+    
+    <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
+  </nav>
+<div class="shrpop" id="shrPop" hidden><b>Share The Guitar Doug Report</b><a data-sh="fb" href="#">Facebook</a><a data-sh="x" href="#">X / Twitter</a><a data-sh="sms" href="#">Text message</a><a data-sh="mail" href="#">Email</a><a data-sh="copy" href="#">Copy link</a></div>
+
+  <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
+  <div class="hdrtools">
       <div class="mstat" id="mstat" hidden></div>
       <input class="hsearch" id="q" type="search" hidden>
       <div class="hbtns">
@@ -1024,25 +1049,6 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
         </div>
       </form>
     </div>
-  </header>
-
-  <nav class="navbar" id="nav" aria-label="Sections">
-    <button class="nb" data-go="front">Front page</button>
-    <button class="nb" data-go="stories">Stories</button>
-    <button class="nb" data-go="bars">News</button>
-    <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Crime Watch</button>
-    <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
-    <button class="nb" data-go="cal">Music calendar</button>
-    <button class="nb" data-go="scene">Scene</button>
-    <button class="nb" data-go="venues">Venues</button>
-    <button class="nb" data-go="bands">Bands</button>
-    
-    
-    <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
-  </nav>
-<div class="shrpop" id="shrPop" hidden><b>Share The Guitar Doug Report</b><a data-sh="fb" href="#">Facebook</a><a data-sh="x" href="#">X / Twitter</a><a data-sh="sms" href="#">Text message</a><a data-sh="mail" href="#">Email</a><a data-sh="copy" href="#">Copy link</a></div>
-
-  <div class="ticker" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
   <div class="lsrow" aria-label="The Guitar Doug Report features"><div class="lspot l t1"><a id="lsA"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t2"><a id="lsC"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t3"><a id="lsE"></a></div><div class="lspot r t3"><a id="lsF"></a></div><div class="lspot l t4"><a id="lsG"></a></div><div class="lspot r t4"><a id="lsH"></a></div></div>
 
   <main id="view"></main>
