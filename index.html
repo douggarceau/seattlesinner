@@ -146,6 +146,25 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
 .side .pic{position:relative}
 .feat .art img{opacity:1}
 .ahero{margin:0 0 28px}.ahero img{width:100%;height:auto;display:block}.ahero figcaption{font-size:12px;color:#555;margin-top:6px}
+.coverband{background:#0b0b0b;color:#fff;margin:34px -16px 0;padding:34px 16px;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,480px) minmax(0,1fr);gap:30px;align-items:center}
+.coverband .side-t{font:400 clamp(34px,4vw,56px)/.95 var(--cond);text-transform:uppercase}
+.coverband .side-t em{font-style:normal;color:var(--red)}
+.coverband p{font:italic 18px/1.35 var(--body);color:#ddd;margin:12px 0 0}
+.mag{position:relative;container-type:inline-size;aspect-ratio:2/3;background:#111;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.mag img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mag .cl{position:absolute;display:block;color:#f6c544;text-shadow:0 .3cqw 1.2cqw rgba(0,0,0,.9);transition:transform .15s}
+.mag .cl:hover{transform:scale(1.04)}
+.mag .cl b{display:block;font:400 6.6cqw/.92 var(--cond);text-transform:uppercase;letter-spacing:-.01em}
+.mag .cl.r b{color:#e3201b}
+.mag .cl i{display:block;width:40%;height:.6cqw;background:#e3201b;border-radius:2cqw;margin:1.2cqw 0 1cqw}
+.mag .cl span{display:block;font:600 3.4cqw/1.15 var(--body);color:#fff}
+.mag .cl.rt{text-align:right}.mag .cl.rt i{margin-left:auto}
+.mag .bot{position:absolute;left:0;right:0;bottom:4%;display:flex;justify-content:center;gap:3cqw;align-items:center}
+.mag .bot a{font:400 4.6cqw/1 var(--cond);text-transform:uppercase;color:#f6c544;text-shadow:0 .3cqw 1.2cqw #000}
+.mag .bot s{width:.5cqw;height:6cqw;background:#e3201b}
+.mag .credit{position:absolute;left:0;right:0;bottom:.8%;text-align:center;font:600 2.2cqw/1.2 var(--body);color:#fff;text-shadow:0 0 6px #000}
+.mag .wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0,rgba(0,0,0,.85) 33%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.85) 68%,rgba(0,0,0,.92) 100%)}
+@media (max-width:900px){.coverband{grid-template-columns:1fr}.coverband .side-t{text-align:center}}
 .loading{padding:80px 0;text-align:center;font:400 28px var(--cond);text-transform:uppercase}
 /* mobile */
 @media (max-width:900px){
@@ -166,7 +185,7 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
 <body>
 <div class="wrap">
  <header class="top">
-  <div class="l"><a href="https://newspacesocialmedia.com">Newspace</a><a href="/classic.html">Got A Tip?</a></div>
+  <div class="l"><a href="https://newspacesocialmedia.com">Newspace</a><a href="/classic.html?go=submit">Got A Tip?</a></div>
   <a href="/" aria-label="The Guitar Doug Report home"><span class="logo" role="img" aria-label="The Guitar Doug Report"></span></a>
   <div class="r"><a href="/classic.html">Log In</a><a href="/classic.html">Subscribe</a></div>
  </header>
@@ -176,14 +195,14 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
  <main id="main"><div class="loading">Loading the paper…</div></main>
  <footer class="foot">
   <div class="fgrid">
-   <div><a class="btn blk" href="https://newspacesocialmedia.com">Join Newspace</a><a class="btn blk" href="/tech/">The Power Map</a><a class="btn" href="/classic.html">Send A Tip</a><a class="btn" href="/classic.html">Classic Edition</a></div>
+   <div><a class="btn blk" href="https://newspacesocialmedia.com">Join Newspace</a><a class="btn blk" href="/tech/">The Power Map</a><a class="btn" href="/classic.html?go=submit">Send A Tip</a><a class="btn" href="/classic.html">Classic Edition</a></div>
    <div><h4>The Guitar Doug Report</h4><ul><li><a href="/#music">Music</a></li><li><a href="/#crime">Crime Watch</a></li><li><a href="/#news">News</a></li><li><a href="/#shows">Calendar</a></li><li><a href="/#reports">Culture</a></li><li><a href="/tech/">Tech &amp; AI</a></li></ul></div>
    <div><h4>Read</h4><ul><li><a href="/newsprint/">Newsprint Edition</a></li><li><a href="/report/">Front Page Edition</a></li><li><a href="/classic.html">Classic Edition</a></li><li><a href="/classic.html">Advertise</a></li></ul></div>
    <div><h4>Follow Us</h4><ul style="columns:1"><li><a href="https://newspacesocialmedia.com">Newspace</a></li><li><a href="https://x.com">X</a></li></ul></div>
   </div>
   <div class="news">
    <div><h4>Newsletter Signup</h4><div>Free account, full stories, comments and tips.</div></div>
-   <div><h4>Got a hot news tip?</h4><a class="btn" href="/classic.html">Send us a tip</a></div>
+   <div><h4>Got a hot news tip?</h4><a class="btn" href="/classic.html?go=submit">Send us a tip</a></div>
   </div>
   <div class="small">© <span id="yr"></span> The Guitar Doug Report · Seattle · Every story is reported from public sources, linked at the bottom of each piece.</div>
  </footer>
@@ -199,7 +218,7 @@ const BY='Guitar Doug';
 /* pull a JSON literal out of the live site page so this edition always matches it */
 function grab(src,marker){const i=src.indexOf(marker);if(i<0)return null;let j=i+marker.length;while(/\s/.test(src[j]))j++;const open=src[j],close=open==='['?']':'}';let d=0,inS=false,e=false;for(let k=j;k<src.length;k++){const c=src[k];if(inS){if(e)e=false;else if(c==='\\')e=true;else if(c==='"')inS=false;continue}if(c==='"')inS=true;else if(c===open)d++;else if(c===close){d--;if(!d){try{return JSON.parse(src.slice(j,k+1))}catch(_){return null}}}}return null}
 const url=s=>'/?story='+encodeURIComponent(s.slug);
-let PH={};
+let PH={},COVERS=[];
 const photo=s=>{if(IMG[s.slug])return{src:IMG[s.slug],own:1};return PH[s.slug]||PH[s.topic]||PH[{nightlife:'nightlife',weird:'culture',transit:'streets'}[s.topic]]||null};
 const pimg=(p,w)=>p?`<img src="${esc(p.own?p.src:p.src+'?auto=format&fit=crop&w='+(w||900)+'&q=72')}" alt="" loading="lazy">`:'';
 const kick=s=>TOPIC[s.topic]||s.topic;
@@ -211,8 +230,10 @@ Promise.all([
  fetch('/data/wire.json',{cache:'no-cache'}).then(r=>r.ok?r.json():Promise.reject()).catch(()=>null),
  fetch('/data/cal.json',{cache:'no-cache'}).then(r=>r.json()).catch(()=>({events:[]})),
  fetch('/data/crime.json',{cache:'no-cache'}).then(r=>r.json()).catch(()=>({items:[]})),
- fetch('/data/photos.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
-]).then(async([STORIES,WIRE,cal,crime,photos])=>{
+ fetch('/data/photos.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+ fetch('/data/covers.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{covers:[]}).catch(()=>({covers:[]}))
+]).then(async([STORIES,WIRE,cal,crime,photos,covers])=>{
+ COVERS=(covers&&covers.covers)||[];
  if(!STORIES||!WIRE){const page=await fetch('/classic.html').then(r=>r.text());STORIES=STORIES||grab(page,'const STORIES=')||[];WIRE=WIRE||grab(page,'/*WIRE_START*/')||[]}
  PH=photos||{};
  const slug=new URLSearchParams(location.search).get('story');
@@ -220,6 +241,20 @@ Promise.all([
  front(STORIES,WIRE,cal.events||[],crime.items||[]);
 }).catch(()=>{$('#main').innerHTML='<div class="loading">The paper is on the press. Refresh in a moment.</div>'});
 
+function coverHTML(nShows){
+ if(!COVERS.length)return '';
+ const c=COVERS[Math.floor(Math.random()*COVERS.length)];
+ const C='/classic.html?go=';
+ const L=[['crime','Crime Watch','Every block. Every siren.',''],['cal','The Music Calendar',nShows+' shows. Every room in town.','r'],['bands','Band Watch','200 Seattle bands, tracked.',''],['ink','Ink &amp; Steel','Tattoo Seattle, uncovered.','']];
+ const R=[['venues','The Venue Guide','456 bars, clubs and dives.',''],['/tech/','The Power Map','Who really runs tech &amp; AI.','r'],['screen','The Screen','Movies worth the ticket.',''],['submit','Send A Tip','We read every one.','']];
+ const col=(arr,x,rt)=>arr.map((l,i)=>`<a class="cl ${l[3]} ${rt?'rt':''}" style="${rt?'right':'left'}:4%;top:${24+i*15.5}%;width:${x}%" href="${l[0][0]==='/'?l[0]:C+l[0]}"><b>${l[1]}</b><i></i><span>${l[2]}</span></a>`).join('');
+ return `<section class="coverband" id="cover"><div class="side-t">The ${esc(c.issue||'')} Issue<p>Tap a cover line to jump in.</p></div>
+ <div class="mag"><img src="${esc(c.src)}" alt="Cover, ${esc(c.issue||'')}">${c.clean?'':'<div class="wash"></div>'}
+ ${col(L,34,0)}${col(R,32,1)}
+ <div class="bot"><a href="${C}scene">The Scene</a><s></s><a href="https://newspacesocialmedia.com">Newspace</a></div>
+ ${c.model?`<div class="credit">Featured cover model ${esc(c.model)}</div>`:''}</div>
+ <div class="side-t" style="text-align:right">Raising <em>Hell</em><br>Since Day One</div></section>`;
+}
 function front(S,W,EV,CR){
  const by=k=>S.find(s=>s.slug===k);
  const used=new Set();const take=s=>{if(s)used.add(s.slug);return s};
@@ -247,6 +282,7 @@ function front(S,W,EV,CR){
    ${[sp,film].map((s,i)=>`<a href="${url(s)}"><div class="pic">${art(s)}</div><span class="tag">${i?'Now Playing':'Special Report'}</span><h3 class="cond">${esc(s.title)}</h3><div class="by">By <b>${BY}</b></div></a>`).join('')}
   </div>
  </section>
+ ${coverHTML(up.length)}
  <div class="rowrule"></div>
  <section class="latest" id="news">
   <div><div class="latestbox"><span class="cond">The Latest</span></div>
@@ -263,7 +299,7 @@ function front(S,W,EV,CR){
  <section class="recwrap" id="crime">
   <div class="rechead"><span class="seal">GD</span><span class="cond">Crime Watch</span></div>
   <div class="rec">${CR.slice(0,5).map(c=>`<a href="${esc(c.url)}" target="_blank" rel="noopener"><div class="circ"${PH.crime?` style="background:#111 url('${esc(PH.crime.src)}?auto=format&fit=crop&w=300&q=60') center/cover;text-shadow:0 1px 6px #000"`:''}>${esc(c.hood||'Seattle')}</div><span class="kick">${esc(c.kind||'news')}</span><h3 class="hl">${esc(c.headline)}</h3></a>`).join('')}</div>
-  <a class="btn recmore" href="/classic.html">More Crime Watch</a>
+  <a class="btn recmore" href="/classic.html?go=crime">More Crime Watch</a>
  </section>
  ${qsrc?`<section class="quote"><a href="${url(qsrc)}"><div class="q cond">“${esc(short(firstQuote(qsrc),140))}”</div><div class="t">${esc(qsrc.title)}</div><div class="by">By <b>${BY}</b></div></a></section>`:''}
  <section class="reports" id="reports">
