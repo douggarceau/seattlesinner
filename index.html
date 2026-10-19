@@ -1099,6 +1099,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .lspot i{font-size:12px!important;margin-top:2px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .lspot .ls-tag{font-size:9px!important;letter-spacing:.16em!important}
 .lspot.t-cw::after{height:4px}
+@media (min-width:1700px){:root{--ls:max(300px,calc((100vw - 1760px)/2 - 30px))}}
 </style>
   <div class="lsrow" aria-label="The Guitar Doug Report features"><div class="lspot l t1"><a id="lsC"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t3"><a id="lsA"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t4"><a id="lsE"></a></div><div class="lspot r t4"><a id="lsF"></a></div><div class="lspot l t2"><a id="lsG"></a></div><div class="lspot r t3"><a id="lsH"></a></div><div class="lspot l t5"><a id="lsI"></a></div><div class="lspot r t5"><a id="lsJ"></a></div><div class="lspot l t6"><a id="lsK"></a></div><div class="lspot r t6"><a id="lsL"></a></div><div class="lspot l t7"><a id="lsM"></a></div><div class="lspot r t7"><a id="lsN"></a></div><div class="lspot l t8"><a id="lsO"></a></div><div class="lspot r t8"><a id="lsP"></a></div></div>
 
@@ -1960,7 +1961,15 @@ const XT=[['lsI',()=>CRX.length?CRX:CWX,4],['lsJ',()=>WRF,2],['lsK',()=>WRF,12],
 const xk=XT.map(()=>0),xf=XT.map(()=>false);
 const xtFill=(n,flip)=>{const [id,g,o]=XT[n];const L=g()||[];if(!L.length)return;const s=L[(o+xk[n])%L.length];if(flip&&xf[n])flipTo($(id),s);else fill($(id),s);xf[n]=true};
 XT.forEach((_,n)=>xtFill(n,false));
-setInterval(()=>XT.forEach((_,n)=>setTimeout(()=>{xk[n]++;xtFill(n,true)},300+n*420)),6400);
+setInterval(()=>XT.forEach((_,n)=>setTimeout(()=>{xk[n]++;xtFill(n,true)},300+(n%10)*420)),6400);
+/* Fill the side margins with news boxes all the way down the page */
+const XP=[()=>WRF,()=>CRX.length?CRX:CWX,()=>CORR.length?CORR:WRF,()=>STF,()=>CRX.length?CRX:WRF,()=>WRF];
+const lsMore=()=>{if(innerWidth<1280)return;const row=document.querySelector('.lsrow'),w=document.querySelector('.wrap'),s=document.querySelector('.lspot');if(!row||!w||!s)return;
+ const step=s.offsetHeight+12,rows=Math.floor((w.offsetHeight-150-40)/step);
+ for(let t=9;t<=rows;t++)['l','r'].forEach((side,si)=>{const id='lsX'+t+side;if(document.getElementById(id))return;
+  const d=document.createElement('div');d.className='lspot '+side;d.style.top='calc(150px + '+(t-1)+'*(var(--lsh) + 12px))';d.innerHTML='<a id="'+id+'"></a>';row.appendChild(d);
+  XT.push([id,XP[(t*2+si)%XP.length],9+t*3+si*5]);xk.push(0);xf.push(false);xtFill(XT.length-1,false)})};
+setTimeout(lsMore,1500);setTimeout(lsMore,5000);let lsR;addEventListener('resize',()=>{clearTimeout(lsR);lsR=setTimeout(lsMore,400)});
 
 })();
 </script>
