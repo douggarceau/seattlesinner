@@ -152,17 +152,19 @@ a:hover .hl,a:hover h2,a:hover h3{text-decoration:underline;text-decoration-thic
 .coverband p{font:italic 18px/1.35 var(--body);color:#ddd;margin:12px 0 0}
 .mag{position:relative;container-type:inline-size;aspect-ratio:2/3;background:#111;box-shadow:0 20px 50px rgba(0,0,0,.6)}
 .mag img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.mag .cl{position:absolute;display:block;color:#f6c544;text-shadow:0 .3cqw 1.2cqw rgba(0,0,0,.9);transition:transform .15s}
+.mag .clcol{position:absolute;top:23%;bottom:16%;display:flex;flex-direction:column;justify-content:space-between}
+.mag .cl{position:relative;display:block;color:#f6c544;text-shadow:0 .3cqw 1.2cqw rgba(0,0,0,.9);transition:transform .15s}
 .mag .cl:hover{transform:scale(1.04)}
-.mag .cl b{display:block;font:400 6.6cqw/.92 var(--cond);text-transform:uppercase;letter-spacing:-.01em}
+.mag .cl b{display:block;font:400 5.6cqw/.95 var(--cond);font-stretch:condensed;text-transform:uppercase;letter-spacing:-.01em}
 .mag .cl.r b{color:#e3201b}
 .mag .cl i{display:block;width:40%;height:.6cqw;background:#e3201b;border-radius:2cqw;margin:1.2cqw 0 1cqw}
-.mag .cl span{display:block;font:600 3.4cqw/1.15 var(--body);color:#fff}
+.mag .cl span{display:block;font:600 3cqw/1.15 var(--body);color:#fff}
 .mag .cl.rt{text-align:right}.mag .cl.rt i{margin-left:auto}
 .mag .bot{position:absolute;left:0;right:0;bottom:4%;display:flex;justify-content:center;gap:3cqw;align-items:center}
 .mag .bot a{font:400 4.6cqw/1 var(--cond);text-transform:uppercase;color:#f6c544;text-shadow:0 .3cqw 1.2cqw #000}
 .mag .bot s{width:.5cqw;height:6cqw;background:#e3201b}
 .mag .credit{position:absolute;left:0;right:0;bottom:.8%;text-align:center;font:600 2.2cqw/1.2 var(--body);color:#fff;text-shadow:0 0 6px #000}
+.mag .wash.soft{background:linear-gradient(90deg,rgba(0,0,0,.55) 0,rgba(0,0,0,.25) 30%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.25) 72%,rgba(0,0,0,.55) 100%)}
 .mag .wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92) 0,rgba(0,0,0,.85) 33%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.85) 68%,rgba(0,0,0,.92) 100%)}
 @media (max-width:900px){.coverband{grid-template-columns:1fr}.coverband .side-t{text-align:center}}
 .loading{padding:80px 0;text-align:center;font:400 28px var(--cond);text-transform:uppercase}
@@ -245,12 +247,12 @@ function coverHTML(nShows){
  if(!COVERS.length)return '';
  const c=COVERS[Math.floor(Math.random()*COVERS.length)];
  const C='/classic.html?go=';
- const L=[['crime','Crime Watch','Every block. Every siren.',''],['cal','The Music Calendar',nShows+' shows. Every room in town.','r'],['bands','Band Watch','200 Seattle bands, tracked.',''],['ink','Ink &amp; Steel','Tattoo Seattle, uncovered.','']];
- const R=[['venues','The Venue Guide','456 bars, clubs and dives.',''],['/tech/','The Power Map','Who really runs tech &amp; AI.','r'],['screen','The Screen','Movies worth the ticket.',''],['submit','Send A Tip','We read every one.','']];
- const col=(arr,x,rt)=>arr.map((l,i)=>`<a class="cl ${l[3]} ${rt?'rt':''}" style="${rt?'right':'left'}:4%;top:${24+i*15.5}%;width:${x}%" href="${l[0][0]==='/'?l[0]:C+l[0]}"><b>${l[1]}</b><i></i><span>${l[2]}</span></a>`).join('');
+ const L=[['crime','Crime Watch','Every block. Every siren.',''],['cal','Calendar',nShows+' shows this season.','r'],['bands','Band Watch','200 bands, tracked.',''],['ink','Ink &amp; Steel','Tattoo Seattle.','']];
+ const R=[['venues','Venue Guide','456 bars and clubs.',''],['/tech/','Power Map','Who runs tech &amp; AI.','r'],['screen','The Screen','Movies worth it.',''],['submit','Send A Tip','We read every one.','']];
+ const col=(arr,x,rt)=>`<div class="clcol ${rt?'rt':''}" style="${rt?'right':'left'}:4%;width:${x}%">`+arr.map(l=>`<a class="cl ${l[3]} ${rt?'rt':''}" href="${l[0][0]==='/'?l[0]:C+l[0]}"><b>${l[1]}</b><i></i><span>${l[2]}</span></a>`).join('')+'</div>';
  return `<section class="coverband" id="cover"><div class="side-t">The ${esc(c.issue||'')} Issue<p>Tap a cover line to jump in.</p></div>
- <div class="mag"><img src="${esc(c.src)}" alt="Cover, ${esc(c.issue||'')}">${c.clean?'':'<div class="wash"></div>'}
- ${col(L,34,0)}${col(R,32,1)}
+ <div class="mag"><img src="${esc(c.src)}" alt="Cover, ${esc(c.issue||'')}"><div class="wash${c.clean?' soft':''}"></div>
+ ${col(L,30,0)}${col(R,30,1)}
  <div class="bot"><a href="${C}scene">The Scene</a><s></s><a href="https://newspacesocialmedia.com">Newspace</a></div>
  ${c.model?`<div class="credit">Featured cover model ${esc(c.model)}</div>`:''}</div>
  <div class="side-t" style="text-align:right">Raising <em>Hell</em><br>Since Day One</div></section>`;
