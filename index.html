@@ -89,7 +89,7 @@
 .appsheet ol{margin:6px 0 12px;padding-left:20px}.appsheet li{margin:4px 0}
 .appsheet .x{width:100%;padding:11px;border:0;border-radius:8px;background:#ff2a14;color:#fff;font:800 13px/1 system-ui;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 @media (display-mode: standalone){.appbtn{display:none!important}}
-.hbtns{flex-wrap:wrap}.hbtns>.appbtn{flex:1 1 100%!important;order:3;padding:8px 10px}
+.approw{display:flex;gap:10px;margin:0 0 12px}.approw>.appbtn{flex:1 1 0;min-width:0;padding:8px 10px;font-size:11px;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;box-sizing:border-box}.approw>.nsapp{border-color:#3d6aa8;color:#b9cde8}.approw>.nsapp:hover{background:#3d6aa822}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1005,10 +1005,10 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       <div class="mstat" id="mstat" hidden></div>
       <input class="hsearch" id="q" type="search" hidden>
       <div class="hbtns">
-      <button type="button" class="appbtn" id="appBtn" title="Put The Guitar Doug Report on your phone's home screen">📲 Get the App</button>
       <button type="button" class="shrbig" id="shrBtn" aria-haspopup="true"><span aria-hidden="true">↗</span> Share the Report</button>
       <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:flex;align-items:center;justify-content:center;flex:1;margin:0;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
       </div>
+      <div class="approw"><button type="button" class="appbtn" id="appBtn" title="Put The Guitar Doug Report on your phone's home screen">📲 Get the App</button><a class="appbtn nsapp" href="https://newspacesocialmedia.com" target="_blank" rel="noopener" title="Get the Newspace app">📲 Newspace App</a></div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories &amp; comments</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
