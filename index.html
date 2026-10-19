@@ -119,6 +119,7 @@
 .hdrtools .hbtns,.hdrtools .approw{display:none!important}
 .hdrtools{display:block!important;margin:0!important}.hdrtools .subbox{display:none}.hdrtools .subbox.open{display:block;max-width:520px;margin:12px auto}
 #seaBanner:empty{display:none}#seaBanner{margin:14px 0 -6px}#seaBanner .spr{margin:0}.sea-spr{width:100%;box-sizing:border-box;border-left-color:#ff6a00!important}.sea-spr .spr-tag{background:#ff6a00;box-shadow:0 0 16px #ff6a0088}
+.crime-spr{text-decoration:none;color:inherit}.crime-spr .spr-tag{background:#b00000;box-shadow:0 0 18px #ff000099;animation:crimePulse 1.6s ease-in-out infinite}@keyframes crimePulse{50%{box-shadow:0 0 4px #ff000044}}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1187,7 +1188,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES.filter(x=>x.slug!=='ballard-light-rail-2042-forum');
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  return `<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace, Beneath the Ink</b><small>She says the tattoos helped her take her body back. Behind the viral photos: decades of silence, disputed allegations and a new chapter in court.</small></span><span class="spr-go">Read it →</span></button><div class="front">
+  return `${crimeBanner()}<div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
@@ -1439,6 +1440,16 @@ function memberBox(){const u=window.SS_USER;const go=u?`<a class="mb-go" href="$
  return `<div class="mbox"><b>Keep reading</b><p>The national cover stories are for members of The Guitar Doug Report: $4.99 a month, cancel anytime. Seattle news stays free.</p>${go}${u?'':'<small>Already a member? Log in with the email you used.</small>'}</div>`}
 function xShare(s){const u='https://seattlesinner.com/'+(s?'?story='+s.slug:'');const t=s?s.title+' | The Guitar Doug Report':'The Guitar Doug Report';return 'https://twitter.com/intent/tweet?text='+encodeURIComponent(t)+'&url='+encodeURIComponent(u)}
 function xBtn(s){return `<a class="xbtn" href="${xShare(s)}" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>Share on X</a>`}
+/* Top Crime Story banner: the most serious recent Seattle crime headline from data/crime.json (refreshed by the Crime Watch desk). */
+window.TOPCRIME=null;
+function crimeBanner(){const x=window.TOPCRIME;if(!x)return '<div class="spr crime-spr" style="min-height:64px"><span class="spr-tag">TOP CRIME STORY</span><span><b>Loading…</b></span></div>';
+ return `<a class="spr crime-spr" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="spr-tag">TOP CRIME STORY</span><span><b>${esc(x.headline)}</b><small>${esc((x.hood?x.hood+' · ':'')+(x.blurb||''))}</small></span><span class="spr-go">Read it →</span></a>`}
+fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items||!d.items.length)return;
+ const SEV={homicide:10,stabbing:9,shooting:8,assault:7,robbery:6,arson:6,fire:4,burglary:4,crash:3,arrest:3,theft:2,police:2,courts:2,other:1};
+ const W=/killed|dead|death|fatal|murder|homicide|gunned|shot and|stabbed|kidnap|abduct|rape|sexual assault|child|teen|missing|body|carjack|hostage|machete|knife/i;
+ const ds=d.items.map(x=>Date.parse(x.date)||0),top=Math.max(...ds);
+ const X=/kidnap|abduct|rape|hostage|child|killed|murdered|gunned down|stabbed to death/i,OLD=/years (on|later|ago)|cold case|anniversar/i;let best=null,bs=-1e9;d.items.forEach((x,i)=>{const age=(top-ds[i])/864e5;if(age>4)return;const t=x.headline+' '+(x.blurb||'');let sc=(SEV[x.kind]||1)+(W.test(x.headline)?5:0)+(X.test(x.headline)?3:0)+(W.test(x.blurb||'')?1:0)-age*0.7-(/no injur/i.test(x.blurb||'')?3:0)-(OLD.test(t)?8:0);if(sc>bs){bs=sc;best=x}});
+ window.TOPCRIME=best||d.items[0];if(typeof STATE!=='undefined'&&STATE.view==='front'&&typeof render==='function')render()}).catch(()=>{});
 function vReader(slug){
   const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
   const LOCK=!!(PAY_LINK&&typeof FEATURES!=='undefined'&&FEATURES.has(s.slug)&&!window.SS_MEMBER);
