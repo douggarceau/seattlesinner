@@ -1,10 +1,29 @@
 {
- "asof": "2026-10-18T13:44:40-07:00",
+ "asof": "2026-10-18T17:59:26-07:00",
  "sources_last_run": [
-  "Songkick genre pages (electronic/hip-hop/metal)",
-  "Songkick Showbox calendar",
-  "ma.to (Clock-Out, Tractor, Conor Byrne, Sunset)",
-  "Hypebot Concerts jazz"
+  "Bandsintown Seattle",
+  "Discotech Nectar",
+  "Royal Room",
+  "Songkick Ballard Homestead",
+  "Songkick Barboza",
+  "Songkick Benaroya",
+  "Songkick Black Lodge",
+  "Songkick Chop Suey",
+  "Songkick Climate Pledge",
+  "Songkick Crocodile",
+  "Songkick Hidden Hall",
+  "Songkick Jazz Alley",
+  "Songkick Moore",
+  "Songkick Neptune",
+  "Songkick Neumos",
+  "Songkick Paramount",
+  "Songkick Showbox SoDo",
+  "Songkick Substation",
+  "Songkick Triple Door",
+  "Songkick Vera Project",
+  "Songkick WAMU",
+  "ma.to (STG)",
+  "ma.to Kremwerk"
  ],
  "events": [
   {
@@ -526,14 +545,14 @@
   {
    "date": "2026-10-19",
    "time": "7:00 PM",
-   "artists": "Wesley Joseph",
-   "venue": "Barboza",
-   "hood": "Capitol Hill",
-   "genre": "r&b",
+   "artists": "Daniel Sloss",
+   "venue": "Moore Theatre",
+   "hood": "Belltown",
+   "genre": "other",
    "price": "",
    "ages": "",
-   "url": "https://www.eventworld.com/wesley-joseph-seattle-tickets-10-19-2026/event/486215",
-   "src": "EventWorld"
+   "url": "https://ma.to/event/daniel-sloss-moore-theatre-19-oct-2026-1900",
+   "src": "ma.to (STG)"
   },
   {
    "date": "2026-10-19",
@@ -645,6 +664,18 @@
   },
   {
    "date": "2026-10-20",
+   "time": "5:00 PM",
+   "artists": "NICE AS F*#K ft. Jenny Lewis, Erika Forster, Tennessee Thomas (early show)",
+   "venue": "Nectar Lounge",
+   "hood": "Fremont",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://app.discotech.me/events/38276505-nice-as-fk-ft-jenny-lewis-erika-forster-tennesse-thomas-early-show-at-nectar-lounge",
+   "src": "Discotech Nectar"
+  },
+  {
+   "date": "2026-10-20",
    "time": "7:00 PM",
    "artists": "Flower Face w/ Stella Prince",
    "venue": "Barboza",
@@ -711,7 +742,7 @@
    "hood": "Lower Queen Anne",
    "genre": "experimental",
    "price": "from $41",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43224507-tyondai-braxton-at-vera-project",
    "src": "Songkick"
   },
@@ -1113,6 +1144,42 @@
   },
   {
    "date": "2026-10-21",
+   "time": "7:00 PM",
+   "artists": "Jesse Powers",
+   "venue": "Center for Spiritual Living Ballard",
+   "hood": "Ballard",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108759481-jesse-powers-at-center-for-spiritual-living-ballard",
+   "src": "Bandsintown Seattle"
+  },
+  {
+   "date": "2026-10-21",
+   "time": "7:00 PM",
+   "artists": "Lioneer w/ Honeyed",
+   "venue": "Central Saloon",
+   "hood": "Pioneer Square",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108915765-lioneer-at-central-saloon",
+   "src": "Bandsintown Seattle"
+  },
+  {
+   "date": "2026-10-21",
+   "time": "7:00 PM",
+   "artists": "Wolves At The Gate",
+   "venue": "El Corazon",
+   "hood": "Eastlake",
+   "genre": "metal",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108680760-wolves-at-the-gate-at-el-corazon",
+   "src": "Bandsintown Seattle"
+  },
+  {
+   "date": "2026-10-21",
    "time": "7:30 PM",
    "artists": "Super Krewe",
    "venue": "Sea Monster Lounge",
@@ -1376,6 +1443,18 @@
    "src": "ma.to"
   },
   {
+   "date": "2026-10-21",
+   "time": "",
+   "artists": "Bill Nye",
+   "venue": "5th Avenue Theatre",
+   "hood": "Downtown",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://ma.to/event/bill-nye-solving-for-x-21-oct-2026",
+   "src": "ma.to (STG)"
+  },
+  {
    "date": "2026-10-22",
    "time": "5:00 PM",
    "artists": "Larry Murante",
@@ -1450,18 +1529,6 @@
   {
    "date": "2026-10-22",
    "time": "7:00 PM",
-   "artists": "Grace Enger",
-   "venue": "Neumos",
-   "hood": "Capitol Hill",
-   "genre": "pop",
-   "price": "",
-   "ages": "",
-   "url": "https://www.eventworld.com/grace-enger-seattle-tickets-10-22-2026/event/492203",
-   "src": "EventWorld"
-  },
-  {
-   "date": "2026-10-22",
-   "time": "7:00 PM",
    "artists": "Joel Astley",
    "venue": "Salmon Bay Eagles",
    "hood": "Ballard",
@@ -1530,6 +1597,18 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/1040153706-mountain-holler-at-nectar-lounge",
    "src": "Bandsintown"
+  },
+  {
+   "date": "2026-10-22",
+   "time": "7:00 PM",
+   "artists": "Ethan Tucker",
+   "venue": "Hidden Hall",
+   "hood": "Fremont",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://concerts.hypebot.com/artist/e/1246830-ethan-tucker",
+   "src": "Hypebot Concerts"
   },
   {
    "date": "2026-10-22",
@@ -1662,6 +1741,30 @@
    "ages": "",
    "url": "https://ma.to/event/amy-hall-album-release-conor-byrne-pub-22-oct-2026",
    "src": "ma.to"
+  },
+  {
+   "date": "2026-10-22",
+   "time": "7:30 PM",
+   "artists": "Frank Maza feat. Javier Limon: Back Then",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "latin",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/frank-maza/",
+   "src": "Royal Room"
+  },
+  {
+   "date": "2026-10-22",
+   "time": "7:30 PM",
+   "artists": "Sasha Berliner (Earshot Jazz Festival)",
+   "venue": "Town Hall Seattle",
+   "hood": "First Hill",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://www.bandsintown.com/e/108883436-sasha-berliner-at-town-hall-seattle",
+   "src": "Bandsintown Seattle"
   },
   {
    "date": "2026-10-22",
@@ -1870,18 +1973,6 @@
   {
    "date": "2026-10-22",
    "time": "",
-   "artists": "Ethan Tucker",
-   "venue": "Hidden Hall",
-   "hood": "Fremont",
-   "genre": "folk",
-   "price": "",
-   "ages": "",
-   "url": "https://concerts.hypebot.com/artist/e/1246830-ethan-tucker",
-   "src": "Hypebot Concerts"
-  },
-  {
-   "date": "2026-10-22",
-   "time": "",
    "artists": "Amy Hall w/ Clean Fight, Bitch Fits",
    "venue": "Conor Byrne Pub",
    "hood": "Ballard",
@@ -1890,6 +1981,18 @@
    "ages": "",
    "url": "https://ma.to/event/amy-hall-album-release-conor-byrne-pub-22-oct-2026",
    "src": "ma.to"
+  },
+  {
+   "date": "2026-10-22",
+   "time": "",
+   "artists": "Harp Twins w/ Volfgang Twins",
+   "venue": "Ballard Homestead",
+   "hood": "Ballard",
+   "genre": "classical",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43409634-harp-twins-at-ballard-homestead",
+   "src": "Songkick Ballard Homestead"
   },
   {
    "date": "2026-10-23",
@@ -1974,6 +2077,18 @@
    "ages": "",
    "url": "https://theroyalroomseattle.com/event/earshot-jazz-festival-presents-staaf-nilsson/",
    "src": "The Royal Room"
+  },
+  {
+   "date": "2026-10-23",
+   "time": "6:30 PM",
+   "artists": "Carmen Staaf / Elsa Nilsson (Earshot Jazz Festival)",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/earshot-jazz-festival-presents-staaf-nilsson/",
+   "src": "Royal Room"
   },
   {
    "date": "2026-10-23",
@@ -2385,6 +2500,18 @@
   },
   {
    "date": "2026-10-24",
+   "time": "5:00 PM",
+   "artists": "Myra Melford / Ches Smith / Michael Formanek: Splash (Earshot Jazz Festival)",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "jazz",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/earshot-jazz-festival-myra-melford/",
+   "src": "Royal Room"
+  },
+  {
+   "date": "2026-10-24",
    "time": "6:00 PM",
    "artists": "Yana",
    "venue": "Barboza",
@@ -2538,6 +2665,18 @@
    "ages": "",
    "url": "https://ma.to/event/the-hell-tones-and-guests-2026-10-24",
    "src": "ma.to"
+  },
+  {
+   "date": "2026-10-24",
+   "time": "8:30 PM",
+   "artists": "Half Giraffe (EP release)",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "indie",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/half-giraffe/",
+   "src": "Royal Room"
   },
   {
    "date": "2026-10-24",
@@ -2732,6 +2871,18 @@
    "src": "EventWorld"
   },
   {
+   "date": "2026-10-24",
+   "time": "",
+   "artists": "Lenny Pearce",
+   "venue": "Paramount Theatre",
+   "hood": "Capitol Hill",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43270983-lenny-pearce-at-paramount-theatre",
+   "src": "Songkick Paramount"
+  },
+  {
    "date": "2026-10-25",
    "time": "3:30 PM",
    "artists": "Big Dirt",
@@ -2823,7 +2974,7 @@
    "hood": "Lower Queen Anne",
    "genre": "indie",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43288602-stanley-simmons-at-vera-project",
    "src": "Songkick"
   },
@@ -2874,6 +3025,18 @@
    "ages": "",
    "url": "https://www.eventworld.com/brian-culbertson-seattle-tickets-10-25-2026/event/578661",
    "src": "EventWorld"
+  },
+  {
+   "date": "2026-10-25",
+   "time": "7:30 PM",
+   "artists": "Newberry & Verch",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/newberry-verch/",
+   "src": "Royal Room"
   },
   {
    "date": "2026-10-25",
@@ -3066,6 +3229,18 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43377893-bleood-at-neumos",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-10-26",
+   "time": "7:30 PM",
+   "artists": "NO(w) Beauty",
+   "venue": "The Royal Room",
+   "hood": "Columbia City",
+   "genre": "live",
+   "price": "",
+   "ages": "",
+   "url": "https://theroyalroomseattle.com/event/now-beauty/",
+   "src": "Royal Room"
   },
   {
    "date": "2026-10-26",
@@ -3507,7 +3682,7 @@
    "hood": "Lower Queen Anne",
    "genre": "indie",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43148639-weatherday-at-vera-project",
    "src": "Songkick"
   },
@@ -3764,6 +3939,18 @@
    "src": "ma.to"
   },
   {
+   "date": "2026-10-29",
+   "time": "",
+   "artists": "Eric Idle",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43322443-eric-idle-at-neptune-theatre",
+   "src": "Songkick Neptune"
+  },
+  {
    "date": "2026-10-30",
    "time": "6:00 PM",
    "artists": "This Is Halloween",
@@ -4004,6 +4191,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-10-30",
+   "time": "",
+   "artists": "BOO! Seattle 2026: Gramatik, KAYZO, Sara Landry, Walker & Royce, A Little Sound, Azyr, Samplifire, Junkie Kid",
+   "venue": "WAMU Theater",
+   "hood": "SoDo",
+   "genre": "electronic",
+   "price": "",
+   "ages": "18+",
+   "url": "https://songkick.com/festivals/3383391-boo-seattle/id/43270801-boo-seattle-2026",
+   "src": "Songkick WAMU"
+  },
+  {
    "date": "2026-10-31",
    "time": "4:30 PM",
    "artists": "Sara Camille",
@@ -4239,7 +4438,7 @@
    "hood": "SoDo",
    "genre": "electronic",
    "price": "",
-   "ages": "",
+   "ages": "18+",
    "url": "https://songkick.com/festivals/3383391-boo-seattle/id/43270801-boo-seattle-2026",
    "src": "Songkick"
   },
@@ -4266,6 +4465,18 @@
    "ages": "",
    "url": "https://ma.to/event/slip-kremwerk-complex-31-oct-2026",
    "src": "ma.to"
+  },
+  {
+   "date": "2026-10-31",
+   "time": "",
+   "artists": "Kanan Gill",
+   "venue": "Moore Theatre",
+   "hood": "Belltown",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43027789-kanan-gill-at-moore-theatre",
+   "src": "Songkick Moore"
   },
   {
    "date": "2026-11-01",
@@ -4784,6 +4995,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-04",
+   "time": "",
+   "artists": "Big Star Quintet (Mike Mills, Jon Auer, Chris Stamey, Pat Sansone)",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "rock",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43412715-big-star-quintet-at-neptune-theatre",
+   "src": "Songkick Neptune"
+  },
+  {
    "date": "2026-11-05",
    "time": "7:00 PM",
    "artists": "Cardinal Bloom",
@@ -5058,18 +5281,6 @@
    "ages": "",
    "url": "https://www.bandsintown.com/e/1040543741-stellar-jays-at-blue-moon-tavern",
    "src": "Bandsintown"
-  },
-  {
-   "date": "2026-11-06",
-   "time": "7:00 PM",
-   "artists": "Sex Mex",
-   "venue": "The Black Lodge",
-   "hood": "Wallingford",
-   "genre": "punk",
-   "price": "",
-   "ages": "",
-   "url": "https://app.discotech.me/events/38250841-sex-mex-at-the-black-lodge",
-   "src": "Discotech"
   },
   {
    "date": "2026-11-06",
@@ -5571,7 +5782,7 @@
    "hood": "Lower Queen Anne",
    "genre": "indie",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43310993-jake-minch-at-vera-project",
    "src": "Songkick"
   },
@@ -5598,6 +5809,30 @@
    "ages": "",
    "url": "https://concerts.hypebot.com/artist/s/15501696-strawberry-fuzz",
    "src": "Hypebot Concerts"
+  },
+  {
+   "date": "2026-11-07",
+   "time": "",
+   "artists": "The Suitcase Junket",
+   "venue": "Ballard Homestead",
+   "hood": "Ballard",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43410982-suitcase-junket-at-ballard-homestead",
+   "src": "Songkick Ballard Homestead"
+  },
+  {
+   "date": "2026-11-07",
+   "time": "",
+   "artists": "Kevonstage",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43324629-kevonstage-at-neptune-theatre",
+   "src": "Songkick Neptune"
   },
   {
    "date": "2026-11-08",
@@ -5754,6 +5989,18 @@
    "ages": "",
    "url": "https://www.eventworld.com/emily-scott-robinson-and-alice-wallace-seattle-tickets-11-08-2026/event/552401",
    "src": "EventWorld"
+  },
+  {
+   "date": "2026-11-08",
+   "time": "",
+   "artists": "Roman Candle",
+   "venue": "The Vera Project",
+   "hood": "Lower Queen Anne",
+   "genre": "indie",
+   "price": "",
+   "ages": "All ages",
+   "url": "https://app.songkick.com/concerts/43461089-roman-candle-at-vera-project",
+   "src": "Songkick Vera Project"
   },
   {
    "date": "2026-11-09",
@@ -5955,7 +6202,7 @@
    "hood": "Lower Queen Anne",
    "genre": "punk",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43374847-oso-oso-at-vera-project",
    "src": "Songkick"
   },
@@ -6308,6 +6555,18 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-12",
+   "time": "",
+   "artists": "Brett Goldstein",
+   "venue": "Moore Theatre",
+   "hood": "Belltown",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43377382-brett-goldstein-at-moore-theatre",
+   "src": "Songkick Moore"
+  },
+  {
    "date": "2026-11-13",
    "time": "6:00 PM",
    "artists": "Hit the Lights",
@@ -6543,7 +6802,7 @@
    "hood": "Lower Queen Anne",
    "genre": "punk",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43423125-leanna-firestone-at-vera-project",
    "src": "Songkick"
   },
@@ -6594,6 +6853,30 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43447057-sorry-for-party-rocking-at-chop-suey",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "Elanor Moss",
+   "venue": "Ballard Homestead",
+   "hood": "Ballard",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43443123-elanor-moss-at-ballard-homestead",
+   "src": "Songkick Ballard Homestead"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "",
+   "artists": "Brett Goldstein",
+   "venue": "Moore Theatre",
+   "hood": "Belltown",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43373196-brett-goldstein-at-moore-theatre",
+   "src": "Songkick Moore"
   },
   {
    "date": "2026-11-14",
@@ -6795,7 +7078,7 @@
    "hood": "Lower Queen Anne",
    "genre": "metal",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43352750-kingdom-of-giants-at-vera-project",
    "src": "Songkick"
   },
@@ -6834,6 +7117,30 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43334822-gorillat-at-showbox",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "",
+   "artists": "Where's Beth w/ Karen Laura Peters",
+   "venue": "Ballard Homestead",
+   "hood": "Ballard",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43414328-wheres-beth-at-ballard-homestead",
+   "src": "Songkick Ballard Homestead"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "",
+   "artists": "Ron Funches",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43052794-ron-funches-at-neptune-theatre",
+   "src": "Songkick Neptune"
   },
   {
    "date": "2026-11-15",
@@ -7227,7 +7534,7 @@
    "hood": "Lower Queen Anne",
    "genre": "indie",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43335100-surely-tempo-at-vera-project",
    "src": "Songkick"
   },
@@ -7616,6 +7923,30 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-20",
+   "time": "",
+   "artists": "Phoebe Robinson",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43119575-phoebe-robinson-at-neptune-theatre",
+   "src": "Songkick Neptune"
+  },
+  {
+   "date": "2026-11-20",
+   "time": "",
+   "artists": "Josh Johnson (comedy)",
+   "venue": "Paramount Theatre",
+   "hood": "Capitol Hill",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43082557-josh-johnson-comedian-at-paramount-theatre",
+   "src": "Songkick Paramount"
+  },
+  {
    "date": "2026-11-21",
    "time": "6:00 PM",
    "artists": "2 Dead Boyz",
@@ -7784,6 +8115,30 @@
    "src": "Songkick"
   },
   {
+   "date": "2026-11-21",
+   "time": "",
+   "artists": "Emily Catalano",
+   "venue": "Neptune Theatre",
+   "hood": "University District",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43279917-emily-catalano-at-neptune-theatre",
+   "src": "Songkick Neptune"
+  },
+  {
+   "date": "2026-11-21",
+   "time": "",
+   "artists": "Josh Johnson (comedy)",
+   "venue": "Paramount Theatre",
+   "hood": "Capitol Hill",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43082047-josh-johnson-comedian-at-paramount-theatre",
+   "src": "Songkick Paramount"
+  },
+  {
    "date": "2026-11-22",
    "time": "6:00 PM",
    "artists": "Jim Lauderdale",
@@ -7854,6 +8209,18 @@
    "ages": "",
    "url": "https://www.jambase.com/show/dead-poet-society-showbox-at-the-market-20261122",
    "src": "JamBase"
+  },
+  {
+   "date": "2026-11-22",
+   "time": "",
+   "artists": "Josh Johnson (comedy)",
+   "venue": "Paramount Theatre",
+   "hood": "Capitol Hill",
+   "genre": "other",
+   "price": "",
+   "ages": "",
+   "url": "https://app.songkick.com/concerts/43082710-josh-johnson-comedian-at-paramount-theatre",
+   "src": "Songkick Paramount"
   },
   {
    "date": "2026-11-23",
@@ -7971,7 +8338,7 @@
    "hood": "Lower Queen Anne",
    "genre": "punk",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43274722-babe-haven-at-vera-project",
    "src": "Songkick"
   },
@@ -8079,7 +8446,7 @@
    "hood": "Lower Queen Anne",
    "genre": "punk",
    "price": "",
-   "ages": "",
+   "ages": "All ages",
    "url": "https://songkick.com/concerts/43406754-spanish-love-songs-at-vera-project",
    "src": "Songkick"
   },
@@ -8406,6 +8773,18 @@
    "ages": "",
    "url": "https://songkick.com/concerts/43394715-insomnium-at-showbox-at-the-market",
    "src": "Songkick"
+  },
+  {
+   "date": "2026-12-02",
+   "time": "",
+   "artists": "Buck Meek",
+   "venue": "The Crocodile",
+   "hood": "Belltown",
+   "genre": "folk",
+   "price": "",
+   "ages": "",
+   "url": "https://songkick.com/concerts/43066788-buck-meek-at-crocodile",
+   "src": "Songkick Crocodile"
   }
  ]
 }
