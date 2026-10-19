@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-19T05:28:32-07:00",
+"asof": "2026-10-19T09:22:29-07:00",
 "items": [
 {
 "kind": "shooting",
@@ -952,6 +952,55 @@
 "date": "2026-09-18",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
 "outlet": "Westside Seattle"
+},
+{
+"kind": "arrest",
+"headline": "Man, 44, arrested in Sept. 6 Belltown shooting death",
+"blurb": "Detectives arrested a 44-year-old man on Sept. 14 in connection with the Sept. 6 shooting at 3rd Avenue and Blanchard Street that killed a 23-year-old woman, police said.",
+"hood": "Belltown",
+"spd": [
+"BELLTOWN"
+],
+"date": "2026-09-14",
+"url": "https://spdblotter.seattle.gov/category/investigations/2026-homicides/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "arrest",
+"headline": "Man arrested after car set on fire on Hiawatha Place S",
+"blurb": "Police say a man broke a vehicle window and set the car on fire outside an apartment building in the 800 block of Hiawatha Place S on Sept. 13; witnesses identified him and he was arrested.",
+"hood": "Judkins Park",
+"spd": [
+"JUDKINS PARK/NORTH BEACON HILL"
+],
+"date": "2026-09-13",
+"url": "https://spdblotter.seattle.gov/significant-incident-reports/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "crash",
+"headline": "Rollover crash traps driver, closes westbound West Seattle Bridge",
+"blurb": "A driver trapped in a rollover near the west end of the westbound West Seattle Bridge on Sunday morning, Sept. 13, was freed by firefighters and reported in stable condition.",
+"hood": "West Seattle Bridge",
+"spd": [
+"PIGEON POINT",
+"NORTH DELRIDGE"
+],
+"date": "2026-09-13",
+"url": "https://hoodline.com/2026/09/rollover-crash-shuts-down-westbound-west-seattle-bridge-traps-occupant/",
+"outlet": "Hoodline"
+},
+{
+"kind": "homicide",
+"headline": "Man, 67, found dead after fight in Westlake Park",
+"blurb": "Police found a 67-year-old man dead in Westlake Park after a passerby called 911 around 6:45 a.m. Sept. 10 to report two men fighting.",
+"hood": "Downtown",
+"spd": [
+"DOWNTOWN COMMERCIAL"
+],
+"date": "2026-09-10",
+"url": "https://spdblotter.seattle.gov/category/investigations/2026-homicides/",
+"outlet": "SPD Blotter"
 }
 ]
 }
