@@ -100,7 +100,8 @@
 @media (max-width:700px){.hdrtools{grid-template-columns:minmax(0,1fr)}.hdrtools .subbox{grid-column:1;grid-row:auto}}
 .edition{font:700 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.42em;text-transform:uppercase;color:#c9a227;margin:-4px 0 12px;text-align:center}
 .mbox{margin:22px 0;padding:22px;border:1px solid #c9a227;border-radius:8px;background:linear-gradient(180deg,#1a1408,#0b0b0c);text-align:center}.mbox b{display:block;font:800 20px/1.2 var(--mono,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#c9a227;margin-bottom:8px}.mbox p{color:#d0d4d8;margin:0 0 14px}.mb-go{all:unset;cursor:pointer;display:inline-block;padding:12px 18px;border-radius:6px;background:#c9a227;color:#0b0b0c;font:800 13px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase}.mbox small{display:block;margin-top:10px;color:#8b949c}
-.xrow{margin:12px 0}.xbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:6px;background:#000;border:1px solid #444;color:#fff;text-decoration:none;font:700 12px/1 var(--mono,system-ui);letter-spacing:.08em;text-transform:uppercase}.xbtn svg{width:15px;height:15px;fill:#fff}.xbtn:hover{border-color:#fff}.approw .xhd{background:#000;border-color:#555;color:#fff}.hdrtools .approw{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.hdrtools .approw .appbtn{min-width:0;white-space:nowrap;font-size:10px;letter-spacing:.04em;padding-left:2px;padding-right:2px;justify-content:center;text-align:center;overflow:hidden}
+.xrow{margin:12px 0}.xbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:6px;background:#000;border:1px solid #444;color:#fff;text-decoration:none;font:700 12px/1 var(--mono,system-ui);letter-spacing:.08em;text-transform:uppercase}.xbtn svg{width:15px;height:15px;fill:#fff}.xbtn:hover{border-color:#fff}.approw .xhd{background:#000;border-color:#555;color:#fff}.hdrtools .approw{display:grid!important;grid-template-columns:minmax(0,1fr);gap:8px}.hdrtools .approw .appbtn{min-width:0;white-space:nowrap;font-size:10px;letter-spacing:.04em;padding-left:2px;padding-right:2px;justify-content:center;text-align:center;overflow:hidden}
+#coverSlot:empty{display:none}#coverSlot{margin:6px 0 16px}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1014,6 +1015,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       
     </div>
   </header>
+  <div id="coverSlot"></div>
 
   <nav class="navbar" id="nav" aria-label="Sections">
     <button class="nb" data-go="front">Front page</button>
@@ -1037,9 +1039,9 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       <input class="hsearch" id="q" type="search" hidden>
       <div class="hbtns">
       <button type="button" class="shrbig" id="shrBtn" aria-haspopup="true"><span aria-hidden="true">↗</span> Share the Report</button>
-      <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:flex;align-items:center;justify-content:center;flex:1;margin:0;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
+      
       </div>
-      <div class="approw"><a class="appbtn xhd" href="https://twitter.com/intent/tweet?text=The%20Guitar%20Doug%20Report&url=https%3A%2F%2Fseattlesinner.com%2F" target="_blank" rel="noopener">𝕏 Share on X</a><button type="button" class="appbtn" id="appBtn" title="Put The Guitar Doug Report on your phone's home screen">📲 Get the App</button><a class="appbtn nsapp" href="https://newspacesocialmedia.com" target="_blank" rel="noopener" title="Get the Newspace app">📲 Newspace App</a></div>
+      <div class="approw"><a class="appbtn xhd" href="https://twitter.com/intent/tweet?text=The%20Guitar%20Doug%20Report&url=https%3A%2F%2Fseattlesinner.com%2F" target="_blank" rel="noopener">𝕏 Share on X</a></div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories &amp; comments</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
@@ -1058,7 +1060,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
   <main id="view"></main>
   <a class="nsad" href="https://newspace.douggarceau.workers.dev/signup" target="_blank" rel="noopener" aria-label="The Guitar Doug Report is on Newspace exclusively. Join to interact."><span class="nsad-tag">EXCLUSIVE</span><b>The Guitar Doug Report is on <i>Newspace</i> exclusively</b><span class="nsad-go">Join to interact →</span></a>
 
-  <div class="foot"><span>The Guitar Doug Report</span><span>Sources linked on every story · <a href="#" data-ad="">Advertise with the Report</a> · <a class="pubbtn" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:inline-block;padding:4px 10px;border:1px solid #c9a227;border-radius:4px;color:#c9a227;text-decoration:none;font-weight:700">Contact the Publisher</a></span></div>
+  <div class="foot"><span>The Guitar Doug Report</span><span>Sources linked on every story · <a href="#" data-ad="">Advertise with the Report</a></span></div>
   <div class="fsnd" style="text-align:center;margin:14px 0 0"><button type="button" id="sndBtn" aria-pressed="true" style="all:unset;cursor:pointer;margin:0 6px;padding:5px 10px;border:1px solid #3a4048;border-radius:4px;font:700 11px/1 var(--mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;color:#9aa4ad">🔊 Sound on</button><button type="button" id="ambBtn" aria-pressed="false" title="Low background drone." style="all:unset;cursor:pointer;margin:0 6px;padding:5px 10px;border:1px solid #3a4048;border-radius:4px;font:700 11px/1 var(--mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;color:#9aa4ad">🎧 Ambience off</button></div>
   <p class="pv" style="margin:14px 0 0;text-align:center;font:600 12px/1.4 var(--mono,ui-monospace,monospace);letter-spacing:.08em;color:#c9a227">Page visits: <b id="visits">…</b></p>
   <p class="legal" style="margin:10px 0 0;text-align:center;font:400 10.5px/1.5 var(--mono,ui-monospace,monospace);letter-spacing:.04em;color:#7d858d">© 2026 Guitar Doug. All stories, content, designs and software on this site, including Newspace and the Tech &amp; AI Power Map, are the sole property of Guitar Doug. All rights reserved.</p>
@@ -1167,7 +1169,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES;
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  return `${vCover(CUR)}<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace, Beneath the Ink</b><small>She says the tattoos helped her take her body back. Behind the viral photos: decades of silence, disputed allegations and a new chapter in court.</small></span><span class="spr-go">Read it →</span></button><div class="front">
+  return `<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace, Beneath the Ink</b><small>She says the tattoos helped her take her body back. Behind the viral photos: decades of silence, disputed allegations and a new chapter in court.</small></span><span class="spr-go">Read it →</span></button><div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
@@ -1594,6 +1596,7 @@ document.addEventListener('click',async e=>{
 
 function render(){
   const v=STATE.view;
+  {const cs=document.getElementById('coverSlot');if(cs)cs.innerHTML=v==='front'?vCover(CUR):''}
   $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='tech'?vTech():v==='crime'?vCrime():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
   document.querySelectorAll('#nav .nb').forEach(b=>b.toggleAttribute('aria-current',b.dataset.go===(v==='read'?STATE.prev:v))||b.setAttribute('aria-current','page'));
   document.querySelectorAll('#nav .nb').forEach(b=>{if(b.dataset.go===(v==='read'?STATE.prev:v))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
