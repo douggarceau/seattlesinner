@@ -1147,12 +1147,14 @@ async function vioFill(){const el=document.querySelector('#vio .viol');if(!el)re
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=LOCAL().concat(STORIES.filter(s=>!LOCAL().includes(s)));
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  setTimeout(vioFill,0);return `<section class="box vio" id="vio" style="--c:#e3170a"><div class="bh"><b>● Seattle Crime Watch</b><span>violence in the city · latest reports</span></div><div class="viol">Loading…</div></section>${vCover(CUR)}<section class="box locnews" style="--c:#e3170a"><div class="bh"><b>Seattle News</b><span>local, newest first</span></div><div class="locl">${LOCAL().slice(0,8).map(s=>`<button type="button" class="locb" data-story="${esc(s.slug)}"><span class="lk">${esc((TOPIC[s.topic]||[,''])[1])} · ${esc(s.date.slice(5).replace('-','/'))}</span><b>${esc(s.title)}</b><small>${esc(s.dek)}</small></button>`).join('')}</div></section><div class="front">
+  setTimeout(vioFill,0);return `${vCover(CUR)}<section class="box vio" id="vio" style="--c:#e3170a"><div class="bh"><b>● Seattle Crime Watch</b><span>violence in the city · latest reports</span></div><div class="viol">Loading…</div></section><section class="box locnews" style="--c:#e3170a"><div class="bh"><b>Seattle News</b><span>local, newest first</span></div><div class="locl">${LOCAL().slice(0,8).map(s=>`<button type="button" class="locb" data-story="${esc(s.slug)}"><span class="lk">${esc((TOPIC[s.topic]||[,''])[1])} · ${esc(s.date.slice(5).replace('-','/'))}</span><b>${esc(s.title)}</b><small>${esc(s.dek)}</small></button>`).join('')}</div></section><div class="front">
     <div class="stack">
       ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
         <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
-      <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
-      <div class="sgrid">${rest.slice(0,6).map(storyCard).join('')}</div>
+      ${(()=>{const L=LOCAL().filter(s=>s!==lead),N=STORIES.filter(s=>!LOCAL().includes(s)&&s!==lead&&!['ink'].includes(s.topic));return `<div class="lbl"><b>Seattle</b><span>${L.length} local stories</span></div>
+      <div class="sgrid">${L.slice(0,6).map(storyCard).join('')}</div>
+      <div class="lbl"><b>National</b><span>${N.length} stories</span></div>
+      <div class="sgrid">${N.slice(0,8).map(storyCard).join('')}</div>`})()}
       <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
         <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
