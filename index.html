@@ -67,18 +67,24 @@
 .shrbig:hover,.shrbig:focus-visible{filter:brightness(1.15);animation-play-state:paused}
 @keyframes shrBlink{0%{background:#1877f2;box-shadow:0 0 22px #4a9bff,0 0 4px #fff inset}50%{background:#0b2a55;box-shadow:0 0 4px #1877f244}100%{background:#1877f2}}
 @media (prefers-reduced-motion:reduce){.shrbig{animation:none}}
-.locnews .locl{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;padding:12px}
-.locb{all:unset;cursor:pointer;display:block;padding:12px 14px;border:1px solid #3a2520;border-left:4px solid #e3170a;border-radius:6px;background:rgba(227,23,10,.06)}
-.locb:hover{background:rgba(227,23,10,.14)}
-.locb .lk{display:block;font:800 10px/1 var(--mono,monospace);letter-spacing:.14em;text-transform:uppercase;color:#ff6a5a;margin-bottom:6px}
-.locb b{display:block;font:700 18px/1.2 var(--display,Georgia,serif);color:#fff;margin-bottom:5px}
-.locb small{display:block;font-size:13.5px;line-height:1.35;color:#c9d1d9;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.vio .viol{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;padding:12px}
-.vrow{display:block;padding:10px 12px;border-left:4px solid #e3170a;background:rgba(227,23,10,.1);border-radius:4px;text-decoration:none}
-.vrow:hover{background:rgba(227,23,10,.2)}
-.vrow .vk{display:inline-block;background:#e3170a;color:#fff;font:800 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;padding:3px 6px;margin-bottom:6px}
-.vrow b{display:block;color:#fff;font:700 16px/1.25 var(--display,Georgia,serif)}
-.vrow small{display:block;color:#aab;font-size:12.5px;margin-top:4px}
+.sx{margin:0 0 28px}
+.sxh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 2px 12px;margin:0 0 16px;border-bottom:2px solid #e3170a}
+.sxh h2{margin:0;font:800 28px/1.1 var(--display,Georgia,serif);color:#fff;letter-spacing:-.01em}
+.sxh span{font:700 11px/1 var(--mono,monospace);letter-spacing:.14em;text-transform:uppercase;color:#8b949e}
+.sxg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:16px}
+@media(max-width:900px){.sxg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.sxg{grid-template-columns:1fr;grid-auto-rows:auto}}
+.sxc{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:16px 18px;background:#121212;border:1px solid #262626;border-radius:8px;text-decoration:none;transition:border-color .15s,background .15s}
+.sxc:hover{border-color:#555;background:#181818}
+.sxc.big{grid-column:1/-1;padding:24px 26px;background:#170d0c;border-color:#3a1c18}
+.sxc h3{margin:0;font:700 19px/1.25 var(--display,Georgia,serif);color:#fff;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.sxc.big h3{font-size:clamp(26px,4vw,40px);line-height:1.1}
+.sxc p{margin:0;font-size:14px;line-height:1.45;color:#b8bec6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.sxc.big p{font-size:17px;-webkit-line-clamp:4}
+.sxm{margin-top:auto;padding-top:4px;font:600 11px/1.3 var(--body,system-ui);color:#7d858f}
+.sxt{align-self:flex-start;font:800 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;padding:4px 7px;border-radius:3px;color:#fff;background:#b3140b}
+.sxt.o{background:#a35200}.sxt.g{background:#3a3f45}
+.sxmore{margin-top:18px;text-align:center}.sxmore button{all:unset;cursor:pointer;font:700 13px/1 var(--body,system-ui);color:#fff;padding:12px 18px;border:1px solid #444;border-radius:6px}
+.sxmore button:hover{border-color:#e3170a}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -759,16 +765,6 @@ h2.room{font-family:var(--flag)!important;font-weight:900!important;text-transfo
 .vgrp h3{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 8px;padding-bottom:6px;border-bottom:3px double var(--gc)}
 .vgrp h3 span{font:900 clamp(24px,3.6vw,34px)/1 var(--flag);color:#fff;text-shadow:0 0 14px color-mix(in srgb,var(--gc) 60%,transparent)}
 .vgrp h3 small{font:800 12px var(--kick);letter-spacing:.14em;color:var(--gc)}
-.vrows{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:0 18px}
-.vrow{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:10px 6px;border-bottom:1px dotted #3a4350}
-.vrow:hover{background:color-mix(in srgb,var(--gc) 12%,transparent)}
-.vrow .vn{display:grid;gap:1px}
-.vrow .vn b{font:700 18px/1.2 var(--display);color:#fff}
-.vrow .vn span{font:italic 400 13.5px/1.3 var(--read);color:var(--gold)}
-.vrow .vd{grid-column:1/-1;font:400 14px/1.4 var(--read);color:#b9c2cb}
-.vrow .vb{grid-row:1;grid-column:2;display:flex;gap:4px;align-items:start;flex-wrap:wrap;justify-content:end}
-.vrow .vb i{font:800 9.5px/1 var(--kick);letter-spacing:.1em;text-transform:uppercase;font-style:normal;padding:4px 6px;border-radius:3px;border:1px solid currentColor}
-.vrow .bn{color:#ff3a2a}.vrow .bu{color:#1e90ff}.vrow .bs{color:#ffb300}
 @media (max-width:420px){.vrows{grid-template-columns:minmax(0,1fr)}}
 /* front-page venue guide */
 .vguide{padding:16px;display:grid;gap:14px}
@@ -977,6 +973,15 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 /* scanner and live widgets: desaturated */
 .scu,.crstat div{filter:saturate(.55) brightness(.9)}
 .crw h2.room{animation:none!important}
+.lsrow{display:none!important}.wrap{padding-left:16px!important;padding-right:16px!important;max-width:1400px}
+.sxs{margin:0 0 30px}.sxsh{display:flex;align-items:baseline;gap:12px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #2a2a2a}
+.sxsh h3{margin:0;font:800 13px/1 var(--mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:#ff5a4a}
+.sxsh span{flex:1;font-size:13px;color:#7d858f}.sxsh em{font:700 12px/1 var(--mono,monospace);font-style:normal;color:#7d858f}
+.sxg{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
+@media(max-width:1100px){.sxg{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:800px){.sxg{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:520px){.sxg{grid-template-columns:1fr!important;grid-auto-rows:auto!important}}
+.sxc{padding:14px 15px!important;gap:7px!important}.sxc h3{font-size:17px!important}.sxc p{font-size:13px!important;-webkit-line-clamp:2!important}
 </style>
 
 
@@ -1138,40 +1143,24 @@ const NATIONAL=new Set(['who-said-martial-law','downfall-of-andrew-tate','candac
 const VIOL=/\b(shoot|shot|shooting|gunfire|gunman|gunpoint|armed|stab|stabbing|stabbed|homicide|murder|killed|killing|assault|attack|attacked|violence|violent|carjack|robbery|robbed|slain|rape|raped|sexual assault|kidnap|abduct|stalk|threat|missing|body found)\w*/i;
 const DRUG=/\b(drug|fentanyl|overdose|meth|heroin|cocaine|narcotic|dealer|trafficking|cartel|bust)\w*/i,SCAND=/\b(officer|lieutenant|sheriff|charged|arrest|accused|lawsuit|sued|scandal|misconduct|indicted|fraud|bribe|harass)\w*/i;
 const LOCAL=()=>{const L=STORIES.filter(s=>!NATIONAL.has(s.slug)&&!['national','ink','screen'].includes(s.topic));const v=s=>{const t=s.title+' '+s.dek;return ['violence','sexual-assault','missing-abduction-stalking','threats'].includes(s.beat)||VIOL.test(t)?3:(['drugs','unexplained-death','police','politics'].includes(s.beat)||DRUG.test(t)||SCAND.test(s.title)?2:0)};return L.map((s,i)=>[s,i]).sort((a,b)=>(v(b[0])-v(a[0]))||((b[0].date||'').localeCompare(a[0].date||''))||(a[1]-b[1])).map(x=>x[0])};
-async function vioFill(){const el=document.querySelector('#vio .viol');if(!el)return;
- const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
- const K=['homicide','shooting','stabbing','assault','robbery'];
- const it=((j&&j.items)||[]).filter(x=>K.includes(x.kind)).sort((a,b)=>(b.date||'').localeCompare(a.date||'')).slice(0,6);
- if(!it.length){document.getElementById('vio').remove();return}
- el.innerHTML=it.map(x=>`<a class="vrow" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="vk">${esc(x.kind)}</span><b>${esc(x.headline)}</b><small>${esc(x.hood||'Seattle')} · ${esc((x.date||'').slice(5).replace('-','/'))} · ${esc(x.outlet||'')}</small></a>`).join('')}
-function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
-  const [lead,...rest]=LOCAL().concat(STORIES.filter(s=>!LOCAL().includes(s)));
-  const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
-  setTimeout(vioFill,0);return `${vCover(CUR)}<section class="box vio" id="vio" style="--c:#e3170a"><div class="bh"><b>● Seattle Crime Watch</b><span>violence in the city · latest reports</span></div><div class="viol">Loading…</div></section><section class="box locnews" style="--c:#e3170a"><div class="bh"><b>Seattle News</b><span>local, newest first</span></div><div class="locl">${LOCAL().slice(0,8).map(s=>`<button type="button" class="locb" data-story="${esc(s.slug)}"><span class="lk">${esc((TOPIC[s.topic]||[,''])[1])} · ${esc(s.date.slice(5).replace('-','/'))}</span><b>${esc(s.title)}</b><small>${esc(s.dek)}</small></button>`).join('')}</div></section><div class="front">
-    <div class="stack">
-      ${lead?`<button class="lead styled" style="${sty(lead.slug)}" data-story="${lead.slug}"><span class="kick" style="--tc:${tc(lead.topic)}"><span class="dot"></span>Top story · ${esc(tl(lead.topic))}<time>${shortDay(lead.date)}</time></span>
-        <h3>${esc(lead.title)}</h3><p>${esc(lead.dek)}</p><span class="readm">Read it →</span>${lead.audio?'<span class="lead-aud">🎧 Listen · '+esc(lead.audio.len||'')+'</span>':''}</button>`:''}
-      ${(()=>{const L=LOCAL().filter(s=>s!==lead),N=STORIES.filter(s=>!LOCAL().includes(s)&&s!==lead&&!['ink'].includes(s.topic));return `<div class="lbl"><b>Seattle</b><span>${L.length} local stories</span></div>
-      <div class="sgrid">${L.slice(0,6).map(storyCard).join('')}</div>
-      <div class="lbl"><b>National</b><span>${N.length} stories</span></div>
-      <div class="sgrid">${N.slice(0,8).map(storyCard).join('')}</div>`})()}
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
-        <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
-        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
-      ${vGuide(true)}
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>Got dirt? Got photos?</b></div><div style="padding:14px;display:grid;gap:10px"><p style="margin:0;color:#c9d1d9">Send a story idea or your best shot of the city. Picks may run in print.</p><button class="go" data-go="submit">Submit to the Report</button></div></section>
-    </div>
-    <div class="stack">
-      ${(()=>{const t=STORIES.find(x=>x.trailer&&x.trailer.src);return t?`<section class="box nowp" style="--c:#c9a227"><div class="bh"><b>Now playing · ${esc(t.title)}</b><span>${esc(t.trailer.label||'Trailer')} · ${esc(t.trailer.credit||'')}</span></div><video controls playsinline preload="none" poster="${esc(t.trailer.poster||'')}"><source src="${esc(t.trailer.src)}" type="video/mp4"></video><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-story="${t.slug}">Read our story →</button></div></section>`:''})()}
-      <section class="box" style="--c:#1e90ff"><div class="bh"><b>Shows this week</b><span>tap for tickets</span></div><div class="rows">${wk.map(showRow).join('')||'<div class="empty">No shows listed this week.</div>'}</div>
-        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="cal">Full calendar →</button></div></section>
-      <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI wire</b><span class="techsrc">via AI Signals</span></div><div class="bwl">${((TECH&&TECH.news)||[]).slice(0,6).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div>
-        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="tech">Tech &amp; AI room →</button></div></section>
-      <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><img class="cwmark sm" src="img/prowler-mark.jpg" alt=""><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
-      <section class="box" style="--c:#39ff14"><div class="bh"><b>Scene picks</b><span>not concerts</span></div><div style="display:grid;gap:10px;padding:12px">${upScene.slice(0,3).map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div></section>
-      <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,2).map(bnRow).join('')}${upEv(BEV).slice(0,2).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
-      ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
-    </div></div>`;
+const SXK={homicide:[3,'Homicide'],shooting:[3,'Shooting'],stabbing:[3,'Stabbing'],assault:[3,'Assault'],robbery:[3,'Armed robbery'],fire:[2,'Fire'],crash:[2,'Deadly crash'],police:[2,'Police'],arrest:[2,'Arrest'],courts:[2,'Courts'],burglary:[1,'Burglary'],theft:[1,'Theft']};
+const sxSev=s=>{const t=s.title+' '+s.dek;return ['violence','sexual-assault','missing-abduction-stalking','threats'].includes(s.beat)||VIOL.test(t)?3:(['drugs','unexplained-death','police','politics'].includes(s.beat)||DRUG.test(t)||SCAND.test(s.title)?2:0)};
+const sxTag=s=>{const b={violence:'Violence','sexual-assault':'Sexual assault','missing-abduction-stalking':'Missing / stalking',threats:'Threats',drugs:'Drugs','unexplained-death':'Unexplained death',police:'Police',politics:'City Hall'}[s.beat];return b||(VIOL.test(s.title+' '+s.dek)?'Violence':DRUG.test(s.title+' '+s.dek)?'Drugs':'Scandal')};
+const sxDay=d=>{if(!d)return '';const p=d.split('-');return MON[+p[1]-1]+' '+(+p[2])};
+function sxCard(x,big){const c=x.sev>=3?'r':x.sev==2?'o':'g';const inner=`<span class="sxt ${c}">${esc(x.tag)}</span><h3>${esc(x.title)}</h3>${x.dek?`<p>${esc(x.dek)}</p>`:''}<span class="sxm">${esc([x.hood,sxDay(x.date),x.src].filter(Boolean).join(' · '))}</span>`;
+  return x.slug?`<button type="button" class="sxc${big?' big':''}" data-story="${esc(x.slug)}">${inner}</button>`:`<a class="sxc${big?' big':''}" href="${esc(x.url)}" target="_blank" rel="noopener">${inner}</a>`}
+async function sxFill(){const el=document.getElementById('sxFeed');if(!el)return;
+  const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
+  const A=LOCAL().map(s=>({sev:sxSev(s),tag:sxTag(s),title:s.title,dek:s.dek,date:s.date,hood:'Seattle',src:'The Guitar Doug Report',slug:s.slug})).filter(x=>x.sev>0);
+  const C=((j&&j.items)||[]).filter(i=>SXK[i.kind]).map(i=>({sev:SXK[i.kind][0],tag:SXK[i.kind][1],title:i.headline,dek:i.blurb||'',date:i.date||'',hood:i.hood||'Seattle',src:i.outlet||'',url:i.url}));
+  const G=[['Violence','Shootings, killings, stabbings, assaults, armed robberies',x=>x.sev>=3],['Police, Courts &amp; City Hall','Arrests, charges, misconduct, drugs, scandal',x=>x.sev==2&&!/crash|fire/i.test(x.tag)],['Crashes &amp; Fires','Deadly wrecks, hit-and-runs, fires',x=>/crash|fire/i.test(x.tag)],['Break-ins &amp; Theft','Burglaries, smash-and-grabs, theft',x=>x.sev==1]];
+  const all=A.concat(C).sort((a,b)=>b.date.localeCompare(a.date)||(b.sev-a.sev));
+  if(!all.length){el.innerHTML='<div class="empty">No reports yet.</div>';return}
+  el.innerHTML=G.map(([h,sub,f],i)=>{const L=all.filter(f);return L.length?`<div class="sxs"><div class="sxsh"><h3>${h}</h3><span>${sub}</span><em>${L.length}</em></div><div class="sxg">${L.map(x=>sxCard(x)).join('')}</div></div>`:''}).join('');
+  const n=document.getElementById('sxCount');if(n)n.textContent=all.length+' reports · last 30 days'}
+function vFront(){setTimeout(sxFill,0);
+  return `${vCover(CUR)}<section class="sx"><div class="sxh"><h2>Seattle Crime &amp; Bad News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
+  <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></section>`;
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
   return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Report Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
