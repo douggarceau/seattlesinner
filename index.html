@@ -225,7 +225,14 @@ const BY='Guitar Doug';
 function grab(src,marker){const i=src.indexOf(marker);if(i<0)return null;let j=i+marker.length;while(/\s/.test(src[j]))j++;const open=src[j],close=open==='['?']':'}';let d=0,inS=false,e=false;for(let k=j;k<src.length;k++){const c=src[k];if(inS){if(e)e=false;else if(c==='\\')e=true;else if(c==='"')inS=false;continue}if(c==='"')inS=true;else if(c===open)d++;else if(c===close){d--;if(!d){try{return JSON.parse(src.slice(j,k+1))}catch(_){return null}}}}return null}
 const url=s=>'/?story='+encodeURIComponent(s.slug);
 let PH={},COVERS=[];
-const photo=s=>{if(IMG[s.slug])return{src:IMG[s.slug],own:1};return PH[s.slug]||PH[s.topic]||PH[{nightlife:'nightlife',weird:'culture',transit:'streets'}[s.topic]]||null};
+let USED=null,PCACHE={};
+const photo=s=>{if(IMG[s.slug])return{src:IMG[s.slug],own:1};
+ if(!USED)return PH[s.slug]||PH[s.topic]||null;
+ if(s.slug in PCACHE)return PCACHE[s.slug];
+ const alias={weird:'culture',transit:'streets',nightlife:'nightlife'};
+ const cands=[s.slug,s.topic,alias[s.topic],'seattle'].filter(k=>k&&PH[k]);
+ const k=cands.find(k=>!USED.has(PH[k].src));
+ const r=k?PH[k]:null; if(r)USED.add(r.src); PCACHE[s.slug]=r; return r};
 const pimg=(p,w)=>p?`<img onerror="this.remove()" src="${esc(p.own?p.src:p.src+'?auto=format&fit=crop&w='+(w||900)+'&q=72')}" alt="" loading="lazy">`:'';
 const kick=s=>TOPIC[s.topic]||s.topic;
 const fmtD=d=>{try{return new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'})}catch(_){return d}};
@@ -262,6 +269,7 @@ function coverHTML(nShows){
  <div class="side-t" style="text-align:right">Raising <em>Hell</em><br>Since Day One</div></section>`;
 }
 function front(S,W,EV,CR){
+ USED=new Set();PCACHE={};
  const by=k=>S.find(s=>s.slug===k);
  const used=new Set();const take=s=>{if(s)used.add(s.slug);return s};
  const lead=take(by('clavicular-business-of-contempt')||S[0]);
