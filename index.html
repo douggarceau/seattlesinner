@@ -988,7 +988,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
       <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:flex;align-items:center;justify-content:center;flex:1;margin:0;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
       </div>
       <form class="subbox" id="subBox" novalidate>
-        <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories, comments &amp; tips</span></div>
+        <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories &amp; comments</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
         <div class="sb-in" id="sbIn" hidden><b>Signed in as <span id="sbWho"></span></b><button type="button" id="sbOut">Log out</button></div>
         <div class="sb-f" id="sbF">
@@ -1141,7 +1141,7 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
         <div class="bwl">${BARS.slice(0,5).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
       ${vGuide(true)}
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>Got dirt? Got photos?</b></div><div style="padding:14px;display:grid;gap:10px"><p style="margin:0;color:#c9d1d9">Send a story idea or your best shot of the city. Picks may run in print.</p><button class="go" data-go="submit">Submit to the Report</button></div></section>
+      
     </div>
     <div class="stack">
       ${(()=>{const t=STORIES.find(x=>x.trailer&&x.trailer.src);return t?`<section class="box nowp" style="--c:#c9a227"><div class="bh"><b>Now playing · ${esc(t.title)}</b><span>${esc(t.trailer.label||'Trailer')} · ${esc(t.trailer.credit||'')}</span></div><video controls playsinline preload="none" poster="${esc(t.trailer.poster||'')}"><source src="${esc(t.trailer.src)}" type="video/mp4"></video><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-story="${t.slug}">Read our story →</button></div></section>`:''})()}
@@ -1748,7 +1748,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
-(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands','submit','front'].includes(g)){go(g)}})();
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands','front'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 </script>
 <script>
