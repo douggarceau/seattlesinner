@@ -985,6 +985,19 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .sxbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;background:#121212;border:1px solid #2a2a2a;border-radius:8px}
 .sxbar label{font:800 12px/1 var(--mono,monospace);letter-spacing:.14em;text-transform:uppercase;color:#ff5a4a}
 .sxbar select{flex:1;min-width:220px;max-width:420px;font:600 16px/1.2 var(--body,system-ui);color:#fff;background:#1c1c1c;border:1px solid #444;border-radius:6px;padding:10px 12px}
+.sxa{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:10px;width:100%;padding:0 26px 24px;background:#1a0606;border:2px solid #e3170a;border-radius:10px;animation:sxglow 1.2s ease-in-out infinite;text-decoration:none;overflow:hidden}
+.sxa h2{margin:0;font:800 clamp(26px,4.2vw,46px)/1.08 var(--display,Georgia,serif);color:#fff}
+.sxa p{margin:0;font-size:17px;line-height:1.45;color:#e2c9c6;max-width:900px}
+.sxa-m{font:700 12px/1.3 var(--body,system-ui);color:#ff8a7a}
+.sxa-k{display:inline-flex;align-items:center;gap:10px;font:800 13px/1 var(--mono,monospace);letter-spacing:.18em;text-transform:uppercase;color:#ff3b2f}
+.sxa-dot{width:14px;height:14px;border-radius:50%;background:#ff1a0a;box-shadow:0 0 12px 4px #ff1a0a;animation:sxblink .7s steps(1) infinite}
+.lightbar{display:flex;align-self:center;width:min(360px,80%);height:22px;margin:0 0 6px;border-radius:0 0 14px 14px;overflow:hidden;background:#111;border:1px solid #333;border-top:0}
+.lightbar i{flex:1}.lightbar .lr{background:#ff1a0a;animation:sxr .5s steps(1) infinite}.lightbar .lb{background:#1a4dff;animation:sxb .5s steps(1) infinite}
+@keyframes sxr{0%{opacity:1;box-shadow:0 0 30px 10px #ff1a0a}50%{opacity:.12;box-shadow:none}}
+@keyframes sxb{0%{opacity:.12;box-shadow:none}50%{opacity:1;box-shadow:0 0 30px 10px #1a4dff}}
+@keyframes sxblink{0%{opacity:1}50%{opacity:.15}}
+@keyframes sxglow{0%,100%{box-shadow:0 0 0 0 rgba(227,23,10,0)}50%{box-shadow:0 0 34px 4px rgba(227,23,10,.55)}}
+@media (prefers-reduced-motion:reduce){.sxa,.sxa-dot,.lightbar i{animation:none}}
 </style>
 
 
@@ -1157,11 +1170,19 @@ const SXTOWNS=['Auburn','Bellevue','Bothell','Burien','Des Moines','Edmonds','Ev
 let SXALL=[];const SXALIAS={'Chinatown':'Chinatown / International District','International District':'Chinatown / International District','Genesee':'Columbia City','Duwamish':'SoDo'};
 const sxPlaces=x=>{const t=' '+x.hood+' '+x.title+' '+x.dek+' ';const P=new Set();(x.hood||'').split('/').map(h=>h.trim()).filter(h=>h&&h!=='Seattle'&&h!=='South Seattle').forEach(h=>{h=h.replace(/^(North|South) (Delridge|Admiral|Beacon Hill)$/,'$2');P.add(SXALIAS[h]||h)});
   SXHOODS.concat(SXTOWNS).forEach(h=>{if(!P.has(h)&&new RegExp('\\b'+h.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')+'\\b').test(t))P.add(h)});return [...P]};
+const SXW={Homicide:10,Shooting:8,Stabbing:7,Assault:6,'Armed robbery':5,'Deadly crash':4,Fire:3};
+const sxWorst=x=>{const t=x.title+' '+x.dek;let w=SXW[x.tag]||(x.sev>=3?6:x.sev*2);if(/\b(killed|dead|death|homicide|murder|slain|fatal)/i.test(t))w=Math.max(w,10);else if(/\b(wounded|critical|injured|hospitali[sz]ed|rape|abduct|kidnap)/i.test(t))w+=1;return w};
+function sxAlert(){const el=document.getElementById('sxAlert');if(!el||!SXALL.length)return;
+  const d0=SXALL[0].date;const win=addDays(d0,-1);const P=SXALL.filter(x=>x.date>=win);
+  const x=P.slice().sort((a,b)=>sxWorst(b)-sxWorst(a)||b.date.localeCompare(a.date))[0];if(!x)return;
+  const inner=`<span class="lightbar" aria-hidden="true"><i class="lr"></i><i class="lb"></i></span><span class="sxa-k"><span class="sxa-dot"></span>Red alert · worst crime of the day</span><h2>${esc(x.title)}</h2>${x.dek?`<p>${esc(x.dek)}</p>`:''}<span class="sxa-m">${esc([x.hood,sxDay(x.date),x.src].filter(Boolean).join(' · '))} · Read it →</span>`;
+  el.innerHTML=x.slug?`<button type="button" class="sxa" data-story="${esc(x.slug)}">${inner}</button>`:`<a class="sxa" href="${esc(x.url)}" target="_blank" rel="noopener">${inner}</a>`}
 async function sxFill(){const el=document.getElementById('sxFeed');if(!el)return;
   const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
   const A=LOCAL().map(s=>({sev:sxSev(s),tag:sxTag(s),title:s.title,dek:s.dek,date:s.date,hood:'',src:'The Guitar Doug Report',slug:s.slug})).filter(x=>x.sev>0);
   const C=((j&&j.items)||[]).filter(i=>SXK[i.kind]).map(i=>({sev:SXK[i.kind][0],tag:SXK[i.kind][1],title:i.headline,dek:i.blurb||'',date:i.date||'',hood:i.hood||'Seattle',src:i.outlet||'',url:i.url}));
   SXALL=A.concat(C).sort((a,b)=>b.date.localeCompare(a.date)||(b.sev-a.sev));SXALL.forEach(x=>{x.places=sxPlaces(x);if(!x.hood)x.hood=x.places[0]||'Seattle'});
+  sxAlert();
   const cnt={};SXALL.forEach(x=>x.places.forEach(p=>cnt[p]=(cnt[p]||0)+1));
   const opt=L=>L.filter(h=>cnt[h]).sort().map(h=>`<option value="${esc(h)}">${esc(h)} (${cnt[h]})</option>`).join('');
   const extra=Object.keys(cnt).filter(h=>!SXHOODS.includes(h)&&!SXTOWNS.includes(h));
@@ -1177,7 +1198,7 @@ function sxRender(){const el=document.getElementById('sxFeed');if(!el)return;con
   if(!all.length){el.innerHTML='<div class="empty">No reports for this area in the last 30 days.</div>';return}
   el.innerHTML=G.map(([h,sub,f])=>{const L=all.filter(f);return L.length?`<div class="sxs"><div class="sxsh"><h3>${h}</h3><span>${sub}</span><em>${L.length}</em></div><div class="sxg">${L.map(x=>sxCard(x)).join('')}</div></div>`:''}).join('')}
 function vFront(){setTimeout(sxFill,0);
-  return `<div class="sxbar"><label for="sxWhere">Crime &amp; bad news near</label><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxh"><h2 id="sxTitle">Seattle Crime &amp; Bad News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
+  return `<div id="sxAlert"></div><div class="sxbar"><label for="sxWhere">Crime &amp; bad news near</label><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxh"><h2 id="sxTitle">Seattle Crime &amp; Bad News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
   <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></section>`;
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
