@@ -67,6 +67,8 @@
 .shrbig:hover,.shrbig:focus-visible{filter:brightness(1.15);animation-play-state:paused}
 @keyframes shrBlink{0%{background:#1877f2;box-shadow:0 0 22px #4a9bff,0 0 4px #fff inset}50%{background:#0b2a55;box-shadow:0 0 4px #1877f244}100%{background:#1877f2}}
 @media (prefers-reduced-motion:reduce){.shrbig{animation:none}}
+.hbtns{display:flex;gap:10px;margin:0 0 12px}.hbtns .shrbig{flex:1.4;width:auto;margin:0;padding:12px 10px;font-size:13px}.hbtns .shrbig{letter-spacing:.06em;font-size:11px;white-space:nowrap;gap:6px}.hbtns>*{flex:1 1 0!important;min-width:0}.hbtns .pubtop{font-size:10.5px!important;line-height:1.25!important;letter-spacing:.05em!important;white-space:nowrap;padding:9px 4px!important}
+.mast{align-items:center!important}.mast .lgimg{margin:0!important}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -975,14 +977,16 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 <div class="wrap">
   <header class="mast">
     <div>
-      <h1 class="logo lgimg"><img src="img/gdr-masthead.webp" alt="The Guitar Doug Report" width="1000" height="383"></h1>
+      <h1 class="logo lgimg"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"></h1>
       
     </div>
     <div>
       <div class="mstat" id="mstat" hidden></div>
       <input class="hsearch" id="q" type="search" hidden>
+      <div class="hbtns">
       <button type="button" class="shrbig" id="shrBtn" aria-haspopup="true"><span aria-hidden="true">↗</span> Share the Report</button>
-      <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:block;width:min(100%,340px);margin:-6px 0 14px auto;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
+      <a class="pubtop" href="mailto:publisher@seattlesinner.com?subject=For%20the%20publisher" style="display:flex;align-items:center;justify-content:center;flex:1;margin:0;box-sizing:border-box;text-align:center;padding:9px 12px;border:1px solid #c9a227;border-radius:6px;color:#c9a227;text-decoration:none;font:800 12px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase">✉ Contact the Publisher</a>
+      </div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Free account · full stories, comments &amp; tips</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
