@@ -219,7 +219,7 @@ const $=s=>document.querySelector(s);
 $('#yr').textContent=new Date().getFullYear();
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const TOPIC={music:'Music',nightlife:'Nightlife',politics:'City Hall',national:'Politics',surveillance:'Surveillance',tech:'Tech',housing:'Rent & Real Estate',weird:'Weird Seattle',culture:'Culture',transit:'Transit',streets:'The Streets',ink:'Ink & Steel',screen:'The Screen'};
-const IMG={'you-can-see-everything':'/img/you-can-see-everything.jpg'};
+const IMG={};
 const BY='The Guitar Doug Report';
 /* pull a JSON literal out of the live site page so this edition always matches it */
 function grab(src,marker){const i=src.indexOf(marker);if(i<0)return null;let j=i+marker.length;while(/\s/.test(src[j]))j++;const open=src[j],close=open==='['?']':'}';let d=0,inS=false,e=false;for(let k=j;k<src.length;k++){const c=src[k];if(inS){if(e)e=false;else if(c==='\\')e=true;else if(c==='"')inS=false;continue}if(c==='"')inS=true;else if(c===open)d++;else if(c===close){d--;if(!d){try{return JSON.parse(src.slice(j,k+1))}catch(_){return null}}}}return null}
