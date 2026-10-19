@@ -1024,6 +1024,8 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 .sxtop .sxbox:hover{background:linear-gradient(160deg,color-mix(in srgb,var(--bc) 48%,#0b0b0b),color-mix(in srgb,var(--bc) 18%,#0b0b0b))}
 .sxtop .sxbk{color:var(--bc);filter:brightness(1.25)}
 .mast .logo.lgimg{position:relative;top:44px}@media(max-width:700px){.mast .logo.lgimg{top:14px;margin-bottom:14px}}
+.sxgo{all:unset;cursor:pointer;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit}.sxgo:hover{text-decoration:underline;text-underline-offset:4px}
+.sxbar .sxgo{font:800 12px/1 var(--mono,monospace);letter-spacing:.14em;text-transform:uppercase;color:#ff5a4a}
 </style>
 
 
@@ -1223,9 +1225,9 @@ function sxRender(){const el=document.getElementById('sxFeed');if(!el)return;con
   const t=document.getElementById('sxTitle');if(t)t.innerHTML=w?esc(w)+' Crime &amp; Safety News':'Seattle Crime &amp; Safety News';
   const n=document.getElementById('sxCount');if(n)n.textContent=all.length+' reports · last 30 days';
   if(!all.length){el.innerHTML='<div class="empty">No reports for this area in the last 30 days.</div>';return}
-  el.innerHTML=G.map(([h,sub,f])=>{const L=all.filter(f);return L.length?`<div class="sxs"><div class="sxsh"><h3>${h}</h3><span>${sub}</span><em>${L.length}</em></div><div class="sxg">${L.map(x=>sxCard(x)).join('')}</div></div>`:''}).join('')}
+  el.innerHTML=G.map(([h,sub,f])=>{const L=all.filter(f);return L.length?`<div class="sxs"><div class="sxsh"><h3><button type="button" class="sxgo" data-go="crime">${h}</button></h3><span>${sub}</span><em>${L.length}</em></div><div class="sxg">${L.map(x=>sxCard(x)).join('')}</div></div>`:''}).join('')}
 function vFront(){setTimeout(sxFill,0);
-  return `<div class="sxtop">${[['satanic-cabal','The Investigation','#e3170a'],['macklemore-vs-the-owners-box','Music &amp; Power','#1e90ff'],['case-against-clavicular','The Charges','#ff7a1a'],['candace-anomalies','The Kirk Case','#a55cff'],['downfall-of-andrew-tate','Locked Up','#f2c94c'],['the-swarm','AI Gone Rogue','#2fd3c8']].map(([sl,k,c])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" style="--bc:${c}" data-story="${sl}"><span class="sxbk">${k}</span><h3>${esc(t.title)}</h3></button>`:''}).join('')}</div><div id="sxAlert"></div><div class="sxbar"><label for="sxWhere">Crime &amp; safety news near you</label><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxwrap"><div class="sxmain"><div class="sxh"><h2 id="sxTitle">Seattle Crime &amp; Safety News</h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
+  return `<div class="sxtop">${[['satanic-cabal','The Investigation','#e3170a'],['macklemore-vs-the-owners-box','Music &amp; Power','#1e90ff'],['case-against-clavicular','The Charges','#ff7a1a'],['candace-anomalies','The Kirk Case','#a55cff'],['downfall-of-andrew-tate','Locked Up','#f2c94c'],['the-swarm','AI Gone Rogue','#2fd3c8']].map(([sl,k,c])=>{const t=STORIES.find(x=>x.slug===sl);return t?`<button type="button" class="sxbox" style="--bc:${c}" data-story="${sl}"><span class="sxbk">${k}</span><h3>${esc(t.title)}</h3></button>`:''}).join('')}</div><div id="sxAlert"></div><div class="sxbar"><button type="button" class="sxgo" data-go="crime">Crime &amp; safety news near you</button><select id="sxWhere"><option value="">All of Seattle &amp; area</option></select></div>${vCover(CUR)}<section class="sx"><div class="sxwrap"><div class="sxmain"><div class="sxh"><h2><button type="button" class="sxgo" data-go="crime" id="sxTitle">Seattle Crime &amp; Safety News</button></h2><span id="sxCount">loading</span></div><div id="sxFeed"><div class="empty">Loading reports…</div></div>
   <div class="sxmore"><button type="button" data-go="crime">Live Crime Watch map →</button></div></div></div></section>`;
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
