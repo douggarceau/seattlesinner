@@ -116,6 +116,9 @@
 .nat-l button{all:unset;cursor:pointer;font:600 13px/1.3 var(--read,Georgia,serif);color:#ffd84a;padding:3px 0;border-bottom:1px dotted #3a3328}
 .nat-l button:hover{color:#fff}
 @media (max-width:700px){.sea-g b{font-size:13px}.nat-l{grid-template-columns:minmax(0,1fr)}}
+.hdrtools .hbtns,.hdrtools .approw{display:none!important}
+.hdrtools{display:block!important;margin:0!important}.hdrtools .subbox{display:none}.hdrtools .subbox.open{display:block;max-width:520px;margin:12px auto}
+#seaBanner:empty{display:none}#seaBanner{margin:14px 0 -6px}#seaBanner .spr{margin:0}.sea-spr{width:100%;box-sizing:border-box;border-left-color:#ff6a00!important}.sea-spr .spr-tag{background:#ff6a00;box-shadow:0 0 16px #ff6a0088}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1069,6 +1072,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
         </div>
       </form>
     </div>
+  <div id="seaBanner"></div>
   <div class="lsrow" aria-label="The Guitar Doug Report features"><div class="lspot l t1"><a id="lsC"></a></div><div class="lspot r t1"><a id="lsB"></a></div><div class="lspot l t3"><a id="lsA"></a></div><div class="lspot r t2"><a id="lsD"></a></div><div class="lspot l t4"><a id="lsE"></a></div><div class="lspot r t4"><a id="lsF"></a></div><div class="lspot l t2"><a id="lsG"></a></div><div class="lspot r t3"><a id="lsH"></a></div></div>
 
   <main id="view"></main>
@@ -1181,7 +1185,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
   <span class="where">${esc(e.venue)}${e.hood?' · '+esc(e.hood):''}${e.price?' · '+esc(e.price):''}</span><p>${esc(e.blurb)}</p></a>`}
 
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
-  const [lead,...rest]=STORIES;
+  const [lead,...rest]=STORIES.filter(x=>x.slug!=='ballard-light-rail-2042-forum');
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
   return `<button type="button" class="spr" data-story="nancy-mace-gets-inked"><span class="spr-tag">SPECIAL REPORT</span><span><b>Nancy Mace, Beneath the Ink</b><small>She says the tattoos helped her take her body back. Behind the viral photos: decades of silence, disputed allegations and a new chapter in court.</small></span><span class="spr-go">Read it →</span></button><div class="front">
     <div class="stack">
@@ -1614,6 +1618,7 @@ document.addEventListener('click',async e=>{
 function render(){
   const v=STATE.view;
   {const cs=document.getElementById('coverSlot');if(cs)cs.innerHTML=v==='front'?vCover(CUR):''}
+  {const sb=document.getElementById('seaBanner');if(sb){const L=STORIES.find(x=>x.slug==='ballard-light-rail-2042-forum')||STORIES.find(x=>!(typeof FEATURES!=='undefined'&&FEATURES.has(x.slug)));sb.innerHTML=v==='front'&&L?`<button type="button" class="spr sea-spr" data-story="${L.slug}"><span class="spr-tag">SEATTLE · TOP STORY</span><span><b>${esc(L.title)}</b><small>${esc(L.dek)}</small></span><span class="spr-go">Read it →</span></button>`:''}}
   $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='tech'?vTech():v==='crime'?vCrime():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
   document.querySelectorAll('#nav .nb').forEach(b=>b.toggleAttribute('aria-current',b.dataset.go===(v==='read'?STATE.prev:v))||b.setAttribute('aria-current','page'));
   document.querySelectorAll('#nav .nb').forEach(b=>{if(b.dataset.go===(v==='read'?STATE.prev:v))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
