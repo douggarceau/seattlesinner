@@ -860,7 +860,7 @@ a.crrow{color:inherit;text-decoration:none;cursor:pointer}a.crrow:hover{backgrou
 .lspot.t-pmx a{display:flex;flex-direction:column;justify-content:space-between;gap:6px;padding:10px 12px 12px;text-align:center;align-items:stretch}
 .lspot.t-pmx a>*{flex-shrink:0}
 .pmx-bar{display:flex;justify-content:space-between;font:800 8.5px/1 var(--mono);letter-spacing:.18em;color:#e3170a;text-transform:uppercase}
-.pmx-bar i{font-style:normal;color:#8b949c}.pmx-bar i::before{content:"● ";color:#e3170a;animation:lsDot 1.2s steps(2,jump-none) infinite}
+.pmx-by{display:block;text-align:center;font:700 9px/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#d9a400;margin-top:-2px}.pmx-bar i{font-style:normal;color:#8b949c}.pmx-bar i::before{content:"● ";color:#e3170a;animation:lsDot 1.2s steps(2,jump-none) infinite}
 .pmx-top{display:flex;align-items:center;justify-content:center;gap:8px}
 .pmx-pads{display:grid;grid-template-columns:repeat(3,9px);gap:3px}
 .pmx-pads b{width:9px;height:9px;border-radius:2px;background:#11151b;transition:background .25s,box-shadow .25s}
@@ -1777,10 +1777,10 @@ p.addEventListener('click',e=>{const a=e.target.closest('[data-sh]');if(!a)retur
 (function(){
 const NS='https://newspace.douggarceau.workers.dev/signup';
 const PM=[
- {tag:"EXCLUSIVE",img:"img/promo-powermap.jpg",round:2,name:"Tech & AI Power Map",sub:"Who controls AI and Big Tech",go:"Open the map",theme:"pm",href:"/tech/"},
+ {tag:"NEW SOFTWARE BY GUITAR DOUG",img:"img/promo-powermap.jpg",round:2,name:"Tech & AI Power Map",sub:"Who controls AI and Big Tech",go:"Open the map",theme:"pm",href:"/tech/"},
  {tag:"POWER MAP",big:"140<em>companies</em>",name:"Investors, contracts, chips and money flows",go:"Open the map",theme:"pm2",href:"/tech/"}];
 const NW=[
- {tag:"EXCLUSIVE",big:"newspace",name:"The network for Seattle and beyond",sub:"Profiles the way they were in 2006: your Top 8, a profile song and a comment wall",go:"Join to interact",theme:"ns",href:NS,ext:1},
+ {tag:"NEW SOFTWARE BY GUITAR DOUG",big:"newspace",name:"The network for Seattle and beyond",sub:"Profiles the way they were in 2006: your Top 8, a profile song and a comment wall",go:"Join to interact",theme:"ns",href:NS,ext:1},
  {tag:"NEWSPACE",big:"Top 8",name:"Pick your people",sub:"Blogs, bulletins, groups, events and private messages. The Guitar Doug Report is there exclusively.",go:"Make your profile",theme:"ns2",href:NS,ext:1}];
 let CWX=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
 let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
@@ -1804,7 +1804,7 @@ function fill(a,s){if(!a||!s)return;const box=a.parentNode;box.className=box.cla
  a.innerHTML='<span class="ls-tag">'+esc(s.tag)+'</span>'+mid+'<span><b>'+esc(s.name)+'</b>'+(s.when?'<i>'+esc(s.when)+'</i>':'')+(s.sub?'<small>'+esc(s.sub)+'</small>':'')+'<span class="ls-go">'+esc(s.go)+' →</span></span>'}
 function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-pmx';a.href='/tech/';a.removeAttribute('target');a.setAttribute('aria-label','Tech & AI Power Map: who controls AI and Big Tech');
  const pads=()=>'<span class="pmx-pads">'+'<b></b>'.repeat(15)+'</span>';
- a.innerHTML='<span class="pmx-bar"><span>■ Power Map</span><i>AI Signals live</i></span><span class="pmx-top">'+pads()+'<span class="pmx-eye"><img src="img/promo-powermap.jpg" alt=""></span>'+pads()+'</span><span class="pmx-ttl">Tech &amp; AI Power Map</span><span class="pmx-stk"><span class="tk">····</span><span class="pr"></span><span class="nm">Loading the market</span><span class="ch"></span></span><span class="pmx-rk"><h5>Power ranking</h5><ol><li></li><li></li><li></li><li></li></ol></span><span class="pmx-log">establishing link</span><span class="pmx-go">Enter the map →</span>';
+ a.innerHTML='<span class="pmx-bar"><span>■ Power Map</span><i>AI Signals live</i></span><span class="pmx-top">'+pads()+'<span class="pmx-eye"><img src="img/promo-powermap.jpg" alt=""></span>'+pads()+'</span><span class="pmx-ttl">Tech &amp; AI Power Map</span><span class="pmx-by">New software by Guitar Doug</span><span class="pmx-stk"><span class="tk">····</span><span class="pr"></span><span class="nm">Loading the market</span><span class="ch"></span></span><span class="pmx-rk"><h5>Power ranking</h5><ol><li></li><li></li><li></li><li></li></ol></span><span class="pmx-log">establishing link</span><span class="pmx-go">Enter the map →</span>';
  const still=matchMedia('(prefers-reduced-motion:reduce)').matches,live=()=>!document.hidden&&!still;
  const PC=['#e3170a','#d9a400','#3ddc84','#4a9eff','#8fb3d9','#ff6a00'];const pb=[...a.querySelectorAll('.pmx-pads b')];pb.forEach(b=>b.style.setProperty('--pc',PC[Math.random()*PC.length|0]));
  setInterval(()=>{if(!live())return;pb.forEach(b=>b.classList.toggle('on',Math.random()<.3))},420);
