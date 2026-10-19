@@ -1783,7 +1783,7 @@ const NW=[
 let CWX=[{tag:"CRIME WATCH",big:"Who's<em>out there tonight</em>",name:"Crime Watch",sub:"Live SPD and Fire 911 calls, plus crime news for every Seattle neighborhood",go:"Check your block",theme:"cw",href:"#crime",view:"crime"}];
 let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
   const lines=(typeof ISSUES!=='undefined'&&ISSUES[0]&&ISSUES[0].lines)||[];
-  ST=['clavicular-business-of-contempt','nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off'].map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
+  const _fr=new Date(Date.now()-2*864e5).toISOString().slice(0,10);ST=STORIES.filter(x=>x.date&&x.date>=_fr).map(x=>x.slug).concat(['clavicular-business-of-contempt','nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off']).map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
 ST=ST.filter(x=>x.slug!=='skin-deep-lazonga');
 let SC=[];try{SC=(typeof upScene!=='undefined'&&upScene.length?upScene:SCENE).slice(0,40)}catch(e){}
 const SCF=SC.map(e=>({tag:"THE SCENE · "+e.kind,bigText:e.title,name:e.venue+(e.hood?' · '+e.hood:''),when:(typeof shortDay==='function'?shortDay(e.date):e.date)+(e.end&&e.end!==e.date&&typeof shortDay==='function'?' – '+shortDay(e.end):'')+(e.price?' · '+e.price:''),sub:e.blurb,go:"Details",theme:"sc",href:e.url,ext:1,k:(typeof KIND!=='undefined'&&KIND[e.kind])||'#b45cff'}));
