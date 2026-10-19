@@ -102,6 +102,20 @@
 .mbox{margin:22px 0;padding:22px;border:1px solid #c9a227;border-radius:8px;background:linear-gradient(180deg,#1a1408,#0b0b0c);text-align:center}.mbox b{display:block;font:800 20px/1.2 var(--mono,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#c9a227;margin-bottom:8px}.mbox p{color:#d0d4d8;margin:0 0 14px}.mb-go{all:unset;cursor:pointer;display:inline-block;padding:12px 18px;border-radius:6px;background:#c9a227;color:#0b0b0c;font:800 13px/1 var(--mono,system-ui);letter-spacing:.1em;text-transform:uppercase}.mbox small{display:block;margin-top:10px;color:#8b949c}
 .xrow{margin:12px 0}.xbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:6px;background:#000;border:1px solid #444;color:#fff;text-decoration:none;font:700 12px/1 var(--mono,system-ui);letter-spacing:.08em;text-transform:uppercase}.xbtn svg{width:15px;height:15px;fill:#fff}.xbtn:hover{border-color:#fff}.approw .xhd{background:#000;border-color:#555;color:#fff}.hdrtools .approw{display:grid!important;grid-template-columns:minmax(0,1fr);gap:8px}.hdrtools .approw .appbtn{min-width:0;white-space:nowrap;font-size:10px;letter-spacing:.04em;padding-left:2px;padding-right:2px;justify-content:center;text-align:center;overflow:hidden}
 #coverSlot:empty{display:none}#coverSlot{margin:6px 0 16px}
+.box .cvr{grid-template-columns:minmax(0,330px) minmax(0,1fr)}@media (max-width:900px){.box .cvr{grid-template-columns:minmax(0,1fr)}}.cvside{display:grid;gap:8px;align-content:start;min-width:0}
+.sea-h{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #3a2a1a;padding-bottom:5px}
+.sea-h b{font:800 12px/1 var(--mono,system-ui);letter-spacing:.2em;text-transform:uppercase;color:#ff6a00}
+.sea-h button{all:unset;cursor:pointer;font:700 11px/1 var(--mono,system-ui);letter-spacing:.06em;color:#9aa4ad}
+.sea-h.nat{margin-top:6px}.sea-h.nat b{color:#c9a227}
+.sea-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:6px}
+.sea-g button{all:unset;cursor:pointer;display:grid;gap:3px;align-content:start;padding:8px 9px;border-left:3px solid var(--sc,#ff6a00);border-radius:4px;background:color-mix(in srgb,var(--sc,#ff6a00) 12%,#101114);min-height:48px}
+.sea-g button:hover{background:color-mix(in srgb,var(--sc,#ff6a00) 18%,#0d0e10)}
+.sea-g small{font:700 9px/1 var(--mono,system-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--sc,#ff6a00)}
+.sea-g b{font:700 13px/1.25 var(--read,Georgia,serif);color:#f2f4f6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nat-l{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 12px}
+.nat-l button{all:unset;cursor:pointer;font:600 13px/1.3 var(--read,Georgia,serif);color:#ffd84a;padding:3px 0;border-bottom:1px dotted #3a3328}
+.nat-l button:hover{color:#fff}
+@media (max-width:700px){.sea-g b{font-size:13px}.nat-l{grid-template-columns:minmax(0,1fr)}}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1019,14 +1033,14 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 
   <nav class="navbar" id="nav" aria-label="Sections">
     <button class="nb" data-go="front">Front page</button>
-    <button class="nb" data-go="stories">Stories</button>
-    <button class="nb" data-go="bars">News</button>
-    <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Crime Watch</button>
+    <button class="nb" data-go="stories">Seattle Stories</button>
+    <button class="nb" data-go="bars">Seattle News</button>
+    <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Seattle Crime Watch</button>
     <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
-    <button class="nb" data-go="cal">Music calendar</button>
-    <button class="nb" data-go="scene">Scene</button>
-    <button class="nb" data-go="venues">Venues</button>
-    <button class="nb" data-go="bands">Bands</button>
+    <button class="nb" data-go="cal">Seattle Music</button>
+    <button class="nb" data-go="scene">Seattle Scene</button>
+    <button class="nb" data-go="venues">Seattle Venues</button>
+    <button class="nb" data-go="bands">Seattle Bands</button>
     
     
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
@@ -1197,10 +1211,13 @@ function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=
   return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Report Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
   <div class="vtiles">${cats.map(c=>`<button class="vtile" data-vguide="${esc(c)}" style="--gc:${VCAT[c]}"><b>${VENUES.filter(v=>v.cat===c).length}</b><span>${esc(VSHORT[c])}</span><small>${esc(ex(c))}</small></button>`).join('')}</div>
   <div class="two" style="gap:10px"><button class="go" data-vguide="all">Browse all ${VENUES.length} venues →</button><button class="go adgo" data-ad="">Advertise your venue →</button></div></div></section>`}
-function vCover(I){if(!I||!I.src)return '';return `<section class="box" style="--c:#ff6a00"><div class="bh"><b>The ${esc(I.month)} issue</b><span>tap a headline to read it</span></div>
-  <div class="cvr"><button class="cimg" data-zoom="${I.src}" aria-label="Open the ${esc(I.month)} cover full size"><img src="${I.src}" alt="The Guitar Doug Report, ${esc(I.month)}"></button>
-  <div class="cvl"><span class="ish">${esc(I.month)}</span>${I.lines.map(([slug,h,sub])=>`<button ${slug.startsWith('go:')?`data-go="${slug.slice(3)}" style="--sc:#ff6a00"`:`data-story="${slug}" style="${sty(slug)}"`}><b>${esc(h)}</b>${sub?`<span>${esc(sub)}</span>`:''}</button>`).join('')}
-</div></div></section>`}
+function vCover(I){if(!I||!I.src)return '';
+  const loc=STORIES.filter(x=>!(typeof FEATURES!=='undefined'&&FEATURES.has(x.slug))).slice(0,8);
+  return `<section class="box" style="--c:#ff6a00"><div class="cvr"><button class="cimg" data-zoom="${I.src}" aria-label="Open the ${esc(I.month)} cover full size"><img src="${I.src}" alt="The Guitar Doug Report, ${esc(I.month)}"></button>
+  <div class="cvside"><div class="sea-h"><b>Seattle News</b><button data-go="stories">All Seattle stories →</button></div>
+  <div class="sea-g">${loc.map(x=>`<button data-story="${x.slug}" style="--sc:${tc(x.topic)}"><small>${esc(tl(x.topic))}</small><b>${esc(x.title)}</b></button>`).join('')}</div>
+  <div class="sea-h nat"><b>In the ${esc(I.month)} issue</b></div>
+  <div class="nat-l">${I.lines.map(([slug,h])=>`<button data-story="${slug}">${esc(h)}</button>`).join('')}</div></div></div></section>`}
 
 const TK={'safety test':'#ff3a2a','real-world incident':'#e3170a','research finding':'#ff7a1a','warning':'#d9a400','doctrine':'#8fb3d9','treaty/debate':'#8fb3d9','battlefield':'#e3170a','drone swarm':'#2fd3c8','loitering munition':'#ff7a1a','autonomous weapon':'#ff3a2a','armed robot':'#39ff14'};
 const pcol=v=>/^\s*-/.test(v||'')?'#ff3a2a':/^\s*\+/.test(v||'')?'#39ff14':'#2fd3c8';
