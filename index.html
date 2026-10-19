@@ -1627,17 +1627,6 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
   b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);if(SFX.on){SFX.warm();SFX.play('select');if(want)humOn()}else humOff(.4);paint()});
   if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!hum;try{localStorage.setItem('ss_amb',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
   ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm();if(want)setTimeout(humOn,50)},{once:true,capture:true,passive:true}));
-  /* Front-page intro: the drone plays for 6 seconds, then fades out. Front page only. */
-  (function(){if(want)return;const _q=new URLSearchParams(location.search);if(_q.get('go')||_q.get('story')||(location.hash.length>1&&location.hash!=='#front'))return;const onFront=()=>typeof STATE==='undefined'||STATE.view==='front';
-    let a=null,started=false,t0=0,tick=null;const V=.45,HOLD=6000,FADE=2500;
-    const stop=()=>{if(tick)clearInterval(tick);tick=null;if(a){a.pause();a=null}};
-    const run=()=>{t0=performance.now();tick=setInterval(()=>{if(!a)return;const el=performance.now()-t0;
-      if(!onFront()||!SFX.on||hum){a.volume=Math.max(0,a.volume-.08);if(a.volume<=0)stop();return}
-      if(el<800)a.volume=V*el/800;else if(el>HOLD){const f=1-(el-HOLD)/FADE;if(f<=0){stop();return}a.volume=V*f}else a.volume=V},50)};
-    const go=()=>{if(started||!onFront()||!SFX.on||hum)return;started=true;a=new Audio('snd/drone.mp3');a.loop=true;a.volume=0;
-      a.play().then(run).catch(()=>{started=false;a=null})};
-    go();['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>setTimeout(go,0),{once:true,capture:true,passive:true}));
-  })();
   document.addEventListener('visibilitychange',()=>{if(document.hidden)humOff(.6);else if(want&&SFX.on&&navigator.userActivation&&navigator.userActivation.hasBeenActive)humOn()});
   document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn,#ambBtn'))return;
     if(t.closest('[data-go],.tabs button')){SFX.play('tab');return}
