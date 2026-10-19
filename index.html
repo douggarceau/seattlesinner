@@ -1135,9 +1135,9 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
   <span class="where">${esc(e.venue)}${e.hood?' · '+esc(e.hood):''}${e.price?' · '+esc(e.price):''}</span><p>${esc(e.blurb)}</p></a>`}
 
 const NATIONAL=new Set(['who-said-martial-law','downfall-of-andrew-tate','candace-anomalies','satanic-cabal','clavicular-business-of-contempt','case-against-clavicular','nancy-mace-gets-inked','we-turned-our-lights-off','the-swarm','you-can-see-everything']);
-const VIOL=/\b(shoot|shot|shooting|gunfire|gunman|stab|stabbing|stabbed|homicide|murder|killed|killing|assault|attack|attacked|violence|violent|carjack|robbery|robbed|slain|dead|death)\w*/i;
+const VIOL=/\b(shoot|shot|shooting|gunfire|gunman|gunpoint|armed|stab|stabbing|stabbed|homicide|murder|killed|killing|assault|attack|attacked|violence|violent|carjack|robbery|robbed|slain|rape|raped|sexual assault|kidnap|abduct|stalk|threat|missing|body found)\w*/i;
 const DRUG=/\b(drug|fentanyl|overdose|meth|heroin|cocaine|narcotic|dealer|trafficking|cartel|bust)\w*/i,SCAND=/\b(officer|lieutenant|sheriff|charged|arrest|accused|lawsuit|sued|scandal|misconduct|indicted|fraud|bribe|harass)\w*/i;
-const LOCAL=()=>{const L=STORIES.filter(s=>!NATIONAL.has(s.slug)&&!['national','ink','screen'].includes(s.topic));const v=s=>{const t=s.title+' '+s.dek;return s.beat==='violence'||VIOL.test(t)?3:(DRUG.test(t)||SCAND.test(s.title)?2:0)};return L.map((s,i)=>[s,i]).sort((a,b)=>(v(b[0])-v(a[0]))||((b[0].date||'').localeCompare(a[0].date||''))||(a[1]-b[1])).map(x=>x[0])};
+const LOCAL=()=>{const L=STORIES.filter(s=>!NATIONAL.has(s.slug)&&!['national','ink','screen'].includes(s.topic));const v=s=>{const t=s.title+' '+s.dek;return ['violence','sexual-assault','missing-abduction-stalking','threats'].includes(s.beat)||VIOL.test(t)?3:(['drugs','unexplained-death','police','politics'].includes(s.beat)||DRUG.test(t)||SCAND.test(s.title)?2:0)};return L.map((s,i)=>[s,i]).sort((a,b)=>(v(b[0])-v(a[0]))||((b[0].date||'').localeCompare(a[0].date||''))||(a[1]-b[1])).map(x=>x[0])};
 async function vioFill(){const el=document.querySelector('#vio .viol');if(!el)return;
  const j=await fetch('/data/crime.json?'+Math.floor(Date.now()/6e5),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null);
  const K=['homicide','shooting','stabbing','assault','robbery'];
