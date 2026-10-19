@@ -1,6 +1,18 @@
 {
-"asof": "2026-10-19T01:25:25-07:00",
+"asof": "2026-10-19T05:28:32-07:00",
 "items": [
+{
+"kind": "shooting",
+"headline": "Another night of gunfire rattles the Central District",
+"blurb": "911 callers reported shots across several Central District blocks starting around 2:23 a.m. Sunday, including near 21st and E Cherry and 24th and Yesler. No injuries were reported.",
+"hood": "Central District",
+"spd": [
+"CENTRAL AREA/SQUIRE PARK"
+],
+"date": "2026-10-18",
+"url": "https://www.capitolhillseattle.com/2026/10/911-calls-track-another-night-of-gunfire-in-the-central-district/",
+"outlet": "Capitol Hill Seattle Blog"
+},
 {
 "kind": "other",
 "headline": "Dangerous CO2 levels force evacuations on Ballard Ave",
@@ -243,18 +255,6 @@
 "outlet": "SPD Blotter"
 },
 {
-"kind": "stabbing",
-"headline": "Man stabbed in the head in botched robbery at Woodland Park",
-"blurb": "A man was stabbed near a picnic shelter around 12:30 a.m. Monday and taken to Harborview with injuries police called not life-threatening. Police believe he knew the suspect; no arrest yet.",
-"hood": "Phinney Ridge",
-"spd": [
-"PHINNEY RIDGE"
-],
-"date": "2026-10-13",
-"url": "https://mynorthwest.com/crime-blotter/seattle-woodland-park-stab/4286058",
-"outlet": "MyNorthwest"
-},
-{
 "kind": "burglary",
 "headline": "Alki burglar forces patio door, grabs laptops and jewelry",
 "blurb": "A residential burglar forced a patio door in the 2800 block of 48th Ave SW and stole laptops, jewelry and camera gear.",
@@ -289,6 +289,18 @@
 "date": "2026-10-13",
 "url": "https://komonews.com/news/local/seattle-mayor-faces-questions-over-public-safety-after-weekend-crime-spree-index-survey-voters-homelessness-mexican-kitchen-open-air-drug-market-encampment",
 "outlet": "KOMO"
+},
+{
+"kind": "stabbing",
+"headline": "Man stabbed in the head in botched robbery at Woodland Park",
+"blurb": "A man was stabbed near a picnic shelter around 12:30 a.m. Monday and taken to Harborview with injuries police called not life-threatening. Police believe he knew the suspect; no arrest yet.",
+"hood": "Phinney Ridge",
+"spd": [
+"PHINNEY RIDGE"
+],
+"date": "2026-10-12",
+"url": "https://mynorthwest.com/crime-blotter/seattle-woodland-park-stab/4286058",
+"outlet": "MyNorthwest"
 },
 {
 "kind": "robbery",
@@ -337,6 +349,18 @@
 "date": "2026-10-12",
 "url": "https://komonews.com/news/local/man-accused-of-metro-bus-machete-attack-escapes-from-home-detention-whereabouts-unknown",
 "outlet": "KOMO"
+},
+{
+"kind": "crash",
+"headline": "Motorcyclist killed under semi on I-5 near S Albro Place",
+"blurb": "An 18-year-old motorcyclist died Monday after clipping a car while changing lanes on northbound I-5 just north of S Albro Place and going under a semi, the State Patrol says. Lanes were blocked for hours.",
+"hood": "Georgetown",
+"spd": [
+"GEORGETOWN"
+],
+"date": "2026-10-12",
+"url": "https://www.kiro7.com/news/local/deadly-crash-between-semi-motorcycle-shuts-down-portion-i-5-seattle/DNOK37P6HBFC7FBJZKLFWI7EVQ/",
+"outlet": "KIRO 7"
 },
 {
 "kind": "homicide",
