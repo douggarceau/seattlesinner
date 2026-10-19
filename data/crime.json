@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-18T13:23:54-07:00",
+"asof": "2026-10-18T17:23:43-07:00",
 "items": [
 {
 "kind": "other",
@@ -24,6 +24,42 @@
 "date": "2026-10-17",
 "url": "https://hoodline.com/2026/10/vehicle-found-partly-submerged-near-montlake-park-rescue-swimmers-search-union-bay/",
 "outlet": "Hoodline"
+},
+{
+"kind": "robbery",
+"headline": "Shoplifter shoves worker, flees with designer coats at Westwood Village",
+"blurb": "A suspect grabbed designer outerwear from a store in the 2600 block of SW Barton St, pushed an employee who intervened and fled, according to the crime report. No arrest was listed.",
+"hood": "Westwood",
+"spd": [
+"ROXHILL/WESTWOOD/ARBOR HEIGHTS"
+],
+"date": "2026-10-17",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "burglary",
+"headline": "Junction break-ins continue: electronics store and office safe targeted",
+"blurb": "Burglars smashed into an electronics store in the 4700 block of California Ave SW on Oct. 15 and took devices, then broke into a storefront in the 4500 block on Oct. 17 and tampered with an office safe. No arrests were listed.",
+"hood": "Alaska Junction",
+"spd": [
+"ALASKA JUNCTION"
+],
+"date": "2026-10-17",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "crash",
+"headline": "Hit-and-run driver plows into parked cars on Fauntleroy Way SW",
+"blurb": "A driver struck parked sedans in the 8800 block of Fauntleroy Way SW Saturday morning and fled the scene, the report says.",
+"hood": "Fauntleroy",
+"spd": [
+"FAUNTLEROY SW"
+],
+"date": "2026-10-17",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 },
 {
 "kind": "police",
@@ -62,6 +98,18 @@
 "outlet": "SPD Blotter"
 },
 {
+"kind": "theft",
+"headline": "Catalytic converter thief threatens resident who confronts him",
+"blurb": "A resident in the 4100 block of 26th Ave SW was threatened after interrupting a catalytic converter theft early Oct. 16. The suspect got away.",
+"hood": "Delridge",
+"spd": [
+"NORTH DELRIDGE"
+],
+"date": "2026-10-16",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
 "kind": "courts",
 "headline": "Man charged in 2024 South Park kidnapping and rape",
 "blurb": "A 58-year-old man arrested Oct. 8 was charged Oct. 13 with first-degree kidnapping with sexual motivation and second-degree rape over an alleged November 2024 attack in South Park. Previously convicted in Capitol Hill fake-taxi assaults, he could face life without parole if convicted, CHS reports.",
@@ -96,6 +144,30 @@
 "date": "2026-10-15",
 "url": "https://komonews.com/news/local/suspicious-letters-found-seattle-olympia-amid-nationwide-investigation-election-officials-white-powder-usps-postal-service-mail-maria-cantwell",
 "outlet": "KOMO"
+},
+{
+"kind": "theft",
+"headline": "Six cars' windows smashed along California Ave SW in Morgan Junction",
+"blurb": "Someone shattered windows on six vehicles near the 6400 block of California Ave SW the night of Oct. 15 and took items; police later located a person of interest.",
+"hood": "Morgan Junction",
+"spd": [
+"MORGAN"
+],
+"date": "2026-10-15",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "theft",
+"headline": "Alki equipment container broken into; tools recovered",
+"blurb": "An equipment container in the 2700 block of Alki Ave SW was breached Oct. 15; tools were recovered and a suspect was located, the report says.",
+"hood": "Alki",
+"spd": [
+"ALKI"
+],
+"date": "2026-10-15",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 },
 {
 "kind": "burglary",
