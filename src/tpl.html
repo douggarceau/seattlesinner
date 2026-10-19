@@ -765,8 +765,8 @@ main input:not([type=checkbox]):not([type=radio]):not([type=file]):focus,main se
     <button class="nb" data-go="scene">Scene</button>
     <button class="nb" data-go="venues">Venues</button>
     <button class="nb" data-go="bands">Bands</button>
-    <button class="nb" data-go="ink">Ink &amp; Steel</button>
-    <button class="nb" data-go="screen">Screen</button>
+    
+    
     <a class="nb pmnb" href="/tech/">Power Map</a>
     <button class="nb sub" data-go="submit">Send a Tip</button>
     <button class="nb snd" id="sndBtn" aria-pressed="true">🔊 Sound on</button>
@@ -1105,10 +1105,6 @@ function vBars(){
   <div class="bwg">${L.map(brief).join('')||'<div class="empty">Nothing on the wire yet.</div>'}</div>`;
 }
 
-function vScreen(){const L=STORIES.filter(s=>s.topic==='screen');return `<h2 class="room">The Screen</h2><div class="intro"><b>Movie reviews</b><p>What's worth your ticket money this week, and what to skip. New verdicts every opening weekend.</p></div><div class="sgrid">${L.map(storyCard).join('')||'<div class="empty">Reviews coming.</div>'}</div>`}
-function vInk(){const L=STORIES.filter(s=>s.topic==='ink');return `<h2 class="room">Ink &amp; Steel</h2>
-  <div class="intro"><b>Tattoos · piercing · body mod</b><p>Shops, artists, the law, the ink, the regrets and what's next. Skin Deep is back.</p></div>
-  <div class="sgrid">${L.map(storyCard).join('')}</div>`}
 function vStories(){
   const topics=[...new Set(STORIES.map(s=>s.topic))];
   return `<h2 class="room">Stories</h2>
@@ -1287,7 +1283,7 @@ document.addEventListener('click',async e=>{
 
 function render(){
   const v=STATE.view;
-  $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='ink'?vInk():v==='tech'?vTech():v==='crime'?vCrime():v==='screen'?vScreen():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
+  $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='tech'?vTech():v==='crime'?vCrime():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
   document.querySelectorAll('#nav .nb').forEach(b=>b.toggleAttribute('aria-current',b.dataset.go===(v==='read'?STATE.prev:v))||b.setAttribute('aria-current','page'));
   document.querySelectorAll('#nav .nb').forEach(b=>{if(b.dataset.go===(v==='read'?STATE.prev:v))b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
   if(v==='submit') wireSubmit();
@@ -1488,7 +1484,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
-(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands'].includes(g)){go(g)}})();
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','venues','bands'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 </script>
 <script>

@@ -186,7 +186,7 @@ footer a:hover{text-decoration:underline}
 <div class="toast" id="toast"></div>
 <script>
 let STORIES=/*STORIES*/[];
-const SECTIONS=[["streets","Streets"],["politics","Politics"],["national","National"],["surveillance","Surveillance"],["tech","Tech"],["culture","Culture"],["music","Music"],["screen","Screen"],["nightlife","Nightlife"],["ink","Ink"]];
+const SECTIONS=[["streets","Streets"],["politics","Politics"],["national","National"],["surveillance","Surveillance"],["tech","Tech"],["culture","Culture"],["music","Music"],["nightlife","Nightlife"]];
 const SNAME=Object.fromEntries(SECTIONS);
 const POSTER={};
 const $=s=>document.querySelector(s);
@@ -256,15 +256,13 @@ function front(){
   h+=colB.map((s,i)=>card(s,i<3?"sm":"xs",{kick:1,dek:i<3})).join("");
   h+='</div></div>';
   // more Seattle, by section
-  const bands=[["streets"],["politics"],["surveillance"],["tech"],["culture"],["music","nightlife","screen"]];
+  const bands=[["streets"],["politics"],["surveillance"],["tech"],["culture"],["music","nightlife"]];
   for(const ks of bands){
     const list=take(local.filter(s=>ks.includes(s.topic)),4);
     if(!list.length)continue;
     h+=band("Seattle "+ks.map(k=>SNAME[k]).join(" & "),ks[0],list);
   }
-  const ink=take(sorted.filter(s=>s.topic==="ink"),4);
-  if(ink.length)h+=band("Ink","ink",ink);
-  const nat=take(natl,8);
+    const nat=take(natl,8);
   if(nat.length)h+=band("National & Beyond",null,nat);
   $("#main").innerHTML=h;
   loadRail();
