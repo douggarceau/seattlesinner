@@ -1097,7 +1097,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 <div class="wrap">
   <header class="mast">
     <div>
-      <h1 class="logo lgimg"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"></h1>
+      <h1 class="logo lgimg"><span class="tri"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"><i class="tg" aria-hidden="true"></i><i class="tr" aria-hidden="true"></i><i class="tb" aria-hidden="true"></i></span></h1>
       <div class="edition">Seattle Edition</div>
       
     </div>
@@ -2016,7 +2016,7 @@ function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.class
   setInterval(()=>{if(!live())return;sk.classList.add('out');setTimeout(()=>{showS();sk.classList.remove('out')},260)},1800);
   setInterval(()=>{if(live())showC(false)},4200)}).catch(()=>{})}
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
-function flipTo(a,s){if(!a)return;if(!s||!s.ad){if(!window.__adP&&!document.querySelector('.t-ad')&&Math.random()<(window.__adRate||.012)){window.__adP=1;setTimeout(()=>{window.__adP=0},1500);s=ADS_TILE}}if(still){fill(a,s);return}const b=a.parentNode;b.classList.add('flip');setTimeout(()=>{fill(a,s);b.classList.remove('flip')},460)}
+function flipTo(a,s){if(!a)return;if(!s||!s.ad){if(!window.__adP&&document.querySelectorAll('.t-ad').length<(window.__adMax||2)&&Math.random()<(window.__adRate||.15)){window.__adP=1;setTimeout(()=>{window.__adP=0},1500);s=ADS_TILE}}if(still){fill(a,s);return}const b=a.parentNode;b.classList.add('flip');setTimeout(()=>{fill(a,s);b.classList.remove('flip')},460)}
 let i=0,j=0;fill($('lsA'),{tag:'SEATTLE CRIME',bigText:'Crime headlines',name:'Seattle',sub:'Loading the latest…',go:'Crime Watch',theme:'cw',href:'#crime',view:'crime'});fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);j=Math.min(4,Math.max(0,WRF.length-1));fill($('lsD'),CWX[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;const BEAT=/corrupt|scandal|misconduct|fraud|brib|ethic|indict|lawsuit|\bsued\b|investigat|reprimand|complaint|probe|resign|fired|deficit|hiding|cover-?up|subpoena|audit|kickback|embezzl|police chief|lieutenant|officers? (fired|charged|disciplined)/i;
 const CORR=(typeof BARS!=='undefined'?BARS:[]).filter(x=>x&&x.url&&x.headline&&BEAT.test(x.headline)).slice(0,40).map(x=>({tag:'SEATTLE · CORRUPTION & SCANDAL',bigText:x.headline,name:(x.venue||x.hood||'Seattle'),when:(typeof shortDay==='function'&&x.date?shortDay(x.date):(x.date||''))+(x.outlet?' · '+x.outlet:''),sub:x.blurb||'',go:'Read it',theme:'cw',cwi:1,href:x.url,ext:1}));
 let CRX=[];fill($('lsH'),CORR[0]||AIF[0]);
@@ -2188,4 +2188,31 @@ const draw=(el,st)=>{const tech=el.dataset.kind==='tech',PR=tech?PT:PV;if(st==='
  else{const v=(typeof VENUES!=='undefined'?VENUES:[]).slice(0,3);el.innerHTML='<div class="vs-h">The Report Venue Guide · top venues</div>'+v.map(x=>'<div class="vs-r"><b>'+esc(x.name)+'</b><span>'+esc(x.hood||x.region||'')+'</span></div>').join('')}el.dataset.st=st};
 setInterval(()=>{t++;const st=(t%14)<9?'reg':'ad';document.querySelectorAll('.vspots').forEach(el=>{if(!el.dataset.st){draw(el,st);return}if(el.dataset.st===st)return;el.classList.add('fade');setTimeout(()=>{draw(el,st);el.classList.remove('fade')},350)})},1000);
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-adpick]');if(!b)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();STATE.adpick=b.dataset.adpick;STATE.adcat='';STATE.prev=STATE.view==='advertise'?(STATE.prev||'front'):(STATE.view||'front');STATE.view='advertise';render();if(typeof top_==='function')top_()},true)})();</script>
+<style>
+/* masthead: GUITAR green, DOUG red, REPORT blue, lighting up one after another */
+.logo.lgimg .tri{position:relative;display:block;width:min(100%,760px)}
+.logo.lgimg .tri img{width:100%}
+.logo.lgimg .tri i{position:absolute;inset:0;pointer-events:none;-webkit-mask:url(img/gdr-masthead-tight.webp) 0 0/100% 100% no-repeat;mask:url(img/gdr-masthead-tight.webp) 0 0/100% 100% no-repeat;opacity:.4;animation:triFlash 2.4s steps(1,end) infinite}
+.logo.lgimg .tri .tg{background:#22e05a;clip-path:inset(31% 63% 0 0)}
+.logo.lgimg .tri .tr{background:#ff1e1e;clip-path:inset(31% 36.8% 0 37%);animation-delay:.8s}
+.logo.lgimg .tri .tb{background:#1e7bff;clip-path:inset(31% 0 0 63.2%);animation-delay:1.6s}
+@keyframes triFlash{0%{opacity:1}33.3%{opacity:.4}}
+.logo.lgimg .tri i{animation-duration:2.4s!important}
+@media (prefers-reduced-motion:reduce){.logo.lgimg .tri i{animation:none!important;opacity:1}}
+/* ad run timer: days left in the 30-day run */
+.adbox,.vspots{position:relative}
+.adt{position:absolute;right:6px;bottom:6px;z-index:5;pointer-events:none;min-width:14px;padding:2px 4px;border-radius:3px;background:#000b;color:#fffc;font:700 9px/1 var(--mono,monospace);text-align:center;letter-spacing:.04em}
+.adbox.adsm .adt{bottom:50%;transform:translateY(50%)}
+</style>
+<script>(()=>{
+/* Booked ads: slot -> first day of the run (YYYY-MM-DD, Pacific). Day 1 shows 30, the final day shows 1, then the badge goes away.
+   Slots: banner (front-page ad box), block1, block2 (small sidebar blocks), tile (margin pop-up), spot (Venue Guide spots), tech (Tech & AI spots). Unbooked spots show 30. */
+const RUNS={};
+const today=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Los_Angeles'});
+const left=k=>{const st=RUNS[k];if(!st)return 30;const d=Math.round((Date.parse(today())-Date.parse(st))/864e5);return d<0?30:30-d};
+const put=(el,k)=>{const n=left(k);let b=el.querySelector(':scope>.adt');if(n<1){if(b)b.remove();return}if(!b){b=document.createElement('span');b.className='adt';b.setAttribute('aria-hidden','true');el.appendChild(b)}if(b.textContent!==String(n)){b.textContent=n;b.title=n+(n===1?' day':' days')+' left'}};
+const tick=()=>{let bi=0;document.querySelectorAll('.adbox').forEach(el=>put(el,el.classList.contains('adsm')?'block'+(++bi):'banner'));
+ document.querySelectorAll('.lspot').forEach(el=>{if(el.classList.contains('t-ad'))put(el,'tile');else{const b=el.querySelector(':scope>.adt');if(b)b.remove()}});
+ document.querySelectorAll('.vspots').forEach(el=>{if(el.dataset.st==='ad')put(el,el.dataset.kind==='tech'?'tech':'spot');else{const b=el.querySelector(':scope>.adt');if(b)b.remove()}})};
+setInterval(tick,1000);tick()})();</script>
 </html>
