@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-20T01:27:03-07:00",
+"asof": "2026-10-20T05:25:58-07:00",
 "items": [
 {
 "kind": "police",
@@ -12,6 +12,18 @@
 "date": "2026-10-19",
 "url": "https://komonews.com/news/local/cctv-cameras-at-pioneer-square-not-working-as-police-investigate-womans-fake-uber-pickup-rideshare-impersonation-bar-safety-kent-real-time-crime-suspect-witness-seattle",
 "outlet": "KOMO"
+},
+{
+"kind": "police",
+"headline": "Police report no arrests at downtown Seattle No Kings rally",
+"blurb": "Thousands rallied at Westlake Park Oct. 19 and marched to Seattle Center; police reported no arrests, no property damage and no incidents.",
+"hood": "Downtown",
+"spd": [
+"DOWNTOWN COMMERCIAL"
+],
+"date": "2026-10-19",
+"url": "https://mynorthwest.com/crime-blotter/seattle-no-kings-rally/4288185",
+"outlet": "MyNorthwest"
 },
 {
 "kind": "shooting",
@@ -862,6 +874,19 @@
 "date": "2026-09-24",
 "url": "https://komonews.com/news/local/fire-breaks-out-matthews-beach-seattle-structure-home-or-apartments-sand-point-way-ne-flames-firefighters-respond-residential-no-injuries",
 "outlet": "KOMO"
+},
+{
+"kind": "fire",
+"headline": "Nine firefighters hurt as deck collapses at Sand Point Way NE house fire",
+"blurb": "A deck partially collapsed during a pre-dawn Sept. 24 fire at a home in the 12000 block of Sand Point Way NE near Matthews Beach, injuring nine firefighters; the cause is under investigation.",
+"hood": "Matthews Beach",
+"spd": [
+"LAKECITY",
+"SANDPOINT"
+],
+"date": "2026-09-24",
+"url": "https://hoodline.com/2026/09/deck-collapse-injures-9-seattle-firefighters-battling-sand-point-way-blaze/",
+"outlet": "Hoodline"
 },
 {
 "kind": "stabbing",
