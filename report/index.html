@@ -389,5 +389,6 @@ Promise.all([
   fetch("../data/lead.json",{cache:"no-cache",signal:ctl&&ctl.signal}).then(r=>r.json()).then(d=>{if(d&&d.slug)LEAD=d}).catch(()=>{})
 ]).finally(()=>{clearTimeout(tmo);route()});
 </script>
+<script src="/js/gdr-pop.js" defer></script>
 </body>
 </html>
