@@ -2200,6 +2200,17 @@ document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest
 @keyframes triFlash{0%{opacity:1}33.3%{opacity:.4}}
 .logo.lgimg .tri i{animation-duration:2.4s!important}
 @media (prefers-reduced-motion:reduce){.logo.lgimg .tri i{animation:none!important;opacity:1}}
+/* Rate / Eric Maluk margin ad */
+html body .lspot.t-rate{--k:#e3170a;background:#fff!important;border-color:#e3170a!important;animation:adbtn 1.6s ease-in-out infinite!important;animation-duration:1.6s!important}
+html body .lspot.t-rate>a{display:flex!important;align-items:stretch;gap:0;height:100%;padding:0!important;text-decoration:none;color:#111}
+html body .lspot.t-rate .rate-img{flex:0 0 auto;height:100%;aspect-ratio:1;max-width:58%;display:block}html body .lspot.t-rate img{display:block!important;opacity:1!important;height:100%!important;width:100%!important;max-height:none!important;max-width:none!important;min-height:0!important;object-fit:contain;border-radius:0}
+html body .lspot.t-rate .rate-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:8px 10px 8px 8px}
+html body .lspot.t-rate .rate-k{font:700 8px/1 var(--mono,monospace)!important;letter-spacing:.16em!important;text-transform:uppercase;color:#777!important}
+html body .lspot.t-rate .rate-h{font:800 13px/1.15 Georgia,serif!important;color:#111!important}
+html body .lspot.t-rate .rate-n{font:800 11px/1.2 Arial,sans-serif!important;color:#111!important}
+html body .lspot.t-rate .rate-l{font:400 8.5px/1.3 Arial,sans-serif!important;color:#555!important}
+html body .lspot.t-rate .rate-go{align-self:flex-start;margin-top:2px;padding:6px 7px;border-radius:4px;background:#e3170a;color:#fff!important;font:800 10px/1 Arial,sans-serif!important;letter-spacing:.02em;white-space:nowrap}
+html body .lspot.t-rate::before{display:none}
 /* ad run timer: days left in the 30-day run */
 .adbox,.vspots{position:relative}
 .adt{position:absolute;right:6px;bottom:6px;z-index:5;pointer-events:none;min-width:14px;padding:2px 4px;border-radius:3px;background:#000b;color:#fffc;font:700 9px/1 var(--mono,monospace);text-align:center;letter-spacing:.04em}
@@ -2224,7 +2235,7 @@ const today=()=>new Date().toLocaleDateString('en-CA',{timeZone:'America/Los_Ang
 const left=k=>{const st=RUNS[k];if(!st)return 30;const d=Math.round((Date.parse(today())-Date.parse(st))/864e5);return d<0?30:30-d};
 const put=(el,k)=>{const n=left(k);let b=el.querySelector(':scope>.adt');if(n<1){if(b)b.remove();return}if(!b){b=document.createElement('span');b.className='adt';b.setAttribute('aria-hidden','true');el.appendChild(b)}if(b.textContent!==String(n)){b.textContent=n;b.title=n+(n===1?' day':' days')+' left'}};
 const tick=()=>{let bi=0;document.querySelectorAll('.adbox').forEach(el=>put(el,el.classList.contains('adsm')?'block'+(++bi):'banner'));
- document.querySelectorAll('.lspot').forEach(el=>{if(el.classList.contains('t-ad'))put(el,'tile');else{const b=el.querySelector(':scope>.adt');if(b)b.remove()}});
+ document.querySelectorAll('.lspot').forEach(el=>{if(el.classList.contains('t-rate'))put(el,'banner');else if(el.classList.contains('t-ad'))put(el,'tile');else{const b=el.querySelector(':scope>.adt');if(b)b.remove()}});
  document.querySelectorAll('.vspots').forEach(el=>{if(el.dataset.st==='ad')put(el,el.dataset.kind==='tech'?'tech':'spot');else{const b=el.querySelector(':scope>.adt');if(b)b.remove()}})};
 setInterval(tick,1000);tick()})();</script>
 <script>(()=>{
@@ -2257,12 +2268,21 @@ document.body.innerHTML='<div class="pe"><header><img src="img/gdr-masthead-tigh
 const st=document.createElement('style');st.textContent='html,body{background:#fff!important;color:#111!important}html::after,html::before,body::before,body::after{display:none!important}body>*:not(.pe){display:none!important}.pe{max-width:1000px;margin:0 auto;padding:24px 16px;font:400 14px/1.5 Georgia,"Times New Roman",serif;color:#111}.pe header{text-align:center;border-bottom:3px double #111;padding-bottom:10px;margin-bottom:16px}.pe header img{width:min(100%,640px);filter:invert(1) brightness(.1)}.pd{display:flex;justify-content:space-between;font:700 11px/1 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid #111;margin-top:8px;padding-top:6px}.pbtn{margin-top:12px;padding:10px 18px;border:0;border-radius:4px;background:#c8102e;color:#fff;font:800 13px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.pe main{columns:2 300px;column-gap:28px;column-rule:1px solid #ccc}.pe article{margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #999}.pe h2{font:700 22px/1.15 Georgia,serif;margin:0 0 6px;break-after:avoid}.pe h3{font:700 15px/1.3 Georgia,serif;margin:12px 0 4px;break-after:avoid}.pe .dek{font-style:italic;margin:0 0 4px}.pe .by,.pe .src{font:700 10px/1.3 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#555;margin:0 0 8px}.pe p{margin:0 0 8px;text-align:justify;hyphens:auto}.pe blockquote{margin:6px 0 10px;padding-left:10px;border-left:3px solid #111;font-style:italic}@media print{.pbtn{display:none}.pe{padding:0}@page{margin:14mm}}';
 document.head.appendChild(st);setTimeout(()=>{try{print()}catch(e){}},900)})();</script>
 <script>(()=>{
-/* Margin ad pop-up: shows for 5 seconds, then the spot goes back to its story. 30 seconds later it pops up in the next spot down, top to bottom, then starts over. */
-const SHOW=5000,GAP=30000;let k=-1;
-const spots=()=>[...document.querySelectorAll('.lsrow .lspot')].filter(b=>!b.classList.contains('regspot')&&b.offsetParent&&b.querySelector(':scope>a')).sort((x,y)=>{const a=x.getBoundingClientRect(),b=y.getBoundingClientRect();return a.top-b.top||a.left-b.left});
-const pop=()=>{if(document.hidden||typeof window.__adShow!=='function')return;const L=spots();if(!L.length)return;k=(k+1)%L.length;const box=L[k],a=box.querySelector(':scope>a');
+/* Margin ad pop-up: Eric's Rate ad (and every third time an "Advertise here" card) pops into a random margin spot for 5 seconds,
+   alternating left and right, then the story comes back. Next pop 30 seconds later. */
+const SHOW=5000,GAP=30000;let n=0;
+const RATE='<span class="rate-img"><img src="img/ad-rate-eric.jpg" alt="" width="800" height="800"></span><span class="rate-t"><span class="rate-k">Advertisement</span><span class="rate-h">We make the mortgage process easy.</span><span class="rate-n">Eric Maluk · Rate</span><span class="rate-l">NMLS 4733 · Co. NMLS 2611<br>Equal Housing Lender</span><span class="rate-go">Call (401) 254-4403</span></span>';
+const vis=b=>{const r=b.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight};
+const spots=side=>[...document.querySelectorAll('.lsrow .lspot')].filter(b=>!b.classList.contains('regspot')&&!b.classList.contains('t1')&&!b.classList.contains('t-ad')&&!b.classList.contains('t-rate')&&b.offsetParent&&b.querySelector(':scope>a[id]')&&(!side||b.classList.contains(side)));
+const pick=side=>{let L=spots(side);if(!L.length)L=spots();const V=L.filter(vis);const P=V.length?V:L;return P[Math.random()*P.length|0]};
+const pop=()=>{if(document.hidden)return;const side=n%2?'r':'l',isRate=n%3!==2;n++;const box=pick(side);if(!box)return;const a=box.querySelector(':scope>a[id]');
  const keep=a.cloneNode(true),cls=box.className,kv=box.style.getPropertyValue('--k');
- box.classList.add('flip');setTimeout(()=>{window.__adShow(box.querySelector(':scope>a'));box.classList.remove('flip')},460);
- setTimeout(()=>{if(!box.classList.contains('t-ad'))return;box.classList.add('flip');setTimeout(()=>{const cur=box.querySelector(':scope>a');if(cur&&box.classList.contains('t-ad')){box.replaceChild(keep,cur);box.className=cls;if(kv)box.style.setProperty('--k',kv);else box.style.removeProperty('--k')}box.classList.remove('flip')},460)},SHOW+460)};
-setTimeout(()=>{pop();setInterval(pop,GAP+SHOW)},8000)})();</script>
+ box.classList.add('flip');
+ setTimeout(()=>{const cur=box.querySelector(':scope>a');if(!cur){box.classList.remove('flip');return}
+  if(isRate){const r=document.createElement('a');r.href='tel:+14012544403';r.setAttribute('aria-label','Advertisement: Rate. Eric Maluk, NMLS 4733. We make the mortgage process easy. Call (401) 254-4403.');r.innerHTML=RATE;box.replaceChild(r,cur);box.className=cls.replace(/\bt-\S+/g,'').trim()+' t-rate';box.style.removeProperty('--k')}
+  else if(typeof window.__adShow==='function')window.__adShow(cur);
+  box.classList.remove('flip')},460);
+ setTimeout(()=>{if(!box.classList.contains('t-rate')&&!box.classList.contains('t-ad'))return;box.classList.add('flip');
+  setTimeout(()=>{const cur=box.querySelector(':scope>a');if(cur)box.replaceChild(keep,cur);box.className=cls;if(kv)box.style.setProperty('--k',kv);else box.style.removeProperty('--k');const b=box.querySelector(':scope>.adt');if(b)b.remove();box.classList.remove('flip')},460)},SHOW+460)};
+setTimeout(()=>{pop();setInterval(pop,GAP+SHOW)},6000)})();</script>
 </html>
