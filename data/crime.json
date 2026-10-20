@@ -1,6 +1,18 @@
 {
-"asof": "2026-10-19T17:18:49-07:00",
+"asof": "2026-10-19T21:30:55-07:00",
 "items": [
+{
+"kind": "police",
+"headline": "Police seek driver who posed as Uber after Pioneer Square bar pickup",
+"blurb": "A 25-year-old woman told police a man falsely claimed to be her Uber driver outside a 1st Ave S bar on Oct. 10 and drove her to Kent, where she jumped from the car; SPD cameras in the area were not working.",
+"hood": "Pioneer Square",
+"spd": [
+"PIONEER SQUARE"
+],
+"date": "2026-10-19",
+"url": "https://komonews.com/news/local/cctv-cameras-at-pioneer-square-not-working-as-police-investigate-womans-fake-uber-pickup-rideshare-impersonation-bar-safety-kent-real-time-crime-suspect-witness-seattle",
+"outlet": "KOMO"
+},
 {
 "kind": "shooting",
 "headline": "Another night of gunfire rattles the Central District",
@@ -231,6 +243,19 @@
 "outlet": "Westside Seattle"
 },
 {
+"kind": "crash",
+"headline": "Rollover crash blocks northbound I-5 near Denny Way",
+"blurb": "Multiple vehicles collided and one overturned on northbound I-5 near Denny Way Thursday morning; three people were evaluated and reported stable.",
+"hood": "I-5 / Denny Way",
+"spd": [
+"SLU/CASCADE",
+"CAPITOL HILL"
+],
+"date": "2026-10-15",
+"url": "https://www.fox13seattle.com/news/seattle-traffic-crash-blocks-i5",
+"outlet": "FOX 13"
+},
+{
 "kind": "burglary",
 "headline": "Junction smash-and-grab spree: storefronts and a bakery hit",
 "blurb": "A suspect breached a California Ave SW storefront with a masonry projectile, and a burglar shattered a bakery's front door and tried to pry open its drop-safe, the same day.",
@@ -253,6 +278,20 @@
 "date": "2026-10-14",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
 "outlet": "Westside Seattle"
+},
+{
+"kind": "courts",
+"headline": "City Attorney adds prosecutors for Aurora trafficking, gun cases",
+"blurb": "City Attorney Erika Evans announced two dedicated prosecutors: one cross-deputized to pursue sex-trafficking cases on Aurora Avenue North, and one to lead a new Firearms Unit.",
+"hood": "Aurora / Bitter Lake",
+"spd": [
+"BITTERLAKE",
+"GREENWOOD",
+"NORTHGATE"
+],
+"date": "2026-10-14",
+"url": "https://www.fox13seattle.com/news/seattle-city-attorney-prosecutors-target-aurora-crime",
+"outlet": "FOX 13"
 },
 {
 "kind": "homicide",
@@ -463,7 +502,7 @@
 {
 "kind": "arrest",
 "headline": "Trafficking unit sweeps Aurora, makes arrests",
-"blurb": "More than 20 SPD personnel from the Human Trafficking Unit and Community Response Group targeted prostitution solicitation along Aurora Avenue North on Oct. 6.",
+"blurb": "More than 20 SPD personnel targeted prostitution solicitation along Aurora Avenue North on Oct. 6; seven men ages 22 to 64 were arrested, several from out of town, Hoodline reported.",
 "hood": "Aurora / Bitter Lake",
 "spd": [
 "BITTERLAKE",
