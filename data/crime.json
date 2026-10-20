@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-19T13:21:40-07:00",
+"asof": "2026-10-19T17:18:49-07:00",
 "items": [
 {
 "kind": "shooting",
@@ -12,6 +12,19 @@
 "date": "2026-10-18",
 "url": "https://www.capitolhillseattle.com/2026/10/911-calls-track-another-night-of-gunfire-in-the-central-district/",
 "outlet": "Capitol Hill Seattle Blog"
+},
+{
+"kind": "arrest",
+"headline": "Man arrested in bed after West Seattle break-in, police say",
+"blurb": "Police say a 41-year-old man tried to get into one home near Fauntleroy Way SW and SW Webster St on Sunday afternoon, then kicked in the back door of another nearby and was found in a bed there. He was booked for residential burglary and attempted residential burglary.",
+"hood": "Fauntleroy",
+"spd": [
+"MORGAN",
+"FAUNTLEROY SW"
+],
+"date": "2026-10-18",
+"url": "https://www.fox13seattle.com/news/west-seattle-burglary-suspect-sleeping",
+"outlet": "FOX 13"
 },
 {
 "kind": "other",
