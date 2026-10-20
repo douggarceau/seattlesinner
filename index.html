@@ -142,6 +142,13 @@ window.__mfirst=function(a){if(!Array.isArray(a))return a;var m=function(x){retu
 .t-ad .adq{align-self:flex-start;font:500 12px/1.2 Georgia,serif;color:#d6d6d6}
 .t-ad .adbig{font:800 clamp(22px,calc(var(--ls,300px)*.1),32px)/1.02 Georgia,serif;color:#fff}
 .t-ad .adgo{align-self:flex-start;margin-top:4px;padding:8px 12px;border-radius:5px;background:#c8102e;color:#fff;font:800 11px/1 var(--body,system-ui);letter-spacing:.08em;text-transform:uppercase}
+.vspots{min-height:132px;border:1px solid #d9a40055;border-radius:8px;padding:10px 12px;background:#0b0c0f}
+.vspots .vs-h{font:700 10px/1.2 var(--mono,monospace);letter-spacing:.16em;text-transform:uppercase;color:#d9a400;margin:0 0 8px}
+.vspots .vs-r{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:7px 0;border-top:1px solid #ffffff14}
+.vspots .vs-r b{font:700 14px/1.2 Georgia,serif;color:#f3e6c8}.vspots .vs-r span{font:500 12px/1.2 var(--body,system-ui);color:#9aa3ad;text-align:right}
+.vspots button.vs-r{width:100%;background:none;border:0;border-top:1px solid #ffffff14;color:inherit;cursor:pointer;text-align:left}
+.vspots button.vs-r:hover{background:#ffffff0d}.vspots button.vs-r em{font-style:normal;font:700 12px/1 var(--body,system-ui);color:#d9a400;white-space:nowrap}
+.vspots.fade{opacity:0;transition:opacity .35s}.vspots{transition:opacity .35s}
 </style>
 <!--NEWSPRINT_START--><script>(function(){try{var q=new URLSearchParams(location.search),s=sessionStorage;if(q.has('paper')){var v=q.get('paper');v==='0'?s.removeItem('gdrPaper'):s.setItem('gdrPaper','1')}var m=s.getItem('gdrPaper');if(/^\/newsprint/.test(location.pathname))m='1';if(!m)return;var d=document.documentElement;d.classList.add('np');
 var t=0,mark=function(){t=0;document.querySelectorAll('body *').forEach(function(e){if(e.classList.contains('npbg'))return;var bi=getComputedStyle(e).backgroundImage;if(bi&&/url\((?!"?data:image\/svg)/.test(bi))e.classList.add('npbg')})};
@@ -1293,6 +1300,7 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
 }
 function vGuide(compact){const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const ex=c=>VENUES.filter(v=>v.cat===c).slice(0,40).sort(()=>0).slice(0,3).map(v=>v.name).join(', ');
   return `<section class="box" style="--c:#ff6a00"><div class="vguide${compact?' vg-compact':''}"><div class="gh"><h3>The Report Venue Guide</h3><p>${VENUES.length} bars, clubs, stages, screens, lanes and taprooms from Everett to Tacoma. Who's open, who's closed, who's playing.</p></div>
+  <div class="vspots" aria-live="off"></div>
   <div class="vtiles">${cats.map(c=>`<button class="vtile" data-vguide="${esc(c)}" style="--gc:${VCAT[c]}"><b>${VENUES.filter(v=>v.cat===c).length}</b><span>${esc(VSHORT[c])}</span><small>${esc(ex(c))}</small></button>`).join('')}</div>
   <div class="two" style="gap:10px;grid-template-columns:1fr"><button class="go" data-vguide="all">Browse all ${VENUES.length} venues →</button></div></div></section>`}
 function vCover(I){if(!I||!I.src)return '';
@@ -1313,6 +1321,7 @@ function vTech(){const T=TECH||{},B=T.bell||{};const ts=STORIES.filter(s=>['the-
   return `<div class="troom"><h2 class="room">Tech &amp; AI</h2>
   <a class="pmlink pmred" href="/tech/"><span class="pm-tag">EXCLUSIVE!</span><b>Tech &amp; AI <i>Power Map</i></b><span class="pm-go">Who controls AI and Big Tech →</span></a>
   <div class="intro"><b>Wired in from AI Signals</b><p>Machines, money and the people building both. Headlines come from the AI Signals Tech &amp; AI Power Map and refresh every morning.</p></div>
+  <div class="vspots" data-kind="tech"></div>
   <div class="lbl"><b>AI gone rogue</b><span>when the models misbehave</span></div><div class="tgrid">${(T.rogue||[]).map(rogueCard).join('')}</div>
   <div class="tsplit"><section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI headlines</b><span>${(T.news||[]).length} items</span></div><div class="bwl">${(T.news||[]).slice(0,24).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div></section>
   <div class="stack"><div class="lbl"><b>Report tech stories</b><span>${ts.length}</span></div>${ts.map(storyCard).join('')}</div></div>
@@ -1578,14 +1587,14 @@ function vScene(){
   <div class="sgrid">${L.map(evCard).join('')||'<div class="empty">No events listed.</div>'}</div>`;
 }
 
-const ADPK=[['banner','Front-page ad box','The big glowing box on the front page, linked to your site, booking or event. Runs 30 days.','$299 / month'],['block','Small ad block','A compact block in the front-page sidebar with your logo, a line of text and a link. Runs 30 days.','$99 / month'],['featured','Featured listing','Top of your category in the Venue Guide, glowing, above every other listing.','$79 / month'],['spotlight','Front-page spotlight','Your venue in the Venue Guide on the front page, where every reader lands.','$149 / week'],['event','Event promo','Push a show or party on The Wire, the music calendar and your venue page.','$49 / event'],['interviewb','Interview feature: business','A full interview with you, written up as a long labeled "Sponsored interview" story with photos, front-page placement, share cards and a permanent page. Fact check and one round of corrections included.','$999'],['interviewa','Interview feature: artist or band','The same long interview feature for a local artist, band or performer: photos, front-page placement, share cards and a permanent page.','$499'],['story','Spotlight blurb','A short labeled sponsored write-up about your place, in the Report voice.','$249 each']];
-function vAdvertise(){const c=STATE.adcat||'';
+const ADPK=[['banner','Front-page ad box','The big glowing box on the front page, linked to your site, booking or event. Runs 30 days.','$299 / month'],['block','Small ad block','A compact block in the front-page sidebar with your logo, a line of text and a link. Runs 30 days.','$99 / month'],['spot1','Venue Guide: top spot','Place your venue in the top spot of the Report Venue Guide. 30 days.','$199 / 30 days'],['spot2','Venue Guide: second spot','Place your venue in the second spot of the Report Venue Guide. 30 days.','$149 / 30 days'],['spot3','Venue Guide: third spot','Place your venue in the third spot of the Report Venue Guide. 30 days.','$99 / 30 days'],['tech1','Tech & AI: top spot','Feature your tech news in the top spot on the Tech & AI Power Map. 30 days.','$249 / 30 days'],['tech2','Tech & AI: second spot','Feature your tech news in the second spot on the Tech & AI Power Map. 30 days.','$179 / 30 days'],['tech3','Tech & AI: third spot','Feature your tech news in the third spot on the Tech & AI Power Map. 30 days.','$129 / 30 days'],['featured','Featured listing','Top of your category in the Venue Guide, glowing, above every other listing.','$79 / month'],['spotlight','Front-page spotlight','Your venue in the Venue Guide on the front page, where every reader lands.','$149 / week'],['event','Event promo','Push a show or party on The Wire, the music calendar and your venue page.','$49 / event'],['interviewb','Interview feature: business','A full interview with you, written up as a long labeled "Sponsored interview" story with photos, front-page placement, share cards and a permanent page. Fact check and one round of corrections included.','$999'],['interviewa','Interview feature: artist or band','The same long interview feature for a local artist, band or performer: photos, front-page placement, share cards and a permanent page.','$499'],['story','Spotlight blurb','A short labeled sponsored write-up about your place, in the Report voice.','$249 each']];
+function vAdvertise(){const c=STATE.adcat||'';const PK=STATE.adpick||'';STATE.adpick='';
   return `<h2 class="room">Advertise</h2><div class="intro"><b>Get in front of Seattle's night crowd</b><p>The Report's Venue Guide covers ${VENUES.length} bars, clubs, stages and lanes, and readers come here to decide where they're going tonight. Pick a spot and tell us about your place. Prices are below; the editor will confirm and get you live.</p></div>
   <div class="vtiles">${ADPK.map(([k,t,d,pr])=>`<div class="vtile" style="--gc:${k==='featured'?'#ff6a00':k==='spotlight'?'#ff3a2a':k==='event'?'#1e90ff':k==='banner'?'#c8102e':k==='block'?'#2fd3c8':k==='interviewb'?'#8a2be2':k==='interviewa'?'#b84dff':'#d9a400'};cursor:default"><b>${pr}</b><span>${t}</span><small>${d}</small></div>`).join('')}</div>
   <section class="box" style="--c:#ff6a00"><div class="bh"><b>Request a spot</b></div>
   <form class="form" id="adF"><datalist id="vlistdl">${VENUES.map(v=>`<option value="${esc(v.name)}">`).join('')}</datalist>
   <div class="fld"><label for="aV">Your venue or business</label><input type="text" id="aV" list="vlistdl" placeholder="Start typing your venue name" maxlength="120"></div>
-  <div class="fld"><label for="aP">What you want</label><select id="aP">${ADPK.map(([k,t,d,pr])=>`<option value="${k}">${t} (${pr})</option>`).join('')}</select></div>
+  <div class="fld"><label for="aP">What you want</label><select id="aP">${ADPK.map(([k,t,d,pr])=>`<option value="${k}"${k===PK?' selected':''}>${t} (${pr})</option>`).join('')}</select></div>
   ${c?`<p class="note">Category: ${esc(c)}</p>`:''}
   <div class="fld"><label for="aN">Your name</label><input type="text" id="aN" maxlength="80"></div>
   <div class="fld"><label for="aE">Email or phone</label><input type="text" id="aE" maxlength="120"></div>
@@ -2172,4 +2181,11 @@ pop.addEventListener('click',e=>{const a=e.target.closest('a[data-s]');if(!a)ret
 document.addEventListener('click',e=>{if(!pop.hidden&&!pop.contains(e.target)&&e.target.id!=='nbShare')pop.hidden=true});
 document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('#sisPop a');if(!a)return;e.preventDefault();e.stopPropagation();window.location.assign(a.href)},true);
 wire();new MutationObserver(wire).observe(document.documentElement,{childList:true,subtree:true});setTimeout(wire,1500)})();</script>
+<script>(()=>{let t=0;const esc=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const PV=[['Top spot','$199','spot1'],['Second spot','$149','spot2'],['Third spot','$99','spot3']],PT=[['Top spot','$249','tech1'],['Second spot','$179','tech2'],['Third spot','$129','tech3']];
+const draw=(el,st)=>{const tech=el.dataset.kind==='tech',PR=tech?PT:PV;if(st==='ad'){el.innerHTML='<div class="vs-h">'+(tech?'Feature your tech news here':'Place your venue here')+' · 30 days</div>'+PR.map(r=>'<button type="button" class="vs-r" data-adpick="'+r[2]+'"><b>'+(tech?'Feature your tech news in the ':'Place your venue in the ')+r[0].toLowerCase()+'</b><em>'+r[1]+' · 30 days</em></button>').join('')}
+ else if(tech){const n=((typeof TECH!=='undefined'&&TECH&&TECH.news)||[]).slice(0,3);el.innerHTML='<div class="vs-h">Tech &amp; AI · top headlines</div>'+n.map(x=>'<div class="vs-r"><b>'+esc(x.t)+'</b><span>'+esc(x.co||'')+'</span></div>').join('')}
+ else{const v=(typeof VENUES!=='undefined'?VENUES:[]).slice(0,3);el.innerHTML='<div class="vs-h">The Report Venue Guide · top venues</div>'+v.map(x=>'<div class="vs-r"><b>'+esc(x.name)+'</b><span>'+esc(x.hood||x.region||'')+'</span></div>').join('')}el.dataset.st=st};
+setInterval(()=>{t++;const st=(t%14)<9?'reg':'ad';document.querySelectorAll('.vspots').forEach(el=>{if(!el.dataset.st){draw(el,st);return}if(el.dataset.st===st)return;el.classList.add('fade');setTimeout(()=>{draw(el,st);el.classList.remove('fade')},350)})},1000);
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-adpick]');if(!b)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();STATE.adpick=b.dataset.adpick;STATE.adcat='';STATE.prev=STATE.view==='advertise'?(STATE.prev||'front'):(STATE.view||'front');STATE.view='advertise';render();if(typeof top_==='function')top_()},true)})();</script>
 </html>
