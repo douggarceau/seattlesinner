@@ -1287,7 +1287,7 @@ function vCover(I){if(!I||!I.src)return '';
   <div class="sea-g">${loc.map(x=>`<button data-story="${x.slug}" style="--sc:${tc(x.topic)}"><small>${esc(tl(x.topic))}</small><b>${esc(x.title)}</b></button>`).join('')}</div>
   <div class="sea-h nat"><b>In the ${esc(I.month)} issue</b></div>
   <div class="nat-l">${I.lines.map(([slug,h])=>`<button data-story="${slug}">${esc(h)}</button>`).join('')}</div>
-  </div></div><div class="cvcrime">${(window.CRIMEITEMS||[]).length?`<div class="sea-h crm"><b>Seattle Crime</b><button data-go="crime">Crime Watch →</button></div><div class="sea-g crm-g">${window.CRIMEITEMS.filter(x=>!window.TOPCRIME||x.url!==window.TOPCRIME.url).slice(0,12).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener"><small>${esc((x.kind||'crime')+(x.hood?' · '+x.hood:''))}</small><b>${esc(x.headline)}</b></a>`).join('')}</div>`:''}</div></section>`}
+  </div></div><div class="cvcrime">${(window.CRIMEITEMS||[]).length?`<div class="sea-h crm"><b>Seattle Crime</b><button data-go="crime">Crime Watch →</button></div><div class="sea-g crm-g">${(()=>{const CS=window.CSBY||{};const L=window.CRIMEITEMS.filter(x=>!window.TOPCRIME||x.headline!==window.TOPCRIME.headline);return L.filter(x=>CS[x.headline]).concat(L.filter(x=>!CS[x.headline]))})().slice(0,12).map(x=>{const st=(window.CSBY||{})[x.headline],lab=`<small>${esc((x.kind||'crime')+(x.hood?' · '+x.hood:''))}</small><b>${esc(x.headline)}</b>`;return st?`<button data-story="${esc(st.slug)}" style="--sc:#e3170a">${lab}</button>`:`<a href="${esc(x.url)}" target="_blank" rel="noopener">${lab}</a>`}).join('')}</div>`:''}</div></section>`}
 
 const TK={'safety test':'#ff3a2a','real-world incident':'#e3170a','research finding':'#ff7a1a','warning':'#d9a400','doctrine':'#8fb3d9','treaty/debate':'#8fb3d9','battlefield':'#e3170a','drone swarm':'#2fd3c8','loitering munition':'#ff7a1a','autonomous weapon':'#ff3a2a','armed robot':'#39ff14'};
 const pcol=v=>/^\s*-/.test(v||'')?'#ff3a2a':/^\s*\+/.test(v||'')?'#39ff14':'#2fd3c8';
@@ -1505,6 +1505,9 @@ function memberBox(){const u=window.SS_USER;const go=u?`<a class="mb-go" href="$
  return `<div class="mbox"><b>Keep reading</b><p>The national cover stories are for members of The Guitar Doug Report: $4.99 a month, cancel anytime. Seattle news stays free.</p>${go}${u?'':'<small>Already a member? Log in with the email you used.</small>'}</div>`}
 function xShare(s){const u='https://seattlesinner.com/'+(s?'?story='+s.slug:'');const t=s?s.title+' | The Guitar Doug Report':'The Guitar Doug Report';return 'https://twitter.com/intent/tweet?text='+encodeURIComponent(t)+'&url='+encodeURIComponent(u)}
 function xBtn(s){return `<a class="xbtn" href="${xShare(s)}" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>Share on X</a>`}
+/* Report-written crime stories (data/crimestories.json): Seattle Crime box headlines open these first; outside links only when no story exists. */
+window.CSTORIES=[];window.CSBY={};
+fetch('data/crimestories.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(L=>{if(!Array.isArray(L))return;window.CSTORIES=L;const M={};L.forEach(x=>{if(x&&x.item_headline&&x.slug)M[x.item_headline]=x});window.CSBY=M;if(typeof STATE!=='undefined'&&(STATE.view==='front'||STATE.view==='read')&&typeof render==='function')render()}).catch(()=>{});
 /* Top Crime Story banner: the most serious recent Seattle crime headline from data/crime.json (refreshed by the Crime Watch desk). */
 window.TOPCRIME=null;
 function crimeBanner(){const x=window.TOPCRIME;if(!x)return '<div class="spr crime-spr" style="min-height:64px"><span class="spr-tag">TOP CRIME STORY</span><span><b>Loading…</b></span></div>';
@@ -1516,7 +1519,7 @@ fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>
  const X=/kidnap|abduct|rape|hostage|child|killed|murdered|gunned down|stabbed to death/i,OLD=/years (on|later|ago)|cold case|anniversar/i;let best=null,bs=-1e9;d.items.forEach((x,i)=>{const age=(top-ds[i])/864e5;if(age>4)return;const t=x.headline+' '+(x.blurb||'');let sc=(/murder/i.test(x.headline)?60:0)+(SEV[x.kind]||1)+(W.test(x.headline)?5:0)+(X.test(x.headline)?3:0)+(W.test(x.blurb||'')?1:0)-age*0.7-(/no injur/i.test(x.blurb||'')?3:0)-(OLD.test(t)?8:0);if(sc>bs){bs=sc;best=x}});
  window.CRIMEITEMS=__mfirst(d.items.slice().sort((a,b)=>(b.date||'').localeCompare(a.date||'')));window.TOPCRIME=best||d.items[0];if(typeof STATE!=='undefined'&&STATE.view==='front'&&typeof render==='function')render()}).catch(()=>{});
 function vReader(slug){
-  const s=STORIES.find(x=>x.slug===slug); if(!s) return vFront();
+  const s=STORIES.find(x=>x.slug===slug)||(window.CSTORIES||[]).find(x=>x.slug===slug); if(!s) return vFront();
   const LOCK=!!(PAY_LINK&&typeof FEATURES!=='undefined'&&FEATURES.has(s.slug)&&!window.SS_MEMBER);
   let B=s.body;if(LOCK){let n=0;B=[];for(const p of s.body){if(p.startsWith('#T ')||p.startsWith('= '))continue;B.push(p);if(!/^(## |> )/.test(p)&&++n>=3&&!/:\s*$/.test(p))break}}
   return `<article class="reader styled" style="${sty(s.slug)}">
