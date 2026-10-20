@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-20T05:25:58-07:00",
+"asof": "2026-10-20T14:26:03-07:00",
 "items": [
 {
 "kind": "police",
@@ -24,6 +24,30 @@
 "date": "2026-10-19",
 "url": "https://mynorthwest.com/crime-blotter/seattle-no-kings-rally/4288185",
 "outlet": "MyNorthwest"
+},
+{
+"kind": "burglary",
+"headline": "Another pre-dawn storefront break-in reported in the Junction",
+"blurb": "A storefront in the 4500 block of California Ave SW was breached with a thrown object about 4:15 a.m. Oct. 19 and store property was taken, the Westside Seattle crime report said. No arrest was listed.",
+"hood": "Alaska Junction",
+"spd": [
+"ALASKA JUNCTION"
+],
+"date": "2026-10-19",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
+},
+{
+"kind": "theft",
+"headline": "Catalytic converters cut from cars in Morgan Junction carport",
+"blurb": "Suspects used battery-powered saws on catalytic converters in a carport in the 6500 block of California Ave SW about 2:30 p.m. Oct. 19, then fled in a dark sedan, according to the Westside Seattle crime report.",
+"hood": "Morgan Junction",
+"spd": [
+"MORGAN"
+],
+"date": "2026-10-19",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 },
 {
 "kind": "shooting",
@@ -365,6 +389,18 @@
 "date": "2026-10-13",
 "url": "https://komonews.com/news/local/seattle-mayor-faces-questions-over-public-safety-after-weekend-crime-spree-index-survey-voters-homelessness-mexican-kitchen-open-air-drug-market-encampment",
 "outlet": "KOMO"
+},
+{
+"kind": "theft",
+"headline": "Tools and laser levels stolen from Morgan Junction job site",
+"blurb": "Padlocks were cut at a construction site in the 6900 block of 35th Ave SW on the afternoon of Oct. 13 and tools and laser levels were taken, the Westside Seattle crime report said.",
+"hood": "Morgan Junction",
+"spd": [
+"MORGAN"
+],
+"date": "2026-10-13",
+"url": "https://www.westsideseattle.com/robinson-papers/2026/10/18/westside-seattle-crime-report",
+"outlet": "Westside Seattle"
 },
 {
 "kind": "stabbing",
