@@ -1696,7 +1696,7 @@ document.addEventListener('click',async e=>{
 },true);
 
 function render(){
-  const v=STATE.view;
+  const v=STATE.view,__y=scrollY;
   {const cs=document.getElementById('coverSlot');if(cs)cs.innerHTML=v==='front'?vCover(CUR):''}
   {const sb=document.getElementById('seaBanner');if(sb){const L=STORIES.find(x=>x.slug==='ballard-light-rail-2042-forum')||STORIES.find(x=>!(typeof FEATURES!=='undefined'&&FEATURES.has(x.slug)));sb.innerHTML=v==='front'&&L?`<button type="button" class="spr sea-spr" data-story="${L.slug}"><span class="spr-tag">SEATTLE · TOP STORY</span><span><b>${esc(L.title)}</b><small>${esc(L.dek)}</small></span><span class="spr-go">Read it →</span></button>`:''}}
   $('#view').innerHTML=`<div style="display:grid;grid-template-columns:minmax(0,1fr);gap:16px">${v==='front'?vFront():v==='stories'?vStories():v==='bars'?vBars():v==='venues'?vVenues():v==='bands'?vBands():v==='advertise'?vAdvertise():v==='tech'?vTech():v==='crime'?vCrime():v==='cal'?vCal():v==='scene'?vScene():v==='submit'?vSubmit():v==='inbox'?vInbox():v==='read'?vReader(STATE.story):v==='search'?vSearch(STATE.q):vFront()}</div>`;
@@ -1707,13 +1707,22 @@ function render(){
   if(v==='venues'&&!STATE.vsel) paintVenues();
   if(v==='bands'&&!STATE.bsel) paintBands();
   if(v==='read') watchCmts(STATE.story);
+  hSync(__y);
 }
 function top_(){const y=$('#view').getBoundingClientRect().top+scrollY-90;if(scrollY>y)scrollTo({top:Math.max(0,y),behavior:'instant'})}
 function go(v){if(v!=='read'&&v!=='search')STATE.prev=v;STATE.view=v;render();top_();}
+/* Browser history: each section and story gets its own entry, so the browser Back button stays on the site. */
+var HNAV=false;try{history.scrollRestoration='manual'}catch(e){}
+function hKey(){return STATE.view==='read'?'read:'+STATE.story:STATE.view}
+function hUrl(){const b=location.pathname;return STATE.view==='read'&&STATE.story?b+'?story='+encodeURIComponent(STATE.story):STATE.view==='front'?b:b+'#'+STATE.view}
+function hSync(y){if(HNAV)return;const k=hKey(),st=history.state;try{if(!st||!st.k){history.replaceState({k,v:STATE.view,s:STATE.story,p:STATE.prev,n:0,y:0,boot:1},'');return}
+ if(st.boot){history.replaceState({k,v:STATE.view,s:STATE.story,p:STATE.prev,n:0,y:0,boot:1},'',hUrl());return}
+ if(st.k===k)return;history.replaceState(Object.assign({},st,{y}),'');history.pushState({k,v:STATE.view,s:STATE.story,p:STATE.prev,n:(st.n||0)+1,y:0},'',hUrl())}catch(e){}}
+addEventListener('popstate',e=>{const s=e.state;if(!s||!s.k)return;HNAV=true;try{STATE.view=s.v;STATE.story=s.s;STATE.prev=s.p||'front';render()}finally{HNAV=false}const y=s.y||0;requestAnimationFrame(()=>scrollTo({top:y,behavior:'instant'}))});
 document.addEventListener('click',e=>{
   const zm=e.target.closest('[data-zoom]'); if(zm){const d=document.createElement('div');d.className='zoom';d.innerHTML=`<img src="${zm.dataset.zoom}" alt="The Guitar Doug Report, full size">`;d.onclick=()=>d.remove();document.body.appendChild(d);return}
   if(e.target.closest('.zoom'))return;
-  const g=e.target.closest('[data-go]'); if(g){e.preventDefault();go(g.dataset.go);return}
+  const g=e.target.closest('[data-go]'); if(g){e.preventDefault();if(g.classList.contains('back')&&history.state&&history.state.n>0){history.back();return}go(g.dataset.go);return}
   const s=e.target.closest('[data-story]'); if(s){if(s.tagName==='A')e.preventDefault();STATE.story=s.dataset.story;if(STATE.view!=='read')STATE.prev=STATE.view==='search'?'stories':STATE.view;STATE.view='read';render();const y=$('#view').getBoundingClientRect().top+scrollY-90;scrollTo({top:Math.max(0,y),behavior:'instant'});return}
   const t=e.target.closest('[data-topic]'); if(t){STATE.topic=t.dataset.topic;render();return}
   const gn=e.target.closest('[data-genre]'); if(gn){STATE.genre=gn.dataset.genre;render();return}
@@ -1904,8 +1913,9 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
-(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1);if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands','front'].includes(g)){go(g)}})();
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1),sl=P.get('story');if(sl){STATE.prev='front';STATE.story=sl;STATE.view='read';render();return}if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands','front'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
+try{const s=history.state;if(s&&s.boot)history.replaceState(Object.assign({},s,{boot:0}),'')}catch(e){}
 </script>
 <script>
 setInterval(()=>{if(document.hidden)return;const r=document.querySelectorAll('.troom .bwl .bwr');if(r.length){const n=r[Math.floor(Math.random()*r.length)];n.classList.add('flash');setTimeout(()=>n.classList.remove('flash'),900)}
@@ -2123,6 +2133,11 @@ html body #coverSlot .nat-l button{font:700 19px/1.25 var(--hd)!important;color:
 html body #coverSlot .nat-l button:hover{color:#fff!important}
 html body #coverSlot .cvcrime{padding:0 16px 16px}
 @media (min-width:900px){html body #coverSlot .cvcrime .crm-g{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+
+/* Back button pulses so readers can always find their way back */
+@keyframes backPulse{0%,100%{box-shadow:0 0 8px rgba(30,144,255,.55);transform:scale(1)}50%{box-shadow:0 0 24px rgba(30,144,255,1),0 0 6px #cfe8ff;transform:scale(1.06)}}
+html body .back{animation:backPulse 1.6s ease-in-out infinite!important}
+@media (prefers-reduced-motion:reduce){html body .back{animation:none!important}}
 </style>
 </body>
 </html>
