@@ -1,5 +1,5 @@
 {
-"asof": "2026-10-19T21:30:55-07:00",
+"asof": "2026-10-20T01:27:03-07:00",
 "items": [
 {
 "kind": "police",
@@ -294,6 +294,18 @@
 "outlet": "FOX 13"
 },
 {
+"kind": "crash",
+"headline": "Driver trapped after crash on the Ave at NE 42nd St in U District",
+"blurb": "Seattle Fire crews worked to free a person trapped in a car after a collision at University Way NE and NE 42nd St on the night of Oct. 14; the person's condition was not released.",
+"hood": "University District",
+"spd": [
+"UNIVERSITY"
+],
+"date": "2026-10-14",
+"url": "https://hoodline.com/2026/10/driver-trapped-after-crash-on-u-district-s-the-ave/",
+"outlet": "Hoodline"
+},
+{
 "kind": "homicide",
 "headline": "Gas station clerk shot dead near Belltown",
 "blurb": "Officers responding to a report of an unresponsive man found a store clerk with gunshot wounds at a gas station in the 300 block of Broad Street. Homicide detectives are investigating.",
@@ -524,16 +536,6 @@
 "date": "2026-10-08",
 "url": "https://www.westsideseattle.com/robinson-papers/2026/10/15/westside-seattle-crime-report",
 "outlet": "Westside Seattle"
-},
-{
-"kind": "arrest",
-"headline": "State Patrol 'Most Wanted' fugitive caught in Seattle",
-"blurb": "A 39-year-old man wanted for vehicular homicide in a February head-on crash on U.S. 101 was arrested in Seattle on Oct. 5.",
-"hood": "Seattle",
-"spd": [],
-"date": "2026-10-08",
-"url": "https://www.fox13seattle.com/news/most-wanted-suspect-arrested-seattle",
-"outlet": "FOX 13"
 },
 {
 "kind": "arrest",
@@ -816,9 +818,11 @@
 {
 "kind": "police",
 "headline": "Independent team takes over probe of police-involved death",
-"blurb": "At SPD's request, the Independent Force Investigative Team – King County is investigating an officer-involved death in South Seattle on Sept. 12.",
-"hood": "South Seattle",
-"spd": [],
+"blurb": "At SPD's request, the Independent Force Investigative Team – King County is investigating the Sept. 12 death of a man who lost consciousness after being handcuffed on the 6000 block of Airport Way S.",
+"hood": "Georgetown",
+"spd": [
+"GEORGETOWN"
+],
 "date": "2026-09-25",
 "url": "https://spdblotter.seattle.gov/2026/09/25/independent-force-investigative-team-king-county-ifit-kc-officer-involved-death-september-12th-2026/",
 "outlet": "SPD Blotter"
