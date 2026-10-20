@@ -1097,7 +1097,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
 <div class="wrap">
   <header class="mast">
     <div>
-      <h1 class="logo lgimg"><span class="tri"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"><i class="tg" aria-hidden="true"></i><i class="tr" aria-hidden="true"></i><i class="tb" aria-hidden="true"></i></span></h1>
+      <h1 class="logo lgimg"><img src="img/gdr-masthead-tight.webp" alt="The Guitar Doug Report" width="1000" height="240"></h1>
       <div class="edition">Seattle Edition</div>
       
     </div>
@@ -2190,37 +2190,6 @@ const draw=(el,st)=>{const tech=el.dataset.kind==='tech',PR=tech?PT:PV;if(st==='
 setInterval(()=>{t++;const st=(t%14)<9?'reg':'ad';document.querySelectorAll('.vspots').forEach(el=>{if(!el.dataset.st){draw(el,st);return}if(el.dataset.st===st)return;el.classList.add('fade');setTimeout(()=>{draw(el,st);el.classList.remove('fade')},350)})},1000);
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-adpick]');if(!b)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();STATE.adpick=b.dataset.adpick;STATE.adcat='';STATE.prev=STATE.view==='advertise'?(STATE.prev||'front'):(STATE.view||'front');STATE.view='advertise';render();if(typeof top_==='function')top_()},true)})();</script>
 <style>
-/* masthead: GUITAR green, DOUG red, REPORT blue, lighting up one after another */
-.logo.lgimg .tri{position:relative;display:block;width:min(100%,760px)}
-.logo.lgimg .tri img{width:100%}
-.logo.lgimg .tri i{position:absolute;inset:0;pointer-events:none;-webkit-mask:url(img/gdr-masthead-tight.webp) 0 0/100% 100% no-repeat;mask:url(img/gdr-masthead-tight.webp) 0 0/100% 100% no-repeat;opacity:.4;animation:triFlash 2.4s steps(1,end) infinite}
-.logo.lgimg .tri .tg{background:#22e05a;clip-path:inset(31% 63% 0 0)}
-.logo.lgimg .tri .tr{background:#ff1e1e;clip-path:inset(31% 36.8% 0 37%);animation-delay:.8s}
-.logo.lgimg .tri .tb{background:#1e7bff;clip-path:inset(31% 0 0 63.2%);animation-delay:1.6s}
-@keyframes triFlash{0%{opacity:1}33.3%{opacity:.4}}
-.logo.lgimg .tri i{animation-duration:2.4s!important}
-@media (prefers-reduced-motion:reduce){.logo.lgimg .tri i{animation:none!important;opacity:1}}
-/* Rate / Eric Maluk margin ad */
-html body .lspot.t-rate{--k:#e3170a;background:#fff!important;border-color:#e3170a!important;animation:adbtn 1.6s ease-in-out infinite!important;animation-duration:1.6s!important}
-html body .lspot.t-rate>a{display:flex!important;align-items:stretch;gap:0;height:100%;padding:0!important;text-decoration:none;color:#111}
-html body .lspot.t-rate .rate-img{flex:0 0 auto;height:100%;aspect-ratio:1;max-width:58%;display:block}html body .lspot.t-rate img{display:block!important;opacity:1!important;height:100%!important;width:100%!important;max-height:none!important;max-width:none!important;min-height:0!important;object-fit:contain;border-radius:0}
-html body .lspot.t-rate .rate-t{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:8px 10px 8px 8px}
-html body .lspot.t-rate .rate-k{font:700 8px/1 var(--mono,monospace)!important;letter-spacing:.16em!important;text-transform:uppercase;color:#777!important}
-html body .lspot.t-rate .rate-h{font:800 13px/1.15 Georgia,serif!important;color:#111!important}
-html body .lspot.t-rate .rate-n{font:800 11px/1.2 Arial,sans-serif!important;color:#111!important}
-html body .lspot.t-rate .rate-l{font:400 8.5px/1.3 Arial,sans-serif!important;color:#555!important}
-html body .lspot.t-rate .rate-go{align-self:flex-start;margin-top:2px;padding:6px 7px;border-radius:4px;background:#e3170a;color:#fff!important;font:800 10px/1 Arial,sans-serif!important;letter-spacing:.02em;white-space:nowrap}
-html body .lspot.t-rate::before{display:none}
-/* phones and narrow windows: Eric's ad floats in from the bottom corner, alternating sides */
-.ratefl{position:fixed;bottom:12px;z-index:2147482000;width:min(360px,calc(100vw - 24px));height:150px;background:#fff;border:2px solid #e3170a;border-radius:8px;box-shadow:0 10px 30px #000c,0 0 22px #e3170a88;overflow:hidden;opacity:0;transform:translateY(20px);transition:opacity .35s,transform .35s}
-.ratefl.l{left:12px}.ratefl.r{right:12px}.ratefl.on{opacity:1;transform:none}
-.ratefl>a{display:flex;height:100%;text-decoration:none;color:#111}
-.ratefl .rate-img{flex:0 0 auto;height:100%;aspect-ratio:1;display:block}.ratefl img{display:block;width:100%;height:100%;object-fit:contain}
-.ratefl .rate-t{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:8px 10px 8px 6px}
-.ratefl .rate-k{font:700 8px/1 monospace;letter-spacing:.16em;text-transform:uppercase;color:#777}.ratefl .rate-h{font:800 13px/1.15 Georgia,serif}.ratefl .rate-n{font:800 11px/1.2 Arial,sans-serif}
-.ratefl .rate-l{font:400 8.5px/1.3 Arial,sans-serif;color:#555}.ratefl .rate-go{align-self:flex-start;padding:6px 7px;border-radius:4px;background:#e3170a;color:#fff;font:800 10px/1 Arial,sans-serif;white-space:nowrap}
-.ratefl .x{position:absolute;top:2px;right:4px;z-index:2;border:0;background:none;font:700 18px/1 Arial,sans-serif;color:#888;cursor:pointer;padding:2px 4px}
-@media print{.ratefl{display:none!important}}
 /* ad run timer: days left in the 30-day run */
 .adbox,.vspots{position:relative}
 .adt{position:absolute;right:6px;bottom:6px;z-index:5;pointer-events:none;min-width:14px;padding:2px 4px;border-radius:3px;background:#000b;color:#fffc;font:700 9px/1 var(--mono,monospace);text-align:center;letter-spacing:.04em}
