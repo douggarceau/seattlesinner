@@ -2412,21 +2412,25 @@ const hide=(ad)=>{if(!ad.box)return;if(ad.box.matches(":hover"))return false;ad.
 const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."+k+"-a");if(!el)return;const b=el.parentNode;b.classList.remove(k);delete b.dataset.taken;el.remove();A.push({k,el,box:null})});
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
-const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="crimevid">(()=>{/* Guitar Doug video pops up the first time someone opens Crime Watch in a visit (sound follows the Sound on/off button) */
+const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="crimevid">(()=>{/* Guitar Doug video plays in a small box beside the masthead the first time someone opens Crime Watch in a visit (sound follows the Sound on/off button) */
 let shown=false;try{shown=sessionStorage.getItem("gdr_crimevid")==="1"}catch(_){}
 const sfxOn=()=>{try{return typeof SFX==="undefined"||SFX.on}catch(_){return true}};
-const close=()=>{const o=document.getElementById("crimeVidPop");if(!o)return;const v=o.querySelector("video");try{v.pause()}catch(_){}o.remove();document.removeEventListener("keydown",esc)};
+const close=()=>{const o=document.getElementById("crimeVidPop");if(!o)return;const v=o.querySelector("video");try{v.pause()}catch(_){}o.remove();removeEventListener("resize",place);document.removeEventListener("keydown",esc)};
 const esc=e=>{if(e.key==="Escape")close()};
+const place=()=>{const o=document.getElementById("crimeVidPop");if(!o)return;const L=document.querySelector("h1.logo img")||document.querySelector("h1.logo");const vw=document.documentElement.clientWidth;const w=vw<700?78:112;o.style.width=w+"px";
+ if(!L){o.style.top=(scrollY+60)+"px";o.style.left=(vw-w-12)+"px";return}const r=L.getBoundingClientRect();
+ let left=r.right+8,top=r.top+scrollY-10;if(left+w>vw-16){left=vw-w-16;top=r.bottom+scrollY+10};o.style.left=Math.max(6,left)+"px";o.style.top=Math.max(4,top)+"px"};
 const open=()=>{if(document.getElementById("crimeVidPop"))return;
  const o=document.createElement("div");o.id="crimeVidPop";o.setAttribute("role","dialog");o.setAttribute("aria-label","Crime Watch intro video");
- o.style.cssText="position:fixed;inset:0;z-index:2147483000;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:16px";
- o.innerHTML='<div style="position:relative;max-width:min(240px,62vw);width:100%"><button type="button" aria-label="Close video" style="position:absolute;top:-12px;right:-12px;z-index:2;width:32px;height:32px;border-radius:50%;border:2px solid #fff;background:#111;color:#fff;font:700 18px/1 system-ui,sans-serif;cursor:pointer">&times;</button><video playsinline autoplay controls preload="auto" poster="/vid/doug-crime.jpg" style="display:block;width:100%;max-height:52vh;object-fit:contain;border-radius:10px;background:#000;box-shadow:0 10px 40px rgba(0,0,0,.6)"><source src="/vid/doug-crime.mp4" type="video/mp4"></video></div>';
- document.body.appendChild(o);const v=o.querySelector("video");v.muted=!sfxOn();
- o.addEventListener("click",e=>{if(e.target===o||e.target.closest("button"))close()});
- v.addEventListener("ended",()=>setTimeout(close,600));document.addEventListener("keydown",esc);
+ o.style.cssText="position:absolute;z-index:2147483000;border-radius:8px;box-shadow:0 0 0 2px #c0392b,0 6px 22px rgba(0,0,0,.7);background:#000;transform:scale(.6);opacity:0;transform-origin:top right;transition:transform .35s ease,opacity .35s ease";
+ o.innerHTML='<button type="button" aria-label="Close video" style="position:absolute;top:-9px;right:-9px;z-index:2;width:22px;height:22px;border-radius:50%;border:1.5px solid #fff;background:#111;color:#fff;font:700 13px/1 system-ui,sans-serif;cursor:pointer;padding:0">&times;</button><video playsinline autoplay preload="auto" poster="/vid/doug-crime.jpg" style="display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;background:#000;cursor:pointer"><source src="/vid/doug-crime.mp4" type="video/mp4"></video>';
+ document.body.appendChild(o);place();addEventListener("resize",place);requestAnimationFrame(()=>{o.style.transform="scale(1)";o.style.opacity="1"});
+ const v=o.querySelector("video");v.muted=!sfxOn();
+ o.querySelector("button").addEventListener("click",close);v.addEventListener("click",()=>{if(v.muted){v.muted=false}else if(v.paused){v.play().catch(()=>{})}else v.pause()});
+ v.addEventListener("ended",()=>setTimeout(close,800));document.addEventListener("keydown",esc);
  const p=v.play();if(p&&p.catch)p.catch(()=>{v.muted=true;v.play().catch(()=>{})});};
 document.addEventListener("click",e=>{const t=e.target;if(shown||!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
- shown=true;window.__gdrCrimeVid=Date.now();try{sessionStorage.setItem("gdr_crimevid","1")}catch(_){}setTimeout(open,250)},true);
+ shown=true;window.__gdrCrimeVid=Date.now();try{sessionStorage.setItem("gdr_crimevid","1")}catch(_){}setTimeout(open,350)},true);
 })();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
