@@ -7,7 +7,7 @@
       "address": "208 10th Ave",
       "hood": "Yesler Terrace",
       "status": "open",
-      "checked": 1,
+      "checked": 2,
       "story_slug": null
     },
     {
@@ -17,7 +17,7 @@
       "address": "2401 Utah Ave S",
       "hood": "SODO",
       "status": "open",
-      "checked": 1,
+      "checked": 2,
       "story_slug": null
     },
     {
@@ -27,7 +27,7 @@
       "address": "East Marginal Way S / Diagonal Ave S",
       "hood": "SODO",
       "status": "open",
-      "checked": 1,
+      "checked": 2,
       "story_slug": null
     }
   ]
