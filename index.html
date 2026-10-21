@@ -1834,12 +1834,12 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
     return f=>{stopped=true;if(!src)return;const t=ctx.currentTime,d=f||1.5;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(g.gain.value,t);g.gain.linearRampToValueAtTime(0,t+d);src.stop(t+d+.05)}}
   const jit=()=>1;
   return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_snd3",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
-(function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=true,humDone=false;try{want=localStorage.getItem('ss_amb3')!=='off'}catch(e){}
+(function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=false,humDone=false;try{want=localStorage.getItem('ss_amb3')==='on'}catch(e){}
   const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false');if(ab){const ao=!!hum||(want&&SFX.on&&!humDone);ab.textContent=ao?'🎧 Ambience on':'🎧 Ambience off';ab.classList.toggle('off',!ao);ab.setAttribute('aria-pressed',ao?'true':'false')}};
   let humT=null;const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('swamp',.6,1);paint();clearTimeout(humT);humT=setTimeout(()=>{humDone=true;humOff(2)},6000)},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
   b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);if(SFX.on){SFX.warm();SFX.play('select');if(want)humOn()}else humOff(.4);paint()});
   if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!(hum||(want&&SFX.on&&!humDone));try{localStorage.setItem('ss_amb3',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
-  ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm();setTimeout(()=>{const go=()=>{if(want&&!humDone)humOn()};if(window.GDW&&window.GDW.playing)window.GDW.after=go;else go()},150)},{once:true,capture:true,passive:true}));
+  ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm()},{once:true,capture:true,passive:true}));
   document.addEventListener('visibilitychange',()=>{if(document.hidden)humOff(.6)});
   document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn,#ambBtn'))return;
     if(t.closest('[data-go],.tabs button')){SFX.play('tab');return}
@@ -2427,62 +2427,7 @@ const play=k=>{if(!box)mk();try{if(window.GDWplay)window.GDWplay.stop()}catch(_)
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;const b=t.closest("[data-go]");if(!b)return;const k=b.getAttribute("data-go");
  if(box&&box.classList.contains("on"))stop();
  if(!CLIPS[k]||seen[k]||!ON())return;seen[k]=1;try{sessionStorage.setItem("gd_irtabs",JSON.stringify(seen))}catch(_){}window.__irTabNow=Date.now();play(k)},true);
-document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
- try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}clearInterval(au._f);clearTimeout(au._t);au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{});au._t=setTimeout(()=>{au._f=setInterval(()=>{const v=au.volume-.05;if(v<=0){au.volume=0;au.pause();clearInterval(au._f)}else au.volume=v},80)},6000)}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="storiessnd">(()=>{/* "quest complete" sound when someone opens the Seattle Stories tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="stories"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/stories.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="inboxsnd">(()=>{/* bass rumble when someone opens the Inbox (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#inboxBtn,[data-go="inbox"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
- try{if(!au){au=new Audio("/snd/inbox.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sistersnd">(()=>{/* resonant boom when someone clicks Sister Publications (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbSis'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/sister.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sharesnd">(()=>{/* shotgun foley when someone clicks Share (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbShare,#shr'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<700)return;last=now;
- try{if(!au){au=new Audio("/snd/share.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="bandssnd">(()=>{/* crowd cheer when someone opens the Seattle Bands tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="bands"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/bands-crowd.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="venuessnd">(()=>{/* big impact hit when someone opens the Seattle Venues tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="venues"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/venues-impact.mp3");au.preload="auto"}au.volume=.9;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="scenesnd">(()=>{/* sub impact when someone opens the Seattle Scene tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="scene"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/scene.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="musicsnd">(()=>{/* falling cello glissando when someone opens the Seattle Music tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="cal"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
- try{if(!au){au=new Audio("/snd/music-cello.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="techsnd">(()=>{/* computer beep when someone opens the Tech & AI tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="tech"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<800)return;last=now;
- try{if(!au){au=new Audio("/snd/tech.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="newssnd">(()=>{/* thunder boom when someone opens the Seattle News tab (respects the Sound on/off button) */
-let au=null,last=0;
-document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="bars"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/news.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="contactgd">(()=>{/* "Contact Guitar Doug" form: messages go to the editor's Inbox (no email address on the page) */
+document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="contactgd">(()=>{/* "Contact Guitar Doug" form: messages go to the editor's Inbox (no email address on the page) */
 const esc=t=>String(t||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
 const go=()=>{if(document.getElementById("ctBtn"))return;const f=document.querySelector(".fsnd");
  const b=document.createElement("button");b.type="button";b.id="ctBtn";b.textContent="✉ Contact Guitar Doug";
