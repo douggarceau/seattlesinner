@@ -1797,7 +1797,7 @@ render();
 (()=>{const c=['#e3170a','#ffb300','#1e90ff','#39ff14','#ff7a1a','#2fd3c8'];let h='';for(let i=0;i<34;i++){h+=`<i style="--k:${c[i%c.length]};--x:${Math.random()*100}%;--d:${9+Math.random()*14}s;--dl:${-Math.random()*20}s"></i>`}document.getElementById('sparks').innerHTML=h})();
 
 /* ===== SOUND: standard UI sounds (synthesized, user-initiated only) ===== */
-const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.getItem("ss_sound")!=="off"}catch(e){}
+const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.getItem("ss_snd3")!=="off"}catch(e){}
   function init(){if(ctx)return ctx;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return null;ctx=new AC();out=ctx.createGain();out.gain.value=.35;out.connect(ctx.destination);return ctx}
   function tone(f,at,d,v,type){const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+at;o.type=type||"sine";o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.004);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(out);o.start(t);o.stop(t+d+.02)}
   const S={tap:()=>tone(1600,0,.03,.22),nav:()=>tone(1100,0,.05,.22),toggle:()=>tone(720,0,.06,.22,"triangle"),open:()=>{tone(620,0,.05,.18);tone(930,.04,.06,.18)},ok:()=>{tone(880,0,.09,.2);tone(1320,.08,.14,.18)},err:()=>{tone(330,0,.1,.22,"triangle");tone(247,.09,.16,.22,"triangle")}};
@@ -1809,14 +1809,14 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
     get(k).then(b=>{if(!b||stopped)return;src=ctx.createBufferSource();g=ctx.createGain();src.buffer=b;src.loop=true;const t=ctx.currentTime;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol==null?.5:vol,t+(fade||2.5));src.connect(g);g.connect(out);src.start()});
     return f=>{stopped=true;if(!src)return;const t=ctx.currentTime,d=f||1.5;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(g.gain.value,t);g.gain.linearRampToValueAtTime(0,t+d);src.stop(t+d+.05)}}
   const jit=()=>1;
-  return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_sound",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
-(function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=true;try{want=localStorage.getItem('ss_amb2')!=='off'}catch(e){}
-  const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false');if(ab){const ao=!!hum||(want&&SFX.on);ab.textContent=ao?'🎧 Ambience on':'🎧 Ambience off';ab.classList.toggle('off',!ao);ab.setAttribute('aria-pressed',ao?'true':'false')}};
-  let humT=null;const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('drone',.45,2.5);paint()},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
+  return {get on(){return on},set(v){on=v;try{localStorage.setItem("ss_snd3",on?"on":"off")}catch(e){}},warm(){init()},play,loop,jit}})();
+(function(){const b=document.getElementById('sndBtn'),ab=document.getElementById('ambBtn');let hum=null,want=true,humDone=false;try{want=localStorage.getItem('ss_amb3')!=='off'}catch(e){}
+  const paint=()=>{b.textContent=SFX.on?'🔊 Sound on':'🔇 Sound off';b.classList.toggle('off',!SFX.on);b.setAttribute('aria-pressed',SFX.on?'true':'false');if(ab){const ao=!!hum||(want&&SFX.on&&!humDone);ab.textContent=ao?'🎧 Ambience on':'🎧 Ambience off';ab.classList.toggle('off',!ao);ab.setAttribute('aria-pressed',ao?'true':'false')}};
+  let humT=null;const humOn=()=>{if(hum||!SFX.on)return;hum=SFX.loop('drone',.45,1.5);paint();clearTimeout(humT);humT=setTimeout(()=>{humDone=true;humOff(2.5)},7000)},humOff=f=>{if(hum){hum(f||1.5);hum=null}paint()};paint();
   b.addEventListener('click',e=>{e.stopPropagation();SFX.set(!SFX.on);if(SFX.on){SFX.warm();SFX.play('select');if(want)humOn()}else humOff(.4);paint()});
-  if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!(hum||(want&&SFX.on));try{localStorage.setItem('ss_amb2',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
+  if(ab)ab.addEventListener('click',e=>{e.stopPropagation();want=!(hum||(want&&SFX.on&&!humDone));try{localStorage.setItem('ss_amb3',want?'on':'off')}catch(_){}if(want){if(!SFX.on)SFX.set(true);SFX.warm();humOn()}else humOff();paint()});
   ['pointerdown','keydown','touchstart'].forEach(ev=>document.addEventListener(ev,()=>{SFX.warm();setTimeout(()=>{if(want)humOn()},50)},{once:true,capture:true,passive:true}));
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)humOff(.6);else if(want&&SFX.on&&navigator.userActivation&&navigator.userActivation.hasBeenActive)humOn()});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)humOff(.6)});
   document.addEventListener('click',e=>{const t=e.target;if(!t.closest||t.closest('#sndBtn,#ambBtn'))return;
     if(t.closest('[data-go],.tabs button')){SFX.play('tab');return}
     if(t.closest('[data-vote],.pad,[data-genre],[data-topic],.sortc button')){SFX.play('select');return}
@@ -2391,7 +2391,7 @@ const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.add
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
- try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+ try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}clearInterval(au._f);clearTimeout(au._t);au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{});au._t=setTimeout(()=>{au._f=setInterval(()=>{const v=au.volume-.05;if(v<=0){au.volume=0;au.pause();clearInterval(au._f)}else au.volume=v},80)},6000)}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
 const go=()=>{const d=document.getElementById("drumSpot");if(!d||d.querySelector(".pm-a"))return;
 const a=d.querySelector(":scope>a");if(a)a.classList.add("dr-a");
