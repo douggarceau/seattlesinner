@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seattle Doppler Radar &amp; Forecast | The Guitar Doug Report</title>
+<meta name="description" content="Live Doppler radar for Seattle and the Puget Sound, with the National Weather Service forecast for today and tomorrow.">
+<link rel="icon" type="image/png" href="/app/favicon.png">
+<meta name="theme-color" content="#050607">
+<style>
+:root{--bg:#050607;--panel:#0b0d10;--line:#1e2530;--ink:#e9edf1;--dim:#9aa4ad;--green:#4fbf4c;--glow:#7dff7a;--gold:#d9a400;--mono:ui-monospace,Menlo,Consolas,monospace;--body:system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--body)}
+a{color:var(--glow)}
+.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 40px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.back{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #2a3340;border-radius:4px;color:var(--ink);text-decoration:none;font:700 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.back:hover{border-color:var(--glow);color:var(--glow)}
+.brand{font:700 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0 0 4px;font:700 clamp(26px,4vw,40px)/1.1 Georgia,serif;color:#fff}
+.sub{margin:0 0 16px;color:var(--dim)}
+.live{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--glow)}
+.live i{width:8px;height:8px;border-radius:50%;background:#ff3b30;box-shadow:0 0 8px #ff3b30;animation:b 1.2s ease-in-out infinite}@keyframes b{50%{opacity:.3}}
+.radar{position:relative;border:1px solid #2f7a2f;border-radius:10px;overflow:hidden;background:#031203;box-shadow:0 0 24px rgba(57,255,20,.18)}
+.radar iframe{display:block;width:100%;height:min(68vh,620px);border:0;background:#031203}
+.rnote{margin:8px 2px 22px;font:500 12px/1.5 var(--body);color:#7f8992}
+h2{margin:0 0 12px;font:700 11px/1.2 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.fc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.day{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--green);border-radius:8px;padding:14px;min-height:170px}
+.day.night{border-top-color:#3f6db3;background:#080a10}
+.day h3{margin:0 0 6px;font:700 15px/1.2 Georgia,serif;color:#fff}
+.day .t{font:800 30px/1 var(--mono);color:var(--glow);text-shadow:0 0 10px rgba(125,255,122,.4)}
+.day.night .t{color:#9cc4ff;text-shadow:0 0 10px rgba(120,170,255,.35)}
+.day .s{margin:6px 0 8px;font:700 13px/1.3 var(--body);color:#dfe5ea}
+.day .w{font:600 11px/1.3 var(--mono);color:var(--dim);margin-bottom:6px}
+.day p{margin:0;font:400 13px/1.5 var(--body);color:#aab3bc}
+.day img{float:right;width:56px;height:56px;border-radius:6px;margin:0 0 6px 8px}
+.alert{display:none;margin:0 0 16px;padding:12px 14px;border:1px solid #ff6b5a;border-left:4px solid #ff3b30;border-radius:6px;background:#1a0705;color:#ffd6d1}
+.alert b{color:#fff}
+.src{margin-top:16px;font:500 12px/1.5 var(--body);color:#7f8992}
+.empty{color:var(--dim);padding:20px;border:1px dashed var(--line);border-radius:8px}
+@media (max-width:900px){.fc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.fc{grid-template-columns:1fr}.radar iframe{height:60vh}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="/">&larr; Back to the Report</a><span class="brand">The Guitar Doug Report · Weather</span></div>
+  <h1 id="ttl">Seattle Doppler Radar</h1>
+  <p class="sub"><span class="live"><i></i>Live</span> &nbsp;Rain, snow and storms moving over <span id="area">Seattle and the Puget Sound</span>. Drag and zoom the map. Press play for the radar loop.</p>
+  <div class="radar"><iframe id="rmap" title="Live Doppler radar map" loading="eager" allowfullscreen></iframe></div>
+  <p class="rnote">Radar map by <a href="https://www.windy.com/" target="_blank" rel="noopener">Windy.com</a>. Forecast from the National Weather Service.</p>
+  <div class="alert" id="alerts"></div>
+  <h2 id="fch">Forecast · today and tomorrow</h2>
+  <div class="fc" id="fc"><div class="empty">Loading the forecast…</div></div>
+  <p class="src" id="src"></p>
+</div>
+<script>
+(()=>{const bos=/bostonrambler/.test(location.hostname)||/[?&]city=boston/i.test(location.search);
+const C=bos?{name:"Boston",area:"Boston and Massachusetts Bay",lat:42.3601,lon:-71.0589}:{name:"Seattle",area:"Seattle and the Puget Sound",lat:47.6062,lon:-122.3321};
+document.getElementById("ttl").textContent=C.name+" Doppler Radar";document.getElementById("area").textContent=C.area;document.title=C.name+" Doppler Radar & Forecast | The Guitar Doug Report";
+document.getElementById("rmap").src="https://embed.windy.com/embed2.html?lat="+C.lat+"&lon="+C.lon+"&detailLat="+C.lat+"&detailLon="+C.lon+"&zoom=8&level=surface&overlay=radar&product=radar&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1";
+const esc=t=>String(t==null?"":t).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
+const box=document.getElementById("fc"),src=document.getElementById("src");
+const J=async(u,h)=>{const c=new AbortController(),k=setTimeout(()=>c.abort(),10000);try{const r=await fetch(u,{signal:c.signal,headers:h||{}});if(!r.ok)throw new Error(r.status);return await r.json()}finally{clearTimeout(k)}};
+const nws=async()=>{const H={Accept:"application/geo+json"};const pt=await J("https://api.weather.gov/points/"+C.lat.toFixed(4)+","+C.lon.toFixed(4),H);
+ const f=await J(pt.properties.forecast,H);const P=f.properties.periods.slice(0,4);if(!P.length)throw 0;
+ box.innerHTML=P.map(p=>'<div class="day'+(p.isDaytime?'':' night')+'">'+(p.icon?'<img src="'+esc(p.icon)+'" alt="">':'')+'<h3>'+esc(p.name)+'</h3><div class="t">'+esc(p.temperature)+'°'+esc(p.temperatureUnit||"F")+'</div><div class="s">'+esc(p.shortForecast)+'</div><div class="w">Wind '+esc(p.windSpeed)+' '+esc(p.windDirection)+(p.probabilityOfPrecipitation&&p.probabilityOfPrecipitation.value!=null?' · Rain '+esc(p.probabilityOfPrecipitation.value)+'%':'')+'</div><p>'+esc(p.detailedForecast)+'</p></div>').join("");
+ const upd=f.properties.updateTime||f.properties.generatedAt;src.innerHTML='Forecast: <a href="https://forecast.weather.gov/MapClick.php?lat='+C.lat+'&lon='+C.lon+'" target="_blank" rel="noopener">National Weather Service</a>'+(upd?' · updated '+esc(new Date(upd).toLocaleString("en-US",{timeZone:bos?"America/New_York":"America/Los_Angeles",weekday:"short",hour:"numeric",minute:"2-digit"})):'');
+ try{const a=await J("https://api.weather.gov/alerts/active?point="+C.lat.toFixed(4)+","+C.lon.toFixed(4),H);const F=(a.features||[]).slice(0,3);if(F.length){const el=document.getElementById("alerts");el.style.display="block";el.innerHTML=F.map(x=>'<div><b>'+esc(x.properties.event)+'</b> · '+esc(x.properties.headline||"")+'</div>').join("")}}catch(_){}};
+const WX=c=>c==0?"Clear":c<=2?"Partly cloudy":c==3?"Cloudy":c<=48?"Fog":c<=57?"Drizzle":c<=67?"Rain":c<=77?"Snow":c<=82?"Showers":c<=86?"Snow showers":"Thunderstorms";
+const om=async()=>{const d=await J("https://api.open-meteo.com/v1/forecast?latitude="+C.lat+"&longitude="+C.lon+"&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&forecast_days=2");
+ const D=d.daily;box.innerHTML=[0,1].map(i=>'<div class="day"><h3>'+(i?"Tomorrow":"Today")+'</h3><div class="t">'+Math.round(D.temperature_2m_max[i])+'° / '+Math.round(D.temperature_2m_min[i])+'°</div><div class="s">'+WX(D.weather_code[i])+'</div><div class="w">Wind up to '+Math.round(D.wind_speed_10m_max[i])+' mph · Rain '+(D.precipitation_probability_max[i]??"--")+'%</div></div>').join("");
+ src.innerHTML='Forecast: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>'};
+nws().catch(()=>om()).catch(()=>{box.innerHTML='<div class="empty">The forecast could not load right now. Try again in a minute.</div>'});
+})();
+</script>
+</body>
+</html>
