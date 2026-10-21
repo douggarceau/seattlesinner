@@ -2382,7 +2382,7 @@ const SKIP=/^(scanPo|scanFi|defSpot|drumSpot|regSpot|sndSpot)$/;
 const boxes=()=>[...document.querySelectorAll(".lsrow .lspot")].filter(e=>e.offsetParent!==null&&!SKIP.test(e.id)).slice(0,26);
 const busy=b=>b.matches(":hover")||b.querySelector(".boo-a")||K.some(k=>b.querySelector(":scope>."+k+"-a"));
 let A=[];
-const show=(ad)=>{const F=boxes().filter(b=>!busy(b));if(!F.length)return;const b=F[Math.random()*F.length|0];b.appendChild(ad.el);b.classList.add(ad.k);ad.box=b};
+const isS=k=>/^s\d$/.test(k);const show=(ad)=>{if(isS(ad.k)&&A.some(x=>x!==ad&&x.box&&isS(x.k)))return;const F=boxes().filter(b=>!busy(b));if(!F.length)return;const b=F[Math.random()*F.length|0];b.appendChild(ad.el);b.classList.add(ad.k);ad.box=b};
 const hide=(ad)=>{if(!ad.box)return;if(ad.box.matches(":hover"))return false;ad.box.classList.remove(ad.k);ad.el.remove();ad.box=null};
 const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."+k+"-a");if(!el)return;const b=el.parentNode;b.classList.remove(k);delete b.dataset.taken;el.remove();A.push({k,el,box:null})});
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
