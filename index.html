@@ -2387,7 +2387,12 @@ const hide=(ad)=>{if(!ad.box)return;if(ad.box.matches(":hover"))return false;ad.
 const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."+k+"-a");if(!el)return;const b=el.parentNode;b.classList.remove(k);delete b.dataset.taken;el.remove();A.push({k,el,box:null})});
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
-const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
+const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
+let au=null,last=0;
+document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
+ try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
 const go=()=>{const d=document.getElementById("drumSpot");if(!d||d.querySelector(".pm-a"))return;
 const a=d.querySelector(":scope>a");if(a)a.classList.add("dr-a");
 const p=document.createElement("a");p.className="pm-a";p.href="https://polymarket.us/";p.target="_blank";p.rel="noopener";p.setAttribute("aria-label","Polymarket prediction markets");
