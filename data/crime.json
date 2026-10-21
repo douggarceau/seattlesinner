@@ -1,6 +1,31 @@
 {
-"asof": "2026-10-20T14:26:03-07:00",
+"asof": "2026-10-21T04:20:14-07:00",
 "items": [
+{
+"kind": "homicide",
+"headline": "Suspect in Broad Street gas station killing arrested in Chicago",
+"blurb": "U.S. Marshals arrested Michael O'Neal Fleming, 33, in Chicago on Oct. 20, police said. He is charged with first-degree murder in the Oct. 13 shooting of a clerk at a 76 station in the 300 block of Broad Street.",
+"hood": "Belltown",
+"spd": [
+"BELLTOWN",
+"QUEEN ANNE"
+],
+"date": "2026-10-20",
+"url": "https://spdblotter.seattle.gov/2026/10/20/update-homicide-suspect-arrested-in-chicago-illinois/",
+"outlet": "SPD Blotter"
+},
+{
+"kind": "robbery",
+"headline": "Gunman sought after shoplifting turns to robbery at Jefferson Square Safeway",
+"blurb": "Police are searching for a man who, according to West Seattle Blog, showed a handgun to store security to get away after shoplifting at the Jefferson Square Safeway around 3 p.m. No arrest has been reported.",
+"hood": "Alaska Junction",
+"spd": [
+"ALASKA JUNCTION"
+],
+"date": "2026-10-20",
+"url": "https://westseattleblog.com/2026/10/west-seattle-crime-watch-police-search-for-supermarket-robber/",
+"outlet": "West Seattle Blog"
+},
 {
 "kind": "police",
 "headline": "Police seek driver who posed as Uber after Pioneer Square bar pickup",
@@ -340,19 +365,6 @@
 "date": "2026-10-14",
 "url": "https://hoodline.com/2026/10/driver-trapped-after-crash-on-u-district-s-the-ave/",
 "outlet": "Hoodline"
-},
-{
-"kind": "homicide",
-"headline": "Gas station clerk shot dead near Belltown",
-"blurb": "Officers responding to a report of an unresponsive man found a store clerk with gunshot wounds at a gas station in the 300 block of Broad Street. Homicide detectives are investigating.",
-"hood": "Belltown",
-"spd": [
-"BELLTOWN",
-"QUEEN ANNE"
-],
-"date": "2026-10-13",
-"url": "https://spdblotter.seattle.gov/2026/10/13/police-investigate-fatal-shooting-near-belltown/",
-"outlet": "SPD Blotter"
 },
 {
 "kind": "burglary",
