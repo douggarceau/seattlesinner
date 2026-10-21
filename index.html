@@ -1107,11 +1107,9 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
     <button class="nb" data-go="stories">Seattle Stories</button>
     <button class="nb" data-go="bars">Seattle News</button>
     <button class="nb" data-go="crime"><img class="cwmark xs" src="img/prowler-mark.jpg" alt="">Seattle Crime Watch</button>
-    <button class="nb pmnb" data-go="tech">Tech &amp; AI</button>
     <button class="nb" data-go="cal">Seattle Music</button>
     <button class="nb" data-go="scene">Seattle Scene</button>
     <button class="nb" data-go="venues">Seattle Venues</button>
-    <button class="nb" data-go="bands">Seattle Bands</button>
     
     
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
@@ -1167,7 +1165,7 @@ h2.room{text-shadow:0 2px 0 #000,0 0 30px rgba(0,0,0,.7)!important;filter:satura
   <div class="foot"><span>The Guitar Doug Report</span><span>Sources linked on every story</span></div>
   <div class="fsnd" style="text-align:center;margin:14px 0 0"><button type="button" id="sndBtn" aria-pressed="true" style="all:unset;cursor:pointer;margin:0 6px;padding:5px 10px;border:1px solid #3a4048;border-radius:4px;font:700 11px/1 var(--mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;color:#9aa4ad">🔊 Sound on</button><button type="button" id="ambBtn" aria-pressed="false" title="Swamp night ambience." style="all:unset;cursor:pointer;margin:0 6px;padding:5px 10px;border:1px solid #3a4048;border-radius:4px;font:700 11px/1 var(--mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;color:#9aa4ad">🎧 Ambience off</button></div>
   <p class="pv" style="margin:14px 0 0;text-align:center;font:600 12px/1.4 var(--mono,ui-monospace,monospace);letter-spacing:.08em;color:#c9a227">Page visits: <b id="visits">…</b></p>
-  <p class="legal" style="margin:10px 0 0;text-align:center;font:400 10.5px/1.5 var(--mono,ui-monospace,monospace);letter-spacing:.04em;color:#7d858d">© 2026 Guitar Doug. All stories, content, designs and software on this site, including Newspace and the Tech &amp; AI Power Map, are the sole property of Guitar Doug. All rights reserved.</p>
+  <p class="legal" style="margin:10px 0 0;text-align:center;font:400 10.5px/1.5 var(--mono,ui-monospace,monospace);letter-spacing:.04em;color:#7d858d">© 2026 Guitar Doug. All stories, content, designs and software on this site, including Newspace, are the sole property of Guitar Doug. All rights reserved.</p>
   <div class="ticker" style="margin-top:18px" aria-label="The wire: running news"><span class="tlab">● THE WIRE</span><div class="run" id="tick"></div></div>
 </div>
 
@@ -1294,7 +1292,7 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
       <section class="box adbox" style="--c:#ff6a00"><button class="adimg" data-ad="" aria-label="Advertise in this spot. Ask about advertising" style="display:block;width:100%;padding:0;border:0;background:none;cursor:pointer"><img src="img/advertise-here.jpg" alt="Advertise in this spot. Ask about advertising." style="display:block;width:100%;height:auto"></button><button class="adclick" data-ad="" type="button">Click to advertise here →</button></section>
       <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><img class="cwmark sm" src="img/prowler-mark.jpg" alt=""><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
       <section class="box adbox adsm" style="--c:#c8102e"><button class="adclick" data-ad="" type="button" style="margin:0;width:100%">Your ad here · from $99/mo →</button></section>
-      <section class="box" style="--c:#1e90ff"><div class="bh"><b>Band watch</b><span>200 Seattle bands</span></div>${BNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,2).map(bnRow).join('')}${upEv(BEV).slice(0,2).map(evRow).join('')}${!BNEWS.length&&!upEv(BEV).length?'<div class="empty">The band desk is on it.</div>':''}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bands">All 200 bands →</button></div></section>
+      
       <section class="box adbox adsm" style="--c:#c8102e"><button class="adclick" data-ad="" type="button" style="margin:0;width:100%">Your ad here · from $99/mo →</button></section>
       ${VNEWS.length?`<section class="box" style="--c:#ff3a2a"><div class="bh"><b>Venue desk</b><span>${VENUES.length} venues watched</span></div>${VNEWS.slice().sort((a,b)=>(b.published_at||'').localeCompare(a.published_at||'')).slice(0,3).map(vnRow).join('')}<div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="venues">All venues →</button></div></section>`:''}
     </div></div>`;
@@ -1795,6 +1793,7 @@ document.addEventListener('click',async e=>{
 },true);
 
 function render(){
+  if(STATE.view==='tech'||STATE.view==='bands')STATE.view='front';
   const v=STATE.view,__y=scrollY;
   {const cs=document.getElementById('coverSlot');if(cs)cs.innerHTML=v==='front'?vCover(CUR):''}
   {const sb=document.getElementById('seaBanner');if(sb){const L=STORIES.find(x=>x.slug==='ballard-light-rail-2042-forum')||STORIES.find(x=>!(typeof FEATURES!=='undefined'&&FEATURES.has(x.slug)));sb.innerHTML=v==='front'&&L?`<button type="button" class="spr sea-spr" data-story="${L.slug}"><span class="spr-tag">SEATTLE · TOP STORY</span><span><b>${esc(L.title)}</b><small>${esc(L.dek)}</small></span><span class="spr-go">Read it →</span></button>`:''}}
@@ -2012,7 +2011,7 @@ const SFX=(function(){let ctx=null,out=null,on=true,last=0;try{on=localStorage.g
 (()=>{let last=null;setInterval(()=>{const t=[...document.querySelectorAll('.vtile')];if(!t.length||document.hidden)return;if(last)last.classList.remove('lit');const n=t[Math.floor(Math.random()*t.length)];if(n.matches(':hover'))return;n.classList.add('lit');last=n;setTimeout(()=>n.classList.remove('lit'),1600)},900)})();
 </script>
 <script>
-(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1),sl=P.get('story');if(sl){STATE.prev='front';STATE.story=sl;STATE.view='read';render();return}if(g&&['tech','crime','stories','bars','cal','scene','ink','screen','venues','bands','front','advertise'].includes(g)){go(g)}})();
+(()=>{const P=new URLSearchParams(location.search),g=P.get('go')||location.hash.slice(1),sl=P.get('story');if(sl){STATE.prev='front';STATE.story=sl;STATE.view='read';render();return}if(g&&['crime','stories','bars','cal','scene','ink','screen','venues','front','advertise'].includes(g)){go(g)}})();
 (()=>{const q=new URLSearchParams(location.search).get('story');if(!q||typeof STORIES==='undefined'||!STORIES.some(s=>s.slug===q))return;STATE.story=q;STATE.prev='front';STATE.view='read';render();scrollTo(0,0)})();
 try{const s=history.state;if(s&&s.boot)history.replaceState(Object.assign({},s,{boot:0}),'')}catch(e){}
 </script>
@@ -2055,7 +2054,7 @@ let ST=[];try{const bySlug={};STORIES.forEach(x=>bySlug[x.slug]=x);
   const lines=(typeof ISSUES!=='undefined'&&ISSUES[0]&&ISSUES[0].lines)||[];
   ST=['clavicular-business-of-contempt','nancy-mace-gets-inked','satanic-cabal','the-mushroom-map','we-turned-our-lights-off'].map(k=>bySlug[k]).concat(lines.map(l=>bySlug[l[0]])).filter((x,i,arr)=>x&&arr.findIndex(y=>y&&y.slug===x.slug)===i);const seen=new Set(ST.map(x=>x.slug));STORIES.forEach(x=>{if(!seen.has(x.slug))ST.push(x)})}catch(e){ST=STORIES.slice()}
 ST=ST.filter(x=>x.slug!=='skin-deep-lazonga');
-let SC=[];try{SC=(typeof upScene!=='undefined'&&upScene.length?upScene:SCENE).slice(0,40)}catch(e){}
+let SC=[];try{SC=(typeof upScene!=='undefined'&&upScene.length?upScene:SCENE).slice(0,120)}catch(e){}
 const SCF=SC.map(e=>({tag:"THE SCENE · "+e.kind,bigText:e.title,name:e.venue+(e.hood?' · '+e.hood:''),when:(typeof shortDay==='function'?shortDay(e.date):e.date)+(e.end&&e.end!==e.date&&typeof shortDay==='function'?' – '+shortDay(e.end):'')+(e.price?' · '+e.price:''),sub:e.blurb,go:"Details",theme:"sc",href:e.url,ext:1,k:(typeof KIND!=='undefined'&&KIND[e.kind])||'#b45cff'}));
 let MU=[];try{const BIG=/climate pledge|lumen|t-mobile|paramount|moore|showbox|neptune|wamu|benaroya|mccaw|5th avenue|gorge|marymoore|tacoma dome|crocodile|neumos|jazz alley|chateau ste|white river|accesso|husky/i;const all=(typeof up!=='undefined'?up:[]);let src=all.filter(e=>BIG.test(e.venue||''));if(src.length<8)src=all;src=src.slice(0,120);const by={};src.forEach(e=>{(by[e.genre]=by[e.genre]||[]).push(e)});
  const gs=Object.keys(by).sort(()=>Math.random()-.5);gs.forEach(g=>by[g].sort(()=>Math.random()-.5));
@@ -2094,7 +2093,7 @@ const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
 function flipTo(a,s){if(!a)return;if(still){fill(a,s);return}const b=a.parentNode;b.classList.add('flip');setTimeout(()=>{fill(a,s);b.classList.remove('flip')},460)}
 let i=0,j=0;fill($('lsA'),{tag:'SEATTLE CRIME',bigText:'Crime headlines',name:'Seattle',sub:'Loading the latest…',go:'Crime Watch',theme:'cw',href:'#crime',view:'crime'});fill($('lsB'),NW[0]);fill($('lsC'),CWX[0]);j=Math.min(4,Math.max(0,WRF.length-1));fill($('lsD'),CWX[0]);let q=0;fill($('lsE'),SCF[0]);let a2=0;const BEAT=/corrupt|scandal|misconduct|fraud|brib|ethic|indict|lawsuit|\bsued\b|investigat|reprimand|complaint|probe|resign|fired|deficit|hiding|cover-?up|subpoena|audit|kickback|embezzl|police chief|lieutenant|officers? (fired|charged|disciplined)/i;
 const CORR=(typeof BARS!=='undefined'?BARS:[]).filter(x=>x&&x.url&&x.headline&&BEAT.test(x.headline)).slice(0,40).map(x=>({tag:'SEATTLE · CORRUPTION & SCANDAL',bigText:x.headline,name:(x.venue||x.hood||'Seattle'),when:(typeof shortDay==='function'&&x.date?shortDay(x.date):(x.date||''))+(x.outlet?' · '+x.outlet:''),sub:x.blurb||'',go:'Read it',theme:'cw',cwi:1,href:x.url,ext:1}));
-let CRX=[];fill($('lsH'),CORR[0]||AIF[0]);
+let CRX=[];fill($('lsH'),MUF[5%Math.max(1,MUF.length)]||SCF[0]);let h2=5;
 const spdIntro={tag:'SPD LIVE · Seattle police reports',big:'Live<em>from the SPD report stream</em>',name:'Updated every few minutes',sub:'Assaults, robberies and shootings as Seattle police log them, straight from the city\'s open data.',go:'Watch the stream',theme:'spd',href:'#crime',view:'crime'};
 let sp=0,SPF=[spdIntro];fill($('lsG'),spdIntro);
 const spdPull=()=>{try{const g=(typeof CW!=='undefined'&&CW.spd)||[];const V=g.filter(r=>/shooting|homicide|robbery|assault/.test(cwSpdKind(r))&&!/simple assault|intimidation/i.test(r.nibrs_offense_code_description||'')).slice(0,20);if(!V.length)return;
@@ -2104,17 +2103,17 @@ let u=0;fill($('lsF'),MUF[0]);
 let c=0;Promise.all([fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null),(window.CSP||Promise.resolve()).catch(()=>{})]).then(([d])=>{if(!d||!d.items)return;const SL=x=>{const st=typeof cwSt==='function'&&cwSt(x);return st?{story:st.slug,href:'#',ext:0}:{href:x.url,ext:1}};
  const it=d.items.slice(0,40).map(x=>({tag:'CRIME WATCH · '+(x.kind||'police'),bigText:x.headline,name:(x.hood||'Seattle'),when:(typeof shortDay==='function'?shortDay(x.date):x.date)+(x.outlet?' · '+x.outlet:''),sub:x.blurb,go:'Read it',theme:'cw',cwi:1,...SL(x)}));
  CWX=CWX.concat(it);CRX=d.items.filter(x=>typeof cwSt!=='function'||cwSt(x)).slice(0,40).map(x=>({tag:'SEATTLE CRIME · '+(x.kind||'police'),bigText:x.headline,name:(x.hood||'Seattle'),when:(typeof shortDay==='function'?shortDay(x.date):x.date)+(x.outlet?' · '+x.outlet:''),sub:x.blurb,go:'Read it',theme:'cw',cwi:1,...SL(x)}));if(CRX.length)fill($('lsA'),CRX[0])}).catch(()=>{});
-setInterval(()=>{i++;setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(CORR.length>1){a2=(a2+1)%CORR.length;flipTo($('lsH'),CORR[a2])}},2700);setTimeout(()=>{if(CRX.length>1){c=(c+1)%CRX.length;flipTo($('lsA'),CRX[c])}},900)},11200);
+setInterval(()=>{i++;setTimeout(()=>flipTo($('lsB'),NW[i%NW.length]),450);setTimeout(()=>{if(SCF.length>1){q=(q+1)%SCF.length;flipTo($('lsE'),SCF[q])}},1350);setTimeout(()=>{if(MUF.length>1){u=(u+1)%MUF.length;flipTo($('lsF'),MUF[u])}},1800);setTimeout(()=>{if(SPF.length>1){sp=(sp+1)%SPF.length;flipTo($('lsG'),SPF[sp])}},2250);setTimeout(()=>{if(MUF.length>1){h2=(h2+1)%MUF.length;flipTo($('lsH'),MUF[h2])}},2700);setTimeout(()=>{if(CRX.length>1){c=(c+1)%CRX.length;flipTo($('lsA'),CRX[c])}},900)},11200);
 /* Crime-styled tiles prefer the Report's own crime stories (CRX) over outside wire links. */
 const CRW=()=>CRX.length?CRX:WRF;
 setInterval(()=>{const L=CRW();if(L.length>1){j=(j+1)%L.length;flipTo($('lsD'),L[j])}},12000);
-const XT=[['lsI',()=>CRX.length?CRX:WRF,4],['lsJ',CRW,2],['lsK',CRW,12],['lsL',()=>CORR,1],['lsM',()=>CRX.length?CRX:WRF,12],['lsN',()=>MUF,3],['lsO',()=>SCF,2],['lsP',CRW,7]];
+const XT=[['lsI',()=>SCF,4],['lsJ',()=>MUF,8],['lsK',()=>SCF,10],['lsL',()=>MUF,12],['lsM',()=>SCF,16],['lsN',()=>MUF,3],['lsO',()=>SCF,2],['lsP',CRW,7]];
 const xk=XT.map(()=>0),xf=XT.map(()=>false);
 const xtFill=(n,flip)=>{const [id,g,o]=XT[n];const L=g()||[];if(!L.length)return;const s=L[(o+xk[n])%L.length];if(flip&&xf[n])flipTo($(id),s);else fill($(id),s);xf[n]=true};
 XT.forEach((_,n)=>xtFill(n,false));
 setInterval(()=>XT.forEach((_,n)=>setTimeout(()=>{xk[n]++;xtFill(n,true)},300+(n%10)*420)),6400);
 /* Fill the side margins with news boxes all the way down the page */
-const XP=[CRW,CRW,()=>CORR.length?CORR:WRF,()=>STF,CRW,CRW];
+const XP=[()=>SCF,()=>MUF,()=>SCF,()=>MUF,CRW,()=>STF];
 const lsMore=()=>{if(innerWidth<1280)return;const row=document.querySelector('.lsrow'),w=document.querySelector('.wrap'),s=document.querySelector('.lspot');if(!row||!w||!s)return;
  const step=s.offsetHeight+12,rows=Math.floor((w.offsetHeight-150-40)/step);
  for(let t=9;t<=rows;t++)['l','r'].forEach((side,si)=>{const id='lsX'+t+side;if(document.getElementById(id))return;
