@@ -2400,6 +2400,14 @@ const fit=()=>{const r=row();if(!r)return;if(innerWidth<1280){r.style.setPropert
  if(rg){r.classList.add('regbot');const R=[...r.querySelectorAll('.lspot.r')].filter(x=>x!==rg&&x.offsetParent);let m=0;R.forEach(x=>{m=Math.max(m,x.offsetTop+x.offsetHeight)});if(m)rg.style.setProperty('top',(m+24)+'px','important')}};
 let t;const q=()=>{clearTimeout(t);t=setTimeout(fit,60)};addEventListener('resize',q);addEventListener('load',q);
 new MutationObserver(q).observe(document.getElementById('view')||document.body,{childList:true});[300,1500,4000,8000].forEach(ms=>setTimeout(fit,ms));new MutationObserver(q).observe(document.querySelector('header.mast')||document.body,{childList:true,subtree:true});const lr=document.querySelector('.lsrow');if(lr)new MutationObserver(q).observe(lr,{childList:true})})();</script>
+<script>/* Front page order: cover + Seattle News, then the Top Story and Top Crime Story banners, then the Seattle Crime grid */
+(()=>{const mv=()=>{const box=document.querySelector('#coverSlot .box');if(!box)return;const cc=box.querySelector('.cvcrime');if(!cc)return;
+ const sea=document.querySelector('#seaBanner .sea-spr'),cr=document.querySelector('#view .crime-spr');
+ let w=box.querySelector('.topspr');if(!w){w=document.createElement('div');w.className='topspr';cc.parentNode.insertBefore(w,cc)}
+ [sea,cr].forEach(x=>{if(x&&x.parentNode!==w)w.appendChild(x)})};
+const st=document.createElement('style');st.textContent='.topspr{display:grid;gap:12px;margin:14px 15px}.topspr .spr{margin:0!important;width:100%;box-sizing:border-box}';document.head.appendChild(st);
+let t;const q=()=>{clearTimeout(t);t=setTimeout(mv,30)};['coverSlot','seaBanner','view'].forEach(id=>{const e=document.getElementById(id);if(e)new MutationObserver(q).observe(e,{childList:true,subtree:true})});
+[200,1200,3000].forEach(ms=>setTimeout(mv,ms))})();</script>
 </body>
 <script>(()=>{const U='https://seattlesinner.com/',T='The Guitar Doug Report: bars, clubs, local music and the stories nobody else will run';
 const css=document.createElement('style');css.textContent='#nbShrPop{position:fixed;z-index:95;min-width:200px;background:#070a0e;border:1px solid var(--gold,#d9a400);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.6)}#nbShrPop a{display:block;padding:9px 12px;border-radius:4px;color:#f3e6c8;text-decoration:none;font:700 13px/1.2 var(--body,system-ui)}#nbShrPop a:hover{background:#1b222b}#nbShrPop b{display:block;padding:6px 12px;font:700 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#9aa3ad}';document.head.appendChild(css);
