@@ -2413,7 +2413,7 @@ const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
 const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="irinatabs">(()=>{/* Irina's short intro for each section: the first time someone opens a tab in a visit (sound on), her clip plays in a corner box instead of that tab's sound effect */
-const CLIPS={bands:"/vid/irina-bands",venues:"/vid/irina-venues",scene:"/vid/irina-scene",cal:"/vid/irina-music",tech:"/vid/irina-tech",crime:"/vid/irina-crime",bars:"/vid/irina-news"};
+const CLIPS={bands:"/vid/irina-bands",venues:"/vid/irina-venues",scene:"/vid/irina-scene",cal:"/vid/irina-music",tech:"/vid/irina-tech",crime:"/vid/irina-crime",bars:"/vid/irina-news",stories:"/vid/irina-stories"};
 const seen={};try{Object.assign(seen,JSON.parse(sessionStorage.getItem("gd_irtabs")||"{}"))}catch(_){}
 const ON=()=>{try{return typeof SFX==="undefined"||SFX.on}catch(_){return true}};
 let box=null,vid=null,tmr=null;
