@@ -2493,7 +2493,7 @@ const AU={};const play=(k,force)=>{if(!force&&!ON())return;try{k=k||"full";if(au
  skip.hidden=false;try{sessionStorage.setItem("gd_welcome","1")}catch(_){}seen=true}catch(_){}};
 ["pointerdown","keydown","touchstart"].forEach(ev=>document.addEventListener(ev,e=>{if(seen)return;const t=e.target;if(t&&t.closest&&t.closest('#sndBtn,#ambBtn,#gdSkip,#gdBulb'))return;setTimeout(()=>play("short"),30)},{once:true,capture:true,passive:true}));
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;if(t.closest("#sndBtn")&&!ON())stop();if(t.closest('[data-go]:not([data-go="front"])')&&au&&!au.paused)stop()},true);
-window.GDWplay={play,stop,isOn:k=>!!(au&&au===AU[k]&&!au.paused)};document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="welcomebulb">(()=>{/* round green light-bulb button by the masthead: plays the full narrator welcome */
+window.GDWplay={play,stop,isOn:k=>!!(au&&au===AU[k]&&!au.paused),time:()=>au?au.currentTime:0};document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="welcomebulb">(()=>{/* round green light-bulb button by the masthead: plays the full narrator welcome */
 const go=()=>{const lg=document.querySelector("header.mast h1.logo");if(!lg||document.getElementById("gdBulb"))return;const mast=lg.closest("header.mast");
  const b=document.createElement("button");b.type="button";b.id="gdBulb";b.setAttribute("aria-label","Click to begin: play the welcome from Guitar Doug");b.innerHTML='<span class="bl-g"></span><span class="bl-t">Click to<br>begin</span>';
  mast.appendChild(b);
@@ -2504,7 +2504,14 @@ const go=()=>{const lg=document.querySelector("header.mast h1.logo");if(!lg||doc
  const paint=()=>{const on=window.GDWplay&&window.GDWplay.isOn("full");b.classList.toggle("on",!!on);b.querySelector(".bl-t").innerHTML=on?"Playing<br>tap to stop":"Click to<br>begin"};
  b.addEventListener("click",e=>{e.stopPropagation();if(!window.GDWplay)return;if(window.GDWplay.isOn("full"))window.GDWplay.stop();else window.GDWplay.play("full",true);paint()});
  setInterval(paint,800)};
-document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
+document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="welcomecues">(()=>{/* while the full welcome plays, light up each part of the site as the narrator mentions it (times match the narration's pauses) */
+const C=[[0,3.9,'#nav [data-go="front"],#gdBulb'],[4.1,5.4,'#nav [data-go="bars"]'],[5.4,7.0,'#nav [data-go="crime"]'],[7.1,8.4,'#nav [data-go="tech"]'],[8.5,10.0,'#nav [data-go="cal"]'],[10.1,11.5,'#nav [data-go="scene"]'],[11.6,13.5,'#nav [data-go="venues"]'],[13.5,15.5,'#nav [data-go="bands"]'],
+ [20.5,22.6,'#scanTL .po,#scanTL .fi'],[22.6,23.7,'#scanPo,#scanFi'],[23.7,24.7,'#scanTL .cm'],[24.7,26.0,'#wxL'],[26.0,30.3,'#nav [data-go="stories"]'],[30.4,35.6,'#nav [data-go="bars"],#nav [data-go="scene"],#nav [data-go="cal"]']];
+let lit=[];const clear=()=>{lit.forEach(e=>e.classList.remove("gd-lit"));lit=[]};
+const st=document.createElement("style");st.textContent=".gd-lit{position:relative;z-index:61;outline:2px solid #7dff4a!important;outline-offset:2px;box-shadow:0 0 0 3px rgba(125,255,74,.25),0 0 22px rgba(125,255,74,.9)!important;filter:brightness(1.25);transition:box-shadow .2s,filter .2s;animation:gdLit .7s ease-in-out infinite alternate}@keyframes gdLit{from{box-shadow:0 0 0 2px rgba(125,255,74,.2),0 0 12px rgba(125,255,74,.6)}to{box-shadow:0 0 0 4px rgba(125,255,74,.35),0 0 28px rgba(125,255,74,1)}}@media (prefers-reduced-motion:reduce){.gd-lit{animation:none}}";document.head.appendChild(st);
+let cur=-1;const tick=()=>{const P=window.GDWplay;let i=-1;if(P&&P.isOn("full")){const t=P.time();i=C.findIndex(c=>t>=c[0]&&t<c[1])}
+ if(i!==cur){clear();cur=i;if(i>=0)document.querySelectorAll(C[i][2]).forEach(e=>{e.classList.add("gd-lit");lit.push(e)})}requestAnimationFrame(tick)};
+requestAnimationFrame(tick)})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
 const go=()=>{const d=document.getElementById("drumSpot");if(!d||d.querySelector(".pm-a"))return;
 const a=d.querySelector(":scope>a");if(a)a.classList.add("dr-a");
 const p=document.createElement("a");p.className="pm-a";p.href="https://polymarket.us/";p.target="_blank";p.rel="noopener";p.setAttribute("aria-label","Polymarket prediction markets");
