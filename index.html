@@ -2392,7 +2392,12 @@ let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
  try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}clearInterval(au._f);clearTimeout(au._t);au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{});au._t=setTimeout(()=>{au._f=setInterval(()=>{const v=au.volume-.05;if(v<=0){au.volume=0;au.pause();clearInterval(au._f)}else au.volume=v},80)},6000)}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="storiessnd">(()=>{/* "quest complete" sound when someone opens the Seattle Stories tab (respects the Sound on/off button) */
+let au=null,last=0;
+document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="stories"]'))return;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(!au){au=new Audio("/snd/stories.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="pmalt">(()=>{/* the drum school box alternates with a plain link to Polymarket */
 const go=()=>{const d=document.getElementById("drumSpot");if(!d||d.querySelector(".pm-a"))return;
 const a=d.querySelector(":scope>a");if(a)a.classList.add("dr-a");
 const p=document.createElement("a");p.className="pm-a";p.href="https://polymarket.us/";p.target="_blank";p.rel="noopener";p.setAttribute("aria-label","Polymarket prediction markets");
