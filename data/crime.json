@@ -1,6 +1,18 @@
 {
-"asof": "2026-10-21T04:20:14-07:00",
+"asof": "2026-10-21T14:16:08-07:00",
 "items": [
+{
+"kind": "courts",
+"headline": "Teen charged in Bite of Seattle shooting released to home detention",
+"blurb": "A juvenile court judge on Oct. 21 ordered a 15-year-old charged with first-degree assault in the July 26 Bite of Seattle shooting released to electronic home monitoring over prosecutors' objections.",
+"hood": "Seattle Center",
+"spd": [
+"QUEEN ANNE"
+],
+"date": "2026-10-21",
+"url": "https://www.fox13seattle.com/news/bite-of-seattle-shooting-teen-released",
+"outlet": "FOX 13"
+},
 {
 "kind": "homicide",
 "headline": "Suspect in Broad Street gas station killing arrested in Chicago",
@@ -25,6 +37,30 @@
 "date": "2026-10-20",
 "url": "https://westseattleblog.com/2026/10/west-seattle-crime-watch-police-search-for-supermarket-robber/",
 "outlet": "West Seattle Blog"
+},
+{
+"kind": "crash",
+"headline": "Multi-vehicle crash and diesel spill block northbound I-5 near Michigan St",
+"blurb": "Three cars and a semi collided on northbound I-5 just north of the S Michigan St exit around 2:55 p.m. Oct. 20, injuring several people and spilling diesel, Seattle Fire said. Two right lanes stayed closed for hours.",
+"hood": "Georgetown",
+"spd": [
+"GEORGETOWN"
+],
+"date": "2026-10-20",
+"url": "https://www.fox13seattle.com/news/multi-vehicle-crash-nb-i-5-seattle",
+"outlet": "FOX 13"
+},
+{
+"kind": "police",
+"headline": "Crime persists at 12th and Jackson four months after city pledge",
+"blurb": "Business owners near 12th Ave S and S Jackson St in Little Saigon say drug dealing and disorder continue four months after the mayor announced a targeted crackdown, FOX 13 reported. The city has not released arrest data.",
+"hood": "Little Saigon",
+"spd": [
+"CHINATOWN/INTERNATIONAL DISTRICT"
+],
+"date": "2026-10-20",
+"url": "https://www.fox13seattle.com/news/crime-12th-ave-jackson-street",
+"outlet": "FOX 13"
 },
 {
 "kind": "police",
@@ -315,6 +351,18 @@
 "date": "2026-10-15",
 "url": "https://www.fox13seattle.com/news/seattle-traffic-crash-blocks-i5",
 "outlet": "FOX 13"
+},
+{
+"kind": "police",
+"headline": "Suspect tries to set patrol car on fire outside West Precinct, police say",
+"blurb": "A suspect poured an accelerant on a Seattle police patrol vehicle outside the West Precinct and tried to set it on fire on Oct. 15, according to SPD's significant incident report for that day.",
+"hood": "Downtown",
+"spd": [
+"DOWNTOWN COMMERCIAL"
+],
+"date": "2026-10-15",
+"url": "https://spdblotter.seattle.gov/2026/10/18/thursday-october-15-2026/",
+"outlet": "SPD Blotter"
 },
 {
 "kind": "burglary",
