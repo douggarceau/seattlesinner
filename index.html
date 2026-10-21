@@ -2436,7 +2436,7 @@ const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{
 (()=>{const st=document.createElement('style');st.textContent='#seaNewsBox{padding:14px;display:grid;gap:10px;align-content:start}#seaNewsBox .sea-g{grid-template-columns:repeat(2,minmax(0,1fr))}.cvside #wireBox{margin-top:16px;height:auto!important}';document.head.appendChild(st);
 const mv=()=>{const side=document.querySelector('#coverSlot .cvside'),w=document.getElementById('wireBox');if(!side||!w)return;
  const h=side.querySelector(':scope>.sea-h:not(.nat)'),g=side.querySelector(':scope>.sea-g');
- if(h&&g&&!document.getElementById('seaNewsBox')){const box=document.createElement('section');box.className='box';box.id='seaNewsBox';box.style.setProperty('--c','#ff6a00');w.parentNode.insertBefore(box,w);box.appendChild(h);box.appendChild(g)}
+ if(h&&g&&!document.getElementById('seaNewsBox')){const box=document.createElement('section');box.className='box';box.id='seaNewsBox';box.style.setProperty('--c','#ff6a00');const fv=document.querySelector('#view .fvw');if(fv)fv.after(box);else w.parentNode.insertBefore(box,w);box.appendChild(h);box.appendChild(g)}
  if(w.parentNode!==side){const nl=side.querySelector('.nat-l');if(nl)nl.after(w);else side.appendChild(w)}};
 let t;const q=()=>{clearTimeout(t);t=setTimeout(mv,20)};['coverSlot','view'].forEach(id=>{const e=document.getElementById(id);if(e)new MutationObserver(q).observe(e,{childList:true})});
 [100,800,2500].forEach(ms=>setTimeout(mv,ms))})();</script>
