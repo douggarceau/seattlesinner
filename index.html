@@ -2412,37 +2412,10 @@ const hide=(ad)=>{if(!ad.box)return;if(ad.box.matches(":hover"))return false;ad.
 const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."+k+"-a");if(!el)return;const b=el.parentNode;b.classList.remove(k);delete b.dataset.taken;el.remove();A.push({k,el,box:null})});
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
-const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="crimevid">(()=>{/* Guitar Doug video plays in a small box beside the masthead the first time someone opens Crime Watch in a visit (sound follows the Sound on/off button) */
-let shown=false;try{shown=sessionStorage.getItem("gdr_crimevid")==="1"}catch(_){}
-const sfxOn=()=>{try{return typeof SFX==="undefined"||SFX.on}catch(_){return true}};
-const close=()=>{const o=document.getElementById("crimeVidPop");if(!o)return;const v=o.querySelector("video");try{v.pause()}catch(_){}o.remove();removeEventListener("resize",place);document.removeEventListener("keydown",esc)};
-const esc=e=>{if(e.key==="Escape")close()};
-const place=()=>{const o=document.getElementById("crimeVidPop");if(!o)return;const L=document.querySelector("h1.logo img")||document.querySelector("h1.logo");const vw=document.documentElement.clientWidth;
- if(!L){o.style.width="150px";o.style.top=(scrollY+60)+"px";o.style.left=(vw-162)+"px";return}const r=L.getBoundingClientRect();let w,left,top;
- const B=document.getElementById("gdBulb");const br=B&&B.offsetParent?B.getBoundingClientRect():null;const ed=br?{l:br.left-35,r:br.right+35,t:br.top,b:br.bottom+30}:null;
- let x0=r.right+12;if(ed&&ed.l<x0+200&&ed.r>x0-12&&ed.b>r.top-10&&ed.t<r.bottom+340)x0=Math.max(x0,ed.r+12);
- if(vw-x0-16>=130){w=Math.min(200,vw-x0-16);left=x0;top=r.top+scrollY-10}
- else{const cx=br?br.left+br.width/2:vw/2;w=Math.max(96,Math.min(190,vw-8-(cx+60)));left=vw-8-w;top=r.bottom+scrollY+6}
- o.style.width=w+"px";o.style.left=Math.max(6,left)+"px";o.style.top=Math.max(4,top)+"px"};
-
-const open=()=>{if(document.getElementById("crimeVidPop"))return;
- const UA=navigator.userAgent||"";const WK=/iP(hone|ad|od)/.test(UA)||(/Safari/.test(UA)&&!/Chrome|Chromium|CriOS|FxiOS|Edg|Android/.test(UA))||!document.createElement("video").canPlayType('video/webm; codecs="vp9"');
- const FADE="-webkit-mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect;background:#080808";
- const VS=WK?FADE:"background:transparent";const SRC=WK?'<source src="/vid/doug-crime.mp4" type="video/mp4">':'<source src="/vid/doug-crime.webm" type="video/webm">';
- const o=document.createElement("div");o.id="crimeVidPop";o.setAttribute("role","dialog");o.setAttribute("aria-label","Crime Watch intro video");
- o.style.cssText="position:absolute;z-index:2147483000;background:transparent;transform:scale(.6);opacity:0;transform-origin:top center;transition:transform .35s ease,opacity .35s ease";
- o.innerHTML='<button type="button" aria-label="Close video" style="position:absolute;top:-9px;left:-9px;z-index:2;width:24px;height:24px;border-radius:50%;border:1.5px solid #fff;background:#111;color:#fff;font:700 13px/1 system-ui,sans-serif;cursor:pointer;padding:0">&times;</button><video playsinline autoplay preload="auto" '+(WK?'poster="/vid/doug-crime.jpg" ':'')+'style="display:block;width:100%;aspect-ratio:9/16;object-fit:cover;cursor:pointer;'+VS+'">'+SRC+'</video>';
- document.body.appendChild(o);place();addEventListener("resize",place);requestAnimationFrame(()=>{o.style.transform="scale(1)";o.style.opacity="1"});
- const v=o.querySelector("video");v.muted=!sfxOn();
- o.querySelector("button").addEventListener("click",close);v.addEventListener("click",()=>{if(v.muted){v.muted=false}else if(v.paused){v.play().catch(()=>{})}else v.pause()});
- v.addEventListener("ended",()=>setTimeout(close,800));document.addEventListener("keydown",esc);
- const p=v.play();if(p&&p.catch)p.catch(()=>{v.muted=true;v.play().catch(()=>{})});};
-document.addEventListener("click",e=>{const t=e.target;if(shown||!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
- shown=true;window.__gdrCrimeVid=Date.now();try{sessionStorage.setItem("gdr_crimevid","1")}catch(_){}setTimeout(open,350)},true);
-})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
+const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(window.__gdrCrimeVid&&now-window.__gdrCrimeVid<1500)return;if(now-last<4000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
  try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}clearInterval(au._f);clearTimeout(au._t);au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{});au._t=setTimeout(()=>{au._f=setInterval(()=>{const v=au.volume-.05;if(v<=0){au.volume=0;au.pause();clearInterval(au._f)}else au.volume=v},80)},6000)}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="storiessnd">(()=>{/* "quest complete" sound when someone opens the Seattle Stories tab (respects the Sound on/off button) */
 let au=null,last=0;
