@@ -2397,6 +2397,11 @@ let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="stories"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/stories.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="musicsnd">(()=>{/* data sound when someone opens the Seattle Music tab (respects the Sound on/off button) */
+let au=null,last=0;
+document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="cal"]'))return;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
+ try{if(!au){au=new Audio("/snd/music.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="techsnd">(()=>{/* computer beep when someone opens the Tech & AI tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="tech"]'))return;
