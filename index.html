@@ -1280,8 +1280,8 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
   return `${crimeBanner()}<div class="front">
     <div class="stack">
-      <section class="box" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
-        <div class="bwl">${BARS.slice(0,7).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
+      <section class="box" id="wireBox" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
+        <div class="bwl">${BARS.slice(0,40).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
       <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
       <div class="sgrid">${[lead,...rest].filter(Boolean).slice(1,7).map(storyCard).join('')}</div>
@@ -2418,6 +2418,17 @@ document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go)
 (()=>{const b=document.getElementById('nbWeek');if(!b)return;b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();
  const jump=()=>{const x=document.getElementById('showsWeek');if(!x)return false;x.scrollIntoView({behavior:'smooth',block:'start'});x.animate([{boxShadow:'0 0 0 3px #1e90ff,0 0 28px #1e90ff'},{boxShadow:'none'}],{duration:1800});return true};
  if(typeof STATE!=='undefined'&&STATE.view!=='front'&&typeof go==='function'){go('front');setTimeout(jump,250)}else jump()},true)})();</script>
+<script>/* Front page: Seattle Crime grid hidden; The Wire is sized to end exactly level with Shows this week */
+(()=>{const st=document.createElement('style');st.textContent='#coverSlot .cvcrime{display:none!important}#wireBox{display:flex;flex-direction:column;box-sizing:border-box}#wireBox .bwl{flex:1}';document.head.appendChild(st);
+const fit=()=>{const w=document.getElementById('wireBox'),sh=document.getElementById('showsWeek');if(!w||!sh)return;w.style.height='';
+ const R=[...w.querySelectorAll('.bwl>.bwr')];if(!R.length)return;
+ const sameRow=Math.abs(w.getBoundingClientRect().top-sh.getBoundingClientRect().top)<4;
+ if(!sameRow||innerWidth<900){R.forEach((r,i)=>r.hidden=i>=7);return}
+ const H=sh.offsetHeight;R.forEach(r=>r.hidden=true);
+ for(const r of R){r.hidden=false;if(w.offsetHeight>H){r.hidden=true;break}}
+ w.style.height=H+'px'};
+let t;const q=()=>{clearTimeout(t);t=setTimeout(fit,80)};addEventListener('resize',q);
+const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{childList:true});[300,1500,4000].forEach(ms=>setTimeout(fit,ms))})();</script>
 </body>
 <script>(()=>{const U='https://seattlesinner.com/',T='The Guitar Doug Report: bars, clubs, local music and the stories nobody else will run';
 const css=document.createElement('style');css.textContent='#nbShrPop{position:fixed;z-index:95;min-width:200px;background:#070a0e;border:1px solid var(--gold,#d9a400);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.6)}#nbShrPop a{display:block;padding:9px 12px;border-radius:4px;color:#f3e6c8;text-decoration:none;font:700 13px/1.2 var(--body,system-ui)}#nbShrPop a:hover{background:#1b222b}#nbShrPop b{display:block;padding:6px 12px;font:700 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#9aa3ad}';document.head.appendChild(css);
