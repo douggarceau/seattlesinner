@@ -2397,6 +2397,11 @@ let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="stories"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/stories.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sistersnd">(()=>{/* resonant boom when someone clicks Sister Publications (respects the Sound on/off button) */
+let au=null,last=0;
+document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbSis'))return;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(!au){au=new Audio("/snd/sister.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sharesnd">(()=>{/* shotgun foley when someone clicks Share (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbShare,#shr'))return;
