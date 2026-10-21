@@ -1348,6 +1348,7 @@ function vTech(){const T=TECH||{},B=T.bell||{};const ts=STORIES.filter(s=>['the-
   <div class="intro"><b>Breaking tech &amp; AI news</b><p>The latest from across the tech press, refreshed every morning and afternoon${T.asof?` · updated ${esc(T.asof)}`:''}.</p></div>
   <div class="vspots" data-kind="tech"></div>
   <section class="box" style="--c:#2fd3c8"><div class="bh"><b>Tech &amp; AI headlines</b><span>${N.length} stories · ${outlets} outlets</span></div><div class="bwl">${N.slice(0,36).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div></section>
+  ${(()=>{const R=[...(T.robots||[])].sort((a,b)=>String(b.d||'').localeCompare(String(a.d||'')));return R.length?`<section class="box" style="--c:#39ff14"><div class="bh"><b>Robotics headlines</b><span>${R.length} stories · ${new Set(R.map(x=>x.src).filter(Boolean)).size} outlets</span></div><div class="bwl">${R.slice(0,20).map(techRow).join('')}</div></section>`:''})()}
   ${ts.length?`<div class="lbl"><b>Report tech stories</b><span>${ts.length}</span></div><div class="tgrid">${ts.map(storyCard).join('')}</div>`:''}
   <a class="pmlink pmred" href="/tech/"><span class="pm-tag">EXCLUSIVE!</span><b>Tech &amp; AI <i>Power Map</i></b><span class="pm-go">Who controls AI and Big Tech →</span></a>
   <div class="lbl"><b>AI gone rogue</b><span>the record so far: when models misbehaved</span></div><div class="tgrid">${(T.rogue||[]).map(rogueCard).join('')}</div>
