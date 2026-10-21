@@ -2417,11 +2417,11 @@ let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="bands"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/bands.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
-document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="venuessnd">(()=>{/* shifter transition when someone opens the Seattle Venues tab (respects the Sound on/off button) */
+document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="venuessnd">(()=>{/* big impact hit when someone opens the Seattle Venues tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="venues"]'))return;
  try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
- try{if(!au){au=new Audio("/snd/venues.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
+ try{if(!au){au=new Audio("/snd/venues-impact.mp3");au.preload="auto"}au.volume=.9;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="scenesnd">(()=>{/* sub impact when someone opens the Seattle Scene tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="scene"]'))return;
