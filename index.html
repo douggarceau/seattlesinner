@@ -1652,8 +1652,7 @@ function vScene(){
   const L=upScene;
   const tm=s=>{const m=/(\d{1,2})(?::(\d\d))?\s*([AP]M)/i.exec(s||'');if(!m)return 9999;let h=+m[1]%12+(/p/i.test(m[3])?12:0);return h*60+(+m[2]||0)};
   const byStart=(a,b)=>a.date.localeCompare(b.date)||tm(a.time)-tm(b.time)||a.title.localeCompare(b.title);
-  const running=L.filter(e=>e.date<todayKey).sort((a,b)=>(a.end||a.date).localeCompare(b.end||b.date));
-  const ahead=L.filter(e=>e.date>=todayKey).sort(byStart);
+  const running=[];const lastDay=addDays(todayKey,90);const ahead=[];L.forEach(e=>{let d=e.date<todayKey?todayKey:e.date;const end=e.end&&e.end>e.date?e.end:e.date;if(end<todayKey)return;for(let n=0;d<=end&&d<=lastDay&&n<120;n++,d=addDays(d,1))ahead.push(d===e.date?e:{...e,date:d})});ahead.sort(byStart);
   const groups=[];ahead.forEach(e=>{let g=groups[groups.length-1];if(!g||g.k!==e.date){g={k:e.date,L:[]};groups.push(g)}g.L.push(e)});
   const head=k=>{const wd=pd(k).toLocaleDateString('en-US',{weekday:'long'}),md=shortDay(k);if(k===todayKey)return `Tonight <small>${wd}, ${md}</small>`;if(k===addDays(todayKey,1))return `Tomorrow <small>${wd}, ${md}</small>`;if(k<=addDays(todayKey,6))return `${wd} <small>${md}</small>`;return `${md} <small>${wd}</small>`};
   const row=(e,run)=>{const c=KIND[e.kind]||'#8b949c';const when=run?`<b>Thru</b><span>${shortDay(e.end)}</span>`:(e.time?`<b>${esc(e.time.replace(/\s*(AM|PM)/i,''))}</b><span>${esc((/(AM|PM)/i.exec(e.time)||[''])[0].toUpperCase())}</span>`:`<b>All</b><span>day</span>`);
