@@ -1278,10 +1278,11 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES.filter(x=>x.slug!=='ballard-light-rail-2042-forum');
   const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
+  const WF=BARS.filter(b=>!/^(news|safety|policy)$/.test(b.kind||'')&&!/shoot|stab|kill|murder|homicide|robber|assault|arrest|charged|police|suspect|crash|fire|burglar|theft|stolen|drug|overdose|fentanyl|lawsuit|sued|court|jail|prison|dead|death|body|crime|gun|weapon|layoff|evict/i.test((b.headline||'')+' '+(b.blurb||'')));
   return `${crimeBanner()}<div class="front">
     <div class="stack">
-      <section class="box" id="wireBox" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${BARS.length} items</span></div>
-        <div class="bwl">${BARS.slice(0,40).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
+      <section class="box" id="wireBox" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${WF.length} items</span></div>
+        <div class="bwl">${WF.slice(0,40).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
         <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="bars">Full wire →</button></div></section>
       <div class="lbl"><b>Also in this issue</b><span>${rest.length} stories</span></div>
       <div class="sgrid">${[lead,...rest].filter(Boolean).slice(1,7).map(storyCard).join('')}</div>
