@@ -1462,7 +1462,7 @@ document.addEventListener('click',e=>{const t=e.target;if(!t.closest)return;
   if(t.closest('[data-bnmore]')){STATE.bnmore=(STATE.bnmore||10)+10;render();return}});
 document.addEventListener('input',e=>{if(e.target.id==='bq'){STATE.bq=e.target.value;paintBands()}});
 function vVenues(){if(STATE.vsel)return vDetail(STATE.vsel);
-  const tab=STATE.vtab||'on';if(STATE.vreg==null||STATE.vreg==='all'&&!STATE.vregSet)STATE.vreg='Seattle';
+  const tab=STATE.vtab||'on';if(STATE.vreg==null)STATE.vreg='all';
   const cats=Object.keys(VSHORT).filter(c=>VENUES.some(v=>v.cat===c));const regs=[...new Set(VENUES.map(v=>v.region))];
   const days=[...Array(7)].map((_,n)=>addDays(todayKey,n));const day=days.includes(STATE.vday)?STATE.vday:todayKey;
   const KC={music:'#1e90ff',concert:'#1e90ff',comedy:'#f2c94c',drag:'#ff3a2a',film:'#20c997',theater:'#c9d1d9',karaoke:'#a6d13a',special:'#ff7a1a',other:'#8b949c'};
