@@ -2412,60 +2412,75 @@ const hide=(ad)=>{if(!ad.box)return;if(ad.box.matches(":hover"))return false;ad.
 const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."+k+"-a");if(!el)return;const b=el.parentNode;b.classList.remove(k);delete b.dataset.taken;el.remove();A.push({k,el,box:null})});
  if(!A.length)return;const cyc=ad=>{if(ad.box){if(hide(ad)===false){setTimeout(()=>cyc(ad),2000);return}setTimeout(()=>cyc(ad),3000+Math.random()*9000)}else{show(ad);setTimeout(()=>cyc(ad),ad.box?6000+Math.random()*6000:2500)}};
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
-const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
+const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="irinatabs">(()=>{/* Irina's short intro for each section: the first time someone opens a tab in a visit (sound on), her clip plays in a corner box instead of that tab's sound effect */
+const CLIPS={bands:"/vid/irina-bands",venues:"/vid/irina-venues",scene:"/vid/irina-scene",cal:"/vid/irina-music",tech:"/vid/irina-tech"};
+const seen={};try{Object.assign(seen,JSON.parse(sessionStorage.getItem("gd_irtabs")||"{}"))}catch(_){}
+const ON=()=>{try{return typeof SFX==="undefined"||SFX.on}catch(_){return true}};
+let box=null,vid=null,tmr=null;
+const css=document.createElement("style");css.textContent="#irTab{position:fixed;padding:0!important;margin:0!important;box-sizing:border-box;z-index:9996;border-radius:12px;overflow:hidden;border:1px solid #d9a400;box-shadow:0 0 18px #d9a40066,0 10px 30px rgba(0,0,0,.7);background:#000;display:none;opacity:0;transform:scale(.85);transform-origin:bottom right}#irTab.on{display:block;animation:irtIn .35s ease forwards}@keyframes irtIn{to{opacity:1;transform:scale(1)}}#irTab video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}#irTab button{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;border:1px solid #fff9;background:#000a;color:#fff;font:700 15px/1 system-ui,sans-serif;cursor:pointer;padding:0;z-index:2}";document.head.appendChild(css);
+const place=()=>{if(!box)return;const vw=document.documentElement.clientWidth;if(vw<700){box.style.width=Math.round(Math.min(230,vw*.46))+"px";box.style.right="10px";box.style.bottom="82px";box.style.top=""}else{box.style.width="240px";box.style.right="18px";box.style.bottom="70px";box.style.top=""}};
+const stop=()=>{clearInterval(tmr);if(vid)vid.pause();if(box)box.classList.remove("on")};
+const mk=()=>{box=document.createElement("div");box.id="irTab";box.setAttribute("role","region");box.setAttribute("aria-label","Section introduction video");box.innerHTML='<button type="button" aria-label="Close video">&times;</button><video playsinline preload="auto"></video>';vid=box.querySelector("video");vid.addEventListener("ended",()=>setTimeout(stop,400));
+ box.addEventListener("click",e=>{e.stopPropagation();if(e.target.closest("button"))stop()});document.body.appendChild(box);addEventListener("resize",place)};
+const play=k=>{if(!box)mk();try{if(window.GDWplay)window.GDWplay.stop()}catch(_){}vid.pause();vid.src=CLIPS[k]+".mp4";vid.poster=CLIPS[k]+".jpg";vid.muted=false;place();box.classList.remove("on");void box.offsetWidth;box.classList.add("on");
+ const p=vid.play();if(p&&p.catch)p.catch(()=>stop());clearInterval(tmr);tmr=setInterval(()=>{try{if(window.GDWplay&&window.GDWplay.isOn("full"))stop()}catch(_){}},500)};
+document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;const b=t.closest("[data-go]");if(!b)return;const k=b.getAttribute("data-go");
+ if(box&&box.classList.contains("on"))stop();
+ if(!CLIPS[k]||seen[k]||!ON())return;seen[k]=1;try{sessionStorage.setItem("gd_irtabs",JSON.stringify(seen))}catch(_){}window.__irTabNow=Date.now();play(k)},true);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="werewolf">(()=>{/* werewolf howl when someone opens Crime Watch (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="crime"],a[href="#crime"],[data-view="crime"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<4000)return;last=now;
  try{if(!au){au=new Audio("/snd/werewolf.mp3");au.preload="auto"}clearInterval(au._f);clearTimeout(au._t);au.volume=.75;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{});au._t=setTimeout(()=>{au._f=setInterval(()=>{const v=au.volume-.05;if(v<=0){au.volume=0;au.pause();clearInterval(au._f)}else au.volume=v},80)},6000)}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on){au.pause()}}catch(_){}}});})();</script><script id="storiessnd">(()=>{/* "quest complete" sound when someone opens the Seattle Stories tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="stories"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/stories.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="inboxsnd">(()=>{/* bass rumble when someone opens the Inbox (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#inboxBtn,[data-go="inbox"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
  try{if(!au){au=new Audio("/snd/inbox.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sistersnd">(()=>{/* resonant boom when someone clicks Sister Publications (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbSis'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/sister.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="sharesnd">(()=>{/* shotgun foley when someone clicks Share (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('#nbShare,#shr'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<700)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<700)return;last=now;
  try{if(!au){au=new Audio("/snd/share.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="bandssnd">(()=>{/* crowd cheer when someone opens the Seattle Bands tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="bands"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/bands-crowd.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="venuessnd">(()=>{/* big impact hit when someone opens the Seattle Venues tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="venues"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/venues-impact.mp3");au.preload="auto"}au.volume=.9;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="scenesnd">(()=>{/* sub impact when someone opens the Seattle Scene tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="scene"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/scene.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="musicsnd">(()=>{/* falling cello glissando when someone opens the Seattle Music tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="cal"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<2000)return;last=now;
  try{if(!au){au=new Audio("/snd/music-cello.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="techsnd">(()=>{/* computer beep when someone opens the Tech & AI tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="tech"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<800)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<800)return;last=now;
  try{if(!au){au=new Audio("/snd/tech.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="newssnd">(()=>{/* thunder boom when someone opens the Seattle News tab (respects the Sound on/off button) */
 let au=null,last=0;
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest||!t.closest('[data-go="bars"]'))return;
- try{if(typeof SFX!=="undefined"&&!SFX.on)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
+ try{if(typeof SFX!=="undefined"&&!SFX.on)return;if(window.__irTabNow&&Date.now()-window.__irTabNow<1500)return}catch(_){}const now=Date.now();if(now-last<3000)return;last=now;
  try{if(!au){au=new Audio("/snd/news.mp3");au.preload="auto"}au.volume=.7;au.currentTime=0;const p=au.play();if(p&&p.catch)p.catch(()=>{})}catch(_){}},true);
 document.addEventListener("click",e=>{const t=e.target;if(t.closest&&t.closest("#sndBtn")&&au&&!au.paused){try{if(typeof SFX!=="undefined"&&!SFX.on)au.pause()}catch(_){}}})})();</script><script id="contactgd">(()=>{/* "Contact Guitar Doug" form: messages go to the editor's Inbox (no email address on the page) */
 const esc=t=>String(t||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
