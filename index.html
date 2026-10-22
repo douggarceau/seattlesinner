@@ -2285,10 +2285,11 @@ const start=()=>{K.forEach(k=>{const el=document.querySelector(".lsrow .lspot>."
  A.forEach(ad=>setTimeout(()=>cyc(ad),Math.random()*6000))};
 const go=()=>setTimeout(start,4200);document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go):go()})();</script><script id="narrator">(()=>{/* narrator switch: Irina plays for first-time visitors; returning visitors get no narrator unless they turn it back on; "Narrator off" button in the footer and on every Irina video */
 let first=false;try{if(!localStorage.getItem("gd_v")){localStorage.setItem("gd_v","1");sessionStorage.setItem("gd_first","1")}first=sessionStorage.getItem("gd_first")==="1"}catch(_){first=true}
-const pref=()=>{try{return localStorage.getItem("gd_narr")}catch(_){return null}};
+try{localStorage.removeItem("gd_narr")}catch(_){}
+const pref=()=>{try{return sessionStorage.getItem("gd_narr")}catch(_){return null}};
 window.NARR=()=>{const p=pref();return p!=="off"};
 const off=()=>{try{if(window.GDWplay)GDWplay.stop()}catch(_){}document.querySelectorAll("#irTab video,#irBox video").forEach(v=>v.pause());document.querySelectorAll("#irTab,#irBox").forEach(b=>b.classList.remove("on"))};
-const set=v=>{try{localStorage.setItem("gd_narr",v?"on":"off")}catch(_){}if(v){try{sessionStorage.removeItem("gd_irtabs");sessionStorage.removeItem("gd_irfront2")}catch(_){}}else off();paint()};
+const set=v=>{try{sessionStorage.setItem("gd_narr",v?"on":"off")}catch(_){}if(v){try{sessionStorage.removeItem("gd_irtabs");sessionStorage.removeItem("gd_irfront2")}catch(_){}}else off();paint()};
 let b=null;const paint=()=>{if(!b)return;const o=NARR();b.textContent=o?"🎙 Narrator on":"🎙 Narrator off";b.setAttribute("aria-pressed",o?"true":"false");b.style.opacity=o?"1":".75"};
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;if(t.closest(".nOff")){e.preventDefault();set(false)}else if(t.closest("#narrBtn")){e.stopPropagation();set(!NARR());if(NARR())setTimeout(()=>location.reload(),150)}},true);
 const st=document.createElement("style");st.textContent="#irBox button.nOff,#irTab button.nOff{all:unset;pointer-events:auto;cursor:pointer;position:absolute;left:8px;bottom:8px;z-index:3;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,.72);border:1px solid #d9a400;color:#f0c94a;font:700 11px/1 var(--mono,ui-monospace,monospace);letter-spacing:.06em;text-transform:uppercase}#irBox button.nOff:hover,#irTab button.nOff:hover{color:#fff;border-color:#fff}";document.head.appendChild(st);
