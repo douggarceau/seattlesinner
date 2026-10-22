@@ -1280,7 +1280,7 @@ function evCard(e){return `<a class="ev" style="--gc:${KIND[e.kind]||'#8b949c'}"
 
 function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES.filter(x=>x.slug!=='ballard-light-rail-2042-forum');
-  const wk=up.filter(e=>e.date<=addDays(todayKey,7)).slice(0,10);
+  const wk=up.filter(e=>e.date<=addDays(todayKey,14)).slice(0,120);
   const WF=BARS.filter(b=>!/^(news|safety|policy)$/.test(b.kind||'')&&!/shoot|stab|kill|murder|homicide|robber|assault|arrest|charged|police|suspect|crash|fire|burglar|theft|stolen|drug|overdose|fentanyl|lawsuit|sued|court|jail|prison|dead|death|body|crime|gun|weapon|layoff|evict/i.test((b.headline||'')+' '+(b.blurb||'')));
   return `${crimeBanner()}<div class="front">
     <div class="stack">
@@ -2179,7 +2179,7 @@ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest
 </script>
 <script>
 /* Front page: keep the two columns the same height (no empty space under the shorter one) */
-(()=>{let busy=false,t;const run=()=>{const fr=document.querySelector('#view .front');if(!fr)return;const st=fr.querySelectorAll(':scope>.stack');if(st.length<2)return;const L=st[0],R=st[1];busy=true;
+(()=>{return;/* retired: replaced by the bottom-balance script */let busy=false,t;const run=()=>{const fr=document.querySelector('#view .front');if(!fr)return;const st=fr.querySelectorAll(':scope>.stack');if(st.length<2)return;const L=st[0],R=st[1];busy=true;
  // put back anything moved earlier, in its original order
  [...L.querySelectorAll(':scope>[data-mv]')].sort((a,b)=>a.dataset.mv-b.dataset.mv).forEach(e=>{const nx=[...R.children].find(c=>+c.dataset.ord>+e.dataset.mv);R.insertBefore(e,nx||null);delete e.dataset.mv});
  [...R.children].forEach((c,i)=>{if(!c.dataset.ord)c.dataset.ord=i});
@@ -2358,7 +2358,7 @@ let frontDone=false;try{frontDone=sessionStorage.getItem("gd_irfront2")==="1"}ca
 document.addEventListener("click",e=>{const t=e.target;if(frontDone||!t.closest||(window.NARR&&!NARR()))return;const cov=t.closest(".cvr .cimg");if(!cov&&!t.closest('[data-go="front"]'))return;if(cov){e.preventDefault();e.stopPropagation();e.stopImmediatePropagation()}frontDone=true;try{sessionStorage.setItem("gd_irfront2","1")}catch(_){}
  setTimeout(()=>{const CI=document.querySelector(".cvr .cimg img");if(CI){const q=CI.getBoundingClientRect();if(q.top<0||q.bottom>innerHeight)CI.scrollIntoView({block:"center",behavior:"smooth"})}setTimeout(()=>play("full",true),CI?650:0)},350)},true);
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;if(t.closest("#sndBtn")&&!ON())stop();if(t.closest('[data-go]:not([data-go="front"])')&&au&&!au.paused)stop()},true);
-window.GDWplay={play,stop,isOn:k=>!!(au&&au===AU[k]&&!au.paused),time:()=>au?au.currentTime:0};document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="navgap">(()=>{/* margin boxes below the top row start under the section menu instead of hiding behind it */
+window.GDWplay={play,stop,isOn:k=>!!(au&&au===AU[k]&&!au.paused),time:()=>au?au.currentTime:0};document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="navgap">(()=>{return;/* retired: margin boxes now start at the orange line *//* margin boxes below the top row start under the section menu instead of hiding behind it */
 const fit=()=>{const n=document.getElementById("nav"),row=document.querySelector(".lsrow");if(!n||!row)return;const all=[...row.querySelectorAll(".lspot")];all.forEach(b=>b.style.translate="");
  const t2=all.filter(b=>b.offsetParent&&!b.classList.contains("t1")&&getComputedStyle(b).position==="absolute");if(!t2.length)return;
  const nb=n.getBoundingClientRect().bottom+scrollY,top=Math.min(...t2.map(b=>b.getBoundingClientRect().top+scrollY));const d=Math.round(nb+14-top);if(d>0)t2.forEach(b=>b.style.translate="0 "+d+"px")};
@@ -2442,10 +2442,29 @@ const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{
 (()=>{const st=document.createElement('style');st.textContent='#seaNewsBox{padding:14px;display:grid;gap:10px;align-content:start}#seaNewsBox .sea-g{grid-template-columns:repeat(2,minmax(0,1fr))}.cvside #wireBox{margin-top:16px;height:auto!important}';document.head.appendChild(st);
 const mv=()=>{const side=document.querySelector('#coverSlot .cvside'),w=document.getElementById('wireBox');if(!side||!w)return;
  const h=side.querySelector(':scope>.sea-h:not(.nat)'),g=side.querySelector(':scope>.sea-g');
- if(h&&g&&!document.getElementById('seaNewsBox')){const box=document.createElement('section');box.className='box';box.id='seaNewsBox';box.style.setProperty('--c','#ff6a00');const fv=document.querySelector('#view .fvw');if(fv)fv.after(box);else w.parentNode.insertBefore(box,w);box.appendChild(h);box.appendChild(g)}
+ if(h&&g&&!document.getElementById('seaNewsBox')){const box=document.createElement('section');box.className='box';box.id='seaNewsBox';box.style.setProperty('--c','#ff6a00');const RS=document.querySelectorAll('#view .front>.stack')[1];if(RS)RS.appendChild(box);else w.parentNode.insertBefore(box,w);box.appendChild(h);box.appendChild(g)}
  if(w.parentNode!==side){const nl=side.querySelector('.nat-l');if(nl)nl.after(w);else side.appendChild(w)}};
 let t;const q=()=>{clearTimeout(t);t=setTimeout(mv,20)};['coverSlot','view'].forEach(id=>{const e=document.getElementById(id);if(e)new MutationObserver(q).observe(e,{childList:true})});
 [100,800,2500].forEach(ms=>setTimeout(mv,ms))})();</script>
+<script>/* Margin columns: per-side correction so each column's first box sits exactly on the orange line */
+(()=>{const fix=()=>{const r=document.querySelector('.lsrow'),o=document.querySelector('#coverSlot .box')||document.querySelector('#view > *');if(!r||!o||innerWidth<1280)return;
+ const T=o.getBoundingClientRect().top;const ty=x=>{const v=getComputedStyle(x).translate;if(!v||v==='none')return 0;const p=v.split(' ');return parseFloat(p[1]||0)||0};
+ const top=side=>{const L=[...r.querySelectorAll('.lspot.'+side)].filter(x=>x.offsetParent&&x.id!=='regSpot');return L.length?Math.min(...L.map(x=>x.getBoundingClientRect().top-ty(x))):null};
+ const l=top('l'),rr=top('r');if(l!=null)r.style.setProperty('--dL',(T-l).toFixed(2)+'px');if(rr!=null)r.style.setProperty('--dR',(T-rr).toFixed(2)+'px')};
+const st=document.createElement('style');st.textContent='@media (min-width:1280px){.lsrow .lspot.l{translate:0 var(--dL,0px)!important}.lsrow .lspot.r:not(.regspot){translate:0 var(--dR,0px)!important}}';document.head.appendChild(st);
+let t;const q=()=>{clearTimeout(t);t=setTimeout(fix,150)};addEventListener('resize',q);if(window.ResizeObserver){const ro=new ResizeObserver(q);['view','coverSlot','nav'].forEach(id=>{const e=document.getElementById(id);if(e)ro.observe(e)})}
+setInterval(()=>{const r=document.querySelector('.lsrow'),o=document.querySelector('#coverSlot .box')||document.querySelector('#view > *');if(!r||!o||innerWidth<1280)return;const T=o.getBoundingClientRect().top;for(const side of ['l','r']){const L=[...r.querySelectorAll('.lspot.'+side)].filter(x=>x.offsetParent&&x.id!=='regSpot');if(L.length&&Math.abs(Math.min(...L.map(x=>x.getBoundingClientRect().top))-T)>0.5){fix();break}}},1200);[500,2000,5000].forEach(ms=>setTimeout(fix,ms))})();</script>
+<script>/* Front page bottom: the right column (Shows this week, Crime Watch, Seattle News) fills to end exactly level with What's on */
+(()=>{const bal=()=>{const f=document.querySelector('#view .front');if(!f)return;const S=f.querySelectorAll(':scope>.stack');if(S.length<2)return;const L=S[0],R=S[1];
+ if(L.getBoundingClientRect().left===R.getBoundingClientRect().left)return;
+ const vis=c=>[...c.children].filter(x=>x.offsetParent&&x.offsetHeight>4);const lb=()=>Math.max(...vis(L).map(x=>x.getBoundingClientRect().bottom));const rb=()=>Math.max(...vis(R).map(x=>x.getBoundingClientRect().bottom));
+ const RV=vis(R),last=RV[RV.length-1];if(last)last.style.minHeight='';
+ const rows=[...R.querySelectorAll('#showsWeek .rows>.sh')];rows.forEach((x,i)=>x.style.display=i<10?'':'none');
+ for(let i=10;i<rows.length&&rb()<lb()-40;i++)rows[i].style.display='';
+ while(rb()>lb()+2){const v=rows.filter(x=>x.style.display!=='none');if(v.length<=10)break;v[v.length-1].style.display='none'}
+ const RV2=vis(R),l2=RV2[RV2.length-1];if(l2){const d=lb()-rb();if(d>0)l2.style.minHeight=(l2.getBoundingClientRect().height+d)+'px'}
+ const lv=vis(L),ll=lv[lv.length-1];if(ll)ll.style.minHeight='';if(ll&&rb()>lb()+0.5)ll.style.minHeight=(ll.getBoundingClientRect().height+(rb()-lb()))+'px'};
+let t;const q=()=>{clearTimeout(t);t=setTimeout(bal,120)};const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{childList:true});addEventListener('resize',q);[1500,3500,7000].forEach(ms=>setTimeout(bal,ms))})();</script>
 </body>
 <script>(()=>{const U='https://seattlesinner.com/',T='The Guitar Doug Report: bars, clubs, local music and the stories nobody else will run';
 const css=document.createElement('style');css.textContent='#nbShrPop{position:fixed;z-index:95;min-width:200px;background:#070a0e;border:1px solid var(--gold,#d9a400);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.6)}#nbShrPop a{display:block;padding:9px 12px;border-radius:4px;color:#f3e6c8;text-decoration:none;font:700 13px/1.2 var(--body,system-ui)}#nbShrPop a:hover{background:#1b222b}#nbShrPop b{display:block;padding:6px 12px;font:700 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#9aa3ad}';document.head.appendChild(css);
