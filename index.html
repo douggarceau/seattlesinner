@@ -1293,6 +1293,8 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
     </div>
     <div class="stack">
       ${(()=>{const t=STORIES.find(x=>x.trailer&&x.trailer.src);return t?`<section class="box nowp" style="--c:#c9a227"><div class="bh"><b>Now playing · ${esc(t.title)}</b><span>${esc(t.trailer.label||'Trailer')} · ${esc(t.trailer.credit||'')}</span></div><video controls playsinline preload="none" poster="${esc(t.trailer.poster||'')}"><source src="${esc(t.trailer.src)}" type="video/mp4"></video><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-story="${t.slug}">Read our story →</button></div></section>`:''})()}
+      <section class="box" id="showsWeek" style="--c:#1e90ff;scroll-margin-top:190px"><div class="bh"><b>Shows this week</b><span>tap for tickets</span></div><div class="rows">${wk.map(showRow).join('')||'<div class="empty">No shows listed this week.</div>'}</div>
+        <div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="cal">Full calendar →</button></div></section>
       <section class="box adbox" style="--c:#ff6a00"><button class="adimg" data-ad="" aria-label="Advertise in this spot. Ask about advertising" style="display:block;width:100%;padding:0;border:0;background:none;cursor:pointer"><img src="img/advertise-here.jpg" alt="Advertise in this spot. Ask about advertising." style="display:block;width:100%;height:auto"></button><button class="adclick" data-ad="" type="button">Click to advertise here →</button></section>
       <section class="box crw" style="--c:#ff2a14"><div class="bh"><b><img class="cwmark sm" src="img/prowler-mark.jpg" alt=""><span class="live">● LIVE</span> Crime Watch</b><span>Seattle only</span></div><div id="cwFront"></div><div style="padding:10px 14px;border-top:1px solid var(--line)"><button class="nb" data-go="crime">Crime Watch →</button></div></section>
       <section class="box adbox adsm" style="--c:#c8102e"><button class="adclick" data-ad="" type="button" style="margin:0;width:100%">Your ad here · from $99/mo →</button></section>
@@ -2422,7 +2424,7 @@ const st=document.createElement('style');st.textContent='#topRight{position:abso
 document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go):go()})();</script>
 <script>/* "Shows This Week" tab: open the front page and jump to the Shows this week box */
 (()=>{const b=document.getElementById('nbWeek');if(!b)return;b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();
- const jump=()=>{const x=document.querySelector('#view .fvw');if(!x)return false;x.scrollIntoView({behavior:'smooth',block:'start'});x.animate([{boxShadow:'0 0 0 3px #1e90ff,0 0 28px #1e90ff'},{boxShadow:'none'}],{duration:1800});return true};
+ const jump=()=>{const x=document.getElementById('showsWeek');if(!x)return false;x.scrollIntoView({behavior:'smooth',block:'start'});x.animate([{boxShadow:'0 0 0 3px #1e90ff,0 0 28px #1e90ff'},{boxShadow:'none'}],{duration:1800});return true};
  if(typeof STATE!=='undefined'&&STATE.view!=='front'&&typeof go==='function'){go('front');setTimeout(jump,250)}else jump()},true)})();</script>
 <script>/* Front page: Seattle Crime grid hidden; The Wire is sized to end exactly level with Shows this week */
 (()=>{const st=document.createElement('style');st.textContent='#coverSlot .cvcrime{display:none!important}#wireBox{display:flex;flex-direction:column;box-sizing:border-box}#wireBox .bwl{flex:1}';document.head.appendChild(st);
@@ -2448,11 +2450,6 @@ const fitCr=()=>{const cv=document.querySelector('#coverSlot .cvr'),cr=cv&&cv.qu
  const tgt=(w&&sd.contains(w)?w:sd).getBoundingClientRect().bottom;const h=Math.round(tgt-cr.getBoundingClientRect().top);if(h>120)cr.style.height=h+'px'};addEventListener('resize',()=>setTimeout(fitCr,120));
 let t;const q=()=>{clearTimeout(t);t=setTimeout(mv,20)};['coverSlot','view'].forEach(id=>{const e=document.getElementById(id);if(e)new MutationObserver(q).observe(e,{childList:true})});
 [100,800,2500].forEach(ms=>setTimeout(mv,ms));[1200,3500,6000].forEach(ms=>setTimeout(fitCr,ms))})();</script>
-<script>/* Front page: when the right column has nothing left to show, the left column takes the full width */
-(()=>{const fit=()=>{const f=document.querySelector('#view .front');if(!f)return;const st=f.querySelectorAll(':scope>.stack');if(st.length<2)return;const right=st[1];
- const vis=[...right.children].some(c=>c.offsetParent!==null&&c.offsetHeight>4);right.style.display=vis?'':'none';f.style.gridTemplateColumns=vis?'':'minmax(0,1fr)'};
-const v=document.getElementById('view');if(v)new MutationObserver(()=>setTimeout(fit,40)).observe(v,{childList:true,subtree:true});[200,1200,3000].forEach(ms=>setTimeout(fit,ms))})();</script>
-<style>#view .fvw{scroll-margin-top:190px}</style>
 </body>
 <script>(()=>{const U='https://seattlesinner.com/',T='The Guitar Doug Report: bars, clubs, local music and the stories nobody else will run';
 const css=document.createElement('style');css.textContent='#nbShrPop{position:fixed;z-index:95;min-width:200px;background:#070a0e;border:1px solid var(--gold,#d9a400);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.6)}#nbShrPop a{display:block;padding:9px 12px;border-radius:4px;color:#f3e6c8;text-decoration:none;font:700 13px/1.2 var(--body,system-ui)}#nbShrPop a:hover{background:#1b222b}#nbShrPop b{display:block;padding:6px 12px;font:700 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#9aa3ad}';document.head.appendChild(css);
