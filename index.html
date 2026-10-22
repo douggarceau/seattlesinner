@@ -2426,9 +2426,9 @@ document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go)
  if(typeof STATE!=='undefined'&&STATE.view!=='front'&&typeof go==='function'){go('front');setTimeout(jump,250)}else jump()},true)})();</script>
 <script>/* Front page: Seattle Crime grid hidden; The Wire is sized to end exactly level with Shows this week */
 (()=>{const st=document.createElement('style');st.textContent='#coverSlot .cvcrime{display:none!important}#wireBox{display:flex;flex-direction:column;box-sizing:border-box}#wireBox .bwl{flex:1}';document.head.appendChild(st);
-const fit=()=>{const w=document.getElementById('wireBox'),sh=document.getElementById('showsWeek');if(!w)return;w.style.height='';
+const fit=()=>{const w=document.getElementById('wireBox'),sh=document.getElementById('showsWeek');if(!w||!sh)return;w.style.height='';
  const R=[...w.querySelectorAll('.bwl>.bwr')];if(!R.length)return;
- if(w.closest('.cvside')||!sh){R.forEach((r,i)=>r.hidden=i>=6);return}
+ if(w.closest('.cvside')){R.forEach((r,i)=>r.hidden=i>=6);return}
  const sameRow=Math.abs(w.getBoundingClientRect().top-sh.getBoundingClientRect().top)<4;
  if(!sameRow||innerWidth<900){R.forEach((r,i)=>r.hidden=i>=7);return}
  const H=sh.offsetHeight;R.forEach(r=>r.hidden=true);
@@ -2437,14 +2437,14 @@ const fit=()=>{const w=document.getElementById('wireBox'),sh=document.getElement
 let t;const q=()=>{clearTimeout(t);t=setTimeout(fit,80)};addEventListener('resize',q);
 const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{childList:true});[300,1500,4000].forEach(ms=>setTimeout(fit,ms))})();</script>
 <script>/* Front page swap: The Wire sits under the issue list next to the cover; Seattle News takes the Wire's old spot */
-(()=>{const st=document.createElement('style');st.textContent='#seaNewsBox{padding:14px;display:grid;gap:10px;align-content:start}#coverSlot .cvr.cv2{grid-template-rows:auto 1fr!important}#coverSlot .cvr.cv2>.cimg{grid-column:1;grid-row:1}#coverSlot .cvr.cv2>.cvside{grid-column:2;grid-row:1/3;align-self:start}#coverSlot .cvr.cv2>.fvw{grid-column:1;grid-row:2;align-self:start;min-height:0;overflow:hidden;display:flex;flex-direction:column;margin:0!important}#coverSlot .cvr>.fvw .fvw-in{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;align-content:start}#coverSlot .cvr:not(.cv2)>.fvw{margin-top:16px!important}#coverSlot .cvr>.fvw .vdays{grid-template-columns:repeat(4,minmax(0,1fr))!important}#coverSlot .cvr>.fvw .vkinds{flex-wrap:wrap}#coverSlot .cvr>.fvw .bh b{font-size:12px}#view .crw{display:none!important}#seaNewsBox .sea-g{grid-template-columns:repeat(2,minmax(0,1fr))}.cvside #wireBox{margin-top:16px;height:auto!important}';document.head.appendChild(st);
+(()=>{const st=document.createElement('style');st.textContent='#seaNewsBox{padding:14px;display:grid;gap:10px;align-content:start}#coverSlot .cvr.cv2{grid-template-rows:auto 1fr!important}#coverSlot .cvr.cv2>.cimg{grid-column:1;grid-row:1}#coverSlot .cvr.cv2>.cvside{grid-column:2;grid-row:1/3}#coverSlot .cvr.cv2>.crw{grid-column:1;grid-row:2;align-self:start;min-height:0;overflow:hidden;display:flex;flex-direction:column;margin:0!important}#coverSlot .cvr>.crw #cwFront{flex:1;min-height:0;overflow:hidden}#coverSlot .cvr:not(.cv2)>.crw{margin-top:16px!important}#seaNewsBox .sea-g{grid-template-columns:repeat(2,minmax(0,1fr))}.cvside #wireBox{margin-top:16px;height:auto!important}';document.head.appendChild(st);
 const mv=()=>{const side=document.querySelector('#coverSlot .cvside'),w=document.getElementById('wireBox');if(!side||!w)return;
  const h=side.querySelector(':scope>.sea-h:not(.nat)'),g=side.querySelector(':scope>.sea-g');
  if(h&&g&&!document.getElementById('seaNewsBox')){const box=document.createElement('section');box.className='box';box.id='seaNewsBox';box.style.setProperty('--c','#ff6a00');const fv=document.querySelector('#view .fvw');if(fv)fv.after(box);else w.parentNode.insertBefore(box,w);box.appendChild(h);box.appendChild(g)}
  if(w.parentNode!==side){const nl=side.querySelector('.nat-l');if(nl)nl.after(w);else side.appendChild(w)}
- const cv=side.parentNode;const oc=cv.querySelector(':scope>.fvw');const cr=document.querySelector('#view .fvw');if(cr&&cv&&cr.parentNode!==cv){if(oc&&oc!==cr)oc.remove();cv.appendChild(cr)}fitCr()};
-const fitCr=()=>{const cv=document.querySelector('#coverSlot .cvr'),cr=cv&&cv.querySelector(':scope>.fvw'),ci=cv&&cv.querySelector(':scope>.cimg'),sd=cv&&cv.querySelector(':scope>.cvside'),w=document.getElementById('wireBox');if(!cr||!ci||!sd)return;
- cv.classList.remove('cv2');cr.style.height='';const two=sd.getBoundingClientRect().left>=ci.getBoundingClientRect().right-2;if(!two)return;cr.style.height='0px';cv.classList.add('cv2');
+ const cr=document.querySelector('#view .crw'),cv=side.parentNode;if(cr&&cv&&cr.parentNode!==cv)cv.appendChild(cr);fitCr()};
+const fitCr=()=>{const cv=document.querySelector('#coverSlot .cvr'),cr=cv&&cv.querySelector(':scope>.crw'),ci=cv&&cv.querySelector(':scope>.cimg'),sd=cv&&cv.querySelector(':scope>.cvside'),w=document.getElementById('wireBox');if(!cr||!ci||!sd)return;
+ cv.classList.remove('cv2');cr.style.height='';const two=sd.getBoundingClientRect().left>=ci.getBoundingClientRect().right-2;if(!two)return;cv.classList.add('cv2');
  const tgt=(w&&sd.contains(w)?w:sd).getBoundingClientRect().bottom;const h=Math.round(tgt-cr.getBoundingClientRect().top);if(h>120)cr.style.height=h+'px'};addEventListener('resize',()=>setTimeout(fitCr,120));
 let t;const q=()=>{clearTimeout(t);t=setTimeout(mv,20)};['coverSlot','view'].forEach(id=>{const e=document.getElementById(id);if(e)new MutationObserver(q).observe(e,{childList:true})});
 [100,800,2500].forEach(ms=>setTimeout(mv,ms));[1200,3500,6000].forEach(ms=>setTimeout(fitCr,ms))})();</script>
