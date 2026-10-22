@@ -2316,7 +2316,7 @@ const play=k=>{if(!box)mk();try{if(window.GDWplay)window.GDWplay.stop()}catch(_)
  const p=vid.play();if(p&&p.catch)p.catch(()=>stop());clearInterval(tmr);tmr=setInterval(()=>{try{if(window.GDWplay&&window.GDWplay.isOn("full"))stop()}catch(_){}},500)};
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;const b=t.closest("[data-go]");if(!b)return;const k=b.getAttribute("data-go");
  if(box&&box.classList.contains("on"))stop();
- if(!CLIPS[k]||seen[k]||!ON()||(window.NARR&&!NARR()))return;seen[k]=1;try{sessionStorage.setItem("gd_irtabs",JSON.stringify(seen))}catch(_){}window.__irTabNow=Date.now(); play(k)},true);
+ if(!CLIPS[k]||!ON()||(window.NARR&&!NARR()))return;seen[k]=1;try{sessionStorage.setItem("gd_irtabs",JSON.stringify(seen))}catch(_){}window.__irTabNow=Date.now(); play(k)},true);
 document.addEventListener("visibilitychange",()=>{if(document.hidden)stop()})})();</script><script id="contactgd">(()=>{/* "Contact Guitar Doug" form: messages go to the editor's Inbox (no email address on the page) */
 const esc=t=>String(t||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"})[m]);
 const go=()=>{if(document.getElementById("ctBtn"))return;const f=document.querySelector(".fsnd");
