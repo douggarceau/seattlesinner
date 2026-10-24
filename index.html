@@ -2118,12 +2118,18 @@ XT.forEach((_,n)=>xtFill(n,false));
 setInterval(()=>XT.forEach((_,n)=>setTimeout(()=>{xk[n]++;xtFill(n,true)},300+(n%10)*420)),6400);
 /* Fill the side margins with news boxes all the way down the page */
 const XP=[()=>SCF,()=>MUF,()=>SCF,()=>MUF,()=>SCF,()=>MUF];
-const lsMore=()=>{if(innerWidth<1280)return;const row=document.querySelector('.lsrow'),w=document.querySelector('.wrap'),s=document.querySelector('.lspot');if(!row||!w||!s)return;
- const step=s.offsetHeight+12,rows=Math.floor((w.offsetHeight-150-40)/step);
- for(let t=9;t<=rows;t++)['l','r'].forEach((side,si)=>{const id='lsX'+t+side;if(document.getElementById(id))return;
+const lsMore=()=>{if(innerWidth<1280)return;const row=document.querySelector('.lsrow'),w=document.querySelector('.wrap'),s=document.querySelector('.lspot'),V=document.getElementById('view');if(!row||!w||!s||!V)return;
+ row.querySelectorAll('.lspot').forEach(x=>x.style.removeProperty('height'));
+ const step=s.offsetHeight+12,lsh=s.offsetHeight,rt=row.getBoundingClientRect().top,vb=V.getBoundingClientRect().bottom-rt,rg=document.getElementById('regSpot'),rgH=rg&&rg.offsetParent?rg.offsetHeight+24:0;
+ const mt=side=>{const x=[...row.querySelectorAll('.lspot.'+side)].find(e=>e.offsetParent&&!e.classList.contains('t1')&&e!==rg);return x?parseFloat(getComputedStyle(x).marginTop)||0:0};
+ const cap={l:0,r:0};['l','r'].forEach(side=>{const m=mt(side),extra=side==='r'?rgH:0;let n=8;while(150+n*step+m+lsh+extra<=vb)n++;cap[side]=n});
+ row.querySelectorAll('a[id^=lsX]').forEach(a=>{const n=parseInt(a.id.slice(3)),side=a.id.slice(-1);if(n>cap[side]&&a.parentNode)a.parentNode.remove()});
+ for(let t=9;t<=Math.max(cap.l,cap.r);t++)['l','r'].forEach((side,si)=>{if(t>cap[side])return;const id='lsX'+t+side;if(document.getElementById(id))return;
   const d=document.createElement('div');d.className='lspot '+side;d.style.top='calc(150px + '+(t-1)+'*(var(--lsh) + 12px))';d.innerHTML='<a id="'+id+'"></a>';row.appendChild(d);
-  XT.push([id,XP[(t*2+si)%XP.length],9+t*3+si*5]);xk.push(0);xf.push(false);xtFill(XT.length-1,false)})};
-setTimeout(lsMore,1500);setTimeout(lsMore,5000);let lsR;addEventListener('resize',()=>{clearTimeout(lsR);lsR=setTimeout(lsMore,400)});
+  XT.push([id,XP[(t*2+si)%XP.length],9+t*3+si*5]);xk.push(0);xf.push(false);xtFill(XT.length-1,false)});
+ if(rg&&rg.offsetParent){let m=0;row.querySelectorAll('.lspot.r').forEach(x=>{if(x!==rg&&x.offsetParent)m=Math.max(m,x.offsetTop+x.offsetHeight)});if(m)rg.style.setProperty('top',(m+24)+'px','important')}
+ ['l','r'].forEach(side=>{const L=[...row.querySelectorAll('.lspot.'+side)].filter(x=>x.offsetParent);if(!L.length)return;const last=L.reduce((a,x)=>x.getBoundingClientRect().bottom>a.getBoundingClientRect().bottom?x:a);const g=vb-(last.getBoundingClientRect().bottom-rt);if(Math.abs(g)<step)last.style.setProperty('height',(last.offsetHeight+g)+'px','important')})};
+setTimeout(lsMore,1500);setTimeout(lsMore,5000);let lsR;const lsQ=()=>{clearTimeout(lsR);lsR=setTimeout(lsMore,400)};addEventListener('resize',lsQ);try{const V=document.getElementById('view');if(V&&window.ResizeObserver)new ResizeObserver(lsQ).observe(V)}catch(_){}
 
 })();
 </script>
@@ -2298,13 +2304,13 @@ document.readyState==="loading"?document.addEventListener("DOMContentLoaded",go)
 const CLIPS={bands:"/vid/irina-bands",venues:"/vid/irina-venues",scene:"/vid/irina-scene",cal:"/vid/irina-music",tech:"/vid/irina-tech",crime:"/vid/irina-crime",bars:"/vid/irina-news",stories:"/vid/irina-stories"};
 const seen={};try{Object.assign(seen,JSON.parse(sessionStorage.getItem("gd_irtabs")||"{}"))}catch(_){}
 const ON=()=>{try{return typeof SFX==="undefined"||SFX.on}catch(_){return true}};
-let box=null,vid=null,tmr=null;
+let box=null,vid=null,tmr=null;const rs=()=>{if(vid&&box&&box.classList.contains("on")&&vid.paused&&!vid.ended&&vid.currentSrc){vid.muted=!ON();const q=vid.play();if(q&&q.catch)q.catch(()=>{})}};
 const css=document.createElement("style");css.textContent="#irTab button{pointer-events:auto}#irTab{pointer-events:none;position:fixed;padding:0!important;margin:0!important;box-sizing:border-box;z-index:9996;border-radius:12px;overflow:hidden;border:1px solid #d9a400;box-shadow:0 0 18px #d9a40066,0 10px 30px rgba(0,0,0,.7);background:#000;display:none;opacity:0;transform:scale(.85);transform-origin:bottom center}#irTab.on{display:block;animation:irtIn .35s ease forwards}@keyframes irtIn{to{opacity:1;transform:scale(1)}}#irTab video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 12%;background:#000}#irTab button{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;border:1px solid #fff9;background:#000a;color:#fff;font:700 15px/1 system-ui,sans-serif;cursor:pointer;padding:0;z-index:2}";document.head.appendChild(css);
 const place=()=>{if(!box)return;const vw=document.documentElement.clientWidth,vh=innerHeight;
  const CI=document.querySelector(".cvr .cimg img");
- if(vw>=700&&CI&&CI.offsetParent&&CI.offsetWidth>60&&CI.offsetHeight>60){const par=CI.parentElement;if(getComputedStyle(par).position==="static")par.style.position="relative";if(box.parentElement!==par)par.appendChild(box);
+ if(vw>=700&&CI&&CI.offsetParent&&CI.offsetWidth>60&&CI.offsetHeight>60){const par=CI.parentElement;if(getComputedStyle(par).position==="static")par.style.position="relative";if(box.parentElement!==par){par.appendChild(box);rs()}
   const q=CI.getBoundingClientRect(),pr=par.getBoundingClientRect();window.__gdCov={w:q.width,h:q.height};box.style.position="absolute";box.style.left=(q.left-pr.left-par.clientLeft)+"px";box.style.top=(q.top-pr.top-par.clientTop)+"px";box.style.width=q.width+"px";box.style.height=q.height+"px";box.style.right="";box.style.bottom="";box.style.borderRadius=getComputedStyle(CI).borderRadius;return}
- if(box.parentElement!==document.body)document.body.appendChild(box);box.style.borderRadius="";
+ if(box.parentElement!==document.body){document.body.appendChild(box);rs()}box.style.borderRadius="";
  const M=[...document.querySelectorAll(".lsrow .lspot.r")].filter(e=>e.offsetParent&&e.id!=="regSpot"&&e.offsetHeight>40).map(e=>{const q=e.getBoundingClientRect();return {l:q.left,t:q.top+scrollY,w:q.width,b:q.bottom+scrollY}}).sort((a,b)=>a.t-b.t);
  if(vw>=1280&&M.length){const V=document.getElementById("view");const vt=V?V.getBoundingClientRect().top+scrollY:0;const first=M.find(m=>m.b>vt)||M[0];const want=first.t+first.w*1.5;let end=M.filter(m=>m.t>=first.t).map(m=>m.b).reduce((a,b)=>Math.abs(b-want)<Math.abs(a-want)?b:a,first.b);
   box.style.position="absolute";box.style.left=Math.round(first.l)+"px";box.style.top=Math.round(first.t)+"px";box.style.width=Math.round(first.w)+"px";box.style.height=Math.round(end-first.t)+"px";box.style.right="";box.style.bottom="";return}
@@ -2316,7 +2322,7 @@ const stop=()=>{clearInterval(tmr);if(vid)vid.pause();if(box)box.classList.remov
 const mk=()=>{box=document.createElement("div");box.id="irTab";box.setAttribute("role","region");box.setAttribute("aria-label","Section introduction video");box.innerHTML='<button type="button" aria-label="Close video">&times;</button><video playsinline preload="auto"></video>';vid=box.querySelector("video");vid.addEventListener("ended",()=>setTimeout(stop,400));
  box.addEventListener("click",e=>{e.stopPropagation();if(e.target.closest("button"))stop()});document.body.appendChild(box);addEventListener("resize",place);addEventListener("scroll",()=>{if(box.classList.contains("on"))place()},{passive:true})};
 const play=k=>{if(!box)mk();try{if(window.GDWplay)window.GDWplay.stop()}catch(_){}vid.pause();vid.src=CLIPS[k]+".mp4";vid.poster=CLIPS[k]+".jpg";vid.muted=!ON();place();[80,400,900,1600,2600].forEach(ms=>setTimeout(place,ms));box.classList.remove("on");void box.offsetWidth;box.classList.add("on");
- const p=vid.play();why("tab "+k+": playing "+CLIPS[k]+".mp4 ("+(vid.muted?"muted":"with sound")+")");if(p&&p.catch)p.catch(()=>{why("tab "+k+": browser blocked or could not play the video");if(vid.muted)return stop();vid.muted=true;const p2=vid.play();if(p2&&p2.catch)p2.catch(()=>stop())});clearInterval(tmr);tmr=setInterval(()=>{try{if(window.GDWplay&&window.GDWplay.isOn("full"))stop()}catch(_){}},500)};
+ const p=vid.play();why("tab "+k+": playing "+CLIPS[k]+".mp4 ("+(vid.muted?"muted":"with sound")+")");if(p&&p.catch)p.catch(err=>{if(err&&err.name==="AbortError"&&box.classList.contains("on")){setTimeout(()=>{if(!box.classList.contains("on"))return;vid.muted=!ON();const p3=vid.play();if(p3&&p3.catch)p3.catch(()=>{vid.muted=true;vid.play().catch(()=>stop())})},120);return}why("tab "+k+": browser blocked or could not play the video");if(vid.muted)return stop();vid.muted=true;const p2=vid.play();if(p2&&p2.catch)p2.catch(()=>stop())});clearInterval(tmr);tmr=setInterval(()=>{try{if(window.GDWplay&&window.GDWplay.isOn("full"))stop()}catch(_){}},500)};
 document.addEventListener("click",e=>{const t=e.target;if(!t.closest)return;const b=t.closest("[data-go]");if(!b)return;const k=b.getAttribute("data-go");
  if(box&&box.classList.contains("on"))stop();
  if(!CLIPS[k]||seen[k]||(window.NARR&&!NARR())){why(!CLIPS[k]?"tab "+k+": no clip assigned":seen[k]?"tab "+k+": clip already played this visit (once per visit)":"narrator off");return}seen[k]=1;try{sessionStorage.setItem("gd_irtabs",JSON.stringify(seen))}catch(_){}window.__irTabNow=Date.now(); play(k)},true);
