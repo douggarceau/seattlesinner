@@ -1,6 +1,8 @@
 {
-"asof": "2026-10-21T14:16:08-07:00",
+"asof": "2026-10-25T09:00:00-07:00",
 "items": [
+  {"kind": "shooting", "headline": "Police find 80 shell casings after Haller Lake shooting, no suspects in custody", "blurb": "Investigators recovered 80 shell casings from five firearms after reports of gunfire shortly after 8:15 a.m. Saturday near North 107th Street and Stone Avenue North, police said. No suspects are in custody.", "hood": "Haller Lake", "spd": [], "date": "2026-10-24", "url": "https://www.kiro7.com/news/local/shots-fired-near-n-107th-st-stone-ave-n-leave-one-injured/7RULHYY64JEZTD2LTVHJ5SOOQE/", "outlet": "KIRO 7"},
+  {"kind": "police", "headline": "SPD warns of callers posing as sheriff's deputies to demand payment over fake warrants", "blurb": "A Seattle man reported a caller posing as a King County sheriff's deputy who demanded a bond payment over fake warrants, police said in an Oct. 22 blotter post.", "hood": "Citywide", "spd": [], "date": "2026-10-22", "url": "https://spdblotter.seattle.gov/2026/10/22/psa-scammers-are-posing-as-law-enforcement-and-demanding-money-for-fake-warrants/", "outlet": "SPD Blotter"},
 {
 "kind": "courts",
 "headline": "Teen charged in Bite of Seattle shooting released to home detention",
