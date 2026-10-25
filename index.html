@@ -206,7 +206,7 @@ html body #view .vb i{font:800 10px/1.2 var(--lb)!important;letter-spacing:.1em!
 <style>html body #coverSlot .cvr .cvside .sea-h.nat b{color:#d9a400!important;text-shadow:0 0 10px #d9a400!important;font-size:18px!important;font-weight:900!important;letter-spacing:.14em!important}html body #wireBox .bh b{color:#4a9eff!important;text-shadow:0 0 12px rgba(74,158,255,.85)!important;font-family:"Libre Franklin",system-ui,sans-serif!important;font-size:18px!important;font-weight:900!important;letter-spacing:2.52px!important;text-transform:uppercase!important}</style>
 <style>.cvside .nat-l+.sea-h{margin-top:16px}#coverSlot .cvr>.cimg{align-self:start!important;margin-top:8px!important}.topspr,#seaBanner,.sea-spr,.crime-spr{display:none!important}</style>
 <style>/* ads mothballed */.adbox,.nsad,.lspot.t-ad,.lspot.t-ns,.lspot.t-ns2{display:none!important}</style>
-<style id="pvrule">.pv{display:none!important}html.stats .pv{display:block!important}</style><script>try{if(/[?&]stats\b/.test(location.search)||sessionStorage.getItem("pvstats")==="1"){sessionStorage.setItem("pvstats","1");document.documentElement.classList.add("stats")}}catch(_){}</script></head>
+<script>try{if(/[?&]stats\b/.test(location.search)||sessionStorage.getItem("pvstats")==="1"){sessionStorage.setItem("pvstats","1");document.documentElement.classList.add("stats")}}catch(_){}</script></head>
 <body>
 <title>The Guitar Doug Report</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -2475,6 +2475,12 @@ setInterval(()=>{const r=document.querySelector('.lsrow'),o=document.querySelect
  const RV2=vis(R),l2=RV2[RV2.length-1];if(l2){const d=lb()-rb();if(d>0)l2.style.minHeight=(l2.getBoundingClientRect().height+d)+'px'}
  const lv=vis(L),ll=lv[lv.length-1];if(ll)ll.style.minHeight='';if(ll&&rb()>lb()+0.5)ll.style.minHeight=(ll.getBoundingClientRect().height+(rb()-lb()))+'px'};
 let t;const q=()=>{clearTimeout(t);t=setTimeout(bal,120)};const v=document.getElementById('view');if(v)new MutationObserver(q).observe(v,{childList:true});addEventListener('resize',q);[1500,3500,7000].forEach(ms=>setTimeout(bal,ms))})();</script>
+<script>
+(async()=>{const set=n=>{if(typeof n==='number')document.querySelectorAll('[id=visits]').forEach(v=>v.textContent=n.toLocaleString())};try{const k='ss.visited',seen=sessionStorage.getItem(k);
+  let r=await fetch('https://abacus.jasoncameron.dev/'+(seen?'get':'hit')+'/guitardougreport/visits');if(!r.ok)r=await fetch('https://abacus.jasoncameron.dev/hit/guitardougreport/visits');
+  const j=await r.json();const n=j&&j.value;if(!seen)try{sessionStorage.setItem(k,'1')}catch(e){}
+  set(n);new MutationObserver(()=>{if([...document.querySelectorAll('[id=visits]')].some(v=>v.textContent==='…'))set(n)}).observe(document.body,{childList:true,subtree:true})}catch(e){}})();
+</script>
 </body>
 <script>(()=>{const U='https://seattlesinner.com/',T='The Guitar Doug Report: bars, clubs, local music and the stories nobody else will run';
 const css=document.createElement('style');css.textContent='#nbShrPop{position:fixed;z-index:95;min-width:200px;background:#070a0e;border:1px solid var(--gold,#d9a400);border-radius:6px;padding:4px;box-shadow:0 6px 18px rgba(0,0,0,.6)}#nbShrPop a{display:block;padding:9px 12px;border-radius:4px;color:#f3e6c8;text-decoration:none;font:700 13px/1.2 var(--body,system-ui)}#nbShrPop a:hover{background:#1b222b}#nbShrPop b{display:block;padding:6px 12px;font:700 10px/1 var(--mono,monospace);letter-spacing:.12em;text-transform:uppercase;color:#9aa3ad}';document.head.appendChild(css);
