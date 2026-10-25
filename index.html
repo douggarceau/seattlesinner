@@ -206,7 +206,7 @@ html body #view .vb i{font:800 10px/1.2 var(--lb)!important;letter-spacing:.1em!
 <style>html body #coverSlot .cvr .cvside .sea-h.nat b{color:#d9a400!important;text-shadow:0 0 10px #d9a400!important;font-size:18px!important;font-weight:900!important;letter-spacing:.14em!important}html body #wireBox .bh b{color:#4a9eff!important;text-shadow:0 0 12px rgba(74,158,255,.85)!important;font-family:"Libre Franklin",system-ui,sans-serif!important;font-size:18px!important;font-weight:900!important;letter-spacing:2.52px!important;text-transform:uppercase!important}</style>
 <style>.cvside .nat-l+.sea-h{margin-top:16px}#coverSlot .cvr>.cimg{align-self:start!important;margin-top:8px!important}.topspr,#seaBanner,.sea-spr,.crime-spr{display:none!important}</style>
 <style>/* ads mothballed */.adbox,.nsad,.lspot.t-ad,.lspot.t-ns,.lspot.t-ns2{display:none!important}</style>
-<script>try{if(/[?&]stats\b/.test(location.search)||sessionStorage.getItem("pvstats")==="1"){sessionStorage.setItem("pvstats","1");document.documentElement.classList.add("stats")}}catch(_){}</script></head>
+<style id="pvrule">.pv{display:none!important}html.stats .pv{display:block!important}</style><script>try{const q=location.search;if(/[?&]nostats\b/.test(q))localStorage.removeItem("pvstats");else if(/[?&]stats\b/.test(q))localStorage.setItem("pvstats","1");if(localStorage.getItem("pvstats")==="1")document.documentElement.classList.add("stats")}catch(_){}</script></head>
 <body>
 <title>The Guitar Doug Report</title>
 <meta name="claude:viewport-fit-sides" content="cover">
