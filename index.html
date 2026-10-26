@@ -2506,7 +2506,7 @@ let t;const q=()=>{clearTimeout(t);t=setTimeout(bal,120)};const v=document.getEl
   const j=await r.json();const n=j&&j.value;if(!seen)try{sessionStorage.setItem(k,'1')}catch(e){}
   set(n);new MutationObserver(()=>{if([...document.querySelectorAll('[id=visits]')].some(v=>v.textContent==='…'))set(n)}).observe(document.body,{childList:true,subtree:true})}catch(e){}})();
 </script>
-<script id="freshJs">(()=>{const H=72*3600e3,COP=new Set(['fremont-sledgehammer-attack-car-recovered']);
+<script id="freshJs">(()=>{const H=72*3600e3,VRX=/\b(murder|homicide|killed|killing|stabb|shooting|gunfire|gunman|assault|sledgehammer|strangl|manslaughter|carjack)/i,COP={has:k=>{const x=STORIES.find(y=>y.slug===k);return !!x&&VRX.test(x.title+' '+x.dek)}};
 const deco=()=>{if(typeof STORIES==='undefined')return;const now=Date.now(),M={};STORIES.forEach(x=>{if(x.posted)M[x.slug]=now-Date.parse(x.posted)<H});
 document.querySelectorAll('[data-story]').forEach(el=>{const k=el.dataset.story;if(M[k]){el.classList.add('is-new');if(COP.has(k))el.classList.add('cop')}else el.classList.remove('is-new','cop')})};
 new MutationObserver(()=>{clearTimeout(window.__fr);window.__fr=setTimeout(deco,50)}).observe(document.documentElement,{childList:true,subtree:true});deco()})();</script></body>
