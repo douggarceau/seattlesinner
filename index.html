@@ -207,6 +207,11 @@ html body #view .vb i{font:800 10px/1.2 var(--lb)!important;letter-spacing:.1em!
 <style>.cvside .nat-l+.sea-h{margin-top:16px}#coverSlot .cvr>.cimg{align-self:start!important;margin-top:8px!important}.topspr,#seaBanner,.sea-spr,.crime-spr{display:none!important}</style>
 <style>/* ads mothballed */.adbox,.nsad,.lspot.t-ad,.lspot.t-ns,.lspot.t-ns2{display:none!important}</style>
 <style id="pvrule">.pv{display:none!important}html.stats .pv{display:block!important}</style><script>try{const q=location.search;if(/[?&]nostats\b/.test(q))localStorage.removeItem("pvstats");else if(/[?&]stats\b/.test(q))localStorage.setItem("pvstats","1");if(localStorage.getItem("pvstats")==="1")document.documentElement.classList.add("stats")}catch(_){}</script><style id="freshCss">
+.freshbox{margin:14px 0;border:2px solid #d0021b;box-shadow:0 0 18px rgba(208,2,27,.35)}
+.freshbox .bh{background:#d0021b;color:#fff}.freshbox .bh b,.freshbox .bh span{color:#fff}
+.frtag{display:inline-block;background:#fff;color:#d0021b;font-weight:900;letter-spacing:.14em;padding:2px 7px;margin-right:8px;border-radius:3px}
+.frgrid{padding:12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+
 [data-story].is-new{position:relative}
 [data-story].is-new::before{content:"NEW";position:absolute;top:8px;right:8px;z-index:3;background:#d0021b;color:#fff;font:800 11px/1 system-ui,sans-serif;letter-spacing:.12em;padding:5px 8px;border-radius:3px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
 [data-story].cop{position:relative;outline:3px solid #e3170a;animation:copGlow 1s steps(1) infinite}
@@ -1290,7 +1295,7 @@ function vFront(){setTimeout(()=>{cwFill();cwLoad()},0);
   const [lead,...rest]=STORIES.filter(x=>x.slug!=='ballard-light-rail-2042-forum');
   const wk=up.filter(e=>e.date<=addDays(todayKey,14)).slice(0,120);
   const WF=BARS.filter(b=>!/^(news|safety|policy)$/.test(b.kind||'')&&!/shoot|stab|kill|murder|homicide|robber|assault|arrest|charged|police|suspect|crash|fire|burglar|theft|stolen|drug|overdose|fentanyl|lawsuit|sued|court|jail|prison|dead|death|body|crime|gun|weapon|layoff|evict/i.test((b.headline||'')+' '+(b.blurb||'')));
-  return `${crimeBanner()}<div class="front">
+  return `${freshBox()}${crimeBanner()}<div class="front">
     <div class="stack">
       <section class="box" id="wireBox" style="--c:#d9a400"><div class="bh"><b>The wire · nightlife &amp; scene</b><span>${WF.length} items</span></div>
         <div class="bwl">${WF.slice(0,40).map(b=>{const k=BK[b.kind]||BK.other;return `<a class="bwr" href="${esc(b.url)}" target="_blank" rel="noopener"><span class="gtag" style="--gc:${k[0]}">${k[1]}</span><span class="bwt"><b>${esc(b.headline)}</b><span>${esc(b.venue)}${b.hood?' · '+esc(b.hood):''} · ${shortDay(b.date)}</span></span></a>`}).join('')||'<div class="empty">The wire is loading.</div>'}</div>
@@ -1614,6 +1619,8 @@ function cwHref(x,cls){const st=cwSt(x);return st?`<a class="${cls}" href="#" da
 window.CSP=fetch('data/crimestories.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(L=>{if(!Array.isArray(L))return;window.CSTORIES=L;const M={};L.forEach(x=>{if(x&&x.item_headline&&x.slug)M[x.item_headline]=x});window.CSBY=M;if(typeof STATE!=='undefined'&&(STATE.view==='front'||STATE.view==='read')&&typeof render==='function')render();else if(typeof cwFill==='function')try{cwFill()}catch(e){}}).catch(()=>{});
 /* Top Crime Story banner: the most serious recent Seattle crime headline from data/crime.json (refreshed by the Crime Watch desk). */
 window.TOPCRIME=null;
+function freshBox(){const H=72*3600e3,n=Date.now();const L=STORIES.filter(x=>x.posted&&n-Date.parse(x.posted)<H).sort((a,b)=>Date.parse(b.posted)-Date.parse(a.posted));
+ if(!L.length)return '';return `<section class="box freshbox" style="--c:#d0021b"><div class="bh"><b><span class="frtag">NEW</span> Just posted</b><span>${L.length} ${L.length===1?'story':'stories'} · last 72 hours</span></div><div class="sgrid frgrid">${L.map(storyCard).join('')}</div></section>`}
 function crimeBanner(){const x=window.TOPCRIME;if(!x)return '<div class="spr crime-spr" style="min-height:64px"><span class="spr-tag">TOP CRIME STORY</span><span><b>Loading…</b></span></div>';
  return `${cwHref(x,'spr crime-spr')}<span class="spr-tag">TOP CRIME STORY</span><span><b>${esc(x.headline)}</b><small>${esc((x.hood?x.hood+' · ':'')+(x.blurb||''))}</small></span><span class="spr-go">Read it →</span></a>`}
 fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items||!d.items.length)return;
