@@ -217,11 +217,18 @@ html body #view .vb i{font:800 10px/1.2 var(--lb)!important;letter-spacing:.1em!
 
 [data-story].is-new{position:relative}
 [data-story].is-new::before{content:"NEW";position:absolute;top:8px;right:8px;z-index:3;background:#d0021b;color:#fff;font:800 11px/1 system-ui,sans-serif;letter-spacing:.12em;padding:5px 8px;border-radius:3px;box-shadow:0 0 0 2px rgba(0,0,0,.35)}
-[data-story].cop{position:relative;outline:3px solid #e3170a;animation:copGlow 1s steps(1) infinite}
-[data-story].cop::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;z-index:3;background:linear-gradient(90deg,#ff1a1a 0 50%,#1e5bff 50% 100%);animation:copBar .5s steps(1) infinite}
-@keyframes copGlow{0%{outline-color:#ff1a1a;box-shadow:0 0 22px 4px rgba(255,26,26,.75)}50%{outline-color:#1e5bff;box-shadow:0 0 22px 4px rgba(30,91,255,.75)}}
-@keyframes copBar{0%{background:linear-gradient(90deg,#ff1a1a 0 50%,#111 50% 100%)}50%{background:linear-gradient(90deg,#111 0 50%,#1e5bff 50% 100%)}}
-@media (prefers-reduced-motion:reduce){[data-story].cop,[data-story].cop::after{animation:none}[data-story].cop{box-shadow:-6px 0 0 #ff1a1a,6px 0 0 #1e5bff}}
+[data-story].cop{position:relative;overflow:hidden;padding-top:26px!important;border:3px solid #ff1a1a;animation:copGlow 1s steps(1) infinite}
+[data-story].cop::after{content:"";position:absolute;left:0;right:0;top:0;height:16px;z-index:3;animation:copBar 1s steps(1) infinite}
+.frv{grid-template-columns:1fr!important;padding-bottom:0}
+.frv [data-story].cop h4{font-size:1.6em}
+.sc.cop[data-story],.sc.cop[data-story] *{color:#fff!important;text-shadow:0 2px 6px #000}
+.frv{padding:30px 40px 6px!important}
+@keyframes copGlow{0%{border-color:#ff2020;background:#e00000;box-shadow:0 0 70px 24px #ff1a1a,0 0 140px 40px rgba(255,0,0,.6)}50%{border-color:#2a6bff;background:#0030ff;box-shadow:0 0 70px 24px #1e5bff,0 0 140px 40px rgba(0,60,255,.6)}}
+@keyframes copBar{0%{background:linear-gradient(90deg,#fff 0 4%,#ff1a1a 4% 46%,#111 46% 54%,#0a0a1a 54% 100%);box-shadow:0 0 40px 14px #ff1a1a}50%{background:linear-gradient(90deg,#1a0a0a 0 46%,#111 46% 54%,#1e5bff 54% 96%,#fff 96% 100%);box-shadow:0 0 40px 14px #1e5bff}}
+@media (prefers-reduced-motion:reduce){[data-story].cop,[data-story].cop::after{animation:none}[data-story].cop::after{background:linear-gradient(90deg,#ff1a1a 0 50%,#1e5bff 50% 100%)}}
+.sgrid .sc.styled.cop[data-story],.sc.cop[data-story]{animation:copGlow 1s steps(1) infinite!important;transform:none!important}
+.sgrid .sc.styled.cop[data-story]::after,.sc.cop[data-story]::after{content:""!important;display:block!important;position:absolute!important;left:0!important;right:0!important;top:0!important;height:22px!important;z-index:3!important;animation:copBar 1s steps(1) infinite!important}
+@media (prefers-reduced-motion:reduce){.sgrid .sc.styled.cop[data-story],.sc.cop[data-story],.sc.cop[data-story]::after{animation:none!important}}
 </style></head>
 <body>
 <title>The Guitar Doug Report</title>
@@ -1623,7 +1630,7 @@ window.CSP=fetch('data/crimestories.json',{cache:'no-cache'}).then(r=>r.ok?r.jso
 /* Top Crime Story banner: the most serious recent Seattle crime headline from data/crime.json (refreshed by the Crime Watch desk). */
 window.TOPCRIME=null;
 function freshBox(){const H=72*3600e3,n=Date.now();const L=STORIES.filter(x=>x.posted&&n-Date.parse(x.posted)<H).sort((a,b)=>Date.parse(b.posted)-Date.parse(a.posted));
- const _d=new Date(),TK=_d.getFullYear()+'-'+String(_d.getMonth()+1).padStart(2,'0')+'-'+String(_d.getDate()).padStart(2,'0');const T=STORIES.find(x=>(x.tonight||[]).includes(TK));const tn=T?`<div class="tonight"><div class="tnbar">TONIGHT</div>${storyCard(T)}</div>`:'';const R=T?L.filter(x=>x!==T):L;if(!R.length&&!T)return '';return `<section class="box freshbox" style="--c:#d0021b"><div class="bh"><b><span class="frtag">NEW</span> Just posted</b><span>${L.length} ${L.length===1?'story':'stories'} · last 72 hours</span></div>${tn}<div class="sgrid frgrid">${R.map(storyCard).join('')}</div></section>`}
+ const _d=new Date(),TK=_d.getFullYear()+'-'+String(_d.getMonth()+1).padStart(2,'0')+'-'+String(_d.getDate()).padStart(2,'0');const T=STORIES.find(x=>(x.tonight||[]).includes(TK));const tn=T?`<div class="tonight"><div class="tnbar">TONIGHT</div>${storyCard(T)}</div>`:'';const VC=x=>x.beat==='violence'||/\b(murder|homicide|stab|stabbed|shooting|shot|killed|assault|attack|sledgehammer|carjack)/i.test(x.title+' '+x.dek);const V=L.filter(x=>VC(x)&&x!==T),R=L.filter(x=>!VC(x)&&x!==T);if(!R.length&&!T&&!V.length)return '';return `<section class="box freshbox" style="--c:#d0021b"><div class="bh"><b><span class="frtag">NEW</span> Just posted</b><span>${L.length} ${L.length===1?'story':'stories'} · last 72 hours</span></div>${V.length?`<div class="sgrid frgrid frv">${V.map(storyCard).join('')}</div>`:''}${tn}<div class="sgrid frgrid">${R.map(storyCard).join('')}</div></section>`}
 function crimeBanner(){const x=window.TOPCRIME;if(!x)return '<div class="spr crime-spr" style="min-height:64px"><span class="spr-tag">TOP CRIME STORY</span><span><b>Loading…</b></span></div>';
  return `${cwHref(x,'spr crime-spr')}<span class="spr-tag">TOP CRIME STORY</span><span><b>${esc(x.headline)}</b><small>${esc((x.hood?x.hood+' · ':'')+(x.blurb||''))}</small></span><span class="spr-go">Read it →</span></a>`}
 fetch('data/crime.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items||!d.items.length)return;
