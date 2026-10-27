@@ -1,6 +1,7 @@
 {
-"asof": "2026-10-25T09:00:00-07:00",
+"asof": "2026-10-27T09:00:00-07:00",
 "items": [
+  {"kind": "shooting", "headline": "One dead in Sunday shooting in Burien; no arrests reported", "blurb": "One person died after a shooting at about 4 a.m. Sunday near First Avenue in Burien, the King County Sheriff's Office said. No arrests had been made as of Monday.", "hood": "Burien", "spd": [], "date": "2026-10-25", "url": "https://www.kiro7.com/news/local/king-county-sheriffs-office-investigates-deadly-shooting-burien/CZPNDRMT2VGNBJLSLHI7YPIYKQ/", "outlet": "KIRO 7"},
   {"kind": "shooting", "headline": "Police find 80 shell casings after Haller Lake shooting, no suspects in custody", "blurb": "Investigators recovered 80 shell casings from five firearms after reports of gunfire shortly after 8:15 a.m. Saturday near North 107th Street and Stone Avenue North, police said. No suspects are in custody.", "hood": "Haller Lake", "spd": [], "date": "2026-10-24", "url": "https://www.kiro7.com/news/local/shots-fired-near-n-107th-st-stone-ave-n-leave-one-injured/7RULHYY64JEZTD2LTVHJ5SOOQE/", "outlet": "KIRO 7"},
   {"kind": "police", "headline": "SPD warns of callers posing as sheriff's deputies to demand payment over fake warrants", "blurb": "A Seattle man reported a caller posing as a King County sheriff's deputy who demanded a bond payment over fake warrants, police said in an Oct. 22 blotter post.", "hood": "Citywide", "spd": [], "date": "2026-10-22", "url": "https://spdblotter.seattle.gov/2026/10/22/psa-scammers-are-posing-as-law-enforcement-and-demanding-money-for-fake-warrants/", "outlet": "SPD Blotter"},
 {
@@ -1168,18 +1169,6 @@
 "date": "2026-09-13",
 "url": "https://hoodline.com/2026/09/rollover-crash-shuts-down-westbound-west-seattle-bridge-traps-occupant/",
 "outlet": "Hoodline"
-},
-{
-"kind": "homicide",
-"headline": "Man, 67, found dead after fight in Westlake Park",
-"blurb": "Police found a 67-year-old man dead in Westlake Park after a passerby called 911 around 6:45 a.m. Sept. 10 to report two men fighting.",
-"hood": "Downtown",
-"spd": [
-"DOWNTOWN COMMERCIAL"
-],
-"date": "2026-09-10",
-"url": "https://spdblotter.seattle.gov/category/investigations/2026-homicides/",
-"outlet": "SPD Blotter"
 }
 ]
 }
