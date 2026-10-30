@@ -1,9 +1,7258 @@
 {
- "asof": "2026-10-29T22:45:00-04:00",
+ "asof": "2026-10-30T09:00:00-07:00",
  "cats": [
+  "Food and drink",
+  "Shops and gifts",
+  "Farms and flowers",
+  "Pets",
+  "Health beauty and fitness",
+  "Boating and recreation",
+  "Lodging",
+  "Automotive",
+  "Building landscaping and home services",
+  "Architecture and creative services",
+  "Finance law property and consulting",
+  "Community and cultural resources",
   "Entertainment venues",
-  "Restaurants",
-  "Local favorites"
+  "Restaurants"
  ],
- "items": []
+ "items": [
+  {
+   "n": "Analog Coffee",
+   "c": "Food and drink",
+   "a": "235 Summit Ave E, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Bright corner cafe focused on precision-brewed single-origin coffee. Manual brewing is the specialty.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "001"
+  },
+  {
+   "n": "Armistice Coffee Company",
+   "c": "Food and drink",
+   "a": "2201 Eastlake Ave E, Eastlake",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Roasts a tight lineup of beans on-site daily and pairs them with pastries from a partner bakery. Other cafes are in Roosevelt and near Pike Place.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "002"
+  },
+  {
+   "n": "Aroom Coffee",
+   "c": "Food and drink",
+   "a": "3401 Fremont Ave N, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese cafe serving phin-drip coffee with sweetened condensed milk, including egg coffee.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "003"
+  },
+  {
+   "n": "Bakery Nouveau (West Seattle)",
+   "c": "Food and drink",
+   "a": "4737 California Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A family-owned French-style bakery famous for its twice-baked almond croissant. Pastries, sandwiches, cakes and loaves fill the cases.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "004"
+  },
+  {
+   "n": "Ben's Bread",
+   "c": "Food and drink",
+   "a": "216 N 70th St, Phinney Ridge",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Neighborhood bakery turning out sourdough made with local grains, plus cookies and pastries. Wednesday is Pizza Night.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "005"
+  },
+  {
+   "n": "Bluebird Ice Cream",
+   "c": "Food and drink",
+   "a": "7415 Greenwood Ave N, Phinney Ridge",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small-batch shop with unusual flavors alongside sodas. Closed Mondays and Tuesdays.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best ice cream in Seattle",
+     "https://secretseattle.co/best-ice-cream-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "006"
+  },
+  {
+   "n": "Byen Bakeri",
+   "c": "Food and drink",
+   "a": "15 Nickerson St, Upper Queen Anne",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small Scandinavian bakery baking rye bread, kringle and Princess Cake. A cozy stop for old-world treats.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "007"
+  },
+  {
+   "n": "Cafe Avole",
+   "c": "Food and drink",
+   "a": "2330 E Union St, Central District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ethiopian coffee roaster known for Yirgacheffe, Guji and Sidamo beans. Works with local farmers.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "008"
+  },
+  {
+   "n": "Caffe D'arte",
+   "c": "Food and drink",
+   "a": "99 Yesler Way, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian-style roaster that roasts single origins separately before blending them. A staple for espresso drinkers downtown.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "009"
+  },
+  {
+   "n": "Caffe Umbria",
+   "c": "Food and drink",
+   "a": "5407 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Roaster whose roots trace to a family roastery in Perugia, Italy. Also has cafes in Pioneer Square and on Olive Way.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "010"
+  },
+  {
+   "n": "Caffe Vita at KEXP",
+   "c": "Food and drink",
+   "a": "472 1st Ave N, Uptown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Cafe inside the KEXP radio headquarters with a view into the live performance studio. A natural stop for music fans.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "011"
+  },
+  {
+   "n": "Cardoon",
+   "c": "Food and drink",
+   "a": "6211 15th Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Contemporary Ballard cafe pairing rotating single-origin coffee with food, in a Scandinavian-style space.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "012"
+  },
+  {
+   "n": "Chukar Cherries",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Dried fruit, hand-dipped chocolates and gourmet gift items.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "013"
+  },
+  {
+   "n": "Coffeeholic House",
+   "c": "Food and drink",
+   "a": "8525 Greenwood Ave N, Greenwood",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese coffeehouse using Vietnam-grown Robusta and traditional phin-drip brewing. A second shop is on S Hudson St.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "014"
+  },
+  {
+   "n": "Creamy Cone Cafe",
+   "c": "Food and drink",
+   "a": "9433 Rainier Ave S, Rainier Beach",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Family-run cafe with espresso, ice cream and house-made waffle cones, known for its affogato. Closed Sundays and Mondays.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best ice cream in Seattle",
+     "https://secretseattle.co/best-ice-cream-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "015"
+  },
+  {
+   "n": "Crepe de France",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Creperie open since 1991, serving sweet and savory crepes with an espresso bar.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "016"
+  },
+  {
+   "n": "Daily Dozen Doughnut Company",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Mini-donuts made fresh on-site, with coffee and other sweet treats. A market classic.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "017"
+  },
+  {
+   "n": "Day Made Kaffe Bar",
+   "c": "Food and drink",
+   "a": "128 S Jackson St, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Copenhagen-inspired coffee bar with lighter roasts, manual brewing and Danish-influenced food.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "018"
+  },
+  {
+   "n": "DeLaurenti Specialty Food and Wine",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian specialty shop with cheeses, meats, imported groceries and a light-bites cafe.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "019"
+  },
+  {
+   "n": "Espresso Vivace",
+   "c": "Food and drink",
+   "a": "532 Broadway Ave E, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Long-running espresso specialist with a Northern Italian roasting style and a loyal following. Sidewalk stands and cafes are part of its Capitol Hill story.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ],
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "020"
+  },
+  {
+   "n": "Fremont Coffee Company",
+   "c": "Food and drink",
+   "a": "459 N 36th St, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Cozy coffee house in a converted home that roasts small batches on-site.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "021"
+  },
+  {
+   "n": "Freya Bakery & Cafe",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Artisan breads, pastries, coffee and light fare inside the market.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ],
+    [
+     "Pike Place Market: specialty foods vendors",
+     "https://www.pikeplacemarket.org/vendor_categories/specialty-foods"
+    ]
+   ],
+   "cl": false,
+   "i": "022"
+  },
+  {
+   "n": "Friends of Carmela",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Family-owned deli with sandwiches, salads, a hot bar and desserts.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ],
+    [
+     "Pike Place Market: specialty foods vendors",
+     "https://www.pikeplacemarket.org/vendor_categories/specialty-foods"
+    ]
+   ],
+   "cl": false,
+   "i": "023"
+  },
+  {
+   "n": "Fuji Bakery (Queen Anne)",
+   "c": "Food and drink",
+   "a": "1030 Elliott Ave W, Queen Anne",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Japanese artisan bakery with French influences, known for ube malasadas and almond croissants. Savory items like kare-pan round out the menu.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "024"
+  },
+  {
+   "n": "Fulcrum Coffee",
+   "c": "Food and drink",
+   "a": "590 Bell St, Belltown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Premium single-origin roaster with a cafe in Belltown. The roastery is on Ohio Ave S.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "025"
+  },
+  {
+   "n": "Full Tilt Ice Cream",
+   "c": "Food and drink",
+   "a": "5041 Rainier Ave S #105, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Retro ice cream shop with arcade games. Closed Mondays.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best ice cream in Seattle",
+     "https://secretseattle.co/best-ice-cream-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "026"
+  },
+  {
+   "n": "Ghost Note Coffee",
+   "c": "Food and drink",
+   "a": "1621 12th Ave, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Relaxed neighborhood gathering spot with a rotating daily batch brew and local pastries.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "027"
+  },
+  {
+   "n": "Hellenika Cultured Creamery",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Cultured gelato and dairy made from locally sourced ingredients.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ],
+    [
+     "Pike Place Market: specialty foods vendors",
+     "https://www.pikeplacemarket.org/vendor_categories/specialty-foods"
+    ]
+   ],
+   "cl": false,
+   "i": "028"
+  },
+  {
+   "n": "Hello Em Viet Coffee and Roastery",
+   "c": "Food and drink",
+   "a": "1227 S Weller St, International District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese coffee shop buying direct-trade beans from farmers in Vietnam. It also serves breakfast sandwiches.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "029"
+  },
+  {
+   "n": "Herkimer Coffee",
+   "c": "Food and drink",
+   "a": "7320 Greenwood Ave N, Phinney Ridge",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Roasts single origins and blends fresh daily with a direct-trade approach. Swiss Water decaf is also on offer.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "030"
+  },
+  {
+   "n": "Hood Famous Cafe & Bar",
+   "c": "Food and drink",
+   "a": "504 5th Ave S #132, International District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Filipino-inspired cafe known for its ube latte and seasonal drinks with pandan and calamansi flavors.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "031"
+  },
+  {
+   "n": "Husky Deli",
+   "c": "Food and drink",
+   "a": "4721 California Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Family-owned deli serving more than 40 ice cream flavors, milkshakes and sandwiches. Open daily.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best ice cream in Seattle",
+     "https://secretseattle.co/best-ice-cream-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "032"
+  },
+  {
+   "n": "indi chocolate",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small-batch, single-origin dark chocolate, plus cacao-based teas and rubs.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "033"
+  },
+  {
+   "n": "Larsen's Bakery",
+   "c": "Food and drink",
+   "a": "8000 24th Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Danish bakery serving Ballard since the 1970s. Its big kringle and smorkage are the calling cards.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "034"
+  },
+  {
+   "n": "Lazy Cow Bakery",
+   "c": "Food and drink",
+   "a": "3418 Fremont Ave N, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fully plant-based bakery making custom cakes and sweets. It also runs a community fridge and food pantry.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "035"
+  },
+  {
+   "n": "Lighthouse Roasters",
+   "c": "Food and drink",
+   "a": "400 N 43rd St, Wallingford",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small-batch roaster operating since 1993, with a vintage roasting machine as its centerpiece.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "036"
+  },
+  {
+   "n": "MarketSpice",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tea and spice shop with roots in the market dating to 1911, sold in bulk or prepackaged.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "037"
+  },
+  {
+   "n": "Milstead & Co",
+   "c": "Food and drink",
+   "a": "770 N 34th St, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Multi-roaster cafe with a constantly changing bean selection and manual brewing methods.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "038"
+  },
+  {
+   "n": "Monorail Espresso",
+   "c": "Food and drink",
+   "a": "510 Pike St, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Walk-up espresso window in an alley serving a simple menu since 1980. There is no indoor seating.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "039"
+  },
+  {
+   "n": "Onda Origins",
+   "c": "Food and drink",
+   "a": "8011 Rainier Ave S, Rainier Valley",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ethiopian-focused, direct-trade coffee shop that works straight with producers. Coffee ceremonies are offered by appointment.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ],
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "040"
+  },
+  {
+   "n": "Saint Bread",
+   "c": "Food and drink",
+   "a": "1421 NE Boat St, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Waterfront bakery near the UW blending Japanese, Scandinavian and French baking. The New York Times named it among the country's best bakeries in 2024.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "041"
+  },
+  {
+   "n": "Sea Wolf Bakers (Fremont)",
+   "c": "Food and drink",
+   "a": "3617 Stone Way N, Suite 101, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Artisan breads, oversized cookies and sweet and savory pastries. A shaded patio makes it a nice place to sit.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "042"
+  },
+  {
+   "n": "Shug's Soda Fountain and Ice Cream",
+   "c": "Food and drink",
+   "a": "1525 1st Ave, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Old-school soda fountain with local ice cream, house-made sodas and sundaes. A second shop is in West Seattle.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best ice cream in Seattle",
+     "https://secretseattle.co/best-ice-cream-seattle/"
+    ],
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "043"
+  },
+  {
+   "n": "Sosio's Fruit and Produce",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Produce market with more than 120 items daily, many available to sample.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ],
+    [
+     "Pike Place Market: specialty foods vendors",
+     "https://www.pikeplacemarket.org/vendor_categories/specialty-foods"
+    ]
+   ],
+   "cl": false,
+   "i": "044"
+  },
+  {
+   "n": "Temple Pastries",
+   "c": "Food and drink",
+   "a": "2524 S Jackson St #104, Central District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Known for decorated cakes, macarons and laminated pastries. An order window offers sandwiches and, in summer, soft serve.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: best Seattle bakeries",
+     "https://secretseattle.co/best-seattle-bakeries/"
+    ]
+   ],
+   "cl": false,
+   "i": "045"
+  },
+  {
+   "n": "The Burnt Coffee",
+   "c": "Food and drink",
+   "a": "3232 15th Ave W, Suite 101, Interbay",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small-batch roaster celebrating Africa as coffee's birthplace, sourcing from Uganda, Kenya, Ethiopia and Tanzania.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: coffee roasters in Seattle",
+     "https://tastingtable.com/1056819/best-coffee-roasters-in-seattle-that-arent-starbucks"
+    ]
+   ],
+   "cl": false,
+   "i": "046"
+  },
+  {
+   "n": "The Cheese Box",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Specialty shop stocking artisanal and imported cheeses.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "047"
+  },
+  {
+   "n": "The Crumpet Shop",
+   "c": "Food and drink",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Freshly made crumpets with sweet or savory toppings, served with beverages.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "048"
+  },
+  {
+   "n": "URL Coffee",
+   "c": "Food and drink",
+   "a": "600 Broadway, First Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Neighborhood favorite with reliable Wi-Fi and outlets, known for its Walk to Work latte.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "049"
+  },
+  {
+   "n": "Victrola Coffee",
+   "c": "Food and drink",
+   "a": "411 15th Ave E, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Established Seattle roaster with roomy seating and phonograph-themed decor.",
+   "nt": [],
+   "s": [
+    [
+     "Talk of the House: best coffee shops in Seattle (Aug 2026)",
+     "https://www.talkofthehouse.com/best-coffee-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "050"
+  },
+  {
+   "n": "Ada's Technical Books & Cafe",
+   "c": "Shops and gifts",
+   "a": "425 15th Ave E, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://adasbooks.com/",
+   "wl": "Website",
+   "b": "Bookstore, cafe and community space known for nonfiction and sci-fi, with book clubs and subscriptions.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "051"
+  },
+  {
+   "n": "Al's Music Games and Video",
+   "c": "Shops and gifts",
+   "a": "4547 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Buys, sells and trades music, games and video since 1974.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "052"
+  },
+  {
+   "n": "Artist & Craftsman Supply",
+   "c": "Shops and gifts",
+   "a": "4350 8th Ave NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Art and craft supplies from painting and sculpting to bookbinding and origami.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "053"
+  },
+  {
+   "n": "BasilicArt",
+   "c": "Shops and gifts",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Murals, paintings and clothing designs by artist Stacey Sterling with ocean themes.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "054"
+  },
+  {
+   "n": "Couth Buzzard Books",
+   "c": "Shops and gifts",
+   "a": "8310 Greenwood Ave N, Greenwood",
+   "p": "",
+   "e": "",
+   "w": "https://buonobuzzard.com/",
+   "wl": "Website",
+   "b": "New and used books since 1988, with a cafe, events and live entertainment. Community support kept it going in 2023.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "055"
+  },
+  {
+   "n": "Creo Studio Jewelry",
+   "c": "Shops and gifts",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Handmade mixed-metal jewelry by designer Caroline Davis.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "056"
+  },
+  {
+   "n": "Crossroads Trading",
+   "c": "Shops and gifts",
+   "a": "4300 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Consignment store with new and used clothing, shoes and accessories.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "057"
+  },
+  {
+   "n": "Darras",
+   "c": "Shops and gifts",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hand screen-printed apparel, including T-shirts and hoodies.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "058"
+  },
+  {
+   "n": "Daybreak Records",
+   "c": "Shops and gifts",
+   "a": "4323 Fremont Ave N, Fremont",
+   "p": "206-268-0702",
+   "e": "",
+   "w": "http://www.daybreakrecordstore.com/",
+   "wl": "Website",
+   "b": "Independent Fremont-area record shop with an excellent shopper rating.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "059"
+  },
+  {
+   "n": "Dot & Dimension",
+   "c": "Shops and gifts",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hand-carved linocut prints inspired by underwater photography.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "060"
+  },
+  {
+   "n": "DrinkingStraws.Glass",
+   "c": "Shops and gifts",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Reusable glass drinking straws and carrying cases from a husband-and-wife team.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Market card directory: food and dining",
+     "https://pike-place-market.yiftee.com/explore-businesses/food-and-dining"
+    ]
+   ],
+   "cl": false,
+   "i": "061"
+  },
+  {
+   "n": "Dusty Strings",
+   "c": "Shops and gifts",
+   "a": "3406 Fremont Ave N, Fremont",
+   "p": "(206) 634-1662",
+   "e": "music@dustystrings.com",
+   "w": "https://store.dustystrings.com/",
+   "wl": "Website",
+   "b": "Instrument shop, school and repair shop in Fremont, open Tuesday through Saturday. Its harp and dulcimer makers work from a separate shop in Seattle.",
+   "nt": [],
+   "s": [
+    [
+     "Dusty Strings: contact",
+     "https://store.dustystrings.com/pages/contact"
+    ]
+   ],
+   "cl": false,
+   "i": "062"
+  },
+  {
+   "n": "Easy Street Records & Cafe",
+   "c": "Shops and gifts",
+   "a": "4559 California Ave SW, West Seattle",
+   "p": "206-938-3279",
+   "e": "",
+   "w": "https://easystreetonline.com/",
+   "wl": "Website",
+   "b": "West Seattle music landmark pairing a deep record selection with a cafe. Tops the 2026 ranking of local record shops by Google rating.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "063"
+  },
+  {
+   "n": "Elliott Bay Book Company",
+   "c": "Shops and gifts",
+   "a": "1521 10th Ave, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://www.elliottbaybook.com/",
+   "wl": "Website",
+   "b": "Seattle's largest independent bookstore, with over 150,000 titles, author readings and an attached cafe.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "064"
+  },
+  {
+   "n": "Emerald City Guitars",
+   "c": "Shops and gifts",
+   "a": "South Washington St, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Opened in 1996, it is regarded as a top vintage guitar shop, specializing in American instruments from the 1950s and 1960s. In-house techs handle repairs, restorations and setups.",
+   "nt": [],
+   "s": [
+    [
+     "KOMO: how Emerald City Guitars became a top vintage guitar shop",
+     "https://komonews.com/news/instagram/how-emerald-city-guitars-became-one-of-the-worlds-best-vintage-guitar-shops-seattle-jay-boone-trevor-boone-music-legends-pnw"
+    ]
+   ],
+   "cl": false,
+   "i": "065"
+  },
+  {
+   "n": "Fancy Plants Seattle",
+   "c": "Shops and gifts",
+   "a": "5505 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Houseplants and gifts.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "066"
+  },
+  {
+   "n": "Fat Cat Records",
+   "c": "Shops and gifts",
+   "a": "4206 Stone Way N, Wallingford",
+   "p": "206-547-5799",
+   "e": "",
+   "w": "https://www.fatcatrecordsus.com/",
+   "wl": "Website",
+   "b": "Independent shop with one of the highest shopper ratings on the 2026 list.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "067"
+  },
+  {
+   "n": "Golden Oldies Records",
+   "c": "Shops and gifts",
+   "a": "201 NE 45th St, Wallingford",
+   "p": "206-453-5921",
+   "e": "",
+   "w": "https://www.goldenoldiesrecords.net/",
+   "wl": "Website",
+   "b": "Independent shop for classic records near the U District.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "068"
+  },
+  {
+   "n": "Hex Enduction Records & Books",
+   "c": "Shops and gifts",
+   "a": "12330 1/2 Lake City Way NE, Lake City",
+   "p": "206-906-9626",
+   "e": "",
+   "w": "https://www.hexenduction.com/",
+   "wl": "Website",
+   "b": "Independent record shop that also sells books, in Lake City.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "069"
+  },
+  {
+   "n": "Innervisions",
+   "c": "Shops and gifts",
+   "a": "4548 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Posters, records, local artists' work and custom T-shirts.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "070"
+  },
+  {
+   "n": "Jive Time Records",
+   "c": "Shops and gifts",
+   "a": "3506 Fremont Ave N, Fremont",
+   "p": "206-632-5483",
+   "e": "",
+   "w": "http://www.jivetimerecords.com/",
+   "wl": "Website",
+   "b": "Independent vinyl shop on Fremont Avenue with a devoted following.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "071"
+  },
+  {
+   "n": "Left Bank Books Collective",
+   "c": "Shops and gifts",
+   "a": "92 Pike St, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "https://www.leftbankbooks.com/",
+   "wl": "Website",
+   "b": "Small shop with over 10,000 books, specializing in independent and small-press titles.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "072"
+  },
+  {
+   "n": "Lucky Vintage",
+   "c": "Shops and gifts",
+   "a": "4742 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Sustainable fashion shop on the Ave.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "073"
+  },
+  {
+   "n": "Magus Books",
+   "c": "Shops and gifts",
+   "a": "1408 NE 42nd St, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Independent used bookstore with over 70,000 used and rare books.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "074"
+  },
+  {
+   "n": "Neptune Music Co",
+   "c": "Shops and gifts",
+   "a": "4344 Brooklyn Ave NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Music store near the UW campus.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "075"
+  },
+  {
+   "n": "Open Books: A Poem Emporium",
+   "c": "Shops and gifts",
+   "a": "108 Cherry St, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "https://open-books-a-poem-emporium.myshopify.com/",
+   "wl": "Website",
+   "b": "Seattle's poetry-only bookstore selling new, used and out-of-print volumes. Recently moved to Pioneer Square.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "076"
+  },
+  {
+   "n": "Paper Boat Booksellers",
+   "c": "Shops and gifts",
+   "a": "6040 California Ave SW, Suite A, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.paperboatbooksellers.com/",
+   "wl": "Website",
+   "b": "Family-owned West Seattle shop with a wide range of books and ongoing events.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "077"
+  },
+  {
+   "n": "Pink Gorilla Games",
+   "c": "Shops and gifts",
+   "a": "4341 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Video game store with new and retro games.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "078"
+  },
+  {
+   "n": "Queen Anne Book Company",
+   "c": "Shops and gifts",
+   "a": "1811 Queen Anne Ave N, Upper Queen Anne",
+   "p": "",
+   "e": "",
+   "w": "https://www.qabookco.com/",
+   "wl": "Website",
+   "b": "Bookstore with an outdoor patio and a cozy interior, next to Queen Anne Coffee Company.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "079"
+  },
+  {
+   "n": "R+E Cycles (Rodriguez Bicycle Company)",
+   "c": "Shops and gifts",
+   "a": "5627 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Custom and tandem bicycles, plus repairs.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "080"
+  },
+  {
+   "n": "Red Light Vintage & Costume",
+   "c": "Shops and gifts",
+   "a": "4560 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vintage clothing since 1996, plus costumes.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "081"
+  },
+  {
+   "n": "Royal Records",
+   "c": "Shops and gifts",
+   "a": "8 W Roy St, Queen Anne",
+   "p": "206-281-5275",
+   "e": "",
+   "w": "http://royalrecordshop.com/",
+   "wl": "Website",
+   "b": "Independent Queen Anne record shop with a near-perfect shopper rating.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "082"
+  },
+  {
+   "n": "Seattle Records",
+   "c": "Shops and gifts",
+   "a": "5521 University Way NE, University District",
+   "p": "206-384-3728",
+   "e": "",
+   "w": "https://seattlerecords.net/",
+   "wl": "Website",
+   "b": "Sells records, CDs, cassettes, band shirts, turntables and speakers on the Ave.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "083"
+  },
+  {
+   "n": "Secret Garden Books",
+   "c": "Shops and gifts",
+   "a": "2214 NW Market St, Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://www.secretgardenbooks.com/",
+   "wl": "Website",
+   "b": "Pet-friendly Ballard shop in business for 40-plus years, known for new, used and antique children's books.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "084"
+  },
+  {
+   "n": "Selector Records & Apparel",
+   "c": "Shops and gifts",
+   "a": "2310 E Madison St, Madison Valley",
+   "p": "206-867-0877",
+   "e": "",
+   "w": "https://www.instagram.com/selectorseattle/",
+   "wl": "Website",
+   "b": "Independent record shop that also sells apparel on East Madison.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "085"
+  },
+  {
+   "n": "Shiga's Import Shop",
+   "c": "Shops and gifts",
+   "a": "4306 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Asian ceramics, home accessories and kimonos.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "086"
+  },
+  {
+   "n": "Silver Platters (SoDo)",
+   "c": "Shops and gifts",
+   "a": "2930 1st Ave S, SoDo",
+   "p": "206-283-3472",
+   "e": "",
+   "w": "http://www.silverplatters.com/",
+   "wl": "Website",
+   "b": "Independent shop with new and used music in SoDo. Highly rated by shoppers.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "087"
+  },
+  {
+   "n": "Singles Going Steady",
+   "c": "Shops and gifts",
+   "a": "2219 2nd Ave, Belltown",
+   "p": "206-441-7396",
+   "e": "",
+   "w": "https://www.facebook.com/pages/Singles-Going-Steady/122403334440112",
+   "wl": "Website",
+   "b": "Belltown punk-focused record store, also stocking rockabilly and indie rock.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "088"
+  },
+  {
+   "n": "Sonic Boom Records",
+   "c": "Shops and gifts",
+   "a": "2209 NW Market St, Ballard",
+   "p": "206-297-2666",
+   "e": "",
+   "w": "http://www.sonicboomrecords.com/",
+   "wl": "Website",
+   "b": "Ballard record store beloved by local collectors. Independent and well reviewed.",
+   "nt": [],
+   "s": [
+    [
+     "Keep Them Spinning: best record stores in Seattle (2026 guide)",
+     "https://keepthemspinning.com/blogs/record-stores/best-record-stores-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "089"
+  },
+  {
+   "n": "Ted Brown Music",
+   "c": "Shops and gifts",
+   "a": "1006 NE 50th St, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Instruments, accessories, lessons, repairs and sheet music.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "090"
+  },
+  {
+   "n": "Third Place Books (Ravenna)",
+   "c": "Shops and gifts",
+   "a": "NE corner of 20th Ave NE and 65th St, Ravenna",
+   "p": "",
+   "e": "",
+   "w": "https://www.thirdplacebooks.com/",
+   "wl": "Website",
+   "b": "General-interest bookseller selling new, used and bargain books, with events and food and drink.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: independent bookstores in Seattle",
+     "https://secretseattle.co/independent-bookstores-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "091"
+  },
+  {
+   "n": "University Book Store",
+   "c": "Shops and gifts",
+   "a": "4326 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Campus bookstore run for UW students since 1900, selling textbooks and general books.",
+   "nt": [],
+   "s": [
+    [
+     "U District Seattle: shops directory",
+     "https://udistrictseattle.com/business-category/shops"
+    ]
+   ],
+   "cl": false,
+   "i": "092"
+  },
+  {
+   "n": "Ballard Farmers Market",
+   "c": "Farms and flowers",
+   "a": "5345 Ballard Ave NW, Seattle, WA 98107 (Ballard)",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Sunday farmers market in the heart of Ballard, open 9 a.m. to 2 p.m., with produce, flowers, prepared foods and more. Google reviewers rate it 4.8 on nearly 1,900 reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: flower shops and farmers markets",
+     "https://secretseattle.co/flower-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "093"
+  },
+  {
+   "n": "LaVassar Florists",
+   "c": "Farms and flowers",
+   "a": "7530 20th Ave NE, Seattle, WA 98115 (Ravenna)",
+   "p": "(206) 522-1147",
+   "e": "",
+   "w": "https://lavassar.com",
+   "wl": "Website",
+   "b": "A North Seattle florist that Curiocity says has served the city since the 1960s. Customers rate it 4.9 and like emailed photos of finished bouquets.",
+   "nt": [],
+   "s": [
+    [
+     "Curiocity: best florists in Seattle",
+     "https://curiocity.com/best-florists-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "094"
+  },
+  {
+   "n": "Pike Place Market",
+   "c": "Farms and flowers",
+   "a": "85 Pike St, Seattle, WA 98101 (Downtown Waterfront)",
+   "p": "(206) 682-7453",
+   "e": "",
+   "w": "https://www.pikeplacemarket.org/",
+   "wl": "Website",
+   "b": "Seattle's historic public market, open daily, with produce stalls, fish vendors and many year-round flower sellers. Secret Seattle points to its market directory for bouquets.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: flower shops in Seattle",
+     "https://secretseattle.co/flower-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "095"
+  },
+  {
+   "n": "University District Farmers Market",
+   "c": "Farms and flowers",
+   "a": "5031 University Way NE, Seattle, WA 98105 (University District)",
+   "p": "(206) 632-5234",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Saturday farmers market, open 9 a.m. to 2 p.m., described by reviewers as the city's oldest, running since 1993. Shoppers find produce, meat, dairy, baked goods and hot food.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: flower shops and farmers markets",
+     "https://secretseattle.co/flower-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "096"
+  },
+  {
+   "n": "West Seattle Farmers Market",
+   "c": "Farms and flowers",
+   "a": "SW Alaska St & California Ave SW, Seattle, WA 98116 (West Seattle Junction)",
+   "p": "(206) 632-5234",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Sunday market in the West Seattle Junction, open 10 a.m. to 2 p.m. Visitors find produce, flowers, honey, cider and baked goods.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: flower shops and farmers markets",
+     "https://secretseattle.co/flower-shops-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "097"
+  },
+  {
+   "n": "Martha's Garden",
+   "c": "Pets",
+   "a": "310 9th Ave N, Seattle, WA 98109 (South Lake Union)",
+   "p": "(206) 466-2897",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A small-group dog daycare and boarding business near South Lake Union that sends daily report cards. Owners rate it 4.8 and appreciate the open-room overnight setup.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle pet boarding",
+     "https://lantern.llc/wa/seattle/pet-services/pet-boarding"
+    ]
+   ],
+   "cl": false,
+   "i": "098"
+  },
+  {
+   "n": "PawsVIP West Seattle",
+   "c": "Pets",
+   "a": "9064 Delridge Way SW, Seattle, WA 98106 (Delridge)",
+   "p": "(425) 230-0344",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A dog daycare and boarding facility on Delridge Way with long hours, open from 5 a.m. to 9 p.m. daily. It earns a 4.9 rating, with owners noting regular photo updates.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle pet boarding",
+     "https://lantern.llc/wa/seattle/pet-services/pet-boarding"
+    ]
+   ],
+   "cl": false,
+   "i": "099"
+  },
+  {
+   "n": "Seattle Canine Club South Lake Union",
+   "c": "Pets",
+   "a": "411 Westlake Ave N, Seattle, WA 98109 (South Lake Union)",
+   "p": "(206) 222-6667",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A South Lake Union branch offering grooming for dogs and cats plus daycare, open weekdays. Owners of anxious pets say the groomers are gentle.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle dog grooming",
+     "https://lantern.llc/wa/seattle/pet-services/dog-grooming"
+    ]
+   ],
+   "cl": false,
+   "i": "100"
+  },
+  {
+   "n": "Ananya Spa",
+   "c": "Health beauty and fitness",
+   "a": "119 Fairview Ave N, Seattle, WA 98109 (South Lake Union)",
+   "p": "(206) 217-1744",
+   "e": "",
+   "w": "https://ananyaspaseattle.com",
+   "wl": "Website",
+   "b": "A South Lake Union day spa known for massage and facials, now in a newer space with a sauna. It carries a 4.3 rating on over 260 Google reviews and is open daily.",
+   "nt": [],
+   "s": [
+    [
+     "Curiocity: best spas in Seattle",
+     "https://curiocity.com/guide-10-of-the-best-spas-in-seattle-for-a-relaxing-day/"
+    ]
+   ],
+   "cl": false,
+   "i": "101"
+  },
+  {
+   "n": "Banya 5",
+   "c": "Health beauty and fitness",
+   "a": "217 9th Ave N, Seattle, WA 98109 (South Lake Union)",
+   "p": "(206) 262-1234",
+   "e": "",
+   "w": "https://banya5.com",
+   "wl": "Website",
+   "b": "A Russian-style bathhouse near South Lake Union with a sauna, eucalyptus steam room and cold plunge. Rated 4.5 on about 770 Google reviews, it also offers body scrubs and massage and is open Tuesday through Sunday.",
+   "nt": [],
+   "s": [
+    [
+     "Curiocity: best spas in Seattle",
+     "https://curiocity.com/guide-10-of-the-best-spas-in-seattle-for-a-relaxing-day/"
+    ]
+   ],
+   "cl": false,
+   "i": "102"
+  },
+  {
+   "n": "Edgeworks Climbing Seattle",
+   "c": "Health beauty and fitness",
+   "a": "2839 NW Market St, Seattle, WA 98107 (Ballard)",
+   "p": "(206) 781-9828",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "The Ballard climbing gym formerly known as Stone Gardens, with an outdoor wall beside the Burke-Gilman Trail. Climbers rate it 4.6 on more than 600 Google reviews and like the friendly staff and varied routes.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Met: Seattle climbing gyms",
+     "https://www.seattlemet.com/articles/best-seattle-rock-climbing-gyms-bouldering"
+    ]
+   ],
+   "cl": false,
+   "i": "103"
+  },
+  {
+   "n": "Little Red Day Spa",
+   "c": "Health beauty and fitness",
+   "a": "3200 Airport Way S Bldg 12, Seattle, WA 98134 (Georgetown)",
+   "p": "(206) 963-0633",
+   "e": "",
+   "w": "https://littlereddayspa.com",
+   "wl": "Website",
+   "b": "A couples-oriented day spa set beneath the old Rainier Brewery in Georgetown, rated 4.7 on about 700 Google reviews. Guests describe massage, facials, a themed art suite and an overnight suite.",
+   "nt": [],
+   "s": [
+    [
+     "Curiocity: best spas in Seattle",
+     "https://curiocity.com/guide-10-of-the-best-spas-in-seattle-for-a-relaxing-day/"
+    ]
+   ],
+   "cl": false,
+   "i": "104"
+  },
+  {
+   "n": "Momentum Indoor Climbing SoDo",
+   "c": "Health beauty and fitness",
+   "a": "2759 1st Ave S, Seattle, WA 98134 (SoDo)",
+   "p": "(206) 588-1510",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A SoDo climbing gym with bouldering, a weights and cardio room, classes and youth camps. Visitors rate it 4.8 on about 750 Google reviews and note a welcoming crowd.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Met: Seattle climbing gyms",
+     "https://www.seattlemet.com/articles/best-seattle-rock-climbing-gyms-bouldering"
+    ]
+   ],
+   "cl": false,
+   "i": "105"
+  },
+  {
+   "n": "Olympic Athletic Club",
+   "c": "Health beauty and fitness",
+   "a": "5301 Leary Ave NW, Seattle, WA 98107 (Ballard)",
+   "p": "(206) 789-5010",
+   "e": "",
+   "w": "https://www.olympicathleticclub.com/",
+   "wl": "Website",
+   "b": "An upscale Ballard athletic club with a lap pool, basketball court, strength floors on three levels, sauna and steam room. Group classes are included with membership.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: gyms in Seattle",
+     "https://secretseattle.co/gyms-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "106"
+  },
+  {
+   "n": "Penelope & The Beauty Bar",
+   "c": "Health beauty and fitness",
+   "a": "411 University St, Seattle, WA 98101 (Downtown, inside the Fairmont Olympic)",
+   "p": "(206) 438-1750",
+   "e": "",
+   "w": "https://penelopeandthebeautybar.com",
+   "wl": "Website",
+   "b": "The spa and salon inside the Fairmont Olympic Hotel, offering massage, facials, hair and nail services. It is open daily from 8:30 a.m. and has a 4.4 rating on about 500 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Curiocity: best spas in Seattle",
+     "https://curiocity.com/guide-10-of-the-best-spas-in-seattle-for-a-relaxing-day/"
+    ]
+   ],
+   "cl": false,
+   "i": "107"
+  },
+  {
+   "n": "Seattle Bouldering Project Poplar",
+   "c": "Health beauty and fitness",
+   "a": "900 Poplar Pl S, Seattle, WA 98144 (Central District)",
+   "p": "(206) 299-2300",
+   "e": "",
+   "w": "https://boulderingproject.com/market/seattle-washington/",
+   "wl": "Website",
+   "b": "A big bouldering gym on two floors with a cafe, sauna, yoga and fitness classes, and a children's climbing area. It is rated 4.5 on about 780 Google reviews and opens early every day.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: gyms in Seattle",
+     "https://secretseattle.co/gyms-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "108"
+  },
+  {
+   "n": "Vertical World Seattle",
+   "c": "Health beauty and fitness",
+   "a": "2330 W Commodore Way, Seattle, WA 98199 (Interbay)",
+   "p": "(206) 283-4497",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "One of Seattle's original indoor climbing gyms, founded in 1987 according to Seattle Met. It offers rope and auto-belay climbing with separate areas for kids and beginners, and has a 4.6 rating on over 600 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Met: Seattle climbing gyms",
+     "https://www.seattlemet.com/articles/best-seattle-rock-climbing-gyms-bouldering"
+    ]
+   ],
+   "cl": false,
+   "i": "109"
+  },
+  {
+   "n": "Agua Verde Cafe & Paddle Club",
+   "c": "Boating and recreation",
+   "a": "1303 NE Boat St, University District",
+   "p": "206-545-8570",
+   "e": "",
+   "w": "https://www.aguaverde.com",
+   "wl": "Website",
+   "b": "Kayak and paddleboard rentals on Lake Union and Union Bay sit next to a Mexican restaurant. Rentals run in the warmer months.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "110"
+  },
+  {
+   "n": "Alki Kayak Tours",
+   "c": "Boating and recreation",
+   "a": "1660 Harbor Ave SW, West Seattle (Seacrest Park)",
+   "p": "206-953-0237",
+   "e": "",
+   "w": "https://www.kayakalki.com",
+   "wl": "Website",
+   "b": "Guided saltwater tours and kayak rentals launch near the West Seattle water taxi dock. Reservations are required.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Seattle Parks water access guide (2025)",
+     "https://parkways.seattle.gov/2025/07/16/get-out-on-the-water-without-your-own-boat/"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "111"
+  },
+  {
+   "n": "Ballard Kayak & Paddleboard",
+   "c": "Boating and recreation",
+   "a": "Shilshole Bay, Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://ballardkayak.com",
+   "wl": "Website",
+   "b": "Kayak and paddleboard rentals with open-water views of Shilshole Bay. Reservations are required.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ]
+   ],
+   "cl": false,
+   "i": "112"
+  },
+  {
+   "n": "Green Lake Boathouse",
+   "c": "Boating and recreation",
+   "a": "7351 E Green Lake Dr N, Green Lake",
+   "p": "206-527-0171",
+   "e": "",
+   "w": "https://greenlakeboathouse.com",
+   "wl": "Website",
+   "b": "Rents kayaks, paddleboats, rowboats and paddleboards on Green Lake, first come, first served.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Seattle Parks water access guide (2025)",
+     "https://parkways.seattle.gov/2025/07/16/get-out-on-the-water-without-your-own-boat/"
+    ]
+   ],
+   "cl": false,
+   "i": "113"
+  },
+  {
+   "n": "Green Lake Pitch & Putt",
+   "c": "Boating and recreation",
+   "a": "Green Lake",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattle.gov/parks/sports/golf",
+   "wl": "Website",
+   "b": "An inexpensive pitch-and-putt course beside Green Lake, popular for casual rounds.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Met golf guide",
+     "https://www.seattlemet.com/articles/golf-courses-and-mini-golf-in-seattle-kent-bellevue"
+    ]
+   ],
+   "cl": false,
+   "i": "114"
+  },
+  {
+   "n": "Interbay Golf Center",
+   "c": "Boating and recreation",
+   "a": "Interbay, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A city course featuring a nine-hole par-three layout, a heated driving range and mini golf.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Met golf guide",
+     "https://www.seattlemet.com/articles/golf-courses-and-mini-golf-in-seattle-kent-bellevue"
+    ],
+    [
+     "Seattle Parks golf",
+     "https://www.seattle.gov/parks/sports/golf"
+    ]
+   ],
+   "cl": false,
+   "i": "115"
+  },
+  {
+   "n": "Jackson Park Golf Course",
+   "c": "Boating and recreation",
+   "a": "Jackson Park, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattle.gov/parks/sports/golf",
+   "wl": "Website",
+   "b": "One of the city's 18-hole public courses run by Seattle Parks.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Parks golf",
+     "https://www.seattle.gov/parks/sports/golf"
+    ]
+   ],
+   "cl": false,
+   "i": "116"
+  },
+  {
+   "n": "Jefferson Park Golf Course (Bill Wright Golf Complex)",
+   "c": "Boating and recreation",
+   "a": "Jefferson Park, Beacon Hill",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattle.gov/parks/sports/golf",
+   "wl": "Website",
+   "b": "A standard 18-hole course with an adjacent par-three layout for pitch-and-putt, Footgolf and Flingolf.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Parks golf",
+     "https://www.seattle.gov/parks/sports/golf"
+    ],
+    [
+     "Seattle Met golf guide",
+     "https://www.seattlemet.com/articles/golf-courses-and-mini-golf-in-seattle-kent-bellevue"
+    ]
+   ],
+   "cl": false,
+   "i": "117"
+  },
+  {
+   "n": "Moss Bay",
+   "c": "Boating and recreation",
+   "a": "1001 Fairview Ave N, South Lake Union",
+   "p": "206-682-2031",
+   "e": "",
+   "w": "https://mossbay.co",
+   "wl": "Website",
+   "b": "Rents kayaks, paddleboards and rowing craft from the south end of Lake Union. It also leads tours and lessons.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "118"
+  },
+  {
+   "n": "Northwest Outdoor Center",
+   "c": "Boating and recreation",
+   "a": "2100 Westlake Ave N, Lake Union",
+   "p": "206-281-9694",
+   "e": "",
+   "w": "https://www.nwoc.com",
+   "wl": "Website",
+   "b": "A west-shore Lake Union outfitter for kayak and paddleboard rentals, lessons and gear. Reservations are wise on sunny weekends.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "119"
+  },
+  {
+   "n": "Sail Sand Point",
+   "c": "Boating and recreation",
+   "a": "Magnuson Park, Sand Point",
+   "p": "",
+   "e": "",
+   "w": "https://www.sailsandpoint.org",
+   "wl": "Website",
+   "b": "A community sailing program at Magnuson Park that rents kayaks, paddleboards and small sailboats by the hour. It offers youth and adult classes.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Parks water access guide (2025)",
+     "https://parkways.seattle.gov/2025/07/16/get-out-on-the-water-without-your-own-boat/"
+    ]
+   ],
+   "cl": false,
+   "i": "120"
+  },
+  {
+   "n": "Seattle Paddle",
+   "c": "Boating and recreation",
+   "a": "4200 Lake Washington Blvd S, near Seward Park",
+   "p": "",
+   "e": "",
+   "w": "https://seattlepaddle.com/seattle/",
+   "wl": "Website",
+   "b": "Daily paddleboard and kayak rentals from the Adams Street Boat Ramp on Lake Washington. Online reservations are encouraged but walk-ups are accepted.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Seattle Parks water access guide (2025)",
+     "https://parkways.seattle.gov/2025/07/16/get-out-on-the-water-without-your-own-boat/"
+    ]
+   ],
+   "cl": false,
+   "i": "121"
+  },
+  {
+   "n": "Seattle Yacht Club",
+   "c": "Boating and recreation",
+   "a": "1807 E Hamlin St, Montlake",
+   "p": "206-325-1000",
+   "e": "",
+   "w": "https://www.seattleyachtclub.org",
+   "wl": "Website",
+   "b": "A historic yacht club known for weekly summer regattas on Lake Union and Lake Washington.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "122"
+  },
+  {
+   "n": "The Center for Wooden Boats",
+   "c": "Boating and recreation",
+   "a": "1010 Valley St, South Lake Union",
+   "p": "206-382-2628",
+   "e": "",
+   "w": "https://www.cwb.org",
+   "wl": "Website",
+   "b": "A Lake Union Park maritime heritage center that rents out historic-style small boats and runs classes and workshops. It supplies life vests on rentals.",
+   "nt": [],
+   "s": [
+    [
+     "Docklyne listing for CWB",
+     "https://docklyne.com/seattle-wa/boat-rentals/the-center-for-wooden-boats"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ],
+    [
+     "Seattle Parks water access guide (2025)",
+     "https://parkways.seattle.gov/2025/07/16/get-out-on-the-water-without-your-own-boat/"
+    ]
+   ],
+   "cl": false,
+   "i": "123"
+  },
+  {
+   "n": "UW Waterfront Activities Center",
+   "c": "Boating and recreation",
+   "a": "3710 Montlake Blvd NE, University District",
+   "p": "206-543-9433",
+   "e": "",
+   "w": "https://www.washington.edu/ima/waterfront/boat-rentals/",
+   "wl": "Website",
+   "b": "Canoes, kayaks and paddleboards rent behind Husky Stadium with access to Union Bay. No reservations needed.",
+   "nt": [],
+   "s": [
+    [
+     "Axios Seattle paddling guide (2025)",
+     "https://www.axios.com/local/seattle/2025/07/18/kayak-paddleboard-rentals-seattle-summer"
+    ],
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "124"
+  },
+  {
+   "n": "West Seattle Golf Course",
+   "c": "Boating and recreation",
+   "a": "West Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattle.gov/parks/sports/golf",
+   "wl": "Website",
+   "b": "A city-owned 18-hole course with views of Mount Rainier and downtown.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Parks golf",
+     "https://www.seattle.gov/parks/sports/golf"
+    ],
+    [
+     "Seattle Met golf guide",
+     "https://www.seattlemet.com/articles/golf-courses-and-mini-golf-in-seattle-kent-bellevue"
+    ]
+   ],
+   "cl": false,
+   "i": "125"
+  },
+  {
+   "n": "Windworks Sailing & Powerboating",
+   "c": "Boating and recreation",
+   "a": "7001 Seaview Ave NW, Suite 110, Ballard (Shilshole Bay)",
+   "p": "206-784-9386",
+   "e": "",
+   "w": "https://www.windworkssailing.com",
+   "wl": "Website",
+   "b": "A sailing club on Shilshole Bay that also arranges charters for non-members.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle boating and kayaking",
+     "https://fodors.fodors.com/world/north-america/usa/washington/seattle/things-to-do/sports-activities/boating-and-kayaking-232047670"
+    ]
+   ],
+   "cl": false,
+   "i": "126"
+  },
+  {
+   "n": "Fairmont Olympic Hotel",
+   "c": "Lodging",
+   "a": "411 University St, Seattle, WA 98101 (Downtown)",
+   "p": "(206) 621-1700",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A historic downtown grande dame that reviewers call the standard for elegance and service. It has a 4.5 rating on about 4,800 Google reviews and an indoor pool and saunas.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "127"
+  },
+  {
+   "n": "Four Seasons Hotel Seattle",
+   "c": "Lodging",
+   "a": "99 Union St, Seattle, WA 98101 (Downtown)",
+   "p": "(206) 749-7000",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A luxury hotel with a west-facing pool, Puget Sound views and an on-site spa. It holds a 4.6 rating on about 2,000 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "128"
+  },
+  {
+   "n": "Hotel 1000",
+   "c": "Lodging",
+   "a": "1000 1st Ave, Seattle, WA 98104 (Downtown)",
+   "p": "(206) 957-1000",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A boutique luxury hotel part of Hyatt's Unbound Collection, rated 4.5 on over 1,500 Google reviews. Guests highlight helpful concierge staff and in-room espresso.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "129"
+  },
+  {
+   "n": "Hotel Theodore",
+   "c": "Lodging",
+   "a": "1531 7th Ave, Seattle, WA 98101 (Downtown)",
+   "p": "(206) 621-1200",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A restored 1930 Beaux Arts building with botanical-illustration room art and locally made furnishings. Its ground-floor restaurant serves wood-fired Italian food.",
+   "nt": [],
+   "s": [
+    [
+     "Hotelier's Choice: Seattle historic hotels",
+     "https://hotelierschoice.com/guides/seattle/seattle-historic"
+    ]
+   ],
+   "cl": false,
+   "i": "130"
+  },
+  {
+   "n": "Inn at the Market",
+   "c": "Lodging",
+   "a": "86 Pine St, Seattle, WA 98101 (Pike Place Market)",
+   "p": "(206) 443-3600",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A 70-room boutique inn within Pike Place Market, with a rooftop terrace and fire pits that guests love at sunset. Google reviewers rate it 4.7.",
+   "nt": [],
+   "s": [
+    [
+     "Hotelier's Choice: Seattle historic hotels",
+     "https://hotelierschoice.com/guides/seattle/seattle-historic"
+    ]
+   ],
+   "cl": false,
+   "i": "131"
+  },
+  {
+   "n": "Lotte Hotel Seattle",
+   "c": "Lodging",
+   "a": "809 5th Ave, Seattle, WA 98104 (Downtown)",
+   "p": "(206) 800-8110",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A modern luxury hotel in the heart of downtown with a spa and restaurant on site. Guests praise the large suites and attentive guest services.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "132"
+  },
+  {
+   "n": "Seattle Gaslight Inn",
+   "c": "Lodging",
+   "a": "1727 15th Ave, Seattle, WA 98122 (Capitol Hill)",
+   "p": "(206) 627-0531",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A restored Arts and Crafts-era inn on Capitol Hill, rated 4.8 on over 440 Google reviews. Guests enjoy the preserved woodwork, fireplace hall and owners who share local tips.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "133"
+  },
+  {
+   "n": "The Edgewater Hotel",
+   "c": "Lodging",
+   "a": "2411 Alaskan Way Pier 67, Seattle, WA 98121 (Waterfront)",
+   "p": "(206) 792-5959",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A waterfront hotel built over Elliott Bay on a pier for the 1962 World's Fair, with stone fireplaces and a Northwest lodge look. Roommaster notes it hosted The Beatles in 1964.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ],
+    [
+     "Hotelier's Choice: Seattle historic hotels",
+     "https://hotelierschoice.com/guides/seattle/seattle-historic"
+    ]
+   ],
+   "cl": false,
+   "i": "134"
+  },
+  {
+   "n": "The Maxwell Hotel",
+   "c": "Lodging",
+   "a": "300 Roy St, Seattle, WA 98109 (Lower Queen Anne)",
+   "p": "(206) 286-0629",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A playful, pet-friendly boutique hotel near Seattle Center and the Space Needle. It has a 4.7 rating on over 3,200 Google reviews, and guests mention loaner bikes and a warm welcome.",
+   "nt": [],
+   "s": [
+    [
+     "Roommaster: best hotels in Seattle",
+     "https://www.roommaster.com/blog/best-hotels-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "135"
+  },
+  {
+   "n": "Budd & Company Automotive",
+   "c": "Automotive",
+   "a": "800 Rainier Ave S, Seattle, WA 98144 (Rainier Valley)",
+   "p": "(206) 324-0550",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A neighborhood auto shop on Rainier Avenue that Lantern says has operated since 1952. It has a 4.8 rating on more than 1,100 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle auto repair",
+     "https://lantern.llc/wa/seattle/automotive/auto-repair"
+    ]
+   ],
+   "cl": false,
+   "i": "136"
+  },
+  {
+   "n": "Montlake Bicycle Shop",
+   "c": "Automotive",
+   "a": "2223 24th Ave E, Seattle, WA 98112 (Montlake)",
+   "p": "(206) 329-7333",
+   "e": "",
+   "w": "https://montlakebike.com",
+   "wl": "Website",
+   "b": "A neighborhood bike shop that sells and repairs bikes of all kinds, from kids' models to e-bikes. It is rated 4.6 on about 260 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Daily Hive: places to get your bike fixed in Seattle",
+     "https://dailyhive.com/seattle/bike-fixed-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "137"
+  },
+  {
+   "n": "Pacific Rim Automotive",
+   "c": "Automotive",
+   "a": "3810 Stone Way N, Seattle, WA 98103 (Wallingford)",
+   "p": "(206) 632-1175",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Wallingford repair shop for Japanese and European cars, rated 4.9 on nearly 700 Google reviews. Customers say the shop is honest and keeps work on schedule.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle auto repair",
+     "https://lantern.llc/wa/seattle/automotive/auto-repair"
+    ]
+   ],
+   "cl": false,
+   "i": "138"
+  },
+  {
+   "n": "Repair Revolution",
+   "c": "Automotive",
+   "a": "2425 6th Ave S, Seattle, WA 98134 (SoDo)",
+   "p": "(206) 623-0123",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A SoDo shop that works on all makes and offers pre-purchase inspections. It is rated 4.9 on about 270 Google reviews.",
+   "nt": [],
+   "s": [
+    [
+     "Lantern: Seattle auto repair",
+     "https://lantern.llc/wa/seattle/automotive/auto-repair"
+    ]
+   ],
+   "cl": false,
+   "i": "139"
+  },
+  {
+   "n": "Tweedy & Popp Hardware",
+   "c": "Building landscaping and home services",
+   "a": "1815 N 45th St, Wallingford Center, Wallingford",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Wallingford's neighborhood hardware store has served the area since about 1920 and was honored with a Legacy Business Award in 2025. Staff are known for friendly, patient help with repairs.",
+   "nt": [],
+   "s": [
+    [
+     "Wallyhood, Tweedy and Popp legacy award (2025)",
+     "https://www.wallyhood.org/2025/05/tweedy-and-popp-will-be-acknowledged-as-a-legacy-business-in-wallingford-at-the-wally-home-resource-fair/"
+    ],
+    [
+     "Wallyhood business spotlight",
+     "https://www.wallyhood.org/2024/09/wallingford-business-spotlight-tweedy-and-popp-hardware/"
+    ]
+   ],
+   "cl": false,
+   "i": "140"
+  },
+  {
+   "n": "Avast! Recording Co.",
+   "c": "Architecture and creative services",
+   "a": "NW 80th St, Greenwood",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A two-room analog-focused studio built around a vintage Trident A-Range console.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle recording studios guide",
+     "https://getmorestreams.com/?p=10517"
+    ]
+   ],
+   "cl": false,
+   "i": "141"
+  },
+  {
+   "n": "Hall of Justice Recording",
+   "c": "Architecture and creative services",
+   "a": "Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Formerly Reciprocal Recording, this Fremont studio is owned by local musicians and combines Pro Tools with vintage analog gear. It also offers community recording classes.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle recording studios guide",
+     "https://getmorestreams.com/?p=10517"
+    ]
+   ],
+   "cl": false,
+   "i": "142"
+  },
+  {
+   "n": "Soundhouse Recording",
+   "c": "Architecture and creative services",
+   "a": "15th Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A Ballard studio managed by producer Jack Endino, with a vintage Trident console and a Studer 24-track machine alongside Pro Tools.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle recording studios guide",
+     "https://getmorestreams.com/?p=10517"
+    ]
+   ],
+   "cl": false,
+   "i": "143"
+  },
+  {
+   "n": "Studio Litho",
+   "c": "Architecture and creative services",
+   "a": "N 36th St, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Stone Gossard's Fremont studio built for full-band and live tracking, with services from tracking through mastering.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle recording studios guide",
+     "https://getmorestreams.com/?p=10517"
+    ]
+   ],
+   "cl": false,
+   "i": "144"
+  },
+  {
+   "n": "Studio X",
+   "c": "Architecture and creative services",
+   "a": "Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A studio in a converted 1920s church hall handling music sessions plus film, TV and game audio, including orchestral dates.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle recording studios guide",
+     "https://getmorestreams.com/?p=10517"
+    ]
+   ],
+   "cl": false,
+   "i": "145"
+  },
+  {
+   "n": "BECU",
+   "c": "Finance law property and consulting",
+   "a": "Seattle-area branches; headquarters in Tukwila",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Founded in 1935 by Boeing employees, BECU is Washington's largest credit union with about 1.5 million members. It has dozens of branches around Puget Sound.",
+   "nt": [],
+   "s": [
+    [
+     "BECU (Wikipedia)",
+     "https://en.wikipedia.org/wiki/BECU"
+    ]
+   ],
+   "cl": false,
+   "i": "146"
+  },
+  {
+   "n": "ARTS at King Street Station",
+   "c": "Community and cultural resources",
+   "a": "303 S Jackson St, Third Floor, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattle.gov/arts",
+   "wl": "Website",
+   "b": "A city-run gallery on the third floor of historic King Street Station.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "147"
+  },
+  {
+   "n": "Central Cinema",
+   "c": "Community and cultural resources",
+   "a": "1411 21st Ave, Central District",
+   "p": "206-328-3230",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A small neighborhood movie house where diner-style booths come with pizza and snacks. It shows classics and local independent films.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "148"
+  },
+  {
+   "n": "Columbia City Gallery",
+   "c": "Community and cultural resources",
+   "a": "4864 Rainier Ave S, Columbia City",
+   "p": "206-760-9843",
+   "e": "",
+   "w": "https://columbiacitygallery.com",
+   "wl": "Website",
+   "b": "A neighborhood gallery in Columbia City open Wednesday through Sunday.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "149"
+  },
+  {
+   "n": "Greg Kucera Gallery",
+   "c": "Community and cultural resources",
+   "a": "212 Third Ave S, Pioneer Square",
+   "p": "206-624-0770",
+   "e": "",
+   "w": "https://gregkucera.com",
+   "wl": "Website",
+   "b": "A long-established Pioneer Square gallery showing contemporary art, open Tuesday through Saturday.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "150"
+  },
+  {
+   "n": "Henry Art Gallery",
+   "c": "Community and cultural resources",
+   "a": "4100 15th Ave NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "The University of Washington's art museum shows contemporary art and photography. It sits on the edge of campus in the U District.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Art Museums and Galleries guide (Provenance)",
+     "https://www.provenance.com/maison/art-galleries-museums"
+    ]
+   ],
+   "cl": false,
+   "i": "151"
+  },
+  {
+   "n": "Langston Hughes Performing Arts Institute",
+   "c": "Community and cultural resources",
+   "a": "104 17th Ave S, Central District",
+   "p": "206-323-7067",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A community hub in a historic domed building offering classes, readings, film screenings and theater. It hosts the Seattle Black Film Festival each spring.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "152"
+  },
+  {
+   "n": "Marion Oliver McCaw Hall",
+   "c": "Community and cultural resources",
+   "a": "321 Mercer St, Seattle Center (Lower Queen Anne)",
+   "p": "206-684-7200",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "This glass-fronted hall is home to Seattle Opera and Pacific Northwest Ballet. It has two auditoriums and a lobby with public art.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "153"
+  },
+  {
+   "n": "Museum of History & Industry (MOHAI)",
+   "c": "Community and cultural resources",
+   "a": "860 Terry Ave N, South Lake Union",
+   "p": "206-324-1126",
+   "e": "",
+   "w": "https://www.mohai.org",
+   "wl": "Website",
+   "b": "MOHAI tells the story of Seattle's inventors, industries and everyday people. The Lake Union Park setting keeps the waterfront nearby.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "154"
+  },
+  {
+   "n": "Museum of Pop Culture (MoPOP)",
+   "c": "Community and cultural resources",
+   "a": "325 Fifth Ave N, Seattle Center (Lower Queen Anne)",
+   "p": "206-770-2700",
+   "e": "",
+   "w": "https://www.mopop.org",
+   "wl": "Website",
+   "b": "MoPOP celebrates music, film, science fiction and popular culture from rock legends to movie props. Its Seattle Center home puts it beside the Space Needle.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "155"
+  },
+  {
+   "n": "National Nordic Museum",
+   "c": "Community and cultural resources",
+   "a": "2655 NW Market St, Ballard",
+   "p": "206-556-8178",
+   "e": "",
+   "w": "https://www.nordicmuseum.org",
+   "wl": "Website",
+   "b": "The museum explores Nordic immigration and heritage in the Pacific Northwest through exhibitions, folk art and events. It sits in the heart of Ballard.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "156"
+  },
+  {
+   "n": "Northwest African American Museum",
+   "c": "Community and cultural resources",
+   "a": "2300 S Massachusetts St, Beacon Hill",
+   "p": "206-518-6000",
+   "e": "",
+   "w": "https://www.naamnw.org",
+   "wl": "Website",
+   "b": "NAAM shares the history, art and culture of African Americans in the Northwest. It occupies a renovated former school building on Beacon Hill.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "157"
+  },
+  {
+   "n": "Northwest Film Forum",
+   "c": "Community and cultural resources",
+   "a": "1515 12th Ave, Capitol Hill",
+   "p": "206-329-2629",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Two screening rooms show repertory, cult, experimental and documentary films. It also runs workshops and festivals.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "158"
+  },
+  {
+   "n": "Pacific Northwest Ballet",
+   "c": "Community and cultural resources",
+   "a": "301 Mercer St, Seattle Center (Lower Queen Anne)",
+   "p": "206-441-2424",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seattle's resident ballet company and school stages classics and new works from September through June. Performances are held at McCaw Hall.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "159"
+  },
+  {
+   "n": "Photographic Center Northwest",
+   "c": "Community and cultural resources",
+   "a": "900 12th Ave, Capitol Hill",
+   "p": "206-720-7222",
+   "e": "",
+   "w": "https://pcnw.org",
+   "wl": "Website",
+   "b": "PCNW is a photography school and exhibition space with weekday and weekend hours. It runs classes and shows for all levels.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "160"
+  },
+  {
+   "n": "Seattle Art Museum",
+   "c": "Community and cultural resources",
+   "a": "1300 First Ave, Downtown Seattle",
+   "p": "206-654-3210",
+   "e": "",
+   "w": "https://www.seattleartmuseum.org",
+   "wl": "Website",
+   "b": "SAM anchors downtown's arts scene with rotating exhibitions and a broad permanent collection. It is a short walk from Pike Place Market and the waterfront.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "161"
+  },
+  {
+   "n": "Seattle Asian Art Museum",
+   "c": "Community and cultural resources",
+   "a": "1400 E Prospect St, Capitol Hill (Volunteer Park)",
+   "p": "206-654-3140",
+   "e": "",
+   "w": "https://www.seattleartmuseum.org/visit/seattle-asian-art-museum",
+   "wl": "Website",
+   "b": "Housed in a landmark building in Volunteer Park, this branch of the Seattle Art Museum focuses on art from across Asia. It pairs well with a stroll through the park.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "162"
+  },
+  {
+   "n": "Seattle Central Library",
+   "c": "Community and cultural resources",
+   "a": "1000 Fourth Ave, Downtown Seattle",
+   "p": "206-386-4636",
+   "e": "",
+   "w": "https://www.spl.org/hours-and-locations/central-library",
+   "wl": "Website",
+   "b": "The 11-floor flagship of the Seattle Public Library opened in 2004 and holds more than a million books. It keeps long hours, adds meeting and music practice rooms, and houses special collections from genealogy to zines.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Public Library, Central Library",
+     "https://spl.org/hours-and-locations/central-library"
+    ]
+   ],
+   "cl": false,
+   "i": "163"
+  },
+  {
+   "n": "Seattle Children's Museum",
+   "c": "Community and cultural resources",
+   "a": "305 Harrison St, Seattle Center (Queen Anne)",
+   "p": "206-441-1768",
+   "e": "",
+   "w": "https://www.seattlechildrensmuseum.org",
+   "wl": "Website",
+   "b": "A hands-on play and learning space for the youngest visitors at Seattle Center. It is a reliable stop for families with small kids.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "164"
+  },
+  {
+   "n": "Seattle Children's Theatre",
+   "c": "Community and cultural resources",
+   "a": "201 Thomas St, Seattle Center (Queen Anne)",
+   "p": "206-441-3322",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "This family theater produces new plays and adaptations of children's literature. Actors often take audience questions after the show.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "165"
+  },
+  {
+   "n": "Seattle Glassblowing Studio & Gallery",
+   "c": "Community and cultural resources",
+   "a": "2227 Fifth Ave, Belltown",
+   "p": "206-448-2181",
+   "e": "",
+   "w": "https://seattleglassblowing.com",
+   "wl": "Website",
+   "b": "Visitors can watch glass artists work and browse a gallery of finished pieces. It keeps daily hours.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "166"
+  },
+  {
+   "n": "Seattle Opera",
+   "c": "Community and cultural resources",
+   "a": "321 Mercer St, Seattle Center (McCaw Hall)",
+   "p": "206-389-7676",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seattle Opera presents grand opera with national and international singers at McCaw Hall. It also offers community and education events.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "167"
+  },
+  {
+   "n": "Seattle Pinball Museum",
+   "c": "Community and cultural resources",
+   "a": "508 Maynard Ave S, Chinatown-International District",
+   "p": "206-623-0759",
+   "e": "",
+   "w": "https://www.seattlepinballmuseum.com",
+   "wl": "Website",
+   "b": "Visitors pay one admission and play a room full of vintage and modern pinball machines. It is a lively, nostalgic stop in the International District.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle museums directory",
+     "https://visitseattle.org/partners-categories/museums/page/2"
+    ]
+   ],
+   "cl": false,
+   "i": "168"
+  },
+  {
+   "n": "Seattle Repertory Theatre",
+   "c": "Community and cultural resources",
+   "a": "155 Mercer St, Seattle Center (Lower Queen Anne)",
+   "p": "206-443-2222",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "The Rep stages new and classic plays from fall through June. Its lobby bar lets patrons preorder intermission drinks.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "169"
+  },
+  {
+   "n": "SIFF Cinema Uptown",
+   "c": "Community and cultural resources",
+   "a": "511 Queen Anne Ave N, Uptown (Queen Anne)",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "The year-round home of the Seattle International Film Festival has three screens for festival, indie and arthouse films.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "170"
+  },
+  {
+   "n": "Steinbrueck Native Gallery",
+   "c": "Community and cultural resources",
+   "a": "2030 Western Ave, Pike Place Market area",
+   "p": "206-441-3821",
+   "e": "",
+   "w": "https://steinbruecknativegallery.com",
+   "wl": "Website",
+   "b": "A daily-open gallery near the Market that features Native art.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "171"
+  },
+  {
+   "n": "Stonington Gallery",
+   "c": "Community and cultural resources",
+   "a": "125 S Jackson St, Pioneer Square",
+   "p": "206-405-4040",
+   "e": "",
+   "w": "https://stoningtongallery.com",
+   "wl": "Website",
+   "b": "A Pioneer Square gallery focused on Native art of the Northwest and beyond. It is open Tuesday through Saturday.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "172"
+  },
+  {
+   "n": "The 5th Avenue Theatre",
+   "c": "Community and cultural resources",
+   "a": "1308 Fifth Ave, Downtown Seattle",
+   "p": "206-625-1900",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "The 1926 downtown theater produces its own musicals and also hosts concerts and films. It is one of the city's most beloved historic stages.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "173"
+  },
+  {
+   "n": "The Neptune Theatre",
+   "c": "Community and cultural resources",
+   "a": "1303 NE 45th St, University District",
+   "p": "206-682-1414",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "A 1921 Renaissance-revival theater near the UW that books music and comedy acts. It is run by STG Presents.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's Seattle performing arts",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/things-to-do/performing-arts"
+    ]
+   ],
+   "cl": false,
+   "i": "174"
+  },
+  {
+   "n": "Traver Gallery",
+   "c": "Community and cultural resources",
+   "a": "1100 W Ewing St, Suite 160, Interbay",
+   "p": "206-587-6501",
+   "e": "",
+   "w": "https://travergallery.com",
+   "wl": "Website",
+   "b": "Known for glass and contemporary art, this gallery is open Tuesday through Saturday.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "175"
+  },
+  {
+   "n": "Wa Na Wari",
+   "c": "Community and cultural resources",
+   "a": "911 24th Ave, Central District",
+   "p": "206-485-7563",
+   "e": "",
+   "w": "https://wanawari.org",
+   "wl": "Website",
+   "b": "A community arts space in a Central District home that centers Black art and culture. It is open Tuesday through Sunday with varied hours.",
+   "nt": [],
+   "s": [
+    [
+     "Visit Seattle art galleries directory",
+     "https://visitseattle.org/things-to-do/arts-culture/visual-arts/art-galleries/"
+    ]
+   ],
+   "cl": false,
+   "i": "176"
+  },
+  {
+   "n": "18th & Union",
+   "c": "Entertainment venues",
+   "a": "Central District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Central District multi-genre venue with comedy and performance.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "177"
+  },
+  {
+   "n": "ACT Theatre",
+   "c": "Entertainment venues",
+   "a": "700 Union St, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Downtown theater company in its Kreielsheimer Place home.",
+   "nt": [],
+   "s": [
+    [
+     "GoNorthwest: Seattle performing arts",
+     "https://gonorthwest.com/Washington/Seattle/attractions/performingarts.htm"
+    ],
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "178"
+  },
+  {
+   "n": "Angel of the Winds Arena",
+   "c": "Entertainment venues",
+   "a": "2000 Hewitt Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett arena for big touring acts.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "179"
+  },
+  {
+   "n": "Apollo Exos",
+   "c": "Entertainment venues",
+   "a": "1717 Hewitt Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett metal-leaning music venue and record store.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "180"
+  },
+  {
+   "n": "Bake's Place",
+   "c": "Entertainment venues",
+   "a": "155 108th Ave NE, Bellevue",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Bellevue restaurant stage for jazz, pop, blues and world music.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times: Seattle music clubs (2014)",
+     "https://special.seattletimes.com/o/html/travel/2023769429_seattlemusicclubsxml.html"
+    ]
+   ],
+   "cl": false,
+   "i": "181"
+  },
+  {
+   "n": "Ballard Homestead",
+   "c": "Entertainment venues",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard sister space to Fremont Abbey with concerts, readings and comedy.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "182"
+  },
+  {
+   "n": "Barboza",
+   "c": "Entertainment venues",
+   "a": "925 E Pike St (below Neumos), Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://www.thebarboza.com",
+   "wl": "Website",
+   "b": "Basement room under Neumos for up-and-coming local and touring bands and dance nights.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "183"
+  },
+  {
+   "n": "Belltown Yacht Club",
+   "c": "Entertainment venues",
+   "a": "Belltown, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Belltown bar with rock, punk and blues bands.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "184"
+  },
+  {
+   "n": "Benaroya Hall",
+   "c": "Entertainment venues",
+   "a": "200 University St, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Home of the Seattle Symphony, also hosting touring concerts and regional ensembles.",
+   "nt": [],
+   "s": [
+    [
+     "GoNorthwest: Seattle performing arts",
+     "https://gonorthwest.com/Washington/Seattle/attractions/performingarts.htm"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "185"
+  },
+  {
+   "n": "Black Lab Gallery",
+   "c": "Entertainment venues",
+   "a": "1618 Hewitt Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett gallery with live bands upstairs.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "186"
+  },
+  {
+   "n": "Black Lodge",
+   "c": "Entertainment venues",
+   "a": "Eastlake, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Eastlake spot for underground punk shows.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times Ticket: Where to see concerts downtown",
+     "https://theticket.seattletimes.com/city-guides/where-to-see-concerts-in-downtown-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "187"
+  },
+  {
+   "n": "Blue Moon Tavern",
+   "c": "Entertainment venues",
+   "a": "University District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "U District tavern with live music and stand-up comedy most nights.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "188"
+  },
+  {
+   "n": "Bob's Java Jive",
+   "c": "Entertainment venues",
+   "a": "Tacoma",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tacoma landmark bar hosting Bob's Comedy Jive nights.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "189"
+  },
+  {
+   "n": "Capitol Hill Comedy / Bar",
+   "c": "Entertainment venues",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill comedy bar.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "190"
+  },
+  {
+   "n": "Center Theatre at the Armory",
+   "c": "Entertainment venues",
+   "a": "Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Armory theater used by local companies including Seattle Shakespeare and Book-It Repertory.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Center: Performance venues",
+     "https://seattlecenter.com/explore/arts/performance-venues"
+    ],
+    [
+     "Wikipedia: Seattle Center",
+     "https://en.wikipedia.org/wiki/Seattle_Center"
+    ]
+   ],
+   "cl": false,
+   "i": "191"
+  },
+  {
+   "n": "Central Saloon",
+   "c": "Entertainment venues",
+   "a": "Pioneer Square, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Pioneer Square bar billed as Seattle's oldest, known for grunge and new music.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "192"
+  },
+  {
+   "n": "Century Ballroom",
+   "c": "Entertainment venues",
+   "a": "915 E Pine St, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://www.centuryballroom.com",
+   "wl": "Website",
+   "b": "Capitol Hill ballroom for swing, salsa, tango and bachata dance nights with lessons.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times: Seattle music clubs (2014)",
+     "https://special.seattletimes.com/o/html/travel/2023769429_seattlemusicclubsxml.html"
+    ],
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "193"
+  },
+  {
+   "n": "Chop Suey",
+   "c": "Entertainment venues",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill club for hip-hop, metal, singer-songwriters and indie dance parties, all ages and 21+.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "194"
+  },
+  {
+   "n": "Climate Pledge Arena",
+   "c": "Entertainment venues",
+   "a": "334 1st Ave N, Uptown (Seattle Center)",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hosts major touring concerts plus Seattle Kraken hockey and Seattle Storm basketball.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times Ticket: Where to see concerts downtown",
+     "https://theticket.seattletimes.com/city-guides/where-to-see-concerts-in-downtown-seattle/"
+    ],
+    [
+     "Seattle Center: Performance venues",
+     "https://seattlecenter.com/explore/arts/performance-venues"
+    ]
+   ],
+   "cl": false,
+   "i": "195"
+  },
+  {
+   "n": "Clock-Out Lounge",
+   "c": "Entertainment venues",
+   "a": "Beacon Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Beacon Hill bar with local and touring bands in many genres, plus comedy and trivia.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "196"
+  },
+  {
+   "n": "Club Comedy Seattle",
+   "c": "Entertainment venues",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.clubcomedyseattle.com",
+   "wl": "Website",
+   "b": "Capitol Hill stand-up with local, regional and national headliners on weekends.",
+   "nt": [],
+   "s": [
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ],
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "197"
+  },
+  {
+   "n": "Columbia City Theater",
+   "c": "Entertainment venues",
+   "a": "4916 Rainier Ave S, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Columbia City theater with varied music and performing arts.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times Ticket: Where to see concerts downtown",
+     "https://theticket.seattletimes.com/city-guides/where-to-see-concerts-in-downtown-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "198"
+  },
+  {
+   "n": "Conor Byrne Pub",
+   "c": "Entertainment venues",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard pub booking blues through folk.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "199"
+  },
+  {
+   "n": "Cornish Playhouse",
+   "c": "Entertainment venues",
+   "a": "Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "476-seat theater plus black box for theater, dance, music and visual arts.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Center: Performance venues",
+     "https://seattlecenter.com/explore/arts/performance-venues"
+    ]
+   ],
+   "cl": false,
+   "i": "200"
+  },
+  {
+   "n": "CSz Seattle",
+   "c": "Entertainment venues",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.cszseattle.com",
+   "wl": "Website",
+   "b": "Fremont improv theater where shows are built from audience suggestions.",
+   "nt": [],
+   "s": [
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ],
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "201"
+  },
+  {
+   "n": "Darrell's Tavern",
+   "c": "Entertainment venues",
+   "a": "Shoreline",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Shoreline tavern in a vintage setting featuring current bands.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "202"
+  },
+  {
+   "n": "Dimitriou's Jazz Alley",
+   "c": "Entertainment venues",
+   "a": "2033 6th Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.jazzalley.com",
+   "wl": "Website",
+   "b": "Dinner-and-show jazz club featuring jazz, funk, smooth jazz and world music.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Seattle Times: Seattle music clubs (2014)",
+     "https://special.seattletimes.com/o/html/travel/2023769429_seattlemusicclubsxml.html"
+    ]
+   ],
+   "cl": false,
+   "i": "203"
+  },
+  {
+   "n": "Edison Square",
+   "c": "Entertainment venues",
+   "a": "Tacoma",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tacoma multi-genre performance venue with comedy.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "204"
+  },
+  {
+   "n": "Edmonds Center for the Arts",
+   "c": "Entertainment venues",
+   "a": "410 4th Ave N, Edmonds",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seated concerts and dance by nationally known acts.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "205"
+  },
+  {
+   "n": "Egan's Ballard Jam House",
+   "c": "Entertainment venues",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard room for jazz and acoustic music.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "206"
+  },
+  {
+   "n": "El Corazon and The Funhouse",
+   "c": "Entertainment venues",
+   "a": "Eastlake, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Rock club with hardcore, punk and metal nearly every night, all-ages and 21+ shows.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "207"
+  },
+  {
+   "n": "Everett Improv Bar & Stage",
+   "c": "Entertainment venues",
+   "a": "Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett comedy and improv venue.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "208"
+  },
+  {
+   "n": "Fremont Abbey",
+   "c": "Entertainment venues",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont arts space for concerts, readings and comedy.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ],
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "209"
+  },
+  {
+   "n": "High Dive",
+   "c": "Entertainment venues",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont club for national acts, residencies and emerging artists.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "210"
+  },
+  {
+   "n": "Historic Everett Theatre",
+   "c": "Entertainment venues",
+   "a": "2911 Colby Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett theater for tribute acts and comedians.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "211"
+  },
+  {
+   "n": "Historic University Theater",
+   "c": "Entertainment venues",
+   "a": "5510 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "University District theater.",
+   "nt": [],
+   "s": [
+    [
+     "GoNorthwest: Seattle performing arts",
+     "https://gonorthwest.com/Washington/Seattle/attractions/performingarts.htm"
+    ]
+   ],
+   "cl": false,
+   "i": "212"
+  },
+  {
+   "n": "JetCity Improv",
+   "c": "Entertainment venues",
+   "a": "University District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.jetcityimprov.org",
+   "wl": "Website",
+   "b": "Short- and long-form improv and the movie re-dubbing show Twisted Flicks.",
+   "nt": [],
+   "s": [
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ],
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "213"
+  },
+  {
+   "n": "Jewelbox Theatre at the Rendezvous",
+   "c": "Entertainment venues",
+   "a": "2322 2nd Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Intimate theater inside the Rendezvous for comedy, cabaret and live music.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Favorite comedy clubs",
+     "https://secretseattle.co/favorite-comedy-clubs-in-seattle/"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "214"
+  },
+  {
+   "n": "KEXP Gathering Space",
+   "c": "Entertainment venues",
+   "a": "Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Radio station space with live in-studio performances viewable from a gallery.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Center: Performance venues",
+     "https://seattlecenter.com/explore/arts/performance-venues"
+    ]
+   ],
+   "cl": false,
+   "i": "215"
+  },
+  {
+   "n": "Laughs Comedy Club",
+   "c": "Entertainment venues",
+   "a": "5220 Roosevelt Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "https://www.laughscomedyclub.com",
+   "wl": "Website",
+   "b": "U District stand-up club with headliners on weekends.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Favorite comedy clubs",
+     "https://secretseattle.co/favorite-comedy-clubs-in-seattle/"
+    ],
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ]
+   ],
+   "cl": false,
+   "i": "216"
+  },
+  {
+   "n": "Lucky Dime",
+   "c": "Entertainment venues",
+   "a": "1618 Hewitt Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett venue for loud music, hip-hop and art shows.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "217"
+  },
+  {
+   "n": "Lumen Field",
+   "c": "Entertainment venues",
+   "a": "SoDo, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "69,000-seat stadium for Seahawks and Sounders games and major rock and pop tours.",
+   "nt": [],
+   "s": [
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ],
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "218"
+  },
+  {
+   "n": "Madame Lou's at The Crocodile",
+   "c": "Entertainment venues",
+   "a": "2505 1st Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.thecrocodile.com",
+   "wl": "Website",
+   "b": "Smaller room inside the Crocodile complex for local bands, bingo and variety nights.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "219"
+  },
+  {
+   "n": "Market Theater (Unexpected Productions)",
+   "c": "Entertainment venues",
+   "a": "1428 Post Alley, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "https://www.unexpectedproductions.org",
+   "wl": "Website",
+   "b": "Seattle's oldest improv company, with long-form and original shows near the Gum Wall.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Favorite comedy clubs",
+     "https://secretseattle.co/favorite-comedy-clubs-in-seattle/"
+    ],
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ]
+   ],
+   "cl": false,
+   "i": "220"
+  },
+  {
+   "n": "Meany Theater",
+   "c": "Entertainment venues",
+   "a": "4001 University Way NE, University District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "University of Washington performing arts hall.",
+   "nt": [],
+   "s": [
+    [
+     "GoNorthwest: Seattle performing arts",
+     "https://gonorthwest.com/Washington/Seattle/attractions/performingarts.htm"
+    ]
+   ],
+   "cl": false,
+   "i": "221"
+  },
+  {
+   "n": "Monkey Loft",
+   "c": "Entertainment venues",
+   "a": "SoDo, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "SoDo cocktail bar with DJ-driven dance music and an outdoor deck.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "222"
+  },
+  {
+   "n": "Moore Theatre",
+   "c": "Entertainment venues",
+   "a": "1932 2nd Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.stgpresents.org",
+   "wl": "Website",
+   "b": "Seattle's oldest surviving theater (1907), hosting concerts, comedy, magic shows and lectures.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "223"
+  },
+  {
+   "n": "Mural Amphitheatre",
+   "c": "Entertainment venues",
+   "a": "Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Outdoor Seattle Center stage for festivals and concerts.",
+   "nt": [],
+   "s": [
+    [
+     "Wikipedia: Seattle Center",
+     "https://en.wikipedia.org/wiki/Seattle_Center"
+    ]
+   ],
+   "cl": false,
+   "i": "224"
+  },
+  {
+   "n": "Nate Jackson's Super Funny Comedy Club",
+   "c": "Entertainment venues",
+   "a": "Tacoma",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tacoma stand-up club.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "225"
+  },
+  {
+   "n": "Nectar Lounge",
+   "c": "Entertainment venues",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont club with indoor and outdoor stages for reggae, hip-hop, bluegrass and electronic acts.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "226"
+  },
+  {
+   "n": "Neptune Theatre",
+   "c": "Entertainment venues",
+   "a": "1303 NE 45th St, University District",
+   "p": "",
+   "e": "",
+   "w": "https://www.stgpresents.org",
+   "wl": "Website",
+   "b": "About 800-seat U District theater for indie and classic acts, comedy, cabaret and podcast tapings.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "227"
+  },
+  {
+   "n": "Neumos",
+   "c": "Entertainment venues",
+   "a": "925 E Pike St, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://www.neumos.com",
+   "wl": "Website",
+   "b": "Capitol Hill standing-room concert hall for touring rock, hip-hop and indie acts plus dance nights.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "228"
+  },
+  {
+   "n": "Olmstead",
+   "c": "Entertainment venues",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill bar with occasional comedy nights.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "229"
+  },
+  {
+   "n": "Paramount Theatre",
+   "c": "Entertainment venues",
+   "a": "911 Pine St, Downtown",
+   "p": "",
+   "e": "",
+   "w": "https://www.stgpresents.org",
+   "wl": "Website",
+   "b": "Restored 1928 theater for touring musicians, comedians, Broadway shows and silent movie screenings.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "230"
+  },
+  {
+   "n": "Pie Dive Bar",
+   "c": "Entertainment venues",
+   "a": "921 1st St, Snohomish",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Snohomish bar with live music.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "231"
+  },
+  {
+   "n": "Rumba Notes Lounge",
+   "c": "Entertainment venues",
+   "a": "Columbia City, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Columbia City lounge with local and international touring artists and African food.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "232"
+  },
+  {
+   "n": "SeaMonster Lounge",
+   "c": "Entertainment venues",
+   "a": "Wallingford, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Wallingford lounge booking funk, soul and jazz.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "233"
+  },
+  {
+   "n": "Seattle Public Theater",
+   "c": "Entertainment venues",
+   "a": "7312 W Green Lake Dr N, Green Lake",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Green Lake theater producing stage plays.",
+   "nt": [],
+   "s": [
+    [
+     "GoNorthwest: Seattle performing arts",
+     "https://gonorthwest.com/Washington/Seattle/attractions/performingarts.htm"
+    ]
+   ],
+   "cl": false,
+   "i": "234"
+  },
+  {
+   "n": "Showbox SoDo",
+   "c": "Entertainment venues",
+   "a": "1700 1st Ave S, SoDo",
+   "p": "",
+   "e": "",
+   "w": "https://www.showboxonline.com",
+   "wl": "Website",
+   "b": "Larger converted-warehouse sister of the Showbox, booking bigger popular acts, especially alt-rock.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times Ticket: Where to see concerts downtown",
+     "https://theticket.seattletimes.com/city-guides/where-to-see-concerts-in-downtown-seattle/"
+    ],
+    [
+     "ParkMobile: Concert lover's guide to Seattle",
+     "https://parkmobile.io/resource-center/blog/a-concert-lovers-guide-to-the-seattle-music-scene"
+    ]
+   ],
+   "cl": false,
+   "i": "235"
+  },
+  {
+   "n": "Skylark Cafe and Club",
+   "c": "Entertainment venues",
+   "a": "West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "West Seattle club for local rock and open mic nights, with many all-ages events.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "236"
+  },
+  {
+   "n": "Slim's Last Chance Chili Shack & Watering Hole",
+   "c": "Entertainment venues",
+   "a": "Georgetown, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Georgetown roadhouse with Americana, punk and rock on indoor and outdoor stages.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "237"
+  },
+  {
+   "n": "Spada Farmhouse Brewery",
+   "c": "Entertainment venues",
+   "a": "709 1st St, Snohomish",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Snohomish brewery with acoustic music.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "238"
+  },
+  {
+   "n": "Spanish Ballroom at McMenamins Elks Temple",
+   "c": "Entertainment venues",
+   "a": "Tacoma",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tacoma ballroom hosting comedy and music.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "239"
+  },
+  {
+   "n": "Substation",
+   "c": "Entertainment venues",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard venue focused on metal.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "240"
+  },
+  {
+   "n": "Sunset Tavern",
+   "c": "Entertainment venues",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Longtime Ballard live-music tavern with a range of popular genres.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ],
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "241"
+  },
+  {
+   "n": "T-Mobile Park",
+   "c": "Entertainment venues",
+   "a": "SoDo, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Mariners ballpark with a retractable roof, also used for large events.",
+   "nt": [],
+   "s": [
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "242"
+  },
+  {
+   "n": "Tacoma Arts Live",
+   "c": "Entertainment venues",
+   "a": "Downtown Tacoma",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Downtown Tacoma touring-act venue.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "243"
+  },
+  {
+   "n": "Tacoma Comedy Club",
+   "c": "Entertainment venues",
+   "a": "Tacoma",
+   "p": "",
+   "e": "",
+   "w": "https://www.tacomacomedyclub.com",
+   "wl": "Website",
+   "b": "Tacoma club with national talent six nights a week and weeknight open mic.",
+   "nt": [],
+   "s": [
+    [
+     "Greater Seattle on the Cheap: Comedy clubs",
+     "https://www.greaterseattleonthecheap.com/comedy-clubs"
+    ],
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "244"
+  },
+  {
+   "n": "Taste of the Caribbean & Red Lounge",
+   "c": "Entertainment venues",
+   "a": "Central District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Central District spot pairing Jamaican food with live music.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "245"
+  },
+  {
+   "n": "The Crocodile",
+   "c": "Entertainment venues",
+   "a": "2505 1st Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.thecrocodile.com",
+   "wl": "Website",
+   "b": "Belltown club with a main stage for indie and rock tours and a back bar for local bands.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "246"
+  },
+  {
+   "n": "The Here-After",
+   "c": "Entertainment venues",
+   "a": "2505 1st Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.thecrocodile.com",
+   "wl": "Website",
+   "b": "Comedy theater at the Crocodile complex with showcases, touring comics, film nights and podcast tapings.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Favorite comedy clubs",
+     "https://secretseattle.co/favorite-comedy-clubs-in-seattle/"
+    ],
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "247"
+  },
+  {
+   "n": "The Oxford Saloon",
+   "c": "Entertainment venues",
+   "a": "913 1st St, Snohomish",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Snohomish saloon with classic rock and blues.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "248"
+  },
+  {
+   "n": "The Rabbit Box",
+   "c": "Entertainment venues",
+   "a": "Pike Place Market, Downtown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Intimate Pike Place Market room for small live performances.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "249"
+  },
+  {
+   "n": "The Rendezvous",
+   "c": "Entertainment venues",
+   "a": "2322 2nd Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "1926 Belltown bar and theater with comedy, music, karaoke and variety shows.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Favorite comedy clubs",
+     "https://secretseattle.co/favorite-comedy-clubs-in-seattle/"
+    ],
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "250"
+  },
+  {
+   "n": "The Royal Room",
+   "c": "Entertainment venues",
+   "a": "5000 Rainier Ave S, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "https://www.theroyalroomseattle.com",
+   "wl": "Website",
+   "b": "Columbia City room for jazz, folk, bluegrass and world music.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times: Seattle music clubs (2014)",
+     "https://special.seattletimes.com/o/html/travel/2023769429_seattlemusicclubsxml.html"
+    ],
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "251"
+  },
+  {
+   "n": "The Showbox at the Market",
+   "c": "Entertainment venues",
+   "a": "1426 1st Ave, Downtown (Pike Place Market)",
+   "p": "",
+   "e": "",
+   "w": "https://www.showboxonline.com",
+   "wl": "Website",
+   "b": "Art deco club with a standing-room floor and 21+ upper level, booking rock, hip-hop, R&B and dance acts.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Times Ticket: Where to see concerts downtown",
+     "https://theticket.seattletimes.com/city-guides/where-to-see-concerts-in-downtown-seattle/"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "252"
+  },
+  {
+   "n": "The Triple Door",
+   "c": "Entertainment venues",
+   "a": "216 Union St, Downtown",
+   "p": "",
+   "e": "",
+   "w": "https://www.thetripledoor.net",
+   "wl": "Website",
+   "b": "Seated dinner-theater venue for jazz, folk, blues, rock, pop and cabaret.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Seattle Times: Seattle music clubs (2014)",
+     "https://special.seattletimes.com/o/html/travel/2023769429_seattlemusicclubsxml.html"
+    ]
+   ],
+   "cl": false,
+   "i": "253"
+  },
+  {
+   "n": "The Vera Project",
+   "c": "Entertainment venues",
+   "a": "305 Harrison St, Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Volunteer-run all-ages venue for local and touring bands.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Center: Performance venues",
+     "https://seattlecenter.com/explore/arts/performance-venues"
+    ],
+    [
+     "The Stranger: Best places for live music and dancing (2023)",
+     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
+    ]
+   ],
+   "cl": false,
+   "i": "254"
+  },
+  {
+   "n": "Theatre Off Jackson",
+   "c": "Entertainment venues",
+   "a": "International District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "International District performance space with occasional comedy.",
+   "nt": [],
+   "s": [
+    [
+     "Northwest Theatre Alliance: Comedy",
+     "https://www.nwtheatre.org/comedy/"
+    ]
+   ],
+   "cl": false,
+   "i": "255"
+  },
+  {
+   "n": "Tim's Tavern",
+   "c": "Entertainment venues",
+   "a": "White Center, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "White Center tavern with live music seven nights a week.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "256"
+  },
+  {
+   "n": "Tony V's Garage",
+   "c": "Entertainment venues",
+   "a": "1716 Hewitt Ave, Everett",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Everett rock and roll bar with a punk crowd.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "257"
+  },
+  {
+   "n": "Tractor Tavern",
+   "c": "Entertainment venues",
+   "a": "5213 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://www.tractortavern.com",
+   "wl": "Website",
+   "b": "Standing-room Ballard club for alt-country, folk, roots, rock and bluegrass, with square dances.",
+   "nt": [],
+   "s": [
+    [
+     "Secret Seattle: Live music venues in Seattle",
+     "https://secretseattle.co/live-music-venues-in-seattle/"
+    ],
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ]
+   ],
+   "cl": false,
+   "i": "258"
+  },
+  {
+   "n": "Tula's Restaurant & Jazz Club",
+   "c": "Entertainment venues",
+   "a": "2214 2nd Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Intimate Belltown jazz club with live music seven nights a week.",
+   "nt": [],
+   "s": [
+    [
+     "Earshot Jazz",
+     "https://www.earshot.org/?p=979"
+    ],
+    [
+     "Lonely Planet: Seattle entertainment",
+     "https://www.lonelyplanet.com/usa/pacific-northwest/washington/entertainment"
+    ]
+   ],
+   "cl": false,
+   "i": "259"
+  },
+  {
+   "n": "Tulalip Amphitheatre",
+   "c": "Entertainment venues",
+   "a": "10200 Quil Ceda Blvd, Tulalip",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Outdoor summer venue booking rock, country and soul.",
+   "nt": [],
+   "s": [
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ],
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "260"
+  },
+  {
+   "n": "Tulalip Resort Casino",
+   "c": "Entertainment venues",
+   "a": "10200 Quil Ceda Blvd, Tulalip",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Resort showroom with acts from radio's past.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle North Country: Music guide to Snohomish County",
+     "https://www.seattlenorthcountry.com/blog/music-guide-to-snohomish-county"
+    ]
+   ],
+   "cl": false,
+   "i": "261"
+  },
+  {
+   "n": "Vermillion Art Gallery + Bar",
+   "c": "Entertainment venues",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill gallery bar with weekly Seattle Jazz Fellowship shows.",
+   "nt": [],
+   "s": [
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "262"
+  },
+  {
+   "n": "WaMu Theater",
+   "c": "Entertainment venues",
+   "a": "SoDo, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "About 7,000-capacity SoDo hall for touring indie, alternative and other acts.",
+   "nt": [],
+   "s": [
+    [
+     "Ticketmaster blog: Seattle top concert venues",
+     "https://origin-blog.ticketmaster.com/?p=43569"
+    ],
+    [
+     "The AU Review: Best live music venues in Seattle",
+     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "263"
+  },
+  {
+   "n": "Agua Verde Café",
+   "c": "Restaurants",
+   "a": "1303 NE Boat St, Portage Bay (University District)",
+   "p": "206-545-8570",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Baja-style waterside cafe on Portage Bay. Order the fish tacos or the mangodillas, mango-and-poblano quesadillas.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "264"
+  },
+  {
+   "n": "Ayutthaya Thai Restaurant",
+   "c": "Restaurants",
+   "a": "Pike St and Harvard Ave, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill Thai restaurant. Order the pad kee mao, green papaya salad or crying tiger steak.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "265"
+  },
+  {
+   "n": "Bakery Nouveau",
+   "c": "Restaurants",
+   "a": "4737 California Ave SW, West Seattle",
+   "p": "206-923-0534",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Acclaimed West Seattle bakery. Get the twice-baked almond croissant or a slice of chocolate cake.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "266"
+  },
+  {
+   "n": "Bar Harbor",
+   "c": "Restaurants",
+   "a": "400 Fairview Ave N, South Lake Union",
+   "p": "206-922-3288",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Lobster-focused spot near Lake Union. Go for the lobster roll and the clam dip.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "267"
+  },
+  {
+   "n": "Ben Paris",
+   "c": "Restaurants",
+   "a": "130 Pike St, Downtown (State Hotel)",
+   "p": "206-513-7303",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Classic American cooking in the State Hotel. Try the grilled octopus or the fried chicken.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "268"
+  },
+  {
+   "n": "Beth's Cafe",
+   "c": "Restaurants",
+   "a": "Green Lake, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Green Lake diner famous for giant omelettes, including a 12-egg version with hash browns.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "269"
+  },
+  {
+   "n": "Brimmer & Heeltap",
+   "c": "Restaurants",
+   "a": "425 NW Market St, Ballard",
+   "p": "206-420-2534",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Neighborhood gastropub in Ballard known for its thick-cut buttered bread and seafood plates.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "270"
+  },
+  {
+   "n": "Cafe Selam",
+   "c": "Restaurants",
+   "a": "2715 E Cherry St, Central District",
+   "p": "206-328-0404",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ethiopian cafe in the Central District. Order the ful, a spiced fava bean breakfast dish, or beef or lamb tibs.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "271"
+  },
+  {
+   "n": "Caffè Umbria",
+   "c": "Restaurants",
+   "a": "320 Occidental Ave S, Pioneer Square",
+   "p": "206-624-5847",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian-style coffeehouse in Pioneer Square. Come for the espresso and a scoop of gelato.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "272"
+  },
+  {
+   "n": "Café Flora",
+   "c": "Restaurants",
+   "a": "2901 E Madison St, Madison Valley",
+   "p": "206-325-9100",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Longtime vegetarian and vegan cafe. Order the tacos dorados, or the waffles with seasonal fruit at brunch.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "273"
+  },
+  {
+   "n": "Canlis",
+   "c": "Restaurants",
+   "a": "2576 Aurora Ave N, Queen Anne",
+   "p": "206-283-3313",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seattle's landmark fine-dining room with a Lake Union view. Order the prix fixe tasting menu and the tableside Canlis salad; jacket expected, closed Sunday and Monday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ],
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "274"
+  },
+  {
+   "n": "Cascina Spinasse",
+   "c": "Restaurants",
+   "a": "1531 14th Ave, Capitol Hill",
+   "p": "206-251-7673",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Piedmontese Italian restaurant on Capitol Hill. Order the handmade pasta and finish with panna cotta.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "275"
+  },
+  {
+   "n": "Chinook's at Salmon Bay",
+   "c": "Restaurants",
+   "a": "1900 W Nickerson St, Fisherman's Terminal",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fisherman's Terminal seafood restaurant. Try the oyster stew or the clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "276"
+  },
+  {
+   "n": "Delish Ethiopian Cuisine",
+   "c": "Restaurants",
+   "a": "Hillman City, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Injera-based Ethiopian feasts. Order a veggie or meat combo or the beef or lamb tibs.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "277"
+  },
+  {
+   "n": "Dick's Drive-In (Broadway)",
+   "c": "Restaurants",
+   "a": "115 Broadway E, Capitol Hill",
+   "p": "206-323-1300",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seattle's classic walk-up burger stand. Order a Deluxe with hand-cut fries and a milkshake.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "278"
+  },
+  {
+   "n": "Dick's Drive-In (Queen Anne)",
+   "c": "Restaurants",
+   "a": "500 Queen Anne Ave N, Queen Anne",
+   "p": "206-285-5155",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Another outpost of the beloved local burger drive-in. Get a burger, fries and a shake.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "279"
+  },
+  {
+   "n": "Dough Zone Dumpling House (International District)",
+   "c": "Restaurants",
+   "a": "504 5th Ave S, International District",
+   "p": "206-285-9999",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Popular Seattle dumpling house. Order the juicy pork dumplings and the q-bao pan-fried buns.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "280"
+  },
+  {
+   "n": "Dreamland Bar and Diner",
+   "c": "Restaurants",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont diner. Brunch picks are the savory French toast with fish sauce fried chicken and the McDreamy burger.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "281"
+  },
+  {
+   "n": "El Camino",
+   "c": "Restaurants",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Michoacan-style Mexican comfort food with a festive back patio. Order the bistec or cheese enchiladas with mole.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "282"
+  },
+  {
+   "n": "El Gaucho",
+   "c": "Restaurants",
+   "a": "2200 Western Ave Ste 101, Belltown",
+   "p": "206-728-1337",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Retro-style steakhouse. Order a steak and the Caesar salad prepared tableside.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ]
+   ],
+   "cl": false,
+   "i": "283"
+  },
+  {
+   "n": "El Moose",
+   "c": "Restaurants",
+   "a": "5242 Leary Ave NW, Ballard",
+   "p": "206-784-5568",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tiny Mexican cafe in Ballard. Order the chilaquiles or the pork carnitas.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 2)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-2"
+    ],
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ]
+   ],
+   "cl": false,
+   "i": "284"
+  },
+  {
+   "n": "Elliott's Oyster House",
+   "c": "Restaurants",
+   "a": "1201 Alaskan Way, Pier 56, Waterfront",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Waterfront seafood house on Pier 56. Order the spicy crab and corn chowder or the white clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "285"
+  },
+  {
+   "n": "Emerald City Fish & Chips",
+   "c": "Restaurants",
+   "a": "3756 Rainier Ave S, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Rainier Valley fish shop. Order the crab puppies or the Alaskan cod and chips.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "286"
+  },
+  {
+   "n": "Emmett Watson's Oyster Bar",
+   "c": "Restaurants",
+   "a": "1916 Pike Pl, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Pike Place Market oyster bar. Order oysters on the half shell and New England clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "287"
+  },
+  {
+   "n": "Fuji Bakery",
+   "c": "Restaurants",
+   "a": "526 S King St, International District",
+   "p": "206-623-4050",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Japanese-style bakery. Try the beef curry kare-pan, a chicken katsu sando or the milk stick.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "288"
+  },
+  {
+   "n": "Fuji Sushi",
+   "c": "Restaurants",
+   "a": "Chinatown-International District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Traditional sushi spot with tatami rooms. Try the uni shooter or the chef's selection.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "289"
+  },
+  {
+   "n": "Gainsbourg",
+   "c": "Restaurants",
+   "a": "Greenwood, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "French-leaning Greenwood bistro. Try the lamb-and-beef Gainsbourger with duck fat frites at happy hour.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "290"
+  },
+  {
+   "n": "GoodMart",
+   "c": "Restaurants",
+   "a": "5130 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard seafood spot. Order the apple-miso black cod, panko ling cod or spicy salmon tartare.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "291"
+  },
+  {
+   "n": "Hamdi",
+   "c": "Restaurants",
+   "a": "Ballard Ave, Frelard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Turkish grill. Order the lamb kebap cooked over live coals.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "292"
+  },
+  {
+   "n": "Happy Crab",
+   "c": "Restaurants",
+   "a": "Ballard, Shilshole Bay",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Waterfront seafood boil with Cajun-Creole and Asian flavors. Order the mala-sauced boil and the black truffle xiao long bao.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ],
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "293"
+  },
+  {
+   "n": "Hatch Cantina",
+   "c": "Restaurants",
+   "a": "Belltown, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Belltown Mexican spot. Order the pork green chile stew and the seasonal tacos.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "294"
+  },
+  {
+   "n": "IL Nido",
+   "c": "Restaurants",
+   "a": "Alki Homestead, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian restaurant in the historic Alki Homestead. Order the tagliolini with Meyer lemon butter or the bone-in rib eye.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "295"
+  },
+  {
+   "n": "Jack's Fish Spot",
+   "c": "Restaurants",
+   "a": "1514 Pike Pl, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Pike Place seafood counter. Try the Northwest clam chowder or the chowder-topped poutine.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "296"
+  },
+  {
+   "n": "Jade Garden",
+   "c": "Restaurants",
+   "a": "424 7th Ave S, International District",
+   "p": "206-622-8181",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Dim sum house in the International District. Order the barbecue pork buns and dumplings.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ]
+   ],
+   "cl": false,
+   "i": "297"
+  },
+  {
+   "n": "L'Oursin",
+   "c": "Restaurants",
+   "a": "Central District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "French restaurant near Seattle University. Order the crispy veal sweetbreads and the cassoulet.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "298"
+  },
+  {
+   "n": "La Marea",
+   "c": "Restaurants",
+   "a": "936 NW 49th St, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard seafood restaurant with Mexican flavors. Order the fatty tuna tostada, shrimp aguachile or fried shrimp taco.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "299"
+  },
+  {
+   "n": "La Medusa",
+   "c": "Restaurants",
+   "a": "Columbia City, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Columbia City Italian restaurant. Order the saffron arancini, grilled sardines or the house meatball.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "300"
+  },
+  {
+   "n": "Le Pichet",
+   "c": "Restaurants",
+   "a": "1933 1st Ave, Downtown",
+   "p": "206-256-1499",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "French cafe near Pike Place Market. The roast chicken for two is the dinner draw.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ]
+   ],
+   "cl": false,
+   "i": "301"
+  },
+  {
+   "n": "Local Tide",
+   "c": "Restaurants",
+   "a": "401 N 36th St Ste 103, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont fish shop and restaurant. Order the smoked salmon belly dip, the dover sole sandwich or the clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "302"
+  },
+  {
+   "n": "Lola",
+   "c": "Restaurants",
+   "a": "2000 4th Ave, Downtown",
+   "p": "206-441-1430",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Mediterranean-leaning downtown restaurant. Try the eggplant shakshuka or lamb chops, and the square doughnuts at brunch; closed Monday and Tuesday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "303"
+  },
+  {
+   "n": "Macrina Bakery (Belltown)",
+   "c": "Restaurants",
+   "a": "Belltown, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seattle bakery and cafe. Order an almond croissant, a Nutella brioche, a sandwich or quiche.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "304"
+  },
+  {
+   "n": "Maneki",
+   "c": "Restaurants",
+   "a": "304 6th Ave S, International District",
+   "p": "206-622-2631",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Long-running Japanese spot in the International District. Order the miso black cod collar, the sushi or the daily fish specials.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "305"
+  },
+  {
+   "n": "Marination Ma Kai",
+   "c": "Restaurants",
+   "a": "West Seattle, by the water taxi pier",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hawaiian-Korean counter at the West Seattle water taxi dock. Order the Aloha sliders or the Korean beef tacos.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "306"
+  },
+  {
+   "n": "Market Grill",
+   "c": "Restaurants",
+   "a": "1509 Pike Pl #3, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tiny Pike Place Market counter. Order the blackened salmon sandwich or a cup of clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "307"
+  },
+  {
+   "n": "Maximilien",
+   "c": "Restaurants",
+   "a": "Pike Place Market, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Classic French restaurant with Elliott Bay views. Try the seafood platter or steak frites.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "308"
+  },
+  {
+   "n": "MEET Korean BBQ",
+   "c": "Restaurants",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Tableside Korean barbecue with wagyu, Angus and kurobuta pork. Order the Signature Feast.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "309"
+  },
+  {
+   "n": "Metropolitan Grill",
+   "c": "Restaurants",
+   "a": "820 2nd Ave, Downtown",
+   "p": "206-624-3287",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Downtown steakhouse serving dry-aged mesquite-grilled steaks. Pair a steak with the lobster mac and cheese.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "310"
+  },
+  {
+   "n": "Monsoon",
+   "c": "Restaurants",
+   "a": "615 19th Ave E, Capitol Hill",
+   "p": "206-325-2111",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese restaurant on Capitol Hill. Try the crab dishes or the wild prawns with lemongrass.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "311"
+  },
+  {
+   "n": "Nasai Teriyaki",
+   "c": "Restaurants",
+   "a": "4305 University Way NE, University District",
+   "p": "206-632-3572",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Classic Seattle-style teriyaki on the Ave. Order the teriyaki plate with rice and creamy salad; closed Sunday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "312"
+  },
+  {
+   "n": "Nirmal's",
+   "c": "Restaurants",
+   "a": "Interurban Building, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Indian restaurant in Pioneer Square. Order the tandoori lamb chops, butter chicken and naan.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "313"
+  },
+  {
+   "n": "Noodle/Bar",
+   "c": "Restaurants",
+   "a": "Cascade, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hand-pulled noodles made with Washington wheat. Order the beef meatball noodle bowl.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ],
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "314"
+  },
+  {
+   "n": "Pacific Inn Pub",
+   "c": "Restaurants",
+   "a": "3501 Stone Way N, Fremont",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont pub known for fish and chips; order the panko-breaded fish, Cajun shrimp or pesto salmon sandwich on the patio.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "315"
+  },
+  {
+   "n": "Pam's Kitchen",
+   "c": "Restaurants",
+   "a": "1715 N 45th St, Wallingford",
+   "p": "206-696-7010",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Trinidadian kitchen with limited hours. Look for the aloo pies, curry goat and doubles; closed Monday to Thursday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "316"
+  },
+  {
+   "n": "Panama Hotel Tea and Coffee Shop",
+   "c": "Restaurants",
+   "a": "607 S Main St, International District",
+   "p": "206-515-4000",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Historic tea room inside the Panama Hotel. Order a pot of tea with small Japanese sweets.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "317"
+  },
+  {
+   "n": "Paseo",
+   "c": "Restaurants",
+   "a": "4225 Fremont Ave N, Fremont",
+   "p": "206-545-7440",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Caribbean sandwich shop and Seattle favorite. Order the Caribbean Roast, marinated pork on a baguette.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "Recommended: Seattle best restaurants",
+     "https://www.recommended.app/blog/seattle-best-restaurants"
+    ]
+   ],
+   "cl": false,
+   "i": "318"
+  },
+  {
+   "n": "Phin",
+   "c": "Restaurants",
+   "a": "913 S Jackson St, International District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese cafe in the International District. Order a cà phê sữa and the pandan waffle.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "319"
+  },
+  {
+   "n": "Phở Bắc Súp Shop",
+   "c": "Restaurants",
+   "a": "International District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Modern pho shop. Order the classic pho with rare steak and brisket, the vegetarian pho chay or a banh mi.",
+   "nt": [],
+   "s": [
+    [
+     "Recommended: Seattle best restaurants",
+     "https://www.recommended.app/blog/seattle-best-restaurants"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "320"
+  },
+  {
+   "n": "Phở Thân Brothers",
+   "c": "Restaurants",
+   "a": "Capitol Hill, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Pho shop with a rich broth and a vegetarian star anise option; order the pho and finish with a cream puff.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "321"
+  },
+  {
+   "n": "Pike Place Chowder",
+   "c": "Restaurants",
+   "a": "1530 Post Alley, Pike Place Market",
+   "p": "206-267-2537",
+   "e": "",
+   "w": "https://www.pikeplacechowder.com",
+   "wl": "Website",
+   "b": "Award-winning chowder counter with a Pike Place flagship and a Pacific Place branch. Order the New England clam chowder, seafood bisque or a lobster roll.",
+   "nt": [],
+   "s": [
+    [
+     "Pike Place Chowder official site",
+     "https://www.pikeplacechowder.com"
+    ],
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "322"
+  },
+  {
+   "n": "Qiao Lin Hotpot",
+   "c": "Restaurants",
+   "a": "Downtown Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Chongqing-style hot pot with a customizable spicy broth. Add A5 wagyu, celtuce or housemade tofu.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "323"
+  },
+  {
+   "n": "Queen Cà Phê",
+   "c": "Restaurants",
+   "a": "2231 Queen Anne Ave N, Queen Anne",
+   "p": "206-457-8998",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Vietnamese cafe on Queen Anne. Order a banh mi or a customized bubble tea; closed Monday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "324"
+  },
+  {
+   "n": "Rachel's Bagels & Burritos",
+   "c": "Restaurants",
+   "a": "5451 Leary Ave NW, Ballard",
+   "p": "206-257-5761",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard breakfast stop. Order the oversized breakfast burrito or a loaded bagel sandwich.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ]
+   ],
+   "cl": false,
+   "i": "325"
+  },
+  {
+   "n": "Ray's Boathouse",
+   "c": "Restaurants",
+   "a": "6049 Seaview Ave NW, Ballard (Shilshole Bay)",
+   "p": "206-789-3770",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Waterfront Northwest seafood room with Shilshole Bay views. Order the grilled salmon or the sake-kasu sablefish.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "326"
+  },
+  {
+   "n": "Red Cow",
+   "c": "Restaurants",
+   "a": "1423 34th Ave, Madrona",
+   "p": "206-454-7932",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "French-style bistro in Madrona. Start with charcuterie, then a hanger steak or New York strip.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "327"
+  },
+  {
+   "n": "RockCreek Seafood & Spirits",
+   "c": "Restaurants",
+   "a": "4300 Fremont Ave N, Fremont",
+   "p": "206-557-7732",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Fremont seafood restaurant with a rotating menu. Order the oysters, black cod or shrimp and grits; no weekday lunch.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ],
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "328"
+  },
+  {
+   "n": "Royal Grinders",
+   "c": "Restaurants",
+   "a": "3526 Fremont Pl N, Fremont",
+   "p": "206-545-7560",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Old-school Fremont sandwich shop. Order The Crown or the hot Italian sub; closed Monday and Tuesday.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "329"
+  },
+  {
+   "n": "Sacro Bosco",
+   "c": "Restaurants",
+   "a": "Central District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Evening-only Roman-style sourdough pizza. Order the salame piccante pie and save room for tiramisu.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "330"
+  },
+  {
+   "n": "Saigon Deli",
+   "c": "Restaurants",
+   "a": "1237 S Jackson St, International District",
+   "p": "206-322-3700",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Budget banh mi counter in the International District. The three-kinds-of-ham sandwich is the one to get.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "331"
+  },
+  {
+   "n": "Salty's on Alki",
+   "c": "Restaurants",
+   "a": "1936 Harbor Ave SW, West Seattle (Alki)",
+   "p": "206-937-1600",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Harborfront West Seattle restaurant with skyline views. Go for weekend brunch, chowder or crab legs.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ],
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "332"
+  },
+  {
+   "n": "Salumi",
+   "c": "Restaurants",
+   "a": "309 3rd Ave S, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small Pioneer Square cured-meat shop. Order the meatball sandwich or a plate of house-cured salumi.",
+   "nt": [],
+   "s": [
+    [
+     "Recommended: Seattle best restaurants",
+     "https://www.recommended.app/blog/seattle-best-restaurants"
+    ]
+   ],
+   "cl": false,
+   "i": "333"
+  },
+  {
+   "n": "San Fermo",
+   "c": "Restaurants",
+   "a": "5341 Ballard Ave NW, Ballard",
+   "p": "206-342-1530",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian restaurant with a porch in Ballard. Try the seasonal vegetable starters and the house-made pasta.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "334"
+  },
+  {
+   "n": "Sea'd In",
+   "c": "Restaurants",
+   "a": "1424 11th Ave Ste D, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Capitol Hill seafood restaurant. Try the sea bream ceviche, mackerel toast or the koji-glazed black cod.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "335"
+  },
+  {
+   "n": "Seattle Fish Guys",
+   "c": "Restaurants",
+   "a": "411 23rd Ave S, Central District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Central District fish market and counter. Order the soy-sauced ahi poke or the clam chowder.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "336"
+  },
+  {
+   "n": "Secret Congee",
+   "c": "Restaurants",
+   "a": "6301 Seaview Ave NW, Golden Gardens",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Congee shop near Golden Gardens. Order a bowl with shrimp, fish or spicy beef, with fried dough for dipping.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Seattle breakfast and bakery picks",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/breakfast"
+    ]
+   ],
+   "cl": false,
+   "i": "337"
+  },
+  {
+   "n": "Serafina",
+   "c": "Restaurants",
+   "a": "2043 Eastlake Ave E, Eastlake",
+   "p": "206-323-0807",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Garden-like Italian neighborhood restaurant. Known for eggplant rolls and handmade gnudi.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "338"
+  },
+  {
+   "n": "Serious Pie (Downtown)",
+   "c": "Restaurants",
+   "a": "2001 4th Ave, Belltown",
+   "p": "206-838-7388",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Busy wood-fired pizzeria. Order the egg-topped pie or the Meyer lemon, chili and buffalo mozzarella pizza.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "339"
+  },
+  {
+   "n": "Shomon Kappo Sushi",
+   "c": "Restaurants",
+   "a": "2301 5th Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Belltown sushi spot. Order the Hokkaido scallop nigiri and the fried Dungeness crab nugget.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "340"
+  },
+  {
+   "n": "Shuckers Oyster Bar",
+   "c": "Restaurants",
+   "a": "411 University St, Downtown (Fairmont Olympic Hotel)",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hotel oyster bar downtown. Order the clam chowder with smoked bacon and fresh manila clams.",
+   "nt": [],
+   "s": [
+    [
+     "Tasting Table: 12 Best Spots For Chowder In Seattle",
+     "https://tastingtable.com/1610504/best-restaurants-chowder-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "341"
+  },
+  {
+   "n": "Sichuanese Cuisine",
+   "c": "Restaurants",
+   "a": "1048 S Jackson St, International District",
+   "p": "206-399-8242",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "No-frills Sichuan spot. Order the house-made noodles, kung pao chicken or ma po tofu.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "342"
+  },
+  {
+   "n": "Son of a Butcher",
+   "c": "Restaurants",
+   "a": "2236 Eastlake Ave E, Eastlake",
+   "p": "206-946-6574",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Smoky Korean barbecue on Eastlake with high-quality meats and snacks to share.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "343"
+  },
+  {
+   "n": "Srivilai Thai Cuisine",
+   "c": "Restaurants",
+   "a": "3247 California Ave SW, West Seattle",
+   "p": "206-257-5171",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "West Seattle Thai favorite. Try the roasted duck salad or the wild salmon curry specials.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "344"
+  },
+  {
+   "n": "Staple & Fancy",
+   "c": "Restaurants",
+   "a": "4739 Ballard Ave NW, Ballard",
+   "p": "206-789-1200",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard Italian-leaning restaurant built around a multicourse chef's menu of whatever the kitchen is cooking.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "345"
+  },
+  {
+   "n": "Sushi Kappo Tamura",
+   "c": "Restaurants",
+   "a": "2968 Eastlake Ave E, Eastlake",
+   "p": "206-547-0937",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Sushi bar with Northwest touches. Highlights are oysters in ponzu and spot prawns.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "346"
+  },
+  {
+   "n": "Sushi Kashiba",
+   "c": "Restaurants",
+   "a": "86 Pine St Ste 1, Pike Place Market",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Upscale sushi bar at Pike Place Market. Sit at the bar for nigiri such as uni or otoro, or order the omakase.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "347"
+  },
+  {
+   "n": "Sushi Nori",
+   "c": "Restaurants",
+   "a": "Eastlake Ave, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hand-roll sushi counter. Order the bluefin tuna poke and scallop hand rolls plus the karaage.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "348"
+  },
+  {
+   "n": "Sushi Yoin",
+   "c": "Restaurants",
+   "a": "Queen Anne, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Reservation-only omakase on Queen Anne, with a uni and ikura rice bowl and tuna nigiri.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "349"
+  },
+  {
+   "n": "SWeL Restaurant",
+   "c": "Restaurants",
+   "a": "Fremont, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Cozy Fremont spot for sharing plates. Start with oysters or wood-fired scallops, then the pork chop.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "350"
+  },
+  {
+   "n": "Tai Tung",
+   "c": "Restaurants",
+   "a": "International District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Longtime Chinese restaurant in the International District. Order the beef in oyster sauce or the garlic shrimp.",
+   "nt": [],
+   "s": [
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "351"
+  },
+  {
+   "n": "Tamarind Tree",
+   "c": "Restaurants",
+   "a": "1036 S Jackson St, International District",
+   "p": "206-860-1404",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Popular Vietnamese restaurant. Order the spring rolls, banh xeo and the seven courses of beef.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "352"
+  },
+  {
+   "n": "Tanoor",
+   "c": "Restaurants",
+   "a": "803 Dexter Ave N, South Lake Union",
+   "p": "206-457-5272",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Halal Lebanese restaurant with a big mezze list. Order the meat skewers and fresh-baked pita.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "353"
+  },
+  {
+   "n": "Tavolàta",
+   "c": "Restaurants",
+   "a": "2323 2nd Ave, Belltown",
+   "p": "206-838-8008",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Lively Belltown Italian spot with housemade pasta such as bucatini amatriciana or cacio e pepe.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ],
+    [
+     "Recommended: Seattle best restaurants",
+     "https://www.recommended.app/blog/seattle-best-restaurants"
+    ]
+   ],
+   "cl": false,
+   "i": "354"
+  },
+  {
+   "n": "Thai Tom",
+   "c": "Restaurants",
+   "a": "4543 University Ave, University District",
+   "p": "206-548-9548",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Affordable, fiery Thai cooking over open woks. Popular orders are the garlic chicken, curries and pad Thai.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "355"
+  },
+  {
+   "n": "The Boat",
+   "c": "Restaurants",
+   "a": "Chinatown-International District, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Casual spot known for a fish sauce-glazed fried chicken platter over rice or noodles.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "356"
+  },
+  {
+   "n": "The Corson Building",
+   "c": "Restaurants",
+   "a": "Georgetown, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Seasonal Northwest dining in a lantern-lit garden in Georgetown.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, winter 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-winter-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "357"
+  },
+  {
+   "n": "The Garrison",
+   "c": "Restaurants",
+   "a": "Ballard, Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Ballard seafood room in the old Hotel Albatross space. Order oysters, a seafood tower or the Monday crab feast.",
+   "nt": [],
+   "s": [
+    [
+     "Resy Hit List: Seattle restaurants, summer 2026",
+     "https://blog.resy.com/the-hit-list/seattle-restaurants-summer-2026/"
+    ]
+   ],
+   "cl": false,
+   "i": "358"
+  },
+  {
+   "n": "The Pink Door",
+   "c": "Restaurants",
+   "a": "1919 Post Alley, Pike Place Market",
+   "p": "206-443-3241",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Italian-American restaurant hidden in Post Alley with a popular patio. Order the pappardelle Bolognese or the cioppino.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 4)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-4"
+    ]
+   ],
+   "cl": false,
+   "i": "359"
+  },
+  {
+   "n": "The Walrus and the Carpenter",
+   "c": "Restaurants",
+   "a": "4743 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Lively Ballard oyster bar with rotating raw oysters; also try the fried oysters or the beef tartare. No reservations.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ],
+    [
+     "The Stranger: How to Seattle 2025, Food and Drink",
+     "https://www.thestranger.com/how-to-seattle-2025/2025/05/27/80076020/food-and-drink"
+    ]
+   ],
+   "cl": false,
+   "i": "360"
+  },
+  {
+   "n": "Uneeda Burger",
+   "c": "Restaurants",
+   "a": "4302 Fremont Ave N, Fremont",
+   "p": "206-547-2600",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Casual burger shack. Try the lamb burger with Manchego, plus a milkshake and onion rings.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "361"
+  },
+  {
+   "n": "Valhalla Sandwiches",
+   "c": "Restaurants",
+   "a": "8202 Greenwood Ave N, Greenwood",
+   "p": "206-257-0658",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Hearty Greenwood sandwich shop. Try the BBQ pork with chipotle sauce or El Duderino.",
+   "nt": [],
+   "s": [
+    [
+     "Fodor's: Best Restaurants in Seattle (page 5)",
+     "https://www.fodors.com/world/north-america/usa/washington/seattle/restaurants/page-5"
+    ]
+   ],
+   "cl": false,
+   "i": "362"
+  },
+  {
+   "n": "Westward",
+   "c": "Restaurants",
+   "a": "2501 N Northlake Way, Wallingford",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Lakeside Wallingford restaurant. Order the baked oysters, seared halibut and the clam dip with chips.",
+   "nt": [],
+   "s": [
+    [
+     "The Infatuation: Seafood Restaurants in Seattle",
+     "https://www.theinfatuation.com:443/seattle/guides/seafood-restaurants-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "363"
+  }
+ ]
 }

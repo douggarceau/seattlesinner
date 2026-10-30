@@ -1,4 +1,122 @@
 {
- "asof": "2026-10-29T22:45:00-04:00",
- "items": []
+ "asof": "2026-10-30T12:00:00-07:00",
+ "items": [
+  {
+   "h": "Kraken edge Maple Leafs 5-4 on a Montour goal",
+   "sum": "Seattle outlasted Toronto in a high-scoring game decided by a goal from Brandon Montour.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/kraken-top-maple-leafs-5-4-montour-goal",
+   "town": "Seattle",
+   "date": "",
+   "rank": 1
+  },
+  {
+   "h": "Huskies pull away from Purdue, 38-26",
+   "sum": "Washington put together a 38-26 victory over Purdue in Big Ten play.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/washington-soars-38-26-over-purdue",
+   "town": "Seattle",
+   "date": "",
+   "rank": 2
+  },
+  {
+   "h": "Huskies host Nebraska: how to tune in",
+   "sum": "A viewing guide for Washington's upcoming matchup with Nebraska.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/huskies-vs-nebraska",
+   "town": "Seattle",
+   "date": "",
+   "rank": 3
+  },
+  {
+   "h": "Seahawks and Bears set for Monday Night Football",
+   "sum": "A guide to watching Seattle's Monday night meeting with Chicago.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/watch-seahawks-bears",
+   "town": "Seattle",
+   "date": "",
+   "rank": 4
+  },
+  {
+   "h": "Seahawks guard Quenton Nelson talks about his fresh start in Seattle",
+   "sum": "The veteran lineman says he is excited about his new chapter with the Seahawks.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/nelson-excited-new-chapter-seahawks",
+   "town": "Seattle",
+   "date": "",
+   "rank": 5
+  },
+  {
+   "h": "Seahawks' Jadarian Price back at practice",
+   "sum": "Seattle's Jadarian Price returned to practice, a welcome sign for the team's depth.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/seahawks-jadarian-price-returns-practice",
+   "town": "Renton",
+   "date": "",
+   "rank": 6
+  },
+  {
+   "h": "Sounders fall 1-0 to Houston Dynamo",
+   "sum": "Seattle dropped a tight 1-0 match to the Dynamo in a costly result.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/sounders-suffer-costly-1-0-loss-dynamo",
+   "town": "Seattle",
+   "date": "",
+   "rank": 7
+  },
+  {
+   "h": "Kraken drop a 5-1 game to the Wild",
+   "sum": "Minnesota handled Seattle 5-1 in a lopsided NHL contest.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/kraken-stumble-5-1-loss-wild",
+   "town": "Seattle",
+   "date": "",
+   "rank": 8
+  },
+  {
+   "h": "Mariners keep reliever Andres Munoz with an option",
+   "sum": "Seattle exercised its contract option on closer Andres Munoz for next season.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/mariners-exercise-munoz-option",
+   "town": "Seattle",
+   "date": "",
+   "rank": 9
+  },
+  {
+   "h": "WSU falls 31-10 to Boise State",
+   "sum": "The Cougars lost their fifth straight game, 31-10 against Boise State.",
+   "outlet": "FOX 13 Seattle",
+   "url": "https://www.fox13seattle.com/sports/wsu-falls-31-10-boise-state",
+   "town": "Pullman",
+   "date": "",
+   "rank": 10
+  },
+  {
+   "h": "Beacon Hill home becomes a haunted trail for Halloween",
+   "sum": "A house near Comet Lodge Cemetery offers a witches' lair, corn maze and pumpkin patch at no charge, with sensory-friendly visits by appointment Oct. 26-29.",
+   "outlet": "KOMO News",
+   "url": "https://komonews.com/news/arc-seattle/seattle-beacon-hill-home-transforms-into-haunted-trail-ahead-of-halloween",
+   "town": "Beacon Hill",
+   "date": "2026-10-23",
+   "rank": 11
+  },
+  {
+   "h": "Halloween weekend roundup: Dia de Muertos, harvest fests and a zombie walk",
+   "sum": "Pike Place Market's Dia de Muertos, a Freeway Park lantern festival, Issaquah's Zombie Walk, West Seattle Harvest Fest and the Museum of Fright top the family lineup.",
+   "outlet": "MyNorthwest",
+   "url": "https://mynorthwest.com/lifestyle/halloween-fun-around-seattle/4289228",
+   "town": "Seattle",
+   "date": "2026-10-23",
+   "rank": 12
+  },
+  {
+   "h": "Court revives lawsuit over Seattle rental rules",
+   "sum": "An appeals ruling lets a suit from affordable-housing providers over city rental regulations move ahead.",
+   "outlet": "KOMO News",
+   "url": "https://komonews.com/news/local/lawsuit-challenging-seattles-rental-regulations-can-move-forward-after-court-reversal-tenant-rights-landlord-eviction-affordable-complex-criminal-background-drugs-crime-destruction-lease-rent-increase-apartment-rental",
+   "town": "Seattle",
+   "date": "",
+   "rank": 13
+  }
+ ]
 }

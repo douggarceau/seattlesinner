@@ -1,4 +1,1646 @@
 {
- "asof": "2026-10-29T22:45:00-04:00",
- "sections": []
+ "asof": "2026-10-30T12:00:00-07:00",
+ "sections": [
+  {
+   "key": "beaches",
+   "title": "Beaches & Waterfront",
+   "items": [
+    {
+     "name": "Alki Beach Park",
+     "blurb": "Alki is West Seattle's long city beach, looking across Elliott Bay to the downtown skyline. Designated fire rings are set up along the sand for cookouts. Look for the replica of the Statue of Liberty and the obelisk marking the 1851 settlement. A paved beach trail runs along Alki Avenue for walking and cycling.",
+     "address": "2665 Alki Ave SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/alki-beach-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Golden Gardens Park",
+     "blurb": "This Ballard park faces west over Puget Sound and the Olympic Mountains, making it a favorite for sunsets. Beach fire pits are available, and the tide pools and loop trails give visitors plenty to explore. An off-leash dog area sits at the northern end. The Burke-Gilman Trail ends here, so it is also an easy bike destination.",
+     "address": "8498 Seaview Pl NW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/golden-gardens-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Lincoln Park",
+     "blurb": "Lincoln Park in West Seattle pairs a pebbly Puget Sound beach with a big play area. Colman Pool, an Olympic-size heated saltwater pool with a waterslide, is on site. There are five picnic shelters, a playground, cable rides and a tree house for kids.",
+     "address": "8011 Fauntleroy Way SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/lincoln-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Carkeek Park",
+     "blurb": "Carkeek is a 216-acre watershed park in north Seattle with about six miles of forest trails. A pedestrian bridge crosses the railroad tracks to reach a Puget Sound beach, and the sound views are comparable to Alki's. It is a quieter pick if you want woods and water in one outing.",
+     "address": "950 NW Carkeek Park Rd, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/carkeek-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Matthews Beach Park",
+     "blurb": "On the shore of Lake Washington in northeast Seattle, Matthews Beach has the city's largest sheltered, shallow swim beach. A floating dock, lifeguards in season and changing rooms make it good for families.",
+     "address": "5100 NE 93rd St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Constellation Park",
+     "blurb": "Just south of Alki, this small West Seattle shoreline is one of the city's most popular tide-pooling spots. Visitors come at low tide to look at sea life in the rocks, and the park is also listed as a place for evening bonfires.",
+     "address": "3521 Beach Dr SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/charles-richey-sr-viewpoint",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Magnuson Park",
+     "blurb": "Magnuson Park on Lake Washington has a beachfront, an off-leash dog area and open fields. Its 1930s and 1940s Art Deco and brick buildings recall its past as a naval air station. Sail Sand Point, which rents boats and paddleboards, is nearby.",
+     "address": "7400 Sand Point Way NE, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/magnuson-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Myrtle Edwards Park",
+     "blurb": "A waterfront strip north of Belltown, Myrtle Edwards has a paved bike and walking path along Elliott Bay. It is one of the closest shorelines to downtown and is a good picnic stop next to the Olympic Sculpture Park.",
+     "address": "3130 Alaskan Way, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/myrtle-edwards-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Pier 62 Waterfront Park",
+     "blurb": "Pier 62 is a rebuilt historic pier on the downtown waterfront, listed by Visit Seattle as the city's newest public waterfront space. It offers art, food and views of ferries crossing Elliott Bay.",
+     "address": "1951 Alaskan Way, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/pier-62",
+     "src": "https://visitseattle.org/?p=318802"
+    }
+   ]
+  },
+  {
+   "key": "parks",
+   "title": "Parks & Green Spaces",
+   "items": [
+    {
+     "name": "Discovery Park",
+     "blurb": "At 534 acres, Discovery Park in Magnolia is the city's largest park, with meadows, forest, sea cliffs and tidal beaches. It is a former military base, and it holds the Daybreak Star Indian Cultural Center. The renovated play area has a zip line and picnic tables. A steep trail drops to the beach and the West Point Lighthouse.",
+     "address": "3801 Discovery Park Blvd, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/discovery-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Seward Park",
+     "blurb": "Seward Park is a 300-acre peninsula on Lake Washington with one of the city's last stands of old-growth forest. A paved loop of about 2.4 miles suits walkers and cyclists. There is a swimming beach with lifeguards at select times, a boat launch, and the Seward Park Audubon Center for bird tours.",
+     "address": "5900 Lake Washington Blvd S, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/seward-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Green Lake Park",
+     "blurb": "Green Lake is the city's busiest loop for runners, walkers, cyclists and strollers, with a path of roughly three miles. The lake has two swimming beaches, and the Greenlake Boathouse rents paddle craft. It was designed by John Olmsted in 1903 and is quieter on weekdays.",
+     "address": "7201 E Green Lake Dr N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/green-lake-park",
+     "src": "https://www.thestranger.com/visitors-guide/the-strangers-guide-to-the-best-parks-and-beaches-in-seattle-25132335/"
+    },
+    {
+     "name": "Gas Works Park",
+     "blurb": "Gas Works sits on the site of a former coal gasification plant, and rusted towers and machinery were left in place as industrial sculpture. The hill above offers views of Lake Union and the downtown skyline and is a favorite spot for kite flying.",
+     "address": "2101 N Northlake Way, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/gas-works-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Volunteer Park",
+     "blurb": "This Capitol Hill park of about 48 acres was designed by the Olmsted Brothers. It holds the Volunteer Park Conservatory, a Victorian glasshouse botanical garden, the Seattle Asian Art Museum, and a historic water tower that visitors can climb for a view. The park also has a stage for outdoor performances.",
+     "address": "1247 15th Ave E, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/volunteer-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Washington Park Arboretum",
+     "blurb": "Run by the University of Washington, the Arboretum covers about 230 acres of marked paths lined with azaleas, rhododendrons and Japanese maples. The Seattle Japanese Garden is inside the grounds and is open March to November.",
+     "address": "2300 Arboretum Dr E, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://botanicgardens.uw.edu/washington-park-arboretum/",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Kerry Park",
+     "blurb": "Small Queen Anne park known for one of the classic skyline views of Seattle, with the Space Needle, downtown and Elliott Bay in the frame. On a clear day Mount Rainier appears behind. It faces south and can get crowded around sunset.",
+     "address": "211 W Highland Dr, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/kerry-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Lake Union Park",
+     "blurb": "In South Lake Union, this park sits next to the Museum of History and Industry and the Center for Wooden Boats, which makes it a handy stop for a lakeside stroll. It also has a beach spot known as Goose Beach.",
+     "address": "860 Terry Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/lake-union-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Woodland Park",
+     "blurb": "Woodland Park near Green Lake offers sports courts, a rose garden and lake views. Woodland Park Zoo is on the same grounds, in Phinney Ridge.",
+     "address": "Phinney Ridge / Green Lake, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/woodland-park",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Oxbow Park",
+     "blurb": "A small Georgetown park best known for a large cowboy hat and boots sculpture. The art began life as a gas station, which operated from the late 1950s to the late 1980s.",
+     "address": "6430 Corson Ave S, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/oxbow-park",
+     "src": "https://visitseattle.org/?p=318802"
+    }
+   ]
+  },
+  {
+   "key": "walks",
+   "title": "Walks & Trails",
+   "items": [
+    {
+     "name": "Discovery Park Loop and North Beach Trail",
+     "blurb": "Discovery Park's named trails include the Loop Trail and the Beach Trail. The North Beach Trail passes a dramatic lighthouse, and a steep path leads down to Puget Sound. Allow time for the climb back up.",
+     "address": "3801 Discovery Park Blvd, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/discovery-park",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    },
+    {
+     "name": "Carkeek Park Pipers Creek Trail",
+     "blurb": "The Pipers Creek Trail winds through Carkeek's wooded watershed with Puget Sound views. The park has about six miles of forest trails in all, plus a footbridge to the beach.",
+     "address": "950 NW Carkeek Park Rd, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/carkeek-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Union Bay Natural Area and Yesler Swamp",
+     "blurb": "Run by the University of Washington Botanic Gardens, this wetland area is known for the Yesler Swamp trail. It is a calm option for bird watching close to the city.",
+     "address": "Center for Urban Horticulture, University of Washington",
+     "phone": "",
+     "hours": "",
+     "url": "https://botanicgardens.uw.edu/center-for-urban-horticulture/visit/union-bay-natural-area/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Seward Park Sqebeqsed Trail",
+     "blurb": "This trail is popular for bird-watching and for views across Lake Washington. It is one of several walks in Seward Park's old-growth forest.",
+     "address": "5900 Lake Washington Blvd S, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/seward-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Washington Park Arboretum Trails",
+     "blurb": "About 230 acres of marked paths wind past rare plants and seasonal color. The Seattle Japanese Garden within is open March to November.",
+     "address": "2300 Arboretum Dr E, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://botanicgardens.uw.edu/washington-park-arboretum/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Hiram M. Chittenden Locks (Ballard Locks)",
+     "blurb": "The locks regulate water between Puget Sound and the Lake Washington Ship Canal. A visitor center is on site, and a salmon fish ladder can be viewed from May to September. The Carl S. English Jr. Botanical Garden is on the grounds.",
+     "address": "Ballard, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://ballardlocks.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Overlook Walk",
+     "blurb": "An elevated pedestrian route on the waterfront that links Pike Place Market to the Seattle Aquarium.",
+     "address": "Central waterfront, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://waterfrontparkseattle.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Green Lake Loop",
+     "blurb": "The paved loop around Green Lake is roughly three miles and takes about an hour on foot. It is shared with runners and cyclists, so weekdays are calmer.",
+     "address": "7201 E Green Lake Dr N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/find/parks/green-lake-park",
+     "src": "https://www.thestranger.com/visitors-guide/the-strangers-guide-to-the-best-parks-and-beaches-in-seattle-25132335/"
+    },
+    {
+     "name": "Kobe Terrace Park",
+     "blurb": "In the Chinatown-International District, Kobe Terrace has cherry blossoms in spring and a stone lantern said to be 200 years old. It is a short walk from the Wing Luke Museum and the Seattle Pinball Museum.",
+     "address": "Chinatown-International District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    }
+   ]
+  },
+  {
+   "key": "bikes",
+   "title": "Bike Paths",
+   "items": [
+    {
+     "name": "Burke-Gilman Trail",
+     "blurb": "Nearly 20 miles of converted railroad bed, running from Golden Gardens Park in Ballard to Kenmore. It is off limits to motorized vehicles except e-bikes, and it links Puget Sound, Lake Union and Lake Washington.",
+     "address": "Golden Gardens to Kenmore",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattle.gov/parks/allparks/burke-gilman-trail",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Elliott Bay Trail",
+     "blurb": "A 3.9-mile route along the downtown waterfront, with public art, history, wildlife and views of mountains and water. It passes through parkland in the center of the city.",
+     "address": "Elliott Bay waterfront, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks",
+     "src": "https://www.traillink.com/cityguide/seattle"
+    },
+    {
+     "name": "Ship Canal Trail",
+     "blurb": "A 1.9-mile path on the south side of the Lake Washington Ship Canal, facing the Burke-Gilman Trail across the water.",
+     "address": "South side of the Ship Canal, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/transportation",
+     "src": "https://www.traillink.com/cityguide/seattle"
+    },
+    {
+     "name": "Alki Beach Trail",
+     "blurb": "A flat, serene path of roughly four miles along Alki Avenue and the beach in West Seattle. It is not a loop, so plan on an out-and-back ride.",
+     "address": "Alki Ave SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks",
+     "src": "https://visitseattle.org/?p=337149"
+    },
+    {
+     "name": "Duwamish Trail",
+     "blurb": "A 3-mile north-south trail along the industrial Duwamish Waterway. It is described as an important connector in southwest Seattle.",
+     "address": "Duwamish Waterway, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/transportation",
+     "src": "https://www.traillink.com/cityguide/seattle"
+    },
+    {
+     "name": "Interurban Trail North",
+     "blurb": "At 31.3 miles, this long trail follows the route of the original electric railway between Seattle and Everett through residential and commercial areas.",
+     "address": "Seattle to Everett",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/transportation",
+     "src": "https://www.traillink.com/cityguide/seattle"
+    },
+    {
+     "name": "Myrtle Edwards Park Path",
+     "blurb": "A bike and walking path along Elliott Bay just north of Belltown. It runs along Elliott Bay just north of Belltown.",
+     "address": "3130 Alaskan Way, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/myrtle-edwards-park",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Seattle Bike Web Map",
+     "blurb": "The City of Seattle's online bike map is the place to plan a route. Pair it with local rentals such as Evo Seattle, Montlake Bicycle Shop or Recycled Cycles.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/transportation/projects-and-programs/programs/bike-program/bike-web-map",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Bikeshare and E-bike Rentals",
+     "blurb": "For a quick ride, the Visit Seattle guide lists Lime, Bird and Veo for bikeshare e-bikes and scooters.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.li.me/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  },
+  {
+   "key": "lighthouses",
+   "title": "Lighthouses & Viewpoints",
+   "items": [
+    {
+     "name": "West Point Lighthouse",
+     "blurb": "Built in 1881, this lighthouse on the northern tip of Discovery Park is still active. Reach it on the beach trail from the park, with a steep walk back up. It looks out over Puget Sound.",
+     "address": "Discovery Park, 3801 Discovery Park Blvd, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/discovery-park",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Point No Point Lighthouse",
+     "blurb": "Across the Sound on the Kitsap Peninsula, a peaceful beach is anchored by an 1879 lighthouse. It makes a day trip by ferry and car.",
+     "address": "Kitsap Peninsula, Hansville",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/things-to-do/outdoors/the-beach-is-that-way/"
+    },
+    {
+     "name": "Space Needle",
+     "blurb": "Opened for the 1962 World's Fair, the Space Needle has an observation deck about 520 feet up with 360-degree views of downtown, Elliott Bay, the Olympics and Mount Rainier. A rotating glass floor is a highlight.",
+     "address": "400 Broad St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.spaceneedle.com",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views ; https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Sky View Observatory",
+     "blurb": "On the 73rd floor of the Columbia Center, Seattle's tallest building, this observation deck looks down on the Space Needle.",
+     "address": "Columbia Center, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    },
+    {
+     "name": "Kerry Park",
+     "blurb": "Queen Anne's classic viewpoint for the skyline, the Space Needle and, on clear days, Mount Rainier. It faces south and gets crowded at sunset.",
+     "address": "211 W Highland Dr, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/kerry-park",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    },
+    {
+     "name": "Gas Works Park Hill",
+     "blurb": "The hillside at Gas Works is a favorite for views of Lake Union and the downtown skyline, and for kite flying.",
+     "address": "2101 N Northlake Way, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattle.gov/parks/allparks/gas-works-park",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    },
+    {
+     "name": "Volunteer Park Water Tower",
+     "blurb": "A historic water tower in Volunteer Park can be climbed for a view over Capitol Hill and beyond.",
+     "address": "1247 15th Ave E, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/volunteer-park",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    },
+    {
+     "name": "Alki Beach Viewpoint",
+     "blurb": "A 2.5-mile beach path in West Seattle gives views of the water and, across Elliott Bay, the Space Needle and skyline.",
+     "address": "Alki Ave SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/alki-beach-park",
+     "src": "https://www.citypass.com/articles/seattle/best-seattle-views"
+    }
+   ]
+  },
+  {
+   "key": "history",
+   "title": "History & Museums",
+   "items": [
+    {
+     "name": "Museum of History & Industry (MOHAI)",
+     "blurb": "MOHAI occupies four stories at the south end of Lake Union and covers regional history from the Duwamish peoples to the modern tech industry, including the Great Seattle Fire of 1889. It houses the Bezos Center for Innovation. The Center for Wooden Boats is next door.",
+     "address": "860 Terry Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://mohai.org",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm ; https://visitseattle.org/things-to-do/arts-culture/museums"
+    },
+    {
+     "name": "The Museum of Flight",
+     "blurb": "One of the largest air and space museums in the world, with the Great Gallery, the Personal Courage Wing and the original Boeing headquarters. It holds more than 175 aircraft and spacecraft and a tourable Air Force One. It is about eight miles from downtown.",
+     "address": "9404 E Marginal Way S, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.museumofflight.org",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Burke Museum of Natural History and Culture",
+     "blurb": "The state's oldest public museum, founded in 1885 and now on the University of Washington campus. It holds fossils, Northwest Native art and natural history collections, and a working research lab is visible through large windows. Admission is waived on the first Thursday of each month.",
+     "address": "4300 15th Ave NE, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.burkemuseum.org",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Klondike Gold Rush National Historical Park, Seattle Unit",
+     "blurb": "Part of the national historical park, this Pioneer Square museum tells how Seattle became the outfitting hub of the Klondike gold rush.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/museums"
+    },
+    {
+     "name": "Wing Luke Museum",
+     "blurb": "A museum of Asian American, Native Hawaiian and Pacific Islander history, art and culture in the Chinatown-International District.",
+     "address": "Chinatown-International District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.wingluke.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "National Nordic Museum",
+     "blurb": "Covers the history of Denmark, Norway, Finland, Sweden and Iceland and their ties to the Pacific Northwest. It holds over 80,000 artifacts, a cafe, and an outdoor garden with a replica Viking ship.",
+     "address": "2655 NW Market St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.nordicmuseum.org",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Seattle Underground Tour",
+     "blurb": "A 75-minute guided walk through abandoned storefronts and sidewalks left when Pioneer Square streets were raised after the Great Seattle Fire. The ground is uneven and dimly lit, so wear sensible shoes.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://theculturetrip.com/north-america/usa/washington/seattle/articles/20-must-visit-attractions-in-seattle"
+    },
+    {
+     "name": "Pioneer Square",
+     "blurb": "Seattle's original neighborhood, with Richardson Romanesque buildings from the 19th century, art galleries, cafes and an Occidental Square bocce court. It sits next to Lumen Field and T-Mobile Park.",
+     "address": "Pioneer Square, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://theculturetrip.com/north-america/usa/washington/seattle/articles/20-must-visit-attractions-in-seattle ; https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Seattle Pinball Museum",
+     "blurb": "In the International District, about 50 playable pinball machines, some dating to the 1930s, rotate through the space. Admission includes unlimited play, and vintage sodas are sold.",
+     "address": "508 Maynard Ave S, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattlepinballmuseum.com",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Northwest African American Museum",
+     "blurb": "Housed in the historic Colman School building in the Central District, with exhibits from contemporary art to historical photographs. Jimi Hendrix Park is next door.",
+     "address": "Central District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.naamnw.org",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/cultural-heritage/african-american/"
+    }
+   ]
+  },
+  {
+   "key": "art",
+   "title": "Art & Gardens",
+   "items": [
+    {
+     "name": "Seattle Art Museum (SAM)",
+     "blurb": "SAM's downtown building holds more than 25,000 works from around the world, including Pacific Northwest Native art and contemporary pieces. It runs the Olympic Sculpture Park and the Seattle Asian Art Museum.",
+     "address": "1300 1st Ave, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattleartmuseum.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/ ; https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Olympic Sculpture Park",
+     "blurb": "A waterfront park of about nine acres, part of SAM, with monumental sculpture including works by Alexander Calder and Richard Serra. It offers views of the Space Needle, Puget Sound and the Olympics.",
+     "address": "2901 Western Ave, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattleartmuseum.org/visit/olympic-sculpture-park/",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Chihuly Garden and Glass",
+     "blurb": "Dale Chihuly's glasswork fills eight galleries, an outdoor garden with the Space Needle behind it, and a 40-foot Glasshouse. Glassblowing demonstrations are held daily.",
+     "address": "305 Harrison St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.chihulygardenandglass.com",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Frye Art Museum",
+     "blurb": "An intimate collection of 19th-century, modern and contemporary art .",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://fryemuseum.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Seattle Asian Art Museum",
+     "blurb": "SAM's Asian art museum is in Volunteer Park on Capitol Hill.",
+     "address": "Volunteer Park, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattleartmuseum.org",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Volunteer Park Conservatory",
+     "blurb": "A Victorian glasshouse botanical garden in Volunteer Park. The park's dahlias bloom from July.",
+     "address": "1247 15th Ave E, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.volunteerparkconservatory.org",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Seattle Japanese Garden",
+     "blurb": "A 3.5-acre garden in the Washington Park Arboretum, open March to November.",
+     "address": "Washington Park Arboretum, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://botanicgardens.uw.edu/washington-park-arboretum/",
+     "src": "https://visitseattle.org/?p=318802"
+    },
+    {
+     "name": "Fremont Troll",
+     "blurb": "An 18-foot sculpture weighing about 6.5 tons that lurks under the George Washington Memorial Bridge in Fremont.",
+     "address": "Under the Aurora Bridge, Fremont",
+     "phone": "",
+     "hours": "",
+     "url": "https://fremont.com",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Wa Na Wari",
+     "blurb": "A community space in the Central District showcasing Black art. It hosts the Walk the Block art festival each September.",
+     "address": "Central District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.wanawari.org",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/cultural-heritage/african-american/"
+    }
+   ]
+  },
+  {
+   "key": "family",
+   "title": "Family & Science",
+   "items": [
+    {
+     "name": "Pacific Science Center",
+     "blurb": "Housed in 1962 World's Fair buildings at Seattle Center, with hands-on science, a tropical butterfly house, a planetarium and the state's largest IMAX screen. Check the website for current hours.",
+     "address": "200 2nd Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.pacificsciencecenter.org",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/ ; https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Seattle Aquarium",
+     "blurb": "On Pier 59 on the waterfront, with more than 10,000 marine animals and a 360,000-gallon tank. Residents include seals, sea otters, tufted puffins and a giant Pacific octopus.",
+     "address": "1483 Alaskan Way, Pier 59, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattleaquarium.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/ ; https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Woodland Park Zoo",
+     "blurb": "A zoo on Phinney Ridge with habitats from around the world, known for conservation work. The summer ZooTunes concert series is held here.",
+     "address": "5500 Phinney Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.zoo.org",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Seattle Children's Museum",
+     "blurb": "Interactive exhibits for young children at Seattle Center. Check its website before visiting, as the museum has had temporary closures.",
+     "address": "Seattle Center, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattlechildrensmuseum.org",
+     "src": "https://www.planetware.com/washington/best-museums-in-seattle-us-wa-188.htm"
+    },
+    {
+     "name": "Artists at Play and International Fountain",
+     "blurb": "A kids' playground at Seattle Center with slides, swings, ropes courses and merry-go-rounds, next to the International Fountain splash pad.",
+     "address": "Seattle Center, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattlecenter.com",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Seattle Great Wheel and Miners Landing",
+     "blurb": "The 175-foot Great Wheel stands on Pier 57 at Miners Landing, which also has an arcade and a carousel.",
+     "address": "Pier 57, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattlegreatwheel.com",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Ye Olde Curiosity Shop",
+     "blurb": "A kitschy curios shop steps from Pier 57 on the waterfront.",
+     "address": "Waterfront, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.yeoldecuriosityshop.com",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Kraken Community Iceplex",
+     "blurb": "Public skating is offered during lunch breaks, evenings and weekends.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.krakencommunityiceplex.com",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Bill & Melinda Gates Foundation Discovery Center",
+     "blurb": "Exhibits on the foundation's work on global inequality, at Seattle Center.",
+     "address": "Seattle Center, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.discovergates.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "REI Pinnacle Climbing Wall",
+     "blurb": "A 65-foot indoor climbing wall at REI with beginner classes, including kids' classes.",
+     "address": "REI Flagship, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.rei.com/stores/seattle/rock-climbing-wall",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    }
+   ]
+  },
+  {
+   "key": "ferries",
+   "title": "Ferries & Boat Trips",
+   "items": [
+    {
+     "name": "Washington State Ferries: Seattle to Bainbridge Island",
+     "blurb": "The crossing takes about 35 minutes. For the fall schedule, Sep 20 to Dec 26, 2026, there are 23 weekday departures and 22 weekend departures from each side, from early morning to late evening. Fares are on the WSDOT route page.",
+     "address": "Seattle Ferry Terminal, Seattle, WA 98104",
+     "phone": "",
+     "hours": "",
+     "url": "https://wsdot.com/ferries/Schedule/ScheduleDetailByRoute.aspx?route=sea-bi",
+     "src": "https://wsdot.com/ferries/Schedule/ScheduleDetailByRoute.aspx?route=sea-bi"
+    },
+    {
+     "name": "Washington State Ferries: Seattle to Bremerton",
+     "blurb": "The crossing takes about an hour. For Sep 20 to Dec 26, 2026, there are 15 daily sailings each way, roughly every 1 to 2 hours. WSDOT lists service alerts on the route page, so check before you go.",
+     "address": "Seattle Ferry Terminal, Seattle, WA 98104",
+     "phone": "",
+     "hours": "",
+     "url": "https://wsdot.com/Ferries/Schedule/scheduledetailbyroute.aspx?route=sea-br",
+     "src": "https://wsdot.com/Ferries/Schedule/scheduledetailbyroute.aspx?route=sea-br"
+    },
+    {
+     "name": "Argosy Cruises",
+     "blurb": "Harbor cruises on Elliott Bay with skyline and mountain views, plus Ballard Locks tours, whale watching and dining cruises. A pier-front booth sells tickets.",
+     "address": "Waterfront, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.argosycruises.com",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Puget Sound Express Whale Watching",
+     "blurb": "Whale-watching trips on Puget Sound.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.pugetsoundexpress.com/seattle-whale-watching-tours/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Clipper Vacations Whale Watching",
+     "blurb": "Another operator for whale-watching adventures out of Seattle.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.clippervacations.com/whale-watching/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Seattle's Tall Ship (Bay Lady)",
+     "blurb": "An 85-foot wind-powered schooner for sails on the water.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattlesailingship.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Waterways Cruises",
+     "blurb": "Dinner and brunch cruises on Lake Union and Lake Washington.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://waterwayscruises.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Kenmore Air Seaplane Tours",
+     "blurb": "Seaplane flights from South Lake Union, plus flights to the San Juan Islands.",
+     "address": "South Lake Union, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://kenmoreair.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Salish Sea Tours",
+     "blurb": "Custom catamaran cruises.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.salishseatours.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  },
+  {
+   "key": "paddle",
+   "title": "Paddling & Sailing",
+   "items": [
+    {
+     "name": "The Center for Wooden Boats",
+     "blurb": "Rents sailboats and human-powered boats at Lake Union Park, next to MOHAI. Boat borrowing is sometimes offered on weekends by reservation.",
+     "address": "Lake Union Park, 860 Terry Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.cwb.org",
+     "src": "https://visitseattle.org/?p=472731 ; https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Northwest Outdoor Center",
+     "blurb": "Kayak and stand-up paddleboard rentals on Lake Union.",
+     "address": "Lake Union, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.nwoc.com",
+     "src": "https://visitseattle.org/?p=472731"
+    },
+    {
+     "name": "Agua Verde Paddle Club",
+     "blurb": "Kayak and paddleboard rentals on Lake Union.",
+     "address": "Lake Union, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://aguaverdepaddleclub.com/",
+     "src": "https://visitseattle.org/?p=472731"
+    },
+    {
+     "name": "Alki Kayak Tours",
+     "blurb": "Kayak rentals and guided paddles on Puget Sound with downtown and Olympic mountain views.",
+     "address": "West Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.kayakalki.com",
+     "src": "https://visitseattle.org/?p=472731"
+    },
+    {
+     "name": "Ballard Kayak & Paddleboard",
+     "blurb": "Kayak and paddleboard rentals and guided paddles on Puget Sound.",
+     "address": "Ballard, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.ballardkayak.com",
+     "src": "https://visitseattle.org/?p=472731"
+    },
+    {
+     "name": "Seattle Paddle",
+     "blurb": "Boat and paddleboard rentals on Lake Washington near Seward Park.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattlepaddle.com",
+     "src": "https://visitseattle.org/?p=472731"
+    },
+    {
+     "name": "Sail Sand Point",
+     "blurb": "Boat and paddleboard rentals, with SUP, Hobie and sailboats, near Magnuson and Matthews Beach.",
+     "address": "Magnuson Park area, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.sailsandpoint.org",
+     "src": "https://visitseattle.org/?p=472731 ; https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Green Lake Boathouse",
+     "blurb": "Paddle craft and watersport rentals on Green Lake.",
+     "address": "Green Lake, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://greenlakeboathouse.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "UW Waterfront Activities Center",
+     "blurb": "Boat rentals on Union Bay at the University of Washington.",
+     "address": "University of Washington",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.washington.edu/ima/waterfront/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Electric Boat Company",
+     "blurb": "Covered electric boats that carry up to 10 passengers on Lake Union.",
+     "address": "Lake Union, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.theelectricboatco.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  },
+  {
+   "key": "markets",
+   "title": "Markets",
+   "items": [
+    {
+     "name": "Pike Place Market",
+     "blurb": "One of the country's longest-running markets, open daily, with more than 500 small businesses. Beecher's cheese, Sweetie's Candy, the Market Magic Shop and the original Starbucks are all here, and farmers sell produce and flowers. It has operated since 1907.",
+     "address": "85 Pike St, Seattle",
+     "phone": "",
+     "hours": "Open daily",
+     "url": "https://www.pikeplacemarket.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/ ; https://theculturetrip.com/north-america/usa/washington/seattle/articles/20-must-visit-attractions-in-seattle"
+    },
+    {
+     "name": "Post Alley Gum Wall",
+     "blurb": "A wall covered in chewed gum that started with theatergoers and is a quirky Pike Place stop.",
+     "address": "Post Alley, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.pikeplacemarket.org",
+     "src": "https://theculturetrip.com/north-america/usa/washington/seattle/articles/20-must-visit-attractions-in-seattle"
+    },
+    {
+     "name": "University District Farmers Market",
+     "blurb": "Locally grown produce and street food on University Way NE between 50th and 52nd. Held Saturdays.",
+     "address": "University Way NE between 50th and 52nd St, Seattle",
+     "phone": "206-632-5234",
+     "hours": "Saturdays, 9am-2pm",
+     "url": "https://www.seattlefarmersmarkets.org",
+     "src": "https://theculturetrip.com/north-america/usa/washington/articles/the-best-markets-in-seattle"
+    },
+    {
+     "name": "Fremont Sunday Market",
+     "blurb": "A European-style street market with food trucks, vintage clothing and records, and antiques.",
+     "address": "3401 Evanston Ave N, Seattle",
+     "phone": "206-781-6776",
+     "hours": "",
+     "url": "https://fremont.com/fremont-sunday-market/",
+     "src": "https://theculturetrip.com/north-america/usa/washington/articles/the-best-markets-in-seattle"
+    },
+    {
+     "name": "Wallingford Farmers Market",
+     "blurb": "A neighborhood market in Meridian Park, held Wednesdays May to September.",
+     "address": "4850 Meridian Ave N, Seattle",
+     "phone": "",
+     "hours": "Wednesdays, May-September",
+     "url": "https://seattlefarmersmarkets.org",
+     "src": "https://theculturetrip.com/north-america/usa/washington/articles/the-best-markets-in-seattle"
+    },
+    {
+     "name": "Capitol Hill Farmers Market",
+     "blurb": "A neighborhood farmers market listed by Visit Seattle among options with outdoor seating.",
+     "address": "Capitol Hill, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://seattlefarmersmarkets.org/chfm",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    },
+    {
+     "name": "Queen Anne Farmers Market",
+     "blurb": "A neighborhood farmers market on Queen Anne.",
+     "address": "Queen Anne, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://qafm.org/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  },
+  {
+   "key": "treats",
+   "title": "Ice Cream & Treats",
+   "items": [
+    {
+     "name": "Molly Moon's Homemade Ice Cream",
+     "blurb": "Known for Scout Mint, made with Thin Mint cookies, and Melted Chocolate. The University District shop pairs with Hello Robin for cookie sandwiches.",
+     "address": "2615 NE 46th St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.mollymoon.com",
+     "src": "https://visitseattle.org/food-drink/coffee-tea-sweets/heres-the-scoop/"
+    },
+    {
+     "name": "Shug's Soda Fountain",
+     "blurb": "A downtown soda fountain with a S'More sundae with house-made marshmallows and hot fudge, and an egg cream.",
+     "address": "1525 1st Ave, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://shugssodafountain.com",
+     "src": "https://visitseattle.org/food-drink/coffee-tea-sweets/heres-the-scoop/"
+    },
+    {
+     "name": "Frankie & Jo's",
+     "blurb": "A Capitol Hill shop with vegan-friendly flavors such as Salty Caramel Ash and California Cabin.",
+     "address": "1010 E Union St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://frankieandjos.com",
+     "src": "https://visitseattle.org/food-drink/coffee-tea-sweets/heres-the-scoop/"
+    },
+    {
+     "name": "Nutty Squirrel Gelato",
+     "blurb": "Italian-style gelato in Phinney Ridge with pistachio, chocolate stracciatella and seasonal flavors. Any flavor can become a milkshake.",
+     "address": "7212 Greenwood Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://nuttysquirrel.com",
+     "src": "https://visitseattle.org/food-drink/coffee-tea-sweets/heres-the-scoop/"
+    },
+    {
+     "name": "Beecher's Handmade Cheese",
+     "blurb": "A Pike Place Market cheese maker listed among the market's best-known businesses.",
+     "address": "Pike Place Market, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Sweetie's Candy",
+     "blurb": "A candy shop in Pike Place Market.",
+     "address": "Pike Place Market, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.pikeplacemarket.org",
+     "src": "https://visitseattle.org/things-to-do/families/seattles-top-10-family-friendly-activities/"
+    },
+    {
+     "name": "Original Starbucks",
+     "blurb": "The first Starbucks stands in Pike Place Market.",
+     "address": "Pike Place Market, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Milstead & Co.",
+     "blurb": "A cafe named among Seattle's coffee stops.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Storyville Coffee",
+     "blurb": "A Seattle cafe named among the local coffee stops.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    },
+    {
+     "name": "Seven Coffee Roasters",
+     "blurb": "A Seattle cafe named among the local coffee stops.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.nomadasaurus.com/things-to-do-in-seattle/"
+    }
+   ]
+  },
+  {
+   "key": "eat",
+   "title": "Eat & Drink",
+   "items": [
+    {
+     "name": "Canlis",
+     "blurb": "A midcentury-style restaurant with attentive service, a seasonal Northwest menu and an unusual view. It is expensive.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.seattlemet.com/eat-and-drink/2015/08/the-7-inevitable-seattle-restaurants"
+    },
+    {
+     "name": "Dick's Drive-In",
+     "blurb": "Inexpensive burgers and fries, a Seattle institution.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.seattlemet.com/eat-and-drink/2015/08/the-7-inevitable-seattle-restaurants"
+    },
+    {
+     "name": "The Walrus and the Carpenter",
+     "blurb": "An oyster bar in a whitewashed space; expect a wait for a seat.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.seattlemet.com/eat-and-drink/2015/08/the-7-inevitable-seattle-restaurants"
+    },
+    {
+     "name": "Sitka & Spruce",
+     "blurb": "Praised for Northwest seasonal cooking and original dishes.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://www.seattlemet.com/eat-and-drink/2015/08/the-7-inevitable-seattle-restaurants"
+    },
+    {
+     "name": "Ivar's Acres of Clams",
+     "blurb": "Waterfront seafood with outdoor seating; the adjacent takeout fish bar serves clams and chips.",
+     "address": "Pier 54, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.ivars.com/acres",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/ ; https://www.seattlemet.com/eat-and-drink/2015/08/the-7-inevitable-seattle-restaurants"
+    },
+    {
+     "name": "Spinasse",
+     "blurb": "Piedmontese Italian cooking on Capitol Hill; tajarin with butter and sage is the signature. Sister restaurant Artusi is next door.",
+     "address": "1531 14th Ave, Seattle",
+     "phone": "",
+     "hours": "Sun-Thu 5-10pm; Fri-Sat 5-11pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "How to Cook a Wolf",
+     "blurb": "Italian and Pacific Northwest dishes on a seasonal menu. There is also a Madison Park location.",
+     "address": "2208 Queen Anne Ave N, Seattle",
+     "phone": "",
+     "hours": "Mon-Thu 4-10pm; Fri 4-11pm; Sat 10am-2pm, 4-11pm; Sun 10am-2pm, 4-10pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Sushi Kashiba",
+     "blurb": "An omakase chef's counter at Pike Place with 5pm, 7pm and 9pm seatings; the 5pm is walk-in only.",
+     "address": "86 Pine St Suite 1, Seattle",
+     "phone": "",
+     "hours": "Sun, Mon, Wed, Thu 5-9pm; Fri-Sat 5-9:30pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Shiro's Sushi",
+     "blurb": "Edomae-style sushi in Belltown with set courses; reservations online.",
+     "address": "2401 2nd Ave, Seattle",
+     "phone": "",
+     "hours": "Daily 4:30-9pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "The Pink Door",
+     "blurb": "Italian food with waterfront views and live entertainment on certain nights. Many tables are held for walk-ins.",
+     "address": "1919 Post Alley, Seattle",
+     "phone": "",
+     "hours": "Tue-Sat 11:30am-10pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Le Pichet",
+     "blurb": "A very small French bistro near Pike Place; reservations by phone.",
+     "address": "1933 1st Ave, Seattle",
+     "phone": "",
+     "hours": "Sun, Tue-Thu 10am-9pm; Mon 5-9pm; Fri-Sat 10am-10pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Gainsbourg",
+     "blurb": "A French spot in Greenwood with an open kitchen; no reservations.",
+     "address": "8550 Greenwood Ave N, Seattle",
+     "phone": "",
+     "hours": "Sun-Thu 4pm-midnight; Fri-Sat 4pm-1am",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Itsumono",
+     "blurb": "Japanese-inspired gastropub in the International District.",
+     "address": "610 S Jackson St, Seattle",
+     "phone": "",
+     "hours": "Sun-Thu 4-10:30pm; Fri-Sat 4-11:30pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Rupee Bar",
+     "blurb": "Shareable Sri Lankan and Indian-inspired small plates in Ballard; no reservations.",
+     "address": "6307 24th Ave NW, Seattle",
+     "phone": "",
+     "hours": "Tue-Thu 4-9pm; Fri-Sat 4-10pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Ooink",
+     "blurb": "Ramen with a mala-forward style; spice level is your choice.",
+     "address": "3630 Stone Way N, Seattle",
+     "phone": "",
+     "hours": "Sun-Thu 5-9:30pm; Fri-Sat 5-11pm",
+     "url": "",
+     "src": "https://www.timeout.com/seattle/restaurants/best-restaurants-in-seattle"
+    },
+    {
+     "name": "Marination Ma Kai",
+     "blurb": "Hawaiian-style food with picnic tables over Elliott Bay in West Seattle.",
+     "address": "West Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://marinationmobile.com/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  },
+  {
+   "key": "music",
+   "title": "Music History",
+   "items": [
+    {
+     "name": "Museum of Pop Culture (MoPOP)",
+     "blurb": "A Frank Gehry-designed museum at Seattle Center covering music, film, games and science fiction. It includes a Jimi Hendrix exhibit and a Nirvana exhibit, and a bronze statue of Chris Cornell stands outside.",
+     "address": "325 5th Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.mopop.org",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/ ; https://visitseattle.org/things-to-do/arts-culture/museums"
+    },
+    {
+     "name": "Jimi Hendrix Park",
+     "blurb": "A Central District park honoring Seattle-born Hendrix, beside the Northwest African American Museum. It hosts the city's largest Juneteenth event.",
+     "address": "Central District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.seattle.gov/parks/allparks/jimi-hendrix-park",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/cultural-heritage/african-american/"
+    },
+    {
+     "name": "The Crocodile",
+     "blurb": "A Belltown club that was an early stage for Nirvana, Pearl Jam and Mudhoney.",
+     "address": "2200 2nd Ave, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Showbox",
+     "blurb": "An Art Deco building known for strong bookings.",
+     "address": "1426 1st Ave, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Tractor Tavern",
+     "blurb": "A cozy listening space on Ballard Avenue.",
+     "address": "5213 Ballard Ave NW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Sunset Tavern",
+     "blurb": "Another cozy Ballard stage with live bands.",
+     "address": "5433 Ballard Ave NW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "The Vera Project",
+     "blurb": "An all-ages music venue across from KEXP.",
+     "address": "305 Harrison St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "KEXP 90.3 FM",
+     "blurb": "Seattle's listener-supported radio station, begun in 1972. Its Gathering Space hosts intimate concerts.",
+     "address": "472 1st Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Sub Pop Airport Store",
+     "blurb": "Sells gear from Sub Pop, the label credited with launching the grunge scene.",
+     "address": "17801 International Blvd",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Dimitriou's Jazz Alley",
+     "blurb": "A long-standing Seattle jazz venue. The Earshot Jazz Festival runs each fall.",
+     "address": "Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.jazzalley.com",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/cultural-heritage/african-american/"
+    },
+    {
+     "name": "Washington Hall",
+     "blurb": "A historic dance hall that hosted Duke Ellington, Count Basie and Billie Holiday; restored by Historic Seattle.",
+     "address": "Central District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://washingtonhall.org",
+     "src": "https://visitseattle.org/things-to-do/arts-culture/cultural-heritage/african-american/"
+    },
+    {
+     "name": "Bop Street Records",
+     "blurb": "A Ballard shop selling vinyl LPs, 45s and 78s since 1974.",
+     "address": "2220 NW Market St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Easy Street Records",
+     "blurb": "West Seattle record store with a cafe and in-store shows.",
+     "address": "4559 California Ave SW, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Sonic Boom Records",
+     "blurb": "A Ballard shop selling records, CDs and cassettes.",
+     "address": "2209 NW Market St, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    },
+    {
+     "name": "Jive Time Records",
+     "blurb": "Vintage vinyl in Fremont.",
+     "address": "3506 Fremont Ave N, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/seattle-localist/see/sonic-seattle/"
+    }
+   ]
+  },
+  {
+   "key": "hoods",
+   "title": "Neighborhoods & Shopping",
+   "items": [
+    {
+     "name": "Ballard",
+     "blurb": "A neighborhood known for maritime heritage and a foodie scene, with record stores, music venues and the Ballard Locks nearby.",
+     "address": "Ballard, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Capitol Hill",
+     "blurb": "Tree-lined streets, century-old mansions and nightlife.",
+     "address": "Capitol Hill, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Pioneer Square",
+     "blurb": "Seattle's original neighborhood with eateries and galleries, next to Lumen Field and T-Mobile Park.",
+     "address": "Pioneer Square, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Fremont and Wallingford",
+     "blurb": "A bohemian, artsy area with quirky local claims to fame and a Sunday market.",
+     "address": "Fremont, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Queen Anne",
+     "blurb": "Lower Queen Anne has bars and Seattle Center; upper Queen Anne has historic homes and quiet parks.",
+     "address": "Queen Anne, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Belltown",
+     "blurb": "High-rise living with lively nightlife, dining and trendy shopping.",
+     "address": "Belltown, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Chinatown-International District",
+     "blurb": "The center of Seattle's Asian community for over a century.",
+     "address": "Chinatown-ID, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "West Seattle",
+     "blurb": "Seattle's largest neighborhood with a beach-town feel, consignment shops and bakeries.",
+     "address": "West Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "University District",
+     "blurb": "Surrounds the University of Washington with cafes, pubs, theaters and shopping.",
+     "address": "University District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Georgetown and SoDo",
+     "blurb": "Industrial areas turning trendy.",
+     "address": "Georgetown, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Central District",
+     "blurb": "Longtime hub of Seattle's Black community and its arts scene.",
+     "address": "Central District, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    },
+    {
+     "name": "Columbia City and Rainier Valley",
+     "blurb": "Among the most diverse zip codes in the country.",
+     "address": "Columbia City, Seattle",
+     "phone": "",
+     "hours": "",
+     "url": "https://visitseattle.org",
+     "src": "https://visitseattle.org/?p=1274"
+    }
+   ]
+  },
+  {
+   "key": "stay",
+   "title": "Places to Stay",
+   "items": [
+    {
+     "name": "1 Hotel Seattle",
+     "blurb": "1 Hotel Seattle is listed by Visit Seattle as a Downtown Seattle hotel. Downtown has views of mountains and waterways and the city's major attractions. Call (206) 264-8111 for rates and availability.",
+     "address": "2125 Terry Ave, Seattle WA 98121",
+     "phone": "(206) 264-8111",
+     "hours": "",
+     "url": "https://www.1hotels.com/seattle",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "AC Hotel Seattle Downtown",
+     "blurb": "AC Hotel Seattle Downtown is listed by Visit Seattle as a South Lake Union hotel. South Lake Union is Seattle's tech hub, within reach of Lake Union Park, MOHAI and the streetcar. Call (206) 492-7990 for rates and availability.",
+     "address": "117 Yale Avenue North, Seattle WA 98109",
+     "phone": "(206) 492-7990",
+     "hours": "",
+     "url": "https://www.marriott.com/en-us/hotels/seada-ac-hotel-seattle-downtown/overview/",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Astra Hotel",
+     "blurb": "Astra Hotel is listed by Visit Seattle as a South Lake Union hotel. South Lake Union is Seattle's tech hub, within reach of Lake Union Park, MOHAI and the streetcar. Call (206) 693-6000 for rates and availability.",
+     "address": "300 Terry Ave N, Seattle WA 98109",
+     "phone": "(206) 693-6000",
+     "hours": "",
+     "url": "https://astrahotelseattle.com",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Belltown Inn",
+     "blurb": "Belltown Inn is listed by Visit Seattle as a Belltown hotel. Belltown is known for high-rise living and a lively nightlife and dining scene. Call (206) 529-3700 for rates and availability.",
+     "address": "2301 Third Ave, Seattle WA 98121",
+     "phone": "(206) 529-3700",
+     "hours": "",
+     "url": "https://www.belltown-inn.com",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Best Western Plus Pioneer Square Hotel Downtown",
+     "blurb": "Best Western Plus Pioneer Square Hotel Downtown is listed by Visit Seattle as a Pioneer Square hotel. Pioneer Square is Seattle's original neighborhood, beside Lumen Field and T-Mobile Park. Call (206) 340-1234 for rates and availability.",
+     "address": "77 Yesler Way, Seattle WA 98104",
+     "phone": "(206) 340-1234",
+     "hours": "",
+     "url": "https://www.pioneersquare.com",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "citizenM Seattle Pioneer Square",
+     "blurb": "citizenM Seattle Pioneer Square is listed by Visit Seattle as a Pioneer Square hotel. Pioneer Square is Seattle's original neighborhood, beside Lumen Field and T-Mobile Park. Call (206) 886-0560 for rates and availability.",
+     "address": "60 Yesler Way, Seattle WA 98104",
+     "phone": "(206) 886-0560",
+     "hours": "",
+     "url": "https://www.citizenm.com/hotels/united-states/seattle/seattle-pioneer-square-hotel",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "citizenM Seattle South Lake Union",
+     "blurb": "citizenM Seattle South Lake Union is listed by Visit Seattle as a South Lake Union hotel. South Lake Union is Seattle's tech hub, within reach of Lake Union Park, MOHAI and the streetcar. Call (206) 336-3525 for rates and availability.",
+     "address": "201 Westlake Ave N, Seattle WA 98109",
+     "phone": "(206) 336-3525",
+     "hours": "",
+     "url": "https://www.citizenm.com/destinations/seattle/seattle-south-lake-union-hotel",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Coast Seattle Downtown Hotel by APA",
+     "blurb": "Coast Seattle Downtown Hotel by APA is listed by Visit Seattle as a Downtown Seattle hotel. Downtown has views of mountains and waterways and the city's major attractions. Call (206) 624-0500 for rates and availability.",
+     "address": "1301 Sixth Ave, Seattle WA 98101",
+     "phone": "(206) 624-0500",
+     "hours": "",
+     "url": "https://www.coasthotels.com/coast-seattle-downtown-hotel-by-apa",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Courtyard by Marriott Seattle Downtown/Lake Union",
+     "blurb": "Courtyard by Marriott Seattle Downtown/Lake Union is listed by Visit Seattle as a South Lake Union hotel. South Lake Union is Seattle's tech hub, within reach of Lake Union Park, MOHAI and the streetcar. Call (206) 213-0100 for rates and availability.",
+     "address": "925 Westlake Ave N, Seattle WA 98109",
+     "phone": "(206) 213-0100",
+     "hours": "",
+     "url": "https://www.marriott.com/hotels/travel/seacd-courtyard-seattle-downtown-lake-union/",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    },
+    {
+     "name": "Courtyard Seattle Downtown/Pioneer Square",
+     "blurb": "Courtyard Seattle Downtown/Pioneer Square is listed by Visit Seattle as a Pioneer Square hotel. Pioneer Square is Seattle's original neighborhood, beside Lumen Field and T-Mobile Park. Call (206) 625-1111 for rates and availability.",
+     "address": "612 Second Ave, Seattle WA 98104",
+     "phone": "(206) 625-1111",
+     "hours": "",
+     "url": "https://www.marriott.com/hotels/travel/seaps-courtyard-seattle-downtown-pioneer-square/",
+     "src": "https://visitseattle.org/partners-categories/featured-downtown-hotels"
+    }
+   ]
+  },
+  {
+   "key": "getting",
+   "title": "Getting Around",
+   "items": [
+    {
+     "name": "Link Light Rail",
+     "blurb": "Sound Transit's Link runs from Angle Lake to Lynwood with 21 stops, including downtown and SEA Airport. Trains come every 8 to 15 minutes. The fare is a flat $3. The airport ride to downtown takes about 40 minutes.",
+     "address": "",
+     "phone": "",
+     "hours": "Mon-Sat 5am-1am; Sun/holidays 6am-midnight",
+     "url": "https://www.soundtransit.org/schedules/link-light-rail",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "King County Metro Buses",
+     "blurb": "Metro buses serve downtown and neighborhoods across King County. The fare is $3, payable by ORCA card, exact cash or Transit GO Ticket. Plan trips with the trip planner or the Metro app.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://kingcounty.gov/depts/transportation/metro/travel-options/bus.aspx",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "Seattle Center Monorail",
+     "blurb": "The monorail connects Westlake Center downtown and Seattle Center in about three minutes, with trains every 10 minutes. A one-way fare is $4.00, and ORCA is accepted. Hours extend in summer and for Climate Pledge Arena events.",
+     "address": "",
+     "phone": "",
+     "hours": "Mon-Thu 7:30am-9pm; Fri 7:30am-11pm; Sat 8:30am-11pm; Sun 8:30am-9pm",
+     "url": "https://www.seattlemonorail.com",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "South Lake Union Streetcar",
+     "blurb": "A 1.3-mile line with nine stops. It does not run on Thanksgiving or Christmas Day.",
+     "address": "",
+     "phone": "",
+     "hours": "Mon-Fri 6am-9pm; Sat 7am-9pm; Sun 10am-7pm",
+     "url": "https://www.seattle.gov/transportation/getting-around/transit/streetcar",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "First Hill Streetcar",
+     "blurb": "A 2.5-mile line with 10 stops. The fare is $2.25, or $4.50 for an all-day pass.",
+     "address": "",
+     "phone": "",
+     "hours": "Mon-Fri 5am-10:30pm; Sat 6am-10:30pm; Sun 10am-8pm",
+     "url": "https://www.seattle.gov/transportation/getting-around/transit/streetcar",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "Washington State Ferries",
+     "blurb": "Ferries link downtown Seattle to Bainbridge Island, about 35 minutes, and Bremerton, about an hour. Both routes load at the Seattle Ferry Terminal.",
+     "address": "Seattle Ferry Terminal, Seattle, WA 98104",
+     "phone": "",
+     "hours": "",
+     "url": "https://wsdot.wa.gov/travel/washington-state-ferries",
+     "src": "https://wsdot.com/ferries/Schedule/ScheduleDetailByRoute.aspx?route=sea-bi"
+    },
+    {
+     "name": "SEA Airport Transit",
+     "blurb": "Link light rail is the main way downtown from SEA. Taxis and ride-share pick up on the third floor of the parking garage. Premier Airport Shuttle also serves downtown hotels.",
+     "address": "Seattle-Tacoma International Airport",
+     "phone": "",
+     "hours": "",
+     "url": "",
+     "src": "https://visitseattle.org/visitor-information/getting-around/"
+    },
+    {
+     "name": "Bike and Scooter Share",
+     "blurb": "Lime, Bird and Veo offer e-bikes and scooters. Bike rentals include Evo Seattle, Montlake Bicycle Shop and Recycled Cycles.",
+     "address": "",
+     "phone": "",
+     "hours": "",
+     "url": "https://www.li.me/",
+     "src": "https://visitseattle.org/things-to-do/outdoors/10-ways-to-explore-the-great-outdoors-in-seattle-and-the-puget-sound-region/"
+    }
+   ]
+  }
+ ]
 }
