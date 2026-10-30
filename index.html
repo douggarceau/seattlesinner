@@ -2752,13 +2752,15 @@ html body .lsrow .lspot.hasad{height:auto!important;min-height:0!important;max-h
    To add one: put it in ADS with its start date; it goes to the top. Ads drop off after their end date. */
 (function(){
 const ADS=[
+{img:'img/ad-show-smashing-pumpkins.jpg',href:'https://climatepledgearena.com',label:'Live show: The Smashing Pumpkins, Climate Pledge Arena, Friday Nov. 6, 8 PM',start:'2026-10-31',end:'2026-11-06'},
 {img:'img/ad-climate-pledge.jpg',href:'https://climatepledgearena.com',label:'Featured: Climate Pledge Arena, 334 1st Ave N',start:'2026-10-30',end:'2026-11-29'},
 {img:'img/ad-wamu-theater.jpg',href:'https://www.lumenfield.com',label:'Featured: WaMu Theater, 800 Occidental Ave S',start:'2026-10-30',end:'2026-11-29'},
 {img:'img/ad-paramount-seattle.jpg',href:'https://www.stgpresents.org',label:'Featured: Paramount Theatre, 911 Pine St',start:'2026-10-30',end:'2026-11-29'}];
 const live=()=>ADS.filter(a=>!a.end||Date.now()<Date.parse(a.end+'T23:59:59-05:00')).sort((x,y)=>y.start.localeCompare(x.start));
 const boxes=()=>[...document.querySelectorAll('.lsrow .lspot')].filter(b=>!b.hidden&&b.getBoundingClientRect().width>0).sort((x,y)=>{const r=x.getBoundingClientRect(),s=y.getBoundingClientRect();return (r.top-s.top)||(r.left-s.left)});
-const place=()=>{const A=live(),B=boxes();if(!A.length)return;if(B.length<A.length)return;
- B.forEach((bx,i)=>{const ad=A[i];const cur=bx.querySelector(':scope > a.radv');
+const place=()=>{const A=live(),B=boxes();if(!A.length)return;if(!B.length)return;
+ const SL=new Array(B.length).fill(null);A.filter(a=>a.at!=null).forEach(a=>{let k=Math.min(a.at,B.length-1);while(k>=0&&SL[k])k--;if(k>=0)SL[k]=a});A.filter(a=>a.at==null).forEach(a=>{const k=SL.indexOf(null);if(k>=0)SL[k]=a});
+ B.forEach((bx,i)=>{const ad=SL[i];const cur=bx.querySelector(':scope > a.radv');
   if(!ad){if(cur){cur.remove();bx.classList.remove('hasad');delete bx.dataset.frozen}return}
   if(cur&&cur.dataset.img===ad.img)return;
   if(cur)cur.remove();
