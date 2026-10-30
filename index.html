@@ -2751,7 +2751,10 @@ html body .lsrow .lspot.hasad{height:auto!important;min-height:0!important;max-h
 /* Featured ads hold the top three margin boxes, newest ad on top, each with a soft gold glow.
    To add one: put it in ADS with its start date; it goes to the top. Ads drop off after their end date. */
 (function(){
-const ADS=[];
+const ADS=[
+{img:'img/ad-climate-pledge.jpg',href:'https://climatepledgearena.com',label:'Featured: Climate Pledge Arena, 334 1st Ave N',start:'2026-10-30',end:'2026-11-29'},
+{img:'img/ad-wamu-theater.jpg',href:'https://www.lumenfield.com',label:'Featured: WaMu Theater, 800 Occidental Ave S',start:'2026-10-30',end:'2026-11-29'},
+{img:'img/ad-paramount-seattle.jpg',href:'https://www.stgpresents.org',label:'Featured: Paramount Theatre, 911 Pine St',start:'2026-10-30',end:'2026-11-29'}];
 const live=()=>ADS.filter(a=>!a.end||Date.now()<Date.parse(a.end+'T23:59:59-05:00')).sort((x,y)=>y.start.localeCompare(x.start));
 const boxes=()=>[...document.querySelectorAll('.lsrow .lspot')].filter(b=>!b.hidden&&b.getBoundingClientRect().width>0).sort((x,y)=>{const r=x.getBoundingClientRect(),s=y.getBoundingClientRect();return (r.top-s.top)||(r.left-s.left)});
 const place=()=>{const A=live(),B=boxes();if(!A.length)return;if(B.length<A.length)return;
