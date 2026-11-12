@@ -1,10 +1,8 @@
 name: Story share pages
 # Builds a share page and preview card for every story so links posted to
 # Facebook, X or texts show the story itself. Runs on GitHub, not Claude.
+# Paused while the site is offline (index.html is a blank page with no stories, so the build would fail).
 on:
-  push:
-    branches: [main]
-    paths: [index.html, tools/share_pages.py]
   workflow_dispatch:
 permissions:
   contents: write
