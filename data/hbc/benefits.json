@@ -1,0 +1,904 @@
+{
+ "asof": "2026-11-13T12:00:00-08:00",
+ "items": [
+  {
+   "id": "ben-0001",
+   "name": "Basic Food (SNAP)",
+   "org": "Washington State DSHS",
+   "summary": "Monthly food money loaded on an EBT card for low-income Washington households, usable only for groceries.",
+   "subcats": [
+    "food-benefit"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "restricted-benefit",
+    "amount": null,
+    "notes": "Benefit amount depends on household size and income; the DSHS page does not state current dollar amounts."
+   },
+   "elig": {
+    "age": "Any age (household-based)",
+    "income": "Must meet income limits by household size (figures not listed on the program page).",
+    "residency": "Must live in Washington. Must meet citizenship/immigration rules; undocumented immigrants and fleeing felons are not eligible.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at Washington Connection, by phone at 877-501-2233, by mail (DSHS Customer Service Center, P.O. Box 11699, Tacoma, WA 98411-6699), or at any DSHS Community Services Office, then complete an interview. Office/phone hours: Phone interviews Mon-Fri 8am-2pm (877-501-2233); Community Services Offices Mon-Fri 8am-5pm, except holidays.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "877-501-2233",
+    "url": "https://www.washingtonconnection.org"
+   },
+   "src": [
+    [
+     "Basic Food - DSHS",
+     "https://www.dshs.wa.gov/esa/community-services-offices/basic-food"
+    ],
+    [
+     "DSHS Benefits and H.R. 1",
+     "https://www.dshs.wa.gov/family-food-and-housing-services/dshs-benefits-and-hr-1"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "H.R. 1 changes per DSHS (page updated Oct 2026): able-bodied adults without an exemption who don't meet work rules are limited to 3 months of food benefits in 36 months (DSHS says screening happens at next eligibility review); able-bodied adult age range expanded to 18-64 and dependent child definition narrowed to under 14 per DSHS client flyer; refugees/asylees/humanitarian immigrants moved to state-funded food benefits in May 2026 at same amount with no reapplication; LIHEAP-linked utility deduction removed for households without an elderly/disabled member (benefits may drop). SNAP-Ed ended Jan 31, 2026. Income limit table is in a DSHS PDF fact sheet that could not be parsed, so no figures given."
+  },
+  {
+   "id": "ben-0002",
+   "name": "TANF (Temporary Assistance for Needy Families)",
+   "org": "Washington State DSHS",
+   "summary": "Monthly cash help for low-income families with children or pregnant people, paired with WorkFirst job services.",
+   "subcats": [
+    "cash"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "cash-grant",
+    "amount": null,
+    "notes": "Base grant amount not listed on the DSHS page. Child support pass-through of up to $50/month (1 child) or $100/month (2+ children), effective Feb 1, 2021. One-time Diversion Cash Assistance up to $1,250 may be available instead (may need repaying if you start TANF within 12 months)."
+   },
+   "elig": {
+    "age": "Pregnant, or caring for a child under 18 (or under 19 if in high school/equivalency)",
+    "income": "Must meet household income and resource limits (figures not listed on page).",
+    "residency": "Washington resident; relatives and other caregivers may qualify for child-only TANF.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at Washington Connection, by phone at 877-501-2233, by fax 888-338-7410, by mail, or in person at a Community Services Office; then do an interview and meet with a worker about WorkFirst participation. Office/phone hours: Phone interviews Mon-Fri 8am-2pm (877-501-2233); Community Services Offices Mon-Fri 8am-5pm, except holidays.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "877-501-2233",
+    "url": "https://www.washingtonconnection.org"
+   },
+   "src": [
+    [
+     "Temporary Assistance for Needy Families - DSHS",
+     "https://www.dshs.wa.gov/esa/community-services-offices/temporary-assistance-needy-families"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Time-limited: 60 months lifetime, with extensions for people who are experiencing homelessness, 65+, blind/disabled, in a family violence plan, working 32+ hrs/week, receiving SSDI, and some others. DSHS H.R. 1 page lists no TANF changes."
+  },
+  {
+   "id": "ben-0003",
+   "name": "ABD (Aged, Blind, or Disabled) Cash Assistance",
+   "org": "Washington State DSHS",
+   "summary": "State cash payment each month for low-income adults who are 65+, blind, or likely disabled for a year or more, often while an SSI claim is pending. Includes help applying for SSI and a referral to HEN.",
+   "subcats": [
+    "cash",
+    "unemployment-disability"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "cash-grant",
+    "amount": "Up to $450/month (single); up to $570/month (married couple)",
+    "notes": "Maximum amounts as shown on the DSHS ABD page fetched 2026-11-13; the page gives no effective date. Paid on the 1st of each month."
+   },
+   "elig": {
+    "age": "65+, or blind, or 18+ with a condition expected to prevent work for 12+ months in a row",
+    "income": "Must meet income and resource limits (WAC 388-478-0090).",
+    "residency": "Washington resident; must meet citizenship/immigration rules. Not available to people eligible for TANF/SFA/Refugee Cash Assistance or who (or whose spouse) currently get SSI.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at Washington Connection, by phone at 877-501-2233, by fax 888-338-7410, by mail, or in person at a Community Services Office. After a financial interview, a social worker reviews medical eligibility. Office/phone hours: Phone interviews Mon-Fri 8am-2pm (877-501-2233); Community Services Offices Mon-Fri 8am-5pm, except holidays.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "877-501-2233",
+    "url": "https://www.dshs.wa.gov/esa/community-services-offices/aged-blind-or-disabled-cash-program"
+   },
+   "src": [
+    [
+     "Aged, Blind, or Disabled Program - DSHS",
+     "https://www.dshs.wa.gov/esa/community-services-offices/aged-blind-or-disabled-cash-program"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Grant amounts have no effective date on the page; older DSHS materials showed $417/$528, so the $450/$570 figures appear to be a recent increase. Search snippets mention SSA denial/termination as a bar; not confirmed on the fetched page text."
+  },
+  {
+   "id": "ben-0004",
+   "name": "HEN (Housing and Essential Needs) Referral",
+   "org": "Washington State DSHS (eligibility); services through local HEN providers funded by WA Dept. of Commerce",
+   "summary": "For low-income adults who can't work for at least 90 days because of a physical or mental condition; a DSHS referral connects you to a local provider for hygiene/cleaning items, transportation help, and possibly rent and utility help.",
+   "subcats": [
+    "housing-utility"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": null,
+    "notes": "Services vary by local provider; rent/utility help is for people homeless or at risk. No dollar amounts stated."
+   },
+   "elig": {
+    "age": "18+ (or legally emancipated or married)",
+    "income": "Must meet income and resource limits (figures not stated).",
+    "residency": "Washington resident; citizenship/immigration rules apply. Must be unable to work 90+ days due to incapacity. ABD and Pregnant Women Assistance recipients also get a HEN referral.",
+    "id_required": null,
+    "referral": true,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply through DSHS (Washington Connection online, 877-501-2233, fax, mail, or a Community Services Office); after a financial interview and medical review, DSHS refers you to the local HEN provider. Office/phone hours: Phone interviews Mon-Fri 8am-2pm (877-501-2233); Community Services Offices Mon-Fri 8am-5pm, except holidays.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "877-501-2233",
+    "url": "https://www.dshs.wa.gov/esa/community-services-offices/housing-and-essential-needs-referral-program"
+   },
+   "src": [
+    [
+     "Housing and Essential Needs Referral Program - DSHS",
+     "https://www.dshs.wa.gov/esa/community-services-offices/housing-and-essential-needs-referral-program"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "DSHS says HEN services are subject to funding availability and may be discontinued at any time. The King County HEN provider name was not verified on an official page, so it is not listed."
+  },
+  {
+   "id": "ben-0005",
+   "name": "Apple Health for Adults (Medicaid)",
+   "org": "Washington State Health Care Authority (HCA)",
+   "summary": "Free health coverage (medical and behavioral health) for low-income adults ages 19-64 in Washington.",
+   "subcats": [
+    "health-coverage"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "insurance",
+    "amount": null,
+    "notes": "No cost stated for Apple Health for Adults. Coverage begins the first day of the month you applied."
+   },
+   "elig": {
+    "age": "19 through 64; not entitled to Medicare",
+    "income": "Monthly income at or below $1,835 (1 person), $2,490 (2), $3,142 (3), $3,795 (4); HCA says standards change every April.",
+    "residency": "Washington resident; U.S. citizen or meeting Medicaid immigration requirements (separate Apple Health Expansion exists regardless of immigration status).",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at Washington Healthplanfinder, by phone at 1-855-923-4633, with paper form 18-001P, or with free in-person help from a local enrollment assister. Have household income, birth dates and SSNs (if you have one) ready.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-855-923-4633",
+    "url": "https://www.wahealthplanfinder.org"
+   },
+   "src": [
+    [
+     "Individual adults - HCA",
+     "https://www.hca.wa.gov/free-or-low-cost-health-care/i-need-medical-dental-or-vision-care/individual-adults"
+    ],
+    [
+     "Apply for or renew coverage - HCA",
+     "https://www.hca.wa.gov/free-or-low-cost-health-care/apply-or-renew-coverage"
+    ],
+    [
+     "Apple Health (Medicaid) work requirements - HCA",
+     "https://www.hca.wa.gov/free-or-low-cost-health-care/i-need-medical-dental-or-vision-care/apple-health-medicaid-work-requirements"
+    ],
+    [
+     "DSHS Benefits and H.R. 1",
+     "https://www.dshs.wa.gov/family-food-and-housing-services/dshs-benefits-and-hr-1"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "H.R. 1: starting Jan 1, 2027, Apple Health for Adults enrollees must meet work requirements (e.g., $580/month household MAGI income, or 80 hrs/month work, half-time school, work program, or community service, or combination) unless exempt, and must renew every 6 months instead of 12. Since Oct 1, 2026, eligibility narrowed for many lawfully present noncitizens (DSHS projects ~11,000 lose coverage). Apple Health Expansion (regardless of immigration status) is mentioned on the HCA page but its current enrollment status was not checked."
+  },
+  {
+   "id": "ben-0006",
+   "name": "Unemployment Insurance",
+   "org": "Washington State Employment Security Department (ESD)",
+   "summary": "Weekly payments for people who lost work through no fault of their own and are able, available and looking for work.",
+   "subcats": [
+    "unemployment-disability",
+    "cash"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "cash-grant",
+    "amount": "$383-$1,208 per week",
+    "notes": "Minimum $383 and maximum $1,208 weekly benefit for new claims opened on or after July 5, 2026 (ESD news release June 10, 2026). Your amount is based on base-year wages; total benefits are the lesser of 26x weekly amount or 1/3 of base-year wages."
+   },
+   "elig": {
+    "age": "",
+    "income": "Not based on financial need. Must have worked at least 680 hours in your base year, with some wages earned in Washington in the last 18 months.",
+    "residency": "Must have lost job through no fault of your own; able and available to work and meet weekly job search requirements.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online through ESD eServices (24/7) or by phone at 800-318-6022, ideally within 2 weeks of losing your job. Free computers and phones are available at WorkSource centers. After applying, register at WorkSourceWA.com and file weekly claims.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "800-318-6022",
+    "url": "https://esd.wa.gov/unemployment"
+   },
+   "src": [
+    [
+     "Unemployment benefits - ESD",
+     "https://esd.wa.gov/unemployment"
+    ],
+    [
+     "How to apply for unemployment benefits - ESD",
+     "https://esd.wa.gov/get-financial-help/unemployment-benefits/applying-unemployment-benefits/how-apply-unemployment-benefits"
+    ],
+    [
+     "Basic eligibility requirements - ESD",
+     "https://esd.wa.gov/get-financial-help/unemployment-benefits/basic-eligibility-requirements"
+    ],
+    [
+     "Estimate your benefit - ESD",
+     "https://esd.wa.gov/get-financial-help/unemployment-benefits/estimate-your-benefit"
+    ],
+    [
+     "New average annual wage estimates adjust unemployment insurance and paid leave benefits - ESD",
+     "https://esd.wa.gov/about-us/news-release/2026/new-average-annual-wage-estimates-adjust-unemployment-insurance-and-paid-leave-benefits"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Claims Center hours are on ESD's contact page, not fetched. The estimate page's example table shows a weekly amount below $383, so the minimum may not apply in every case."
+  },
+  {
+   "id": "ben-0007",
+   "name": "Supplemental Security Income (SSI)",
+   "org": "Social Security Administration",
+   "summary": "Federal monthly payments for people with very low income and few assets who are 65+, blind, or have a long-term disability. No work history needed.",
+   "subcats": [
+    "cash",
+    "unemployment-disability"
+   ],
+   "level": "federal",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "cash-grant",
+    "amount": "Up to $994/month (individual); up to $1,491/month (couple)",
+    "notes": "2026 maximum federal payment per SSA. Reduced by other income; may be cut by up to $351.33 if you live in someone else's home and don't pay your share of food and shelter."
+   },
+   "elig": {
+    "age": "65+, or any age with blindness or a disability expected to last 12+ months or result in death",
+    "income": "Generally no more than $2,073/month from work (2026); resources no more than $2,000 (individual) / $3,000 (couple).",
+    "residency": "Lives in the U.S.; additional rules for noncitizens.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Start online at ssa.gov (apply for SSI), or call 1-800-772-1213 (TTY 1-800-325-0778) to apply by phone or set an appointment at a local Social Security office. Office/phone hours: Phone Mon-Fri 8am-7pm local time; automated service 24 hours.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-800-772-1213",
+    "url": "https://www.ssa.gov/ssi"
+   },
+   "src": [
+    [
+     "Supplemental Security Income (SSI) | SSA",
+     "https://www.ssa.gov/ssi"
+    ],
+    [
+     "How much you could get from SSI | SSA",
+     "https://www.ssa.gov/ssi/amount"
+    ],
+    [
+     "Who can get SSI | SSA",
+     "https://www.ssa.gov/ssi/eligibility"
+    ],
+    [
+     "Apply for Supplemental Security Income (SSI) | SSA",
+     "https://www.ssa.gov/apply/ssi"
+    ],
+    [
+     "Contact Social Security By Phone | SSA",
+     "https://www.ssa.gov/agency/contact/phone.html"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "SSA pages block automated fetch; read in browser. Disability applicants must also show work earnings under $1,690/month in the month of applying. Washington's DSHS ABD program helps people apply for SSI. SSA says disability decisions average 200-230 days."
+  },
+  {
+   "id": "ben-0008",
+   "name": "Social Security Disability Insurance (SSDI)",
+   "org": "Social Security Administration",
+   "summary": "Monthly federal disability payments (plus Medicare after a waiting period) for people who can't work because of a long-term disability and have enough past work history.",
+   "subcats": [
+    "unemployment-disability",
+    "cash"
+   ],
+   "level": "federal",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "cash-grant",
+    "amount": null,
+    "notes": "Amount based on your past earnings; no fixed figure. Benefits may include Medicare."
+   },
+   "elig": {
+    "age": "",
+    "income": "Not means-tested, but if working you must earn under $1,690/month ($2,830 if blind) in 2026 (substantial gainful activity).",
+    "residency": "Disability expected to last a year or more or result in death; generally must have worked 5 of the last 10 years (less for people under 24).",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at ssa.gov or call 1-800-772-1213 (TTY 1-800-325-0778) to apply by phone or at a local office. Office/phone hours: Phone Mon-Fri 8am-7pm local time; automated service 24 hours.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-800-772-1213",
+    "url": "https://www.ssa.gov/disability"
+   },
+   "src": [
+    [
+     "Disability | SSA",
+     "https://www.ssa.gov/disability"
+    ],
+    [
+     "Who can get Disability | SSA",
+     "https://www.ssa.gov/disability/eligibility"
+    ],
+    [
+     "Contact Social Security By Phone | SSA",
+     "https://www.ssa.gov/agency/contact/phone.html"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "SSA's phone page says average disability processing time is 200-230 days."
+  },
+  {
+   "id": "ben-0009",
+   "name": "ORCA LIFT reduced fare",
+   "org": "King County Metro / Public Health - Seattle & King County",
+   "summary": "Income-qualified ORCA card that cuts most Puget Sound transit fares to $1 per ride.",
+   "subcats": [
+    "transport"
+   ],
+   "level": "county",
+   "hood": "Citywide",
+   "address": "ORCA LIFT/Public Health Office, 201 S Jackson St, Seattle, WA 98104",
+   "lat": 47.599142,
+   "lng": -122.331494,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": "$1.00 per ride",
+    "notes": "ORCA LIFT single-ride fare per King County Metro fares page (fares effective Sept 1, 2025). Card is free for qualifiers; you load money or a pass to ride."
+   },
+   "elig": {
+    "age": "Adults (youth 18 and under ride free)",
+    "income": "Household gross income at or below 200% of federal poverty level: $2,660/month for 1 person, $3,607 for 2, $4,553 for 3. Enrollment in Apple Health, WIC or Basic Food qualifies automatically.",
+    "residency": "",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online, by phone with Public Health's CHAP line (800-756-5437, card mailed), or in person at an enrollment office. Bring proof of identity (many kinds of photo ID accepted, or a combination of documents) and proof of income or benefits. Office/phone hours: CHAP phone Mon-Fri 8am-5pm (closed 1-2pm); 201 S Jackson office: Mon-Thu 8:30am-4:30pm (closed 1-2pm); 2nd & 3rd Fridays 8:30am-1pm.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "800-756-5437",
+    "url": "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/orca-lift"
+   },
+   "src": [
+    [
+     "ORCA LIFT - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/orca-lift"
+    ],
+    [
+     "Prices - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/prices"
+    ],
+    [
+     "Subsidized annual pass - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/subsidized-annual-pass"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Office hours are from the subsidized annual pass page, which lists the same ORCA LIFT/Public Health office. A proof-of-no-income option exists (ESD verification). Reduced day pass price shown inconsistently ($2.00/day on prices table)."
+  },
+  {
+   "id": "ben-0010",
+   "name": "Subsidized Annual Pass (free transit)",
+   "org": "King County Metro / Public Health - Seattle & King County",
+   "summary": "A free 12-month transit pass for King, Pierce and Snohomish residents enrolled in certain state cash or disability programs, good on Metro buses, Link light rail, Sounder, streetcar, water taxi and more.",
+   "subcats": [
+    "transport"
+   ],
+   "level": "county",
+   "hood": "Citywide",
+   "address": "ORCA LIFT/Public Health Office, 201 S Jackson St, Seattle, WA 98104; Catholic Community Services Randolph Carter Center, 100 23rd Ave S, Seattle, WA 98144",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": "Free",
+    "notes": "Fare 100% covered on listed services for up to 12 calendar months while eligible; other systems at ORCA LIFT fare with E-purse."
+   },
+   "elig": {
+    "age": "",
+    "income": "Must be enrolled in TANF/SFA, Refugee Cash Assistance, ABD cash, Pregnant Women Assistance, SSI, or HEN.",
+    "residency": "King, Pierce, or Snohomish County resident",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online at the Reduced Fare Portal with your ProviderOne or DSHS client ID, photo ID and DSHS award letter; by phone with CHAP (800-756-5437) or Catholic Community Services (206-960-1582); or in person at the Seattle offices listed. Office/phone hours: CHAP phone Mon-Fri 8am-5pm (closed 1-2pm); CCS phone Mon-Fri 9am-4pm; 201 S Jackson: Mon-Thu 8:30am-4:30pm (closed 1-2pm); 2nd & 3rd Fridays 8:30am-1pm; Randolph Carter Center: Mon-Fri 10am-4pm.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "800-756-5437",
+    "url": "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/subsidized-annual-pass"
+   },
+   "src": [
+    [
+     "Subsidized annual pass - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/subsidized-annual-pass"
+    ],
+    [
+     "Prices - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/prices"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "SSI qualifies, but SSDI does not. Basic Food alone does not qualify."
+  },
+  {
+   "id": "ben-0011",
+   "name": "Regional Reduced Fare Permit (RRFP)",
+   "org": "King County Metro",
+   "summary": "Reduced-fare ORCA card for seniors 65+ and riders with a qualifying disability or Medicare card, good across Puget Sound transit systems.",
+   "subcats": [
+    "transport"
+   ],
+   "level": "county",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": "$1.00 per ride",
+    "notes": "Senior and disability single-ride fare per King County Metro fares page (effective Sept 1, 2025). First RRFP card free; $3 replacement."
+   },
+   "elig": {
+    "age": "65+, or under 65 with a qualifying disability",
+    "income": "No income test stated.",
+    "residency": "",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Riders with disabilities apply online through the Reduced Fare Portal or in person at the Metro Pass Sales Office or a pop-up, with a provider-signed form, Medicare card, or ADA paratransit letter, plus photo ID. Seniors can apply online at myORCA.com, by mail, or in person with proof of age.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "206-553-3000",
+    "url": "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/regional-reduced-fare-permit"
+   },
+   "src": [
+    [
+     "Regional Reduced Fare Permit - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/discounted-fares/regional-reduced-fare-permit"
+    ],
+    [
+     "Prices - King County Metro",
+     "https://kingcounty.gov/en/dept/metro/fares-and-payment/prices"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Metro Pass Sales Office address and hours not fetched. Seniors' state ID may be expired."
+  },
+  {
+   "id": "ben-0012",
+   "name": "Utility Discount Program (UDP)",
+   "org": "City of Seattle (Seattle City Light / Seattle Public Utilities / Human Services Dept.)",
+   "summary": "Ongoing monthly discount of 60% on Seattle City Light and 50% on Seattle Public Utilities (water, sewer, garbage) bills for income-qualified households.",
+   "subcats": [
+    "housing-utility"
+   ],
+   "level": "city",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": "60% off electricity; 50% off water/sewer/garbage",
+    "notes": "City says average annual savings is $732. Processing 4-6 weeks."
+   },
+   "elig": {
+    "age": "",
+    "income": "Household income within yearly guidelines; King County's page lists 2026 UDP limits of $4,269/month for 1 person and $5,582 for 2.",
+    "residency": "Must have a Seattle City Light or SPU residential account in your name (King County notes tenants whose landlord pays utilities may still qualify). Open regardless of immigration status.",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online through the City's Utility Assistance application with a City of Seattle login and your City Light account number, plus photo ID and income documents for all adults. Paper applications by calling 206-684-3000. Renewals: 206-684-0268. Office/phone hours: SPU/City Light customer service 206-684-3000 Mon-Fri 7:30am-6pm.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "206-684-0268",
+    "url": "https://www.seattle.gov/human-services/services-and-programs/utility-discount-program"
+   },
+   "src": [
+    [
+     "Utility Discount Program (UDP) - Human Services",
+     "https://www.seattle.gov/human-services/services-and-programs/utility-discount-program"
+    ],
+    [
+     "Utility Discount Program - Utilities",
+     "https://www.seattle.gov/utilities/your-services/discounts-and-incentives/utility-discount-program"
+    ],
+    [
+     "Energy assistance programs for King County residents",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/access-outreach-program/energy-assistance"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Only useful to people with a utility account in their name, so mostly for those housed or newly housed. The seattle.gov income table didn't render in fetched text; the dollar limits come from the King County page."
+  },
+  {
+   "id": "ben-0013",
+   "name": "LIHEAP (Low-Income Home Energy Assistance Program)",
+   "org": "WA Dept. of Commerce; Seattle applications processed by Byrd Barr Place via Public Health CHAP line",
+   "summary": "Federally funded grant, usually once a year and paid directly to your energy company, to help low-income households with heating or cooling bills. It can also help fix or replace unsafe heating systems.",
+   "subcats": [
+    "housing-utility"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": null,
+    "notes": "Grant amount varies; usually a one-time payment made to the energy provider."
+   },
+   "elig": {
+    "age": "",
+    "income": "Up to 150% of federal poverty level. King County's 2025-2026 table: $1,956/month (1 person), $2,644 (2), $3,331 (3), $4,019 (4).",
+    "residency": "Washington resident; household must not have received LIHEAP in the current program year (Oct-Sept).",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Seattle residents call Public Health's CHAP line at 1-800-756-5437; Byrd Barr Place processes the applications. You must schedule an appointment with the local provider; Commerce itself doesn't take applications.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-800-756-5437",
+    "url": "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/access-outreach-program/energy-assistance"
+   },
+   "src": [
+    [
+     "Low-Income Home Energy Assistance Program (LIHEAP) - Commerce",
+     "https://www.commerce.wa.gov/community-opportunities/liheap/"
+    ],
+    [
+     "Energy assistance programs for King County residents",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/access-outreach-program/energy-assistance"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "King County says LIHEAP is now available year-round, once every 12 months; Commerce says once per Oct-Sept program year. Byrd Barr Place number shown on county page for checking service area: 206-812-4940. Needs a home energy bill, so mainly for housed households. Federal LIHEAP funding level for 2026-27 not checked."
+  },
+  {
+   "id": "ben-0014",
+   "name": "Lifeline phone/internet discount",
+   "org": "FCC (administered by USAC)",
+   "summary": "Federal monthly discount on one phone or internet plan per household for people with low income or on SNAP, Medicaid, SSI and certain other programs.",
+   "subcats": [
+    "phone-internet"
+   ],
+   "level": "federal",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": "Up to $9.25/month",
+    "notes": "Per FCC Lifeline consumer page fetched 2026-11-13 (up to $34.25 on Tribal lands)."
+   },
+   "elig": {
+    "age": "",
+    "income": "Household income at or below 135% of federal poverty guidelines, or enrolled in SNAP, Medicaid, Federal Public Housing Assistance, SSI, Veterans Pension, or certain Tribal programs.",
+    "residency": "One Lifeline benefit per household; group-living residents can count as separate households.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Apply online with the National Verifier, by mail, or through a participating phone company. For help or a paper form call 1-800-234-9473. Recertify yearly.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-800-234-9473",
+    "url": "https://www.lifelinesupport.org"
+   },
+   "src": [
+    [
+     "Lifeline Support for Affordable Communications | FCC",
+     "https://www.fcc.gov/lifeline-consumers"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "If the provider charges you nothing, you must use the service at least once every 30 days or lose it. fcc.gov blocks automated fetch; read in browser. lifelinesupport.org not fetched."
+  },
+  {
+   "id": "ben-0015",
+   "name": "WIC (Women, Infants, and Children)",
+   "org": "Washington State Department of Health",
+   "summary": "Healthy food benefits, nutrition advice, breastfeeding support and health referrals for pregnant and postpartum people, infants and children under 5.",
+   "subcats": [
+    "food-benefit"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "restricted-benefit",
+    "amount": null,
+    "notes": "Benefits are specific foods; no dollar amount stated."
+   },
+   "elig": {
+    "age": "Pregnant, recently delivered, or breastfeeding/chestfeeding; infants and children under 5 (any caregiver may enroll a child)",
+    "income": "Effective July 1, 2026: up to $2,461/month for 1 person, $3,337 for 2, $4,212 for 3, $5,088 for 4 (count each unborn child). People on Medicaid, TANF or Basic Food may qualify.",
+    "residency": "U.S. citizenship not required.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Fill out the WIC interest form online, find a local WIC clinic, or call the WIC Cascades Support Line at 1-800-841-1410. Or text WIC to 96859.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "1-800-841-1410",
+    "url": "https://doh.wa.gov/you-and-your-family/wic"
+   },
+   "src": [
+    [
+     "Women, Infants, and Children (WIC) Nutrition Program - DOH",
+     "https://doh.wa.gov/you-and-your-family/wic"
+    ],
+    [
+     "WIC Eligibility - DOH",
+     "https://doh.wa.gov/you-and-your-family/wic/wic-eligibility"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "DOH notes a new federal public charge rule (effective Sept 18, 2026) that does not change WIC eligibility, though it is unclear if WIC will factor into immigration decisions. WIC eligibility is separate from H.R. 1 changes to SNAP/Apple Health."
+  },
+  {
+   "id": "ben-0016",
+   "name": "Basic Food Employment & Training (BFET)",
+   "org": "Washington State DSHS (with community colleges, WorkSource and community partners)",
+   "summary": "Free, voluntary job training, job search help and support services for people getting Basic Food; it can also satisfy the SNAP work rule for able-bodied adults.",
+   "subcats": [
+    "education-training"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": null,
+    "notes": "Training and support services provided at no cost to participants; providers may offer support services."
+   },
+   "elig": {
+    "age": "16+",
+    "income": "Must receive federal Basic Food.",
+    "residency": "Able to work or do work activities 20+ hrs/week; not on TANF, SFA, Tribal TANF, Refugee Cash Assistance, or State Food Assistance (a separate FAP E&T program covers that group).",
+    "id_required": null,
+    "referral": true,
+    "waitlist": false
+   },
+   "how_to_apply": "Find a BFET provider with DSHS's provider search, ask for a referral at a DSHS Community Services Office, or call 877-501-2233 and ask for a BFET referral. Office/phone hours: Phone interviews Mon-Fri 8am-2pm (877-501-2233); Community Services Offices Mon-Fri 8am-5pm, except holidays.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "877-501-2233",
+    "url": "https://www.dshs.wa.gov/family-food-and-housing-services/food-assistance/basic-food-employment-and-training/basic-food-employment-and-training-eligibility"
+   },
+   "src": [
+    [
+     "Basic Food Employment and Training Eligibility - DSHS",
+     "https://www.dshs.wa.gov/family-food-and-housing-services/food-assistance/basic-food-employment-and-training/basic-food-employment-and-training-eligibility"
+    ],
+    [
+     "Retraining - Seattle Colleges",
+     "https://www.seattlecolleges.edu/retraining"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Relevant given H.R. 1 work requirements for able-bodied adults on Basic Food."
+  },
+  {
+   "id": "ben-0017",
+   "name": "Worker Retraining (Seattle Colleges)",
+   "org": "Seattle Colleges; funded by WA State Board for Community and Technical Colleges",
+   "summary": "State-funded help paying tuition, books and supplies for short-term job training at Seattle community colleges, for laid-off and unemployed workers.",
+   "subcats": [
+    "education-training"
+   ],
+   "level": "state",
+   "hood": "Citywide",
+   "address": "Seattle Central College, 1701 Broadway, Seattle, WA 98122",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "subsidy",
+    "amount": null,
+    "notes": "Tuition assistance plus required textbooks and supplies (Seattle Central); amounts not stated."
+   },
+   "elig": {
+    "age": "",
+    "income": "Not income-based; you must be collecting unemployment, have exhausted it in the last 4 years, have a layoff/WARN notice, be a displaced homemaker, formerly self-employed, or recently separated military. Some undocumented students may qualify.",
+    "residency": "Washington workforce; must enroll in short-term or applied bachelor's programs, not transfer degrees.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "how_to_apply": "Complete the short survey and application at startnextquarter.org, or contact Seattle Central Workforce Services at 206-934-3854 or WorkforceServices@seattlecolleges.edu.",
+   "religious": "none",
+   "hours": [],
+   "contact": {
+    "phone": "206-934-3854",
+    "url": "https://seattlecentral.edu/enrollment-and-funding/financial-aid-and-funding/workforce-services/worker-retraining"
+   },
+   "src": [
+    [
+     "Worker Retraining - Seattle Central College",
+     "https://seattlecentral.edu/enrollment-and-funding/financial-aid-and-funding/workforce-services/worker-retraining"
+    ],
+    [
+     "Retraining - Seattle Colleges",
+     "https://www.seattlecolleges.edu/retraining"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-12-13",
+   "expires": null,
+   "notes": "Funding is limited and may be start-up only at some colleges (per SBCTC guidelines search result, not fetched). North and South Seattle colleges have their own WRT offices."
+  }
+ ]
+}

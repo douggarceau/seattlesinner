@@ -1,0 +1,1374 @@
+{
+ "asof": "2026-11-13T12:00:00-08:00",
+ "items": [
+  {
+   "id": "food-0001",
+   "name": "Ballard Food Bank & Kindness Café",
+   "org": "Ballard Food Bank",
+   "summary": "Grocery-style food bank where you pick your own food, hygiene items and pet food, plus a free café serving soup, sandwiches, hot meals and coffee. There's also a resource hub that helps with things like a mailing address and ID vouchers.",
+   "subcats": [
+    "food-bank",
+    "hot-meal"
+   ],
+   "hood": "Ballard",
+   "address": "1400 NW Leary Way, Seattle, WA 98107",
+   "lat": 47.663711,
+   "lng": -122.37376,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Groceries and Kindness Café meals are free. Café visits are asked to stay around 30 minutes."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "Anyone living in Seattle may shop at the food bank. The Kindness Café is open to everyone.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "10:00",
+     "close": "15:45",
+     "note": "Grocery store & resource hub"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "10:00",
+     "close": "18:45",
+     "note": "Grocery store & resource hub"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "10:00",
+     "close": "13:45",
+     "note": "Grocery store & resource hub"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "18:45",
+     "note": "Grocery store & resource hub"
+    },
+    {
+     "dow": [
+      1
+     ],
+     "open": "10:00",
+     "close": "15:00",
+     "note": "Kindness Café"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "10:00",
+     "close": "18:00",
+     "note": "Kindness Café"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "10:00",
+     "close": "13:30",
+     "note": "Kindness Café"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "18:00",
+     "note": "Kindness Café"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 789-7800",
+    "url": "https://www.ballardfoodbank.org/service-schedule"
+   },
+   "src": [
+    [
+     "Ballard Food Bank – home",
+     "https://www.ballardfoodbank.org/"
+    ],
+    [
+     "Ballard Food Bank – Service Schedule",
+     "https://www.ballardfoodbank.org/service-schedule"
+    ],
+    [
+     "Ballard Food Bank – Kindness Café",
+     "https://www.ballardfoodbank.org/kindness-cafe"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Closed Fridays for food. Closed Thanksgiving (11/26/2026), 12/23 through the weekend for Christmas, and 12/30 through the weekend for New Year's. There's an optional 'Reserve a Shopping Time' service, but the pages don't say whether you need a reservation. The pages don't mention an ID requirement, so id_required is left null. No-cook bags are offered, but no schedule was given for them."
+  },
+  {
+   "id": "food-0002",
+   "name": "U-District Pantry",
+   "org": "University District Food Bank",
+   "summary": "Choose-your-own grocery pantry. You can book an appointment or join the same-day line online or on a tablet outside. People without a fridge or a way to cook can get a grab-and-go bag once a day.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "U District",
+   "address": "5017 Roosevelt Way NE, Seattle, WA 98105",
+   "lat": 47.665106,
+   "lng": -122.317488,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Groceries are limited to once a week for most people. A go bag is available once a day for people without steady refrigeration or cooking."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "All are welcome. The pantry mainly serves ZIP codes 98102, 98103, 98105, 98112, 98115 and 98125.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "09:00",
+     "close": "15:00"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "11:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "11:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "11:00",
+     "close": "16:00",
+     "note": "Closed 2nd Friday of each month for staff training"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 523-7060",
+    "url": "https://www.udistrictfoodbank.org/udistrictpantry"
+   },
+   "src": [
+    [
+     "University District Food Bank – home",
+     "https://www.udistrictfoodbank.org/"
+    ],
+    [
+     "University District Food Bank – U-District Pantry",
+     "https://www.udistrictfoodbank.org/udistrictpantry"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Closed Fri 11/13, Thu 11/26 and Fri 11/27/2026. You fill out a short information form on your first visit and once a year after that; it's described as optional. The pages don't mention an ID requirement. waitlist is set to false because the 'waitlist' here is just a same-day line to get in, not a wait to enroll. Shopping is limited to 20 minutes. Appointments run every 10 minutes and can be booked up to 2 weeks ahead."
+  },
+  {
+   "id": "food-0003",
+   "name": "West Seattle Food Bank",
+   "org": "West Seattle Food Bank",
+   "summary": "Walk-in food bank, no appointment needed. You can come more than once a week for shelf-stable food and produce, but meat, dairy and specialty items are limited to once a week. They also run a free clothing bank and help with bus tickets and rent or utility assistance.",
+   "subcats": [
+    "food-bank",
+    "produce"
+   ],
+   "hood": "West Seattle",
+   "address": "3419 SW Morgan St, Seattle, WA 98126",
+   "lat": 47.544618,
+   "lng": -122.375396,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Meat, dairy and specialty items are limited to once a week. Non-perishables and fresh produce can be picked up more often."
+   },
+   "elig": {
+    "age": "",
+    "income": "No proof of income or need required.",
+    "residency": "Not restricted by ZIP code for in-person visits. Home delivery only covers 98106, 98116, 98126 and 98136, for people with a disability.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      2
+     ],
+     "open": "10:00",
+     "close": "14:00"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "12:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "14:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "10:00",
+     "close": "14:00"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 932-9023",
+    "url": "https://westseattlefoodbank.org/get-food/"
+   },
+   "src": [
+    [
+     "West Seattle Food Bank – home",
+     "https://www.westseattlefoodbank.org/"
+    ],
+    [
+     "West Seattle Food Bank – Get Food",
+     "https://westseattlefoodbank.org/get-food/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Thanksgiving food: Mon 11/23 12–7pm, Tue 11/24 and Wed 11/25 10am–2pm. Closed Thu–Fri 11/26–27. Holiday food: Mon 12/21 12–7pm, Tue–Wed 12/22–23 10am–2pm. Closed 12/24–25 and 12/31–1/1. Also open Mon 12/28 12–7pm and Tue–Wed 12/29–30 10am–2pm. The pages don't mention an ID requirement, so id_required is null. The Clothesline clothing bank is at 5444 Delridge Way SW, Tue/Thu/Sat 10am–1pm."
+  },
+  {
+   "id": "food-0004",
+   "name": "Rainier Valley Food Bank – Grocery Shopping",
+   "org": "Rainier Valley Food Bank",
+   "summary": "Choose-your-own grocery shopping once a week, by appointment or walk-in. Ready-packed grocery bags are available on Thursdays. Enter through the back gates on 50th Ave S.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Rainier Valley",
+   "address": "9021 Rainier Ave S, Seattle, WA 98118",
+   "lat": 47.523071,
+   "lng": -122.270074,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Shopping is once a week."
+   },
+   "elig": {
+    "age": "",
+    "income": "On the first visit they ask about self-declared income, household size and address. You can skip any question without losing access to food.",
+    "residency": "Anyone living in Washington State.",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      3
+     ],
+     "open": "09:00",
+     "close": "14:00",
+     "note": "Grocery shopping (appointment or walk-in)"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "09:00",
+     "close": "14:00",
+     "note": "Grocery shopping (appointment or walk-in)"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 723-4105",
+    "url": "https://www.rvfb.org/grocery-shopping"
+   },
+   "src": [
+    [
+     "Rainier Valley Food Bank – home",
+     "https://www.rvfb.org/"
+    ],
+    [
+     "Rainier Valley Food Bank – Grocery Shopping",
+     "https://www.rvfb.org/grocery-shopping"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Bringing mail or ID on your first visit helps but isn't required. Call (206) 723-4105 to book a 15-minute appointment. Walk-ins are accepted; after about 10am a waitlist with numbers usually starts. Grab & Go bags are given out on Thursdays, but no times were listed, so that isn't in hours. The office is open Mon–Fri 9am–2pm. The old address, 4205 Rainier Ave S, still shows up on aggregator sites. The official site uses 9021 Rainier Ave S."
+  },
+  {
+   "id": "food-0005",
+   "name": "OSL Serves – Open Meal Service",
+   "org": "OSL Serves (formerly Operation Sack Lunch)",
+   "summary": "Free lunch and early dinner on weekdays, plus a Saturday lunch, with no requirements to eat. Grab-and-go food is available from 9am on weekdays.",
+   "subcats": [
+    "hot-meal"
+   ],
+   "hood": "Pioneer Square",
+   "address": "210 Alaskan Way, Seattle, WA 98104",
+   "lat": 47.600757,
+   "lng": -122.335868,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free. Seconds are served when the kitchen has enough, shortly before service ends."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "11:30",
+     "close": "12:30",
+     "note": "Lunch"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "15:30",
+     "close": "16:30",
+     "note": "Dinner"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "13:30",
+     "close": "15:00",
+     "note": "Saturday lunch"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 347-6629",
+    "url": "https://www.oslserves.org/open-meal-service"
+   },
+   "src": [
+    [
+     "OSL Serves – home",
+     "https://www.oslserves.org/"
+    ],
+    [
+     "OSL Serves – Open Meal Service",
+     "https://www.oslserves.org/open-meal-service"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Official page says doors open 9:00am on weekdays; grab-and-go end time not stated, so that row is omitted; lunch/dinner times are from the official page. Meals are served at Compass Housing. The page says all are welcome with no requirements, so the eligibility fields are blank. The page doesn't say when grab-and-go ends, so 09:00–11:30 is an assumption. Treat 11:30 as approximate. Aggregator sites list an older Western Ave address and different times."
+  },
+  {
+   "id": "food-0006",
+   "name": "Pike Market Food Bank",
+   "org": "Pike Market Senior Center & Food Bank",
+   "summary": "Downtown food bank offering weekly groceries for people of any age. Ready-to-eat bags are available every weekday for people without housing or facing a food emergency.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Downtown / Pike Place Market",
+   "address": "1531 Western Ave (Level 5 of the parking garage), Seattle, WA 98101",
+   "lat": 47.608478,
+   "lng": -122.34134,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Groceries are once a week. Ready-to-eat bags are one per day."
+   },
+   "elig": {
+    "age": "Any age",
+    "income": "",
+    "residency": "Not stated. Home delivery is only for eligible homebound Downtown Seattle residents.",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "10:00",
+     "close": "15:00",
+     "note": "Ready-to-eat bags"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "10:00",
+     "close": "15:00",
+     "note": "Ready-to-eat bags"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "12:00",
+     "close": "19:00",
+     "note": "Ready-to-eat bags"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "15:00",
+     "note": "Ready-to-eat bags"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "09:00",
+     "close": "12:00",
+     "note": "Ready-to-eat bags"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "11:00",
+     "close": "12:00",
+     "note": "Groceries – Express Bag Hour"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "12:00",
+     "close": "15:00",
+     "note": "Groceries"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "15:00",
+     "close": "19:00",
+     "note": "Groceries"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "12:00",
+     "close": "15:00",
+     "note": "Groceries"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 626-6462",
+    "url": "https://www.pmsc-fb.org/food-bank"
+   },
+   "src": [
+    [
+     "Pike Market Senior Center & Food Bank – Food Bank",
+     "https://www.pmsc-fb.org/food-bank"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "ID helps with sign-in but isn't required. Ready-to-eat and grocery service is closed the first Thursday of each month and on federal holidays, including Thanksgiving and Christmas. Don't arrive early because there's no waiting area. The page lists two numbers, 206-728-2773 and 206-626-6462, without saying which is the food bank's. The ZIP code is inferred from the mailing address (85 Pike St, 98101), since the page doesn't give a ZIP for the pickup site. The domain pikemarketfoodbank.org didn't resolve; the official site is pmsc-fb.org."
+  },
+  {
+   "id": "food-0007",
+   "name": "North Helpline – Lake City Food Bank",
+   "org": "North Helpline",
+   "summary": "North Seattle food bank open on two weekdays and Saturday morning. You sign up for a free North Helpline card on your first visit; no state ID needed.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Lake City",
+   "address": "12736 33rd Ave NE, Seattle, WA 98125",
+   "lat": 47.720907,
+   "lng": -122.292434,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Up to 6 visits a month, counting both Lake City and Bitter Lake, and once a day per site. The count resets on the 1st."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      3
+     ],
+     "open": "09:00",
+     "close": "13:45"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "16:00",
+     "close": "18:45"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "09:00",
+     "close": "13:45"
+    }
+   ],
+   "contact": {
+    "phone": "206-367-3477",
+    "url": "https://www.northhelpline.org/food-banks"
+   },
+   "src": [
+    [
+     "North Helpline – home",
+     "https://www.northhelpline.org/"
+    ],
+    [
+     "North Helpline – Food Banks",
+     "https://www.northhelpline.org/food-banks"
+    ],
+    [
+     "North Helpline – First Visit",
+     "https://www.northhelpline.org/first-visit"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "First-time visitors register at the Client Services office and get a free North Helpline card. You don't need a state ID. The pages don't list a ZIP service area or income rules, so residency and income are blank. Take a number slip and wait for your number. No holiday closures were listed."
+  },
+  {
+   "id": "food-0008",
+   "name": "North Helpline – Bitter Lake Food Bank",
+   "org": "North Helpline",
+   "summary": "North Helpline's Saturday-morning food bank in Bitter Lake. It uses the same free client card as the Lake City site.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Bitter Lake / Northgate area",
+   "address": "13000 Linden Ave N, Seattle, WA 98133",
+   "lat": 47.723269,
+   "lng": -122.34805,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Shares the 6-visits-per-month limit with Lake City."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      6
+     ],
+     "open": "09:00",
+     "close": "13:45"
+    }
+   ],
+   "contact": {
+    "phone": "206-413-8192",
+    "url": "https://www.northhelpline.org/food-banks"
+   },
+   "src": [
+    [
+     "North Helpline – home",
+     "https://www.northhelpline.org/"
+    ],
+    [
+     "North Helpline – Food Banks",
+     "https://www.northhelpline.org/food-banks"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Line up when you arrive; there are no number slips. The card setup is the same as at Lake City, with no state ID needed. No ZIP or income rules are stated. The neighborhood was asked for as Lake City/Northgate; Bitter Lake is in north Seattle, west of Northgate."
+  },
+  {
+   "id": "food-0009",
+   "name": "The Market at Byrd Barr Place",
+   "org": "Byrd Barr Place",
+   "summary": "Central District food bank in a historic firehouse, open to anyone who needs it, once a week. Bring your own bags if you can.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Central District",
+   "address": "722 18th Ave, Seattle, WA 98122",
+   "lat": 47.608318,
+   "lng": -122.308845,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Once a week."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "Open to anyone who needs it. Home delivery covers 98122 and parts of 98102 and 98144.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      2
+     ],
+     "open": "11:00",
+     "close": "16:00"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "12:00",
+     "close": "16:00"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "14:00"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 812-4940",
+    "url": "https://www.byrdbarrplace.org/programming/food-bank"
+   },
+   "src": [
+    [
+     "Byrd Barr Place – home",
+     "https://www.byrdbarrplace.org/"
+    ],
+    [
+     "Byrd Barr Place – The Market (Food Bank)",
+     "https://www.byrdbarrplace.org/programming/food-bank"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "If you arrive before opening, tickets are handed out at random 30 minutes before the doors open; please don't come more than 30 minutes early. After opening, tickets go out in order of arrival. No ID or income rules are stated, so id_required is null. Home delivery runs Mon–Thu and has a waitlist form; the walk-in market doesn't. The page lists the partial delivery ZIPs as 98102, 98122 and 98144, which looks like a typo since 98122 is also listed as fully covered."
+  },
+  {
+   "id": "food-0010",
+   "name": "Wallingford Food Bank",
+   "org": "FamilyWorks",
+   "summary": "Food bank where you can shop regardless of ZIP code or income, with no ID or paperwork needed. First-time visitors get a free membership card. Online pre-ordered pickup and no-cook emergency bags are also offered.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Wallingford",
+   "address": "1501 N 45th St, Seattle, WA 98103",
+   "lat": 47.661329,
+   "lng": -122.33909,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free."
+   },
+   "elig": {
+    "age": "",
+    "income": "No income requirement.",
+    "residency": "Anyone, regardless of ZIP code. Home delivery is only for North Seattle and has a waitlist.",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      2
+     ],
+     "open": "12:00",
+     "close": "14:00"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "15:00",
+     "close": "18:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "11:00",
+     "close": "13:00"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 647-1780",
+    "url": "https://www.familyworksseattle.org/locations/"
+   },
+   "src": [
+    [
+     "FamilyWorks – Food Banks",
+     "https://familyworksseattle.org/food-banks"
+    ],
+    [
+     "FamilyWorks – Locations & Hours",
+     "https://www.familyworksseattle.org/locations/"
+    ],
+    [
+     "FamilyWorks – home",
+     "https://familyworksseattle.org/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Hours come from the official Locations page. A Nov 2025 neighborhood blog (not used as a source) said the food bank had moved temporarily to 4318 Stone Way N during renovations. The official pages fetched today give 1501 N 45th St and don't mention a relocation, but it's worth checking. No-cook emergency bags: Tue/Wed/Fri 9am–3pm and Thu 9am–6pm; the page doesn't say where to pick them up. Groceries-to-Go pickup: Wed 9–11am and 2:30–3:30pm, Thu 10am–12pm and 5–6pm, Fri 11am–1pm. Closed for holidays such as Veterans Day."
+  },
+  {
+   "id": "food-0011",
+   "name": "El Centro de la Raza Food Bank",
+   "org": "El Centro de la Raza",
+   "summary": "Food bank at El Centro de la Raza on Beacon Hill. Wednesday hours are for seniors and people with disabilities or mobility needs; Thursday and Friday are open to everyone. You can come up to twice a week.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Beacon Hill",
+   "address": "2524 16th Ave S, Seattle, WA 98144",
+   "lat": 47.580777,
+   "lng": -122.312019,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Up to twice a week, no more than once a day."
+   },
+   "elig": {
+    "age": "Wednesdays are for ages 55+ or people with disabilities or mobility needs. Thursday and Friday are open to all ages.",
+    "income": "",
+    "residency": "",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      3
+     ],
+     "open": "14:00",
+     "close": "15:00",
+     "note": "Seniors 55+ and people with disabilities/mobility challenges only"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "12:00"
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "14:30",
+     "close": "16:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "10:00",
+     "close": "12:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "14:30",
+     "close": "16:00"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 957-4634",
+    "url": "https://www.elcentrodelaraza.org/el-centro-food-bank/"
+   },
+   "src": [
+    [
+     "El Centro de la Raza – home",
+     "https://www.elcentrodelaraza.org/"
+    ],
+    [
+     "El Centro de la Raza – Food Bank",
+     "https://www.elcentrodelaraza.org/el-centro-food-bank/"
+    ],
+    [
+     "El Centro de la Raza – Food & Health",
+     "https://www.elcentrodelaraza.org/get-help/food-health/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "The Food Bank page asks you to bring a valid picture ID, which is recorded as id_required=true. The page doesn't say what happens if you don't have one. It lists a Seattle and a Federal Way address without saying which runs the food bank; the services page puts the food bank at the Frances Martinez Community Service Center, and the Seattle building (2524 16th Ave S) is assumed. Check in at the south entrance of the historic building. The Senior Hub also serves daily congregate meals for seniors, but no times or eligibility were listed, so they aren't included. Aggregator sites show different hours."
+  },
+  {
+   "id": "food-0012",
+   "name": "Providence Regina House Food Pantry",
+   "org": "Providence Regina House",
+   "summary": "South Park food pantry for people living in a few south-end ZIP codes. Emergency food, clothing and referrals are available during the week, and there's a monthly Baby Cupboard day.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "South Park",
+   "address": "8201 10th Ave S, Suite 6, Seattle, WA 98108",
+   "lat": 47.529735,
+   "lng": -122.320269,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "Serves people living in ZIP codes 98108, 98148, 98168 and 98188.",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      4
+     ],
+     "open": "12:30",
+     "close": "14:00",
+     "note": "Food pantry at the South Park Neighborhood Center"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "09:00",
+     "close": "12:00",
+     "note": "Food pantry"
+    }
+   ],
+   "contact": {
+    "phone": "206-763-9204",
+    "url": "https://www.providence.org/locations/wa/regina-house"
+   },
+   "src": [
+    [
+     "Providence Regina House",
+     "https://www.providence.org/locations/wa/regina-house"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "The page says the Thursday pantry is at the 'South Park Neighborhood Center' but doesn't give its address separately. The listed address is Regina House's own. The office is open Tue–Sat 7am–3pm. Baby Cupboard is the first Saturday of each month. Three of the four service ZIPs (98148, 98168, 98188) are outside Seattle, but the pantry itself is in Seattle. Nothing is said about ID or religious participation. It's run by Providence, a Catholic health system, so religious is set to 'unknown'."
+  },
+  {
+   "id": "food-0013",
+   "name": "Community Lunch on Capitol Hill",
+   "org": "Community Lunch on Capitol Hill",
+   "summary": "Free weekday breakfast and hot lunch on Broadway, open to all, and no sign-in needed. Meals are served at All Pilgrims Christian Church.",
+   "subcats": [
+    "hot-meal"
+   ],
+   "hood": "Capitol Hill",
+   "address": "509 10th Ave E, Seattle, WA 98102",
+   "lat": 47.623266,
+   "lng": -122.319991,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free. No sign-in required."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "09:30",
+     "close": "10:30",
+     "note": "Coffee & breakfast"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "11:30",
+     "close": "13:00",
+     "note": "Lunch"
+    }
+   ],
+   "contact": {
+    "phone": "206-972-2524",
+    "url": "https://www.communitylunch.org/"
+   },
+   "src": [
+    [
+     "Community Lunch on Capitol Hill – home",
+     "https://www.communitylunch.org/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "The page says no sign-in is ever required, so id_required is false. Meals are at a church (corner of Broadway and E Republican), but the page doesn't say anything about religious participation, so religious is 'unknown'. Only this one site is listed."
+  },
+  {
+   "id": "food-0014",
+   "name": "The Food Bank @ St. Mary's",
+   "org": "The Food Bank @ St. Mary's",
+   "summary": "Walk-in pantry for adults offering food and personal care items three mornings a week. Bring a photo ID and your own bags.",
+   "subcats": [
+    "food-bank"
+   ],
+   "hood": "Central District",
+   "address": "611 20th Ave S, Seattle, WA 98144",
+   "lat": 47.597347,
+   "lng": -122.306449,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free. Whole turkeys are given out Nov 16, 18 and 20, 2026; arrive at 9am."
+   },
+   "elig": {
+    "age": "18+",
+    "income": "",
+    "residency": "",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      3,
+      5
+     ],
+     "open": "10:00",
+     "close": "13:00",
+     "note": "Walk-in pantry"
+    }
+   ],
+   "contact": {
+    "phone": "206-338-7215",
+    "url": "https://www.thefbsm.org/"
+   },
+   "src": [
+    [
+     "The Food Bank @ St. Mary's – home",
+     "https://www.thefbsm.org/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Hours can change for holidays or weather; the site points to its social media for updates. A photo ID is required. Aggregator sites say service is limited to Seattle residents, but the official page doesn't mention residency, so that field is blank. It's connected to a parish name, but nothing is said about religious participation. The ZIP is from aggregator listings; the official page only gave '611 20th Ave S, Seattle, WA'. The address sits between the International District and the Central District."
+  },
+  {
+   "id": "food-0015",
+   "name": "SODO Community Market",
+   "org": "Northwest Harvest",
+   "summary": "Large grocery-style food market run by Northwest Harvest, open to everyone. No ID, proof of income or residency needed.",
+   "subcats": [
+    "food-bank",
+    "produce"
+   ],
+   "hood": "SODO",
+   "address": "1915 4th Ave S, Seattle, WA 98134",
+   "lat": 47.586015,
+   "lng": -122.329149,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free."
+   },
+   "elig": {
+    "age": "",
+    "income": "No proof of income required.",
+    "residency": "No residency information required.",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "13:30",
+     "close": "19:30"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "08:00",
+     "close": "14:00"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "08:00",
+     "close": "14:00"
+    }
+   ],
+   "contact": {
+    "phone": "800-722-6924",
+    "url": "https://www.northwestharvest.org/our-work/community-programs/sodo-community-market/"
+   },
+   "src": [
+    [
+     "Northwest Harvest – SODO Community Market",
+     "https://www.northwestharvest.org/our-work/community-programs/sodo-community-market/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Closed Tuesdays and Thursdays, and the page says hours may change. The phone number is Northwest Harvest's general assistance line, not the market's direct number. The page didn't give a ZIP; 98134 is assumed for 4th Ave S near Holgate, so please check it. SODO isn't on the target neighborhood list but is inside city limits. This replaced the old Cherry Street Food Bank, which closed in 2019."
+  },
+  {
+   "id": "food-0016",
+   "name": "Seattle Community Fridge – North Beacon Hill",
+   "org": "Seattle Community Fridge",
+   "summary": "Volunteer-run outdoor fridge and pantry, open around the clock. Take what you need, leaving some for others. Restocking usually happens Tuesdays, Thursdays and Saturdays, but food isn't guaranteed.",
+   "subcats": [
+    "community-fridge"
+   ],
+   "hood": "Beacon Hill",
+   "address": "1307 13th Ave S, Seattle, WA 98144",
+   "lat": 47.591439,
+   "lng": -122.316075,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free. No limit, but they ask you to leave some for others."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "00:00",
+     "close": "23:59",
+     "note": "Open 24/7"
+    }
+   ],
+   "contact": {
+    "phone": "",
+    "url": "https://www.seattlecommunityfridge.org/locations"
+   },
+   "src": [
+    [
+     "Seattle Community Fridge – Locations",
+     "https://www.seattlecommunityfridge.org/locations"
+    ],
+    [
+     "Seattle Community Fridge – Get Food",
+     "https://www.seattlecommunityfridge.org/getfood"
+    ],
+    [
+     "Seattle Community Fridge – FAQ",
+     "https://www.seattlecommunityfridge.org/faq"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "This is a mutual aid group with no phone listed; the email is seattlecommunityfridge@gmail.com. Menstrual products are always kept in stock. You can request items by leaving a note on the whiteboard inside the pantry. The detailed per-site pages ('View' links) couldn't be fetched. The Locations page also lists Woodland Park Presbyterian and St Joseph Parish without addresses."
+  },
+  {
+   "id": "food-0017",
+   "name": "Seattle Community Fridge – Capitol Hill",
+   "org": "Seattle Community Fridge",
+   "summary": "Volunteer-run outdoor fridge and pantry, open around the clock. Take what you need, leaving some for others. Restocking usually happens Tuesdays, Thursdays and Saturdays, but food isn't guaranteed.",
+   "subcats": [
+    "community-fridge"
+   ],
+   "hood": "Capitol Hill",
+   "address": "745 19th Ave E, Seattle, WA 98112",
+   "lat": 47.625624,
+   "lng": -122.307401,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free. No limit, but they ask you to leave some for others."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "00:00",
+     "close": "23:59",
+     "note": "Open 24/7"
+    }
+   ],
+   "contact": {
+    "phone": "",
+    "url": "https://www.seattlecommunityfridge.org/locations"
+   },
+   "src": [
+    [
+     "Seattle Community Fridge – Locations",
+     "https://www.seattlecommunityfridge.org/locations"
+    ],
+    [
+     "Seattle Community Fridge – Get Food",
+     "https://www.seattlecommunityfridge.org/getfood"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Same notes as the North Beacon Hill fridge. The Locations page also lists a 'St Joseph Parish' entry without an address; it may be the host for this fridge, but that isn't confirmed. Other fridges in Seattle: Phinney Ridge (225 N 70th St) and Estelita's Library in the Central District (241 Martin Luther King Jr Way S). They were left out to avoid overlapping listings but are available if more are wanted."
+  },
+  {
+   "id": "food-0018",
+   "name": "Phinney Hot Meal Program",
+   "org": "Phinney Neighborhood Association",
+   "summary": "Free community dinners on Monday and Tuesday and a Wednesday lunch, served at St. John United Lutheran Church. Bus route 5 stops nearby.",
+   "subcats": [
+    "hot-meal"
+   ],
+   "hood": "Phinney Ridge / Greenwood",
+   "address": "5515 Phinney Ave N, Seattle, WA 98103",
+   "lat": 47.668651,
+   "lng": -122.354495,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Free."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "16:00",
+     "close": "18:00",
+     "note": "Dinner"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "16:00",
+     "close": "18:00",
+     "note": "Dinner"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "11:00",
+     "close": "13:00",
+     "note": "Lunch"
+    }
+   ],
+   "contact": {
+    "phone": "(206) 783-2244",
+    "url": "https://www.phinneycenter.org/hotmeal/"
+   },
+   "src": [
+    [
+     "Phinney Center – Hot Meal Program",
+     "https://www.phinneycenter.org/hotmeal/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "No eligibility rules are stated; the meals are described as free community meals. The phone is the Phinney Neighborhood Association's general line. The program is run by a secular neighborhood group at a church, and the page doesn't mention religious participation, so religious is 'unknown'. Some other content on the page, such as dental clinic dates, is from 2024, but nothing suggests the meal program has been suspended."
+  }
+ ]
+}

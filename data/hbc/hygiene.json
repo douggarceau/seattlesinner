@@ -1,0 +1,671 @@
+{
+ "asof": "2026-11-13T12:00:00-08:00",
+ "items": [
+  {
+   "id": "hyg-0001",
+   "name": "Urban Rest Stop – Downtown",
+   "org": "Low Income Housing Institute (LIHI)",
+   "summary": "A free hygiene center where people without housing can use restrooms, take a shower and do a load of laundry, with soap and basic toiletries supplied. You sign up for a shower in person on the same day. Laundry can be booked by phone or in person.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "restroom"
+   ],
+   "hood": "Downtown / Denny Triangle",
+   "address": "1924 9th Ave, Seattle, WA 98101",
+   "lat": 47.615866,
+   "lng": -122.334733,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "LIHI: all services are provided at no cost."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "06:30",
+     "close": "16:00",
+     "note": "Per LIHI locations page: showers and laundry 6:30am–2:30pm, restrooms close 3:30pm. Shower sign-up is same-day and in person only. The site's own page shows an undated 'until further notice' schedule instead: Mon–Fri 7:30–4:30, closed 12–1."
+    }
+   ],
+   "contact": {
+    "phone": "206-332-0110",
+    "url": "https://urbanreststop.org/about/information/downtown"
+   },
+   "src": [
+    [
+     "Urban Rest Stops – LIHI",
+     "https://www.lihihousing.org/urbanreststops"
+    ],
+    [
+     "Downtown Urban Rest Stop",
+     "https://urbanreststop.org/about/information/downtown"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "The address disagrees between sources: LIHI's page gives 1925 9th Ave and urbanreststop.org gives 1924 Ninth Avenue (98101). I used 1924. The hours also disagree three ways. LIHI's page says Mon–Fri 6:30am–4pm with no weekends. urbanreststop.org shows an undated 'UNTIL FURTHER NOTICE' notice: Mon–Fri 7:30–4:30, closed 12–1, laundry 7:30–10:30 and 1–1:45, showers 7:30–10:30 and 1–2. Below that notice it still lists an older regular schedule that includes weekends. I recorded LIHI's hours; call to confirm. Rules from LIHI: one laundry load every other day and one shower per day. No laundry pods, shoes, comforters or large sleeping bags. Coveralls are provided while your clothes wash. Eligibility is described only as for unsheltered individuals and families, and ID is not mentioned. Accessibility is not stated."
+  },
+  {
+   "id": "hyg-0002",
+   "name": "Urban Rest Stop – Ballard",
+   "org": "Low Income Housing Institute (LIHI)",
+   "summary": "A free neighborhood hygiene center in Ballard offering restrooms, showers and self-service laundry. Shower and laundry slots are same-day only, and showers are booked in person.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "restroom"
+   ],
+   "hood": "Ballard",
+   "address": "2014B NW 57th St, Seattle, WA 98107",
+   "lat": 47.670235,
+   "lng": -122.382384,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "LIHI: all services are provided at no cost."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "06:30",
+     "close": "10:00",
+     "note": "Showers 6:30–9am. Laundry runs 6:30am–12pm, with the last appointment at 12pm."
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "11:30",
+     "close": "13:30",
+     "note": "Closed 10–11:30am. Showers 11:30am–12:30pm, with no shower sign-ups after 12:30. Restrooms close at 1:30pm."
+    }
+   ],
+   "contact": {
+    "phone": "206-258-3626",
+    "url": "https://urbanreststop.org/about/information/ballard/"
+   },
+   "src": [
+    [
+     "Urban Rest Stops – LIHI",
+     "https://www.lihihousing.org/urbanreststops"
+    ],
+    [
+     "Ballard Urban Rest Stop",
+     "https://urbanreststop.org/about/information/ballard/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "The entrance is behind the gray gate to the left of the Cheryl Chow Court entrance. Laundry can be booked by phone or in person; showers are booked in person only, and all bookings are same-day. No weekend hours are listed. The ZIP (98107) does not appear on the pages I fetched; I added it from the street address, so verify it. Eligibility, ID and accessibility are not stated."
+  },
+  {
+   "id": "hyg-0003",
+   "name": "Compass Hygiene Center",
+   "org": "Compass Housing Alliance",
+   "summary": "A drop-in basement hygiene center in the Compass Center building for people experiencing homelessness. You can use the restroom, take a hot shower and wash a load of laundry there.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "restroom"
+   ],
+   "hood": "Pioneer Square",
+   "address": "210 Alaskan Way S (basement level), Seattle, WA 98104",
+   "lat": 47.600757,
+   "lng": -122.335868,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated on the official pages; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "08:30",
+     "close": "16:00",
+     "note": "Hours conflict: the hygiene-center page says 7am–4pm. Closed holidays."
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "08:00",
+     "close": "12:00",
+     "note": "Closed holidays."
+    }
+   ],
+   "contact": {
+    "phone": "206-474-1680",
+    "url": "https://www.compasshousingalliance.org/emergency-programs/hygiene-center/"
+   },
+   "src": [
+    [
+     "Get Help – Compass Housing Alliance",
+     "https://www.compasshousingalliance.org/get-help/"
+    ],
+    [
+     "Compass Multi-Service Center",
+     "https://www.compasshousingalliance.org/cmsc/"
+    ],
+    [
+     "Hygiene Center – Compass Housing Alliance",
+     "https://www.compasshousingalliance.org/emergency-programs/hygiene-center/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Compass's own pages disagree on the weekday opening time. The Get Help and CMSC pages say 8:30am–4pm; the Hygiene Center page says 7am–4pm. All three agree on Saturday 8am–12pm. I used 8:30. The building is at the corner of S Washington St and Alaskan Way (look for the orange archway); the mail address is 77 S Washington St. Cost, laundry limits and accessibility are not stated on official pages; directories mention limits, but those were not used. The page states 'Drop-in basis during regular business hours.'"
+  },
+  {
+   "id": "hyg-0004",
+   "name": "Elizabeth Gregory Home Day Shelter",
+   "org": "Elizabeth Gregory Home",
+   "summary": "A women's day center where women can use accessible showers, restrooms and laundry, and pick up personal care items and emergency clothing. It is daytime only, with no overnight beds.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "restroom",
+    "day-center",
+    "hygiene-kits"
+   ],
+   "hood": "University District",
+   "address": "1604 NE 50th St, Seattle, WA 98105",
+   "lat": 47.664939,
+   "lng": -122.310678,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not mentioned on the page; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "09:00",
+     "close": "16:30",
+     "note": "Closed Saturday."
+    }
+   ],
+   "contact": {
+    "phone": "206-729-0262",
+    "url": "https://eghseattle.org/programs/"
+   },
+   "src": [
+    [
+     "Programs – Elizabeth Gregory Home",
+     "https://eghseattle.org/programs/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Women only. The official page names no minimum age; directories say 18+, but that was not used. The page mentions 'accessible showers'. It does not say whether shower or laundry appointments are needed. A brochure mentions an early close on the first Tuesday of the month, but that is not on the official page."
+  },
+  {
+   "id": "hyg-0005",
+   "name": "Dave's Day Center (Hygiene Center)",
+   "org": "Immanuel Community Services",
+   "summary": "A weekday hygiene day center for adults experiencing homelessness. Guests can shower, wash clothes and get toiletries, and staff help with applications and shelter referrals.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "day-center",
+    "hygiene-kits"
+   ],
+   "hood": "South Lake Union",
+   "address": "1215 Thomas St, Seattle, WA 98109",
+   "lat": 47.620755,
+   "lng": -122.3327,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "adults",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "14:00"
+    }
+   ],
+   "contact": {
+    "phone": "206-622-1930",
+    "url": "https://www.icsseattle.org/our-programs/daves-day-center/"
+   },
+   "src": [
+    [
+     "Immanuel Community Services",
+     "https://www.icsseattle.org/"
+    ],
+    [
+     "Dave's Day Center at ICS",
+     "https://www.icsseattle.org/our-programs/daves-day-center/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "The page says the center serves 'adults experiencing homelessness' and welcomes anyone who walks in. Toiletries include razors, shampoo, deodorant, toothbrushes and soap. Lunch is provided by meal partners. Guests sign in at the front desk. Immanuel Community Services is affiliated with a church, but the pages do not mention any religious participation, so it is recorded as unknown. Restroom access is not explicitly listed on the program page. Accessibility is not stated."
+  },
+  {
+   "id": "hyg-0006",
+   "name": "Free Showers – Delridge Community Center",
+   "org": "Seattle Parks and Recreation",
+   "summary": "The City runs free drop-in showers at this West Seattle community center for anyone in need, including Seattle Public Schools students. Showers are closed on the first Friday of each month for deep cleaning.",
+   "subcats": [
+    "shower",
+    "restroom"
+   ],
+   "hood": "Delridge (West Seattle)",
+   "address": "4501 Delridge Way SW, Seattle, WA 98106",
+   "lat": 47.563286,
+   "lng": -122.363438,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": ""
+   },
+   "elig": {
+    "age": "all ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "10:00",
+     "close": "15:45",
+     "note": "Last shower 3:45pm (Parkways lists 10am–4pm). Closed the first Friday of each month; listed 2026 closure: Dec. 11."
+    }
+   ],
+   "contact": {
+    "phone": "206-684-7423",
+    "url": "https://www.seattle.gov/parks/community-centers/delridge-community-center"
+   },
+   "src": [
+    [
+     "Delridge Community Center – Parks",
+     "https://www.seattle.gov/parks/community-centers/delridge-community-center"
+    ],
+    [
+     "Seattle Parks and Recreation's free shower program – Parkways",
+     "https://parkways.seattle.gov/2020/03/16/seattle-parks-and-recreations-free-shower-program-operating-on-modified-schedule-at-5-community-centers/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "The Parkways post (updated Jan 2, 2026) lists Delridge as one of the five program sites and asks people to call to verify hours. The Delridge page itself shows drop-in showers Mon–Fri 10am–3:45pm. Note that Dec. 11, 2026 is a Friday but not the first Friday of the month, so the closure-date list and the 'first Friday' rule conflict. Rules on towels and time limits are not stated. Religious is set to 'none' because this is a city program."
+  },
+  {
+   "id": "hyg-0007",
+   "name": "Free Showers – Meadowbrook Community Center",
+   "org": "Seattle Parks and Recreation",
+   "summary": "The City offers free weekday showers at this northeast Seattle community center for students and residents in need.",
+   "subcats": [
+    "shower",
+    "restroom"
+   ],
+   "hood": "Meadowbrook",
+   "address": "10517 35th Ave NE, Seattle, WA 98125",
+   "lat": 47.705028,
+   "lng": -122.290954,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": ""
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "10:30",
+     "close": "16:30",
+     "note": "Call to verify."
+    }
+   ],
+   "contact": {
+    "phone": "206-684-7522",
+    "url": "https://www.seattle.gov/parks/community-centers/meadowbrook-community-center"
+   },
+   "src": [
+    [
+     "Meadowbrook Community Center – Parks",
+     "https://www.seattle.gov/parks/community-centers/meadowbrook-community-center"
+    ],
+    [
+     "Seattle Parks and Recreation's free shower program – Parkways",
+     "https://parkways.seattle.gov/2020/03/16/seattle-parks-and-recreations-free-shower-program-operating-on-modified-schedule-at-5-community-centers/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "The center page and the Parkways post agree on Mon–Fri 10:30am–4:30pm. No rules (towels, time limits) are stated. Restroom access is implied by the page's 'shower and restroom facilities' wording."
+  },
+  {
+   "id": "hyg-0008",
+   "name": "Free Showers – Green Lake Community Center",
+   "org": "Seattle Parks and Recreation",
+   "summary": "The City offers free showers twice a week at the Green Lake community center for students and residents in need.",
+   "subcats": [
+    "shower"
+   ],
+   "hood": "Green Lake",
+   "address": "7201 East Green Lake Dr N, Seattle, WA 98115",
+   "lat": 47.681137,
+   "lng": -122.326798,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": ""
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      2,
+      4
+     ],
+     "open": "10:00",
+     "close": "13:00",
+     "note": "Last shower 12:30pm. These are Fall 2026 hours, which began Sept 8."
+    }
+   ],
+   "contact": {
+    "phone": "206-684-0780",
+    "url": "https://www.seattle.gov/parks/community-centers/green-lake-community-center"
+   },
+   "src": [
+    [
+     "Green Lake Community Center – Parks",
+     "https://www.seattle.gov/parks/community-centers/green-lake-community-center"
+    ],
+    [
+     "Seattle Parks and Recreation's free shower program – Parkways",
+     "https://parkways.seattle.gov/2020/03/16/seattle-parks-and-recreations-free-shower-program-operating-on-modified-schedule-at-5-community-centers/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Hours are seasonal (Fall 2026), so recheck when the winter schedule starts. Towels and time limits are not stated."
+  },
+  {
+   "id": "hyg-0009",
+   "name": "University District Youth Center",
+   "org": "YouthCare",
+   "summary": "A drop-in center for young people ages 12–24 where they can shower, do laundry and get clothing during weekday hours.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "day-center",
+    "clothing"
+   ],
+   "hood": "University District",
+   "address": "4516 15th Ave NE, Seattle, WA 98105",
+   "lat": 47.661549,
+   "lng": -122.311908,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "12-24",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "16:00"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "08:00",
+     "close": "13:00"
+    }
+   ],
+   "contact": {
+    "phone": "206-639-3410",
+    "url": "https://youthcare.org/get-help/"
+   },
+   "src": [
+    [
+     "Get Help – YouthCare",
+     "https://youthcare.org/get-help/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Youth only (ages 12–24). The same YouthCare page also lists the Orion Center drop-in (1828 Yale Ave, 98101). I left Orion out because its hours read 'Monday-Fri 3:00pm-6:00pm' plus 'Monday - Sunday 10am-6pm until the end of March', and it is unclear which schedule applies in November 2026. Accessibility is not stated."
+  },
+  {
+   "id": "hyg-0010",
+   "name": "Chief Seattle Club Day Center",
+   "org": "Chief Seattle Club",
+   "summary": "A day center for urban Native people experiencing homelessness, offering showers, laundry and personal hygiene services to its members. Membership goes through the front desk and a case manager.",
+   "subcats": [
+    "shower",
+    "laundry",
+    "day-center"
+   ],
+   "hood": "Pioneer Square",
+   "address": "410 2nd Ave Extension S, Seattle, WA 98104",
+   "lat": 47.601521,
+   "lng": -122.331706,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "07:00",
+     "close": "14:00",
+     "note": "Front desk hours, listed as '7AM - 2PM Daily'. Showers 7am–1pm. Laundry 7–11am, pickup at 1pm."
+    }
+   ],
+   "contact": {
+    "phone": "206-715-7536",
+    "url": "https://chiefseattleclub.org/serving-you"
+   },
+   "src": [
+    [
+     "Serving You – Chief Seattle Club",
+     "https://chiefseattleclub.org/serving-you"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Services are for members. The page defines members as individuals struggling with homelessness who identify with the Club's mission of serving urban Native people, and membership requires case manager approval. It does not say whether Native or Indigenous identity is strictly required. I did not set referral=true, but the membership step may function like an intake. The page does not say whether the 'daily' hours include weekends for showers. No age limit is stated."
+  }
+ ]
+}

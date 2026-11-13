@@ -1,0 +1,1214 @@
+{
+ "asof": "2026-11-13T12:00:00-08:00",
+ "items": [
+  {
+   "id": "hlth-0001",
+   "name": "988 Suicide & Crisis Lifeline",
+   "org": "988 Suicide & Crisis Lifeline",
+   "summary": "Call or text 988, or chat online, any time to reach a trained crisis counselor if you are struggling or worried about someone else. Confidential and open to anyone.",
+   "subcats": [
+    "crisis-line",
+    "mental-health"
+   ],
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Provider says conversations are free and confidential."
+   },
+   "elig": {
+    "age": "All ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "00:00",
+     "close": "24:00",
+     "note": "24/7"
+    }
+   ],
+   "contact": {
+    "phone": "988",
+    "url": "https://988lifeline.org/"
+   },
+   "src": [
+    [
+     "988 Suicide & Crisis Lifeline",
+     "https://988lifeline.org/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Call/text 988 or chat at chat.988lifeline.org; Spanish text/chat available; dedicated options for Deaf/hard-of-hearing callers and LGBTQ+ youth (press 3)."
+  },
+  {
+   "id": "hlth-0002",
+   "name": "Crisis Connections 24-Hour Crisis Line",
+   "org": "Crisis Connections",
+   "summary": "Round-the-clock phone line for anyone whose safety is at risk from a mental health or substance use crisis; staff assess the situation, connect callers to care and in some cases can send a crisis team out.",
+   "subcats": [
+    "crisis-line",
+    "mental-health"
+   ],
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Provider says all calls are completely free."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "00:00",
+     "close": "24:00",
+     "note": "24/7"
+    }
+   ],
+   "contact": {
+    "phone": "866-427-4747",
+    "url": "https://www.crisisconnections.org/24-hour-crisis-line/"
+   },
+   "src": [
+    [
+     "24-Hour Crisis Line - Crisis Connections",
+     "https://www.crisisconnections.org/24-hour-crisis-line/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Page lists 866-427-4747 and also directs people to call 988. Says 24/7 help; interpretation in many languages."
+  },
+  {
+   "id": "hlth-0003",
+   "name": "Washington 211 (King County)",
+   "org": "Crisis Connections",
+   "summary": "Dial 211 to get matched with local help for food, shelter, bills, transportation and physical or mental health care. Live specialists on weekdays; the online database and automated texting work around the clock.",
+   "subcats": [
+    "mental-health"
+   ],
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": "Provider says the service is free to use."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "09:00",
+     "close": "17:00",
+     "note": "Live calls, chat and email; closed holidays. Online database and automated text (WAOD to 898211) 24/7."
+    }
+   ],
+   "contact": {
+    "phone": "211",
+    "url": "https://www.crisisconnections.org/king-county-2-1-1/"
+   },
+   "src": [
+    [
+     "King County 211 - Crisis Connections",
+     "https://www.crisisconnections.org/king-county-2-1-1/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Page describes statewide WA 211 run by Crisis Connections. Also 877-211-9274 for rent/utility/legal referrals; text ZIP to 898211 during live hours. Interpreters in 155+ languages. Subcat is a best fit; 211 is a referral line, not a crisis line."
+  },
+  {
+   "id": "hlth-0004",
+   "name": "Washington Recovery Help Line",
+   "org": "Crisis Connections",
+   "summary": "24-hour phone line for help with drug or alcohol use: crisis support, treatment and recovery info, medication for opioid use disorder, and support for family members.",
+   "subcats": [
+    "crisis-line",
+    "harm-reduction"
+   ],
+   "hood": "Citywide",
+   "address": "",
+   "lat": null,
+   "lng": null,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Official page does not state whether the line is free."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "00:00",
+     "close": "24:00",
+     "note": "24/7 calls; texting 9am-9pm"
+    }
+   ],
+   "contact": {
+    "phone": "866-789-1511",
+    "url": "https://crisisconnections.org/programs/recovery-help-line"
+   },
+   "src": [
+    [
+     "Recovery Help Line - Crisis Connections",
+     "https://crisisconnections.org/programs/recovery-help-line"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "warecoveryhelpline.org redirects to the Crisis Connections program page. Cost not stated, so not labeled free. Statewide line (serves Seattle)."
+  },
+  {
+   "id": "hlth-0005",
+   "name": "Downtown Public Health Center",
+   "org": "Public Health – Seattle & King County",
+   "summary": "County-run clinic in Belltown offering adult and children's primary care, a dental clinic for homeless teens and adults, an on-site pharmacy, a low-barrier buprenorphine clinic, WIC and help getting a reduced-fare ORCA LIFT card.",
+   "subcats": [
+    "primary-care",
+    "dental",
+    "pharmacy",
+    "vaccines-testing",
+    "harm-reduction"
+   ],
+   "hood": "Belltown",
+   "address": "2124 4th Ave, Seattle, WA 98121",
+   "lat": 47.61408,
+   "lng": -122.34163,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "The center's page does not list fees. King County's Healthcare for the Homeless primary-care page says Public Health Centers turn no one away for inability to pay and services are free or low cost. No fee schedule found."
+   },
+   "elig": {
+    "age": "All ages (dental: homeless teens and adults 13+; buprenorphine: adults)",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "General hours; COVID-19 vaccines 8:30am-3pm; WIC Tuesdays by appointment"
+    }
+   ],
+   "contact": {
+    "phone": "206-477-8300",
+    "url": "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/public-health-centers/downtown-seattle"
+   },
+   "src": [
+    [
+     "Downtown Seattle Public Health Center - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/public-health-centers/downtown-seattle"
+    ],
+    [
+     "Primary care clinics in King County - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/health-services-for-the-homeless/healthcare-for-the-homeless/services/primary-care"
+    ],
+    [
+     "Public Health Centers - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/public-health-centers"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Phones: front desk/dental 206-477-8300, family health 206-477-8222, pharmacy 206-477-8250, bupe clinic 206-477-1939. Public Health Centers index says services are temporarily by appointment only; bupe clinic takes walk-ins for established patients. Pharmacy hours not listed. Cost type left unknown because no sliding scale or fee is stated on the center page. Needle exchange at same address listed separately."
+  },
+  {
+   "id": "hlth-0006",
+   "name": "Downtown Needle Exchange (Robert Clewis Center)",
+   "org": "Public Health – Seattle & King County",
+   "summary": "Syringe services program at the Downtown Public Health Center offering sterile syringes and injection supplies, testing for HIV, hepatitis and TB, and referrals to treatment and health care.",
+   "subcats": [
+    "harm-reduction",
+    "vaccines-testing"
+   ],
+   "hood": "Belltown",
+   "address": "2124 4th Ave, Seattle, WA 98121",
+   "lat": 47.61408,
+   "lng": -122.34163,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "County pages do not say whether participants pay; program is funded by state, county and city disease-prevention funds."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      3,
+      4,
+      5
+     ],
+     "open": "09:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "13:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "14:00",
+     "close": "17:00"
+    }
+   ],
+   "contact": {
+    "phone": "206-263-2000",
+    "url": "https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/hiv-sti-hcv/needle-exchange/schedule"
+   },
+   "src": [
+    [
+     "Needle exchange schedule - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/hiv-sti-hcv/needle-exchange/schedule"
+    ],
+    [
+     "Needle exchange - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/hiv-sti-hcv/needle-exchange"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Phone is the HIV/STI/HCV program general line, not site-specific. Naloxone not explicitly listed. ID/anonymity not stated. Cost not stated, so not labeled free."
+  },
+  {
+   "id": "hlth-0007",
+   "name": "Public Health Sexual Health Clinic at Harborview",
+   "org": "Public Health – Seattle & King County",
+   "summary": "Walk-in and appointment clinic for HIV and STI testing and treatment, PrEP, hepatitis C treatment, birth control and pregnancy testing, plus walk-in hepatitis A/B, HPV and mpox vaccines.",
+   "subcats": [
+    "vaccines-testing"
+   ],
+   "hood": "First Hill",
+   "address": "908 Jefferson St, 11th Floor, Seattle, WA 98104",
+   "lat": 47.604951,
+   "lng": -122.323993,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Official page does not list fees or insurance. PrEP is no cost for King County residents."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      3,
+      4,
+      5
+     ],
+     "open": "07:30",
+     "close": "18:00",
+     "note": "Walk-ins arrive by 4pm; vaccine walk-ins 8am-3pm"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "09:30",
+     "close": "18:00",
+     "note": "Walk-ins arrive by 4pm; vaccine walk-ins 9:30am-3pm"
+    }
+   ],
+   "contact": {
+    "phone": "206-744-3590",
+    "url": "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/public-health-centers/sexual-health-clinic"
+   },
+   "src": [
+    [
+     "Public Health Sexual Health Clinic at Harborview Medical Center - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/health-centers-programs-services/public-health-centers/sexual-health-clinic"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Clinic is short-staffed and recommends booking ahead; walk-ins may wait. People with no symptoms/exposure outside priority groups can test only once a year here. PrEP line 206-744-3954. Directory listings mention a sliding fee ($15 minimum) but that was not on the official page, so not used. Telehealth also offered."
+  },
+  {
+   "id": "hlth-0008",
+   "name": "Neighborcare Health at Ballard",
+   "org": "Neighborcare Health",
+   "summary": "Primary care clinic in Nyer Urness House for adults who are homeless, unstably housed or in supportive housing, with wound care, vaccines, lab tests, behavioral health, opioid use support and case management.",
+   "subcats": [
+    "primary-care",
+    "mental-health"
+   ],
+   "hood": "Ballard",
+   "address": "1753 NW 56th St, Suite 200, Seattle, WA 98107",
+   "lat": 47.669388,
+   "lng": -122.379506,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Neighborcare offers a sliding fee discount by household size and income, accepts Apple Health and Medicare, insurance not required; says no one is denied services due to inability to pay."
+   },
+   "elig": {
+    "age": "18+",
+    "income": "",
+    "residency": "Experiencing homelessness, lacking stable housing, or in permanent supportive housing",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "09:00",
+     "close": "16:00",
+     "note": "Closed 12-1pm for lunch; closed most federal holidays"
+    }
+   ],
+   "contact": {
+    "phone": "206-782-5939",
+    "url": "https://neighborcare.org/clinics/ballard/"
+   },
+   "src": [
+    [
+     "Ballard - Neighborcare Health",
+     "https://neighborcare.org/clinics/ballard/"
+    ],
+    [
+     "Medical & Dental Care - Neighborcare Health",
+     "https://neighborcare.org/services/homeless-medical-and-dental-care/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Welcoming new patients. Walk-ins not mentioned; booking by phone or in person. Mental health for current Neighborcare patients only."
+  },
+  {
+   "id": "hlth-0009",
+   "name": "Neighborcare Health at Pike Place Market",
+   "org": "Neighborcare Health",
+   "summary": "Adult primary care clinic in the Market with an on-site pharmacy, wound care, vaccines, STI/HIV care and opioid use support; you do not need to be homeless to use it.",
+   "subcats": [
+    "primary-care",
+    "pharmacy",
+    "mental-health"
+   ],
+   "hood": "Downtown",
+   "address": "1930 Post Alley, Seattle, WA 98101",
+   "lat": 47.610251,
+   "lng": -122.342111,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Sliding fee discount by household size and income; accepts Apple Health and Medicare; Neighborcare says no one is denied services due to inability to pay."
+   },
+   "elig": {
+    "age": "18+",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      4
+     ],
+     "open": "08:00",
+     "close": "17:00"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "Opens 9am on 1st and 3rd Wednesdays"
+    },
+    {
+     "dow": [
+      5
+     ],
+     "open": "08:00",
+     "close": "16:00"
+    }
+   ],
+   "contact": {
+    "phone": "206-728-4143",
+    "url": "https://neighborcare.org/clinics/pike-place-market/"
+   },
+   "src": [
+    [
+     "Pike Place Market - Neighborcare Health",
+     "https://neighborcare.org/clinics/pike-place-market/"
+    ],
+    [
+     "Medical & Dental Care - Neighborcare Health",
+     "https://neighborcare.org/services/homeless-medical-and-dental-care/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Pharmacy 206-548-3257 (Mon/Tue/Thu 8:30-5, Wed 9:30-5, Fri 8:30-4, closed 12:30-1) is for Neighborcare patients. Walk-ins not stated. Mental health for current patients only."
+  },
+  {
+   "id": "hlth-0010",
+   "name": "Neighborcare Youth Clinic at Pike Place Market",
+   "org": "Neighborcare Health",
+   "summary": "Weekly medical clinic for young people 12 to 26 who are homeless or lack a stable place to live, covering illness, injuries, reproductive health, STI/HIV care, PrEP, vaccines and case management.",
+   "subcats": [
+    "primary-care",
+    "vaccines-testing"
+   ],
+   "hood": "Downtown",
+   "address": "1930 Post Alley, Seattle, WA 98101",
+   "lat": 47.610251,
+   "lng": -122.342111,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Clinic page lists no fees; Neighborcare's homeless care page says a sliding fee discount is available, insurance not required, and no one is denied for inability to pay."
+   },
+   "elig": {
+    "age": "12-26",
+    "income": "",
+    "residency": "Experiencing homelessness, homeless in the last 12 months, or lacking a stable, safe place to live",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "13:00",
+     "note": "Thursdays only; closed most federal holidays"
+    }
+   ],
+   "contact": {
+    "phone": "206-633-7650",
+    "url": "https://neighborcare.org/clinics/youth-clinic-at-pike-place-market/"
+   },
+   "src": [
+    [
+     "Youth Clinic at Pike Place Market - Neighborcare Health",
+     "https://neighborcare.org/clinics/youth-clinic-at-pike-place-market/"
+    ],
+    [
+     "Medical & Dental Care - Neighborcare Health",
+     "https://neighborcare.org/services/homeless-medical-and-dental-care/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Walk-in policy not stated; page has appointment link. Other Neighborcare youth clinics (45th Street, New Horizons) exist but were not fetched individually."
+  },
+  {
+   "id": "hlth-0011",
+   "name": "Neighborcare Health at 45th Street (Dental & Medical)",
+   "org": "Neighborcare Health",
+   "summary": "Wallingford clinic with an early-opening dental clinic (cleanings, fillings, X-rays, emergency care) and primary care for all ages, plus a pharmacy and substance use support.",
+   "subcats": [
+    "dental",
+    "primary-care",
+    "pharmacy"
+   ],
+   "hood": "Wallingford",
+   "address": "1629 N 45th St, Seattle, WA 98103",
+   "lat": 47.661328,
+   "lng": -122.338278,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Sliding fee discount by household size and income. Neighborcare dental accepts Apple Health and most insurance; says no one is denied services due to inability to pay."
+   },
+   "elig": {
+    "age": "All ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "06:45",
+     "close": "17:30",
+     "note": "Dental; closed 8-9am on 1st and 3rd Wednesdays"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "17:30",
+     "note": "Medical; opens 9am on 1st and 3rd Wednesdays"
+    }
+   ],
+   "contact": {
+    "phone": "206-548-2964",
+    "url": "https://neighborcare.org/clinics/neighborcare-health-45th-street"
+   },
+   "src": [
+    [
+     "45th Street - Neighborcare Health",
+     "https://neighborcare.org/clinics/neighborcare-health-45th-street"
+    ],
+    [
+     "Dental - Neighborcare Health",
+     "https://neighborcare.org/services/dental/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Dental 206-548-2964 (also dental emergency line); medical 206-633-3350. Neighborcare dental services page says same-day and walk-in emergency dental appointments are available at all its dental clinics; the 45th St page itself doesn't mention walk-ins."
+  },
+  {
+   "id": "hlth-0012",
+   "name": "ICHS International District Medical & Dental Clinic",
+   "org": "International Community Health Services",
+   "summary": "Community health center offering medical, dental and eye care (exams and glasses prescriptions), an on-site pharmacy, behavioral health and opioid use treatment, with Saturday hours.",
+   "subcats": [
+    "primary-care",
+    "dental",
+    "vision",
+    "pharmacy"
+   ],
+   "hood": "Chinatown-International District",
+   "address": "720 8th Ave S, Seattle, WA 98104",
+   "lat": 47.596463,
+   "lng": -122.322373,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Sliding scale by family size and income; accepts most insurance including Medicare and Medicaid; says it will not turn away the uninsured. Uninsured eye exam/refraction flat rate $50-$130 by income and family size. Glasses/frames only on a limited basis for children on Apple Health; no contact lenses."
+   },
+   "elig": {
+    "age": "All ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "Medical"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "open": "08:00",
+     "close": "18:00",
+     "note": "Dental"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      4
+     ],
+     "open": "09:00",
+     "close": "17:00",
+     "note": "Eye care"
+    },
+    {
+     "dow": [
+      3
+     ],
+     "open": "09:00",
+     "close": "13:00",
+     "note": "Eye care"
+    },
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "Pharmacy"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "09:00",
+     "close": "17:00",
+     "note": "Pharmacy; closed 1-2pm"
+    }
+   ],
+   "contact": {
+    "phone": "206-788-3700",
+    "url": "https://www.ichs.com/locations/international-district-medical-and-dental-clinic"
+   },
+   "src": [
+    [
+     "International District Medical & Dental Clinic - ICHS",
+     "https://www.ichs.com/locations/international-district-medical-and-dental-clinic"
+    ],
+    [
+     "Eye Care - ICHS",
+     "https://www.ichs.com/services/eye-care"
+    ],
+    [
+     "Patient FAQ - ICHS",
+     "https://ichs.com/patient-faq"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Dental 206-788-3757; pharmacy 206-788-3770; main line also after hours. Eye exams by calling to schedule. Walk-in policy not stated."
+  },
+  {
+   "id": "hlth-0013",
+   "name": "Country Doctor Community Clinic",
+   "org": "Seattle Roots Community Health",
+   "summary": "Capitol Hill community clinic for all ages offering primary care, behavioral health, HIV care and PrEP, STI screening, substance use treatment and a pharmacy, with two late evenings a week; dental is next door.",
+   "subcats": [
+    "primary-care",
+    "mental-health",
+    "pharmacy",
+    "dental"
+   ],
+   "hood": "Capitol Hill",
+   "address": "500 19th Ave E, Seattle, WA 98112",
+   "lat": 47.623268,
+   "lng": -122.307221,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Accepts uninsured and Apple Health patients; care provided regardless of ability to pay. Seattle Roots' uninsured-patients page says uninsured patients are charged on a sliding scale by family size and income; free insurance-enrollment help available."
+   },
+   "elig": {
+    "age": "All ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "17:00"
+    },
+    {
+     "dow": [
+      2,
+      3
+     ],
+     "open": "08:00",
+     "close": "20:30"
+    }
+   ],
+   "contact": {
+    "phone": "206-299-1900",
+    "url": "https://seattleroots.org/clinic/country-doctor/"
+   },
+   "src": [
+    [
+     "Country Doctor Community Clinic - Seattle Roots",
+     "https://seattleroots.org/clinic/country-doctor/"
+    ],
+    [
+     "Uninsured Patients - Seattle Roots",
+     "https://seattleroots.org/?p=416"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "countrydoctor.org refused connection; clinic now operated by Seattle Roots Community Health. Dental Clinic at 510 19th Ave E, 206-299-1611 (hours not fetched). Pharmacy 206-299-1618. Walk-ins not stated."
+  },
+  {
+   "id": "hlth-0014",
+   "name": "Seattle Roots After Hours Clinic",
+   "org": "Seattle Roots Community Health",
+   "summary": "Evening and weekend walk-in clinic in the Central District for urgent but non-emergency problems like infections, flu, rashes, UTIs and STIs, sprains and cuts needing stitches.",
+   "subcats": [
+    "primary-care"
+   ],
+   "hood": "Central District",
+   "address": "2101 E Yesler Way, Seattle, WA 98122",
+   "lat": 47.601613,
+   "lng": -122.304961,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Most insurance and Apple Health accepted; uninsured pay a sliding fee by family size and income; serves people regardless of ability to pay, insurance or immigration status."
+   },
+   "elig": {
+    "age": "All ages",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "18:00",
+     "close": "21:00",
+     "note": "Walk-in; doors open 15 min early"
+    },
+    {
+     "dow": [
+      0,
+      6
+     ],
+     "open": "11:00",
+     "close": "17:00",
+     "note": "Walk-in"
+    }
+   ],
+   "contact": {
+    "phone": "206-709-7199",
+    "url": "https://seattleroots.org/clinic/after-hours-clinic/"
+   },
+   "src": [
+    [
+     "After Hours Clinic - Seattle Roots",
+     "https://seattleroots.org/clinic/after-hours-clinic/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "No appointment needed. Closed on listed holidays. Interpretation available."
+  },
+  {
+   "id": "hlth-0015",
+   "name": "Seattle Indian Health Board – International District Clinic",
+   "org": "Seattle Indian Health Board",
+   "summary": "Community health center rooted in Native traditions offering medical, dental, pharmacy, behavioral health, substance use treatment and HIV/STI testing, with a deep discount for low-income patients.",
+   "subcats": [
+    "primary-care",
+    "dental",
+    "pharmacy",
+    "mental-health"
+   ],
+   "hood": "Chinatown-International District",
+   "address": "611 12th Ave S, Seattle, WA 98144",
+   "lat": 47.597362,
+   "lng": -122.317315,
+   "in_city": true,
+   "cost": {
+    "type": "sliding",
+    "amount": null,
+    "notes": "Sliding fee discount for household income at or below 200% FPL: 100% discount at or below 100% FPL, then 75%/50%/25% tiers. Will not deny services for inability to pay. Uninsured asked to meet an enrollment specialist. Dental lab nominal fees not discounted."
+   },
+   "elig": {
+    "age": "",
+    "income": "Discount for income at or below 200% FPL",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      3,
+      4,
+      5
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "Medical and pharmacy"
+    },
+    {
+     "dow": [
+      2
+     ],
+     "open": "09:00",
+     "close": "17:00",
+     "note": "Medical and pharmacy"
+    },
+    {
+     "dow": [
+      6
+     ],
+     "open": "08:00",
+     "close": "17:00",
+     "note": "Pediatric medical/dental only, 1st and 3rd Saturdays"
+    }
+   ],
+   "contact": {
+    "phone": "206-324-9360",
+    "url": "https://www.sihb.org/patient-and-visitor-information/hours-and-locations/"
+   },
+   "src": [
+    [
+     "Sliding Fee Scale Discount - SIHB",
+     "https://www.sihb.org/sliding-fee-scale-discount/"
+    ],
+    [
+     "Hours & Locations - SIHB",
+     "https://www.sihb.org/patient-and-visitor-information/hours-and-locations/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Official pages don't state whether non-Native people can be patients (says 'all relatives' can receive care) - confirm. Dental hours appear same as medical but heading was garbled in extraction. Discount application accepts self-attestation of income. Walk-ins not mentioned; call to start. Hood: SIHB calls it International District clinic; address is near Little Saigon."
+  },
+  {
+   "id": "hlth-0016",
+   "name": "PHRA University District Exchange",
+   "org": "People's Harm Reduction Alliance",
+   "summary": "Peer-run syringe exchange offering sterile injection supplies, naloxone, fentanyl test strips, hep C testing, wound care supplies, Suboxone treatment, hygiene items and sometimes food and clothing.",
+   "subcats": [
+    "harm-reduction",
+    "vaccines-testing"
+   ],
+   "hood": "University District",
+   "address": "4548 Brooklyn Ave NE, Seattle, WA 98105",
+   "lat": 47.661745,
+   "lng": -122.31419,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Site page does not state whether services are free (PHRA's home page says naloxone ordering is free)."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      2,
+      4
+     ],
+     "open": "17:00",
+     "close": "19:00"
+    },
+    {
+     "dow": [
+      0,
+      5
+     ],
+     "open": "13:00",
+     "close": "17:00"
+    }
+   ],
+   "contact": {
+    "phone": "",
+    "url": "https://phra.org/university-district-exchange"
+   },
+   "src": [
+    [
+     "University District Exchange - PHRA",
+     "https://phra.org/university-district-exchange"
+    ],
+    [
+     "Needle exchange schedule - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/hiv-sti-hcv/needle-exchange/schedule"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "Located at Christ Episcopal Church; religious set to none as the program is secular. No phone listed (email info@phra.org). HIV testing by referral. ID requirement not stated. Hours match the King County schedule page."
+  },
+  {
+   "id": "hlth-0017",
+   "name": "Hepatitis Education Project (HEP) Drop-In",
+   "org": "Hepatitis Education Project",
+   "summary": "Nonprofit offering free hepatitis C screening, diagnosis and care coordination, plus harm reduction supplies, information and referrals on weekday afternoons.",
+   "subcats": [
+    "harm-reduction",
+    "vaccines-testing"
+   ],
+   "hood": "Central District",
+   "address": "1621 S Jackson St, Suite 201, Seattle, WA 98144",
+   "lat": 47.599171,
+   "lng": -122.310547,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Hep C screening, care coordination and diagnosis are free with no insurance required. Whether harm reduction supplies are free is not stated. Help available with insurance/payment for hep C treatment."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "none",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "open": "12:30",
+     "close": "17:30",
+     "note": "Harm reduction"
+    }
+   ],
+   "contact": {
+    "phone": "206-732-0311",
+    "url": "https://hep.org/"
+   },
+   "src": [
+    [
+     "Hepatitis Education Project",
+     "https://hep.org/"
+    ],
+    [
+     "Needle exchange schedule - King County",
+     "https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/hiv-sti-hcv/needle-exchange/schedule"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-27",
+   "expires": null,
+   "notes": "hepeducation.org redirects to hep.org. King County schedule labels area 'North Beacon Hill'; 16th & Jackson is generally considered Central District/Little Saigon. HIV testing not mentioned. 'free' applies to hep C screening only."
+  }
+ ]
+}

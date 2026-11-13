@@ -1,0 +1,11 @@
+{
+ "asof": "2026-11-13T08:00:00-08:00",
+ "sources": [
+  {"id": "seattle-emergency-food", "name": "City of Seattle open data: Emergency Food and Meals Seattle and King County", "url": "https://data.seattle.gov/d/kkzf-ntnu", "kind": "open-data", "use": "candidate-finder", "license": "Not specified in the catalog record. Ask the City (Human Services Dept.) before bulk import; until then, use it only to find candidates and confirm each one on the provider's own page.", "check_every_hours": 24, "status": "terms-pending"},
+  {"id": "seattle-area-polygon", "name": "City of Seattle GIS: Seattle Area Polygon", "url": "https://seattlecitygis.maps.arcgis.com/home/item.html?id=4fbe28084541458e9b393b112ff76e86", "kind": "open-data", "use": "city-limits test (data/hbc/seattle-area-polygon.geojson)", "license": "City of Seattle open data; no accuracy warranty.", "check_every_hours": 2160, "status": "in-use"},
+  {"id": "census-geocoder", "name": "U.S. Census Bureau geocoder", "url": "https://geocoding.geo.census.gov/geocoder/", "kind": "api", "use": "address to coordinates (tools/hbc_geocode.py)", "license": "U.S. government work, public domain.", "check_every_hours": null, "status": "in-use"},
+  {"id": "wa-211", "name": "Washington 211 / King County 211 (Crisis Connections)", "url": "https://wa211.org/policies/", "kind": "directory", "use": "link-out only", "license": "Personal, non-commercial use only; claims database rights. Do not scrape or copy. National 211 Data Platform API needs a separate agreement.", "check_every_hours": null, "status": "link-only"},
+  {"id": "craigslist-rooms", "name": "Craigslist Seattle rooms & shares", "url": "https://seattle.craigslist.org/search/roo", "kind": "classifieds", "use": "outbound search links only", "license": "Terms prohibit scraping and copying. Link to searches and to individual ads; copy nothing.", "check_every_hours": null, "status": "link-only"},
+  {"id": "sdot-72-hour", "name": "SDOT 72-hour on-street parking ordinance", "url": "https://www.seattle.gov/transportation/parking/parking72hour.htm", "kind": "official-page", "use": "vehicle-living rules", "license": "Government page; link and summarize in our own words.", "check_every_hours": 168, "status": "rules-unconfirmed: an RV permit / 2-hour package was reported in Oct 2026; confirm current law before the vehicle page publishes"}
+ ]
+}

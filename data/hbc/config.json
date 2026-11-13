@@ -1,0 +1,24 @@
+{
+ "section": "HOMELESS BY CHOICE",
+ "categories": {
+  "rooms":         {"prefix": "room", "label": "Cheap Rooms, Roommates & Shared Housing", "order": 1,  "review_days": 1,  "expire_days": 14},
+  "food":          {"prefix": "food", "label": "Free Food & Meals",                        "order": 2,  "review_days": 7,  "expire_days": null},
+  "benefits":      {"prefix": "ben",  "label": "Government Freebies, Benefits & Assistance", "order": 3, "review_days": 30, "expire_days": null},
+  "health":        {"prefix": "hlth", "label": "Free Healthcare & Medical Services",        "order": 4,  "review_days": 14, "expire_days": null},
+  "supplies":      {"prefix": "sup",  "label": "Free & Almost-Free Clothing and Supplies",  "order": 5,  "review_days": 7,  "expire_days": null},
+  "hygiene":       {"prefix": "hyg",  "label": "Showers, Bathrooms & Laundry",              "order": 6,  "review_days": 14, "expire_days": null},
+  "organizations": {"prefix": "org",  "label": "Churches, Charities & Volunteer Organizations", "order": 7, "review_days": 14, "expire_days": null},
+  "vehicle":       {"prefix": "veh",  "label": "Vehicle Living & Overnight Parking",        "order": 8,  "review_days": 7,  "expire_days": null},
+  "community":     {"prefix": "com",  "label": "Free Entertainment, Music & Community",     "order": 9,  "review_days": 1,  "expire_days": null},
+  "income":        {"prefix": "inc",  "label": "Occasional Income & Independent Work",      "order": 10, "review_days": 1,  "expire_days": 14}
+ },
+ "public_statuses": ["verified", "needs_recheck", "unverified"],
+ "status_notes": {
+  "draft": "Researched from an official source by a routine or Claude; hidden until the owner reviews it.",
+  "verified": "Confirmed by the owner or a named partner within the category's review window.",
+  "needs_recheck": "Was verified, but the review date passed or a check found a change. Shown with a warning.",
+  "unverified": "Shown only with 'call first'.",
+  "expired": "Hidden. Past its expiry date.",
+  "removed": "Hidden. Closed, out of scope, or withdrawn."
+ }
+}

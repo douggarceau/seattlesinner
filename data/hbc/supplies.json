@@ -1,0 +1,291 @@
+{
+ "asof": "2026-11-13T12:00:00-08:00",
+ "items": [
+  {
+   "id": "sup-0001",
+   "name": "St. Francis House",
+   "org": "St. Francis House",
+   "summary": "A walk-in basic-needs shop where people can choose clothing, socks and underwear, toiletries, kitchen and household items, backpacks and sleeping bags from donated stock that changes daily. Bring a photo ID; no appointment is needed.",
+   "subcats": [
+    "clothing",
+    "hygiene-kits",
+    "bedding",
+    "household"
+   ],
+   "hood": "Central District",
+   "address": "169 12th Ave, Seattle, WA 98122",
+   "lat": 47.603009,
+   "lng": -122.316868,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated on the page; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": true,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": "10:00",
+     "close": "13:30",
+     "note": "Client shopping hours; arrive by 1:30. The café is open 10am–2pm."
+    }
+   ],
+   "contact": {
+    "phone": "206-268-0784",
+    "url": "https://www.stfrancishouseseattle.org/get-help"
+   },
+   "src": [
+    [
+     "St. Francis House",
+     "https://www.stfrancishouseseattle.org/"
+    ],
+    [
+     "Get Help – St. Francis House",
+     "https://www.stfrancishouseseattle.org/get-help"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "The page says 'Photo ID required' for shopping. Stock varies daily. Baby layette and diapers, plus bus tickets, are also listed. Eligibility, limits and cost are not stated. The neighborhood label is my inference from the address."
+  },
+  {
+   "id": "sup-0002",
+   "name": "Queen Anne Helpline Clothing & Hygiene",
+   "org": "Queen Anne Helpline",
+   "summary": "A free clothing bank and hygiene-item pickup open to anyone regardless of ZIP code, with set item limits and one visit every 30 days. Appointments are encouraged, and walk-ins are taken as space allows.",
+   "subcats": [
+    "clothing",
+    "hygiene-kits"
+   ],
+   "hood": "Queen Anne",
+   "address": "311 W McGraw St, Seattle, WA 98119",
+   "lat": 47.639539,
+   "lng": -122.361136,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not stated explicitly; this is a non-financial assistance service."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "Open to everyone regardless of ZIP code",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      1
+     ],
+     "open": "10:00",
+     "close": "14:00",
+     "note": "Last shopping 30 minutes before close."
+    },
+    {
+     "dow": [
+      4
+     ],
+     "open": "10:00",
+     "close": "18:00",
+     "note": "Last shopping 30 minutes before close."
+    }
+   ],
+   "contact": {
+    "phone": "206-282-1540",
+    "url": "https://www.queenannehelpline.org/nonfinancial-services"
+   },
+   "src": [
+    [
+     "Non-Financial Services – Queen Anne Helpline",
+     "https://www.queenannehelpline.org/nonfinancial-services"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Limits: 6 men's clothing items OR 15 women's clothing items, up to 8 hygiene items, and one visit every 30 days. Appointments are encouraged but walk-ins are accepted, so appointment is set to false. No pets except service animals. Bus tickets and food are available as supplies allow. ID is not stated."
+  },
+  {
+   "id": "sup-0003",
+   "name": "West Seattle Clothesline",
+   "org": "West Seattle Food Bank",
+   "summary": "A free clothing bank with new and like-new clothes for babies through adults, plus hygiene products. Shopping is limited to once per calendar month, with no ID or appointment needed.",
+   "subcats": [
+    "clothing",
+    "hygiene-kits"
+   ],
+   "hood": "Delridge (West Seattle)",
+   "address": "5444 Delridge Way SW Ste. 100, Seattle, WA 98106",
+   "lat": 47.553287,
+   "lng": -122.362886,
+   "in_city": true,
+   "cost": {
+    "type": "free",
+    "amount": null,
+    "notes": ""
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "Anyone in the area who needs assistance",
+    "id_required": false,
+    "referral": false,
+    "waitlist": false,
+    "appointment": false
+   },
+   "religious": "unknown",
+   "hours": [
+    {
+     "dow": [
+      2,
+      4,
+      6
+     ],
+     "open": "10:00",
+     "close": "13:00",
+     "note": "Arrive before 12:30pm."
+    }
+   ],
+   "contact": {
+    "phone": "206-932-9023",
+    "url": "https://westseattlefoodbank.org/clothesline/"
+   },
+   "src": [
+    [
+     "Clothesline – West Seattle Food Bank",
+     "https://westseattlefoodbank.org/clothesline/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "The Clothesline moved in 2026 to Cottage Grove Commons (5444 Delridge Way SW). Older directories still show 4425 41st Ave SW, which is outdated. The phone number is the food bank's main line. The page states 'No ID is required'."
+  },
+  {
+   "id": "sup-0004",
+   "name": "Jubilee Free Clothing Boutique",
+   "org": "Jubilee Women's Center",
+   "summary": "A free clothing boutique for low-income adult women, open by appointment on Tuesday afternoons, Wednesday mornings and one evening a month.",
+   "subcats": [
+    "clothing"
+   ],
+   "hood": "Capitol Hill",
+   "address": "620 18th Ave E, Seattle, WA 98112",
+   "lat": 47.624624,
+   "lng": -122.30859,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": ""
+   },
+   "elig": {
+    "age": "adult",
+    "income": "low-income",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "unknown",
+   "hours": [],
+   "contact": {
+    "phone": "206-324-1244",
+    "url": "https://jwcenter.org/holistic-program/"
+   },
+   "src": [
+    [
+     "Services – Jubilee Women's Center",
+     "https://jwcenter.org/services/"
+    ],
+    [
+     "Holistic Program – Jubilee Women's Center",
+     "https://jwcenter.org/holistic-program/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Women only (low-income adult women). Exact Tuesday and Wednesday times are not given, so open and close are left blank. Call the front desk to schedule. Visit limits are not stated on the official pages.",
+   "schedule_note": "By appointment: Tuesday afternoons and Wednesday mornings (times not published), and the third Monday of each month, 5-7pm."
+  },
+  {
+   "id": "sup-0005",
+   "name": "Elizabeth Gregory Home Clothing Giveaway",
+   "org": "Elizabeth Gregory Home",
+   "summary": "The women's day center gives out emergency clothing, shoes, rain gear and warm-weather gear, with an in-person clothing giveaway on Wednesday mornings. You must sign up for the giveaway by 11:30am.",
+   "subcats": [
+    "clothing"
+   ],
+   "hood": "University District",
+   "address": "1604 NE 50th St, Seattle, WA 98105",
+   "lat": 47.664939,
+   "lng": -122.310678,
+   "in_city": true,
+   "cost": {
+    "type": "unknown",
+    "amount": null,
+    "notes": "Cost is not mentioned; it is presumed free but unconfirmed."
+   },
+   "elig": {
+    "age": "",
+    "income": "",
+    "residency": "",
+    "id_required": null,
+    "referral": false,
+    "waitlist": false,
+    "appointment": true
+   },
+   "religious": "unknown",
+   "hours": [],
+   "contact": {
+    "phone": "206-729-0262",
+    "url": "https://eghseattle.org/programs/"
+   },
+   "src": [
+    [
+     "Programs – Elizabeth Gregory Home",
+     "https://eghseattle.org/programs/"
+    ]
+   ],
+   "status": "draft",
+   "checked": "2026-11-13",
+   "checked_by": "claude",
+   "review_by": "2026-11-20",
+   "expires": null,
+   "notes": "Women only. This is the same site as the hygiene listing, and the overlap is deliberate. The giveaway's end time is not stated. 'Appointment' here means the required same-day sign-up.",
+   "schedule_note": "Wednesday mornings from 9am; sign up the same day by 11:30am."
+  }
+ ]
+}

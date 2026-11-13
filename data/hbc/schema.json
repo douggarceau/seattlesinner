@@ -1,0 +1,406 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://seattlesinner.com/data/hbc/schema.json",
+ "title": "HOMELESS BY CHOICE category file",
+ "description": "One file per category: data/hbc/<category>.json. tools/validate_hbc.py enforces this schema plus the cross-field rules it lists.",
+ "type": "object",
+ "required": [
+  "asof",
+  "items"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "asof": {
+   "type": "string",
+   "description": "ISO timestamp of the last edit to this file."
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/item"
+   }
+  }
+ },
+ "$defs": {
+  "hhmm": {
+   "type": "string",
+   "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$|^24:00$"
+  },
+  "date": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "item": {
+   "type": "object",
+   "required": [
+    "id",
+    "name",
+    "summary",
+    "subcats",
+    "hood",
+    "in_city",
+    "cost",
+    "elig",
+    "religious",
+    "hours",
+    "contact",
+    "src",
+    "status",
+    "checked",
+    "checked_by",
+    "review_by"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^[a-z]+-\\d{4}$",
+     "description": "Category prefix from config.json plus a number. Never reused."
+    },
+    "name": {
+     "type": "string",
+     "minLength": 2,
+     "maxLength": 120
+    },
+    "org": {
+     "type": "string",
+     "maxLength": 120
+    },
+    "summary": {
+     "type": "string",
+     "minLength": 10,
+     "maxLength": 320,
+     "description": "Our own words. No copied text, emails or phone numbers."
+    },
+    "subcats": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "pattern": "^[a-z-]+$"
+     },
+     "minItems": 1
+    },
+    "level": {
+     "enum": [
+      "federal",
+      "state",
+      "county",
+      "city"
+     ],
+     "description": "Benefits only."
+    },
+    "hood": {
+     "type": "string",
+     "minLength": 2,
+     "description": "Seattle neighborhood, or 'Citywide' for programs and phone lines."
+    },
+    "address": {
+     "type": "string"
+    },
+    "lat": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "lng": {
+     "type": [
+      "number",
+      "null"
+     ]
+    },
+    "in_city": {
+     "type": "boolean",
+     "description": "Must be true to publish."
+    },
+    "cost": {
+     "type": "object",
+     "required": [
+      "type"
+     ],
+     "additionalProperties": false,
+     "properties": {
+      "type": {
+       "enum": [
+        "free",
+        "sliding",
+        "insurance",
+        "income-qualified",
+        "subsidy",
+        "loan",
+        "reimbursement",
+        "cash-grant",
+        "restricted-benefit",
+        "paid",
+        "unknown"
+       ]
+      },
+      "amount": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "notes": {
+       "type": "string"
+      }
+     }
+    },
+    "elig": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "age": {
+       "type": "string"
+      },
+      "income": {
+       "type": "string"
+      },
+      "residency": {
+       "type": "string"
+      },
+      "id_required": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "referral": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "waitlist": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "appointment": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "other": {
+       "type": "string"
+      }
+     }
+    },
+    "how_to_apply": {
+     "type": "string"
+    },
+    "religious": {
+     "enum": [
+      "none",
+      "optional",
+      "required",
+      "unknown"
+     ]
+    },
+    "hours": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "open",
+       "close"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "dow": {
+        "type": "array",
+        "items": {
+         "type": "integer",
+         "minimum": 0,
+         "maximum": 6
+        },
+        "description": "0 = Sunday."
+       },
+       "date": {
+        "$ref": "#/$defs/date",
+        "description": "One-off or holiday date instead of dow."
+       },
+       "open": {
+        "$ref": "#/$defs/hhmm"
+       },
+       "close": {
+        "$ref": "#/$defs/hhmm"
+       },
+       "note": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "contact": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "phone": {
+       "type": "string"
+      },
+      "url": {
+       "type": "string"
+      }
+     },
+     "description": "Organizational contacts only. Never a private person's number or email."
+    },
+    "src": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "array",
+      "prefixItems": [
+       {
+        "type": "string"
+       },
+       {
+        "type": "string",
+        "pattern": "^https://"
+       }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+     }
+    },
+    "status": {
+     "enum": [
+      "draft",
+      "verified",
+      "needs_recheck",
+      "unverified",
+      "expired",
+      "removed"
+     ]
+    },
+    "checked": {
+     "$ref": "#/$defs/date"
+    },
+    "checked_by": {
+     "enum": [
+      "owner",
+      "partner",
+      "routine",
+      "claude"
+     ]
+    },
+    "review_by": {
+     "$ref": "#/$defs/date"
+    },
+    "expires": {
+     "anyOf": [
+      {
+       "$ref": "#/$defs/date"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "notes": {
+     "type": "string",
+     "description": "Internal research notes. Never rendered publicly."
+    },
+    "room": {
+     "type": "object",
+     "description": "Rooms only.",
+     "additionalProperties": false,
+     "required": [
+      "rent"
+     ],
+     "properties": {
+      "rent": {
+       "type": "integer",
+       "minimum": 0
+      },
+      "deposit": {
+       "type": [
+        "integer",
+        "null"
+       ]
+      },
+      "utilities": {
+       "enum": [
+        "included",
+        "extra",
+        "unknown"
+       ]
+      },
+      "utilities_amt": {
+       "type": [
+        "integer",
+        "null"
+       ]
+      },
+      "bath": {
+       "enum": [
+        "private",
+        "shared",
+        "unknown"
+       ]
+      },
+      "shower": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "kitchen": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "parking": {
+       "enum": [
+        "street",
+        "off-street",
+        "none",
+        "unknown"
+       ]
+      },
+      "furnished": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "term": {
+       "enum": [
+        "month-to-month",
+        "lease",
+        "sublet",
+        "unknown"
+       ]
+      },
+      "available": {
+       "anyOf": [
+        {
+         "$ref": "#/$defs/date"
+        },
+        {
+         "type": "null"
+        }
+       ]
+      },
+      "work_exchange": {
+       "type": "string"
+      },
+      "contact_via": {
+       "enum": [
+        "source-link"
+       ]
+      }
+     }
+    },
+    "schedule_note": {
+     "type": "string",
+     "maxLength": 240,
+     "description": "Public text for schedules that can't be expressed as exact hours (e.g. 'third Monday, 5-7pm, by appointment'). Never used by 'Free Help Available Today'."
+    }
+   }
+  }
+ }
+}
