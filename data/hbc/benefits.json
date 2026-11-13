@@ -116,8 +116,8 @@
    "in_city": true,
    "cost": {
     "type": "cash-grant",
-    "amount": "Up to $450/month (single); up to $570/month (married couple)",
-    "notes": "Maximum amounts as shown on the DSHS ABD page fetched 2026-11-13; the page gives no effective date. Paid on the 1st of each month."
+    "amount": null,
+    "notes": "Up to $450/month (single); up to $570/month (married couple). Maximum amounts as shown on the DSHS ABD page fetched 2026-11-13; the page gives no effective date. Paid on the 1st of each month."
    },
    "elig": {
     "age": "65+, or blind, or 18+ with a condition expected to prevent work for 12+ months in a row",
@@ -270,8 +270,8 @@
    "in_city": true,
    "cost": {
     "type": "cash-grant",
-    "amount": "$383-$1,208 per week",
-    "notes": "Minimum $383 and maximum $1,208 weekly benefit for new claims opened on or after July 5, 2026 (ESD news release June 10, 2026). Your amount is based on base-year wages; total benefits are the lesser of 26x weekly amount or 1/3 of base-year wages."
+    "amount": null,
+    "notes": "$383-$1,208 per week. Minimum $383 and maximum $1,208 weekly benefit for new claims opened on or after July 5, 2026 (ESD news release June 10, 2026). Your amount is based on base-year wages; total benefits are the lesser of 26x weekly amount or 1/3 of base-year wages."
    },
    "elig": {
     "age": "",
@@ -334,8 +334,8 @@
    "in_city": true,
    "cost": {
     "type": "cash-grant",
-    "amount": "Up to $994/month (individual); up to $1,491/month (couple)",
-    "notes": "2026 maximum federal payment per SSA. Reduced by other income; may be cut by up to $351.33 if you live in someone else's home and don't pay your share of food and shelter."
+    "amount": null,
+    "notes": "Up to $994/month (individual); up to $1,491/month (couple). 2026 maximum federal payment per SSA. Reduced by other income; may be cut by up to $351.33 if you live in someone else's home and don't pay your share of food and shelter."
    },
    "elig": {
     "age": "65+, or any age with blindness or a disability expected to last 12+ months or result in death",
@@ -453,8 +453,8 @@
    "in_city": true,
    "cost": {
     "type": "subsidy",
-    "amount": "$1.00 per ride",
-    "notes": "ORCA LIFT single-ride fare per King County Metro fares page (fares effective Sept 1, 2025). Card is free for qualifiers; you load money or a pass to ride."
+    "amount": null,
+    "notes": "$1.00 per ride. ORCA LIFT single-ride fare per King County Metro fares page (fares effective Sept 1, 2025). Card is free for qualifiers; you load money or a pass to ride."
    },
    "elig": {
     "age": "Adults (youth 18 and under ride free)",
@@ -508,8 +508,8 @@
    "in_city": true,
    "cost": {
     "type": "subsidy",
-    "amount": "Free",
-    "notes": "Fare 100% covered on listed services for up to 12 calendar months while eligible; other systems at ORCA LIFT fare with E-purse."
+    "amount": null,
+    "notes": "Free. Fare 100% covered on listed services for up to 12 calendar months while eligible; other systems at ORCA LIFT fare with E-purse."
    },
    "elig": {
     "age": "",
@@ -559,8 +559,8 @@
    "in_city": true,
    "cost": {
     "type": "subsidy",
-    "amount": "$1.00 per ride",
-    "notes": "Senior and disability single-ride fare per King County Metro fares page (effective Sept 1, 2025). First RRFP card free; $3 replacement."
+    "amount": null,
+    "notes": "$1.00 per ride. Senior and disability single-ride fare per King County Metro fares page (effective Sept 1, 2025). First RRFP card free; $3 replacement."
    },
    "elig": {
     "age": "65+, or under 65 with a qualifying disability",
@@ -610,8 +610,8 @@
    "in_city": true,
    "cost": {
     "type": "subsidy",
-    "amount": "60% off electricity; 50% off water/sewer/garbage",
-    "notes": "City says average annual savings is $732. Processing 4-6 weeks."
+    "amount": null,
+    "notes": "60% off electricity; 50% off water/sewer/garbage. City says average annual savings is $732. Processing 4-6 weeks."
    },
    "elig": {
     "age": "",
@@ -716,8 +716,8 @@
    "in_city": true,
    "cost": {
     "type": "subsidy",
-    "amount": "Up to $9.25/month",
-    "notes": "Per FCC Lifeline consumer page fetched 2026-11-13 (up to $34.25 on Tribal lands)."
+    "amount": null,
+    "notes": "Up to $9.25/month. Per FCC Lifeline consumer page fetched 2026-11-13 (up to $34.25 on Tribal lands)."
    },
    "elig": {
     "age": "",

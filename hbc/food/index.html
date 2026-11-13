@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Free Food &amp; Meals · HOMELESS BY CHOICE · Seattle</title>
+<meta name="description" content="Free and almost-free help in Seattle: rooms, food, benefits, health care, clothing, showers and more.">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#0a1a33"><link rel="icon" href="/app/favicon.png">
+<style>
+:root{--ink:#0a1a33;--paper:#f8f4ea;--card:#fff;--gold:#e8b818;--muted:#5a6475;--line:#d9d2c0;--warn:#8a5a00;--warnbg:#fff4d6;--ok:#1d6b3a;--okbg:#e3f3e8;--draft:#7a1f1f;--draftbg:#fbe3e3;--link:#0b4fa3}
+@media (prefers-color-scheme:dark){:root{--ink:#eef0f4;--paper:#0d1422;--card:#16203a;--muted:#a8b0c0;--line:#2a3654;--warn:#ffd27a;--warnbg:#3a2e10;--ok:#8fe0a8;--okbg:#123222;--draft:#ffb3b3;--draftbg:#3b1616;--link:#8cc2ff}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.5 Georgia,"PT Serif",serif}
+a{color:var(--link)}a:focus,button:focus,input:focus,select:focus{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header.top{background:#0a1a33;color:#f8f4ea;padding:14px 0 12px;border-bottom:4px solid var(--gold)}
+header.top a{color:#f8f4ea;text-decoration:none}
+.kicker{font:600 12px/1.2 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1.mast{margin:4px 0 0;font:900 clamp(30px,8vw,48px)/1 Georgia,serif;letter-spacing:.02em}
+.crisis{background:#7a1f1f;color:#fff;font:600 15px/1.4 system-ui,sans-serif;padding:8px 0}
+.crisis a{color:#fff;font-weight:700}
+nav.cats{font:15px/1.3 system-ui,sans-serif;padding:10px 0;border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav.cats a{display:inline-block;margin:2px 10px 2px 0}nav.cats a[aria-current]{font-weight:700;color:var(--ink)}
+h2{font:700 26px/1.2 Georgia,serif;margin:22px 0 6px}
+.lede{color:var(--muted);margin:0 0 14px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:14px 0}
+.tile{display:block;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gold);padding:12px 14px;text-decoration:none;color:var(--ink);border-radius:6px}
+.tile b{display:block;font-size:18px}.tile span{font:14px system-ui,sans-serif;color:var(--muted)}
+.today-cta{display:block;background:var(--ink);color:var(--paper);padding:14px 16px;border-radius:6px;text-decoration:none;font:700 19px/1.3 system-ui,sans-serif;margin:16px 0}
+.today-cta small{display:block;font-weight:400;font-size:14px;opacity:.85}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;font:15px system-ui,sans-serif}
+.filters input,.filters select{font:16px system-ui,sans-serif;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);min-height:44px}
+.filters input{flex:1 1 220px}.filters input[type=checkbox]{flex:0 0 auto;width:22px;height:22px;min-height:0}.filters label{display:flex;align-items:center;gap:6px;min-height:44px}
+.count{font:14px system-ui,sans-serif;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0}
+.card h3{margin:0 0 2px;font:700 20px/1.25 Georgia,serif}
+.org{font:14px system-ui,sans-serif;color:var(--muted)}
+.badges{margin:8px 0;display:flex;flex-wrap:wrap;gap:6px}
+.b{font:600 13px/1 system-ui,sans-serif;padding:6px 8px;border-radius:999px;border:1px solid var(--line)}
+.b.ok{background:var(--okbg);color:var(--ok);border-color:transparent}.b.warn{background:var(--warnbg);color:var(--warn);border-color:transparent}
+.b.draft{background:var(--draftbg);color:var(--draft);border-color:transparent}.b.open{background:var(--ok);color:#fff;border-color:transparent}
+.card p{margin:6px 0}.meta{font:15px/1.45 system-ui,sans-serif}.meta dt{font-weight:700;margin-top:6px}.meta dd{margin:0}
+table.hrs{border-collapse:collapse;font:15px system-ui,sans-serif;margin:4px 0}table.hrs td{padding:2px 12px 2px 0;vertical-align:top}
+.small{font:13px/1.4 system-ui,sans-serif;color:var(--muted)}
+.empty{background:var(--card);border:1px dashed var(--line);padding:16px;border-radius:8px}
+footer{margin:30px 0 40px;font:14px/1.5 system-ui,sans-serif;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.preview{background:var(--draftbg);color:var(--draft);font:700 14px system-ui,sans-serif;padding:8px 0;text-align:center}
+.day h2{font-size:22px}
+@media print{header.top,.crisis,nav.cats,.filters,.today-cta,footer .noprint{display:none}body{background:#fff;color:#000;font-size:12pt}.card{break-inside:avoid;border:1px solid #999}}
+</style></head>
+<body data-page="food">
+
+<header class="top"><div class="wrap"><a href="/"><span class="kicker">Seattle Sinner · The Guitar Doug Report</span></a>
+<h1 class="mast"><a href="/hbc/">HOMELESS BY CHOICE</a></h1></div></header>
+<div class="crisis"><div class="wrap">Emergency: <a href="tel:911">911</a> · Crisis or suicide: call or text <a href="tel:988">988</a> · Help finding services: <a href="tel:211">211</a></div></div>
+<div class="wrap"><nav class="cats" aria-label="HOMELESS BY CHOICE sections"><a href="/hbc/">Start</a><a href="/hbc/today/">Open today</a><a href="/hbc/rooms/">Cheap Rooms</a><a href="/hbc/food/" aria-current="page">Free Food</a><a href="/hbc/benefits/">Government Freebies</a><a href="/hbc/health/">Free Healthcare</a><a href="/hbc/supplies/">Free</a><a href="/hbc/hygiene/">Showers</a><a href="/hbc/organizations/">Churches</a><a href="/hbc/vehicle-living/">Vehicle Living</a><a href="/hbc/community/">Free Entertainment</a><a href="/hbc/income/">Occasional Income</a><a href="/hbc/about/">About</a></nav>
+<main><h2>Free Food &amp; Meals</h2><div class="empty">No checked listings here yet. We publish only what we can confirm from an official source. Meanwhile, call <a href="tel:211">211</a> for help finding services.</div></main>
+<footer><p>Seattle city limits only. Listings are checked against each provider's own page or an official government page; the date on every listing shows when. Hours and rules change — call before a long trip. Nothing here is legal, medical or financial advice. No ads, no sign-up, no paywall on this section.</p>
+<p class="noprint"><a href="/hbc/about/">How we check listings</a> · Page built 2026-11-13 04:41 PT</p></footer></div>
+<script>
+(function(){
+ var fmt=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit'});
+ var p={};fmt.formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});
+ var dow=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),now=(+p.hour)*60+(+p.minute),date=p.year+'-'+p.month+'-'+p.day;
+ function openState(c){var h;try{h=JSON.parse(c.getAttribute('data-hours')||'[]')}catch(_){h=[]}
+  var today=h.filter(function(r){return r.date?r.date===date:(r.dow||[]).indexOf(dow)>=0});
+  var o=today.some(function(r){return now>=r.o&&now<r.c});return {today:today.length>0,open:o}}
+ var cards=[].slice.call(document.querySelectorAll('.card[data-hours]'));
+ cards.forEach(function(c){var s=openState(c);c._today=s.today;c._open=s.open;var b=c.querySelector('.openbadge');
+  if(b){if(s.open){b.textContent='Open now';b.className='b open openbadge';b.hidden=false}else if(s.today){b.textContent='Open later today or closed now';b.className='b openbadge';b.hidden=false}}});
+ var q=document.getElementById('q'),hood=document.getElementById('hood'),cost=document.getElementById('cost'),ot=document.getElementById('opentoday'),cnt=document.getElementById('count');
+ function apply(){var t=(q&&q.value||'').toLowerCase().trim(),n=0;cards.forEach(function(c){
+  var ok=(!t||c.textContent.toLowerCase().indexOf(t)>=0)&&(!hood||!hood.value||c.getAttribute('data-hood')===hood.value)
+   &&(!cost||!cost.value||c.getAttribute('data-cost')===cost.value)&&(!ot||!ot.checked||c._today);
+  c.hidden=!ok;var d=c.closest('.day');if(ok&&!(d&&d.hidden))n++});if(cnt)cnt.textContent=n+' shown';}
+ [q,hood,cost,ot].forEach(function(el){if(el)el.addEventListener('input',apply)});
+ var f=document.querySelector('.filters');if(f)f.hidden=false;
+ if(document.body.getAttribute('data-page')==='today'){document.querySelectorAll('.day').forEach(function(d){
+  if(+d.getAttribute('data-dow')!==dow)d.hidden=true;else{var h=d.querySelector('h2');if(h)h.textContent='Today — '+h.textContent}});
+  var note=document.getElementById('todaynote');if(note)note.hidden=false}
+ apply();
+})();
+</script></body></html>

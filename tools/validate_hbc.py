@@ -108,6 +108,9 @@ def check_item(cat, conf, it, polys, today, err, warn):
     cost = it.get('cost') or {}
     if cost.get('type') not in COST:
         err(where, f'bad cost.type {cost.get("type")!r}')
+    amt = cost.get('amount')
+    if amt is not None and (isinstance(amt, bool) or not isinstance(amt, (int, float))):
+        err(where, 'cost.amount must be a number or null; put text in cost.notes')
     summ = it.get('summary', '')
     if not 10 <= len(summ) <= 320:
         err(where, 'summary must be 10-320 characters')
