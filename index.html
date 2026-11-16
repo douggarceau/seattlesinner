@@ -348,7 +348,7 @@ html body .lsrow .lspot.hasad{animation:hgAd 5s ease-in-out infinite}
 @keyframes hgAd{0%,100%{filter:drop-shadow(0 0 5px rgba(221,225,230,.4))}50%{filter:drop-shadow(0 0 13px rgba(221,225,230,.7))}}
 @media (prefers-reduced-motion:reduce){html body .lsrow .lspot{animation:none!important}}
 </style><style id="vwebCss">.vcard .vmeta a.vweb{font-weight:700;color:var(--k,#DDE1E6)!important;text-decoration:none}.vcard .vmeta a.vweb:hover{text-decoration:underline}.vcard p{margin:6px 0 8px}</style><style id="nycTop">/* Top of the page laid out like New York City Scream: no tide strip, no magazine cover */
-html body #jtSea{display:none!important}
+html:root body div#jtSea,html:root body #jtSea{display:none!important}
 html body #coverSlot .cvr .cimg,html body #coverSlot .cvr .pbx{display:none!important}
 html body #coverSlot .cvr{grid-template-columns:minmax(0,1fr)!important}
 html body #coverSlot .cvr .cvside{grid-column:1!important;grid-row:auto!important}
@@ -1326,7 +1326,7 @@ h2.room{text-shadow:0 2px 0 #0D0D0F,0 0 30px rgba(13,13,15,.7)!important;filter:
     <button class="nb" data-go="privacy" hidden style="display:none">Privacy, Editorial Standards &amp; Contact Us</button>
     <button class="nb" data-go="inbox" id="inboxBtn" hidden>Inbox <span class="n" id="inboxN">0</span></button>
   </nav>
-  <div id="jtSea" aria-label="Tides and Puget Sound forecast">
+  <div id="jtSea" aria-label="Tides and Puget Sound forecast" hidden style="display:none!important">
  <div class="tw-head"><a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9447130" target="_blank" rel="noopener"><b>Tides</b><span id="twNow">Loading…</span></a><span class="tw-sun" id="twSun"></span></div>
  <div class="tw-chart" id="twChart"><svg viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="twFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8E9196" stop-opacity=".55"/><stop offset="1" stop-color="#2A2D33" stop-opacity=".05"/></linearGradient><linearGradient id="twLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#DDE1E6"/><stop offset=".5" stop-color="#DDE1E6"/><stop offset="1" stop-color="#DDE1E6"/></linearGradient></defs><g id="twNight"></g><path id="twArea" fill="url(#twFill)"/><path id="twPath" fill="none" stroke="url(#twLine)" stroke-width="2.2" vector-effect="non-scaling-stroke"/><line id="twNowL" y1="0" y2="120" stroke="#DDE1E6" stroke-width="1.5" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/></svg><div class="tw-lbls" id="twLbls"></div><i class="tw-dot" id="twDot"></i></div>
  <a class="jts-m" href="https://forecast.weather.gov/shmrn.php?mz=pzz135" target="_blank" rel="noopener"><b>Puget Sound</b><span id="jtBay">Loading…</span></a>
