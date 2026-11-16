@@ -429,29 +429,42 @@ fetch('data/scream.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=
 #topDark a::before{content:counter(td);grid-row:1/span 3;font:700 18px/1 Oswald,"Arial Narrow",sans-serif;color:#D34A12;padding-top:2px}
 #topDark i{font:600 9.5px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#D34A12;font-style:normal}
 #topDark a b{font:600 14px/1.3 "PT Serif",Georgia,serif;color:#F2F1EC}#topDark a:hover b{color:#fff;text-decoration:underline}
-#topDark small{font:500 10.5px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}</style><script id="ugJs">/* Night Stalker: Seattle Underground box on the front page, every screen size (owner, Nov 16 2026) */
+#topDark small{font:500 10.5px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}</style><script id="ugJs">/* Night Stalker: Seattle Underground, 100 random spots in columns scrolling up and down (owner, Nov 16 2026) */
 (()=>{const E=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 fetch('data/directory.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
- const CATS=new Set(d.badass_cats||[]);const FAM=/\b(family|families|kids?|children|toddlers?|baby|zoo|aquarium)\b/i;
- const all=d.items.filter(x=>x&&!x.cl&&x.w&&CATS.has(x.c)&&!FAM.test(x.n+' '+(x.b||''))&&x.c!=='Drug rehab and recovery');
- const by={};all.sort(()=>Math.random()-.5).forEach(x=>(by[x.c]=by[x.c]||[]).push(x));
- const pick=Object.keys(by).sort(()=>Math.random()-.5).slice(0,8).map(c=>by[c][0]);
+ const CATS=new Set((d.badass_cats||[]).concat(['Entertainment venues']));const FAM=/\b(family|families|kids?|children|toddlers?|baby|zoo|aquarium)\b/i;
+ const sh=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+ const bad=sh(d.items.filter(x=>x&&!x.cl&&x.w&&CATS.has(x.c)&&x.c!=='Entertainment venues'&&x.c!=='Drug rehab and recovery'&&!FAM.test(x.n+' '+(x.b||''))));
+ const ven=sh(d.items.filter(x=>x&&!x.cl&&x.w&&x.c==='Entertainment venues'&&!FAM.test(x.n+' '+(x.b||''))));
+ const L=sh(bad.concat(ven.slice(0,Math.max(0,100-bad.length)))).slice(0,100);if(!L.length)return;
  const help=d.items.find(x=>/Recovery Help Line/.test(x.n));
  const age=x=>((x.nt||[]).join(' ').match(/Age:\s*([^,;]+)/)||[])[1]||'';
- const card=x=>'<a class="ug-c" href="'+E(x.w)+'" target="_blank" rel="noopener"><i>'+E(x.c)+(age(x)?' · '+E(age(x)):'')+'</i><b>'+E(x.n)+'</b><small>'+E((x.a||'').replace(/, WA \d{5}$/,''))+'</small><em>'+E((x.b||'').split(/(?<=[.!?])\s/)[0])+'</em></a>';
+ const kind=x=>x.c==='Entertainment venues'?'Live music':x.c;
+ const card=x=>'<a class="ug-c" href="'+E(x.w)+'" target="_blank" rel="noopener"><i>'+E(kind(x))+(age(x)?' · '+E(age(x)):'')+'</i><b>'+E(x.n)+'</b><small>'+E((x.a||'').replace(/, WA \d{5}$/,''))+'</small><em>'+E((x.b||'').split(/(?<=[.!?])\s/)[0])+'</em></a>';
+ const cols=()=>innerWidth<=480?1:innerWidth<=900?2:4;
+ const build=s=>{const n=cols(),C=Array.from({length:n},()=>[]);L.forEach((x,i)=>C[i%n].push(x));
+  s.querySelector('.ug-g').innerHTML=C.map((c,i)=>{const h=c.map(card).join('');return '<div class="ug-col"><div class="ug-track '+(i%2?'down':'up')+'" style="animation-duration:'+(c.length*4.2).toFixed(0)+'s">'+h+h+'</div></div>'}).join('')};
  const mount=()=>{if(document.getElementById('underground'))return;const a=document.getElementById('topDark')||document.getElementById('jtSea');if(!a)return setTimeout(mount,500);
   const s=document.createElement('section');s.id='underground';s.setAttribute('aria-label','Seattle Underground');
-  s.innerHTML='<div class="ug-h"><b>Seattle Underground</b><span>'+all.length+' spots · a new mix every visit</span></div><div class="ug-g">'+pick.map(card).join('')+'</div>'+
-   '<div class="ug-f"><button type="button" class="ug-all">See all '+all.length+' underground spots →</button>'+(help?'<span>Need help? <a href="'+E(help.w)+'" target="_blank" rel="noopener">WA Recovery Help Line '+E(help.p)+'</a></span>':'')+'</div>';
-  a.parentNode.insertBefore(s,a.nextSibling);
+  s.innerHTML='<div class="ug-h"><b>Seattle Underground</b><span>'+L.length+' spots · shuffled every visit · hover to stop</span></div><div class="ug-g"></div>'+
+   '<div class="ug-f"><button type="button" class="ug-all">Open the full list →</button>'+(help?'<span>Need help? <a href="'+E(help.w)+'" target="_blank" rel="noopener">WA Recovery Help Line '+E(help.p)+'</a></span>':'')+'</div>';
+  a.parentNode.insertBefore(s,a.nextSibling);build(s);let w=cols();addEventListener('resize',()=>{if(cols()!==w){w=cols();build(s)}});
   s.querySelector('.ug-all').onclick=()=>{const b=document.getElementById('dirNb');if(b)b.click();const sel=document.getElementById('dirCat');if(sel){sel.value='all';sel.dispatchEvent(new Event('change',{bubbles:true}))}}};
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()}).catch(()=>{})})();</script>
 <style id="ugCss">#underground{margin:0 0 14px;padding:10px 14px 10px;border:1px solid #1A1B1F;border-radius:2px;background:#050505;color:#DDE1E6}
 #underground .ug-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid #1A1B1F;padding-bottom:6px;margin-bottom:8px}
 #underground .ug-h b{font:700 13px/1 Oswald,"Arial Narrow",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#fff}
 #underground .ug-h span{font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#8E9196}
-#underground .ug-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-@media (max-width:900px){#underground .ug-g{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:480px){#underground .ug-g{grid-template-columns:1fr}}
+#underground .ug-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;height:430px;overflow:hidden;
+ -webkit-mask-image:linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent)}
+@media (max-width:900px){#underground .ug-g{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:480px){#underground .ug-g{grid-template-columns:1fr;height:360px}}
+#underground .ug-col{overflow:hidden;min-width:0}
+#underground .ug-track{display:flex;flex-direction:column;gap:8px;will-change:transform}
+#underground .ug-track.up{animation:ugUp linear infinite}#underground .ug-track.down{animation:ugDown linear infinite}
+#underground .ug-col:hover .ug-track{animation-play-state:paused}
+@keyframes ugUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 4px))}}
+@keyframes ugDown{from{transform:translateY(calc(-50% - 4px))}to{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){#underground .ug-track{animation:none!important}#underground .ug-g{overflow:auto}}
 #underground .ug-c{display:flex;flex-direction:column;gap:3px;padding:9px 10px;border:1px solid #1A1B1F;border-top:2px solid #D34A12;background:#000;color:inherit;text-decoration:none;min-width:0}
 #underground .ug-c:hover{border-color:#D34A12;box-shadow:0 0 12px #D34A1244}
 #underground .ug-c i{font:600 9.5px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#D34A12;font-style:normal}
