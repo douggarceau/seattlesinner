@@ -1,4 +1,15 @@
 {
- "asof": "2026-10-29T22:45:00-04:00",
- "items": []
+ "asof": "2026-11-16T04:50:00-08:00",
+ "items": [
+  {
+   "kind": "theft",
+   "headline": "Ballard business owner stops suspected thieves during attempted burglary",
+   "blurb": "",
+   "hood": "Ballard",
+   "spd": [],
+   "date": "2026-11-16",
+   "url": "https://mynorthwest.com/crime-blotter/ballard-burglary-business/4298223",
+   "outlet": "MyNorthwest"
+  }
+ ]
 }
