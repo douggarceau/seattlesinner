@@ -13,7 +13,7 @@ Staying within the law (how this works):
     schools, abuse, assault, rape or trafficking is skipped. Those are victims' stories, not scandals.
   - No sports (site rule).
 Standard library only. No AI. Also strange news at the top (Seattle scares, paranormal, UFOs, conspiracy theories, AI gone wrong, dangerous robots,
-military drones, horror, bodies found, fights, drug raids, police scandals and lawsuits, protests, groups disrupting meetings and events, antifa,
+military drones, horror, bodies found, fights, drug raids, police scandals and lawsuits, protests, groups disrupting meetings and events, activists and human rights groups, peace, the environment, anti-establishment movements, antifa,
 police corruption, passengers removed from planes):
 newsroom reports about those subjects found through news search, again linked to the outlet.
 Usage: python3 tools/scream_feed.py [repo_root]
@@ -68,6 +68,15 @@ STRANGE = [
                   'protesters shut down event OR "shut down" speech OR event canceled after protest'],
   r"\b(disrupt\w*|shouted down|shut(?:s|ting)? down|halted|interrupt\w*|stormed|derail\w*|canceled after|cancelled after|cleared the room|recess(?:ed)? after)\b.*\b(meeting|council|hearing|event|speech|talk|show|rally|session|forum|commission)\b|\b(meeting|council|hearing|event|speech|talk|forum)\b.*\b(disrupt\w*|shouted down|shut down|halted|stormed|cleared)\b"),
  ('Antifa', ['antifa Seattle', 'antifa'], r"\bantifa\b"),
+ ('Activists', ['Seattle activists OR activist group OR advocacy group', 'Washington ACLU OR "civil rights" lawsuit OR activists',
+                'human rights group OR "Human Rights Watch" OR "Amnesty International" OR "human rights activists"'],
+  r"\b(activists?|activism|human rights|civil rights|aclu|amnesty international|human rights watch|advocacy groups?|advocates|rights groups?|watchdog groups?)\b"),
+ ('Peace', ['peace activists OR "anti-war" OR "peace march" OR "peace rally"', 'ceasefire OR "peace talks" OR "peace deal"'],
+  r"\b(peace|anti-?war|ceasefire|cease-fire|truce|pacifis\w*|disarmament)\b"),
+ ('Environment', ['Seattle environment OR climate OR pollution OR "Puget Sound"', 'environmental activists OR "climate activists" OR "climate protest"', 'environmental lawsuit OR pollution OR "toxic spill"'],
+  r"\b(environment\w*|climate|pollut\w*|toxic|spill|emissions?|wildlife|orcas?|salmon|old-growth|deforest\w*|fossil fuels?|pipeline|greenpeace|sierra club|earthjustice|extinction rebellion)\b"),
+ ('Anti-establishment', ['anti-establishment OR "against the establishment" OR "establishment revolt"', '"grassroots movement" OR "populist revolt" OR "outsider candidate" OR "anti-government"'],
+  r"\b(anti-?establishment|establishment|grassroots|populis\w*|outsider|insurgen\w*|anti-?government|revolt|uprising|rebellion|rebel\w*)\b"),
  ('Police corruption', ['Washington police corruption OR bribery', 'police corruption OR "officer bribery" OR "police officer charged"'],
   r"\b(police|officers?|cops?|sheriff\w*|deputies|deputy|troopers?|detectives?)\b.*\b(corrupt\w*|brib\w*|kickbacks?|perjur\w*|falsif\w*|stole|theft|embezzl\w*|extort\w*|indicted|charged)\b|\b(corrupt\w*|brib\w*)\b.*\b(police|officers?|cops?|sheriff\w*)\b"),
  ('Plane drama', ['Sea-Tac passenger removed OR "kicked off" flight OR unruly passenger', 'passenger removed from plane OR "kicked off" flight OR "unruly passenger" OR "disruptive passenger"'],
@@ -172,6 +181,8 @@ def main():
             scares.append(dict(x, cat='Plane drama'))
         elif re.search(STRANGE_RX['Disruptions'], head, re.I) and not NOT_NEWS.search(head):
             scares.append(dict(x, cat='Disruptions'))
+        elif re.search(STRANGE_RX['Activists'], head, re.I) and not NOT_NEWS.search(head):
+            scares.append(dict(x, cat='Activists'))
         elif re.search(STRANGE_RX['Antifa'], head, re.I):
             scares.append(dict(x, cat='Antifa'))
         elif re.search(STRANGE_RX['Fights'], head, re.I) and not NOT_NEWS.search(head) and not NOT_FIGHT.search(head):
@@ -206,10 +217,10 @@ def main():
         bycat.setdefault(x['cat'], []).append(x)
     Z = []
     while any(bycat.values()):
-        FIRST = ['Seattle scares', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Disruptions', 'Drug raids', 'Antifa']
+        FIRST = ['Seattle scares', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Activists', 'Peace', 'Environment', 'Anti-establishment', 'Disruptions', 'Drug raids', 'Antifa']
         for c in FIRST + [c for c, _, _ in STRANGE if c not in FIRST]:
             if bycat.get(c): x = bycat[c].pop(0); x['town'] = c; Z.append(x)
-    Z = Z[:30]
+    Z = Z[:45]
     for i, x in enumerate(C): x['rank'] = (1, 3)[i] if i < 2 else 30 + i
     for x in S: x['rank'] = 8
     for x in C: x['town'] = 'Crime'
