@@ -508,7 +508,10 @@ html:root body header.mast #paperBtn:hover,html:root body #paperBtn:hover{backgr
 #dirCol #ugLeft .ug-c small{font:500 10px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}
 #dirCol #ugLeft .ug-c em{display:none}
 @keyframes ugUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 4px))}}
-@media (prefers-reduced-motion:reduce){#dirCol #ugLeft .ug-track{animation:none}#dirCol #ugLeft{overflow:auto}}</style></head>
+@media (prefers-reduced-motion:reduce){#dirCol #ugLeft .ug-track{animation:none}#dirCol #ugLeft{overflow:auto}}html body aside#dirCol #ugLeft .ug-track{animation:ugUp 360s linear infinite!important}
+html body aside#dirCol #ugLeft:hover .ug-track{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){html body aside#dirCol #ugLeft .ug-track{animation:none!important}}
+</style></head>
 <body><script id="badassAds">/* Seattle Night Stalker side panels (owner, Nov 16 2026): only badass ads and event promos —
    rock, punk, metal, motorcycles, burlesque and pin-up, modeling, bars, clubs, lounges, raves, tattoo. */
 (()=>{const BAD=/\b(rock|punk|metal|hardcore|grunge|goth|industrial|garage|psych\w*|emo|ska|thrash|doom|sludge|stoner|electronic|edm|techno|house music|trance|dubstep|drum ?(?:&|and|n) ?bass|raves?|dj|djs|club|clubs|nightclub|lounge|bar|bars|tavern|saloon|pub|burlesque|cabaret|pin-?ups?|go-?go|lingerie|bikini|models?|modeling|fashion|runway|motorcycles?|biker|harley|choppers?|bike nights?|moto\w*|tattoo\w*|roller derby|wrestling|showbox|neumos|crocodile|el coraz[oó]n|funhouse|chop suey|substation|clock-?out|madame lou|vermillion|kremwerk|monkey loft|baba yaga|nectar|barboza|black lodge|high dive|sunset tavern|tim.?s tavern|skylark|central saloon|el corazon)\b/i;
