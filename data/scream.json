@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-16T10:32-08:00",
+ "asof": "2026-11-16T10:33-08:00",
  "strange": [
   {
    "h": "‘James Bond’ Gets a Modern Makeover, With Rogue AI, Fake News, and Billionaire Villains",
@@ -197,6 +197,17 @@
    "t": "2026-11-16T09:24-08:00",
    "sum": "",
    "cat": "Horror",
+   "kind": "strange"
+  },
+  {
+   "h": "Rappler. . Maria Ressa on AI overreliance: ‘Don’t outsource the nuances’ Rappler CEO and Nobel Peace Prize laureate Maria Ressa warns that growing overreliance on artificial intelligence could weaken critical thinking and harm newsrooms. Full story: https:",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNXJWVmlBR0hlYmg4LUd3RHVuN3RfNnlvUF8zQzhIbzJndy1XSWdzYzByODVPd3czcHJEdHFVMS1aMGJjaGhKUjNtbFVJX3hIY19WbmNwZ1k3Y0phSnFERlNKVW5FVGxuOWlqbnppcko2Wk5uRVlsU2k4bWtmbWJ0aE9Id1VIZlVMdXpoRmdaUUdzTEJMOWhfYkZVUzBibHZMbG5FNWdkdmtBQUJLV2pLMTlhNnpaQ1lFbW9SVkFYRFZ6emxkTUwybmFINzg1Ym1hb1hFaW5Sd1dKUjc2?oc=5",
+   "outlet": "Facebook",
+   "town": "AI fright",
+   "date": "2026-11-16",
+   "t": "2026-11-16T08:22-08:00",
+   "sum": "",
+   "cat": "AI fright",
    "kind": "strange"
   },
   {
@@ -483,17 +494,6 @@
    "t": "2026-11-16T07:25-08:00",
    "sum": "",
    "cat": "Horror",
-   "kind": "strange"
-  },
-  {
-   "h": "FBI says Artex AI open-source hacking tool used to breach networks in ‘under three hours’",
-   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWThOV0VjbkRfSEkyakpwWVVoQm1xczU0VU5sLVZETjFnOEtCaVBjd1FNUVN1WTVHLURpS19vNzByb1hndGZWRUt5RzU4YUprWDQ5T3RoY2NfSTNvaWhXR0hUZHJmWVhTRmxXV3pVRzNJcTI0emI3c2ZTdTNyb1FIUjFvNWp0Q0FGSWpIMWRKeFRhNzBkcFNvVnpsREQ4eWdZbmdVSC1mOWlGOWM5dFYxbi1qMnJrQnNPSWxOeS1ZTQ?oc=5",
-   "outlet": "TechCrunch",
-   "town": "Computer crime",
-   "date": "2026-11-16",
-   "t": "2026-11-16T09:36-08:00",
-   "sum": "",
-   "cat": "Computer crime",
    "kind": "strange"
   }
  ],
