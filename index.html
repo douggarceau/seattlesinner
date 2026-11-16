@@ -402,7 +402,7 @@ html body #whatsOn::before{content:"";position:absolute;left:0;right:0;top:0;hei
 #whatsOn .wo-n small,#whatsOn .wo-e{color:#8E9196!important}
 #whatsOn .wo-l{scrollbar-color:#DDE1E655 transparent!important}
 #whatsOn *,.lspot *').forEach(e=>{if(e.closest('.bp,.ep,#flagLine,.logo,svg,.artShow'))return;if(!e.offsetParent)return;if(![...e.childNodes].some(n=>n.nodeType==3&&n.nodeValue.trim()))return;const s=getComputedStyle(e);const bg=bgOf(e);if(!bg)return;const c=P(s.color);if((P(s.color)[3]??1)<.05&&s.webkitTextFillColor&&s.webkitTextFillColor!==s.color)return;const a=L(c),b=L(bg);if((Math.max(a,b)+.05)/(Math.min(a,b)+.05)<3.2){const col=b<.25?'#FFFFFF':'#000000';e.style.setProperty('color',col,'important');e.style.setProperty('-webkit-text-fill-color',col,'important')}
-</style><script src="whatson.js?v=1" defer></script><style id="astroCss">/* The Stars Over Seattle panel (replaces the tide chart) */
+</style><script src="whatson.js?v=1" defer></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap"><style id="astroCss">/* The Stars Over Seattle panel (replaces the tide chart) */
 #astro{margin:6px 0 14px;padding:12px 14px 12px;border:1px solid #A3000088;border-radius:2px;background:radial-gradient(120% 140% at 0 0,#A3000022,transparent 55%),linear-gradient(180deg,#0A0A0A,#000);box-shadow:inset 0 0 0 1px #000,0 0 24px #A3000033;color:#DDE1E6;font:13px/1.45 "PT Serif",Georgia,serif;position:relative;overflow:hidden}
 #astro::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff05 0 1px,transparent 1px 3px);pointer-events:none}
 #astro .as-h{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;border-bottom:1px solid #A3000066;padding-bottom:6px}
@@ -439,7 +439,18 @@ html body #whatsOn::before{content:"";position:absolute;left:0;right:0;top:0;hei
 #astro .as-bar em{font-style:normal;color:#fff;text-align:right}
 #astro .as-meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 4px;font:600 10px/1.3 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;color:#8E9196}
 #astro .as-meta b{color:#fff}#astro .as-note{color:#8E9196;font-size:10px}
-</style><script src="astro.js?v=1" defer></script></head>
+/* monochrome zodiac glyphs (no emoji tiles), chrome + blood red */
+#astro .as-gl,#astro .as-core,#astro .as-signs button,#astro .as-sky b,#astro .as-t b{font-family:"Noto Sans Symbols 2","Apple Symbols","Segoe UI Symbol","DejaVu Sans",sans-serif!important;font-variant-emoji:text}
+#astro .as-sky b,#astro .as-t b{font-family:Oswald,"Noto Sans Symbols 2","Apple Symbols","Segoe UI Symbol",sans-serif!important}
+#astro .as-gl{fill:#8E9196!important}#astro .as-gl.sun{fill:#DDE1E6!important}#astro .as-gl.on{fill:#FFFFFF!important}
+#astro .as-signs button{color:#B8B4AC!important;background:#050505!important;border-color:#2A2A2A!important}
+#astro .as-signs button:hover,#astro .as-signs button[aria-selected="true"]{color:#FFFFFF!important;border-color:#A30000!important;background:#120000!important;box-shadow:0 0 0 1px #A30000 inset,0 0 10px #A3000066!important}
+#astro .as-sky div{border-color:#2A2A2A!important;background:#050505!important}
+#astro .as-bar i{height:3px!important;border:0!important;background:#1A1A1A!important}
+#astro .as-bar b{background:#A30000!important;box-shadow:0 0 6px #A3000099!important}
+#astro{border-color:#2A2A2A!important;background:linear-gradient(180deg,#070707,#000)!important;box-shadow:0 0 0 1px #000,0 0 18px #A3000022!important}
+#astro .as-h{border-bottom-color:#2A2A2A!important}
+</style><script src="astro.js?v=2" defer></script></head>
 <body><script id="badassAds">/* Seattle Scream side panels (owner, Nov 16 2026): only badass ads and event promos —
    rock, punk, metal, motorcycles, burlesque and pin-up, modeling, bars, clubs, lounges, raves, tattoo. */
 (()=>{const BAD=/\b(rock|punk|metal|hardcore|grunge|goth|industrial|garage|psych\w*|emo|ska|thrash|doom|sludge|stoner|electronic|edm|techno|house music|trance|dubstep|drum ?(?:&|and|n) ?bass|raves?|dj|djs|club|clubs|nightclub|lounge|bar|bars|tavern|saloon|pub|burlesque|cabaret|pin-?ups?|go-?go|lingerie|bikini|models?|modeling|fashion|runway|motorcycles?|biker|harley|choppers?|bike nights?|moto\w*|tattoo\w*|roller derby|wrestling|showbox|neumos|crocodile|el coraz[oó]n|funhouse|chop suey|substation|clock-?out|madame lou|vermillion|kremwerk|monkey loft|baba yaga|nectar|barboza|black lodge|high dive|sunset tavern|tim.?s tavern|skylark|central saloon|el corazon)\b/i;
