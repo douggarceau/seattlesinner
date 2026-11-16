@@ -508,7 +508,7 @@ button{font:inherit;color:inherit}
 :root{--ls:0px;--lsh:calc(var(--ls)*1.22)}
 .lspot{--k:#B5123A;position:absolute;top:150px;z-index:40;width:var(--ls);height:var(--lsh);box-sizing:border-box;border-radius:6px;background:var(--panel,#0A1428);border:1px solid var(--line,#0F1F36);border-top:3px solid var(--k);box-shadow:0 14px 34px #0A1428CC,0 0 26px color-mix(in srgb,var(--k) 16%,transparent);overflow:hidden;transition:opacity .45s ease}
 .lspot::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,color-mix(in srgb,var(--k) 26%,transparent),transparent 62%),linear-gradient(180deg,transparent 55%,#0A1428 100%);pointer-events:none}
-.lspot a{transition:opacity .45s ease,transform .45s ease}.lspot.flip a{opacity:0;transform:translateY(6px)}
+.lspot a{transition:opacity .4s ease,transform .4s cubic-bezier(.4,0,.2,1);transform-origin:center;backface-visibility:hidden}.lspot.flip a{opacity:.12;transform:perspective(760px) rotateX(-90deg)}@media(prefers-reduced-motion:reduce){.lspot.flip a{transform:none;opacity:0}}
 .lspot[hidden]{display:none!important}
 @media (max-width:1279px){.lsrow .lspot.ls-extra{display:none!important}}
 .lspot.l{left:calc(max(10px,(100vw - 1760px)/2 - var(--ls) - 20px) - max(0px,(100vw - 1760px)/2))}.lspot.r{right:calc(max(10px,(100vw - 1760px)/2 - var(--ls) - 20px) - max(0px,(100vw - 1760px)/2))}
