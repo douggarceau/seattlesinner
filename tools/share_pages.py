@@ -87,15 +87,15 @@ def page(x, img):
     e = lambda v: html.escape(v or '', quote=True)
     url = f'{SITE}/s/{x["slug"]}/'
     dest = f'/?story={x["slug"]}'
-    desc = x.get('dek') or 'Seattle Night Stalker'
+    desc = x.get('dek') or 'The Guitar Doug Report'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(x["title"])} | Seattle Night Stalker</title>
+<title>{e(x["title"])} | The Guitar Doug Report</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Seattle Night Stalker">
+<meta property="og:site_name" content="The Guitar Doug Report">
 <meta property="og:title" content="{e(x["title"])}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
@@ -112,7 +112,7 @@ def page(x, img):
 <meta name="twitter:image" content="{SITE}/{img}">
 <script>location.replace({json.dumps(dest)})</script>
 <style>body{{margin:0;background:#0a1a33;color:#f8f4ea;font:18px/1.5 Georgia,serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box}}a{{color:#e8b818}}</style>
-</head><body><p><a href="{dest}">{e(x["title"])}</a><br>Seattle Night Stalker</p></body></html>
+</head><body><p><a href="{dest}">{e(x["title"])}</a><br>The Guitar Doug Report</p></body></html>
 '''
 
 

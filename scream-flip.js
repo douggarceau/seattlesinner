@@ -1,4 +1,4 @@
-/* Seattle Night Stalker: the side boxes flip one by one, each revealing a word, until a phrase is spelled out.
+/* The Guitar Doug Report: the side boxes flip one by one, each revealing a word, until a phrase is spelled out.
    It holds, flips back, and a new phrase comes later. (owner, Nov 16 2026) */
 (function(){
 const PHRASES=[
@@ -31,9 +31,9 @@ function cycle(){if(busy||document.hidden)return;const B=visibleBoxes();if(B.len
 const css=document.createElement('style');css.id='scrwCss';css.textContent=`
 .lsrow .lspot{position:relative}
 .lsrow .lspot .scrw{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;
- background:radial-gradient(90% 80% at 50% 50%,#1A1B1F,#000 70%);border:1px solid #D34A12;box-shadow:inset 0 0 30px #D34A1255;
+ background:radial-gradient(90% 80% at 50% 50%,#13307F,#000 70%);border:1px solid #1F7A3C;box-shadow:inset 0 0 30px #1F7A3C55;
  font:900 clamp(22px,2.3vw,40px)/1 Oswald,"Arial Narrow",Impact,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff;
- text-shadow:0 0 8px #FCCC0A,0 0 22px #D34A12,0 0 44px #D34A12;backface-visibility:hidden;transform-origin:50% 50%;
+ text-shadow:0 0 8px #7BC96F,0 0 22px #1F7A3C,0 0 44px #1F7A3C;backface-visibility:hidden;transform-origin:50% 50%;
  animation:scrIn .7s cubic-bezier(.2,.8,.2,1) both,scrFlick 3.2s steps(1) .7s infinite;pointer-events:none}
 .lsrow .lspot .scrw.out{animation:scrOut .55s ease-in both}
 @keyframes scrIn{from{transform:perspective(700px) rotateY(-95deg);opacity:0}to{transform:perspective(700px) rotateY(0);opacity:1}}
