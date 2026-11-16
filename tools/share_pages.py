@@ -58,7 +58,7 @@ def card(x, out):
     W, H = 1200, 630
     im = Image.new('RGB', (W, H), NAVY)
     d = ImageDraw.Draw(im)
-    mh = Image.open(os.path.join(ROOT, 'img', 'gdr-masthead.png')).convert('RGBA')
+    mh = Image.open(os.path.join(ROOT, 'img', 'masthead.png')).convert('RGBA')
     mw = 520; mh = mh.resize((mw, int(mh.height * mw / mh.width)), Image.LANCZOS)
     im.paste(mh, ((W - mw) // 2, 34), mh)
     top = 34 + mh.height + 26
@@ -87,15 +87,15 @@ def page(x, img):
     e = lambda v: html.escape(v or '', quote=True)
     url = f'{SITE}/s/{x["slug"]}/'
     dest = f'/?story={x["slug"]}'
-    desc = x.get('dek') or 'The Guitar Doug Report'
+    desc = x.get('dek') or 'Seattle News & Events'
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(x["title"])} | The Guitar Doug Report</title>
+<title>{e(x["title"])} | Seattle News & Events</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="The Guitar Doug Report">
+<meta property="og:site_name" content="Seattle News & Events">
 <meta property="og:title" content="{e(x["title"])}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
@@ -112,7 +112,7 @@ def page(x, img):
 <meta name="twitter:image" content="{SITE}/{img}">
 <script>location.replace({json.dumps(dest)})</script>
 <style>body{{margin:0;background:#0a1a33;color:#f8f4ea;font:18px/1.5 Georgia,serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box}}a{{color:#e8b818}}</style>
-</head><body><p><a href="{dest}">{e(x["title"])}</a><br>The Guitar Doug Report</p></body></html>
+</head><body><p><a href="{dest}">{e(x["title"])}</a><br>Seattle News & Events</p></body></html>
 '''
 
 

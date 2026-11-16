@@ -1,41 +1,4 @@
 {
  "asof": "2026-10-30T12:00:00-07:00",
- "items": [
-  {
-   "h": "WSU falls 31-10 to Boise State",
-   "sum": "The Cougars lost their fifth straight game, 31-10 against Boise State.",
-   "outlet": "FOX 13 Seattle",
-   "url": "https://www.fox13seattle.com/sports/wsu-falls-31-10-boise-state",
-   "town": "Pullman",
-   "date": "",
-   "rank": 1
-  },
-  {
-   "h": "Beacon Hill home becomes a haunted trail for Halloween",
-   "sum": "A house near Comet Lodge Cemetery offers a witches' lair, corn maze and pumpkin patch at no charge, with sensory-friendly visits by appointment Oct. 26-29.",
-   "outlet": "KOMO News",
-   "url": "https://komonews.com/news/arc-seattle/seattle-beacon-hill-home-transforms-into-haunted-trail-ahead-of-halloween",
-   "town": "Beacon Hill",
-   "date": "2026-10-23",
-   "rank": 2
-  },
-  {
-   "h": "Halloween weekend roundup: Dia de Muertos, harvest fests and a zombie walk",
-   "sum": "Pike Place Market's Dia de Muertos, a Freeway Park lantern festival, Issaquah's Zombie Walk, West Seattle Harvest Fest and the Museum of Fright top the family lineup.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/lifestyle/halloween-fun-around-seattle/4289228",
-   "town": "Seattle",
-   "date": "2026-10-23",
-   "rank": 3
-  },
-  {
-   "h": "Court revives lawsuit over Seattle rental rules",
-   "sum": "An appeals ruling lets a suit from affordable-housing providers over city rental regulations move ahead.",
-   "outlet": "KOMO News",
-   "url": "https://komonews.com/news/local/lawsuit-challenging-seattles-rental-regulations-can-move-forward-after-court-reversal-tenant-rights-landlord-eviction-affordable-complex-criminal-background-drugs-crime-destruction-lease-rent-increase-apartment-rental",
-   "town": "Seattle",
-   "date": "",
-   "rank": 4
-  }
- ]
+ "items": []
 }
