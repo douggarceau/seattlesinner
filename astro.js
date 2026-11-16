@@ -40,7 +40,7 @@ function bar(k,v){return '<div class="as-bar"><span>'+k+'</span><i><b style="wid
 function paint(){const box=document.getElementById('astro');if(!box)return;const now=new Date(),S=sky(now);
  const sunI=signOf(S.sun),moonI=signOf(S.moon),ascI=signOf(S.asc);if(sel===null||isNaN(sel))sel=sunI;
  const day=now.toLocaleDateString('en-CA',{timeZone:'America/Los_Angeles'}),Rd=reading(sel,day),Z=SIGNS[sel];
- box.innerHTML='<div class="as-h"><span class="as-k">The stars over Seattle</span><span class="as-live"><i></i>LIVE SKY · '+H(now.toLocaleTimeString('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'}))+'</span></div>'+
+ box.innerHTML='<div class="as-h"><span class="as-k">What the stars aren’t telling Seattle</span><span class="as-live"><i></i>LIVE SKY · '+H(now.toLocaleTimeString('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'}))+'</span></div>'+
  '<div class="as-grid"><div class="as-left">'+wheel(sunI,moonI,sel)+'<div class="as-sky">'+
   '<div><small>Sun in</small><b>'+SIGNS[sunI][1]+' '+SIGNS[sunI][0]+'</b></div>'+
   '<div><small>Moon in</small><b>'+SIGNS[moonI][1]+' '+SIGNS[moonI][0]+'</b></div>'+
