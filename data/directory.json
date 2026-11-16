@@ -2,6 +2,8 @@
  "asof": "2026-10-30T09:00:00-07:00",
  "cats": [
   "Nightclubs",
+  "Fetish nights",
+  "Burlesque",
   "Rage rooms and axe throwing",
   "Roller derby",
   "Speakeasies",
@@ -47,6 +49,258 @@
   "Restaurants"
  ],
  "items": [
+  {
+   "i": "461",
+   "n": "Fetish Night at Lover's Lair",
+   "c": "Fetish nights",
+   "a": "5329 Evergreen Way, Everett, WA 98203",
+   "p": "(425) 775-4502",
+   "e": "",
+   "w": "https://loverslair.com/",
+   "wl": "Website",
+   "b": "Monthly first-Friday fetish social in the Lover's Lair back-room venue, with an orientation before it starts. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "loverslair.com",
+     "https://loverslair.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "460",
+   "n": "Seattle Fetish Ball",
+   "c": "Fetish nights",
+   "a": "Showbox SoDo, 1700 1st Ave S, Seattle, WA 98134",
+   "p": "",
+   "e": "",
+   "w": "https://www.seattlefetishball.com/",
+   "wl": "Website",
+   "b": "Annual fetish-attire ball with a strict dress code; organizers list a social event for Feb. 18, 2027. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.seattlefetishball.com",
+     "https://www.seattlefetishball.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "459",
+   "n": "Seattle Cannabis Co.",
+   "c": "Dispensaries",
+   "a": "7266 Rainier Ave S, Seattle, WA 98118",
+   "p": "(206) 420-1042",
+   "e": "",
+   "w": "https://www.seattlecannabis.co/",
+   "wl": "Website",
+   "b": "Licensed recreational and medical cannabis store in Rainier Beach, open daily from 8 a.m. to 11 p.m. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.seattlecannabis.co",
+     "https://www.seattlecannabis.co/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "458",
+   "n": "Lux Pot Shop Ballard",
+   "c": "Dispensaries",
+   "a": "4912 17th Ave NW, Seattle, WA 98107",
+   "p": "(206) 294-5586",
+   "e": "",
+   "w": "https://www.luxpotshop.com/",
+   "wl": "Website",
+   "b": "Licensed recreational cannabis store in Ballard, one of three Lux locations in Seattle. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.luxpotshop.com",
+     "https://www.luxpotshop.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "457",
+   "n": "Kemp's Cannabis Belltown",
+   "c": "Dispensaries",
+   "a": "3035 1st Ave, Seattle, WA 98121",
+   "p": "(206) 345-0009",
+   "e": "",
+   "w": "https://kempscannabis.com/",
+   "wl": "Website",
+   "b": "Licensed recreational cannabis store in Belltown co-founded by former Sonics player Shawn Kemp. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "kempscannabis.com",
+     "https://kempscannabis.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "456",
+   "n": "The Reef Capitol Hill",
+   "c": "Dispensaries",
+   "a": "1525 E Olive Way, Seattle, WA 98122",
+   "p": "(206) 466-6286",
+   "e": "",
+   "w": "https://www.thereefstores.com/locations/capitol-hill/",
+   "wl": "Website",
+   "b": "Licensed recreational cannabis store on Capitol Hill, open daily from 8 a.m. to 11:30 p.m. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.thereefstores.com",
+     "https://www.thereefstores.com/locations/capitol-hill/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "455",
+   "n": "Lover's Lair",
+   "c": "Adult shops",
+   "a": "5329 Evergreen Way, Everett, WA 98203",
+   "p": "(425) 775-4502",
+   "e": "",
+   "w": "https://loverslair.com/",
+   "wl": "Website",
+   "b": "Everett adult boutique specializing in latex clothing, lingerie and fetish gear. 18+.",
+   "nt": [
+    "Age: 18+"
+   ],
+   "s": [
+    [
+     "www.heraldnet.com",
+     "https://www.heraldnet.com/2025/12/30/whats-behind-the-tinted-windows-at-everetts-1-kink-store/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "454",
+   "n": "Babeland",
+   "c": "Adult shops",
+   "a": "707 E Pike St, Seattle, WA 98122",
+   "p": "(206) 687-6966",
+   "e": "",
+   "w": "https://www.babeland.com/",
+   "wl": "Website",
+   "b": "Capitol Hill adult boutique selling adult products, books and sexual wellness goods since 1993. 18+.",
+   "nt": [
+    "Age: 18+"
+   ],
+   "s": [
+    [
+     "www.babeland.com",
+     "https://www.babeland.com/content/c/Babeland_Store_Locations"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "453",
+   "n": "The Atomic Bombshells",
+   "c": "Burlesque",
+   "a": "Performs at The Triple Door, 216 Union St, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://theticket.seattletimes.com/top-picks/let-valentines-day-be-a-drag-and-a-laugh/",
+   "wl": "Website",
+   "b": "Long-running Seattle burlesque troupe known for its yearly Valentine's show, J'ADORE, at The Triple Door. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "theticket.seattletimes.com",
+     "https://theticket.seattletimes.com/top-picks/let-valentines-day-be-a-drag-and-a-laugh/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "452",
+   "n": "Kittens Cabaret",
+   "c": "Strip clubs",
+   "a": "5800 4th Ave S, Seattle, WA 98108",
+   "p": "(206) 588-1997",
+   "e": "",
+   "w": "https://www.kittenscabaret.com/",
+   "wl": "Website",
+   "b": "South Seattle adult cabaret with stage dancers and VIP suites, open daily. 18+.",
+   "nt": [
+    "Age: 18+"
+   ],
+   "s": [
+    [
+     "www.kittenscabaret.com",
+     "https://www.kittenscabaret.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "451",
+   "n": "The Playground Cabaret",
+   "c": "Strip clubs",
+   "a": "7509 15th Ave NW, Seattle, WA 98117",
+   "p": "(206) 782-1225",
+   "e": "",
+   "w": "https://theplaygroundcabaret.com/",
+   "wl": "Website",
+   "b": "Ballard gentlemen's club with stage shows, private rooms and a bar, open daily. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "theplaygroundcabaret.com",
+     "https://theplaygroundcabaret.com/pages/faq"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "450",
+   "n": "Pandora's Adult Cabaret",
+   "c": "Strip clubs",
+   "a": "8914 Lake City Way NE, Seattle, WA 98115",
+   "p": "(206) 524-6003",
+   "e": "",
+   "w": "https://pandorascabaret.com/",
+   "wl": "Website",
+   "b": "Gentlemen's club in Lake City with a full bar and daily stage entertainment. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "pandorascabaret.com",
+     "https://pandorascabaret.com/"
+    ]
+   ],
+   "cl": false
+  },
   {
    "i": "449",
    "n": "Axe Kickers",
@@ -9007,6 +9261,8 @@
   "Pole and burlesque",
   "Speakeasies",
   "Roller derby",
-  "Rage rooms and axe throwing"
+  "Rage rooms and axe throwing",
+  "Burlesque",
+  "Fetish nights"
  ]
 }
