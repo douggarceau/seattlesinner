@@ -1,8 +1,22 @@
 {
- "_why": "Owner rule, Nov. 16, 2026: this site is unnamed for now. Never show Seattle Sinner, Guitar Doug or Doug. Contact goes to the webmaster.",
+ "_why": "Owner rules, Nov. 16, 2026: the site is named Seattle Scream. Never show Seattle Sinner, Guitar Doug or Doug. Contact goes to the webmaster.",
  "renames": [
-  ["(?:The )?Guitar Doug Report", "Seattle News & Events"],
-  ["(?:The )?Seattle Sinner", "Seattle News & Events"]
+  [
+   "(?:The )?Guitar Doug Report",
+   "Seattle Scream"
+  ],
+  [
+   "(?:The )?Seattle Sinner",
+   "Seattle Scream"
+  ],
+  [
+   "Seattle News & Events",
+   "Seattle Scream"
+  ]
  ],
- "ban": ["\\bguitar ?doug\\b", "\\bseattle ?sinner\\b", "\\bdoug(?:ie|s)?\\b"]
+ "ban": [
+  "\\bguitar ?doug\\b",
+  "\\bseattle ?sinner\\b",
+  "\\bdoug(?:ie|s)?\\b"
+ ]
 }

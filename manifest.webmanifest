@@ -1,6 +1,6 @@
 {
- "name": "Seattle News & Events",
- "short_name": "Seattle",
+ "name": "Seattle Scream",
+ "short_name": "Seattle Scream",
  "description": "Seattle news, music, food and the city calendar.",
  "id": "/",
  "start_url": "/?source=app",
