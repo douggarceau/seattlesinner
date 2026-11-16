@@ -3232,5 +3232,12 @@ html:root body #topDark{background:#050505!important;border-color:#1A1B1F!import
 html:root body #view section.box,html:root body #view .box,html:root body #coverSlot section.box{background-color:#050505!important;background-image:none!important}
 </style>
 <script src="newspaper.js?v=1"></script>
+<script id="tabFixJs">/* Night Stalker: top tabs land on their page. Front-only blocks hide on other tabs, and a tab click scrolls to the content. */
+(()=>{const sync=()=>{try{document.documentElement.classList.toggle('vw-front',STATE.view==='front')}catch(_){}};
+ const hook=()=>{if(typeof window.render!=='function'||window.render.__tf)return setTimeout(hook,300);const r0=window.render;window.render=function(){const o=r0.apply(this,arguments);sync();return o};window.render.__tf=1;sync()};hook();
+ document.addEventListener('click',e=>{const b=e.target.closest('#nav [data-go], #nav .ng-main, .ng-bar [data-go]');if(!b)return;
+  setTimeout(()=>{sync();const n=document.getElementById('nav'),v=document.getElementById('view');if(!v)return;
+   const y=(document.documentElement.classList.contains('vw-front')?0:v.getBoundingClientRect().top+scrollY-(n?n.offsetHeight+16:16));scrollTo({top:Math.max(0,y),behavior:'smooth'})},60)},true)})();</script>
+<style id="tabFixCss">html:not(.vw-front) #topDark,html:not(.vw-front) #whatsOn,html:not(.vw-front) #coverSlot{display:none!important}</style>
 </body>
 </html>
