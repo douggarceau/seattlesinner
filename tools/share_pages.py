@@ -10,7 +10,7 @@ Run from the repo root. Safe to run repeatedly; only changed stories are rewritt
 import hashlib, html, json, os, re, shutil, sys
 from PIL import Image, ImageDraw, ImageFont
 
-SITE = 'https://seattlesinner.com'
+SITE = 'https://theguitardougreport.com'
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONTS = os.path.join(ROOT, 'tools', 'fonts')
 LABEL = {'crime': 'Crime Watch', 'streets': 'Seattle News', 'politics': 'City Hall', 'housing': 'Homes',

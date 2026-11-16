@@ -9,10 +9,10 @@
 <meta property="og:title" content="The Guitar Doug Report">
 <meta property="og:description" content="The most complete listings in Seattle: live music, concerts and shows, top headlines, restaurants and the visitor guide, updated every morning.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://seattlesinner.com/">
+<meta property="og:url" content="https://theguitardougreport.com/">
 <meta property="og:site_name" content="The Guitar Doug Report">
-<meta property="og:image" content="https://seattlesinner.com/img/og-share.jpg?v=2">
-<meta property="og:image:secure_url" content="https://seattlesinner.com/img/og-share.jpg?v=2">
+<meta property="og:image" content="https://theguitardougreport.com/img/og-share.jpg?v=2">
+<meta property="og:image:secure_url" content="https://theguitardougreport.com/img/og-share.jpg?v=2">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -20,8 +20,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Guitar Doug Report">
 <meta name="twitter:description" content="Seattle news, music, food and the city calendar.">
-<meta name="twitter:image" content="https://seattlesinner.com/img/og-share.jpg?v=2">
-<link rel="canonical" href="https://seattlesinner.com/">
+<meta name="twitter:image" content="https://theguitardougreport.com/img/og-share.jpg?v=2">
+<link rel="canonical" href="https://theguitardougreport.com/">
 <link rel="icon" type="image/png" href="/app/favicon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0A1428">
@@ -1384,7 +1384,7 @@ html body #jtSea .jts-m{display:flex;gap:10px;align-items:baseline;padding-top:8
       <button type="button" class="shrbig" id="shrBtn" aria-haspopup="true"><span aria-hidden="true">↗</span> Share the Report</button>
       
       </div>
-      <div class="approw"><a class="appbtn xhd" href="https://twitter.com/intent/tweet?text=The%20Guitar%20Doug%20Report&url=https%3A%2F%2Fseattlesinner.com%2F" target="_blank" rel="noopener">𝕏 Share on X</a></div>
+      <div class="approw"><a class="appbtn xhd" href="https://twitter.com/intent/tweet?text=The%20Guitar%20Doug%20Report&url=https%3A%2F%2Ftheguitardougreport.com%2F" target="_blank" rel="noopener">𝕏 Share on X</a></div>
       <form class="subbox" id="subBox" novalidate>
         <div class="sb-head"><b>Join The Guitar Doug Report</b><span>Reader account · full stories &amp; comments</span></div>
         <div class="sb-tabs" role="tablist"><button type="button" class="on" data-m="up">Subscribe</button><button type="button" data-m="in">Log in</button></div>
@@ -1586,7 +1586,7 @@ function techRow(n){return `<a class="bwr" href="${esc(n.u)}" target="_blank" re
 function rogueCard(r){const k=TK[r.kind]||'#B5123A';return `<a class="rg" style="--k:${k}" href="${esc(r.url)}" target="_blank" rel="noopener"><span class="kick" style="--tc:${k}"><span class="dot"></span>${esc(r.kind)}<time>${esc(mday(r.date))}</time></span><h4>${esc(r.title)}</h4><p>${esc(r.detail)}</p>${r.why?`<span class="why">${esc(r.why)}</span>`:''}<span class="sc meta" style="all:unset;font:600 11px/1.2 var(--body);color:var(--mute)">${esc(r.org||'')}</span></a>`}
 function vTech(){const T=TECH||{},B=T.bell||{};const ts=STORIES.filter(s=>['the-swarm','ai-flash','robot-price-tag','pink-slip-city'].includes(s.slug));
   return `<div class="troom"><h2 class="room">Tech &amp; AI</h2>
-  <a class="pmlink pmred" href="https://seattlesinner.com/tech/"><span class="pm-tag">EXCLUSIVE!</span><b>Tech &amp; AI <i>Power Map</i></b><span class="pm-go">Who controls AI and Big Tech →</span></a>
+  <a class="pmlink pmred" href="https://theguitardougreport.com/tech/"><span class="pm-tag">EXCLUSIVE!</span><b>Tech &amp; AI <i>Power Map</i></b><span class="pm-go">Who controls AI and Big Tech →</span></a>
   <div class="intro"><b>Wired in from AI Signals</b><p>Machines, money and the people building both. Headlines come from the AI Signals Tech &amp; AI Power Map and refresh every morning.</p></div>
   <div class="lbl"><b>AI gone rogue</b><span>when the models misbehave</span></div><div class="tgrid">${(T.rogue||[]).map(rogueCard).join('')}</div>
   <div class="tsplit"><section class="box" style="--c:#B5123A"><div class="bh"><b>Tech &amp; AI headlines</b><span>${(T.news||[]).length} items</span></div><div class="bwl">${(T.news||[]).slice(0,24).map(techRow).join('')||'<div class="empty">Feed is loading.</div>'}</div></section>
@@ -1815,7 +1815,7 @@ function vStories(){
 }
 const PAY_LINK='';
 function memberBox(){return ''}
-const storyLink=s=>'https://seattlesinner.com/'+(s?'s/'+s.slug+'/':'');
+const storyLink=s=>'https://theguitardougreport.com/'+(s?'s/'+s.slug+'/':'');
 function xShare(s){const u=storyLink(s);const t=s?s.title+' | The Guitar Doug Report':'The Guitar Doug Report';return 'https://twitter.com/intent/tweet?text='+encodeURIComponent(t)+'&url='+encodeURIComponent(u)}
 function xBtn(s){return `<a class="xbtn" href="${xShare(s)}" target="_blank" rel="noopener" aria-label="Share on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8.1-9.3L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg>Share on X</a>`}
 /* Top Crime Story banner: the most serious recent Seattle crime headline from data/crime.json (refreshed by the Crime Watch desk). */
@@ -2233,7 +2233,7 @@ setInterval(()=>{if(document.hidden)return;const c=[...document.querySelectorAll
 const tick=()=>{const d=new Date();$('twTime').textContent=d.toLocaleTimeString('en-US',{timeZone:Z,hour:'numeric',minute:'2-digit'});$('twDate').textContent=d.toLocaleDateString('en-US',{timeZone:Z,weekday:'short',month:'short',day:'numeric'})+' · Seattle'};tick();setInterval(tick,15000);
 const W={0:['☀','Clear'],1:['🌤','Mostly clear'],2:['⛅','Partly cloudy'],3:['☁','Overcast'],45:['🌫','Fog'],48:['🌫','Fog'],51:['🌦','Drizzle'],53:['🌦','Drizzle'],55:['🌧','Drizzle'],56:['🌧','Freezing drizzle'],57:['🌧','Freezing drizzle'],61:['🌧','Light rain'],63:['🌧','Rain'],65:['🌧','Heavy rain'],66:['🌧','Freezing rain'],67:['🌧','Freezing rain'],71:['🌨','Light snow'],73:['🌨','Snow'],75:['❄','Heavy snow'],77:['🌨','Snow'],80:['🌦','Showers'],81:['🌧','Showers'],82:['⛈','Downpours'],85:['🌨','Snow showers'],86:['🌨','Snow showers'],95:['⛈','Thunderstorms'],96:['⛈','Thunderstorms'],99:['⛈','Thunderstorms']};
 const wx=()=>fetch('https://api.open-meteo.com/v1/forecast?latitude=47.6062&longitude=-122.3321&current=temperature_2m,weather_code,is_day&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&forecast_days=1').then(r=>r.json()).then(j=>{const c=j.current||{},k=W[c.weather_code]||['☁','Seattle'];let i=k[0];if(!c.is_day&&c.weather_code<=1)i='🌙';$('twIcon').textContent=i;$('twTemp').textContent=Math.round(c.temperature_2m)+'°F';const dd=j.daily||{};$('twCond').textContent=k[1]+(dd.temperature_2m_max?` · ${Math.round(dd.temperature_2m_max[0])}°/${Math.round(dd.temperature_2m_min[0])}°`:'')}).catch(()=>{});wx();setInterval(wx,900000)})();</script>
-<script>(()=>{const U0='https://seattlesinner.com/',T0='The Guitar Doug Report: Seattle news, events and the calendar for Seattle',cur=()=>{try{if(STATE.view==='read'&&STATE.story)return 'https://seattlesinner.com/s/'+STATE.story+'/'}catch(_){}return U0},curT=()=>{try{if(STATE.view==='read'){const x=STORIES.find(z=>z.slug===STATE.story);if(x)return x.title+' | The Guitar Doug Report'}}catch(_){}return T0},b=document.getElementById('shrBtn'),p=document.getElementById('shrPop');if(!b||!p)return;
+<script>(()=>{const U0='https://theguitardougreport.com/',T0='The Guitar Doug Report: Seattle news, events and the calendar for Seattle',cur=()=>{try{if(STATE.view==='read'&&STATE.story)return 'https://theguitardougreport.com/s/'+STATE.story+'/'}catch(_){}return U0},curT=()=>{try{if(STATE.view==='read'){const x=STORIES.find(z=>z.slug===STATE.story);if(x)return x.title+' | The Guitar Doug Report'}}catch(_){}return T0},b=document.getElementById('shrBtn'),p=document.getElementById('shrPop');if(!b||!p)return;
 b.addEventListener('click',async e=>{e.stopPropagation();if(navigator.share&&matchMedia('(pointer:coarse)').matches){try{await navigator.share({title:'The Guitar Doug Report',text:curT(),url:cur()});return}catch(_){}}const r=b.getBoundingClientRect();p.style.top=(r.bottom+8)+'px';p.style.right=Math.max(16,innerWidth-r.right)+'px';p.hidden=!p.hidden});
 document.addEventListener('click',e=>{if(!p.hidden&&!p.contains(e.target)&&e.target!==b)p.hidden=true});
 p.addEventListener('click',e=>{const a=e.target.closest('[data-sh]');if(!a)return;e.preventDefault();const U=cur(),T=curT(),k=a.dataset.sh,u=encodeURIComponent(U),t=encodeURIComponent(T);
@@ -2310,7 +2310,7 @@ window.__fill0=(a,s)=>fill0(a,s);function fill0(a,s){if(!a||!s)return;try{const 
  a.setAttribute('aria-label',s.bigText||s.name);box.style.setProperty('--k',s.k||'');if(!s.k)box.style.removeProperty('--k');if(s.sty)box.dataset.adv=s.sty;else delete box.dataset.adv;
  const mid=s.img?'<img src="'+s.img+'" alt=""'+(s.round?' class="round'+(s.round>1?' dark':'')+'"':'')+'>':'<span class="ls-big">'+(s.bigText?esc(s.bigText):s.big)+'</span>';
  a.innerHTML='<span class="ls-tag">'+esc(s.tag)+'</span>'+mid+'<span><b>'+esc(s.name)+'</b>'+(s.when?'<i>'+esc(s.when)+'</i>':'')+(s.sub?'<small>'+esc(s.sub)+'</small>':'')+'<span class="ls-go">'+esc(s.go)+' →</span></span>'}
-function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-pmx';a.href='https://seattlesinner.com/tech/';a.removeAttribute('target');a.setAttribute('aria-label','Tech & AI Power Map: who controls AI and Big Tech');
+function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-pmx';a.href='https://theguitardougreport.com/tech/';a.removeAttribute('target');a.setAttribute('aria-label','Tech & AI Power Map: who controls AI and Big Tech');
  const pads=()=>'<span class="pmx-pads">'+'<b></b>'.repeat(15)+'</span>';
  a.innerHTML='<span class="pmx-bar"><span>■ Power Map</span><i>AI Signals live</i></span><span class="pmx-top">'+pads()+'<span class="pmx-eye"><img src="img/promo-powermap.jpg" alt=""></span>'+pads()+'</span><span class="pmx-ttl">Tech &amp; AI Power Map</span><span class="pmx-by">New software</span><span class="pmx-stk"><span class="tk">····</span><span class="pr"></span><span class="nm">Loading the market</span><span class="ch"></span></span><span class="pmx-rk"><h5>Power ranking</h5><ol><li></li><li></li><li></li><li></li></ol></span><span class="pmx-log">establishing link</span><span class="pmx-go">Enter the map →</span>';
  const still=matchMedia('(prefers-reduced-motion:reduce)').matches,live=()=>!document.hidden&&!still;
