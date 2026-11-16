@@ -12,7 +12,7 @@ Staying within the law (how this works):
   - Sex-scandal items never involve minors: anything mentioning children, teens, students,
     schools, abuse, assault, rape or trafficking is skipped. Those are victims' stories, not scandals.
   - No sports (site rule).
-Standard library only. No AI. Also dark and strange news at the top (underworld, cults and the occult, cryptids, the unexplained, true crime, Seattle scares, paranormal, UFOs, conspiracy theories, AI gone wrong, dangerous robots,
+Standard library only. No AI. Also breaking dark and strange news at the top (AI fright, government spying, corporate spying, computer crime, police state, extremists, antifa, missing persons, drones, AI and robots first; underworld, cults and the occult, cryptids, the unexplained, true crime, Seattle scares, paranormal, UFOs, conspiracy theories, AI gone wrong, dangerous robots,
 military drones, horror, bodies found, fights, drug raids, police scandals and lawsuits, protests, groups disrupting meetings and events, activists and human rights groups, peace, the environment, anti-establishment movements, antifa,
 police corruption, passengers removed from planes):
 newsroom reports about those subjects found through news search, again linked to the outlet.
@@ -37,9 +37,21 @@ FEEDS = [
     ('FOX 13 Seattle', 'https://www.fox13seattle.com/rss/category/news'),
 ]
 
-GN = 'https://news.google.com/rss/search?q={}%20when:7d&hl=en-US&gl=US&ceid=US:en'
+GN = 'https://news.google.com/rss/search?q={}%20when:2d&hl=en-US&gl=US&ceid=US:en'
 # Strange news (owner, Nov. 16, 2026): newsroom reports ABOUT these subjects, linked to the outlet.
 STRANGE = [
+ ('AI fright', ['AI scary OR terrifying OR "out of control" OR "rogue AI"', '"AI" threat OR danger OR warning OR deepfake scam', 'AI "went wrong" OR lawsuit OR "AI chatbot" harm'],
+  r"\b(ai|a\.i\.|artificial intelligence|chatbots?|deepfakes?|chatgpt|openai|gemini|grok|llms?|agi|superintelligence)\b"),
+ ('Government spying', ['government surveillance OR "mass surveillance" OR NSA OR "spy agency"', 'FISA OR "Section 702" OR "warrantless surveillance" OR wiretap', 'government tracking phones OR "data brokers" OR "location data" OR Palantir'],
+  r"\b(surveil\w*|spying|spied|spy agenc\w*|nsa|fbi|fisa|section 702|wiretap\w*|warrantless|data brokers?|location data|tracking|palantir|backdoors?|monitor\w*|eavesdrop\w*|privacy)\b"),
+ ('Corporate spying', ['big tech tracking OR "data harvesting" OR "sold your data" OR "selling user data"', 'Amazon OR Meta OR Google tracking privacy lawsuit OR "workplace surveillance" OR "employee monitoring"'],
+  r"\b(track\w*|data (?:harvest\w*|collection|brokers?)|sold (?:user |your )?data|selling (?:user )?data|privacy|surveil\w*|monitor\w*|spying|listening|cookies|biometric\w*)\b"),
+ ('Extremists', ['neo-Nazi OR "white supremacist" OR "hate group"', 'Washington neo-Nazi OR "Proud Boys" OR militia OR extremist', 'Seattle hate crime OR extremist OR "white nationalist"'],
+  r"\b(neo-?nazis?|nazis?|white supremac\w*|white nationalis\w*|hate groups?|hate crimes?|proud boys|militias?|extremis\w*|skinheads?|kkk|ku klux klan)\b"),
+ ('Missing', ['Seattle missing person OR "missing woman" OR "missing man" OR "Amber Alert"', 'Washington missing hiker OR "last seen" OR "endangered missing"'],
+  r"\b(missing|disappear\w*|vanish\w*|amber alert|last seen|search for)\b"),
+ ('Computer crime', ['Seattle data breach OR hack OR cyberattack OR ransomware', 'ransomware OR \"data breach\" OR cyberattack OR hackers', 'identity theft OR phishing scam OR spyware OR \"dark web\" leak'],
+  r"\b(hack\w*|ransomware|breach\w*|cyber\w*|malware|phishing|spyware|identity theft|data leaks?|stolen data|crypto theft|scammers?|zero-day|botnet|ddos)\b"),
  ('Underworld', ['Seattle gang OR cartel OR "organized crime" OR "drug ring"', 'mob OR mafia OR cartel OR "organized crime" boss', '"dark web" OR "black market" OR heist OR smuggling ring'],
   r"\b(gangs?|gangsters?|cartels?|mob|mobsters?|mafia|organized crime|crime (?:family|boss|ring)|drug ring|dark web|black market|heists?|smuggl\w*|underworld|hitm[ae]n|contract killing|racketeer\w*|money launder\w*)\b"),
  ('Cults & occult', ['cult leader OR "doomsday cult" OR "cult members"', 'occult OR ritual OR seance OR ouija OR "black magic"', 'vampire OR "blood ritual" OR satanic ritual'],
@@ -58,12 +70,14 @@ STRANGE = [
  ('UFOs', ['Washington UFO OR UAP', 'UFO OR UAP OR "unidentified anomalous"'],
   r"\b(ufos?|uaps?|aliens?|extraterrestrial\w*|flying saucers?|unidentified (?:flying|anomalous))\b"),
  ('Conspiracy', ['"conspiracy theory" OR "conspiracy theories" OR "conspiracy theorist"'], r"\bconspirac\w*\b"),
- ('AI gone wrong', ['AI chatbot lawsuit OR "AI error" OR "AI mistake" OR deepfake OR "AI hallucination" OR "rogue AI"'],
-  r"\b(ai|a\.i\.|artificial intelligence|chatbots?|deepfakes?|chatgpt|gemini|grok)\b"),
- ('Robots', ['robot attack OR robot injured OR robot danger OR robotaxi crash OR "humanoid robot"', 'Waymo OR robotaxi OR "delivery robot"'],
-  r"\b(robots?|robotic|robotaxis?|humanoids?|waymo)\b"),
- ('Military drones', ['military drone OR "drone strike" OR "drone swarm" OR "drone warfare" OR "killer drone"', 'drones over base OR drone incursion'],
-  r"\b(drones?|uavs?|unmanned aerial)\b"),
+ ('AI', ['artificial intelligence OR "AI" breaking', 'AI chatbot OR OpenAI OR "AI model" OR deepfake'],
+  r"\\b(ai|a\\.i\\.|artificial intelligence|chatbots?|deepfakes?|chatgpt|openai|anthropic|gemini|grok|llms?|agi)\\b"),
+ ('Robots', ['robot OR robots OR "humanoid robot" OR robotics', 'robotaxi OR Waymo OR "delivery robot" OR "robot dog"'],
+  r"\\b(robots?|robotic\\w*|robotaxis?|humanoids?|waymo|tesla optimus|boston dynamics)\\b"),
+ ('Drones', ['military drone OR "drone strike" OR "drone swarm" OR "drone warfare"', 'police drone OR drone surveillance OR "drone sighting" OR drones over', 'Seattle drone OR Washington drone'],
+  r"\\b(drones?|uavs?|unmanned aerial|quadcopters?)\\b"),
+ ('Police state', ['police surveillance OR "facial recognition" OR "license plate cameras" OR "Flock cameras"', '"police state" OR "martial law" OR curfew OR "National Guard deployed"', 'Seattle police surveillance OR crackdown OR "surveillance cameras"', 'immigration raid OR "ICE agents" OR crackdown arrests', 'martial law OR "Insurrection Act" OR "troops deployed" city'],
+  r"\\b(surveil\\w*|facial recognition|license[- ]plate (?:readers?|cameras?)|flock|spy\\w*|crackdowns?|curfews?|martial law|police state|national guard|militari[sz]ed|riot (?:police|gear)|tear gas|raids?|checkpoints?|ice agents?|deport\\w*|predictive policing|stingray|tracking|detain\\w*|detention)\\b"),
  ('Body found', ['Seattle "body found" OR "remains found" OR "body discovered" OR "body recovered"', 'Washington "body found" OR "human remains"'],
   r"\b(bod(?:y|ies)|remains)\b.*\b(found|discovered|recovered|pulled)\b|\b(found|discovered)\b.*\b(bod(?:y|ies)|remains)\b"),
  ('Fights', ['Seattle fight breaks out OR brawl OR melee', 'Washington "fight breaks out" OR brawl'],
@@ -137,7 +151,7 @@ def text(x):
 
 def fetch(url):
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; seattle-scream-headlines/1.0)'})
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with urllib.request.urlopen(req, timeout=12) as r:
         return r.read()
 
 def items(outlet, url):
@@ -158,21 +172,32 @@ def items(outlet, url):
     print(f'{outlet}: {len(out)} items'); return out
 
 def strange_items():
+    import concurrent.futures as cf
+    jobs = [(cat, rx, q) for cat, queries, rx in STRANGE for q in queries]
+    ex = cf.ThreadPoolExecutor(16)
+    futs = {ex.submit(items, 'news search', GN.format(urllib.request.quote(j[2]))): j for j in jobs}
+    got = []
+    try:
+        for f in cf.as_completed(futs, timeout=240):   # hard budget: the GitHub job has 15 minutes
+            try: got.append((futs[f], f.result()))
+            except Exception: pass
+    except cf.TimeoutError:
+        print('news search: time budget reached, using', len(got), 'of', len(jobs), 'searches')
+    ex.shutdown(wait=False, cancel_futures=True)
     res = []
-    for cat, queries, rx in STRANGE:
+    for (cat, rx, q), found in got:
         R = re.compile(rx, re.I)
-        for q in queries:
-            for x in items('news search', GN.format(urllib.request.quote(q))):
-                h = x['h']; src = None
-                if ' - ' in h:
-                    h, src = [s.strip() for s in h.rsplit(' - ', 1)]
-                if not R.search(h) or NOT_NEWS.search(h) or NO_LGBT.search(h): continue
-                if cat != 'Horror' and NOT_FILM.search(h): continue
-                if cat in ('AI gone wrong', 'Robots', 'Military drones') and not AI_BAD.search(h): continue
-                if cat == 'Drug raids' and not re.search(r'drug|narcotic|fentanyl|meth|cocaine|heroin', h, re.I): continue
-                if cat in LOCAL_CATS and not SEA.search(h): continue
-                if cat == 'Fights' and NOT_FIGHT.search(h): continue
-                x.update(h=h, outlet=src or 'News report', town=cat, cat=cat); res.append(x)
+        for x in found:
+            h = x['h']; src = None
+            if ' - ' in h:
+                h, src = [s.strip() for s in h.rsplit(' - ', 1)]
+            if not R.search(h) or NOT_NEWS.search(h) or NO_LGBT.search(h): continue
+            if cat != 'Horror' and NOT_FILM.search(h): continue
+            if cat == 'AI fright' and not AI_BAD.search(h): continue
+            if cat == 'Drug raids' and not re.search(r'drug|narcotic|fentanyl|meth|cocaine|heroin', h, re.I): continue
+            if cat in LOCAL_CATS and not SEA.search(h): continue
+            if cat == 'Fights' and NOT_FIGHT.search(h): continue
+            x.update(h=h, outlet=src or 'News report', town=cat, cat=cat); res.append(x)
     return res
 
 def main():
@@ -222,8 +247,8 @@ def main():
             x = {k2: v for k2, v in x.items() if not k2.startswith('_')}; x['kind'] = kind; res.append(x)
         return res[:cap]
     # crimes: keep older ones when the feeds are quiet, so two are always available for the top 5
-    C = merge(crimes, prev.get('crimes', []), 45, 8, 'crime')
-    S = merge(scandals, prev.get('scandals', []), 30, 8, 'scandal')
+    C = merge(crimes, prev.get('crimes', []), 3, 8, 'crime')
+    S = merge(scandals, prev.get('scandals', []), 2, 8, 'scandal')
     # strange news: newest per category first, round-robin so the top of the list mixes subjects
     st = scares + strange_items(); bycat = {}
     def still_ok(x):
@@ -233,11 +258,11 @@ def main():
         if NOT_NEWS.search(h) and c != 'Horror': return False
         rx = STRANGE_RX.get(c)
         return True if rx is None else bool(re.search(rx, h, re.I))
-    for x in merge(st, [y for y in prev.get('strange', []) if still_ok(y)], 14, 60, 'strange'):
+    for x in merge(st, [y for y in prev.get('strange', []) if still_ok(y)], 2, 80, 'strange'):
         bycat.setdefault(x['cat'], []).append(x)
     Z = []
     while any(bycat.values()):
-        FIRST = ['Underworld', 'Paranormal', 'True crime', 'Cults & occult', 'Seattle scares', 'Cryptids', 'Unexplained', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Activists', 'Peace', 'Environment', 'Anti-establishment', 'Disruptions', 'Drug raids', 'Antifa']
+        FIRST = ['AI fright', 'Government spying', 'Corporate spying', 'Computer crime', 'Police state', 'Extremists', 'Antifa', 'Missing', 'Drones', 'AI', 'Robots', 'Underworld', 'Paranormal', 'True crime', 'Cults & occult', 'Seattle scares', 'Cryptids', 'Unexplained', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Activists', 'Peace', 'Environment', 'Anti-establishment', 'Disruptions', 'Drug raids', 'Antifa']
         for c in FIRST + [c for c, _, _ in STRANGE if c not in FIRST]:
             if bycat.get(c): x = bycat[c].pop(0); x['town'] = c; Z.append(x)
     Z = Z[:45]
@@ -256,3 +281,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    sys.stdout.flush(); os._exit(0)   # do not wait for a stuck connection
