@@ -1,17 +1,21 @@
 {
- "_why": "Owner rules, Nov. 16, 2026: the site is named Seattle Scream. Never show Seattle Sinner, Guitar Doug or Doug. Contact goes to the webmaster.",
+ "_why": "Owner rules, Nov. 16, 2026: the site is named Seattle Night Stalker (formerly Seattle Scream). Never show Seattle Sinner, Guitar Doug or Doug. Contact goes to the webmaster.",
  "renames": [
   [
    "(?:The )?Guitar Doug Report",
-   "Seattle Scream"
+   "Seattle Night Stalker"
   ],
   [
    "(?:The )?Seattle Sinner",
-   "Seattle Scream"
+   "Seattle Night Stalker"
   ],
   [
    "Seattle News & Events",
-   "Seattle Scream"
+   "Seattle Night Stalker"
+  ],
+  [
+   "Seattle Scream",
+   "Seattle Night Stalker"
   ]
  ],
  "ban": [

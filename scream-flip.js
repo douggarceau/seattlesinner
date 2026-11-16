@@ -1,4 +1,4 @@
-/* Seattle Scream: the side boxes flip one by one, each revealing a word, until a phrase is spelled out.
+/* Seattle Night Stalker: the side boxes flip one by one, each revealing a word, until a phrase is spelled out.
    It holds, flips back, and a new phrase comes later. (owner, Nov 16 2026) */
 (function(){
 const PHRASES=[

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Seattle Scream: grisly-crime and sex-scandal headlines -> data/scream.json (owner, Nov. 16, 2026).
+"""Seattle Night Stalker: grisly-crime and sex-scandal headlines -> data/scream.json (owner, Nov. 16, 2026).
 
 The page keeps the two newest grisly crimes in the top 5 of the Seattle headlines box,
 and mixes the sex-scandal headlines in by date.
