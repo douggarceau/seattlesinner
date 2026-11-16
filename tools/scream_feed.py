@@ -106,7 +106,7 @@ SCARES = re.compile(r"\b(terrif\w*|frighten\w*|scar(?:ed|y|es)|spooked|panic\w*|
 AI_BAD = re.compile(r"\b(lawsuit|sue[ds]?|suing|wrong|errors?|mistakes?|scams?|fake|danger\w*|warn\w*|threat\w*|blamed|harm\w*|rogue|lie[ds]?|"
                     r"hallucinat\w*|fail\w*|glitch\w*|crash\w*|attack\w*|injur\w*|kill\w*|death|dead|chaos|banned|deepfakes?|out of control|"
                     r"creepy|terrif\w*|fear\w*|alarm\w*|strike\w*|swarm\w*|war\w*|military|weapon\w*|incursion\w*|shot down|sighting\w*)\b", re.I)
-NOT_NEWS = re.compile(r"\b(review|book|novel|manga|anime|comics?|trailer|season \d|episode|tickets?|museum|guide to|recipe|costumes?|ballet|musical|"
+NOT_NEWS = re.compile(r"\b(reviews?|reviewed|books?|free on youtube|streaming now|novel|manga|anime|comics?|trailer|season \d|episode|tickets?|museum|guide to|recipe|costumes?|ballet|musical|"
                       r"whisk(?:e)?y|beer|wine|cocktail|wardrobe|playstation|xbox|nintendo|video game|seahawks|mariners|kraken|sounders|nfl|nba|mlb|nhl|"
                       r"touchdown|quarterback|coach|playoffs?|defeats?|beats|win over|wins|victory|score[sd]?|points|marathon|tournament|no\. \d+|targets?|yards|roster|draft|sale|deals?|best .* to buy|box office|codes?|roblox|fortnite|gaming|game)\b", re.I)
 NOT_FILM = re.compile(r"\b(movie|film|streaming|netflix|hulu|director|cast|sequel|remake)\b", re.I)
@@ -223,7 +223,13 @@ def main():
     S = merge(scandals, prev.get('scandals', []), 30, 8, 'scandal')
     # strange news: newest per category first, round-robin so the top of the list mixes subjects
     st = scares + strange_items(); bycat = {}
-    for x in merge(st, prev.get('strange', []), 14, 60, 'strange'):
+    def still_ok(x):
+        # re-check items kept from earlier runs against today's rules
+        c = x.get('cat'); h = x.get('h', '')
+        if NOT_NEWS.search(h) and c != 'Horror': return False
+        rx = STRANGE_RX.get(c)
+        return True if rx is None else bool(re.search(rx, h, re.I))
+    for x in merge(st, [y for y in prev.get('strange', []) if still_ok(y)], 14, 60, 'strange'):
         bycat.setdefault(x['cat'], []).append(x)
     Z = []
     while any(bycat.values()):
