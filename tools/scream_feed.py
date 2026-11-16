@@ -12,7 +12,7 @@ Staying within the law (how this works):
   - Sex-scandal items never involve minors: anything mentioning children, teens, students,
     schools, abuse, assault, rape or trafficking is skipped. Those are victims' stories, not scandals.
   - No sports (site rule).
-Standard library only. No AI. Also strange news at the top (Seattle scares, paranormal, UFOs, conspiracy theories, AI gone wrong, dangerous robots,
+Standard library only. No AI. Also dark and strange news at the top (underworld, cults and the occult, cryptids, the unexplained, true crime, Seattle scares, paranormal, UFOs, conspiracy theories, AI gone wrong, dangerous robots,
 military drones, horror, bodies found, fights, drug raids, police scandals and lawsuits, protests, groups disrupting meetings and events, activists and human rights groups, peace, the environment, anti-establishment movements, antifa,
 police corruption, passengers removed from planes):
 newsroom reports about those subjects found through news search, again linked to the outlet.
@@ -40,6 +40,16 @@ FEEDS = [
 GN = 'https://news.google.com/rss/search?q={}%20when:7d&hl=en-US&gl=US&ceid=US:en'
 # Strange news (owner, Nov. 16, 2026): newsroom reports ABOUT these subjects, linked to the outlet.
 STRANGE = [
+ ('Underworld', ['Seattle gang OR cartel OR "organized crime" OR "drug ring"', 'mob OR mafia OR cartel OR "organized crime" boss', '"dark web" OR "black market" OR heist OR smuggling ring'],
+  r"\b(gangs?|gangsters?|cartels?|mob|mobsters?|mafia|organized crime|crime (?:family|boss|ring)|drug ring|dark web|black market|heists?|smuggl\w*|underworld|hitm[ae]n|contract killing|racketeer\w*|money launder\w*)\b"),
+ ('Cults & occult', ['cult leader OR "doomsday cult" OR "cult members"', 'occult OR ritual OR seance OR ouija OR "black magic"', 'vampire OR "blood ritual" OR satanic ritual'],
+  r"\b(cults?|cultists?|occult\w*|(?:satanic|blood|occult|dark) rituals?|ritual(?:istic)? (?:killing|murder|sacrifice|abuse)|s[eé]ances?|ouija|black magic|voodoo|vampires?|sorcer\w*|necromanc\w*|human sacrifice)\b"),
+ ('Cryptids', ['Bigfoot OR Sasquatch', 'cryptid OR "lake monster" OR mothman OR chupacabra'],
+  r"\b(bigfoot|sasquatch|cryptids?|lake monster|sea serpent|mothman|chupacabra|yeti|skinwalker|dogman)\b"),
+ ('Unexplained', ['Washington mysterious OR unexplained OR vanished', 'unexplained mystery OR "strange lights" OR "mysterious disappearance"'],
+  r"\b(unexplained|myster(?:y|ies|ious)|vanish\w*|disappear(?:ed|ance)|strange (?:lights?|sounds?|noises?)|eerie|creepy|unsolved|enigma)\b"),
+ ('True crime', ['"serial killer" OR "cold case" OR "unsolved murder"', 'Washington "cold case" OR "serial killer" OR "Green River"'],
+  r"\b(serial killers?|cold cases?|unsolved (?:murders?|killings?|cases?)|true crime|green river|ted bundy|zodiac killer|manhunt|killing spree)\b"),
  ('Paranormal', ['Seattle ghost OR haunted', 'ghost sighting OR haunted house OR haunting OR poltergeist OR paranormal',
                  'demonic possession OR exorcism OR exorcist', 'demonic OR "evil spirit" OR "evil spirits" OR satanic',
                  'witchcraft OR "witch trial" OR coven OR "accused of witchcraft"'],
@@ -217,7 +227,7 @@ def main():
         bycat.setdefault(x['cat'], []).append(x)
     Z = []
     while any(bycat.values()):
-        FIRST = ['Seattle scares', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Activists', 'Peace', 'Environment', 'Anti-establishment', 'Disruptions', 'Drug raids', 'Antifa']
+        FIRST = ['Underworld', 'Paranormal', 'True crime', 'Cults & occult', 'Seattle scares', 'Cryptids', 'Unexplained', 'Body found', 'Police scandal', 'Police corruption', 'Fights', 'Plane drama', 'Protests', 'Activists', 'Peace', 'Environment', 'Anti-establishment', 'Disruptions', 'Drug raids', 'Antifa']
         for c in FIRST + [c for c, _, _ in STRANGE if c not in FIRST]:
             if bycat.get(c): x = bycat[c].pop(0); x['town'] = c; Z.append(x)
     Z = Z[:45]
