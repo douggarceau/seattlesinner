@@ -429,7 +429,38 @@ fetch('data/scream.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=
 #topDark a::before{content:counter(td);grid-row:1/span 3;font:700 18px/1 Oswald,"Arial Narrow",sans-serif;color:#D34A12;padding-top:2px}
 #topDark i{font:600 9.5px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:#D34A12;font-style:normal}
 #topDark a b{font:600 14px/1.3 "PT Serif",Georgia,serif;color:#F2F1EC}#topDark a:hover b{color:#fff;text-decoration:underline}
-#topDark small{font:500 10.5px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}</style></head>
+#topDark small{font:500 10.5px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}</style><script id="ugJs">/* Night Stalker: Seattle Underground box on the front page, every screen size (owner, Nov 16 2026) */
+(()=>{const E=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+fetch('data/directory.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
+ const CATS=new Set(d.badass_cats||[]);const FAM=/\b(family|families|kids?|children|toddlers?|baby|zoo|aquarium)\b/i;
+ const all=d.items.filter(x=>x&&!x.cl&&x.w&&CATS.has(x.c)&&!FAM.test(x.n+' '+(x.b||''))&&x.c!=='Drug rehab and recovery');
+ const by={};all.sort(()=>Math.random()-.5).forEach(x=>(by[x.c]=by[x.c]||[]).push(x));
+ const pick=Object.keys(by).sort(()=>Math.random()-.5).slice(0,8).map(c=>by[c][0]);
+ const help=d.items.find(x=>/Recovery Help Line/.test(x.n));
+ const age=x=>((x.nt||[]).join(' ').match(/Age:\s*([^,;]+)/)||[])[1]||'';
+ const card=x=>'<a class="ug-c" href="'+E(x.w)+'" target="_blank" rel="noopener"><i>'+E(x.c)+(age(x)?' · '+E(age(x)):'')+'</i><b>'+E(x.n)+'</b><small>'+E((x.a||'').replace(/, WA \d{5}$/,''))+'</small><em>'+E((x.b||'').split(/(?<=[.!?])\s/)[0])+'</em></a>';
+ const mount=()=>{if(document.getElementById('underground'))return;const a=document.getElementById('topDark')||document.getElementById('jtSea');if(!a)return setTimeout(mount,500);
+  const s=document.createElement('section');s.id='underground';s.setAttribute('aria-label','Seattle Underground');
+  s.innerHTML='<div class="ug-h"><b>Seattle Underground</b><span>'+all.length+' spots · a new mix every visit</span></div><div class="ug-g">'+pick.map(card).join('')+'</div>'+
+   '<div class="ug-f"><button type="button" class="ug-all">See all '+all.length+' underground spots →</button>'+(help?'<span>Need help? <a href="'+E(help.w)+'" target="_blank" rel="noopener">WA Recovery Help Line '+E(help.p)+'</a></span>':'')+'</div>';
+  a.parentNode.insertBefore(s,a.nextSibling);
+  s.querySelector('.ug-all').onclick=()=>{const b=document.getElementById('dirNb');if(b)b.click();const sel=document.getElementById('dirCat');if(sel){sel.value='all';sel.dispatchEvent(new Event('change',{bubbles:true}))}}};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()}).catch(()=>{})})();</script>
+<style id="ugCss">#underground{margin:0 0 14px;padding:10px 14px 10px;border:1px solid #1A1B1F;border-radius:2px;background:#050505;color:#DDE1E6}
+#underground .ug-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid #1A1B1F;padding-bottom:6px;margin-bottom:8px}
+#underground .ug-h b{font:700 13px/1 Oswald,"Arial Narrow",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#fff}
+#underground .ug-h span{font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#8E9196}
+#underground .ug-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+@media (max-width:900px){#underground .ug-g{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:480px){#underground .ug-g{grid-template-columns:1fr}}
+#underground .ug-c{display:flex;flex-direction:column;gap:3px;padding:9px 10px;border:1px solid #1A1B1F;border-top:2px solid #D34A12;background:#000;color:inherit;text-decoration:none;min-width:0}
+#underground .ug-c:hover{border-color:#D34A12;box-shadow:0 0 12px #D34A1244}
+#underground .ug-c i{font:600 9.5px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#D34A12;font-style:normal}
+#underground .ug-c b{font:700 14px/1.15 Oswald,"Arial Narrow",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+#underground .ug-c small{font:500 10.5px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}
+#underground .ug-c em{font:12.5px/1.35 "PT Serif",Georgia,serif;font-style:normal;color:#B8B4AC;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#underground .ug-f{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin-top:9px;font:12px/1.3 "PT Serif",Georgia,serif;color:#8E9196}
+#underground .ug-all{background:#D34A12;color:#fff;border:0;border-radius:2px;padding:7px 12px;font:600 11px/1 Oswald,"Arial Narrow",sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+#underground .ug-f a{color:#DDE1E6}</style></head>
 <body><script id="badassAds">/* Seattle Night Stalker side panels (owner, Nov 16 2026): only badass ads and event promos —
    rock, punk, metal, motorcycles, burlesque and pin-up, modeling, bars, clubs, lounges, raves, tattoo. */
 (()=>{const BAD=/\b(rock|punk|metal|hardcore|grunge|goth|industrial|garage|psych\w*|emo|ska|thrash|doom|sludge|stoner|electronic|edm|techno|house music|trance|dubstep|drum ?(?:&|and|n) ?bass|raves?|dj|djs|club|clubs|nightclub|lounge|bar|bars|tavern|saloon|pub|burlesque|cabaret|pin-?ups?|go-?go|lingerie|bikini|models?|modeling|fashion|runway|motorcycles?|biker|harley|choppers?|bike nights?|moto\w*|tattoo\w*|roller derby|wrestling|showbox|neumos|crocodile|el coraz[oó]n|funhouse|chop suey|substation|clock-?out|madame lou|vermillion|kremwerk|monkey loft|baba yaga|nectar|barboza|black lodge|high dive|sunset tavern|tim.?s tavern|skylark|central saloon|el corazon)\b/i;
@@ -2876,7 +2907,7 @@ const cycle=()=>{if(Date.now()>=END){if(ad)ad.classList.remove('on');return}
 setTimeout(cycle,8000);
 })();
 </script>
-<aside id="dirCol" aria-label="Seattle business board"><div class="bulbs"></div><header><button class="dx" type="button" aria-label="Close directory">×</button><h2>Seattle Business Board</h2><p>The best of Seattle, every neighborhood</p><input id="dirQ" type="search" placeholder="Search businesses" aria-label="Search businesses" autocomplete="off"><select id="dirCat" aria-label="Filter by type"></select></header><div id="dirList" role="list"><div class="none">Loading…</div></div><div class="bf">Details gathered from public sources, Oct. 2026. Confirm hours before you go.</div><div class="bulbs"></div></aside>
+<aside id="dirCol" aria-label="Seattle business board"><div class="bulbs"></div><header><button class="dx" type="button" aria-label="Close directory">×</button><h2>Seattle Underground</h2><p>Nightlife, vice, ink and the occult</p><input id="dirQ" type="search" placeholder="Search businesses" aria-label="Search businesses" autocomplete="off"><select id="dirCat" aria-label="Filter by type"></select></header><div id="dirList" role="list"><div class="none">Loading…</div></div><div class="bf">Details gathered from public sources, Oct. 2026. Confirm hours before you go.</div><div class="bulbs"></div></aside>
 <script id="dirJs">(()=>{
 const col=document.getElementById('dirCol'),list=document.getElementById('dirList'),q=document.getElementById('dirQ'),sel=document.getElementById('dirCat');
 if(!col||!list)return;
