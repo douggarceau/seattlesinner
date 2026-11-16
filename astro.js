@@ -2,10 +2,10 @@
    Live sky math (sun sign, moon phase, moon sign, rising sign for Seattle right now) plus a daily
    reading for each sign. Readings are for entertainment; they come from a phrase bank keyed to the date. */
 (function(){
-const SIGNS=[['Aries','♈','Mar 21 – Apr 19','Fire','Mars'],['Taurus','♉','Apr 20 – May 20','Earth','Venus'],['Gemini','♊','May 21 – Jun 20','Air','Mercury'],
- ['Cancer','♋','Jun 21 – Jul 22','Water','Moon'],['Leo','♌','Jul 23 – Aug 22','Fire','Sun'],['Virgo','♍','Aug 23 – Sep 22','Earth','Mercury'],
- ['Libra','♎','Sep 23 – Oct 22','Air','Venus'],['Scorpio','♏','Oct 23 – Nov 21','Water','Pluto'],['Sagittarius','♐','Nov 22 – Dec 21','Fire','Jupiter'],
- ['Capricorn','♑','Dec 22 – Jan 19','Earth','Saturn'],['Aquarius','♒','Jan 20 – Feb 18','Air','Uranus'],['Pisces','♓','Feb 19 – Mar 20','Water','Neptune']];
+const SIGNS=[['Aries','♈︎','Mar 21 – Apr 19','Fire','Mars'],['Taurus','♉︎','Apr 20 – May 20','Earth','Venus'],['Gemini','♊︎','May 21 – Jun 20','Air','Mercury'],
+ ['Cancer','♋︎','Jun 21 – Jul 22','Water','Moon'],['Leo','♌︎','Jul 23 – Aug 22','Fire','Sun'],['Virgo','♍︎','Aug 23 – Sep 22','Earth','Mercury'],
+ ['Libra','♎︎','Sep 23 – Oct 22','Air','Venus'],['Scorpio','♏︎','Oct 23 – Nov 21','Water','Pluto'],['Sagittarius','♐︎','Nov 22 – Dec 21','Fire','Jupiter'],
+ ['Capricorn','♑︎','Dec 22 – Jan 19','Earth','Saturn'],['Aquarius','♒︎','Jan 20 – Feb 18','Air','Uranus'],['Pisces','♓︎','Feb 19 – Mar 20','Water','Neptune']];
 const LAT=47.6062,LON=-122.3321,R=Math.PI/180,norm=x=>((x%360)+360)%360;
 function jd(d){return d.getTime()/864e5+2440587.5}
 function sky(d){const n=jd(d)-2451545.0;
