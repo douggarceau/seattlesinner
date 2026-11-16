@@ -1,0 +1,32 @@
+name: Scream headlines
+# Every two hours: grisly crimes, scandals and strange news from established newsrooms into
+# data/scream.json (links only; rules in tools/scream_feed.py). The page keeps two crimes in the top 5.
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: scream-headlines
+  cancel-in-progress: false
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect headlines
+        run: python3 -I tools/scream_feed.py .
+      - name: Publish if anything changed
+        run: |
+          git config user.name "scream-headlines"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/scream.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Scream headlines (automatic)"
+          for i in 1 2 3; do (git pull --rebase -q || { git rebase --abort; false; }) && git push && exit 0; sleep 10; done
+          exit 1
