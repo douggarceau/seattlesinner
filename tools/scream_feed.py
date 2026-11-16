@@ -95,6 +95,8 @@ STRANGE = [
   r"\b(horror\w*|horrific|terror\w* (?:film|movie)|slasher|scream \d)\b"),
 ]
 STRANGE_RX = {c: rx for c, _, rx in STRANGE}
+# owner's standing rule for this site: nothing LGBT-related
+NO_LGBT = re.compile(r"\b(gay|lesbian|lgbt\w*|queer|trans|transgender|nonbinary|drag (?:queen|show|brunch)|pride (?:month|parade|march))\b", re.I)
 LOCAL_CATS = {'Body found', 'Fights', 'Drug raids', 'Police scandal', 'Protests'}
 SEA = re.compile(r"\b(seattle|tacoma|everett|bellevue|redmond|kent|renton|federal way|auburn|lynnwood|shoreline|burien|kirkland|bothell|"
                  r"issaquah|sammamish|puyallup|olympia|bremerton|edmonds|tukwila|seatac|mercer island|king county|snohomish|pierce county|"
@@ -164,7 +166,7 @@ def strange_items():
                 h = x['h']; src = None
                 if ' - ' in h:
                     h, src = [s.strip() for s in h.rsplit(' - ', 1)]
-                if not R.search(h) or NOT_NEWS.search(h): continue
+                if not R.search(h) or NOT_NEWS.search(h) or NO_LGBT.search(h): continue
                 if cat != 'Horror' and NOT_FILM.search(h): continue
                 if cat in ('AI gone wrong', 'Robots', 'Military drones') and not AI_BAD.search(h): continue
                 if cat == 'Drug raids' and not re.search(r'drug|narcotic|fentanyl|meth|cocaine|heroin', h, re.I): continue
@@ -179,6 +181,7 @@ def main():
     crimes, scandals, scares = [], [], []
     for x in got:
         head = x['h']; both = head + ' ' + x['_d']
+        if NO_LGBT.search(head): continue
         if (GRISLY.search(head) and not NOT_CRIME.search(head)) or re.search(STRANGE_RX['Body found'], head, re.I):
             crimes.append(x)
         elif re.search(STRANGE_RX['Police scandal'], head, re.I):
@@ -226,6 +229,7 @@ def main():
     def still_ok(x):
         # re-check items kept from earlier runs against today's rules
         c = x.get('cat'); h = x.get('h', '')
+        if NO_LGBT.search(h): return False
         if NOT_NEWS.search(h) and c != 'Horror': return False
         rx = STRANGE_RX.get(c)
         return True if rx is None else bool(re.search(rx, h, re.I))
