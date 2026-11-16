@@ -29,7 +29,7 @@ function reading(i,day){const r=rng(([...day].reduce((a,c)=>a*31+c.charCodeAt(0)
  return {text:[p(OPEN),p(LOVE),p(MONEY),p(WORK),p(NIGHT)].join(' '),love:40+Math.floor(r()*61),money:30+Math.floor(r()*71),energy:45+Math.floor(r()*56),lucky:1+Math.floor(r()*99),color:p(COLORS),match:SIGNS[(i+4+Math.floor(r()*5))%12][0]}}
 const H=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sel=null;try{const v=localStorage.getItem('astroSign');if(v!==null)sel=+v}catch(_){}
-function wheel(sunI,moonI,selI){let s='<svg class="as-wheel" viewBox="-110 -110 220 220" aria-hidden="true"><defs><radialGradient id="asG"><stop offset="0" stop-color="#FF6600" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>'+
+function wheel(sunI,moonI,selI){let s='<svg class="as-wheel" viewBox="-110 -110 220 220" aria-hidden="true"><defs><radialGradient id="asG"><stop offset="0" stop-color="#D34A12" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>'+
  '<circle r="106" fill="url(#asG)"/><circle r="100" class="as-ring"/><circle r="72" class="as-ring dim"/><circle r="44" class="as-ring"/><g class="as-spin">';
  for(let i=0;i<12;i++){const a=(i*30-90+15)*R,a0=(i*30-90)*R;s+='<line x1="'+(44*Math.cos(a0)).toFixed(1)+'" y1="'+(44*Math.sin(a0)).toFixed(1)+'" x2="'+(100*Math.cos(a0)).toFixed(1)+'" y2="'+(100*Math.sin(a0)).toFixed(1)+'" class="as-tick"/>'+
   '<text x="'+(86*Math.cos(a)).toFixed(1)+'" y="'+(86*Math.sin(a)).toFixed(1)+'" class="as-gl'+(i===selI?' on':'')+(i===sunI?' sun':'')+'">'+SIGNS[i][1]+'</text>'}
