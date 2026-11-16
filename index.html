@@ -448,7 +448,7 @@ fetch('data/cal.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.
  POOL=((d&&d.events)||[]).filter(e=>e&&e.date>=td&&e.url&&BAD.test([e.artists,e.venue,e.genre,e.blurb].join(' '))).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,80)
  .map(e=>({tag:(e.genre?e.genre.toUpperCase()+' · ':'')+new Date(e.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}).toUpperCase(),bigText:e.artists,name:e.venue+(e.hood?' · '+e.hood:''),when:e.time||'',sub:[e.price,(/\b(21\+|bars?|club|nightclub|lounge|tavern|saloon|burlesque|cabaret|go-?go|lingerie|strip)\b/i.test([e.venue,e.artists,e.genre,e.ages].join(' '))&&!/all ages/i.test(e.ages||'')?'21+':e.ages)].filter(Boolean).join(' · '),go:'Tickets',theme:'mu',href:e.url,ext:1,k:'#A30000'}))}).catch(()=>{});
 const isEvent=s=>s&&(s.theme==='sc'||s.theme==='mu'||/SCENE|CALENDAR|TONIGHT|THIS WEEK|EVENT/i.test(s.tag||''));
-window.__badass=s=>{if(!isEvent(s))return s;if(BAD.test([s.tag,s.bigText,s.name,s.sub].join(' ')))return s;if(POOL&&POOL.length)return POOL[(k++)%POOL.length];return s}})();</script>
+window.__badass=s=>{const FAM=/\\b(family|families|kids?|children|child|toddlers?|storytime|story time|baby|babies|tweens?|youth|stroller|puppets?|santa|disney|sesame|paw patrol|bluey|zoo|aquarium|petting|playground|preschool|grades? \\d|ice cream|candy|toys?)\\b/i;if(s&&FAM.test([s.tag,s.bigText,s.name,s.sub].join(' '))&&POOL&&POOL.length)return POOL[(k++)%POOL.length];if(!isEvent(s))return s;if(BAD.test([s.tag,s.bigText,s.name,s.sub].join(' ')))return s;if(POOL&&POOL.length)return POOL[(k++)%POOL.length];return s}})();</script>
 <title>Seattle Scream</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2588,7 +2588,7 @@ const evLoad=()=>EV?Promise.resolve(EV):Promise.all([fetch('data/cal.json?'+Math
  const E=[];for(let a=0,b=0;a<cafe.length||b<oth.length;){if(a<cafe.length)E.push(cafe[a++]);if(b<oth.length)E.push(oth[b++]);if(b<oth.length)E.push(oth[b++])}
  const wk=new Date(Date.now()+7*864e5).toLocaleDateString('en-CA',{timeZone:ETZ});
  const W={};up.filter(x=>x.genre==='worship'&&x.date<=wk).forEach(x=>{(W[x.venue]=W[x.venue]||[]).push(x)});
- const B=dj&&dj.items?dj.items.filter(x=>!x.cl&&x.b).sort(()=>Math.random()-.5):[];
+ const B=(()=>{if(!dj||!dj.items)return [];/* Seattle Scream (owner, Nov 16 2026): fun businesses stay, dull ones go, badass ones mixed in */const FUN=new Set(['Entertainment venues','Food and drink','Shops and gifts']);const FAMX=/\b(family|families|kids?|children|child|toddlers?|storytime|story time|baby|babies|tweens?|youth|stroller|puppets?|santa|disney|sesame|paw patrol|bluey|zoo|aquarium|petting|playground|preschool|grades? \d|ice cream|candy|toy|toys)\b/i;const BAD=new Set(dj.badass_cats||[]);const sh=a=>a.sort(()=>Math.random()-.5);const ok=dj.items.filter(x=>!x.cl&&x.b&&!FAMX.test(x.n+' '+x.b));const b=sh(ok.filter(x=>BAD.has(x.c))),f=sh(ok.filter(x=>FUN.has(x.c)));const out=[];for(let i=0;i<Math.max(b.length,f.length);i++){if(b[i])out.push(b[i]);if(f[i]&&i%2===0)out.push(f[i])}return out})();
  EV={E:E.slice(0,60),W,B};return EV}).catch(()=>null);
 const sent1=s=>{let b=(s||'').split(/(?<=[.!?])\s/)[0]||'';if(b.length>140)b=b.slice(0,137).replace(/\s+\S*$/,'')+'…';return b};
 const tcls=t=>t.length>34?'ts':t.length>20?'tm':'';
@@ -2596,7 +2596,7 @@ const photo=n=>'<span class="e-ph" style="background-image:url(img/'+PH[n%PH.len
 let bI=0;
 function evFace(kind){const E=EV&&EV.E,W=EV&&EV.W,B=EV&&EV.B;
  if(kind==='biz'){if(!B||!B.length)return null;const x=B[bI++%B.length];const host=(x.w||'').replace(/^https?:\/\/(www\.)?/,'').replace(/\/.*$/,'');
-  return {kind:'biz',html:photo(bI+2)+'<span class="e-body"><i class="e-k">Seattle neighbors</i><strong class="e-t '+tcls(x.n)+'">'+esc2(x.n)+'</strong><span class="e-w" style="font-size:6.4cqw">'+esc2(x.c)+'</span><span class="e-v">'+esc2(x.a)+', RI<small>'+esc2([x.p,/facebook|chamber/i.test(x.wl||'')?'':host].filter(Boolean).join('  ·  '))+'</small></span><em class="e-b">'+esc2(sent1(x.b))+'</em><span class="e-go">Business directory →</span></span>'}}
+  return {kind:'biz',html:photo(bI+2)+'<span class="e-body"><i class="e-k">Seattle underground</i><strong class="e-t '+tcls(x.n)+'">'+esc2(x.n)+'</strong><span class="e-w" style="font-size:6.4cqw">'+esc2(x.c)+'</span><span class="e-v">'+esc2(x.a)+', RI<small>'+esc2([x.p,/facebook|chamber/i.test(x.wl||'')?'':host].filter(Boolean).join('  ·  '))+'</small></span><em class="e-b">'+esc2(sent1(x.b))+'</em><span class="e-go">Business directory →</span></span>'}}
  if(!E||!E.length)return null;
  if(kind==='worship'){if(!W||!Object.keys(W).length)return null;const ch=Object.keys(W).slice(0,3);
   return {kind:'ev',html:photo(6)+'<span class="e-body"><i class="e-k">Worship in Seattle</i><div>'+ch.map(c=>{const st=new Set(),L=W[c].filter(x=>{const k=x.date+x.time;if(st.has(k))return false;st.add(k);return true}).slice(0,3);return '<h4>'+esc2(c.replace(/ Catholic| Episcopal/,''))+'</h4><ul>'+L.map(x=>{const d=dparts(x.date);return '<li><span>'+esc2(x.artists.replace(/ at .*$/,''))+'</span><i>'+d[0]+' '+esc2(x.time)+'</i></li>'}).join('')+'</ul>'}).join('')+'</div><span class="e-go">Seattle calendar →</span></span>'}}
