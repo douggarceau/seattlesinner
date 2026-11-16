@@ -1,6 +1,7 @@
 {
  "asof": "2026-10-30T09:00:00-07:00",
  "cats": [
+  "Nightclubs",
   "Food and drink",
   "Shops and gifts",
   "Farms and flowers",
@@ -17,6 +18,216 @@
   "Restaurants"
  ],
  "items": [
+  {
+   "i": "373",
+   "n": "Level 1",
+   "c": "Nightclubs",
+   "a": "1930 3rd Ave, Lower Level, Seattle, WA 98101",
+   "p": "",
+   "e": "",
+   "w": "https://level1seattle.com/",
+   "wl": "Website",
+   "b": "Electronic music club booking house, techno and other electronic DJs. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "level1seattle.com",
+     "https://level1seattle.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "372",
+   "n": "Amber",
+   "c": "Nightclubs",
+   "a": "2214 1st Ave, Seattle, WA 98121",
+   "p": "",
+   "e": "",
+   "w": "https://amberseattle.com/",
+   "wl": "Website",
+   "b": "Cocktail lounge with late-night food and live DJs on weekends. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "amberseattle.com",
+     "https://amberseattle.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "371",
+   "n": "Sarajevo Nightclub",
+   "c": "Nightclubs",
+   "a": "2218 Western Ave #100, Seattle, WA 98121",
+   "p": "206-671-6524",
+   "e": "",
+   "w": "https://www.sarajevonightclub.com/",
+   "wl": "Website",
+   "b": "Club open Thursday through Saturday, with Latin Fridays and hip-hop, R&B and Top 40 Saturdays. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.sarajevonightclub.com",
+     "https://www.sarajevonightclub.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "370",
+   "n": "Ora Nightclub",
+   "c": "Nightclubs",
+   "a": "2330 1st Ave, Seattle, WA 98121",
+   "p": "",
+   "e": "",
+   "w": "https://www.oraseattle.com/",
+   "wl": "Website",
+   "b": "Club with two dance floors that books touring trance, house and electronic DJs. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "tickets.oraseattle.com",
+     "https://tickets.oraseattle.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "369",
+   "n": "Unicorn",
+   "c": "Nightclubs",
+   "a": "1118 E Pike St, Seattle, WA 98122",
+   "p": "206-325-6492",
+   "e": "",
+   "w": "https://www.unicornseattle.com/",
+   "wl": "Website",
+   "b": "Carnival-themed bar with a basement arcade that holds Club Unicorn DJ dance nights on Fridays and Saturdays. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.unicornseattle.com",
+     "https://www.unicornseattle.com/events"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "368",
+   "n": "Cultura Seattle",
+   "c": "Nightclubs",
+   "a": "916 E Pike St, Seattle, WA 98122",
+   "p": "",
+   "e": "",
+   "w": "https://culturaseattle.com/",
+   "wl": "Website",
+   "b": "Dance club focused on Latin and international DJ nights. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "ma.to",
+     "https://ma.to/venue/culturaseattle"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "367",
+   "n": "VICE Seattle",
+   "c": "Nightclubs",
+   "a": "1532 Minor Ave, Seattle, WA 98101",
+   "p": "",
+   "e": "",
+   "w": "https://www.viceseattle.com/",
+   "wl": "Website",
+   "b": "Basement club beneath Melrose Market with DJ nights spanning house, UK garage, R&B and reggaeton. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.viceseattle.com",
+     "https://www.viceseattle.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "366",
+   "n": "Kremwerk + Timbre Room + Cherry Complex",
+   "c": "Nightclubs",
+   "a": "1809 Minor Ave #10, Seattle, WA 98101",
+   "p": "206-682-2935",
+   "e": "",
+   "w": "https://www.kremwerk.com/",
+   "wl": "Website",
+   "b": "Three-room club complex hosting underground electronic DJ nights and the monthly SIN industrial and darkwave night. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "kremwerk.com",
+     "https://kremwerk.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "365",
+   "n": "Trinity Nightclub",
+   "c": "Nightclubs",
+   "a": "107 Occidental Ave S, Seattle, WA 98104",
+   "p": "206-697-7702",
+   "e": "",
+   "w": "https://www.trinitynightclub.com/",
+   "wl": "Website",
+   "b": "Multi-room dance club with resident and touring DJs playing EDM, house and themed throwback nights. 18+ (21+ to drink).",
+   "nt": [
+    "Age: 18+ (21+ to drink)"
+   ],
+   "s": [
+    [
+     "www.trinitynightclub.com",
+     "https://www.trinitynightclub.com/"
+    ]
+   ],
+   "cl": false
+  },
+  {
+   "i": "364",
+   "n": "Q Nightclub",
+   "c": "Nightclubs",
+   "a": "1426 Broadway, Seattle, WA 98122",
+   "p": "",
+   "e": "",
+   "w": "https://www.qnightclub.com/",
+   "wl": "Website",
+   "b": "Multi-level dance club that books touring and local DJs for house, techno, trance and other electronic music. 21+.",
+   "nt": [
+    "Age: 21+"
+   ],
+   "s": [
+    [
+     "www.technoairlines.com",
+     "https://www.technoairlines.com/club/q-nightclub-seattle"
+    ]
+   ],
+   "cl": false
+  },
   {
    "n": "Analog Coffee",
    "c": "Food and drink",
@@ -7254,5 +7465,8 @@
    "cl": false,
    "i": "363"
   }
+ ],
+ "badass_cats": [
+  "Nightclubs"
  ]
 }
