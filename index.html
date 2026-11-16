@@ -412,18 +412,18 @@ html body #whatsOn::before{content:"";position:absolute;left:0;right:0;top:0;hei
 </style><script src="scream-flip.js?v=6" defer></script><script id="topDarkJs">/* Night Stalker: Tonight's Music under the menu, rock and punk first (owner, Nov 16 2026) */
 (()=>{const E=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const TZ='America/Los_Angeles',ymd=d=>d.toLocaleDateString('en-CA',{timeZone:TZ});
-const LOUD=/\b(rock|punk|metal|hardcore|goth|grunge|garage|emo|ska|thrash|doom|sludge|stoner|psych\w*|industrial|post-punk|deathcore|metalcore)\b/i;
+const LOUD=/\b(rock|hard rock|punk|post-punk|thrash|metal\w*|\w+core|industrial|goth\w*|darkwave|grunge)\b/i;
 const mins=t=>{const m=String(t||'').match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)/i);if(!m)return 9999;let h=+m[1]%12;if(/pm/i.test(m[3]))h+=12;return h*60+(+m[2]||0)};
 fetch('data/cal.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(j=>{if(!j||!j.events)return;
  const now=new Date(),td=ymd(now),tm=ymd(new Date(now.getTime()+864e5));
  const ok=e=>e&&e.artists&&e.url&&!/\b(sports|support|worship)\b/i.test(e.genre||'');
  const loud=e=>LOUD.test([e.genre,e.artists].join(' '));
  const pick=d=>j.events.filter(e=>ok(e)&&e.date===d).sort((a,b)=>(loud(b)-loud(a))||(mins(a.time)-mins(b.time)));
- let L=pick(td).map(e=>({e,day:'Tonight'}));if(L.length<6)L=L.concat(pick(tm).slice(0,8-L.length).map(e=>({e,day:'Tomorrow'})));L=L.slice(0,10);if(!L.length)return;
- const row=({e,day})=>'<li class="'+(loud(e)?'loud':'')+'"><a href="'+E(e.url)+'" target="_blank" rel="noopener"><span class="tm">'+E(day==='Tonight'?(e.time||'Tonight'):'Tmrw '+(e.time||''))+'</span><span class="bd"><b>'+E(e.artists)+'</b><small>'+E([e.venue,e.hood].filter(Boolean).join(' · '))+'</small></span><span class="gn">'+E((e.genre||'').toUpperCase())+(e.price?' · '+E(e.price):'')+(e.ages?' · '+E(e.ages):'')+'</span></a></li>';
+ const loudOn=d=>j.events.filter(e=>ok(e)&&e.date===d&&loud(e)).sort((a,b)=>mins(a.time)-mins(b.time));let L=loudOn(td).map(e=>({e,day:'Tonight'}));for(let k=1;k<8&&L.length<8;k++){const dd=ymd(new Date(now.getTime()+k*864e5)),lab=k===1?'Tomorrow':new Date(dd+'T12:00:00').toLocaleDateString('en-US',{weekday:'short'});L=L.concat(loudOn(dd).slice(0,8-L.length).map(e=>({e,day:lab})))}L=L.slice(0,10);if(!L.length)return;
+ const row=({e,day})=>'<li class="loud"><a href="'+E(e.url)+'" target="_blank" rel="noopener"><span class="tm">'+E(day==='Tonight'?(e.time||'Tonight'):(day==='Tomorrow'?'Tmrw':day)+' '+(e.time||''))+'</span><span class="bd"><b>'+E(e.artists)+'</b><small>'+E([e.venue,e.hood].filter(Boolean).join(' · '))+'</small></span><span class="gn">'+E((e.genre||'').toUpperCase())+(e.price?' · '+E(e.price):'')+(e.ages?' · '+E(e.ages):'')+'</span></a></li>';
  const mount=()=>{if(document.getElementById('topDark'))return;const a=document.getElementById('jtSea')||document.getElementById('coverSlot');if(!a)return setTimeout(mount,500);
   const box=document.createElement('section');box.id='topDark';box.setAttribute('aria-label',"Tonight's music");
-  box.innerHTML='<div class="td-h"><b>Tonight’s Music</b><span>Seattle · rock &amp; punk first · '+E(now.toLocaleDateString('en-US',{timeZone:TZ,weekday:'long',month:'short',day:'numeric'}))+'</span></div><ol>'+L.map(row).join('')+'</ol>';
+  box.innerHTML='<div class="td-h"><b>Tonight’s Music</b><span>Seattle · rock, punk, metal, goth &amp; industrial · '+E(now.toLocaleDateString('en-US',{timeZone:TZ,weekday:'long',month:'short',day:'numeric'}))+'</span></div><ol>'+L.map(row).join('')+'</ol>';
   a.parentNode.insertBefore(box,a.nextSibling)};
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()}).catch(()=>{})})();</script>
 <style id="topDarkCss">#topDark{margin:6px 0 14px;padding:10px 14px 8px;border:1px solid #2A2D33;border-radius:2px;background:linear-gradient(180deg,#1A1B1F,#0D0D0F);color:#DDE1E6}
@@ -460,12 +460,15 @@ fetch('data/directory.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then
  const cols=()=>innerWidth<=480?1:innerWidth<=900?2:4;
  const build=s=>{const n=cols(),C=Array.from({length:n},()=>[]);L.forEach((x,i)=>C[i%n].push(x));
   s.querySelector('.ug-g').innerHTML=C.map((c,i)=>{const h=c.map(card).join('');return '<div class="ug-col"><div class="ug-track '+(i%2?'down':'up')+'" style="animation-duration:'+(c.length*4.2).toFixed(0)+'s">'+h+h+'</div></div>'}).join('')};
- const mount=()=>{if(document.getElementById('underground'))return;const a=document.getElementById('topDark')||document.getElementById('jtSea');if(!a)return setTimeout(mount,500);
-  const s=document.createElement('section');s.id='underground';s.setAttribute('aria-label','Seattle Underground');
-  s.innerHTML='<div class="ug-h"><b>Seattle Underground</b><span>'+L.length+' spots · shuffled every visit · hover to stop</span></div><div class="ug-g"></div>'+
-   '<div class="ug-f"><button type="button" class="ug-all">Open the full list →</button>'+(help?'<span>Need help? <a href="'+E(help.w)+'" target="_blank" rel="noopener">WA Recovery Help Line '+E(help.p)+'</a></span>':'')+'</div>';
-  a.parentNode.insertBefore(s,a.nextSibling);build(s);let w=cols();addEventListener('resize',()=>{if(cols()!==w){w=cols();build(s)}});
-  s.querySelector('.ug-all').onclick=()=>{const b=document.getElementById('dirNb');if(b)b.click();const sel=document.getElementById('dirCat');if(sel){sel.value='all';sel.dispatchEvent(new Event('change',{bubbles:true}))}}};
+ const mount=()=>{const col=document.getElementById('dirCol');if(!col)return setTimeout(mount,500);if(document.getElementById('ugLeft'))return;
+  /* left column: one track scrolling up; search or a category switches to the regular list */
+  const box=document.createElement('div');box.id='ugLeft';box.setAttribute('aria-label','Seattle Underground, scrolling');
+  const h=L.map(card).join('');box.innerHTML='<div class="ug-track up" style="animation-duration:'+Math.round(L.length*3.6)+'s">'+h+h+'</div>';
+  const list=document.getElementById('dirList');list.parentNode.insertBefore(box,list);
+  const q=document.getElementById('dirQ'),sel=document.getElementById('dirCat');
+  const upd=()=>{const on=(q&&q.value.trim())||(sel&&sel.value&&sel.value!=='all'&&sel.selectedIndex>0&&col.dataset.touched);col.classList.toggle('searching',!!on)};
+  if(q)q.addEventListener('input',upd);if(sel)sel.addEventListener('change',()=>{col.dataset.touched='1';upd()});
+  const bf=col.querySelector('.bf');if(bf&&help)bf.innerHTML=L.length+' spots, shuffled every visit. Need help? <a href="'+E(help.w)+'" target="_blank" rel="noopener">WA Recovery Help Line '+E(help.p)+'</a>'};
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount()}).catch(()=>{})})();</script>
 <style id="ugCss">#underground{margin:0 0 14px;padding:10px 14px 10px;border:1px solid #1A1B1F;border-radius:2px;background:#050505;color:#DDE1E6}
 #underground .ug-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px solid #1A1B1F;padding-bottom:6px;margin-bottom:8px}
@@ -494,21 +497,32 @@ html:root body header.mast #paperBtn,html:root body #paperBtn{all:unset!importan
  font:600 11.5px/1 Oswald,"Arial Narrow",sans-serif!important;letter-spacing:.16em!important;text-transform:uppercase!important}
 html:root body #paperBtn::before{content:"▤";color:#D34A12;font-size:13px}
 html:root body header.mast #paperBtn:hover,html:root body #paperBtn:hover{background:#D34A12!important;box-shadow:0 0 18px #D34A1288!important}
-#paper .sheet{max-width:1180px}</style></head>
+#paper .sheet{max-width:1180px}</style><style id="ugLeftCss">#dirCol #ugLeft{flex:1;min-height:0;overflow:hidden;padding:0 10px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(180deg,transparent,#000 6%,#000 94%,transparent)}
+#dirCol:not(.searching) #dirList{display:none!important}#dirCol.searching #ugLeft{display:none}
+#dirCol #ugLeft .ug-track{display:flex;flex-direction:column;gap:8px;will-change:transform;animation:ugUp linear infinite}
+#dirCol #ugLeft:hover .ug-track{animation-play-state:paused}
+#dirCol #ugLeft .ug-c{display:flex;flex-direction:column;gap:2px;padding:8px 9px;border:1px solid #1A1B1F;border-left:3px solid #D34A12;background:#000;color:inherit;text-decoration:none}
+#dirCol #ugLeft .ug-c:hover{border-color:#D34A12;box-shadow:0 0 10px #D34A1244}
+#dirCol #ugLeft .ug-c i{font:600 9px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:#D34A12;font-style:normal}
+#dirCol #ugLeft .ug-c b{font:700 13.5px/1.15 Oswald,"Arial Narrow",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+#dirCol #ugLeft .ug-c small{font:500 10px/1.3 ui-monospace,Menlo,monospace;color:#8E9196}
+#dirCol #ugLeft .ug-c em{display:none}
+@keyframes ugUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 4px))}}
+@media (prefers-reduced-motion:reduce){#dirCol #ugLeft .ug-track{animation:none}#dirCol #ugLeft{overflow:auto}}</style></head>
 <body><script id="badassAds">/* Seattle Night Stalker side panels (owner, Nov 16 2026): only badass ads and event promos —
    rock, punk, metal, motorcycles, burlesque and pin-up, modeling, bars, clubs, lounges, raves, tattoo. */
 (()=>{const BAD=/\b(rock|punk|metal|hardcore|grunge|goth|industrial|garage|psych\w*|emo|ska|thrash|doom|sludge|stoner|electronic|edm|techno|house music|trance|dubstep|drum ?(?:&|and|n) ?bass|raves?|dj|djs|club|clubs|nightclub|lounge|bar|bars|tavern|saloon|pub|burlesque|cabaret|pin-?ups?|go-?go|lingerie|bikini|models?|modeling|fashion|runway|motorcycles?|biker|harley|choppers?|bike nights?|moto\w*|tattoo\w*|roller derby|wrestling|showbox|neumos|crocodile|el coraz[oó]n|funhouse|chop suey|substation|clock-?out|madame lou|vermillion|kremwerk|monkey loft|baba yaga|nectar|barboza|black lodge|high dive|sunset tavern|tim.?s tavern|skylark|central saloon|el corazon)\b/i;
 window.__BAD=BAD;let POOL=null,k=0;
 fetch('data/cal.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{const td=new Date().toLocaleDateString('en-CA',{timeZone:'America/Los_Angeles'});
- POOL=((d&&d.events)||[]).filter(e=>e&&e.date>=td&&e.url&&BAD.test([e.artists,e.venue,e.genre,e.blurb].join(' '))).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,80)
+ POOL=((d&&d.events)||[]).filter(e=>e&&e.date>=td&&e.url&&/\b(rock|hard rock|punk|post-punk|thrash|metal\w*|\w+core|industrial|goth\w*|darkwave|grunge|burlesque|motorcycle\w*|biker|tattoo\w*)\b/i.test([e.artists,e.genre,e.blurb].join(' '))).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,80)
  .map(e=>({tag:(e.genre?e.genre.toUpperCase()+' · ':'')+new Date(e.date+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}).toUpperCase(),bigText:e.artists,name:e.venue+(e.hood?' · '+e.hood:''),when:e.time||'',sub:[e.price,(/\b(21\+|bars?|club|nightclub|lounge|tavern|saloon|burlesque|cabaret|go-?go|lingerie|strip)\b/i.test([e.venue,e.artists,e.genre,e.ages].join(' '))&&!/all ages/i.test(e.ages||'')?'21+':e.ages)].filter(Boolean).join(' · '),go:'Tickets',theme:'mu',href:e.url,ext:1,k:'#D34A12'}))}).catch(()=>{});
-const isEvent=s=>s&&(s.theme==='sc'||s.theme==='mu'||/SCENE|CALENDAR|TONIGHT|THIS WEEK|EVENT/i.test(s.tag||''));
+const isEvent=s=>s&&(s.theme==='sc'||s.theme==='mu'||/SCENE|CALENDAR|TONIGHT|THIS WEEK|EVENT/i.test(s.tag||''));const LOUDX=/\b(rock|hard rock|punk|post-punk|thrash|metal\w*|\w+core|industrial|goth\w*|darkwave|grunge)\b/i;
 fetch('data/directory.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(!d||!d.items)return;
  const CATS=new Set((d.badass_cats||[]).concat(['Entertainment venues']));const FAMX=/\b(family|families|kids?|children|toddlers?|baby|zoo|aquarium|ice cream|toy stores?)\b/i;
  const L=d.items.filter(x=>x&&!x.cl&&x.w&&CATS.has(x.c)&&!FAMX.test(x.n+' '+(x.b||''))).sort(()=>Math.random()-.5).slice(0,40).map(x=>{const age=((x.nt||[]).join(' ').match(/Age:\s*([^,;]+)/)||[])[1]||'';const kind=x.c==='Entertainment venues'?'Live music':x.c;
   return {tag:'SEATTLE UNDERGROUND · '+kind.toUpperCase()+(age?' · '+age:''),bigText:x.n,name:x.a,sub:(x.b||'').split(/(?<=[.!?])\s/)[0],go:'Website',theme:'biz',href:x.w,ext:1,k:'#D34A12'}});
  let bi=0;const tick=()=>{if(document.hidden||!window.__fill0||!L.length)return;const A=[...document.querySelectorAll('.lsrow .lspot:not([hidden]):not(.hasad):not(.t-ad):not(.t-adimg) > a[id]')].filter(a=>{const b=a.parentNode,r=b.getBoundingClientRect();return b.offsetParent&&!b.querySelector('.scrw')&&!b.matches(':hover')&&r.top<innerHeight&&r.bottom>0&&!/UNDERGROUND/.test(b.innerText)});if(!A.length)return;const a=A[Math.floor(Math.random()*A.length)];try{window.__fill0(a,L[bi++%L.length])}catch(_){}};setTimeout(tick,4000);setInterval(tick,6000)}).catch(()=>{});
-window.__badass=s=>{const FAM=/\\b(family|families|kids?|children|child|toddlers?|storytime|story time|baby|babies|tweens?|youth|stroller|puppets?|santa|disney|sesame|paw patrol|bluey|zoo|aquarium|petting|playground|preschool|grades? \\d|ice cream|candy|toys?)\\b/i;if(s&&FAM.test([s.tag,s.bigText,s.name,s.sub].join(' '))&&POOL&&POOL.length)return POOL[(k++)%POOL.length];if(!isEvent(s))return s;if(BAD.test([s.tag,s.bigText,s.name,s.sub].join(' ')))return s;if(POOL&&POOL.length)return POOL[(k++)%POOL.length];return s}})();</script>
+window.__badass=s=>{if(s&&s.theme==='mu'&&!LOUDX.test([s.tag,s.bigText,s.sub].join(' '))&&POOL&&POOL.length){const P2=POOL.filter(x=>LOUDX.test(x.tag+' '+x.bigText));if(P2.length)return P2[(k++)%P2.length]}const FAM=/\\b(family|families|kids?|children|child|toddlers?|storytime|story time|baby|babies|tweens?|youth|stroller|puppets?|santa|disney|sesame|paw patrol|bluey|zoo|aquarium|petting|playground|preschool|grades? \\d|ice cream|candy|toys?)\\b/i;if(s&&FAM.test([s.tag,s.bigText,s.name,s.sub].join(' '))&&POOL&&POOL.length)return POOL[(k++)%POOL.length];if(!isEvent(s))return s;if(BAD.test([s.tag,s.bigText,s.name,s.sub].join(' ')))return s;if(POOL&&POOL.length)return POOL[(k++)%POOL.length];return s}})();</script>
 <title>Seattle Night Stalker</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
