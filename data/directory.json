@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-30T09:00:00-07:00",
+ "asof": "2026-11-16T11:30:00-08:00",
  "cats": [
   "Food and drink",
   "Shops and gifts",
@@ -10,11 +10,17 @@
   "Lodging",
   "Automotive",
   "Building landscaping and home services",
-  "Architecture and creative services",
   "Finance law property and consulting",
   "Community and cultural resources",
   "Entertainment venues",
-  "Restaurants"
+  "Restaurants",
+  "Bars and taverns",
+  "Recording studios",
+  "Gun shops and ranges",
+  "Used outdoor gear",
+  "Secondhand clothing",
+  "Ski buses and Whistler transport",
+  "Climbing and ski clubs"
  ],
  "items": [
   {
@@ -2767,7 +2773,7 @@
   },
   {
    "n": "Avast! Recording Co.",
-   "c": "Architecture and creative services",
+   "c": "Recording studios",
    "a": "NW 80th St, Greenwood",
    "p": "",
    "e": "",
@@ -2786,7 +2792,7 @@
   },
   {
    "n": "Hall of Justice Recording",
-   "c": "Architecture and creative services",
+   "c": "Recording studios",
    "a": "Fremont",
    "p": "",
    "e": "",
@@ -2805,7 +2811,7 @@
   },
   {
    "n": "Soundhouse Recording",
-   "c": "Architecture and creative services",
+   "c": "Recording studios",
    "a": "15th Ave NW, Ballard",
    "p": "",
    "e": "",
@@ -2824,7 +2830,7 @@
   },
   {
    "n": "Studio Litho",
-   "c": "Architecture and creative services",
+   "c": "Recording studios",
    "a": "N 36th St, Fremont",
    "p": "",
    "e": "",
@@ -2843,7 +2849,7 @@
   },
   {
    "n": "Studio X",
-   "c": "Architecture and creative services",
+   "c": "Recording studios",
    "a": "Capitol Hill",
    "p": "",
    "e": "",
@@ -4700,29 +4706,6 @@
    ],
    "cl": false,
    "i": "236"
-  },
-  {
-   "n": "Slim's Last Chance Chili Shack & Watering Hole",
-   "c": "Entertainment venues",
-   "a": "Georgetown, Seattle",
-   "p": "",
-   "e": "",
-   "w": "",
-   "wl": "Website",
-   "b": "Georgetown roadhouse with Americana, punk and rock on indoor and outdoor stages.",
-   "nt": [],
-   "s": [
-    [
-     "The Stranger: Best places for live music and dancing (2023)",
-     "https://www.thestranger.com/visitors-guide-2023/2023/06/15/79037360/the-best-places-in-seattle-for-live-music-and-dancing"
-    ],
-    [
-     "The AU Review: Best live music venues in Seattle",
-     "https://www.theaureview.com/music/the-best-live-music-venues-in-seattle/"
-    ]
-   ],
-   "cl": false,
-   "i": "237"
   },
   {
    "n": "Spada Farmhouse Brewery",
@@ -7253,6 +7236,1847 @@
    ],
    "cl": false,
    "i": "363"
+  },
+  {
+   "n": "Mike's Chili Parlor",
+   "c": "Bars and taverns",
+   "a": "1447 NW Ballard Way, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Family-run Ballard dive at the north end of the Ballard Bridge, dating to the 1920s. Chili-topped plates, cheap beer, cash bar and a good jukebox.",
+   "nt": [],
+   "s": [
+    [
+     "Mike's Chili Parlor celebrates 100 years (My Ballard)",
+     "https://www.myballard.com/?p=132820"
+    ],
+    [
+     "Mike's Chili Parlor (Seattle Met)",
+     "https://www.seattlemet.com/bars/mikes-chili-parlor"
+    ]
+   ],
+   "cl": false,
+   "i": "364"
+  },
+  {
+   "n": "Sloop Tavern",
+   "c": "Bars and taverns",
+   "a": "2830 NW Market St, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Nautical tavern from the early 1950s with its own sailing club. Big cheap pints and a burger-and-fish galley.",
+   "nt": [],
+   "s": [
+    [
+     "Sloop Tavern (Seattle Met)",
+     "https://seattlemet.com/bars/sloop-tavern"
+    ]
+   ],
+   "cl": false,
+   "i": "365"
+  },
+  {
+   "n": "Ballard Smoke Shop",
+   "c": "Bars and taverns",
+   "a": "5439 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "One of Ballard's oldest bars, with a diner side and a 1970s-style lounge side, plus a big pinball lineup.",
+   "nt": [],
+   "s": [
+    [
+     "Ballard Smoke Shop (Seattle Met)",
+     "https://www.seattlemet.com/bars/ballard-smoke-shop"
+    ],
+    [
+     "Ballard Smoke Shop (The Infatuation)",
+     "https://theinfatuation.com/seattle/reviews/ballard-smoke-shop"
+    ]
+   ],
+   "cl": false,
+   "i": "366"
+  },
+  {
+   "n": "The Rebel",
+   "c": "Bars and taverns",
+   "a": "309 NE 45th St, Wallingford",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Neighborhood pub in the old Kate's Pub space, opened in 2026. Pool, darts, karaoke, trivia, live music and cheap bar food.",
+   "nt": [],
+   "s": [
+    [
+     "Kate's Pub is back to life as The Rebel (Wallyhood, 2026)",
+     "https://www.wallyhood.org/2026/02/kates-pub-is-back-to-life-as-the-rebel/"
+    ]
+   ],
+   "cl": false,
+   "i": "367"
+  },
+  {
+   "n": "Twilight Exit",
+   "c": "Bars and taverns",
+   "a": "2514 E Cherry St, Central District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Dim Central District dive with 1970s decor, scratch burgers and tots, pinball, karaoke and a heated patio.",
+   "nt": [],
+   "s": [
+    [
+     "Best neighborhood bars (Seattle Met, 2024)",
+     "https://www.seattlemet.com/eat-and-drink/2024/08/best-neighborhood-bars-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "368"
+  },
+  {
+   "n": "Poggie Tavern",
+   "c": "Bars and taverns",
+   "a": "4717 California Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Old-school tavern in the Junction with a 1930s feel: pull tabs, pool, a jukebox and Tuesday karaoke.",
+   "nt": [],
+   "s": [
+    [
+     "Best neighborhood bars (Seattle Met, 2024)",
+     "https://www.seattlemet.com/eat-and-drink/2024/08/best-neighborhood-bars-seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "369"
+  },
+  {
+   "n": "Admiral Pub",
+   "c": "Bars and taverns",
+   "a": "2306 California Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Laid-back Admiral District pub with pinball, singalong brunches and a yearly Friendsgiving.",
+   "nt": [],
+   "s": [
+    [
+     "Weekend singalong brunch at Admiral Pub (West Seattle Blog)",
+     "https://westseattleblog.com/event/weekend-singalong-brunch-at-admiral-pub/"
+    ]
+   ],
+   "cl": false,
+   "i": "370"
+  },
+  {
+   "n": "Larry's Tavern",
+   "c": "Bars and taverns",
+   "a": "3405 California Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Small, dog-friendly neighborhood tavern with quirky decor, Skee-Ball, pinball and outdoor seating.",
+   "nt": [],
+   "s": [
+    [
+     "Larry's Tavern opens (West Seattle Blog, 2019)",
+     "https://westseattleblog.com/2019/09/followup-larrys-tavern-opens-today/"
+    ]
+   ],
+   "cl": false,
+   "i": "371"
+  },
+  {
+   "n": "Shorty's",
+   "c": "Bars and taverns",
+   "a": "2316 2nd Ave, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.shortydog.com",
+   "wl": "Website",
+   "b": "Coney Island-themed Belltown dive serving hot dogs, with a back room full of pinball machines.",
+   "nt": [],
+   "s": [
+    [
+     "Shorty's pinball bar (FOX 13)",
+     "https://www.fox13seattle.com/news/iconic-shortys-pinball-bar-hosts-last-tournament-at-original-location"
+    ]
+   ],
+   "cl": false,
+   "i": "372"
+  },
+  {
+   "n": "The 5 Point Cafe",
+   "c": "Bars and taverns",
+   "a": "415 Cedar St, Belltown",
+   "p": "",
+   "e": "",
+   "w": "https://www.the5pointcafe.com",
+   "wl": "Website",
+   "b": "Bar and diner at Tilikum Place since 1929, known for strong cheap drinks and comfort food.",
+   "nt": [],
+   "s": [
+    [
+     "The 5 Point Cafe (official site)",
+     "https://www.the5pointcafe.com"
+    ]
+   ],
+   "cl": false,
+   "i": "373"
+  },
+  {
+   "n": "The Kraken Bar & Lounge",
+   "c": "Bars and taverns",
+   "a": "5828 Roosevelt Way NE, Roosevelt",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Pirate-themed punk bar in the old Cafe Racer space with cheap drinks and frequent local punk and metal shows.",
+   "nt": [],
+   "s": [
+    [
+     "The Kraken Bar & Lounge has reopened (The Stranger, 2024)",
+     "https://www.thestranger.com/music/2024/04/11/79464545/the-kraken-bar-and-lounge-has-reopened"
+    ]
+   ],
+   "cl": false,
+   "i": "374"
+  },
+  {
+   "n": "Comet Tavern",
+   "c": "Bars and taverns",
+   "a": "922 E Pike St, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Long-running Capitol Hill tavern on Pike with comedy nights, DJ dance parties and watch parties.",
+   "nt": [],
+   "s": [
+    [
+     "Comet Tavern (Seattle Met)",
+     "https://www.seattlemet.com/bars/comet-tavern"
+    ]
+   ],
+   "cl": false,
+   "i": "375"
+  },
+  {
+   "n": "Jules Maes Saloon",
+   "c": "Bars and taverns",
+   "a": "5919 Airport Way S, Georgetown",
+   "p": "",
+   "e": "",
+   "w": "https://www.julesmaessaloon.com",
+   "wl": "Website",
+   "b": "Often called Seattle's oldest bar, dating to 1888, reopened in 2021 with its historic interior kept.",
+   "nt": [],
+   "s": [
+    [
+     "Jules Maes' new owner preserves legacy (South Seattle Emerald, 2021)",
+     "https://southseattleemerald.org/2021/02/02/jules-maes-new-owner-preserves-legacy-of-one-of-seattles-oldest-bars"
+    ]
+   ],
+   "cl": false,
+   "i": "376"
+  },
+  {
+   "n": "9lb Hammer",
+   "c": "Bars and taverns",
+   "a": "6009 Airport Way S, Georgetown",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Working-class Georgetown dive with free pool, free peanuts and a few pinball machines.",
+   "nt": [],
+   "s": [
+    [
+     "9lb Hammer (Seattle Met)",
+     "https://www.seattlemet.com/bars/9lb-hammer"
+    ]
+   ],
+   "cl": false,
+   "i": "377"
+  },
+  {
+   "n": "Mecca Cafe",
+   "c": "Bars and taverns",
+   "a": "526 Queen Anne Ave N, Lower Queen Anne",
+   "p": "",
+   "e": "",
+   "w": "https://mecca-cafe.com",
+   "wl": "Website",
+   "b": "Diner and narrow bar since 1930, known for cheap drinks and comfort food until 2am.",
+   "nt": [],
+   "s": [
+    [
+     "Mecca Cafe (official site)",
+     "https://mecca-cafe.com"
+    ]
+   ],
+   "cl": false,
+   "i": "378"
+  },
+  {
+   "n": "Lottie's Lounge",
+   "c": "Bars and taverns",
+   "a": "4900 Rainier Ave S, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Snug bar in a 1905 hotel building on Rainier Ave with slushies, a cream-cheese Seattle dog, brunch and karaoke.",
+   "nt": [],
+   "s": [
+    [
+     "Lottie's Lounge (The Infatuation, 2026)",
+     "https://www.theinfatuation.com/seattle/reviews/lotties-lounge"
+    ]
+   ],
+   "cl": false,
+   "i": "379"
+  },
+  {
+   "n": "Mac's Triangle Pub",
+   "c": "Bars and taverns",
+   "a": "9454 Delridge Way SW, White Center",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "White Center neighborhood pub with classic pub food, pull tabs and karaoke several nights a week.",
+   "nt": [],
+   "s": [
+    [
+     "Mac's Triangle Pub (Seattle Met)",
+     "https://www.seattlemet.com/bars/macs-triangle-pub"
+    ]
+   ],
+   "cl": false,
+   "i": "380"
+  },
+  {
+   "n": "Eastlake Zoo Tavern",
+   "c": "Bars and taverns",
+   "a": "2301 Eastlake Ave E, Eastlake",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Co-op-owned, cash-only tavern since 1974 with pool, darts, shuffleboard and rotating pinball.",
+   "nt": [],
+   "s": [
+    [
+     "Eastlake Zoo Tavern (Seattle Met)",
+     "https://www.seattlemet.com/bars/eastlake-zoo-tavern"
+    ],
+    [
+     "Eastlake Zoo Tavern (Atlas Obscura)",
+     "https://atlasobscura.com/places/eastlake-zoo-tavern"
+    ]
+   ],
+   "cl": false,
+   "i": "381"
+  },
+  {
+   "n": "Baranof",
+   "c": "Bars and taverns",
+   "a": "8549 Greenwood Ave N, Greenwood",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Greenwood dive known for stiff drinks, pool and karaoke most nights.",
+   "nt": [],
+   "s": [
+    [
+     "The Baranof (Seattle Met)",
+     "https://www.seattlemet.com/bars/the-baranof"
+    ]
+   ],
+   "cl": false,
+   "i": "382"
+  },
+  {
+   "n": "Sully's Snowgoose Saloon",
+   "c": "Bars and taverns",
+   "a": "6119 Phinney Ave N, Phinney Ridge",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Cozy, dog-friendly tavern in a 1924 building with a ski-lodge feel and a fireplace.",
+   "nt": [],
+   "s": [
+    [
+     "Sully's Snowgoose Saloon (Seattle Met)",
+     "https://www.seattlemet.com/bars/sullys-snowgoose-saloon"
+    ]
+   ],
+   "cl": false,
+   "i": "383"
+  },
+  {
+   "n": "Teddy's Tavern",
+   "c": "Bars and taverns",
+   "a": "1012 NE 65th St, Roosevelt",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Old-school neighborhood tavern with two pool tables, darts, arcade games and outdoor ping-pong.",
+   "nt": [],
+   "s": [
+    [
+     "Teddy's Tavern (Kineticist)",
+     "https://md.kineticist.com/locations/teddys-tavern-seattle-wa"
+    ]
+   ],
+   "cl": false,
+   "i": "384"
+  },
+  {
+   "n": "Chelan Cafe and Ebb Tide Room",
+   "c": "Bars and taverns",
+   "a": "3527 Chelan Ave SW, West Seattle",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Greasy-spoon diner from 1938 with a nautical back bar, the Ebb Tide Room, popular with dockworkers.",
+   "nt": [],
+   "s": [
+    [
+     "The Chelan Cafe's Ebb Tide Room (Punch)",
+     "https://punchdrink.com/venues/the-chelan-cafes-ebb-tide-room/"
+    ]
+   ],
+   "cl": false,
+   "i": "385"
+  },
+  {
+   "n": "College Inn Pub",
+   "c": "Bars and taverns",
+   "a": "4006 University Way NE, U District",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Basement pub under the historic College Inn, a UW hangout since 1973, reopened in 2025 with pool and trivia.",
+   "nt": [],
+   "s": [
+    [
+     "50-year-old U District pub reopens (KIRO 7)",
+     "https://www.kiro7.com/news/local/50-year-old-u-district-pub-reopens-under-uw-grads-ownership/OMKGTXHNPVB3ZFJGQRDIUCPDQE"
+    ]
+   ],
+   "cl": false,
+   "i": "386"
+  },
+  {
+   "n": "London Bridge Studio",
+   "c": "Recording studios",
+   "a": "20021 Ballinger Way NE, Suite A, Shoreline",
+   "p": "",
+   "e": "",
+   "w": "https://www.londonbridgestudio.com",
+   "wl": "Website",
+   "b": "Historic tracking and mixing studio in Shoreline's Ballinger district, open since 1985. A grunge-era landmark that also offers studio tours.",
+   "nt": [],
+   "s": [
+    [
+     "London Bridge Studio offering studio tours (Shoreline Area News, 2025)",
+     "https://www.shorelineareanews.com/2025/06/london-bridge-studio-in-shoreline-is.html"
+    ],
+    [
+     "London Bridge Studio (official site)",
+     "https://www.londonbridgestudio.com"
+    ]
+   ],
+   "cl": false,
+   "i": "387"
+  },
+  {
+   "n": "Robert Lang Studios",
+   "c": "Recording studios",
+   "a": "19351 23rd Ave NW, Shoreline",
+   "p": "",
+   "e": "",
+   "w": "https://www.robertlangstudios.com",
+   "wl": "Website",
+   "b": "Hillside studio in Richmond Beach for tracking, mixing and mastering, with a long history in Seattle rock including Alice in Chains and Foo Fighters sessions.",
+   "nt": [],
+   "s": [
+    [
+     "Robert Lang Studios (official site)",
+     "https://www.robertlangstudios.com"
+    ]
+   ],
+   "cl": false,
+   "i": "388"
+  },
+  {
+   "n": "Bear Creek Studio",
+   "c": "Recording studios",
+   "a": "Woodinville",
+   "p": "",
+   "e": "",
+   "w": "https://www.bearcreekstudio.com",
+   "wl": "Website",
+   "b": "Family-run studio in a converted barn on 10 wooded acres, with a big main room, iso booths, a treehouse mix room and on-site lodging. Founded in 1977.",
+   "nt": [],
+   "s": [
+    [
+     "Sera Cahoone artist page (Sub Pop, 2026)",
+     "https://www.subpop.com/artists/sera_cahoone"
+    ],
+    [
+     "Bear Creek Studio",
+     "https://www.ryanhadlock.com/studio"
+    ]
+   ],
+   "cl": false,
+   "i": "389"
+  },
+  {
+   "n": "Crackle & Pop!",
+   "c": "Recording studios",
+   "a": "Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://www.cracklepopstudio.com",
+   "wl": "Website",
+   "b": "Ballard studio since 2006, recording on a 1969 Spectra Sonics console and 2-inch tape. Hourly and day rates, house engineers and live session videos.",
+   "nt": [],
+   "s": [
+    [
+     "Crackle & Pop! (official site)",
+     "https://www.cracklepopstudio.com"
+    ]
+   ],
+   "cl": false,
+   "i": "390"
+  },
+  {
+   "n": "Orbit Audio",
+   "c": "Recording studios",
+   "a": "Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://orbitaudiorocks.com/",
+   "wl": "Website",
+   "b": "Musician-owned studio for recording, mixing and mastering, plus voiceover and podcasts, at the same location since 2002. Also runs a recording arts school.",
+   "nt": [],
+   "s": [
+    [
+     "Orbit Audio (official site)",
+     "https://orbitaudiorocks.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "391"
+  },
+  {
+   "n": "Electrokitty Recording",
+   "c": "Recording studios",
+   "a": "45th and Densmore, Wallingford",
+   "p": "",
+   "e": "",
+   "w": "https://www.electrokitty.com",
+   "wl": "Website",
+   "b": "Wallingford tracking and mixing studio built around a 52-channel Quad Eight console with API and Neve preamps. Well-known Seattle producers have worked there.",
+   "nt": [],
+   "s": [
+    [
+     "Electrokitty (official site)",
+     "https://www.electrokitty.com"
+    ]
+   ],
+   "cl": false,
+   "i": "392"
+  },
+  {
+   "n": "Nels Motel",
+   "c": "Recording studios",
+   "a": "Greenwood",
+   "p": "",
+   "e": "",
+   "w": "http://www.nelsmotel.com/",
+   "wl": "Website",
+   "b": "Writing, tracking and mixing space with a control room, vocal booth and synth room, in the same Greenwood building as Avast.",
+   "nt": [],
+   "s": [
+    [
+     "Album produced at Avast and Nels Motel (Rock N Load, 2025)",
+     "https://rocknloadmag.com/?p=289394"
+    ],
+    [
+     "Nels Motel (official site)",
+     "http://www.nelsmotel.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "393"
+  },
+  {
+   "n": "Undercaste Studios",
+   "c": "Recording studios",
+   "a": "20340 24th Ave NE, Shoreline",
+   "p": "",
+   "e": "",
+   "w": "https://www.undercaste.com/",
+   "wl": "Website",
+   "b": "Appointment-only studio with three rooms, best known for hip-hop vocal sessions, plus beat production, mixing and mastering.",
+   "nt": [],
+   "s": [
+    [
+     "Undercaste (official site)",
+     "https://www.undercaste.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "394"
+  },
+  {
+   "n": "Mirror Sound",
+   "c": "Recording studios",
+   "a": "301 NE 191st St, Shoreline",
+   "p": "",
+   "e": "",
+   "w": "http://www.mirrorsound.com/",
+   "wl": "Website",
+   "b": "Recording, mixing and mastering studio since 1997, with voiceover work and recording courses.",
+   "nt": [],
+   "s": [
+    [
+     "Mirror Sound (official site)",
+     "http://www.mirrorsound.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "395"
+  },
+  {
+   "n": "Quiet Please Recording",
+   "c": "Recording studios",
+   "a": "Greenwood",
+   "p": "",
+   "e": "",
+   "w": "https://www.quietpleaserecording.com/",
+   "wl": "Website",
+   "b": "Recording, editing and mixing with a house engineer included in hourly or three-day block rates. Analog tape available.",
+   "nt": [],
+   "s": [
+    [
+     "Quiet Please Recording (official site)",
+     "https://www.quietpleaserecording.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "396"
+  },
+  {
+   "n": "Jack Straw Cultural Center",
+   "c": "Recording studios",
+   "a": "4261 Roosevelt Way NE, Roosevelt",
+   "p": "",
+   "e": "",
+   "w": "https://jackstraw.org/",
+   "wl": "Website",
+   "b": "Nonprofit audio arts center since 1962 that rents its studios to the public, and runs audio classes and artist residencies.",
+   "nt": [],
+   "s": [
+    [
+     "Jack Straw Cultural Center (official site)",
+     "https://jackstraw.org/"
+    ]
+   ],
+   "cl": false,
+   "i": "397"
+  },
+  {
+   "n": "The Vera Project Recording Studio",
+   "c": "Recording studios",
+   "a": "305 Harrison St, Seattle Center",
+   "p": "",
+   "e": "",
+   "w": "https://theveraproject.org/audio-stage/recording-studio/",
+   "wl": "Website",
+   "b": "All-ages nonprofit teaching studio the public can book, with a live room for full-band tracking. Sessions include a staff engineer.",
+   "nt": [],
+   "s": [
+    [
+     "Recording Studio (The Vera Project)",
+     "https://theveraproject.org/audio-stage/recording-studio/"
+    ]
+   ],
+   "cl": false,
+   "i": "398"
+  },
+  {
+   "n": "Black Belt Mastering",
+   "c": "Recording studios",
+   "a": "Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.blackbeltmastering.com",
+   "wl": "Website",
+   "b": "Mastering and vinyl-cutting studio since 2009, cutting lacquers on Neumann and Scully lathes as well as digital mastering.",
+   "nt": [],
+   "s": [
+    [
+     "Behind the scenes of vinyl mastering (My Edmonds News, 2025)",
+     "https://myedmondsnews.com/2025/05/the-local-music-scene-behind-the-scenes-of-vinyl-mastering-with-levi-seitz-of-black-belt-mastering/"
+    ]
+   ],
+   "cl": false,
+   "i": "399"
+  },
+  {
+   "n": "Relayer Sound",
+   "c": "Recording studios",
+   "a": "Market Street, downtown Tacoma",
+   "p": "",
+   "e": "",
+   "w": "https://www.instagram.com/relayersound",
+   "wl": "Website",
+   "b": "Band recording studio opened in 2025 with a control room, vocal booth, live room and drum room, plus in-studio video packages.",
+   "nt": [],
+   "s": [
+    [
+     "Relayer Studio debuts (Weekly Volcano, 2025)",
+     "https://weekly-volcano.com/?p=863"
+    ]
+   ],
+   "cl": false,
+   "i": "400"
+  },
+  {
+   "n": "Uberbeatz Studios",
+   "c": "Recording studios",
+   "a": "Lynnwood",
+   "p": "",
+   "e": "",
+   "w": "https://www.nwrehearsalstudio.com/",
+   "wl": "Website",
+   "b": "Rehearsal complex with rooms rented hourly or monthly, plus recording for bands that practice there.",
+   "nt": [],
+   "s": [
+    [
+     "Uberbeatz Studios (official site)",
+     "https://www.nwrehearsalstudio.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "401"
+  },
+  {
+   "n": "West Coast Armory (Bellevue Gun Club)",
+   "c": "Gun shops and ranges",
+   "a": "13216 SE 32nd St, Bellevue",
+   "p": "",
+   "e": "",
+   "w": "https://www.westcoastarmory.com/",
+   "wl": "Website",
+   "b": "Indoor range with a pro shop selling firearms, plus gunsmithing and transfers. Runs carbine, red-dot and safety classes.",
+   "nt": [],
+   "s": [
+    [
+     "West Coast Armory (official site, 2026)",
+     "https://www.westcoastarmory.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "402"
+  },
+  {
+   "n": "Bellevue Indoor Range / Wade's Eastside Guns",
+   "c": "Gun shops and ranges",
+   "a": "13570 Bel-Red Rd NE, Bellevue",
+   "p": "",
+   "e": "",
+   "w": "https://www.bellevueindoorrange.com/",
+   "wl": "Website",
+   "b": "24-lane indoor range with private booths, a training bay and rental firearms, next to the Wade's Eastside Guns store. Handgun basics classes.",
+   "nt": [],
+   "s": [
+    [
+     "Bellevue Indoor Range (official site)",
+     "https://www.bellevueindoorrange.com/"
+    ],
+    [
+     "Wade's Eastside Guns (official site)",
+     "https://www.wadesguns.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "403"
+  },
+  {
+   "n": "Securité Gun Club",
+   "c": "Gun shops and ranges",
+   "a": "11910 Woodinville Dr, Woodinville",
+   "p": "",
+   "e": "",
+   "w": "https://www.securitegunclub.com/",
+   "wl": "Website",
+   "b": "Large indoor club with four 25-yard rifle- and pistol-capable bays, retail, rentals, memberships and a free safety briefing for first-timers.",
+   "nt": [],
+   "s": [
+    [
+     "Securité Gun Club (official site, 2026)",
+     "https://www.securitegunclub.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "404"
+  },
+  {
+   "n": "Precise Shooter",
+   "c": "Gun shops and ranges",
+   "a": "18144 Woodinville Snohomish Rd, Woodinville",
+   "p": "",
+   "e": "",
+   "w": "https://preciseshooter.com/",
+   "wl": "Website",
+   "b": "Retail gun shop for firearms, optics, reloading gear and accessories, with special orders and transfers. No range.",
+   "nt": [],
+   "s": [
+    [
+     "Precise Shooter (official site, 2026)",
+     "https://preciseshooter.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "405"
+  },
+  {
+   "n": "Federal Way Discount Guns & Indoor Range",
+   "c": "Gun shops and ranges",
+   "a": "1401 S 324th St, Federal Way",
+   "p": "",
+   "e": "",
+   "w": "https://www.federalwaydiscountguns.com/",
+   "wl": "Website",
+   "b": "Gun store with 14 heated indoor lanes, two tactical bays and 160-plus rental firearms. Basic handgun class and private instruction.",
+   "nt": [],
+   "s": [
+    [
+     "Federal Way Discount Guns (official site, 2026)",
+     "https://www.federalwaydiscountguns.com/contact"
+    ]
+   ],
+   "cl": false,
+   "i": "406"
+  },
+  {
+   "n": "Renton Fish & Game Club",
+   "c": "Gun shops and ranges",
+   "a": "17205 SE 144th St, Renton",
+   "p": "",
+   "e": "",
+   "w": "https://www.rfgc.org/",
+   "wl": "Website",
+   "b": "Outdoor club since 1933 with rifle, pistol, shotgun and archery ranges, open to the public for a daily fee.",
+   "nt": [],
+   "s": [
+    [
+     "Renton Fish & Game Club (official site, 2026)",
+     "https://www.rfgc.org/"
+    ]
+   ],
+   "cl": false,
+   "i": "407"
+  },
+  {
+   "n": "Issaquah Sportsmen's Club",
+   "c": "Gun shops and ranges",
+   "a": "23605 SE Evans St, Issaquah",
+   "p": "",
+   "e": "",
+   "w": "https://www.issaquahsportsmensclub.com/",
+   "wl": "Website",
+   "b": "Outdoor range open to the public for a day fee, with benches out to 100 yards, youth air rifle and hunter education classes.",
+   "nt": [],
+   "s": [
+    [
+     "Issaquah Sportsmen's Club (official site, 2026)",
+     "https://www.issaquahsportsmensclub.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "408"
+  },
+  {
+   "n": "Tacoma Sportsmen's Club",
+   "c": "Gun shops and ranges",
+   "a": "16409 Canyon Rd E, Puyallup",
+   "p": "",
+   "e": "",
+   "w": "https://tacomassportsmensclub.com/",
+   "wl": "Website",
+   "b": "Outdoor club with public rifle and handgun ranges, trap and skeet fields, and archery. No rentals or ammo sales.",
+   "nt": [],
+   "s": [
+    [
+     "Tacoma Sportsmen's Club (official site, 2026)",
+     "https://tacomassportsmensclub.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "409"
+  },
+  {
+   "n": "Cascade Shooting Facilities",
+   "c": "Gun shops and ranges",
+   "a": "26520 292nd Ave SE, Ravensdale",
+   "p": "",
+   "e": "",
+   "w": "https://www.cascadeshootingfacilities.org/",
+   "wl": "Website",
+   "b": "Nonprofit club since 1947 with rifle ranges to 600 yards, pistol, shotgun, archery and black powder. Mostly members, with public rifle days twice a month.",
+   "nt": [],
+   "s": [
+    [
+     "Cascade Shooting Facilities (official site, 2026)",
+     "https://www.cascadeshootingfacilities.org/"
+    ]
+   ],
+   "cl": false,
+   "i": "410"
+  },
+  {
+   "n": "Seattle Skeet and Trap",
+   "c": "Gun shops and ranges",
+   "a": "26520 292nd Ave SE #3, Ravensdale",
+   "p": "",
+   "e": "",
+   "w": "https://www.sstclub.com/",
+   "wl": "Website",
+   "b": "Shotgun club at the King County Shooting Sports Park with skeet, trap and sporting clays Thursday through Sunday, plus training.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Skeet and Trap (official site, 2026)",
+     "https://www.sstclub.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "411"
+  },
+  {
+   "n": "Outdoor Emporium",
+   "c": "Gun shops and ranges",
+   "a": "1701 4th Ave S, SoDo",
+   "p": "",
+   "e": "",
+   "w": "",
+   "wl": "Website",
+   "b": "Warehouse-style outdoor store in SoDo for fishing, camping and hunting gear, with a licensed firearms counter.",
+   "nt": [],
+   "s": [
+    [
+     "Outdoor Emporium (Seattle Met)",
+     "https://www.seattlemet.com/stores/outdoor-emporium"
+    ]
+   ],
+   "cl": false,
+   "i": "412"
+  },
+  {
+   "n": "Rainier Arms",
+   "c": "Gun shops and ranges",
+   "a": "2504 Auburn Way N, Auburn",
+   "p": "",
+   "e": "",
+   "w": "https://rainierarms.com/",
+   "wl": "Website",
+   "b": "Firearms maker and retailer known for AR-platform rifles and parts, with a walk-in storefront.",
+   "nt": [],
+   "s": [
+    [
+     "Rainier Arms store hours (official)",
+     "https://rainierarms.com/hours"
+    ]
+   ],
+   "cl": false,
+   "i": "413"
+  },
+  {
+   "n": "Sportsman's Warehouse (Federal Way)",
+   "c": "Gun shops and ranges",
+   "a": "1405 S 348th St, Federal Way",
+   "p": "",
+   "e": "",
+   "w": "https://stores.sportsmans.com/sportsmans-warehouse/us/wa/federal-way/1405-s-348th-st.",
+   "wl": "Website",
+   "b": "Outdoor retailer with a gun department and gunsmithing.",
+   "nt": [],
+   "s": [
+    [
+     "Sportsman's Warehouse Federal Way (official)",
+     "https://stores.sportsmans.com/sportsmans-warehouse/us/wa/federal-way/1405-s-348th-st."
+    ]
+   ],
+   "cl": false,
+   "i": "414"
+  },
+  {
+   "n": "Sportsman's Warehouse (Puyallup)",
+   "c": "Gun shops and ranges",
+   "a": "120 31st Ave SE, Ste G, Puyallup",
+   "p": "",
+   "e": "",
+   "w": "https://stores.sportsmans.com/sportsmans-warehouse/us/wa/puyallup/120-31st-ave-se",
+   "wl": "Website",
+   "b": "Outdoor retailer with a gun department and gunsmithing.",
+   "nt": [],
+   "s": [
+    [
+     "Sportsman's Warehouse Puyallup (official)",
+     "https://stores.sportsmans.com/sportsmans-warehouse/us/wa/puyallup/120-31st-ave-se"
+    ]
+   ],
+   "cl": false,
+   "i": "415"
+  },
+  {
+   "n": "Cabela's (Tulalip)",
+   "c": "Gun shops and ranges",
+   "a": "9810 Quil Ceda Blvd, Tulalip",
+   "p": "",
+   "e": "",
+   "w": "https://stores.cabelas.com/us/wa/tulalip/9810-quil-ceda-boulevard.html",
+   "wl": "Website",
+   "b": "Large outdoor retailer with new firearms, a used-gun library and an archery range.",
+   "nt": [],
+   "s": [
+    [
+     "Cabela's Tulalip (official)",
+     "https://stores.cabelas.com/us/wa/tulalip/9810-quil-ceda-boulevard.html"
+    ]
+   ],
+   "cl": false,
+   "i": "416"
+  },
+  {
+   "n": "Wonderland Gear Exchange",
+   "c": "Used outdoor gear",
+   "a": "122 NW 36th St, Fremont",
+   "p": "",
+   "e": "",
+   "w": "https://www.wonderlandgearexchange.com",
+   "wl": "Website",
+   "b": "Consignment shop selling only used outdoor gear and apparel: camping, backpacking, snow sports, climbing and kids' gear. Consignors are paid when items sell.",
+   "nt": [],
+   "s": [
+    [
+     "Wonderland Gear Exchange (official site)",
+     "https://www.wonderlandgearexchange.com"
+    ],
+    [
+     "Recreation gear consignment (Salt Lake Tribune, 2026)",
+     "https://www.sltrib.com/news/2026/02/21/new-recreation-gear-consignment/"
+    ]
+   ],
+   "cl": false,
+   "i": "417"
+  },
+  {
+   "n": "Ascent Outdoors (Second Ascent used gear)",
+   "c": "Used outdoor gear",
+   "a": "2201 15th Ave W, Interbay",
+   "p": "",
+   "e": "",
+   "w": "https://ascentoutdoors.com",
+   "wl": "Website",
+   "b": "Outdoor shop with an upstairs Second Ascent section of used gear, samples and clearance. Takes used gear in trade for store credit.",
+   "nt": [],
+   "s": [
+    [
+     "Second Ascent used and discount gear (Ascent Outdoors)",
+     "https://ascentoutdoors.com/pages/second-ascent"
+    ]
+   ],
+   "cl": false,
+   "i": "418"
+  },
+  {
+   "n": "REI Seattle Flagship (Re/Supply used gear)",
+   "c": "Used outdoor gear",
+   "a": "222 Yale Ave N, South Lake Union",
+   "p": "",
+   "e": "",
+   "w": "https://www.rei.com/stores/seattle",
+   "wl": "Website",
+   "b": "Big co-op flagship where members can buy lightly used Re/Supply gear and trade in used gear for credit. Selection varies.",
+   "nt": [],
+   "s": [
+    [
+     "REI Seattle Flagship store page",
+     "https://www.rei.com/stores/seattle"
+    ]
+   ],
+   "cl": false,
+   "i": "419"
+  },
+  {
+   "n": "Play It Again Sports Seattle",
+   "c": "Used outdoor gear",
+   "a": "1304 Stewart St, Denny Triangle",
+   "p": "",
+   "e": "",
+   "w": "https://playitagainsports.com/locations/seattle-wa",
+   "wl": "Website",
+   "b": "Buys and sells used sporting goods including skis, snowboards, bikes and paddleboards, with same-day buying and seasonal ski rentals.",
+   "nt": [],
+   "s": [
+    [
+     "Play It Again Sports Seattle (official)",
+     "https://playitagainsports.com/locations/seattle-wa"
+    ],
+    [
+     "Play It Again Sports (Seattle Met)",
+     "https://www.seattlemet.com/businesses/play-it-again-sports"
+    ]
+   ],
+   "cl": false,
+   "i": "420"
+  },
+  {
+   "n": "Play It Again Sports Lynnwood",
+   "c": "Used outdoor gear",
+   "a": "Lynnwood",
+   "p": "",
+   "e": "",
+   "w": "https://playitagainsports.com/locations/lynnwood-wa",
+   "wl": "Website",
+   "b": "New and used sports gear including used ski and snowboard gear and bikes, with a buy-for-cash program and a ski rental and tuning shop.",
+   "nt": [],
+   "s": [
+    [
+     "Play It Again Sports Lynnwood (official)",
+     "https://playitagainsports.com/locations/lynnwood-wa"
+    ]
+   ],
+   "cl": false,
+   "i": "421"
+  },
+  {
+   "n": "Recycled Cycles",
+   "c": "Used outdoor gear",
+   "a": "1007 NE Boat St, U District",
+   "p": "",
+   "e": "",
+   "w": "https://www.recycledcycles.com",
+   "wl": "Website",
+   "b": "U District bike shop since 1994 selling used bikes, frames and parts, with trade-ins and consignment for higher-end bikes.",
+   "nt": [],
+   "s": [
+    [
+     "Recycled Cycles since 1994 (City Cast Seattle)",
+     "https://seattle.citycast.fm/keep-it-local/recycled-cycles-has-kept-cyclists-rolling-since-1994"
+    ]
+   ],
+   "cl": false,
+   "i": "422"
+  },
+  {
+   "n": "Bike Works",
+   "c": "Used outdoor gear",
+   "a": "3709 S Ferdinand St, Columbia City",
+   "p": "",
+   "e": "",
+   "w": "https://bikeworks.org",
+   "wl": "Website",
+   "b": "Nonprofit community bike shop selling refurbished used bikes and new and used parts from donated bikes.",
+   "nt": [],
+   "s": [
+    [
+     "Bike Works shop FAQ (official)",
+     "https://shop.bikeworks.org/service"
+    ]
+   ],
+   "cl": false,
+   "i": "423"
+  },
+  {
+   "n": "Superior Seconds Gear Exchange",
+   "c": "Used outdoor gear",
+   "a": "96 Front St S, Issaquah",
+   "p": "",
+   "e": "",
+   "w": "https://www.superiorseconds.org",
+   "wl": "Website",
+   "b": "Downtown Issaquah consignment store for used bikes, skis, snowboards, snowshoes, water sports and camping gear, with seasonal ski and bike swaps.",
+   "nt": [],
+   "s": [
+    [
+     "Superior Seconds (official site)",
+     "https://superiorseconds.myshopify.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "424"
+  },
+  {
+   "n": "Kayak Academy",
+   "c": "Used outdoor gear",
+   "a": "11801 188th Ave SE, Issaquah",
+   "p": "",
+   "e": "",
+   "w": "https://kayakacademy.com",
+   "wl": "Website",
+   "b": "Paddling shop selling used kayaks, canoes and SUPs, plus used dry suits, paddles, PFDs and spray skirts.",
+   "nt": [],
+   "s": [
+    [
+     "Used kayaks and dry suits (Kayak Academy, 2026)",
+     "https://kayakacademy.com/pages/used-kayaks-used-dry-suits"
+    ]
+   ],
+   "cl": false,
+   "i": "425"
+  },
+  {
+   "n": "Turntables & Trails",
+   "c": "Used outdoor gear",
+   "a": "12351 Lake City Way NE #102, Lake City",
+   "p": "",
+   "e": "",
+   "w": "https://www.turntablestrails.com",
+   "wl": "Website",
+   "b": "Lake City shop pairing hi-fi audio with used hiking and outdoor gear. Buys outdoor gear for cash or store credit.",
+   "nt": [],
+   "s": [
+    [
+     "Turntables & Trails (official site)",
+     "https://www.turntablestrails.com"
+    ]
+   ],
+   "cl": false,
+   "i": "426"
+  },
+  {
+   "n": "Reprise",
+   "c": "Secondhand clothing",
+   "a": "10129 Main St, Suite 107B, Bellevue",
+   "p": "",
+   "e": "",
+   "w": "https://reprisestyle.com",
+   "wl": "Website",
+   "b": "Locally owned luxury consignment for women's apparel, handbags and shoes from labels like Chanel, Gucci, Celine and The Row.",
+   "nt": [],
+   "s": [
+    [
+     "Reprise Bellevue (Downtown Bellevue, 2025)",
+     "https://downtownbellevue.com/?p=30716"
+    ]
+   ],
+   "cl": false,
+   "i": "427"
+  },
+  {
+   "n": "The Refind",
+   "c": "Secondhand clothing",
+   "a": "3121 E Madison St #104, Madison Valley",
+   "p": "",
+   "e": "",
+   "w": "https://therefind.com",
+   "wl": "Website",
+   "b": "Luxury resale for pre-owned designer handbags, jewelry, shoes and ready-to-wear, with live shows on Instagram.",
+   "nt": [],
+   "s": [
+    [
+     "The Refind (Seattle Magazine)",
+     "https://seattlemag.com/life-style/refind-aims-be-smart-sustainable-and-luxurious"
+    ]
+   ],
+   "cl": false,
+   "i": "428"
+  },
+  {
+   "n": "Ragamoffyn's",
+   "c": "Secondhand clothing",
+   "a": "132 Park Lane, Kirkland",
+   "p": "",
+   "e": "",
+   "w": "https://www.ragamoffyns.com",
+   "wl": "Website",
+   "b": "Downtown Kirkland designer consignment since 1982, known for authenticated designer handbags and fine designer wear.",
+   "nt": [],
+   "s": [
+    [
+     "Thrift shop tourism in Kirkland (Explore Kirkland, 2025)",
+     "https://www.explorekirkland.com/blog/exploring-sustainable-fashion-thrift-shop-tourism-in-kirkland-wa-2025/"
+    ]
+   ],
+   "cl": false,
+   "i": "429"
+  },
+  {
+   "n": "A New Debut",
+   "c": "Secondhand clothing",
+   "a": "17875 Redmond Way, Suite 160, Redmond",
+   "p": "",
+   "e": "",
+   "w": "https://anewdebut.com",
+   "wl": "Website",
+   "b": "Women's consignment boutique carrying designer clothing, shoes and handbags.",
+   "nt": [],
+   "s": [
+    [
+     "A New Debut (Experience Redmond, 2026)",
+     "https://experienceredmond.com/?p=6266"
+    ]
+   ],
+   "cl": false,
+   "i": "430"
+  },
+  {
+   "n": "Lucky Vintage (Fremont)",
+   "c": "Secondhand clothing",
+   "a": "615 N 35th St, Fremont",
+   "p": "",
+   "e": "",
+   "w": "https://luckyvintageseattle.com",
+   "wl": "Website",
+   "b": "Designer and collectible vintage for women and men, the most upscale of the Lucky shops.",
+   "nt": [],
+   "s": [
+    [
+     "Lucky Vintage locations (official, 2026)",
+     "https://luckyvintageseattle.com/pages/locations"
+    ]
+   ],
+   "cl": false,
+   "i": "431"
+  },
+  {
+   "n": "Lucky Dry Goods",
+   "c": "Secondhand clothing",
+   "a": "5424 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://luckyvintageseattle.com/pages/locations",
+   "wl": "Website",
+   "b": "True vintage from the 1900s to the 1980s, leaning toward dressier pieces like tailored blazers and mid-century dresses.",
+   "nt": [],
+   "s": [
+    [
+     "Lucky Vintage locations (official, 2026)",
+     "https://luckyvintageseattle.com/pages/locations"
+    ]
+   ],
+   "cl": false,
+   "i": "432"
+  },
+  {
+   "n": "Barn Owl Vintage (Ballard)",
+   "c": "Secondhand clothing",
+   "a": "5209 Ballard Ave NW, Ballard",
+   "p": "",
+   "e": "",
+   "w": "https://barnowlseattle.com",
+   "wl": "Website",
+   "b": "Vintage workwear, denim, tees and outdoor gear, with a big vintage Filson selection. Strong for menswear.",
+   "nt": [],
+   "s": [
+    [
+     "Barn Owl opening on Ballard Ave (My Ballard, 2026)",
+     "https://www.myballard.com/?p=285193"
+    ]
+   ],
+   "cl": false,
+   "i": "433"
+  },
+  {
+   "n": "The Barn Owl Vintage Goods (Georgetown)",
+   "c": "Secondhand clothing",
+   "a": "6012 12th Ave S, Georgetown",
+   "p": "",
+   "e": "",
+   "w": "https://barnowlseattle.com",
+   "wl": "Website",
+   "b": "Flagship vintage store with clothing from the 1920s to the 1990s, known for workwear, denim and vintage Filson.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle's best vintage clothing shops (Seattle Met)",
+     "https://www.seattlemet.com/style-and-shopping/seattle-s-best-vintage-clothing-shops"
+    ]
+   ],
+   "cl": false,
+   "i": "434"
+  },
+  {
+   "n": "Throwbacks Northwest",
+   "c": "Secondhand clothing",
+   "a": "1507 11th Ave, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://throwbacksnw.com",
+   "wl": "Website",
+   "b": "Vintage sportswear specialist with Seattle jerseys, snapbacks and crewnecks, strong in men's styles.",
+   "nt": [],
+   "s": [
+    [
+     "Throwbacks Northwest (Seattle Met)",
+     "https://www.seattlemet.com/stores/throwbacks-northwest"
+    ]
+   ],
+   "cl": false,
+   "i": "435"
+  },
+  {
+   "n": "Pretty Parlor",
+   "c": "Secondhand clothing",
+   "a": "119 Summit Ave E, Capitol Hill",
+   "p": "",
+   "e": "",
+   "w": "https://prettyparlor.com",
+   "wl": "Website",
+   "b": "Capitol Hill vintage boutique since 2001 with 1920s-1990s clothing, retro-inspired dresses in all sizes and local designers.",
+   "nt": [],
+   "s": [
+    [
+     "Pretty Parlor celebrates 20 years (Seattle Refined)",
+     "https://seattlerefined.com/fashion-beauty/pretty-parlor-vintage-shop-seattle-20th-anniversary"
+    ]
+   ],
+   "cl": false,
+   "i": "436"
+  },
+  {
+   "n": "Fremont Vintage Mall",
+   "c": "Secondhand clothing",
+   "a": "3419 Fremont Ave N, Fremont",
+   "p": "",
+   "e": "",
+   "w": "https://fremontvintagemall.com",
+   "wl": "Website",
+   "b": "Basement vintage mall with dozens of vendor booths for vintage Levi's, clothing, accessories and mid-century goods.",
+   "nt": [],
+   "s": [
+    [
+     "Inside Fremont Vintage Mall (Seattle Refined, 2026)",
+     "https://seattlerefined.com/lifestyle/inside-fremont-vintage-mall-seattles-most-iconic-thrift-destination-funky-antique-celebrity-star-power-second-hand-finds-pnw-thrifting"
+    ]
+   ],
+   "cl": false,
+   "i": "437"
+  },
+  {
+   "n": "Friend Museum",
+   "c": "Secondhand clothing",
+   "a": "83 S King St #100, Pioneer Square",
+   "p": "",
+   "e": "",
+   "w": "https://www.friendmuseum.com",
+   "wl": "Website",
+   "b": "Vintage collective with vintage and handmade clothing, plus a coffee bar and an events calendar.",
+   "nt": [],
+   "s": [
+    [
+     "Friend Museum (Secret Seattle, 2025)",
+     "https://secretseattle.co/friend-museum-seattle/"
+    ]
+   ],
+   "cl": false,
+   "i": "438"
+  },
+  {
+   "n": "Crystal Express Shuttle (Crystal Mountain)",
+   "c": "Ski buses and Whistler transport",
+   "a": "Departs Enumclaw Expo Center and Fairgrounds, Enumclaw",
+   "p": "",
+   "e": "",
+   "w": "https://www.crystalmountainresort.com/plan-your-trip/parking-and-shuttle-information",
+   "wl": "Website",
+   "b": "The resort's own weekend shuttle from Enumclaw to the Crystal Mountain base, booked in advance as an alternative to weekend parking reservations.",
+   "nt": [],
+   "s": [
+    [
+     "Parking and shuttle information (Crystal Mountain, 2025-26)",
+     "https://www.crystalmountainresort.com/plan-your-trip/parking-and-shuttle-information"
+    ]
+   ],
+   "cl": false,
+   "i": "439"
+  },
+  {
+   "n": "Mohan Skiing & Boarding Friday Ski Bus",
+   "c": "Ski buses and Whistler transport",
+   "a": "Pickups at Seattle and Shoreline middle and high schools, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.skimohan.com/school-programs",
+   "wl": "Website",
+   "b": "Nonprofit ski school's after-school Friday bus to Summit Central for middle and high school students, with lessons or transport only. Six Fridays in January and February.",
+   "nt": [],
+   "s": [
+    [
+     "School ski programs (Mohan, 2026)",
+     "https://www.skimohan.com/school-programs"
+    ]
+   ],
+   "cl": false,
+   "i": "440"
+  },
+  {
+   "n": "Merry Mountain Ski Club Tuesday Ski Bus",
+   "c": "Ski buses and Whistler transport",
+   "a": "Pickups in Seattle (Montlake), Kirkland, Monroe, Everett, Stanwood and Burlington",
+   "p": "",
+   "e": "",
+   "w": "https://nwskiers.org/merry-mountain-ski-club",
+   "wl": "Website",
+   "b": "Club-run Tuesday ski bus to Stevens Pass in January and February, reserved by phone with the club's bus coordinator.",
+   "nt": [],
+   "s": [
+    [
+     "Merry Mountain Ski Club (NWSCC, 2026)",
+     "https://nwskiers.org/merry-mountain-ski-club"
+    ]
+   ],
+   "cl": false,
+   "i": "441"
+  },
+  {
+   "n": "Pro Ski Snoqualmie Valley Ski Bus",
+   "c": "Ski buses and Whistler transport",
+   "a": "Departs Mt Si High, Chief Kanim and Twin Falls middle schools, Snoqualmie Valley",
+   "p": "",
+   "e": "",
+   "w": "https://sites.google.com/proskiservice.com/skibus/home",
+   "wl": "Website",
+   "b": "Thursday after-school bus to Summit Central for Snoqualmie Valley students in grades 6-12, six Thursdays in January and February.",
+   "nt": [],
+   "s": [
+    [
+     "Snoqualmie Valley Ski Bus (Pro Ski, 2026)",
+     "https://sites.google.com/proskiservice.com/skibus/home"
+    ]
+   ],
+   "cl": false,
+   "i": "442"
+  },
+  {
+   "n": "Vashon Youth Ski Bus",
+   "c": "Ski buses and Whistler transport",
+   "a": "Vashon Island",
+   "p": "",
+   "e": "",
+   "w": "https://vashonparks.org/vashon-ski-school-youth-ski-bus",
+   "wl": "Website",
+   "b": "Park district Saturday youth ski bus to the Summit at Snoqualmie, with discounted lessons and scholarships.",
+   "nt": [],
+   "s": [
+    [
+     "Vashon Ski School and Youth Ski Bus (Vashon Park District)",
+     "https://vashonparks.org/vashon-ski-school-youth-ski-bus"
+    ]
+   ],
+   "cl": false,
+   "i": "443"
+  },
+  {
+   "n": "Summit Shuttle (The Summit at Snoqualmie)",
+   "c": "Ski buses and Whistler transport",
+   "a": "Base-area stops at Alpental, Summit Central, Silver Fir and Summit East, Snoqualmie Pass",
+   "p": "",
+   "e": "",
+   "w": "https://summitatsnoqualmie.com/summit-shuttle",
+   "wl": "Website",
+   "b": "No-charge resort bus linking Alpental with Summit West, Central and East on winter weekends and holidays. It runs on the Pass, not from Seattle.",
+   "nt": [],
+   "s": [
+    [
+     "Summit Shuttle (The Summit at Snoqualmie, 2026)",
+     "https://summitatsnoqualmie.com/summit-shuttle"
+    ]
+   ],
+   "cl": false,
+   "i": "444"
+  },
+  {
+   "n": "Quick Coach (Seattle to Vancouver)",
+   "c": "Ski buses and Whistler transport",
+   "a": "Washington State Convention Center (8th Ave), cruise terminals and Sea-Tac arrivals, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.quickcoach.com",
+   "wl": "Website",
+   "b": "Cross-border coach from Seattle and Sea-Tac to downtown Vancouver, the first leg to Whistler. Connect downtown to Epic Rides, YVR Skylynx or Whistler Shuttle.",
+   "nt": [],
+   "s": [
+    [
+     "Quick Coach (official site, 2026)",
+     "https://www.quickcoach.com"
+    ]
+   ],
+   "cl": false,
+   "i": "445"
+  },
+  {
+   "n": "FlixBus Seattle to Vancouver",
+   "c": "Ski buses and Whistler transport",
+   "a": "Seattle Bus Station, UW and King Street Station stops, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://global.flixbus.com/bus-routes/bus-seattle-wa-vancouver-bc",
+   "wl": "Website",
+   "b": "Intercity bus with several daily Seattle-Vancouver trips of about four hours. From Pacific Central Station, take SkyTrain downtown for a Whistler coach.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle to Vancouver (FlixBus, 2026)",
+     "https://global.flixbus.com/bus-routes/bus-seattle-wa-vancouver-bc"
+    ]
+   ],
+   "cl": false,
+   "i": "446"
+  },
+  {
+   "n": "Amtrak Cascades (Seattle to Vancouver)",
+   "c": "Ski buses and Whistler transport",
+   "a": "King Street Station, Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.amtrak.com/routes/cascades-train.html",
+   "wl": "Website",
+   "b": "Daily trains from Seattle to Vancouver, BC via Edmonds, Everett and Bellingham. Connect in Vancouver to a Whistler coach.",
+   "nt": [],
+   "s": [
+    [
+     "Amtrak Cascades (Amtrak)",
+     "https://www.amtrak.com/routes/cascades-train.html"
+    ]
+   ],
+   "cl": false,
+   "i": "447"
+  },
+  {
+   "n": "Whistler Shuttle",
+   "c": "Ski buses and Whistler transport",
+   "a": "YVR airport and downtown Vancouver hotels, Vancouver BC",
+   "p": "",
+   "e": "",
+   "w": "https://www.whistlershuttle.com",
+   "wl": "Website",
+   "b": "Scheduled shuttle from Vancouver airport and downtown hotels to Whistler hotels and bus stops, with a winter 2026-27 fare table on its site.",
+   "nt": [],
+   "s": [
+    [
+     "Rates (Whistler Shuttle, 2026-27)",
+     "https://www.whistlershuttle.com/rates"
+    ]
+   ],
+   "cl": false,
+   "i": "448"
+  },
+  {
+   "n": "YVR Skylynx",
+   "c": "Ski buses and Whistler transport",
+   "a": "YVR International Arrivals and Melville St downtown, Vancouver BC",
+   "p": "",
+   "e": "",
+   "w": "https://yvrskylynx.com",
+   "wl": "Website",
+   "b": "Daily coach from Vancouver airport and downtown Vancouver to Whistler via Squamish, with a winter season from Nov. 22, 2026.",
+   "nt": [],
+   "s": [
+    [
+     "Timetable (YVR Skylynx, 2026)",
+     "https://yvrskylynx.com/timetable/37"
+    ]
+   ],
+   "cl": false,
+   "i": "449"
+  },
+  {
+   "n": "Epic Rides",
+   "c": "Ski buses and Whistler transport",
+   "a": "1088 Melville St, Vancouver BC",
+   "p": "",
+   "e": "",
+   "w": "https://www.epicrides.ca",
+   "wl": "Website",
+   "b": "Year-round bus from downtown Vancouver to Whistler Village in under two hours, with skis and boards carried at no charge.",
+   "nt": [],
+   "s": [
+    [
+     "Epic Rides (official site, 2026)",
+     "https://www.epicrides.ca"
+    ]
+   ],
+   "cl": false,
+   "i": "450"
+  },
+  {
+   "n": "The Mountaineers",
+   "c": "Climbing and ski clubs",
+   "a": "7700 Sand Point Way NE, Magnuson Park",
+   "p": "",
+   "e": "",
+   "w": "https://www.mountaineers.org",
+   "wl": "Website",
+   "b": "Big nonprofit outdoor club with climbing, scrambling, backcountry and cross-country ski courses, trips and gym meetups, plus Stevens Lodge at Stevens Pass.",
+   "nt": [],
+   "s": [
+    [
+     "The Mountaineers (official site, 2026)",
+     "https://www.mountaineers.org"
+    ]
+   ],
+   "cl": false,
+   "i": "451"
+  },
+  {
+   "n": "Washington Alpine Club",
+   "c": "Climbing and ski clubs",
+   "a": "Guye Cabin, Snoqualmie Pass",
+   "p": "",
+   "e": "",
+   "w": "https://www.washingtonalpineclub.org",
+   "wl": "Website",
+   "b": "Volunteer mountaineering club over 110 years old offering climbing, backcountry travel, ski skills and avalanche courses at its Snoqualmie Pass cabin.",
+   "nt": [],
+   "s": [
+    [
+     "Washington Alpine Club (official site, 2026)",
+     "https://www.washingtonalpineclub.org/"
+    ]
+   ],
+   "cl": false,
+   "i": "452"
+  },
+  {
+   "n": "Sahalie Ski Club",
+   "c": "Climbing and ski clubs",
+   "a": "Alpental Access Rd SE, Snoqualmie Pass",
+   "p": "",
+   "e": "",
+   "w": "https://sahalieskiclub.com",
+   "wl": "Website",
+   "b": "Ski club founded in 1931 with 83 acres at Snoqualmie Pass, a big lodge and its own rope tows, skiing about 15 winter weekends.",
+   "nt": [],
+   "s": [
+    [
+     "Sahalie Ski Club (official site, 2026)",
+     "https://sahalieskiclub.com/"
+    ]
+   ],
+   "cl": false,
+   "i": "453"
+  },
+  {
+   "n": "S'no Joke Ski Club of Seattle",
+   "c": "Climbing and ski clubs",
+   "a": "Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://snojokers.clubexpress.com",
+   "wl": "Website",
+   "b": "Year-round adult ski and social club with domestic and international ski trips, including Whistler, plus snowshoeing, hiking and biking.",
+   "nt": [],
+   "s": [
+    [
+     "S'no Joke Ski Club (official site, 2026)",
+     "https://snojokers.clubexpress.com/content.aspx"
+    ]
+   ],
+   "cl": false,
+   "i": "454"
+  },
+  {
+   "n": "SKIBACS Ski & Snowboard Club",
+   "c": "Climbing and ski clubs",
+   "a": "Seattle (lodge at Crystal Mountain)",
+   "p": "",
+   "e": "",
+   "w": "http://www.skibacs.org",
+   "wl": "Website",
+   "b": "Boeing-affiliated club for current, former and retired employees and families, with lessons, trips and a lodge at Crystal Mountain.",
+   "nt": [],
+   "s": [
+    [
+     "SKIBACS (official site, 2026)",
+     "http://www.skibacs.org/"
+    ]
+   ],
+   "cl": false,
+   "i": "455"
+  },
+  {
+   "n": "Northwest Ski Club Council",
+   "c": "Climbing and ski clubs",
+   "a": "Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://nwskiers.org",
+   "wl": "Website",
+   "b": "Umbrella group for 38 Northwest snowsport clubs. Lists member clubs and runs inter-club ski trips.",
+   "nt": [],
+   "s": [
+    [
+     "NWSCC (official site, 2026)",
+     "https://nwskiers.org/home"
+    ]
+   ],
+   "cl": false,
+   "i": "456"
+  },
+  {
+   "n": "Seattle Eastside Skiing and Snowboarding Meetup",
+   "c": "Climbing and ski clubs",
+   "a": "Kirkland",
+   "p": "",
+   "e": "",
+   "w": "https://www.meetup.com/SeattleEastsideSkiers/",
+   "wl": "Website",
+   "b": "About 2,000 skiers and riders of all levels with monthly mixers, day and weekend trips, carpools and some international trips.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Eastside Skiers (Meetup, 2026)",
+     "https://www.meetup.com/SeattleEastsideSkiers/"
+    ]
+   ],
+   "cl": false,
+   "i": "457"
+  },
+  {
+   "n": "Seattle Outdoor Adventurers",
+   "c": "Climbing and ski clubs",
+   "a": "Seattle",
+   "p": "",
+   "e": "",
+   "w": "https://www.meetup.com/seattleoutdooradventurers/",
+   "wl": "Website",
+   "b": "Large meetup group for climbing, hiking, backpacking, skiing and paddling, with regular evening climbing sessions at Edgeworks Bellevue.",
+   "nt": [],
+   "s": [
+    [
+     "Seattle Outdoor Adventurers (Meetup, 2026)",
+     "https://www.meetup.com/seattleoutdooradventurers/"
+    ]
+   ],
+   "cl": false,
+   "i": "458"
   }
  ]
 }
