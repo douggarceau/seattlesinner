@@ -50,7 +50,7 @@ function paint(){const box=document.getElementById('astro');if(!box)return;const
   '<div class="as-read"><div class="as-t"><b>'+Z[1]+' '+Z[0]+'</b><span>'+Z[2]+' · '+Z[3]+' · ruled by '+Z[4]+'</span></div><p>'+H(Rd.text)+'</p>'+
   bar('Love',Rd.love)+bar('Money',Rd.money)+bar('Energy',Rd.energy)+
   '<div class="as-meta"><span>Lucky number <b>'+Rd.lucky+'</b></span><span>Power color <b>'+H(Rd.color)+'</b></span><span>Best match <b>'+H(Rd.match)+'</b></span></div>'+
-  '<small class="as-note">For entertainment. Sky positions computed for Seattle.</small></div></div></div>'}
+  '<small class="as-note">“Do what thou wilt shall be the whole of the Law.” — Aleister Crowley, 1904 · For entertainment. Sky positions computed for Seattle.</small></div></div></div>'}
 document.addEventListener('click',e=>{const b=e.target.closest('#astro [data-as]');if(!b)return;sel=+b.dataset.as;try{localStorage.setItem('astroSign',String(sel))}catch(_){};paint()});
 function mount(){if(document.getElementById('astro')){paint();return}const anchor=document.getElementById('jtSea')||document.getElementById('coverSlot');if(!anchor)return;
  const s=document.createElement('section');s.id='astro';s.setAttribute('aria-label','Astrology and horoscope');anchor.parentNode.insertBefore(s,anchor.nextSibling);paint()}
