@@ -1,6 +1,26 @@
 {
- "asof": "2026-11-17T04:51:23-08:00",
+ "asof": "2026-11-17T06:17:00-08:00",
  "items": [
+  {
+   "kind": "police",
+   "headline": "Police find no threat in unattended item that closed streets near Capitol Hill precinct",
+   "blurb": "",
+   "hood": "Capitol Hill",
+   "spd": [],
+   "date": "2026-11-16",
+   "url": "https://mynorthwest.com/crime-blotter/seattle-suspicious-package/4300791",
+   "outlet": "MyNorthwest"
+  },
+  {
+   "kind": "police",
+   "headline": "Seattle Police unveil new four-legged robot for arson and bomb investigations",
+   "blurb": "",
+   "hood": "Seattle",
+   "spd": [],
+   "date": "2026-11-16",
+   "url": "https://mynorthwest.com/local/seattle-police-robot-arson/4300707",
+   "outlet": "MyNorthwest"
+  },
   {
    "kind": "theft",
    "headline": "Ballard business owner stops suspected thieves during attempted burglary",
