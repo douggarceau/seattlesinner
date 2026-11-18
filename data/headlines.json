@@ -1,59 +1,50 @@
 {
- "asof": "2026-11-17T04:51:23-08:00",
+ "asof": "2026-11-18T04:45:00-08:00",
  "items": [
   {
-   "h": "Record warmth possible this week before heavier rain arrives",
-   "sum": "Forecasts show unusually mild days in western Washington before a wetter weather system moves in.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/pacific-northwest-weather/wa-warm-rain-weather/4297209",
+   "h": "Google launches Gemini 4 Hydrogen as its everyday model",
+   "sum": "The fast, lower-cost model succeeds Gemini 3.8 Flash and is rolling out across the Gemini app, Search and developer access.",
+   "outlet": "9to5Google",
+   "url": "https://9to5google.com/2026/11/12/gemini-4-hydrogen/",
+   "town": "Global",
+   "date": "2026-11-12",
+   "rank": 1
+  },
+  {
+   "h": "Trans-Siberian Orchestra brings its holiday show to Climate Pledge Arena",
+   "sum": "The Ghosts of Christmas Eve tour plays Seattle Center on Sunday, Nov. 29.",
+   "outlet": "Seattle Refined",
+   "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
+   "town": "Seattle Center",
+   "date": "2026-11-18",
+   "rank": 5
+  },
+  {
+   "h": "Thundercat, Jai Wolf and Julien Baker fill the Showbox and Neumos this weekend",
+   "sum": "Shows run from Thursday through Saturday across SoDo, Pike Place Market and Capitol Hill.",
+   "outlet": "Seattle Refined",
+   "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
    "town": "Seattle",
-   "date": "2026-11-16",
-   "rank": 20
+   "date": "2026-11-18",
+   "rank": 6
   },
   {
-   "h": "Sound Transit says Crosslake Connection will be closed this weekend",
-   "sum": "Sound Transit has scheduled a weekend closure of the Crosslake Connection.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/chokepoints/sound-transit-crosslake/4297721",
+   "h": "Steve Lacy comes to WaMu Theater on Nov. 28",
+   "sum": "The R&B and soul artist plays Seattle later this month as part of the fall concert run.",
+   "outlet": "Seattle Refined",
+   "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
    "town": "Seattle",
-   "date": "2026-11-16",
-   "rank": 30
+   "date": "2026-11-18",
+   "rank": 8
   },
   {
-   "h": "Power restored in Capitol Hill after outage",
-   "sum": "Electricity has been restored to the Capitol Hill area.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/local/power-in-capitol-hill-area/4297997",
-   "town": "Capitol Hill",
-   "date": "2026-11-16",
-   "rank": 40
-  },
-  {
-   "h": "Car gets stuck on light rail track near Rainier Beach station",
-   "sum": "A vehicle became stuck on the light rail tracks near the Rainier Beach station, the second such incident this year.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/chokepoints/car-stuck-light-rail/4297904",
-   "town": "Rainier Beach",
-   "date": "2026-11-16",
-   "rank": 50
-  },
-  {
-   "h": "Proposed McDonald's in Chinatown draws debate",
-   "sum": "Columnists weigh in on whether a proposed McDonald's would help Seattle's Chinatown neighborhood.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/kiro-opinion/proposed-mcdonalds/4297953",
-   "town": "Chinatown-International District",
-   "date": "2026-11-16",
-   "rank": 55
-  },
-  {
-   "h": "Seattle attorney's lawsuit alleges airlines inflated fares",
-   "sum": "A Seattle attorney is suing Alaska Airlines, Delta and others, alleging the carriers coordinated to raise fares.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/gee-and-ursula/says-airlines-inflate-fares/4297889",
+   "h": "Restaurant openings coming soon across Seattle",
+   "sum": "New spots on the list include GoodMart in Ballard, Rubys at Pike Place Market, Char The Chicken in Capitol Hill and Gohan in Beacon Hill.",
+   "outlet": "The Infatuation",
+   "url": "https://www.theinfatuation.com/seattle/guides/seattle-fall-restaurant-openings-2026",
    "town": "Seattle",
-   "date": "2026-11-16",
-   "rank": 60
+   "date": "2026-11-18",
+   "rank": 12
   }
  ]
 }
