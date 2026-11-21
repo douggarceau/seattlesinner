@@ -35,12 +35,13 @@ function build(){
   b.onclick=()=>{cur=t;mark();if(t!=='Tech')SF=null;fn()};n.appendChild(b)});mark()}
  const ft=document.querySelector('footer.site-footer');
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
-  d.innerHTML=(C.sis||[]).map(s=>'<a href="'+s[1]+'">'+s[0]+'</a>').join('')+'<button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
-  d.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
+  d.innerHTML=(C.sis||[]).map(s=>'<a href="'+s[1]+'">'+s[0]+'</a>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
+  d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.dir){R.classList.toggle('dir27');return}cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
  hero();dedupe();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */
 const OLD=/Georgia|Playfair|PT Serif|Libre Caslon|Bodoni|Abril|DM Serif|Old Standard|Cinzel|Marcellus|Satisfy|Special Elite|Cormorant|Alfa Slab|Oswald|Anton|Bebas|Times|serif$/i;
-function fonts(){const RED=/^rgba?\((193, 18, 31|225, 6, 0|200, 16, 46)(, 1)?\)$/,swap=!/^#(E10600|C1121F)$/i.test(C.a||'');
+function fonts(){document.addEventListener('keydown',e=>{if(e.key==='Escape')R.classList.remove('dir27')});
+const RED=/^rgba?\((193, 18, 31|225, 6, 0|200, 16, 46)(, 1)?\)$/,swap=!/^#(E10600|C1121F)$/i.test(C.a||'');
 document.body.querySelectorAll(':is(b,strong,span,a,h1,h2,h3,h4,p,button,div,small,i,em,li,summary,label,section,article,aside):not([data-f27])').forEach(e=>{e.dataset.f27='';const cs=getComputedStyle(e);
  if(swap){for(const [k,c] of [['border-left-color',cs.borderLeftColor],['border-top-color',cs.borderTopColor],['border-bottom-color',cs.borderBottomColor],['background-color',cs.backgroundColor],['color',cs.color]])if(RED.test(c))e.style.setProperty(k,'var(--a)','important')}
  const bi=cs.backgroundImage;if(bi&&/url\(/.test(bi)&&!/bg27|data:/.test(bi)&&e.getBoundingClientRect().width>150)e.style.setProperty('background-image','linear-gradient(180deg,rgba(6,7,9,.2),rgba(6,7,9,.7)),url(/img/bg27/'+BG[bi_++%BG.length]+'.jpg)','important');if(OLD.test(cs.fontFamily)){e.style.setProperty('font-family',parseFloat(cs.fontSize)>=17?'"Geist",system-ui,sans-serif':'"Geist",system-ui,sans-serif','important');e.style.setProperty('font-style','normal','important')}})}
