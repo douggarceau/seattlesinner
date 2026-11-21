@@ -1,6 +1,42 @@
 {
- "asof": "2026-11-20T04:51:20-08:00",
+ "asof": "2026-11-21T01:30:00-08:00",
  "items": [
+  {
+   "h": "Washington will build the AI-piloted X-BAT fighter jet",
+   "sum": "GeekWire lays out full specs for the autonomous jet headed for production in the state.",
+   "outlet": "GeekWire",
+   "url": "https://milled.com/geekwire/geekwires-most-read-stories-of-the-week-cmF2Q21ZFsqqn79i",
+   "town": "Seattle area",
+   "date": "2026-11-21",
+   "rank": 1
+  },
+  {
+   "h": "Temporal tops the GeekWire 200",
+   "sum": "Software that keeps AI agents running reliably is now the top private startup in the Northwest.",
+   "outlet": "GeekWire",
+   "url": "https://milled.com/geekwire/geekwires-most-read-stories-of-the-week-cmF2Q21ZFsqqn79i",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 2
+  },
+  {
+   "h": "KEXP Yule Benefit: Kamasi Washington with Bartees Strange",
+   "sum": "The station's winter benefit hits The Showbox on Thursday, Dec. 3 at 7 p.m.",
+   "outlet": "KEXP",
+   "url": "https://www.kexp.org/events/kexp-events",
+   "town": "Downtown",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Gwar lands at Showbox SoDo Monday",
+   "sum": "The Antarctic metal lifers bring their costumed stage war to SoDo on Nov. 23.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 4
+  },
   {
    "h": "Trans-Siberian Orchestra brings its holiday show to Climate Pledge Arena",
    "sum": "The Ghosts of Christmas Eve tour plays Seattle Center on Sunday, Nov. 29.",
@@ -8,6 +44,15 @@
    "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
    "town": "Seattle Center",
    "date": "2026-11-18",
+   "rank": 5
+  },
+  {
+   "h": "Alter Bridge, Big Wreck and Tim Montana take the Moore",
+   "sum": "Heavy rock night at the Moore Theatre on Wednesday, Nov. 25.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "Belltown",
+   "date": "2026-11-21",
    "rank": 5
   },
   {
@@ -20,6 +65,24 @@
    "rank": 6
   },
   {
+   "h": "Saosin and Silent Planet stack Showbox SoDo Tuesday",
+   "sum": "Saosin, Save Us, Silent Planet and Like Moths to Flames share the bill on Nov. 24.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 6
+  },
+  {
+   "h": "The Amity Affliction hits SoDo the night after Thanksgiving",
+   "sum": "blessthefall and Orthodox open at Showbox SoDo on Friday, Nov. 27.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 7
+  },
+  {
    "h": "Steve Lacy comes to WaMu Theater on Nov. 28",
    "sum": "The R&B and soul artist plays Seattle later this month as part of the fall concert run.",
    "outlet": "Seattle Refined",
@@ -29,6 +92,42 @@
    "rank": 8
   },
   {
+   "h": "Emma Ruth Rundle plays Neumos",
+   "sum": "The doom-folk songwriter comes to Capitol Hill with Cinder Well on Tuesday, Nov. 24.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "Capitol Hill",
+   "date": "2026-11-21",
+   "rank": 8
+  },
+  {
+   "h": "Senses Fail and Initiate at the Neptune",
+   "sum": "Post-hardcore in the U District on Tuesday, Nov. 24.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "University District",
+   "date": "2026-11-21",
+   "rank": 9
+  },
+  {
+   "h": "Whitechapel, The Acacia Strain and Chelsea Grin: one SoDo night",
+   "sum": "Deathcore triple bill at Showbox SoDo on Saturday, Dec. 5.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 10
+  },
+  {
+   "h": "Insomnium and Amorphis bring Finnish metal to the Showbox",
+   "sum": "Two Finnish heavyweights at Showbox at the Market on Wednesday, Dec. 2.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026",
+   "town": "Downtown",
+   "date": "2026-11-21",
+   "rank": 11
+  },
+  {
    "h": "Restaurant openings coming soon across Seattle",
    "sum": "New spots on the list include GoodMart in Ballard, Rubys at Pike Place Market, Char The Chicken in Capitol Hill and Gohan in Beacon Hill.",
    "outlet": "The Infatuation",
@@ -36,6 +135,100 @@
    "town": "Seattle",
    "date": "2026-11-18",
    "rank": 12
+  },
+  {
+   "h": "Steve Lacy fills WAMU Theater Nov. 28",
+   "sum": "Same night TVBOO takes Showbox SoDo and Valentino Khan plays The Showbox.",
+   "outlet": "Seattle Refined",
+   "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 12
+  },
+  {
+   "h": "Ayron Jones plays the Tractor the day after Christmas",
+   "sum": "Seattle guitar hero in a Ballard room on Saturday, Dec. 26.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/november-2026",
+   "town": "Ballard",
+   "date": "2026-11-21",
+   "rank": 13
+  },
+  {
+   "h": "Swervedriver at Neumos in December",
+   "sum": "The shoegaze originals play Capitol Hill on Wednesday, Dec. 16.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026/genre/rock",
+   "town": "Capitol Hill",
+   "date": "2026-11-21",
+   "rank": 14
+  },
+  {
+   "h": "MISSIO and Eyes Set to Kill hit El Corazon Dec. 11",
+   "sum": "Two loud bookings at the Eastlake club the same night.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026/genre/rock",
+   "town": "Eastlake",
+   "date": "2026-11-21",
+   "rank": 15
+  },
+  {
+   "h": "Tape B takes WAMU Theater for two nights",
+   "sum": "Bass-heavy weekend in SoDo, Dec. 4 and 5.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026",
+   "town": "SoDo",
+   "date": "2026-11-21",
+   "rank": 16
+  },
+  {
+   "h": "Seattle ranks No. 4 in the world in new cities index",
+   "sum": "Oxford Economics scored 1,000 cities on economy, talent, quality of life and governance.",
+   "outlet": "GeekWire",
+   "url": "https://milled.com/geekwire/geekwires-most-read-stories-of-the-week-cmF2Q21ZFsqqn79i",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 17
+  },
+  {
+   "h": "Gwar Takes Showbox SoDo Monday",
+   "sum": "Monday, Nov. 23 at Showbox SoDo, 1700 1st Ave S, SoDo.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=gwar-showbox-sodo-nov-23",
+   "story": "gwar-showbox-sodo-nov-23",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Alter Bridge Brings the Weight to the Moore",
+   "sum": "Wednesday, Nov. 25 at the Moore Theatre, 1932 2nd Ave, Belltown, with Big Wreck and Tim Montana.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=alter-bridge-moore-nov-25",
+   "story": "alter-bridge-moore-nov-25",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Kamasi Washington Headlines the KEXP Yule Benefit",
+   "sum": "Thursday, Dec. 3 at 7 p.m. at The Showbox, 1426 1st Ave, Downtown, with Bartees Strange.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=kamasi-washington-kexp-yule-showbox-dec-3",
+   "story": "kamasi-washington-kexp-yule-showbox-dec-3",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Whitechapel, The Acacia Strain and Chelsea Grin Hit SoDo",
+   "sum": "Saturday, Dec. 5 at Showbox SoDo, 1700 1st Ave S, SoDo.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=whitechapel-acacia-strain-showbox-sodo-dec-5",
+   "story": "whitechapel-acacia-strain-showbox-sodo-dec-5",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
   }
  ]
 }
