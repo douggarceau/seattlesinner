@@ -182,3 +182,26 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #beyond .br{border-color:var(--ln)!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #view section.jtwk{display:block!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .jtwk .bh .live{display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .wm27 .n{white-space:nowrap!important}
+/* ---- GPT audit fixes (Nov 21 2026) ---- */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #main27{display:block}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #main27>#coverSlot{margin-bottom:22px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27{text-decoration:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>a[data-story]{text-decoration:none!important;cursor:pointer}
+/* 1 phones: every menu item visible, no sideways swipe */
+@media (max-width:760px){
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav{flex-wrap:wrap!important;overflow:visible!important;justify-content:center!important;gap:4px!important;padding:6px!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav .nb27{padding:9px 11px!important;font-size:13.5px!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input{width:38px!important}
+}
+/* 3 calmer side boxes, venue can wrap */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev{border-top-width:1px!important;border-top-color:color-mix(in srgb,var(--a) 70%,transparent)!important;background:#101318!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev .v{white-space:normal!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* 4 count + view-all link */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn .t27more{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 4px 6px;border-top:1px solid var(--ln)}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn .t27more span{font:500 13px/1 var(--f-tx)!important;color:var(--tx1)!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn .t27more button{all:unset;cursor:pointer;font:600 13px/1 var(--f-tx)!important;color:var(--a)!important;padding:10px 0}
+/* 5 no scroll box inside the page */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn :is(.wo-l,.wo-d,details){max-height:none!important;overflow:visible!important}
+/* 6 footer tap areas */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .ft27 a,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .ft27 button{display:inline-flex!important;align-items:center;min-height:44px;padding:0 10px!important}

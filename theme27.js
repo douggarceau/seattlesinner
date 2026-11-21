@@ -55,16 +55,37 @@ function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElemen
  const anchor=document.getElementById('whatsOn')||document.getElementById('coverSlot');if(!anchor)return;
  const H=x=>String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const k=/^tech-/.test(s.slug)?'Tech':s.topic==='music'?'Music':s.topic==='stage'?'On stage':'Top story';
- const b=document.createElement('button');b.type='button';b.id='hero27';b.dataset.story=s.slug;
+ const b=document.createElement('a');b.href='?story='+encodeURIComponent(s.slug);b.id='hero27';b.dataset.story=s.slug;b.addEventListener('click',ev=>{if(!(ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.button))ev.preventDefault()});
  b.style.setProperty('--hb',C.heroImgs?'url('+C.heroImgs[hash(s.slug)%C.heroImgs.length]+')':'url(/img/bg27/'+HBG[hash(s.slug)%HBG.length]+'.jpg)');
  b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
  anchor.parentNode.insertBefore(b,anchor)}
 function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a)return;const d=w.querySelector('details.wo-d');if(!d)return;w.dataset.t27a='1';if(!w.querySelector('details[open]')){d.open=true;d.classList.add('t27auto');setTimeout(()=>d.addEventListener('toggle',()=>d.classList.remove('t27auto'),{once:true}),400)}}
+function layout(){let v='';try{v=STATE.view}catch(_){}
+ /* 10 one main landmark around the editorial column, with headings */
+ const w=document.querySelector('.wrap');const vw=document.getElementById('view');
+ let m=document.getElementById('main27');
+ if(w&&vw&&!m){m=document.createElement('div');m.id='main27';m.setAttribute('role','main');const first=document.getElementById('hero27')||document.getElementById('whatsOn')||document.getElementById('coverSlot')||vw;w.insertBefore(m,first)}
+ if(m){['hero27','coverSlot','whatsOn','view'].forEach(id=>{const e=document.getElementById(id);if(e&&e.parentNode!==m)m.appendChild(e)});
+  /* 2 news right under the lead, then activities */
+  const cs=document.getElementById('coverSlot'),wo=document.getElementById('whatsOn');
+  const order=[document.getElementById('hero27'),cs,wo,vw].filter(Boolean);order.forEach(e=>m.appendChild(e));
+  if(vw&&vw.tagName==='MAIN')vw.setAttribute('role','region'),vw.setAttribute('aria-label','More')}
+ const wm=document.querySelector('.wm27');if(wm&&!wm.getAttribute('role')){wm.setAttribute('role','heading');wm.setAttribute('aria-level','1')}
+ [['.cvside .sea-h b'],['#whatsOn .wo-k'],['.jtwk .bh b'],['#hlBox .bh b'],['#beyond>h2']].forEach(([s])=>{const e=document.querySelector(s);if(e&&e.tagName!=='H2'&&!e.getAttribute('role')){e.setAttribute('role','heading');e.setAttribute('aria-level','2')}});
+ /* 9 news tiles as native links */
+ document.querySelectorAll('.cvside .sea-g button[data-story]').forEach(b=>{const a=document.createElement('a');for(const at of b.attributes)if(at.name!=='type')a.setAttribute(at.name,at.value);a.href='?story='+encodeURIComponent(b.dataset.story);a.innerHTML=b.innerHTML;a.addEventListener('click',ev=>{if(!(ev.metaKey||ev.ctrlKey||ev.shiftKey||ev.button))ev.preventDefault()});b.replaceWith(a)});
+ /* 3 side columns start level with the lead */
+ const hr=document.getElementById('hero27');const ls=document.querySelector('.lsrow');if(ls&&hr&&innerWidth>=1100){const sp=ls.querySelector('.lspot');if(sp){const d=Math.round(hr.getBoundingClientRect().top-sp.getBoundingClientRect().top);if(Math.abs(d)>4){const cur=parseFloat(ls.dataset.dy||'0');ls.dataset.dy=String(cur+d);ls.style.setProperty('transform','translateY('+(cur+d)+'px)','important')}}}
+ /* 4 say how many are shown and link to all of them */
+ const d=document.querySelector('#whatsOn details.t27auto');if(d&&!d.querySelector('.t27more')){const rows=d.querySelectorAll('.wo-r').length;if(rows>5){const nm=(d.querySelector('summary')||{}).textContent||'';const cat=nm.replace(/\d+/g,'').trim();const x=document.createElement('div');x.className='t27more';
+  x.innerHTML='<span>Showing 5 of '+rows+'</span><button type="button">View all '+rows+' '+cat.toLowerCase()+' events →</button>';x.querySelector('button').onclick=()=>{cur='Calendar';mark();/music/i.test(cat)?nav('cal','music',30):nav('cal',null,14)};d.appendChild(x)}}
+ /* 7 honest label */
+ const wk=document.querySelector('.jtwk .bh>span');if(wk&&wk.textContent!=='Selected events, next 7 days')wk.textContent='Selected events, next 7 days'}
 function nohelp(){let v='';try{v=STATE.view}catch(_){}if(v==='help'){try{go('front')}catch(_){}}}
 function week(){nohelp();let v='';try{v=STATE.view}catch(_){}if(v!=='front'||document.querySelector('.jtwk')||typeof jtWeek!=='function')return;const host=document.getElementById('view');if(!host)return;
  const s=document.createElement('section');s.className='box jtwk t27wk';s.innerHTML='<div class="bh"><b>This week</b><span>next 7 days</span></div><div id="jtWeek">'+jtWeek()+'</div><div style="padding:10px 14px"><button class="nb" data-go="cal">Full calendar →</button></div>';
  const b=document.getElementById('beyond');host.insertBefore(s,b||null)}
-function labels(){week();document.querySelectorAll('#whatsOn .wo-r').forEach(r=>{const t=r.firstElementChild;if(t&&t.textContent.trim()==='TBA')t.textContent=''});
+function labels(){week();try{layout()}catch(_){}document.querySelectorAll('#whatsOn .wo-r').forEach(r=>{const t=r.firstElementChild;if(t&&t.textContent.trim()==='TBA')t.textContent=''});
  const wk=document.querySelector('.jtwk .bh b');if(wk){const n=[...wk.childNodes].filter(x=>x.nodeType===3);n.forEach(x=>{if(/\S/.test(x.textContent)&&x.textContent.trim()!=='This week')x.textContent=' This week'})}
  document.querySelectorAll('.jtwk button,.jtwk a,.wo-f a').forEach(a=>{if(/^full .*calendar/i.test(a.textContent.trim())&&a.textContent.trim()!=='Full calendar →')a.textContent='Full calendar →'});
  const hm=document.querySelector('#hlBox .hlmore');if(hm&&!hm.dataset.t27){hm.dataset.t27='1';hm.click()}
@@ -86,7 +107,7 @@ function rails(){let P=pool2();if(!P.length)return;
   const when=[d?d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}):'',ev.time||e.when||''].filter(Boolean).join(' · ');
   sp.classList.remove('t-st','t-ad','t-adimg');sp.classList.add('t-mu');sp.dataset.frozen='1';
   a.dataset.promoKey=key;a.href=e.href||'#';if(e.ext){a.target='_blank';a.rel='noopener'}a.removeAttribute('data-story');a.setAttribute('aria-label',e.bigText||'');
-  a.innerHTML='<span class="t27ev"><span class="w">'+H(when)+'</span><span class="t">'+H(e.bigText)+'</span><span class="f"><span class="v">'+H([e.name,ev.hood].filter(Boolean).join(' · '))+'</span><span class="g">Details →</span></span></span>'})}
+  a.innerHTML='<span class="t27ev"><span class="w">'+H(when)+'</span><span class="t">'+H(e.bigText)+'</span><span class="f"><span class="v">'+H([e.name,ev.hood].filter(Boolean).join(' · '))+'</span><span class="g">'+(/\.pdf(\?|$)/i.test(e.href||'')?'Schedule (PDF) →':/ticketmaster|seetickets|eventbrite|axs\.com|dice\.fm|etix|ticketweb|stubhub|tix|ticket/i.test(e.href||'')?'Tickets →':'Event details →')+'</span></span></span>'})}
 setInterval(()=>{try{rails()}catch(_){}},1500);
 let updT=null;function upd(){const t=document.querySelector('.clsbar.top');if(!t||t.querySelector('.upd27'))return;const s=document.createElement('span');s.className='upd27';t.insertBefore(s,t.querySelector('.rec'));
  const show=d=>{if(!d)return;const x=new Date(d);if(isNaN(x))return;s.textContent='Updated '+x.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:TZ})};
