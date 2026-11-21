@@ -79,3 +79,7 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *:not(.bp-go):not(.os-go):not(.ep-cta){background:none!important;box-shadow:none!important;border:0!important;outline:0!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#paperBtn,header.mast .mastApp,#appBtn){display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep,.bigev)::after,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::before,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::after{display:none!important}
+/* big cover boxes off (owner, Nov 21 2026); the story lists under them stay */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>:is(button.cimg,.cvbrk,.spr.brk,.bigev){display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr{display:block!important;grid-template-columns:none!important;min-height:0!important;height:auto!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>.cvside{width:auto!important;max-width:none!important;margin:0!important;grid-column:auto!important;position:static!important}
