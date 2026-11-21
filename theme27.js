@@ -37,13 +37,33 @@ function build(){
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
   d.innerHTML=(C.sis||[]).map(s=>'<a href="'+s[1]+'">'+s[0]+'</a>').join('')+'<button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
   d.querySelectorAll('button').forEach(b=>b.onclick=()=>{cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
- dress();fonts()}
+ hero();dedupe();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */
 const OLD=/Georgia|Playfair|PT Serif|Libre Caslon|Bodoni|Abril|DM Serif|Old Standard|Cinzel|Marcellus|Satisfy|Special Elite|Cormorant|Alfa Slab|Oswald|Anton|Bebas|Times|serif$/i;
 function fonts(){const RED=/^rgba?\((193, 18, 31|225, 6, 0|200, 16, 46)(, 1)?\)$/,swap=!/^#(E10600|C1121F)$/i.test(C.a||'');
 document.body.querySelectorAll(':is(b,strong,span,a,h1,h2,h3,h4,p,button,div,small,i,em,li,summary,label,section,article,aside):not([data-f27])').forEach(e=>{e.dataset.f27='';const cs=getComputedStyle(e);
  if(swap){for(const [k,c] of [['border-left-color',cs.borderLeftColor],['border-top-color',cs.borderTopColor],['border-bottom-color',cs.borderBottomColor],['background-color',cs.backgroundColor],['color',cs.color]])if(RED.test(c))e.style.setProperty(k,'var(--a)','important')}
  const bi=cs.backgroundImage;if(bi&&/url\(/.test(bi)&&!/bg27|data:/.test(bi)&&e.getBoundingClientRect().width>150)e.style.setProperty('background-image','linear-gradient(180deg,rgba(6,7,9,.2),rgba(6,7,9,.7)),url(/img/bg27/'+BG[bi_++%BG.length]+'.jpg)','important');if(OLD.test(cs.fontFamily)){e.style.setProperty('font-family',parseFloat(cs.fontSize)>=17?'"Geist",system-ui,sans-serif':'"Geist",system-ui,sans-serif','important');e.style.setProperty('font-style','normal','important')}})}
+
+/* lead story at the top of the front page, and one place per story */
+function leadStory(){let L=[];try{L=STORIES}catch(_){return null}const td=ymd(new Date());
+ const ok=s=>s&&s.title&&!/^today-(and-tonight|on-the-island)-/.test(s.slug)&&(!s.until||s.until>=td)&&s.topic!=='crime';
+ return L.find(s=>s.lead&&ok(s))||L.filter(ok).sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||(/^tech-/.test(b.slug)?1:0)-(/^tech-/.test(a.slug)?1:0))[0]||null}
+function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElementById('hero27');
+ if(v!=='front'){if(old)old.remove();return}
+ const s=leadStory();if(!s)return;if(old&&old.dataset.story===s.slug)return;if(old)old.remove();
+ const anchor=document.getElementById('whatsOn')||document.getElementById('coverSlot');if(!anchor)return;
+ const H=x=>String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const k=/^tech-/.test(s.slug)?'Tech':s.topic==='music'?'Music':s.topic==='stage'?'On stage':'Top story';
+ const b=document.createElement('button');b.type='button';b.id='hero27';b.dataset.story=s.slug;
+ b.style.setProperty('--hb','url(/img/bg27/'+BG[hash(s.slug)%BG.length]+'.jpg)');
+ b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
+ anchor.parentNode.insertBefore(b,anchor)}
+const hash=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))>>>0;return h};
+function dedupe(){const hb=document.getElementById('hlBox');if(hb){const vis=[...hb.querySelectorAll('a.hlr')].some(a=>!/^\?story=/.test(a.getAttribute('href')||''));hb.style.setProperty('display',vis?'':'none',vis?'':'important')}
+const h=document.getElementById('hero27');const lead=h&&h.dataset.story;
+ document.querySelectorAll('.cvside .sea-g [data-story]').forEach(b=>{if(lead&&b.dataset.story===lead)b.style.setProperty('display','none','important');
+  if(!b.dataset.b27){b.dataset.b27='1';b.style.setProperty('background-image','linear-gradient(90deg,rgba(12,14,18,.96) 35%,rgba(12,14,18,.6)),url(/img/bg27/'+BG[hash(b.dataset.story)%BG.length]+'.jpg)','important');b.style.setProperty('background-size','cover','important');b.style.setProperty('background-position','center','important')}})}
 /* backgrounds for the flipping boxes */
 const BG=['bg41-data-mesh','bg42-wireframe-terrain','bg43-graphite-gradient','bg44-particle-field','bg45-glass-panels','bg46-lidar-scan','bg47-liquid-chrome','bg48-aurora-edge','bg49-led-dot-matrix','bg50-orbit-lines'];
 let bi=Math.floor(Math.random()*BG.length),bi_=bi+3;

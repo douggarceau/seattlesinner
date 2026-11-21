@@ -83,3 +83,15 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>:is(button.cimg,.cvbrk,.spr.brk,.bigev){display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr{display:block!important;grid-template-columns:none!important;min-height:0!important;height:auto!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>.cvside{width:auto!important;max-width:none!important;margin:0!important;grid-column:auto!important;position:static!important}
+
+/* lead story hero */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;width:100%;min-height:340px;margin:0 0 22px;padding:36px 40px;border-radius:18px;border:1px solid var(--ln);background:linear-gradient(180deg,rgba(6,7,9,.05) 0,rgba(6,7,9,.55) 55%,rgba(6,7,9,.92) 100%),var(--hb) center/cover no-repeat;transition:transform .25s ease,border-color .25s}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27:hover{border-color:color-mix(in srgb,var(--a) 60%,transparent);transform:translateY(-2px)}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27 .hk{font:700 12px/1 var(--f-tx)!important;letter-spacing:.18em!important;text-transform:uppercase!important;color:var(--a)!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27 .ht{font:700 clamp(30px,4.2vw,54px)/1.02 var(--f-hd)!important;letter-spacing:-.035em!important;color:#fff!important;max-width:900px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27 .hd{font:400 18px/1.45 var(--f-tx)!important;color:#C9CED6!important;max-width:760px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27 .hg{font:600 14px/1 var(--f-tx)!important;color:#fff!important;background:var(--a);align-self:flex-start;padding:11px 16px;border-radius:999px;margin-top:6px}
+/* one place per story: no duplicate lists */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .cvside :is(.sea-h.nat,.nl-bar,.nat-l){display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hlBox a.hlr[href^="?story="]{display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .cvside .sea-g [data-story]{border-radius:12px!important;min-height:86px}
