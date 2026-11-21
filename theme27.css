@@ -205,3 +205,14 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn :is(.wo-l,.wo-d,details){max-height:none!important;overflow:visible!important}
 /* 6 footer tap areas */
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .ft27 a,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .ft27 button{display:inline-flex!important;align-items:center;min-height:44px;padding:0 10px!important}
+/* uniformity round (GPT audit 2) */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-h{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:0 2px!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-h>b{font:700 15px/1.2 var(--f-hd)!important;text-transform:none!important;letter-spacing:.01em!important;color:var(--tx0)!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-h>:is(button,a){all:unset;cursor:pointer;font:600 13px/1 var(--f-tx)!important;text-transform:none!important;letter-spacing:0!important;color:var(--a)!important;padding:12px 0}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story]>*:not(b){display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) header.mast>div>:not(.wm27){display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .wm27 .n{white-space:nowrap!important}
+@media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .wm27 .n{font-size:clamp(34px,11.5vw,64px)!important}}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-h{width:100%!important;box-sizing:border-box}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #navToggle{display:none!important}
+@media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav{display:flex!important}}

@@ -60,7 +60,8 @@ function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElemen
  b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
  anchor.parentNode.insertBefore(b,anchor)}
 function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a)return;const d=w.querySelector('details.wo-d');if(!d)return;w.dataset.t27a='1';if(!w.querySelector('details[open]')){d.open=true;d.classList.add('t27auto');setTimeout(()=>d.addEventListener('toggle',()=>d.classList.remove('t27auto'),{once:true}),400)}}
-function layout(){let v='';try{v=STATE.view}catch(_){}
+function layout(){const nt=document.getElementById('navToggle');if(nt){nt.style.setProperty('display','none','important');const n=document.getElementById('nav');if(n){n.style.setProperty('display','flex','important');n.removeAttribute('hidden');n.classList.remove('closed','collapsed')}}
+let v='';try{v=STATE.view}catch(_){}
  /* 10 one main landmark around the editorial column, with headings */
  const w=document.querySelector('.wrap');const vw=document.getElementById('view');
  let m=document.getElementById('main27');
@@ -111,7 +112,7 @@ function rails(){let P=pool2();if(!P.length)return;
 setInterval(()=>{try{rails()}catch(_){}},1500);
 let updT=null;function upd(){const t=document.querySelector('.clsbar.top');if(!t||t.querySelector('.upd27'))return;const s=document.createElement('span');s.className='upd27';t.insertBefore(s,t.querySelector('.rec'));
  const show=d=>{if(!d)return;const x=new Date(d);if(isNaN(x))return;s.textContent='Updated '+x.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:TZ})};
- fetch('data/headlines.json?'+Date.now(),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>show(d&&d.asof)).catch(()=>{})}
+ const tryF=(fs)=>{if(!fs.length)return;fetch(fs[0]+'?'+Date.now(),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.asof)show(d.asof);else tryF(fs.slice(1))}).catch(()=>tryF(fs.slice(1)))};tryF(['data/headlines.json','data/cal.json','data/beyond.json'])}
 const HBG=['bg42-wireframe-terrain','bg44-particle-field','bg46-lidar-scan','bg50-orbit-lines','bg41-data-mesh','bg45-glass-panels'];
 const hash=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))>>>0;return h};
 function dedupe(){const hb=document.getElementById('hlBox');if(hb){const vis=[...hb.querySelectorAll('a.hlr')].some(a=>!/^\?story=/.test(a.getAttribute('href')||''));hb.style.setProperty('display',vis?'':'none',vis?'':'important')}
