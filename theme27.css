@@ -121,7 +121,6 @@
 :root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot :is(.bp-t,.ep-t,.os-t){font-size:21px!important;line-height:1.12!important;text-transform:none!important;letter-spacing:-.02em!important;font-family:var(--f-hd)!important;font-weight:700!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot{opacity:1!important;filter:none!important}
 /* 2 side columns: events only */
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lsrow .lspot.t-st{visibility:hidden!important}
 /* 4 calendar shows tonight right away */
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn details.t27auto .wo-r:nth-of-type(n+6){display:none!important}
 /* 5 and 9 bottom bar off */
@@ -145,3 +144,4 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .clsbar.top .upd27{margin-left:14px;color:var(--tx1)!important;font-weight:600}
 /* 3 lead story: stronger background */
 :root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27{background:radial-gradient(70% 90% at 85% 10%,color-mix(in srgb,var(--a) 30%,transparent) 0,transparent 60%),linear-gradient(180deg,rgba(6,7,9,0) 0,rgba(6,7,9,.35) 50%,rgba(6,7,9,.9) 100%),var(--hb) center/cover no-repeat!important}
+:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev{display:flex!important;flex-direction:column;padding:10px 12px!important;height:100%;box-sizing:border-box;border-radius:10px}:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev *{color:#0A1F3D!important;-webkit-text-fill-color:#0A1F3D!important;text-shadow:none!important}:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev .ep-t{font:800 20px/1.1 'Geist',system-ui,sans-serif!important}:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev .ep-k,:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev .ep-cta{color:#C8102E!important;-webkit-text-fill-color:#C8102E!important;font-size:10px!important;letter-spacing:.12em!important;text-transform:uppercase}:root[data-t27][data-keepart]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .t27ev .ep-foot{margin-top:auto;display:flex;justify-content:space-between;font-size:10px}

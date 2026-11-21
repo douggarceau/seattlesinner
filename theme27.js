@@ -36,7 +36,7 @@ function build(){
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
   d.innerHTML=(C.foot||[]).map(f=>'<button type="button" '+(f[1][0]==='#'?'data-c="'+f[1].slice(1)+'"':'data-g="'+f[1]+'"')+'>'+f[0]+'</button>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
   d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.dir){R.classList.toggle('dir27');return}if(b.dataset.c){const x=document.getElementById(b.dataset.c);if(x)x.click();return}cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
- hero();dedupe();cal1();upd();labels();dress();fonts()}
+ hero();dedupe();cal1();upd();labels();rails();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */
 const OLD=/Georgia|Playfair|PT Serif|Libre Caslon|Bodoni|Abril|DM Serif|Old Standard|Cinzel|Marcellus|Satisfy|Special Elite|Cormorant|Alfa Slab|Oswald|Anton|Bebas|Times|serif$/i;
 function fonts(){document.addEventListener('keydown',e=>{if(e.key==='Escape')R.classList.remove('dir27')});
@@ -63,6 +63,20 @@ function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a
 function labels(){const set=(el,t)=>{if(el&&el.firstChild&&el.textContent.trim()!==t){const n=[...el.childNodes].find(x=>x.nodeType===3&&x.textContent.trim());if(n)n.textContent=t;else el.textContent=t}};
  const h=document.querySelector('.cvside .sea-h');if(h){set(h.querySelector('b'),'News');const a=h.querySelector('button,a');if(a)set(a,'All stories →')}
  const hb=document.querySelector('#hlBox .bh b');if(hb)set(hb,'Headlines')}
+function rails(){if(!window.jtEvPool)return;let P=[];try{P=jtEvPool()}catch(_){return}if(!P.length)return;
+ const H=x=>String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const used=new Set([...document.querySelectorAll('.lspot a[data-promo-key]')].map(a=>a.dataset.promoKey));document.querySelectorAll('.lspot :is(.ep-t,.bp-t,.ls-big)').forEach(t=>used.add('title:'+t.textContent.replace(/\s+/g,' ').trim().toLowerCase()));
+ document.querySelectorAll('.lsrow .lspot.t-st').forEach(sp=>{const a=sp.querySelector('a[id]');if(!a)return;
+  let e=P.find(x=>!used.has('title:'+String(x.bigText||'').replace(/\s+/g,' ').trim().toLowerCase()));if(!e)return;
+  const key='title:'+String(e.bigText||'').replace(/\s+/g,' ').trim().toLowerCase();used.add(key);
+  const ev=e.ev||{};const d=ev.date?new Date(ev.date+'T12:00:00'):null;
+  const mo=d?d.toLocaleDateString('en-US',{month:'short'}).toUpperCase():'',dy=d?d.getDate():'';
+  sp.classList.remove('t-st');sp.classList.add('t-mu');
+  a.dataset.promoKey=key;a.href=e.href||'#';if(e.ext){a.target='_blank';a.rel='noopener'}a.removeAttribute('data-story');a.setAttribute('aria-label',e.bigText||'');
+  const bg=C.keepArt&&C.heroImgs?' style="background:linear-gradient(180deg,rgba(246,241,230,.92) 0,rgba(246,241,230,.75) 45%,rgba(246,241,230,0) 75%),url('+C.heroImgs[hash(key)%C.heroImgs.length]+') center/cover;color:#0A1F3D"':'';
+  a.innerHTML='<span class="ep ep-gig t27ev"'+bg+'><span class="ep-k">'+H(ev.genre&&/classical|opera|ballet|stage|theater/i.test(ev.genre)?'The Big Room':'Live')+'</span><span class="ep-t s2">'+H(e.bigText)+'</span><span class="ep-d">'+mo+'<b>'+dy+'</b>'+H(ev.time||e.when||'')+'</span><span class="ep-foot"><span class="ep-v">'+H([e.name,ev.hood].filter(Boolean).join(' · '))+'</span><span class="ep-cta">Get in →</span></span></span>';
+  a.querySelectorAll('.ep').forEach(x=>{x.dataset.b27='';if(!C.keepArt)x.style.setProperty('--b27','url(/img/bg27/'+BG[hash(key)%BG.length]+'.jpg)')})})}
+setInterval(()=>{try{rails()}catch(_){}},1500);
 let updT=null;function upd(){const t=document.querySelector('.clsbar.top');if(!t||t.querySelector('.upd27'))return;const s=document.createElement('span');s.className='upd27';t.insertBefore(s,t.querySelector('.rec'));
  const show=d=>{if(!d)return;const x=new Date(d);if(isNaN(x))return;s.textContent='Updated '+x.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:TZ})};
  fetch('data/headlines.json?'+Date.now(),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>show(d&&d.asof)).catch(()=>{})}
