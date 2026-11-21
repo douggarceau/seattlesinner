@@ -34,7 +34,7 @@ function build(){
   b.onclick=()=>{cur=t;mark();if(t!=='Tech')SF=null;fn()};n.appendChild(b)});mark()}
  const ft=document.querySelector('footer.site-footer');
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
-  d.innerHTML=(C.sis||[]).map(s=>'<a href="'+s[1]+'">'+s[0]+'</a>').join('')+(C.foot||[]).map(f=>'<button type="button" '+(f[1][0]==='#'?'data-c="'+f[1].slice(1)+'"':'data-g="'+f[1]+'"')+'>'+f[0]+'</button>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
+  d.innerHTML=(C.foot||[]).map(f=>'<button type="button" '+(f[1][0]==='#'?'data-c="'+f[1].slice(1)+'"':'data-g="'+f[1]+'"')+'>'+f[0]+'</button>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
   d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.dir){R.classList.toggle('dir27');return}if(b.dataset.c){const x=document.getElementById(b.dataset.c);if(x)x.click();return}cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
  hero();dedupe();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */

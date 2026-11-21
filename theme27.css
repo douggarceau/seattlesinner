@@ -114,3 +114,4 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story] :is(b,strong){color:var(--tx0)!important;font-weight:650!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story] :is(small,i,em,span){color:var(--tx1)!important;letter-spacing:.04em!important}
 @media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g{grid-template-columns:1fr!important}}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#nbSis,#sisPop){display:none!important}
