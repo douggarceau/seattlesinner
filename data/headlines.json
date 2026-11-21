@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-21T01:30:00-08:00",
+ "asof": "2026-11-21T04:52:10-08:00",
  "items": [
   {
    "h": "Washington will build the AI-piloted X-BAT fighter jet",
@@ -25,6 +25,76 @@
    "outlet": "KEXP",
    "url": "https://www.kexp.org/events/kexp-events",
    "town": "Downtown",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Gwar Takes Showbox SoDo Monday",
+   "sum": "Monday, Nov. 23 at Showbox SoDo, 1700 1st Ave S, SoDo.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=gwar-showbox-sodo-nov-23",
+   "story": "gwar-showbox-sodo-nov-23",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Alter Bridge Brings the Weight to the Moore",
+   "sum": "Wednesday, Nov. 25 at the Moore Theatre, 1932 2nd Ave, Belltown, with Big Wreck and Tim Montana.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=alter-bridge-moore-nov-25",
+   "story": "alter-bridge-moore-nov-25",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Kamasi Washington Headlines the KEXP Yule Benefit",
+   "sum": "Thursday, Dec. 3 at 7 p.m. at The Showbox, 1426 1st Ave, Downtown, with Bartees Strange.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=kamasi-washington-kexp-yule-showbox-dec-3",
+   "story": "kamasi-washington-kexp-yule-showbox-dec-3",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Whitechapel, The Acacia Strain and Chelsea Grin Hit SoDo",
+   "sum": "Saturday, Dec. 5 at Showbox SoDo, 1700 1st Ave S, SoDo.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=whitechapel-acacia-strain-showbox-sodo-dec-5",
+   "story": "whitechapel-acacia-strain-showbox-sodo-dec-5",
+   "town": "Seattle",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Anthropic Lands on Nasdaq With the Largest IPO on Record",
+   "sum": "The Claude maker priced shares at $83, raised about $81 billion and opened its first trading day near $111.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
+   "story": "tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
+   "town": "National",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Voyager 1 Is Now One Light-Day From Earth",
+   "sum": "After more than 49 years in flight, NASA's farthest spacecraft has crossed a distance light needs a full day to travel.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=nat-voyager-1-one-light-day-from-earth-2026-11-21",
+   "story": "nat-voyager-1-one-light-day-from-earth-2026-11-21",
+   "town": "National",
+   "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "OpenAI's GPT-6.2 Astra and Sol Aim at Office Work, for Less",
+   "sum": "OpenAI's two new models promise better documents, code and design work at lower prices, as the race with Anthropic and Google tightens.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=tech-openai-gpt-6-2-astra-sol-release-2026-11-21",
+   "story": "tech-openai-gpt-6-2-astra-sol-release-2026-11-21",
+   "town": "National",
    "date": "2026-11-21",
    "rank": 3
   },
@@ -164,6 +234,15 @@
    "rank": 14
   },
   {
+   "h": "Westin Seattle cuts 423 jobs as management changes",
+   "sum": "The owner ended the management agreement, and a WARN filing puts the layoffs between Jan. 26 and Feb. 8, 2027.",
+   "outlet": "MyNorthwest",
+   "url": "https://mynorthwest.com/local/westin-seattle-hotel-layoff/4302428",
+   "town": "Downtown",
+   "date": "2026-11-19",
+   "rank": 14
+  },
+  {
    "h": "MISSIO and Eyes Set to Kill hit El Corazon Dec. 11",
    "sum": "Two loud bookings at the Eastlake club the same night.",
    "outlet": "Songkick",
@@ -191,74 +270,22 @@
    "rank": 17
   },
   {
-   "h": "Gwar Takes Showbox SoDo Monday",
-   "sum": "Monday, Nov. 23 at Showbox SoDo, 1700 1st Ave S, SoDo.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=gwar-showbox-sodo-nov-23",
-   "story": "gwar-showbox-sodo-nov-23",
-   "town": "Seattle",
+   "h": "Psycroptic and The OBGMs play El Corazon Saturday",
+   "sum": "Two heavy bands on the Eastlake stage on Saturday, Nov. 21.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/concerts/43454960-psycroptic-at-el-corazon",
+   "town": "Eastlake",
    "date": "2026-11-21",
-   "rank": 3
+   "rank": 18
   },
   {
-   "h": "Alter Bridge Brings the Weight to the Moore",
-   "sum": "Wednesday, Nov. 25 at the Moore Theatre, 1932 2nd Ave, Belltown, with Big Wreck and Tim Montana.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=alter-bridge-moore-nov-25",
-   "story": "alter-bridge-moore-nov-25",
-   "town": "Seattle",
+   "h": "Mobiius and Sophixi at the Clock-Out Lounge Saturday",
+   "sum": "Late night at the Clock-Out Lounge on Saturday, Nov. 21.",
+   "outlet": "Songkick",
+   "url": "https://songkick.com/concerts/43446127-mobiius-at-clockout-lounge",
+   "town": "Beacon Hill",
    "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "Kamasi Washington Headlines the KEXP Yule Benefit",
-   "sum": "Thursday, Dec. 3 at 7 p.m. at The Showbox, 1426 1st Ave, Downtown, with Bartees Strange.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=kamasi-washington-kexp-yule-showbox-dec-3",
-   "story": "kamasi-washington-kexp-yule-showbox-dec-3",
-   "town": "Seattle",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "Whitechapel, The Acacia Strain and Chelsea Grin Hit SoDo",
-   "sum": "Saturday, Dec. 5 at Showbox SoDo, 1700 1st Ave S, SoDo.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=whitechapel-acacia-strain-showbox-sodo-dec-5",
-   "story": "whitechapel-acacia-strain-showbox-sodo-dec-5",
-   "town": "Seattle",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "Anthropic Lands on Nasdaq With the Largest IPO on Record",
-   "sum": "The Claude maker priced shares at $83, raised about $81 billion and opened its first trading day near $111.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
-   "story": "tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "Voyager 1 Is Now One Light-Day From Earth",
-   "sum": "After more than 49 years in flight, NASA's farthest spacecraft has crossed a distance light needs a full day to travel.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=nat-voyager-1-one-light-day-from-earth-2026-11-21",
-   "story": "nat-voyager-1-one-light-day-from-earth-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "OpenAI's GPT-6.2 Astra and Sol Aim at Office Work, for Less",
-   "sum": "OpenAI's two new models promise better documents, code and design work at lower prices, as the race with Anthropic and Google tightens.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=tech-openai-gpt-6-2-astra-sol-release-2026-11-21",
-   "story": "tech-openai-gpt-6-2-astra-sol-release-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
+   "rank": 19
   }
  ]
 }
