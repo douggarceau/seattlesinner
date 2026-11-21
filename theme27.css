@@ -674,3 +674,4 @@
 
 /* Optional (T27.kTop): the small line sits above the big name */
 :root[data-t27][data-skin27="nautical"][data-ktop27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6):not(#n1):not(#n2):not(#n3):not(#n4):not(#k1) .wm27 .k{order:0!important;margin:0 0 10px!important}:root[data-t27][data-skin27="nautical"][data-ktop27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6):not(#n1):not(#n2):not(#n3):not(#n4):not(#k1) .wm27 .n{order:1!important}:root[data-t27][data-skin27="nautical"][data-ktop27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6):not(#n1):not(#n2):not(#n3):not(#n4):not(#k1) .wm27 .r{order:2!important}
+@media (max-width:760px){:root[data-t27][data-skin27="nautical"][data-ktop27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6):not(#n1):not(#n2):not(#n3):not(#n4):not(#k1):not(#k2) .wm27 .k{white-space:nowrap!important;letter-spacing:.18em!important;gap:10px!important}}
