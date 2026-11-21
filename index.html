@@ -417,7 +417,7 @@ html body #whatsOn::before{content:"";position:absolute;left:0;right:0;top:0;hei
 #whatsOn .wo-n small,#whatsOn .wo-e{color:#8E9196!important}
 #whatsOn .wo-l{scrollbar-color:#D4ECF555 transparent!important}
 #whatsOn *,.lspot *').forEach(e=>{if(e.closest('.bp,.ep,#flagLine,.logo,svg,.artShow'))return;if(!e.offsetParent)return;if(![...e.childNodes].some(n=>n.nodeType==3&&n.nodeValue.trim()))return;const s=getComputedStyle(e);const bg=bgOf(e);if(!bg)return;const c=P(s.color);if((P(s.color)[3]??1)<.05&&s.webkitTextFillColor&&s.webkitTextFillColor!==s.color)return;const a=L(c),b=L(bg);if((Math.max(a,b)+.05)/(Math.min(a,b)+.05)<3.2){const col=b<.25?'#FFFFFF':'#0D0D0F';e.style.setProperty('color',col,'important');e.style.setProperty('-webkit-text-fill-color',col,'important')}</style>
-<title>The Guitar Doug Report</title><script>window.T27={"a": "#14B8A6", "k": "Seattle", "n": "GUITAR DOUG REPORT", "tz": "America/Los_Angeles", "sis": [["New York City Scream", "https://newyorkcityscream.com/"], ["Rhode Island Hurricane", "https://rhodeislandhurricane.com/"], ["Jamestown Island News", "https://jamestownislandnews.com/"]], "sz": "clamp(40px,6.4vw,84px)"}</script><script src="theme27.js?v=12"></script>
+<title>The Guitar Doug Report</title><script>window.T27={"a": "#14B8A6", "k": "Seattle", "n": "GUITAR DOUG REPORT", "tz": "America/Los_Angeles", "sis": [["New York City Scream", "https://newyorkcityscream.com/"], ["Rhode Island Hurricane", "https://rhodeislandhurricane.com/"], ["Jamestown Island News", "https://jamestownislandnews.com/"]], "sz": "clamp(40px,6.4vw,84px)"}</script><script src="theme27.js?v=14"></script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1771,7 +1771,7 @@ async function cwLoad(force){if(!force&&Date.now()-CW.t<240000)return;const ago=
   if(Array.isArray(f))CW.fire=f;CW.t=Date.now();cwFill()}
 
 /* Front page: the week ahead in Seattle. Skips daily worship, meetings and services so real events stand out; one pick per event, grouped by day. */
-const JTSKIP=/^(worship|support|sports|drag)$/;const JTNOISE=/\b(mass|rosary|teen center|pantry|thrift|reconciliation|bible|prayer|morning glory|al-anon|aa meeting|step workshop|choir rehearsals?|chorus rehearsals?|rehearsals?|office hours)\b/i;
+const JTSKIP=/^(worship|support|sports|drag|recreation|community|volunteer|civic|family|fitness)$/;const JTNOISE=/\b(mass|rosary|teen center|pantry|thrift|reconciliation|bible|prayer|morning glory|al-anon|aa meeting|step workshop|choir rehearsals?|chorus rehearsals?|rehearsals?|office hours)\b/i;
 function jtWeekList(){try{const end=addDays(todayKey,7);const now=new Date();const nowMin=now.getHours()*60+now.getMinutes();const mins=t=>{const m=/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i.exec(t||'');if(!m)return 9999;return (Number(m[1])%12+(/PM/i.test(m[3])?12:0))*60+Number(m[2])};const vn=v=>(v||'').toLowerCase().normalize('NFD').replace(/[^a-z]/g,'').replace(/^the/,'').slice(0,12);const seen=new Set(),per={};const out=[];
  for(const e of up){if(e.date<todayKey||e.date>end||JTSKIP.test(e.genre||'')||JTNOISE.test(e.artists||''))continue;if(e.date===todayKey&&mins(e.time)!==9999&&mins(e.time)<nowMin-30)continue;
   const k1=(e.artists||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[^a-z]/g,'').slice(0,24),k2=e.date+'|'+(e.time||'')+'|'+vn(e.venue);if(seen.has(k1)||seen.has(k2))continue;if((per[e.date]||0)>=2)continue;seen.add(k1);seen.add(k2);per[e.date]=(per[e.date]||0)+1;out.push(e);if(out.length>=9)break}
@@ -3231,6 +3231,6 @@ new MutationObserver(()=>{if(D&&!document.getElementById('bbFront'))mount()}).ob
 <link rel="stylesheet" href="polish.css?v=1">
 <style id="seaKeep">html body #nav [data-go="crime"],html body #nav>[data-go="crime"]{display:inline-flex!important}</style>
 <style id="noTides">#jtSea{display:none!important}</style>
-<link rel="stylesheet" href="theme27.css?v=13">
+<link rel="stylesheet" href="theme27.css?v=14">
 </body>
 </html>
