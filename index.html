@@ -349,7 +349,7 @@ html body .lsrow .lspot.hasad{animation:hgAd 5s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){html body .lsrow .lspot{animation:none!important}}
 </style><style id="vwebCss">.vcard .vmeta a.vweb{font-weight:700;color:var(--k,#DDE1E6)!important;text-decoration:none}.vcard .vmeta a.vweb:hover{text-decoration:underline}.vcard p{margin:6px 0 8px}</style><script>window.EP_MAST={top:'The Guitar Doug Report',name:'Seattle'};window.EP_GOTHAM=true</script>
 <script src="posters.js?v=1"></script>
-<script src="whatson.js?v=3" defer></script><style id="edge">
+<script src="whatson.js?v=27" defer></script><style id="edge">
 html,html body{background:#0D0D0F!important}
 html body .wrap,html body #view{background-color:transparent}
 html body .mast img{filter:drop-shadow(0 3px 0 #000) drop-shadow(0 0 22px rgba(0,0,0,.85))}
@@ -417,7 +417,7 @@ html body #whatsOn::before{content:"";position:absolute;left:0;right:0;top:0;hei
 #whatsOn .wo-n small,#whatsOn .wo-e{color:#8E9196!important}
 #whatsOn .wo-l{scrollbar-color:#D4ECF555 transparent!important}
 #whatsOn *,.lspot *').forEach(e=>{if(e.closest('.bp,.ep,#flagLine,.logo,svg,.artShow'))return;if(!e.offsetParent)return;if(![...e.childNodes].some(n=>n.nodeType==3&&n.nodeValue.trim()))return;const s=getComputedStyle(e);const bg=bgOf(e);if(!bg)return;const c=P(s.color);if((P(s.color)[3]??1)<.05&&s.webkitTextFillColor&&s.webkitTextFillColor!==s.color)return;const a=L(c),b=L(bg);if((Math.max(a,b)+.05)/(Math.min(a,b)+.05)<3.2){const col=b<.25?'#FFFFFF':'#0D0D0F';e.style.setProperty('color',col,'important');e.style.setProperty('-webkit-text-fill-color',col,'important')}</style>
-<title>The Guitar Doug Report</title>
+<title>The Guitar Doug Report</title><script>window.T27={"a": "#14B8A6", "k": "Seattle", "n": "GUITAR DOUG REPORT", "tz": "America/Los_Angeles", "sis": [["New York City Scream", "https://newyorkcityscream.com/"], ["Rhode Island Hurricane", "https://rhodeislandhurricane.com/"], ["Jamestown Island News", "https://jamestownislandnews.com/"]], "sz": "clamp(40px,6.4vw,84px)"}</script><script src="theme27.js?v=3"></script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1830,7 +1830,7 @@ function vInk(){const L=STORIES.filter(s=>s.topic==='ink');return `<h2 class="ro
 /* national features live on the cover, not in the Stories tab (Seattle news only) */
 const FEATURES=new Set([]);
 function vStories(){
-  const LS=STORIES.filter(s=>!FEATURES.has(s.slug));
+  const LS=STORIES.filter(s=>!FEATURES.has(s.slug)&&(!window.T27S||window.T27S(s)));
   return `<h2 class="room">Stories</h2>
   <div class="sgrid">${LS.map(storyCard).join('')}</div>`;
 }
@@ -1873,7 +1873,7 @@ function vReader(slug){
 }
 function vCal(){
   const gs=[...new Set(up.map(e=>e.genre))].sort((a,b)=>up.filter(e=>e.genre===b).length-up.filter(e=>e.genre===a).length);
-  let L=up.filter(e=>STATE.genre==='all'||e.genre===STATE.genre);
+  let L=up.filter(e=>(window.T27F?T27F(e):true)&&(STATE.genre==='all'||e.genre===STATE.genre));
   const q=STATE.cq.toLowerCase(); if(q) L=L.filter(e=>(e.artists+' '+e.venue+' '+(e.hood||'')).toLowerCase().includes(q));
   if(STATE.hood!=='all') L=L.filter(e=>e.hood===STATE.hood);
   const hoods=[...new Set(up.map(e=>e.hood).filter(Boolean))].sort();
@@ -3231,5 +3231,6 @@ new MutationObserver(()=>{if(D&&!document.getElementById('bbFront'))mount()}).ob
 <link rel="stylesheet" href="polish.css?v=1">
 <style id="seaKeep">html body #nav [data-go="crime"],html body #nav>[data-go="crime"]{display:inline-flex!important}</style>
 <style id="noTides">#jtSea{display:none!important}</style>
+<link rel="stylesheet" href="theme27.css?v=3">
 </body>
 </html>
