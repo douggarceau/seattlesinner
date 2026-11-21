@@ -115,3 +115,33 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story] :is(small,i,em,span){color:var(--tx1)!important;letter-spacing:.04em!important}
 @media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g{grid-template-columns:1fr!important}}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#nbSis,#sisPop){display:none!important}
+/* page one round 3 (owner, Nov 21 2026) */
+/* 1 side boxes: one style */
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) :is(.ep-cta,.bp-go,.os-go){background:none!important;color:var(--a)!important;-webkit-text-fill-color:var(--a)!important;border:1px solid color-mix(in srgb,var(--a) 60%,transparent)!important;border-radius:999px!important;box-shadow:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot :is(.bp-t,.ep-t,.os-t){font-size:21px!important;line-height:1.12!important;text-transform:none!important;letter-spacing:-.02em!important;font-family:var(--f-hd)!important;font-weight:700!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot{opacity:1!important;filter:none!important}
+/* 2 side columns: events only */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lsrow .lspot.t-st{visibility:hidden!important}
+/* 4 calendar shows tonight right away */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #whatsOn details.t27auto .wo-r:nth-of-type(n+6){display:none!important}
+/* 5 and 9 bottom bar off */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .clsbar.bot{display:none!important}
+/* 6 phones: one scrolling menu row, search as an icon */
+@media (max-width:760px){
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav{flex-wrap:nowrap!important;overflow-x:auto!important;justify-content:flex-start!important;width:auto!important;margin:10px 10px 16px!important;scrollbar-width:none}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav::-webkit-scrollbar{display:none}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav .nb27{flex:0 0 auto;padding:9px 12px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch{flex:0 0 auto;margin-left:2px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input{width:38px!important;padding-left:30px!important;color:transparent!important;transition:width .25s}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input:focus{width:150px!important;color:#fff!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input::placeholder{color:transparent!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27{min-height:260px;padding:24px 20px}
+}
+/* 7 This Week fills evenly */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .jtwk .jtg{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .jtwk .jtg{grid-template-columns:1fr!important}}
+/* 8 top bar: no neighborhood strip */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .clsbar.top .nhm{visibility:hidden!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .clsbar.top .upd27{margin-left:14px;color:var(--tx1)!important;font-weight:600}
+/* 3 lead story: stronger background */
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hero27{background:radial-gradient(70% 90% at 85% 10%,color-mix(in srgb,var(--a) 30%,transparent) 0,transparent 60%),linear-gradient(180deg,rgba(6,7,9,0) 0,rgba(6,7,9,.35) 50%,rgba(6,7,9,.9) 100%),var(--hb) center/cover no-repeat!important}

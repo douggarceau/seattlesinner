@@ -36,7 +36,7 @@ function build(){
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
   d.innerHTML=(C.foot||[]).map(f=>'<button type="button" '+(f[1][0]==='#'?'data-c="'+f[1].slice(1)+'"':'data-g="'+f[1]+'"')+'>'+f[0]+'</button>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
   d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.dir){R.classList.toggle('dir27');return}if(b.dataset.c){const x=document.getElementById(b.dataset.c);if(x)x.click();return}cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
- hero();dedupe();dress();fonts()}
+ hero();dedupe();cal1();upd();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */
 const OLD=/Georgia|Playfair|PT Serif|Libre Caslon|Bodoni|Abril|DM Serif|Old Standard|Cinzel|Marcellus|Satisfy|Special Elite|Cormorant|Alfa Slab|Oswald|Anton|Bebas|Times|serif$/i;
 function fonts(){document.addEventListener('keydown',e=>{if(e.key==='Escape')R.classList.remove('dir27')});
@@ -56,9 +56,14 @@ function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElemen
  const H=x=>String(x==null?'':x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
  const k=/^tech-/.test(s.slug)?'Tech':s.topic==='music'?'Music':s.topic==='stage'?'On stage':'Top story';
  const b=document.createElement('button');b.type='button';b.id='hero27';b.dataset.story=s.slug;
- b.style.setProperty('--hb',C.heroImgs?'url('+C.heroImgs[hash(s.slug)%C.heroImgs.length]+')':'url(/img/bg27/'+BG[hash(s.slug)%BG.length]+'.jpg)');
+ b.style.setProperty('--hb',C.heroImgs?'url('+C.heroImgs[hash(s.slug)%C.heroImgs.length]+')':'url(/img/bg27/'+HBG[hash(s.slug)%HBG.length]+'.jpg)');
  b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
  anchor.parentNode.insertBefore(b,anchor)}
+function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a)return;const d=w.querySelector('details.wo-d');if(!d)return;w.dataset.t27a='1';if(!w.querySelector('details[open]')){d.open=true;d.classList.add('t27auto');setTimeout(()=>d.addEventListener('toggle',()=>d.classList.remove('t27auto'),{once:true}),400)}}
+let updT=null;function upd(){const t=document.querySelector('.clsbar.top');if(!t||t.querySelector('.upd27'))return;const s=document.createElement('span');s.className='upd27';t.insertBefore(s,t.querySelector('.rec'));
+ const show=d=>{if(!d)return;const x=new Date(d);if(isNaN(x))return;s.textContent='Updated '+x.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:TZ})};
+ fetch('data/headlines.json?'+Date.now(),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>show(d&&d.asof)).catch(()=>{})}
+const HBG=['bg42-wireframe-terrain','bg44-particle-field','bg46-lidar-scan','bg50-orbit-lines','bg41-data-mesh','bg45-glass-panels'];
 const hash=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))>>>0;return h};
 function dedupe(){const hb=document.getElementById('hlBox');if(hb){const vis=[...hb.querySelectorAll('a.hlr')].some(a=>!/^\?story=/.test(a.getAttribute('href')||''));hb.style.setProperty('display',vis?'':'none',vis?'':'important')}
 const h=document.getElementById('hero27');const lead=h&&h.dataset.story;
