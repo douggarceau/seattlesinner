@@ -36,7 +36,7 @@ function build(){
  if(ft&&!ft.querySelector('.ft27')){const d=document.createElement('div');d.className='ft27';
   d.innerHTML=(C.foot||[]).map(f=>'<button type="button" '+(f[1][0]==='#'?'data-c="'+f[1].slice(1)+'"':'data-g="'+f[1]+'"')+'>'+f[0]+'</button>').join('')+'<button type="button" data-dir="1">Business Directory</button><button type="button" data-g="advertise">Advertising</button><button type="button" data-g="privacy">Privacy &amp; Contact</button>';
   d.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b.dataset.dir){R.classList.toggle('dir27');return}if(b.dataset.c){const x=document.getElementById(b.dataset.c);if(x)x.click();return}cur='';mark();try{go(b.dataset.g)}catch(_){}});ft.insertBefore(d,ft.firstChild)}
- hero();dedupe();cal1();upd();dress();fonts()}
+ hero();dedupe();cal1();upd();labels();dress();fonts()}
 /* any old serif or display face left over from earlier styling switches to the new faces */
 const OLD=/Georgia|Playfair|PT Serif|Libre Caslon|Bodoni|Abril|DM Serif|Old Standard|Cinzel|Marcellus|Satisfy|Special Elite|Cormorant|Alfa Slab|Oswald|Anton|Bebas|Times|serif$/i;
 function fonts(){document.addEventListener('keydown',e=>{if(e.key==='Escape')R.classList.remove('dir27')});
@@ -60,6 +60,9 @@ function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElemen
  b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
  anchor.parentNode.insertBefore(b,anchor)}
 function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a)return;const d=w.querySelector('details.wo-d');if(!d)return;w.dataset.t27a='1';if(!w.querySelector('details[open]')){d.open=true;d.classList.add('t27auto');setTimeout(()=>d.addEventListener('toggle',()=>d.classList.remove('t27auto'),{once:true}),400)}}
+function labels(){const set=(el,t)=>{if(el&&el.firstChild&&el.textContent.trim()!==t){const n=[...el.childNodes].find(x=>x.nodeType===3&&x.textContent.trim());if(n)n.textContent=t;else el.textContent=t}};
+ const h=document.querySelector('.cvside .sea-h');if(h){set(h.querySelector('b'),'News');const a=h.querySelector('button,a');if(a)set(a,'All stories →')}
+ const hb=document.querySelector('#hlBox .bh b');if(hb)set(hb,'Headlines')}
 let updT=null;function upd(){const t=document.querySelector('.clsbar.top');if(!t||t.querySelector('.upd27'))return;const s=document.createElement('span');s.className='upd27';t.insertBefore(s,t.querySelector('.rec'));
  const show=d=>{if(!d)return;const x=new Date(d);if(isNaN(x))return;s.textContent='Updated '+x.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:TZ})};
  fetch('data/headlines.json?'+Date.now(),{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>show(d&&d.asof)).catch(()=>{})}
