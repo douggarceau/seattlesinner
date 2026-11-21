@@ -17,9 +17,7 @@ const ITEMS=[
  ['News',()=>nav('stories')],
  ['Music',()=>nav('cal','music',30)],
  ['Tech',()=>{SF=s=>/^tech-/.test(s.slug)||/\b(AI|robot|tech)\b/i.test(s.title||'');nav('stories')}],
- ['Tonight',()=>nav('cal',null,1)],
- ['This Week',()=>nav('cal',null,7)],
- ['Weekend',()=>{WK=weekend();nav('cal','wk',14)}],
+ ['Calendar',()=>nav('cal',null,14)],
  ['Explore',()=>nav('visit')]];
 function nav(v,mode,days){MODE=mode||null;try{STATE.genre='all';STATE.cq='';if(days)STATE.cdays=days;else STATE.cdays=14}catch(_){}
  try{go(v)}catch(e){const b=document.querySelector('#nav [data-go="'+v+'"]');if(b)b.click()}}
