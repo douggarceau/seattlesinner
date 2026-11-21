@@ -51,12 +51,12 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(p,small,.m,.dek){color:var(--tx1)!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bn,.gtag,.crtag,.nsad-tag,.spr-tag){background:none!important;color:var(--a)!important;border:1px solid color-mix(in srgb,var(--a) 50%,transparent)!important;border-radius:999px!important;padding:3px 8px!important}
 /* the flipping boxes: dark plain color with a faint background, white lettering */
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os,.lspot .ep){background:linear-gradient(180deg,rgba(6,7,9,.15) 0,rgba(6,7,9,.55) 100%),var(--b27,#0C0E12) center/cover no-repeat!important;color:#fff!important;box-shadow:inset 0 0 0 1px var(--ln)!important;filter:none!important;border-radius:14px!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) *{color:#fff!important;-webkit-text-fill-color:#fff!important;background-color:transparent!important;border-color:var(--ln)!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) :is(.bp-k,.os-m,.os-go,.bp-d,.ep-k,small,i){color:var(--a)!important;-webkit-text-fill-color:var(--a)!important;letter-spacing:.14em!important;text-transform:uppercase!important;font-weight:700!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) :is(.bp-t,.os-t){font-weight:700!important;letter-spacing:-.025em!important;text-transform:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .os-img{background:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot{background:none!important;border:0!important;box-shadow:none!important;border-radius:14px!important;overflow:hidden}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os,.lspot .ep){background:linear-gradient(180deg,rgba(6,7,9,.15) 0,rgba(6,7,9,.55) 100%),var(--b27,#0C0E12) center/cover no-repeat!important;color:#fff!important;box-shadow:inset 0 0 0 1px var(--ln)!important;filter:none!important;border-radius:14px!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) *{color:#fff!important;-webkit-text-fill-color:#fff!important;background-color:transparent!important;border-color:var(--ln)!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) :is(.bp-k,.os-m,.os-go,.bp-d,.ep-k,small,i){color:var(--a)!important;-webkit-text-fill-color:var(--a)!important;letter-spacing:.14em!important;text-transform:uppercase!important;font-weight:700!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep.os) :is(.bp-t,.os-t){font-weight:700!important;letter-spacing:-.025em!important;text-transform:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .os-img{background:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lspot{background:none!important;border:0!important;box-shadow:none!important;border-radius:14px!important;overflow:hidden}
 /* ads off except the advertising page */
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.lspot.t-ad,.adslot,#nbAdv,.nsad,.nsad-tag,[class*="adv-"]){display:none!important}
 /* cover */
@@ -72,13 +72,13 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) header.mast h1.logo{display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) header.mast>div{border:0!important;background:none!important;box-shadow:none!important;display:flex!important;justify-content:center!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) header.mast>div::before,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) header.mast>div::after{display:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) :is(svg,img,.os-m){display:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) :is(.bp-tear,.bp-tear b){background:none!important;box-shadow:none!important;transform:none!important;rotate:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) .bp-go{color:var(--a)!important;-webkit-text-fill-color:var(--a)!important;border:1px solid color-mix(in srgb,var(--a) 60%,transparent)!important;border-radius:999px!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#flagLine,.bp-frame,.bp .eq,.bp span.art,.ep span.art){display:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *:not(.bp-go):not(.os-go):not(.ep-cta){background:none!important;box-shadow:none!important;border:0!important;outline:0!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) :is(svg,img,.os-m){display:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) :is(.bp-tear,.bp-tear b){background:none!important;box-shadow:none!important;transform:none!important;rotate:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) .bp-go{color:var(--a)!important;-webkit-text-fill-color:var(--a)!important;border:1px solid color-mix(in srgb,var(--a) 60%,transparent)!important;border-radius:999px!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#flagLine,.bp-frame,.bp .eq,.bp span.art,.ep span.art){display:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *:not(.bp-go):not(.os-go):not(.ep-cta){background:none!important;box-shadow:none!important;border:0!important;outline:0!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(#paperBtn,header.mast .mastApp,#appBtn){display:none!important}
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep,.bigev)::after,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::before,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::after{display:none!important}
+:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep,.bigev)::after,:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::before,:root[data-t27]:not([data-keepart]):not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) :is(.bp,.ep) *::after{display:none!important}
 /* big cover boxes off (owner, Nov 21 2026); the story lists under them stay */
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>:is(button.cimg,.cvbrk,.spr.brk,.bigev){display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr{display:block!important;grid-template-columns:none!important;min-height:0!important;height:auto!important}
@@ -96,11 +96,21 @@
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #hlBox a.hlr[href^="?story="]{display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .cvside .sea-g [data-story]{border-radius:12px!important;min-height:86px}
 /* front page clean-up round 2 (owner, Nov 21 2026) */
-:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #dirCol,:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lsrow .lspot.l{display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #dirCol{display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6).dir27 #dirCol{display:flex!important;flex-direction:column;position:fixed!important;z-index:120!important;left:16px!important;top:70px!important;bottom:30px!important;width:300px!important;box-shadow:0 20px 60px rgba(0,0,0,.6)!important}
-@media (min-width:1100px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .wrap{padding-left:24px!important}}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .cvside .evtk{display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) footer.site-footer :is(.jtemg,.foot,.fpriv,.fsnd){display:none!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) footer.site-footer .inmlogo{transform:scale(.8);opacity:.85}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input{border:1px solid rgba(255,255,255,.28)!important;padding-left:34px!important;background:rgba(255,255,255,.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23C9CED6' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='5'/%3E%3Cpath d='M11 11l4 4'/%3E%3C/svg%3E") 11px center no-repeat!important;color:#fff!important}
 :root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #nav #nbSearch input::placeholder{color:#C9CED6!important;opacity:1}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) .lsrow .lspot.l{display:block!important}
+/* same news-tile layout on every site */
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvr>.pbx{display:none!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside{display:flex!important;flex-direction:column!important;gap:10px!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-h{width:auto!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g{width:100%!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story]:first-child{grid-column:1/-1!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story]{background-color:var(--bg2)!important;border:0!important;border-left:3px solid var(--a)!important;border-radius:12px!important;color:var(--tx0)!important;text-align:left!important;padding:12px 14px!important;min-height:86px}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story] :is(b,strong){color:var(--tx0)!important;font-weight:650!important}
+:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g>[data-story] :is(small,i,em,span){color:var(--tx1)!important;letter-spacing:.04em!important}
+@media (max-width:760px){:root[data-t27]:not(#_):not(#t1):not(#t2):not(#t3):not(#t4):not(#t5):not(#t6) #coverSlot .cvside>.sea-g{grid-template-columns:1fr!important}}
