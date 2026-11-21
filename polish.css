@@ -1,0 +1,134 @@
+/* Lighting pass: page titles lit like signs, top story as a lit stage, warmer cards. Loaded last. */
+
+/* Page titles: gold neon sign with a slow sheen (crime watch keeps its own #C1121F) */
+html body h2.room:not(.cwh){background:linear-gradient(100deg,#F2F1EC 0%,#DDE1E6 22%,#F2F1EC 32%,#DDE1E6 48%,#DDE1E6 62%,#DDE1E6 80%,#F2F1EC 100%) 0 0/220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important;filter:drop-shadow(0 0 1px #DDE1E6) drop-shadow(0 0 14px #DDE1E666) drop-shadow(0 2px 0 #1A1B1F)!important;animation:plSheen 9s linear infinite!important;border-bottom:0!important;padding-bottom:12px!important;position:relative}
+html body h2.room:not(.cwh)::after{content:"";position:absolute;left:0;bottom:0;width:min(420px,70%);height:3px;border-radius:3px;background:linear-gradient(90deg,#DDE1E6,#DDE1E6 60%,transparent);box-shadow:0 0 12px #DDE1E6,0 0 2px #DDE1E6}
+@keyframes plSheen{to{background-position:-220% 0}}
+
+/* Top story box: a lit stage instead of a flat slab */
+html body .cvbrk:not([class*="th-"]){background:radial-gradient(75% 55% at 50% -8%,#DDE1E666 0,transparent 62%),radial-gradient(120% 80% at 50% 120%,#C1121F55 0,transparent 60%),repeating-linear-gradient(90deg,#1A1B1F 0 9px,#1A1B1F 9px 14px,#1A1B1F 14px 21px)!important;border:1px solid #DDE1E655!important;box-shadow:inset 0 0 0 1px #0D0D0F80,inset 0 0 60px #0D0D0FAA,0 0 30px #C1121F33,0 14px 34px #0D0D0FCC!important;position:relative;overflow:hidden}
+html body .cvbrk:not([class*="th-"])::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,#F2F1EC1A 45%,#F2F1EC38 50%,#F2F1EC1A 55%,transparent 70%) 0 0/250% 100% no-repeat;animation:plSweep 7s ease-in-out infinite;pointer-events:none}
+@keyframes plSweep{0%,50%{background-position:120% 0}100%{background-position:-60% 0}}
+html body .cvbrk:not([class*="th-"]) .spr-tag{background:linear-gradient(180deg,#DDE1E6,#DDE1E6)!important;color:#1A1B1F!important;border:0!important;box-shadow:0 0 16px #DDE1E688,0 1px 0 #1A1B1F!important}
+html body .cvbrk:not([class*="th-"]) .spr-tag::before{color:#1A1B1F!important;text-shadow:none!important}
+html body .cvbrk:not([class*="th-"]) b{color:#F2F1EC!important;text-shadow:0 0 22px #DDE1E655,0 2px 0 #0D0D0F!important}
+html body .cvbrk:not([class*="th-"]) small{color:#F2F1EC!important}
+html body .cvbrk:not([class*="th-"]) .spr-go{color:#DDE1E6!important;border-color:#DDE1E6!important;box-shadow:0 0 14px #DDE1E644!important}
+
+/* Section headers glow softly */
+html body .box>.bh>b{text-shadow:0 0 12px color-mix(in srgb,currentColor 55%,transparent)}
+
+/* Story grid cards: lift and glow on hover */
+html body .sgrid .sc{transition:transform .25s ease,box-shadow .25s ease,filter .25s}
+html body .sgrid .sc:hover{transform:translateY(-3px);box-shadow:0 12px 26px #0D0D0FAA,0 0 22px color-mix(in srgb,var(--tc,#DDE1E6) 35%,transparent)!important;filter:brightness(1.08)}
+
+/* Calendar rows: warm light from above, glowing date tiles */
+html body .cald .sh{background:linear-gradient(180deg,#FFFFFF0d,#FFFFFF03)!important;border-radius:10px;transition:transform .2s ease,box-shadow .2s ease,background .2s}
+html body .cald .sh:hover{transform:translateY(-2px);background:linear-gradient(180deg,#DDE1E61C,#FFFFFF05)!important;box-shadow:0 10px 24px #0D0D0FBB,0 0 0 1px #DDE1E644,0 0 20px #DDE1E62A}
+html body .cald .sh .dt{background:linear-gradient(180deg,#1A1B1F,#0D0D0F)!important;border:1px solid #DDE1E666!important;box-shadow:inset 0 1px 0 #DDE1E644,0 0 14px #DDE1E622;color:#DDE1E6!important}
+html body .cald .sh .dt b{color:#F2F1EC!important;text-shadow:0 0 10px #DDE1E688}
+html body .cald .sh .who>b{color:#fff!important}
+html body .dayh{color:#DDE1E6!important;text-shadow:0 0 10px #DDE1E655}
+
+/* Filter tiles: the selected one is lit */
+html body .pads .pad{transition:box-shadow .2s,transform .2s,background .2s}
+html body .pads .pad:hover{transform:translateY(-1px);box-shadow:0 0 0 1px #DDE1E666,0 0 16px #DDE1E633}
+html body .pads .pad.on,html body .pads .pad[aria-pressed="true"],html body .pads .pad.act{background:linear-gradient(180deg,#DDE1E633,#DDE1E61A)!important;box-shadow:0 0 0 1px #DDE1E6,0 0 22px #DDE1E655!important}
+
+/* Visit cards: light from the top edge, glow on hover */
+html body .vgrid .vcard{background:radial-gradient(120% 60% at 50% 0,#FFFFFF12,transparent 60%),linear-gradient(180deg,#0D0D0F,#0D0D0F)!important;border-radius:12px!important;transition:transform .25s ease,box-shadow .25s ease}
+html body .vgrid .vcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0D0D0FCC,0 0 0 1px #DDE1E655,0 0 24px #5E6B7C33}
+html body .vgrid .vcard h4{color:#fff!important;text-shadow:0 0 14px #DDE1E633}
+
+/* Reading page: gilded drop cap and subheads */
+html body .reader .body>p:first-child::first-letter{background:linear-gradient(180deg,#F2F1EC,#DDE1E6 60%,#DDE1E6);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 10px #DDE1E655)}
+html body .reader .body h3{color:#DDE1E6!important;text-shadow:0 0 12px #DDE1E633}
+html body .reader .body a{color:#DDE1E6;text-decoration-color:#DDE1E666;text-underline-offset:3px}
+html body .reader h1{text-shadow:0 0 30px #FFFFFF14}
+
+@media (prefers-reduced-motion:reduce){html body h2.room:not(.cwh),html body .cvbrk::after{animation:none!important}}
+
+/* Tide strip removed so the cover and top story sit higher */
+html body #jtSea{display:none!important}
+/* Tabs tucked up under the masthead */
+html body .wrap>header.mast{padding-bottom:2px!important}
+html body .wrap>nav#nav.navbar{top:0!important;margin-top:-8px!important}
+
+/* ===== Phone first screen ===== */
+@media (max-width:760px){
+ /* never flash the old cover: poster box is solid until the rotator fills it */
+ html body .cvr .cimg{background:#0D0D0F!important}
+ html body .cvr .cimg>img{opacity:0!important}
+ html body .cvr .cimg.has-rot>img{visibility:hidden!important}
+ html.ep-cov body .cvr .cimg{aspect-ratio:2/3;width:100%;max-width:440px;margin:0 auto}
+ /* tighter lists */
+ html body .cvside .sea-g>*:nth-child(n+4){display:none!important}
+ html body .cvside .nat-l>button:nth-child(n+9){display:none!important}
+ /* margin cards become a swipe row instead of a 3000px stack */
+ html body .wrap>.lsrow{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:12px!important;padding:6px 16px 14px!important;margin:0 -16px!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ html body .wrap>.lsrow::-webkit-scrollbar{display:none}
+ html body .wrap>.lsrow>.lspot{flex:0 0 82vw!important;width:82vw!important;max-width:340px;height:calc(min(82vw,340px)*.6)!important;min-height:0!important;scroll-snap-align:center;margin:0!important}
+ html body .wrap>.lsrow>.lspot>a{min-height:0!important}
+ html body .wrap>.lsrow>.lspot.t-ad,html body .wrap>.lsrow>.lspot.t-adimg:not(.hasad){display:none!important}
+}
+
+/* Themed top boxes (Halloween etc.) also hold their flip layers inside */
+html body #coverSlot .cvr .cvbrk{position:relative!important;overflow:hidden!important}
+
+/* What's On box at the top of the front page */
+#whatsOn{margin:0 0 16px;border-radius:14px;padding:14px 16px 10px;background:radial-gradient(80% 120% at 0 0,#DDE1E61F,transparent 60%),linear-gradient(180deg,#1A1B1F,#0D0D0F);border:1px solid #DDE1E655;box-shadow:0 0 26px #DDE1E622,0 10px 26px #0D0D0FAA;font-family:"Helvetica Neue",Arial,sans-serif}
+#whatsOn .wo-h{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+#whatsOn .wo-k{font:800 13px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#DDE1E6;text-shadow:0 0 12px #DDE1E688}
+#whatsOn .wo-s{width:auto;flex:none;margin:0;font:700 12.5px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 28px 7px 10px;border-radius:6px;border:1px solid #DDE1E666;background:#1A1B1F url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23D4ECF5'/%3E%3C/svg%3E") no-repeat right 10px center;color:#DDE1E6;-webkit-appearance:none;appearance:none;cursor:pointer}
+#whatsOn .wo-c{font:600 12px/1 "Helvetica Neue",Arial,sans-serif;color:#F2F1EC;margin-left:auto}#whatsOn .wo-c b{color:#DDE1E6;font-size:15px}
+#whatsOn .wo-l{max-height:440px;overflow-y:auto;overscroll-behavior:contain;padding-right:4px;scrollbar-width:thin;scrollbar-color:#DDE1E666 transparent}
+#whatsOn .wo-d{border-top:1px solid #DDE1E626}
+#whatsOn .wo-d summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:9px 2px;font:700 13px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F2F1EC}
+#whatsOn .wo-d summary::-webkit-details-marker{display:none}
+#whatsOn .wo-d summary::after{content:"";margin-left:auto;width:7px;height:7px;border:solid #DDE1E6;border-width:0 2px 2px 0;transform:rotate(45deg);transition:transform .2s}
+#whatsOn .wo-d[open] summary::after{transform:rotate(-135deg)}
+#whatsOn .wo-d summary span{color:#DDE1E6;font-size:12px;letter-spacing:0}
+#whatsOn .wo-r{display:flex;gap:12px;align-items:baseline;padding:5px 2px 5px 4px;text-decoration:none;color:#fff;border-bottom:1px dotted #FFFFFF14}
+#whatsOn .wo-d>.wo-r:last-child{border-bottom:0;margin-bottom:8px}
+#whatsOn .wo-r:hover b{color:#DDE1E6}
+#whatsOn .wo-t{flex:none;width:104px;font:700 12.5px/1.3 "Helvetica Neue",Arial,sans-serif;color:#DDE1E6;white-space:nowrap}
+#whatsOn .wo-n{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#whatsOn .wo-n b{font:600 14.5px/1.3 Georgia,serif;color:#fff;transition:color .15s}
+#whatsOn .wo-n small{font-size:12px;color:#DDE1E6}
+#whatsOn .wo-e{margin:6px 0;color:#DDE1E6;font-size:14px}
+#whatsOn .wo-f{text-align:right;margin-top:6px}
+#whatsOn .wo-all{font:700 12px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#DDE1E6;text-decoration:none}
+@media (max-width:760px){#whatsOn{padding:12px 12px 8px;margin:0 0 12px}#whatsOn .wo-l{max-height:380px}#whatsOn .wo-t{width:84px}#whatsOn .wo-n{white-space:normal}}
+
+/* Crime Watch paused */
+#nav>[data-go="crime"],#coverSlot .cvcrime,.crimeBanner,.crban{display:none!important}
+#whatsOn button.wo-c{cursor:pointer;background:#FFFFFF0d;border:1px solid #DDE1E666;border-radius:6px;padding:7px 12px;font:600 13px/1 "Helvetica Neue",Arial,sans-serif;color:#F2F1EC}
+#whatsOn button.wo-c:hover,#whatsOn button.wo-c[aria-pressed="true"]{background:#DDE1E622;border-color:#DDE1E6}
+#whatsOn .wo-flat>.wo-r:last-child{border-bottom:0}
+#whatsOn .wo-hr{font:800 12px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#DDE1E6;padding:12px 2px 6px;border-bottom:1px solid #DDE1E633}
+#whatsOn .wo-hr.wo-day{font-size:14px;color:#fff;letter-spacing:.06em;padding-top:16px}
+#nav>[data-go="recovery"]{order:10}
+#recov .rc-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:6px 0 10px}
+#recov label{font:700 13px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#DDE1E6;display:flex;gap:8px;align-items:center}
+#recov select{font:600 15px/1.2 "Helvetica Neue",Arial,sans-serif;padding:8px 10px;border-radius:6px;border:1px solid #DDE1E666;background:#1A1B1F;color:#fff}
+#recov .rc-c{margin-left:auto;color:#F2F1EC;font:600 14px/1 "Helvetica Neue",Arial,sans-serif}#recov .rc-c b{color:#DDE1E6;font-size:17px}
+#recov .rc-r{display:flex;gap:14px;align-items:baseline;padding:10px 4px;border-bottom:1px solid #FFFFFF14;text-decoration:none;color:#fff}
+#recov .rc-t{flex:none;width:96px;font:700 14px/1.3 "Helvetica Neue",Arial,sans-serif;color:#DDE1E6}
+#recov .rc-n b{display:block;font:600 16px/1.35 Georgia,serif;color:#fff}#recov .rc-n small{display:block;font-size:13.5px;color:#DDE1E6}
+#recov a.rc-r:hover b{color:#DDE1E6}
+#recov .rc-h{margin:22px 0 8px;font:700 18px/1.2 Georgia,serif;color:#fff}
+#recov .rc-o{margin:0;padding-left:18px;color:#F2F1EC;font-size:15px;line-height:1.7}#recov .rc-o a{color:#DDE1E6}
+#recov .rc-e{color:#DDE1E6}
+#nav>[data-go="recovery"]{display:none!important}
+#whatsOn button.wo-c{margin-left:0}
+#whatsOn .wo-lb{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#F2F1EC}#whatsOn .wo-lb .wo-s{margin:0}
+#coverSlot .cvr>.pbx{display:none!important}
+#whatsOn .wo-z summary{opacity:.55}
+#nav>#nbSis{order:9!important}#nav>#nbSub{order:10!important}#nav>#nbSearch{order:20!important}.subbox.sbpop{display:grid!important;position:fixed;z-index:9999;top:110px;right:16px;width:min(92vw,360px);margin:0}
+#view a.sh .dt{position:relative;overflow:visible!important}.tflag{position:absolute;left:50%;top:-9px;transform:translateX(-50%);padding:1px 6px;border-radius:3px;background:#DDE1E6;color:#0D0D0F!important;font:800 9px/1.3 "Libre Franklin",system-ui,sans-serif!important;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 8px #DDE1E6,0 0 16px #DDE1E699;animation:tfg 2s ease-in-out infinite}@keyframes tfg{50%{box-shadow:0 0 12px #DDE1E6,0 0 26px #DDE1E6CC}}
+
+#nav .elnb{color:#fff!important;background:#C1121F!important;border-color:#C1121F!important;animation:elBlink 1.4s ease-in-out infinite}@keyframes elBlink{0%,100%{background:#C1121F;box-shadow:0 0 10px #C1121F}50%{background:#1A1B1F;box-shadow:none}}@media(prefers-reduced-motion:reduce){#nav .elnb{animation:none}}#nav>.elnb{order:-6!important}
+
+#nav [data-go="crime"]{display:none!important}
+
+#view .vfy{margin:-6px 0 2px!important;font:italic 11px/1.3 Georgia,serif!important;color:#8E9196!important;text-align:left}

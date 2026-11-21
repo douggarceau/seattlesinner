@@ -347,7 +347,9 @@ html body .lsrow .lspot.hasad{animation:hgAd 5s ease-in-out infinite}
 @keyframes hgStory{0%,100%{filter:drop-shadow(0 0 5px color-mix(in srgb,var(--gk,#DDE1E6) 45%,transparent))}50%{filter:drop-shadow(0 0 12px color-mix(in srgb,var(--gk,#DDE1E6) 75%,transparent))}}
 @keyframes hgAd{0%,100%{filter:drop-shadow(0 0 5px rgba(221,225,230,.4))}50%{filter:drop-shadow(0 0 13px rgba(221,225,230,.7))}}
 @media (prefers-reduced-motion:reduce){html body .lsrow .lspot{animation:none!important}}
-</style><style id="vwebCss">.vcard .vmeta a.vweb{font-weight:700;color:var(--k,#DDE1E6)!important;text-decoration:none}.vcard .vmeta a.vweb:hover{text-decoration:underline}.vcard p{margin:6px 0 8px}</style><script src="whatson.js?v=3" defer></script><style id="edge">
+</style><style id="vwebCss">.vcard .vmeta a.vweb{font-weight:700;color:var(--k,#DDE1E6)!important;text-decoration:none}.vcard .vmeta a.vweb:hover{text-decoration:underline}.vcard p{margin:6px 0 8px}</style><script>window.EP_MAST={top:'The Guitar Doug Report',name:'Seattle'};window.EP_GOTHAM=true</script>
+<script src="posters.js?v=1"></script>
+<script src="whatson.js?v=3" defer></script><style id="edge">
 html,html body{background:#000!important}
 html body .wrap,html body #view{background-color:transparent}
 html body .mast img{filter:drop-shadow(0 3px 0 #000) drop-shadow(0 0 22px rgba(0,0,0,.85))}
@@ -355,13 +357,13 @@ html body #coverSlot .cvr a.bigev{background:linear-gradient(180deg,rgba(8,8,10,
 html body #coverSlot .cvr a.bigev+a.bigev{background-image:linear-gradient(180deg,rgba(8,8,10,.55) 0,rgba(8,8,10,.30) 35%,rgba(8,8,10,.92) 78%),url(img/big-2.jpg)!important}
 html body #coverSlot .cvr a.bigev .bg-t,html body #coverSlot .cvr a.bigev .bg-v{text-shadow:0 2px 0 #000,0 0 18px rgba(0,0,0,.95)!important}
 html body #coverSlot .cvr a.bigev .bg-go{background:#C1121F!important;color:#fff!important;border-color:#C1121F!important}
-html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad){background:linear-gradient(180deg,rgba(8,8,10,.62) 0,rgba(8,8,10,.42) 40%,rgba(8,8,10,.92) 100%),var(--nyn,url(img/night-1.jpg)) center/cover no-repeat,#000000!important;border-top-color:#C1121F!important}
-html body .lsrow .lspot:nth-child(6n+1){--nyn:url(img/night-1.jpg)}
-html body .lsrow .lspot:nth-child(6n+2){--nyn:url(img/night-2.jpg)}
-html body .lsrow .lspot:nth-child(6n+3){--nyn:url(img/night-3.jpg)}
-html body .lsrow .lspot:nth-child(6n+4){--nyn:url(img/night-4.jpg)}
-html body .lsrow .lspot:nth-child(6n+5){--nyn:url(img/night-5.jpg)}
-html body .lsrow .lspot:nth-child(6n+6){--nyn:url(img/night-6.jpg)}
+html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad){background:linear-gradient(180deg,rgba(8,8,10,.62) 0,rgba(8,8,10,.42) 40%,rgba(8,8,10,.92) 100%),#000000!important;border-top-color:#C1121F!important}
+html body .lsrow .lspot:nth-child(6n+1){--nyn:none}
+html body .lsrow .lspot:nth-child(6n+2){--nyn:none}
+html body .lsrow .lspot:nth-child(6n+3){--nyn:none}
+html body .lsrow .lspot:nth-child(6n+4){--nyn:none}
+html body .lsrow .lspot:nth-child(6n+5){--nyn:none}
+html body .lsrow .lspot:nth-child(6n+6){--nyn:none}
 html body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) .ls-big{color:#F2F1EC!important;text-shadow:0 1px 0 #000,0 0 12px rgba(0,0,0,.95)!important}
 html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) .ls-big,html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) .ls-big em,html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) b{color:#F2F1EC!important;text-shadow:0 1px 0 #000,0 0 12px rgba(0,0,0,.95)!important}
 html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) .ls-tag,html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) i,html:not(#z1):not(#z2):not(#z3):not(#z4) body .lsrow .lspot:not(.t-ad):not(.t-adimg):not(.hasad) small{color:#DDE1E6!important;text-shadow:0 1px 0 #000!important}
@@ -2320,7 +2322,7 @@ function showPromo0(id,pool,offset=0,flip=false){{const el=document.getElementBy
  box.hidden=false;const key=promoKey(s);if(a.dataset.promoKey===key)return;
  a.dataset.promoNext=key;if(flip&&a.dataset.promoKey)flipTo(a,s);else fill(a,s)
 }
-let JTEVI=0;function jtEvPool(){try{const L0=(typeof jtWeekList==='function'?jtWeekList():[]).filter(e=>!/^(comedy|other|family|worship|support)$/i.test(e.genre||'')&&!/comedian|comedy|jazz alley|tribute|beatle|disney|holiday magic|sing-?along|children|toddler|family|senior|library/i.test((e.artists||'')+' '+(e.venue||'')));const CLUBV=/el corazon|funhouse|substation|chop suey|clock-out|barboza|neumos|sunset tavern|tractor|crocodile|central saloon|blue moon|conor byrne|nectar lounge|q nightclub|vera project|showbox|madame lou|belltown yacht|orient express|darrell|monkey pub|lo-fi|high dive|skylark|neptune|moore|triple door|royal room/i;const LOUD=/^(rock|metal|punk|goth|hardcore|industrial|electronic|indie|hip-hop|r&b|live)$/i;const score=e=>(LOUD.test(e.genre||'')?20:0)+(CLUBV.test(e.venue||'')?10:0)+(/showbox sodo|el corazon|neumos|funhouse|substation|chop suey|clock-out|barboza|vera project/i.test(e.venue||'')?5:0);const L=L0.slice().sort((a,b)=>score(b)-score(a)||String(a.date).localeCompare(b.date));return L.map(e=>({tag:'IN SEATTLE · '+(typeof shortDay==='function'?shortDay(e.date):e.date),bigText:(e.artists||'').replace(/\s*\([^)]*\)/g,'').trim(),name:e.venue||'Seattle',when:e.time||'',sub:'',go:'Details',theme:'mu',href:e.url||'#cal',ext:e.url?1:0,view:e.url?'':'cal',k:(typeof GENRE!=='undefined'&&GENRE[e.genre])||'#DDE1E6'}))}catch(_){return[]}}
+let JTEVI=0;window.jtEvPool=()=>jtEvPool();function jtEvPool(){try{const L0=(()=>{try{const end=addDays(todayKey,21);const seen=new Set();return (typeof up!=='undefined'?up:[]).filter(e=>e&&e.artists&&e.date>=todayKey&&e.date<=end&&!/^(worship|support|sports)$/i.test(e.genre||'')).filter(e=>{const k=String(e.artists).toLowerCase().replace(/\(.*?\)/g,'').replace(/[^a-z]/g,'').slice(0,24);if(seen.has(k))return false;seen.add(k);return true})}catch(_){return typeof jtWeekList==='function'?jtWeekList():[]}})().filter(e=>!/^(comedy|other|family|worship|support)$/i.test(e.genre||'')&&!/comedian|comedy|jazz alley|tribute|beatle|disney|holiday magic|sing-?along|children|toddler|family|senior|library/i.test((e.artists||'')+' '+(e.venue||'')));const CLUBV=/el corazon|funhouse|substation|chop suey|clock-out|barboza|neumos|sunset tavern|tractor|crocodile|central saloon|blue moon|conor byrne|nectar lounge|q nightclub|vera project|showbox|madame lou|belltown yacht|orient express|darrell|monkey pub|lo-fi|high dive|skylark|neptune|moore|triple door|royal room/i;const LOUD=/^(rock|metal|punk|goth|hardcore|industrial|electronic|indie|hip-hop|r&b|live)$/i;const score=e=>(LOUD.test(e.genre||'')?20:0)+(CLUBV.test(e.venue||'')?10:0)+(/showbox sodo|el corazon|neumos|funhouse|substation|chop suey|clock-out|barboza|vera project/i.test(e.venue||'')?5:0);const L=L0.slice().sort((a,b)=>score(b)-score(a)||String(a.date).localeCompare(b.date));return (window.epMix||(x=>x))(L.map(e=>({tag:'IN SEATTLE · '+(typeof shortDay==='function'?shortDay(e.date):e.date),bigText:(e.artists||'').replace(/\s*\([^)]*\)/g,'').trim(),name:e.venue||'Seattle',when:e.time||'',sub:'',go:'Details',theme:'mu',href:e.url||'#cal',ext:e.url?1:0,view:e.url?'':'cal',ev:e,k:(typeof GENRE!=='undefined'&&GENRE[e.genre])||'#DDE1E6'})))}catch(_){return[]}}
 (function jtSweep(n){setTimeout(()=>{document.querySelectorAll('.lsrow .lspot.t-cw>a,.lsrow .lspot.t-spd>a,.lsrow .lspot.cwi>a').forEach(a=>{if(jtEvPool().length)fill(a,{theme:'cw',tag:'CRIME'})});if(n<8)jtSweep(n+1)},1500)})(0);
 function fill(a,s){if(s&&(s.theme==='cw'||s.theme==='spd'||s.cwi||/CRIME/i.test(s.tag||''))){const E=jtEvPool();if(E.length){s=E[JTEVI++%E.length]}}return fill0(a,s)}
 window.__fill0=(a,s)=>fill0(a,s);function fill0(a,s){if(!a||!s)return;try{const nz=x=>String(x||'').toLowerCase().replace(/\s+/g,' ').trim();const vis=new Set([...document.querySelectorAll('.lsrow .lspot:not([hidden]):not(.hasad) > a:not(.radv)')].filter(e=>e!==a).map(e=>nz((e.querySelector('.ls-big')||{}).textContent)).filter(Boolean));if(vis.has(nz(s.bigText||s.name))&&window.__PALT&&window.__PALT.length){const alt=window.__PALT.find(c=>!vis.has(nz(c.bigText||c.name)));if(alt)s=alt}}catch(_){}clearTimeout(promoTimers.get(a));a.dataset.promoKey=promoKey(s);delete a.dataset.promoNext;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').replace(/\bcwi\b/g,'').trim()+' t-'+s.theme+(s.cwi?' cwi':'');
@@ -2328,7 +2330,7 @@ window.__fill0=(a,s)=>fill0(a,s);function fill0(a,s){if(!a||!s)return;try{const 
  if(s.ext){a.target='_blank';a.rel='noopener'}else{a.removeAttribute('target');a.removeAttribute('rel')}
  a.setAttribute('aria-label',s.bigText||s.name);box.style.setProperty('--k',s.k||'');if(!s.k)box.style.removeProperty('--k');if(s.sty)box.dataset.adv=s.sty;else delete box.dataset.adv;
  const mid=s.img?'<img src="'+s.img+'" alt=""'+(s.round?' class="round'+(s.round>1?' dark':'')+'"':'')+'>':'<span class="ls-big">'+(s.bigText?esc(s.bigText):s.big)+'</span>';
- a.innerHTML='<span class="ls-tag">'+esc(s.tag)+'</span>'+mid+'<span><b>'+esc(s.name)+'</b>'+(s.when?'<i>'+esc(s.when)+'</i>':'')+(s.sub?'<small>'+esc(s.sub)+'</small>':'')+'<span class="ls-go">'+esc(s.go)+' →</span></span>'}
+ a.innerHTML='<span class="ls-tag">'+esc(s.tag)+'</span>'+mid+'<span><b>'+esc(s.name)+'</b>'+(s.when?'<i>'+esc(s.when)+'</i>':'')+(s.sub?'<small>'+esc(s.sub)+'</small>':'')+'<span class="ls-go">'+esc(s.go)+' →</span></span>';const box_=a.parentNode;if(box_.classList.contains('evp')){box_.classList.remove('evp');['border','border-top','outline'].forEach(x=>box_.style.removeProperty(x))}if(s.theme==='mu'&&s.ev&&window.evPoster)window.evPoster(a,s);else if(s.theme==='st'&&window.artCard)window.artCard(a,s)}
 function pmTeaser(a){if(!a)return;const box=a.parentNode;box.className=box.className.replace(/\bt-\S+/g,'').trim()+' t-pmx';a.href='https://theguitardougreport.com/tech/';a.removeAttribute('target');a.setAttribute('aria-label','Tech & AI Power Map: who controls AI and Big Tech');
  const pads=()=>'<span class="pmx-pads">'+'<b></b>'.repeat(15)+'</span>';
  a.innerHTML='<span class="pmx-bar"><span>■ Power Map</span><i>AI Signals live</i></span><span class="pmx-top">'+pads()+'<span class="pmx-eye"><img src="img/promo-powermap.jpg" alt=""></span>'+pads()+'</span><span class="pmx-ttl">Tech &amp; AI Power Map</span><span class="pmx-by">New software</span><span class="pmx-stk"><span class="tk">····</span><span class="pr"></span><span class="nm">Loading the market</span><span class="ch"></span></span><span class="pmx-rk"><h5>Power ranking</h5><ol><li></li><li></li><li></li><li></li></ol></span><span class="pmx-log">establishing link</span><span class="pmx-go">Enter the map →</span>';
@@ -3225,5 +3227,8 @@ fetch('data/directory.json?'+Math.floor(Date.now()/6e5),{cache:'no-cache'}).then
 new MutationObserver(()=>{if(D&&!document.getElementById('bbFront'))mount()}).observe(document.documentElement,{childList:true,subtree:true});
 })();</script>
 <style id="mastLower">/* owner, Nov 16: masthead a tad lower so its top is never cut off under the ticker */html body header.mast{padding-top:22px!important}</style>
+<link rel="stylesheet" href="posters.css?v=1">
+<link rel="stylesheet" href="polish.css?v=1">
+<style id="seaKeep">html body #nav [data-go="crime"],html body #nav>[data-go="crime"]{display:inline-flex!important}</style>
 </body>
 </html>
