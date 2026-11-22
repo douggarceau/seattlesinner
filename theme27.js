@@ -89,7 +89,7 @@ function hero(){let v='';try{v=STATE.view}catch(_){}const old=document.getElemen
  b.innerHTML='<span class="hk">'+H(k)+'</span><span class="ht">'+H(s.title)+'</span>'+(s.dek?'<span class="hd">'+H(s.dek)+'</span>':'')+'<span class="hg">Read the story →</span>';
  anchor.parentNode.insertBefore(b,anchor)}
 function cal1(){const w=document.getElementById('whatsOn');if(!w||w.dataset.t27a)return;const d=w.querySelector('details.wo-d');if(!d)return;w.dataset.t27a='1';if(!w.querySelector('details[open]')){d.open=true;d.classList.add('t27auto');setTimeout(()=>d.addEventListener('toggle',()=>d.classList.remove('t27auto'),{once:true}),400)}}
-function layout(){const si=document.querySelector('#nav #nbSearch input');if(si){if(innerWidth<=760&&!CL&&document.activeElement!==si)si.style.setProperty('width','36px','important');else si.style.removeProperty('width')}
+function layout(){const si=document.querySelector('#nav #nbSearch input');if(si)si.style.removeProperty('width');
 const nt=document.getElementById('navToggle');if(nt){nt.style.setProperty('display','none','important');const n=document.getElementById('nav');if(n){n.style.setProperty('display','flex','important');n.removeAttribute('hidden');n.classList.remove('closed','collapsed')}}
 let v='';try{v=STATE.view}catch(_){}
  /* 10 one main landmark around the editorial column, with headings */
