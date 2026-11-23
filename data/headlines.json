@@ -1,16 +1,6 @@
 {
- "asof": "2026-11-22T04:45:35-08:00",
+ "asof": "2026-11-23T04:50:00-08:00",
  "items": [
-  {
-   "h": "Haymitch Gets His Origin Story as Hunger Games Returns to Theaters",
-   "sum": "Sunrise on the Reaping is in theaters, with trackers betting it opens bigger than any Hunger Games film in a decade.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=nat-hunger-games-sunrise-on-the-reaping-opens-2026-11-21",
-   "story": "nat-hunger-games-sunrise-on-the-reaping-opens-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
-  },
   {
    "h": "Washington will build the AI-piloted X-BAT fighter jet",
    "sum": "GeekWire lays out full specs for the autonomous jet headed for production in the state.",
@@ -28,6 +18,16 @@
    "town": "Seattle",
    "date": "2026-11-21",
    "rank": 2
+  },
+  {
+   "h": "Haymitch Gets His Origin Story as Hunger Games Returns to Theaters",
+   "sum": "Sunrise on the Reaping is in theaters, with trackers betting it opens bigger than any Hunger Games film in a decade.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=nat-hunger-games-sunrise-on-the-reaping-opens-2026-11-21",
+   "story": "nat-hunger-games-sunrise-on-the-reaping-opens-2026-11-21",
+   "town": "National",
+   "date": "2026-11-21",
+   "rank": 3
   },
   {
    "h": "KEXP Yule Benefit: Kamasi Washington with Bartees Strange",
@@ -79,26 +79,6 @@
    "rank": 3
   },
   {
-   "h": "Anthropic Lands on Nasdaq With the Largest IPO on Record",
-   "sum": "The Claude maker priced shares at $83, raised about $81 billion and opened its first trading day near $111.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
-   "story": "tech-anthropic-nasdaq-debut-record-ipo-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
-   "h": "Voyager 1 Is Now One Light-Day From Earth",
-   "sum": "After more than 49 years in flight, NASA's farthest spacecraft has crossed a distance light needs a full day to travel.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=nat-voyager-1-one-light-day-from-earth-2026-11-21",
-   "story": "nat-voyager-1-one-light-day-from-earth-2026-11-21",
-   "town": "National",
-   "date": "2026-11-21",
-   "rank": 3
-  },
-  {
    "h": "OpenAI's GPT-6.2 Astra and Sol Aim at Office Work, for Less",
    "sum": "OpenAI's two new models promise better documents, code and design work at lower prices, as the race with Anthropic and Google tightens.",
    "outlet": "The Guitar Doug Report",
@@ -106,6 +86,26 @@
    "story": "tech-openai-gpt-6-2-astra-sol-release-2026-11-21",
    "town": "National",
    "date": "2026-11-21",
+   "rank": 3
+  },
+  {
+   "h": "Xpeng Puts Its Iron Humanoid on Stage Wednesday. The Clock Is Ticking",
+   "sum": "The Chinese EV maker's AI Day on Nov. 25 is its last big show before its own deadline to mass-produce a walking robot.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=tech-xpeng-ai-day-iron-humanoid-robot-2026-11-22",
+   "story": "tech-xpeng-ai-day-iron-humanoid-robot-2026-11-22",
+   "town": "National",
+   "date": "2026-11-22",
+   "rank": 3
+  },
+  {
+   "h": "The Fockers Crash Thanksgiving, Up Against Disney and Haymitch",
+   "sum": "Focker-In-Law opens Wednesday against Disney's Hexed and a second weekend of the new Hunger Games.",
+   "outlet": "The Guitar Doug Report",
+   "url": "?story=nat-focker-in-law-hexed-thanksgiving-box-office-2026-11-22",
+   "story": "nat-focker-in-law-hexed-thanksgiving-box-office-2026-11-22",
+   "town": "National",
+   "date": "2026-11-22",
    "rank": 3
   },
   {
@@ -134,15 +134,6 @@
    "town": "Belltown",
    "date": "2026-11-21",
    "rank": 5
-  },
-  {
-   "h": "Thundercat, Jai Wolf and Julien Baker fill the Showbox and Neumos this weekend",
-   "sum": "Shows run from Thursday through Saturday across SoDo, Pike Place Market and Capitol Hill.",
-   "outlet": "Seattle Refined",
-   "url": "https://komonews.com/seattle-refined/seattle-concerts-november-2026-teddy-swims-katseye-ms-lauren-hill-garth-brooks-trans-siberian-orchestra-bryson-tiller-sienna-spiro-smashing-pumpkins-fall-live-music-washington-tacoma",
-   "town": "Seattle",
-   "date": "2026-11-18",
-   "rank": 6
   },
   {
    "h": "Saosin and Silent Planet stack Showbox SoDo Tuesday",
@@ -233,89 +224,6 @@
    "town": "Ballard",
    "date": "2026-11-21",
    "rank": 13
-  },
-  {
-   "h": "Swervedriver at Neumos in December",
-   "sum": "The shoegaze originals play Capitol Hill on Wednesday, Dec. 16.",
-   "outlet": "Songkick",
-   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026/genre/rock",
-   "town": "Capitol Hill",
-   "date": "2026-11-21",
-   "rank": 14
-  },
-  {
-   "h": "Westin Seattle cuts 423 jobs as management changes",
-   "sum": "The owner ended the management agreement, and a WARN filing puts the layoffs between Jan. 26 and Feb. 8, 2027.",
-   "outlet": "MyNorthwest",
-   "url": "https://mynorthwest.com/local/westin-seattle-hotel-layoff/4302428",
-   "town": "Downtown",
-   "date": "2026-11-19",
-   "rank": 14
-  },
-  {
-   "h": "MISSIO and Eyes Set to Kill hit El Corazon Dec. 11",
-   "sum": "Two loud bookings at the Eastlake club the same night.",
-   "outlet": "Songkick",
-   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026/genre/rock",
-   "town": "Eastlake",
-   "date": "2026-11-21",
-   "rank": 15
-  },
-  {
-   "h": "Tape B takes WAMU Theater for two nights",
-   "sum": "Bass-heavy weekend in SoDo, Dec. 4 and 5.",
-   "outlet": "Songkick",
-   "url": "https://songkick.com/metro-areas/2846-us-seattle/december-2026",
-   "town": "SoDo",
-   "date": "2026-11-21",
-   "rank": 16
-  },
-  {
-   "h": "Seattle ranks No. 4 in the world in new cities index",
-   "sum": "Oxford Economics scored 1,000 cities on economy, talent, quality of life and governance.",
-   "outlet": "GeekWire",
-   "url": "https://milled.com/geekwire/geekwires-most-read-stories-of-the-week-cmF2Q21ZFsqqn79i",
-   "town": "Seattle",
-   "date": "2026-11-21",
-   "rank": 17
-  },
-  {
-   "h": "Psycroptic and The OBGMs play El Corazon Saturday",
-   "sum": "Two heavy bands on the Eastlake stage on Saturday, Nov. 21.",
-   "outlet": "Songkick",
-   "url": "https://songkick.com/concerts/43454960-psycroptic-at-el-corazon",
-   "town": "Eastlake",
-   "date": "2026-11-21",
-   "rank": 18
-  },
-  {
-   "h": "Mobiius and Sophixi at the Clock-Out Lounge Saturday",
-   "sum": "Late night at the Clock-Out Lounge on Saturday, Nov. 21.",
-   "outlet": "Songkick",
-   "url": "https://songkick.com/concerts/43446127-mobiius-at-clockout-lounge",
-   "town": "Beacon Hill",
-   "date": "2026-11-21",
-   "rank": 19
-  },
-  {
-   "h": "Xpeng Puts Its Iron Humanoid on Stage Wednesday. The Clock Is Ticking",
-   "sum": "The Chinese EV maker's AI Day on Nov. 25 is its last big show before its own deadline to mass-produce a walking robot.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=tech-xpeng-ai-day-iron-humanoid-robot-2026-11-22",
-   "story": "tech-xpeng-ai-day-iron-humanoid-robot-2026-11-22",
-   "town": "National",
-   "date": "2026-11-22",
-   "rank": 3
-  },
-  {
-   "h": "The Fockers Crash Thanksgiving, Up Against Disney and Haymitch",
-   "sum": "Focker-In-Law opens Wednesday against Disney's Hexed and a second weekend of the new Hunger Games.",
-   "outlet": "The Guitar Doug Report",
-   "url": "?story=nat-focker-in-law-hexed-thanksgiving-box-office-2026-11-22",
-   "story": "nat-focker-in-law-hexed-thanksgiving-box-office-2026-11-22",
-   "town": "National",
-   "date": "2026-11-22",
-   "rank": 3
   }
  ]
 }
